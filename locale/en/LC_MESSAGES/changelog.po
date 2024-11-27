@@ -1,0 +1,141 @@
+# translated using ollama
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/changelog.md:1
+msgid "{material-regular}`history;1em` CHANGELOG"
+msgstr "{material-regular}`history;1em` CHANGELOG"
+
+# translated using ollama
+#: ../../source/changelog.md:4
+msgid "Les versions sont synchronisées entre les versions de l'image Docker du [daemon](https://hub.docker.com/r/olvid/bot-daemon), du module Python [olvid-bot](https://pypi.org/project/olvid-bot/) et de l'image Docker [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner)."
+msgstr "The versions are synchronized between the Docker image versions of the [daemon](https://hub.docker.com/r/olvid/bot-daemon), the Python module [olvid-bot](https://pypi.org/project/olvid-bot/) and the Docker image [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner)."
+
+# translated using ollama
+#: ../../source/changelog.md:6
+msgid "Les versions suivent la sémantique suivante : MAJOR.MINOR.PATCH. Tous les éléments sont supposés fonctionner ensemble dans la mesure où ils partagent la même version majeure et mineure. Il est tout de même recommandé de toujours utiliser la même version de patch."
+msgstr "The versions follow the following semantics: MAJOR.MINOR.PATCH. All elements are assumed to work together as long as they share the same major and minor version. However, it is recommended to always use the same patch version."
+
+# translated using ollama
+#: ../../source/changelog.md:10
+msgid "Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)"
+msgstr "Minor and/or major versions will be incremented at a minimum for each change in the [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf) API."
+
+# translated using ollama
+#: ../../source/changelog.md:13
+msgid "Dernière version : 1.1.0"
+msgstr "Latest version: 1.1.0"
+
+# translated using ollama
+#: ../../source/changelog.md:15
+msgid "Ajouts"
+msgstr "Added"
+
+# translated using ollama
+#: ../../source/changelog.md:17
+msgid "**API**"
+msgstr "**API**"
+
+# translated using ollama
+#: ../../source/changelog.md:18
+msgid "il est maintenant possible d'envoyer des messages de position à l'aide de la nouvelle méthode gRPC `messageSendLocation`. (implementé dans les clients et la CLI)."
+msgstr "It is now possible to send location messages using the new gRPC method `messageSendLocation` (implemented in clients and CLI)."
+
+# translated using ollama
+#: ../../source/changelog.md:19
+msgid "**Daemon**"
+msgstr "**Daemon**"
+
+# translated using ollama
+#: ../../source/changelog.md:20
+msgid "ajout de la possibilité de chiffrer les communications entre le daemon et les clients en utilisant du TLS. ([](/daemon/tutorials.md#configuration-tls))"
+msgstr "added the ability to encrypt communications between the daemon and clients using TLS. ([](/daemon/tutorials.md#configuration-tls))"
+
+# translated using ollama
+#: ../../source/changelog.md:21
+msgid "possibilité d'ajouter des options personalisées a la JVM et notamment d'utiliser un proxy HTTP. ([](/daemon/tutorials.md#configuration-jvm))"
+msgstr "it is now possible to set custom options to the JVM and specifically to set up an HTTP proxy. ([](/daemon/tutorials.md#configuration-jvm))"
+
+# translated using ollama
+#: ../../source/changelog.md:22
+msgid "**Client Python**"
+msgstr "**Python Client**"
+
+# translated using ollama
+#: ../../source/changelog.md:23
+msgid "ajout du sous-paquet `olvid.errors` pour gérer les exceptions de manière plus simple."
+msgstr "added subpackage `olvid.errors` to handle exceptions in a simpler way."
+
+# translated using ollama
+#: ../../source/changelog.md:25
+msgid "Modifications"
+msgstr "Modifications"
+
+# translated using ollama
+#: ../../source/changelog.md:27 ../../source/changelog.md:36
+msgid "**Client Python**:"
+msgstr "**Python Client**:"
+
+# translated using ollama
+#: ../../source/changelog.md:28
+msgid "remplacement des variables d'environnement *DAEMON_HOSTNAME* et *DAEMON_PORT* par *DAEMON_TARGET*."
+msgstr "replaced environment variables *DAEMON_HOSTNAME* and *DAEMON_PORT* by *DAEMON\_TARGET*."
+
+# translated using ollama
+#: ../../source/changelog.md:29
+msgid "les fichiers *.client_key* et *.admin_client_key* sont dépréciés, utilisez un fichier `.env` à la place."
+msgstr "*.client_key* and *.admin\_client\_key* files are deprecated, use a `.env` file instead."
+
+# translated using ollama
+#: ../../source/changelog.md:30
+msgid "la classe `OlvidBot` est maintenant dépréciée, utilisez la classe `OlvidClient` à la place."
+msgstr "`OlvidBot` class is now deprecated, please use the class `OlvidClient` instead."
+
+# translated using ollama
+#: ../../source/changelog.md:31
+msgid "**Docker**:"
+msgstr "**Docker**:"
+
+# translated using ollama
+#: ../../source/changelog.md:32
+msgid "la construction et la taille des images Docker [bot-daemon](https://hub.docker.com/r/olvid/bot-daemon) et [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner) ont été grandement améliorées."
+msgstr "The construction and size of Docker images [bot-daemon](https://hub.docker.com/r/olvid/bot-daemon) and [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner) have been greatly improved."
+
+# translated using ollama
+#: ../../source/changelog.md:34
+msgid "Corrections"
+msgstr "Corrections"
+
+# translated using ollama
+#: ../../source/changelog.md:37
+msgid "`tools.SelfCleaningBot`: les paramètres `clean_inbound_messages` et `clean_outbound_messages` sont maintenant correctement gérés."
+msgstr "`tools.SelfCleaningBot`: the parameters `clean_inbound_messages` and `clean_outbound_messages` are now properly handled."
+
+# translated using ollama
+#: ../../source/changelog.md:41
+msgid "Version 1.0.0"
+msgstr "Version 1.0.0"
+
+# translated using ollama
+#: ../../source/changelog.md:43
+msgid "Version initiale du projet."
+msgstr "Initial version of the project."
+

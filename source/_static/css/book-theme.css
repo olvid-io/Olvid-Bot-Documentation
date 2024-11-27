@@ -1,0 +1,18 @@
+/* Fix: was possible to scroll into side bar even when it was not necessary */
+.bd-sidebar-primary .sidebar-primary-items__end {
+  margin-top: 0;
+}
+
+/* Fix: olvid logo was on a white background in dark mode */
+img {
+  background-color: transparent !important;
+}
+
+/* Fix: icons are not aligned with text */
+.sd-material-icon {
+  margin-bottom: 0.2em;
+}
+
+.js-logo-color {
+  color: #f7df1e;
+}

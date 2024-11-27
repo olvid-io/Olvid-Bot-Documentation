@@ -1,0 +1,101 @@
+# translated using ollama
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/glossary.md:1
+msgid "📒 Lexique"
+msgstr "📒 Glossary"
+
+# translated using ollama
+#: ../../source/glossary.md:3
+msgid "Dans cette documentation, nous utilisons des termes qui sont spécifiques à Olvid et qui peuvent porter à confusion. Ce lexique a donc pour but de définir ces termes et de servir de pense-bête tout au long de votre lecture."
+msgstr "In this documentation, we use terms that are specific to Olvid and may be confusing. This glossary therefore aims to define these terms and serve as a reference throughout your reading."
+
+# translated using ollama
+#: ../../source/glossary.md
+msgid "Daemon"
+msgstr "Daemon"
+
+# translated using ollama
+#: ../../source/glossary.md:8
+msgid "Une application Olvid indépendante exposant un serveur gRPC afin de le rendre pilotable par un ou plusieurs clients. On peut le voir comme une API Olvid mais qui serait hébergée par vos soins."
+msgstr "An independent Olvid application exposing a gRPC server in order to make it controllable by one or more clients. It can be seen as an Olvid API but self-hosted."
+
+# translated using ollama
+#: ../../source/glossary.md:4
+msgid "Bot"
+msgstr "Bot"
+
+# translated using ollama
+#: ../../source/glossary.md:12
+msgid "Un programme client qui interagit avec un daemon. C'est un terme générique que nous utilisons même lorsque qu'il ne s'agit pas à proprement parler d'un ChatBot."
+msgstr "A client program that interacts with a daemon. This is a generic term that we use even when it is not strictly speaking a chatbot."
+
+# translated using ollama
+#: ../../source/glossary.md:8
+msgid "CLI (Command-Line Interface)"
+msgstr "CLI (Command-Line Interface)"
+
+# translated using ollama
+#: ../../source/glossary.md:16
+msgid "Une interface en ligne de commande qui permet d'interagir avec un daemon en utilisant des commandes textuelles. Elle peut interagir avec la totalité de l'API du daemon à des fins de tests et de débogage. Elle est aujourd'hui nécessaire pour l'initialisation d'un daemon."
+msgstr "A command line interface that allows interactions with a daemon using textual commands. It can interact with the entire API of the daemon for testing and debugging purposes. Today, it is necessary for the initialization of a daemon."
+
+# translated using ollama
+#: ../../source/glossary.md:13
+msgid "Identité"
+msgstr "Identity"
+
+# translated using ollama
+#: ../../source/glossary.md:21
+msgid "Une identité cryptographique Olvid hébergée sur un daemon. L'équivalent d'un profil sur une application Olvid. Elle contient également les données affichées chez vos contacts (nom, prénom, photo, ...)."
+msgstr "A cryptographic identity hosted on an Olvid daemon. Equivalent to a profile on an Olvid app. It also contains data displayed to your contacts (name, first name, photo, etc.)."
+
+# translated using ollama
+#: ../../source/glossary.md:17
+msgid "Clé client"
+msgstr "Client key"
+
+# translated using ollama
+#: ../../source/glossary.md:25
+msgid "Une clé utilisée pour s'authentifier auprès d'un daemon. Une clé client non-administrateur est toujours associée à une identité hébergée sur ce daemon et ne donne accès qu'aux ressources de cette identité."
+msgstr "A key used to authenticate on a daemon. A non-admin client key is always associated with an identity hosted on this daemon and only grants access to resources of that identity."
+
+# translated using ollama
+#: ../../source/glossary.md:21
+msgid "Clé d'API"
+msgstr "API Key"
+
+# translated using ollama
+#: ../../source/glossary.md:29
+msgid "Une clé fournie par Olvid qui permet de débloquer des fonctionnalités premium."
+msgstr "A key provided by Olvid to unlock premium features."
+
+# translated using ollama
+#: ../../source/glossary.md:24
+msgid "Plugin Keycloak"
+msgstr "Keycloak plugin"
+
+# translated using ollama
+#: ../../source/glossary.md:32
+msgid "Une fonctionnalité professionnelle d'Olvid qui permet aux membres de votre entreprise d'entrer en contact en un clic, de créer des groupes, ... Plus d'informations ici : https://olvid.io/entreprise"
+msgstr "A professional feature of Olvid that allows members of your company to connect with one click, to create groups, ... More information here: <https://olvid.io/entreprise>"
+

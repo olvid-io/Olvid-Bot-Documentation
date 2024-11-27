@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+# translated using ollama
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-18 14:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/cli/cli.md:3
+msgid "🛠️ Installation"
+msgstr "🛠️ Installation"
+
+# translated using ollama
+#: ../../source/cli/cli.md:1
+msgid "{fas}`terminal` CLI"
+msgstr "{fas}`terminal` CLI"
+
+# translated using ollama
+#: ../../source/cli/cli.md:13
+msgid "Il existe plusieurs manières d'installer et de lancer la CLI Olvid. La première (recommandée) est celle utilisée dans notre page [](/index). Mais il existe d'autres possibilités !"
+msgstr "There are several ways to install and run the Olvid CLI. The first (and recommended) method is the one used on our [](/index) page. However, there are other possibilities!"
+
+# translated using ollama
+#: ../../source/cli/cli.md:17
+msgid "Pour exécuter la CLI en dehors de la configuration Docker Compose du daemon, il est nécessaire que celui-ci daemon expose son port 50051. Pensez à vérifier que le service `daemon` de votre fichier `docker-compose.yaml` contient les lignes suivantes."
+msgstr "To run the CLI outside of daemon Docker Compose configuration, it is necessary for the daemon to expose its port 50051. Remember to check that the `daemon` service in your `docker-compose.yaml` file contains the following lines."
+
+# translated using ollama
+#: ../../source/cli/cli.md:25
+msgid "Pour permettre à la CLI de se connecter au daemon, il vous faudra récupérer la clé administrateur de votre daemon. Elle se trouve normalement dans l'environnement de votre daemon. Vous pouvez vérifier sa valeur dans le fichier `docker-compose.yaml` à la section environnement du daemon. Il s'agit de la valeur d'une variable d'environnement qui commence par **OLVID_ADMIN_CLIENT_KEY**.   Pour plus de détails sur les clés d'administration du daemon [rendez-vous ici](/daemon/configuration.md#clés-client-administrateur)."
+msgstr "To allow the CLI to connect to the daemon, you will need to retrieve your daemon's administrator key. It is usually found in the environment of your daemon. You can check its value in the `docker-compose.yaml` file at the daemon's environment section. This is the value of an environment variable that starts with **OLVID_ADMIN_CLIENT_KEY**.   For more details on the administrator keys of the daemon check [this page](/daemon/configuration.md#administrator-client-keys)."
+
+# translated using ollama
+#: ../../source/cli/cli.md
+msgid "Python"
+msgstr "Python"
+
+# translated using ollama
+#: ../../source/cli/cli.md:38 ../../source/cli/cli.md:47
+msgid "**Installation**"
+msgstr "**Install**"
+
+# translated using ollama
+#: ../../source/cli/cli.md
+msgid "Docker"
+msgstr "Docker"
+
+# translated using ollama
+#: ../../source/cli/cli.md:60
+msgid "**Configuration**"
+msgstr "**Configure**"
+
+# translated using ollama
+#: ../../source/cli/cli.md:66
+msgid "**ou**"
+msgstr "or"
+
+# translated using ollama
+#: ../../source/cli/cli.md:73 ../../source/cli/cli.md:84
+msgid "**Lancement**"
+msgstr "**Start**"
+
+# translated using ollama
+#: ../../source/cli/cli.md:94
+msgid "Vous devriez maintenant voir un prompt constitué d'un nombre et du caractère **>**. Si ce n'est pas le cas, rendez-vous sur notre page [](/cli/troubleshooting). Sinon, vous pouvez continuer avec notre page [](/cli/usage) pour comprendre le fonctionnement de l'outil."
+msgstr "You should now see a prompt consisting of a number and the **>** character. If this is not the case, please visit our troubleshooting page [](/cli/troubleshooting). Otherwise, you can continue with our usage page [](/cli/usage) to understand how the tool works."
+

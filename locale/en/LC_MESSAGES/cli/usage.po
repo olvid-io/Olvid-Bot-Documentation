@@ -1,0 +1,221 @@
+# translated using ollama
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-17 10:55+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/cli/usage.md:1
+msgid "🏁 Utilisation"
+msgstr "🏁 Usage"
+
+# translated using ollama
+#: ../../source/cli/usage.md:4
+msgid "Dans les exemples de commandes en mode script, *olvid-cli* peut être remplacé par n'importe quel moyen de lancer la CLI (docker ou python)."
+msgstr "In the examples of commands in script mode, *olvid-cli* can be replaced by any means of launching the CLI (docker or python)."
+
+# translated using ollama
+#: ../../source/cli/usage.md:5
+msgid "Contenu"
+msgstr "Content"
+
+# translated using ollama
+#: ../../source/cli/usage.md:11
+msgid "Principe"
+msgstr "Principle"
+
+# translated using ollama
+#: ../../source/cli/usage.md:12
+msgid "La CLI Olvid implémente un certain nombre de commandes subdivisées en groupes de commandes."
+msgstr "The Olvid CLI implements a number of commands divided into groups of commands."
+
+# translated using ollama
+#: ../../source/cli/usage.md:14
+msgid "Par exemple, le groupe de commande **identity** rassemble un ensemble de commandes qui permettent de gérer les identités présentes sur le daemon. Parmi elles, les commandes **new**, **get** et **rm** qui permettent respectivement de créer, lister et supprimer les identités."
+msgstr "For example, the **identity** command group brings together a set of commands to manage the identities present on the daemon. Among them, the **new**, **get**, and **rm** commands which respectively allow creating, listing, and deleting identities."
+
+# translated using ollama
+#: ../../source/cli/usage.md:17
+msgid "Voici des exemples de commandes valides :"
+msgstr "Here are some examples of valid commands:"
+
+# translated using ollama
+#: ../../source/cli/usage.md:24
+msgid "A tout moment, vous pouvez obtenir la liste des groupes, des commandes et les usages associés en ajoutant `--help` à la fin de votre commande (même incomplète)."
+msgstr "At any time, you can get the list of groups, commands, and associated usages by adding `--help` at the end of your command (even if it's incomplete)."
+
+# translated using ollama
+#: ../../source/cli/usage.md:35
+msgid "Mode interactif / Mode script"
+msgstr "Interactive mode / Script mode"
+
+# translated using ollama
+#: ../../source/cli/usage.md:36
+msgid "En lançant la CLI sans passer d'argument, par défaut elle se lance en mode interactif."
+msgstr "When launching the CLI without passing any argument, by default it launches in interactive mode."
+
+# translated using ollama
+#: ../../source/cli/usage.md:38
+msgid "Il est également possible d'exécuter une commande directement en la passant en argument. Par exemple :"
+msgstr "It is also possible to run a command directly by passing it as an argument. For example:"
+
+# translated using ollama
+#: ../../source/cli/usage.md:42
+msgid "Exécutera la commande *identity get* puis s'arrêtera automatiquement. C'est ce que l'on appellera le mode script pour la suite des exemples."
+msgstr "Will execute the command *identity get* and then stop automatically. This will be referred to as script mode in next examples."
+
+# translated using ollama
+#: ../../source/cli/usage.md:44
+msgid "Identité courante"
+msgstr "Current Identity"
+
+# translated using ollama
+#: ../../source/cli/usage.md:45
+msgid "La plupart des commandes de la CLI nécessitent de spécifier une identité à utiliser. Par exemple, lister les discussions ou envoyer un message doit être fait \"en tant que\" telle identité."
+msgstr "Most of the CLI commands require specifying an identity to use. For example, listing discussions or sending a message must be done \"as\" such an identity."
+
+# translated using ollama
+#: ../../source/cli/usage.md:47
+msgid "Pour cela, on va utiliser l'identifiant de l'identité en question (un nombre). La manière de passer cet identifiant varie en fonction du mode de fonctionnement actuel de la CLI."
+msgstr "For this, we will use the identifier of the identity in question (a number). The way to pass this identifier varies depending on the current operating mode of the CLI."
+
+# translated using ollama
+#: ../../source/cli/usage.md
+msgid "Mode interactif"
+msgstr "Interactive mode"
+
+# translated using ollama
+#: ../../source/cli/usage.md:52
+msgid "En mode interactif, la CLI sélectionne automatiquement, au lancement, la première identité disponible. Elle affiche l'identité utilisée dans le prompt."
+msgstr "In interactive mode, the CLI automatically selects the first available identity upon launch. It displays the used identity in the prompt."
+
+# translated using ollama
+#: ../../source/cli/usage.md:55
+msgid "Il est cependant possible de changer l'identité utilisée à l'aide de la commande suivante."
+msgstr "However, it is possible to change the user identity using the following command."
+
+# translated using ollama
+#: ../../source/cli/usage.md
+msgid "Mode script"
+msgstr "Script mode"
+
+# translated using ollama
+#: ../../source/cli/usage.md:68
+msgid "En mode script, si la commande le nécessite, on utilisera l'option *-i* pour spécifier l'identité à utiliser. Par exemple, pour lister les messages de l'identité 1."
+msgstr "In script mode, if necessary, use the option *-i* to specify the identity to use. For example, to list messages from identity 1."
+
+# translated using ollama
+#: ../../source/cli/usage.md:75
+msgid "l'option *-i* doit impérativement se trouver avant le debut de la commande, ici avant *message get*."
+msgstr "The option *-i* must be placed before the start of the command, here before *message get*."
+
+# translated using ollama
+#: ../../source/cli/usage.md:77
+msgid "Lister des éléments"
+msgstr "List items"
+
+# translated using ollama
+#: ../../source/cli/usage.md:78
+msgid "Tous les groupes de commandes liés à une entité (identité, discussion, message, ...) implémentent la commande `get` qui permet de lister les éléments associés."
+msgstr "All command groups related to an entity (identity, discussion, message, etc.) implement the `get` command which allows listing associated elements."
+
+# translated using ollama
+#: ../../source/cli/usage.md:80
+msgid "Pour n'afficher que certains champs des entités, il est possible d'utiliser l'option *-f* ou *--fields* suivie d'une liste de nom de champs de l'entité en question séparée par des virgules."
+msgstr "To display only certain fields of entities, it is possible to use the *-f* or *--fields* option followed by a comma-separated list of field names for the entity in question."
+
+# translated using ollama
+#: ../../source/cli/usage.md:82
+msgid "Chaque commande `get` peut également implémenter ses spécificités, nous vous invitons donc à vérifier les options et arguments supplémentaires qu'elle pourrait implémenter à l'aide de l'option *--help*."
+msgstr "Every `get` command can also implement its specificities, so we invite you to check the additional options and arguments it might implement using the *--help* option."
+
+# translated using ollama
+#: ../../source/cli/usage.md:84
+msgid "Voici quelques exemples de commandes liées à la liste des éléments :"
+msgstr "Here are some examples of commands related to the list of items:"
+
+# translated using ollama
+#: ../../source/cli/usage.md:93
+msgid "Gestion des clés client"
+msgstr "Client Key Management"
+
+# translated using ollama
+#: ../../source/cli/usage.md:94
+msgid "Le groupe de commandes `key` permet de gérer les clés clients du daemon. Il ne nécessite pas d'identité courante puisque les clés clients sont globales."
+msgstr "The `key` group of commands allows managing client keys for the daemon. It does not require a current identity since client keys are global."
+
+# translated using ollama
+#: ../../source/cli/usage.md:96
+msgid "Une clé client est soit associée à une identité, c'est le cas des clés client utilisées pour nos programmes, soit elle est administratrice, elle peut choisir quelle identité elle veut utiliser à chaque appel API. C'est le cas de la clé client utilisée par la CLI."
+msgstr "A client key is either associated with an identity, as in the case of client keys used for our programs, or it is an admin client key. Admin client keys allows to choose which identity to use for each API call. This is the case for the client key used by the CLI."
+
+# translated using ollama
+#: ../../source/cli/usage.md:99
+msgid "Les clés client ont un nom associé. Il n'est pas utilisé et a juste pour but d'aider à les gérer."
+msgstr "Client keys have an associated name. It is not used and merely serves to help manage them."
+
+# translated using ollama
+#: ../../source/cli/usage.md:102
+msgid "Voici des exemples de commandes liées à la gestion des clés clients :"
+msgstr "Here are examples of commands related to client key management:"
+
+# translated using ollama
+#: ../../source/cli/usage.md:115
+msgid "Stockage"
+msgstr "Storage"
+
+# translated using ollama
+#: ../../source/cli/usage.md:116
+msgid "L'API de stockage du daemon permet de stocker des données arbitraires sous forme de clés-valeurs dans la base de données du daemon."
+msgstr "The storage API of the daemon allows for storing arbitrary data as key-value pairs in the daemon's database."
+
+# translated using ollama
+#: ../../source/cli/usage.md:118
+msgid "Ces éléments sont tous associés à une clé client non-administrateur. Cela permet à la fois de scinder le stockage par client et de restaurer correctement les éléments stockés en cas de restauration de sauvegarde."
+msgstr "These elements are all associated with a non-admin user key. This allows both to split storage by client and to correctly restore stored items in case of backup restoration."
+
+# translated using ollama
+#: ../../source/cli/usage.md:121
+msgid "Pour accéder aux éléments de stockage à l'aide de la CLI, il faut donc spécifier la clé client à utiliser."
+msgstr "To access storage elements using the CLI, it is therefore necessary to specify the client key to use."
+
+# translated using ollama
+#: ../../source/cli/usage.md:135
+msgid "En mode script, on utilise l'option *-k* de manière similaire à l'option *-i*."
+msgstr "In script mode, one uses the *-k* option in a similar way as the *-i* option."
+
+# translated using ollama
+#: ../../source/cli/usage.md:141
+msgid "Le stockage du daemon contient deux types de stockage : un stockage global et un stockage par discussion. Dans le second cas, il est possible de stocker dans plusieurs discussions plusieurs valeurs pour une même clé."
+msgstr "Daemon storage contains two types of storage: a global storage and a per-discussion storage. In the latter case, it is possible to store multiple values for the same key in several discussions."
+
+# translated using ollama
+#: ../../source/cli/usage.md:143
+msgid "Le stockage du daemon présente deux intérêts majeurs :"
+msgstr "Daemon storage has two main advantages:"
+
+# translated using ollama
+#: ../../source/cli/usage.md:145
+msgid "simplicité d'usage et de déploiement : pas besoin de mettre en place un système de stockage côté client."
+msgstr "simplicity of use and deployment: no need to set up a client-side storage system."
+
+# translated using ollama
+#: ../../source/cli/usage.md:146
+msgid "résilience aux sauvegardes : le stockage du daemon est sauvegardé en utilisant le même mécanisme que le reste des données du daemon. Cela assure plus de robustesse, mais surtout il permet d'être résilient aux changements d'identifiants qui ont lieu lors d'une restauration de sauvegarde."
+msgstr "backup resilience: the storage of the daemon is backed up using the same mechanism as the rest of the daemon's data. This ensures more robustness, but above all it allows for resilience to changes in identifiers that occur during a backup restoration."
+

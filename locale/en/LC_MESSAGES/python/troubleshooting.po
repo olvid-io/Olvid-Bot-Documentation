@@ -1,0 +1,126 @@
+# translated using ollama
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-18 15:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:1
+msgid "👩‍🔧 Dépannage"
+msgstr "👩‍🔧 Troubleshooting"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:3
+msgid "Erreurs courantes"
+msgstr "Common Errors"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:9
+msgid "**No module named 'olvid'**"
+msgstr "**No module named 'olvid'**"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:11
+msgid "Le module `olvid-bot` n'a pas été trouvé. Si vous utilisez un environnement virtuel, pensez à l'activer."
+msgstr "The module `olvid-bot` was not found. If you are using a virtual environment, remember to activate it."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:15
+msgid "Sinon, installez la dernière version du module à l'aide de la commande pip."
+msgstr "Otherwise, install the latest version of the module using the pip command."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:21
+msgid "**Client key not found**"
+msgstr "**Client key not found**"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:23
+msgid "Votre clé client n'a pas pu être trouvée. Vérifiez qu'elle se trouve soit dans votre environnement avec la commande `env`,  soit que le fichier `.env` existe bien, contient les bonnes valeurs et se trouve dans le répertoire courant."
+msgstr "Your client key could not be found. Please ensure it is either in your environment by running the command `env`, or that the `.env` file exists, contains the correct values and is located in the current directory."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:27
+msgid "**Admin client key not found**"
+msgstr "**Admin client key not found**"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:29
+msgid "Impossible de trouver une clé client administrateur. Si vous n'utilisez pas les API d'administration (gestion d'identité ou de clé client) utilisez la classe `OlvidClient` plutôt que la classe `OlvidAdminClient`."
+msgstr "Unable to find an administrator client key. If you are not using administration APIs (identity or client key management), use the `OlvidClient` class instead of the `OlvidAdminClient` class."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:31
+msgid "Sinon, vérifiez que la clé est bien définie en utilisant la variable `OLVID_ADMIN_CLIENT_KEY` et non `OLVID_CLIENT_KEY`."
+msgstr "Otherwise, check that the key is properly defined using the `OLVID_ADMIN_CLIENT_KEY` variable and not the `OLVID_CLIENT_KEY` variable."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:33
+msgid "Enfin, vérifiez à l'aide de la CLI que la clé que vous utilisez est valide et possède les droits administrateurs. (cf. [Gestion des clés client](/cli/usage.md#gestion-des-cles-client))"
+msgstr "Finally, verify using the CLI that the key you are using is valid and has administrative rights. (see [Client key management](/cli/usage.md#gestion-des-cles-client))"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:37
+msgid "**Failed to connect to all addresses**"
+msgstr "**Failed to connect to all addresses**"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:40
+msgid "Votre programme n'a pas réussi à se connecter au daemon. Vérifiez que le daemon est bien lancé et fonctionnel."
+msgstr "Your program failed to connect to the daemon. Please ensure that the daemon is running and functional."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:47
+msgid "Si vous venez de lancer le daemon, patientez un peu avant de réessayer, il est possible qu'il n'ait pas fini sa séquence de lancement et ne soit donc pas prêt à recevoir des connections client."
+msgstr "If you have just started the daemon, please wait a little before trying again, it is possible that it has not finished its startup sequence and is therefore not ready to receive client connections yet."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:49
+msgid "Si le daemon semble fonctionner, vérifiez que le port 50051 est exposé ou accessible depuis l'environnement d'exécution de votre programme."
+msgstr "If the daemon seems to be working, make sure that port 50051 is exposed or accessible from your program's runtime environment."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:51
+msgid "Dans le cas d'une configuration différente de celle de notre page d'installation, pensez à stipuler l'adresse du daemon. Pour cela, vous pouvez utiliser la variable `OLVID_DAEMON_TARGET` en tant que variable d'environnement ou dans un fichier `.env`."
+msgstr "In case of a different configuration than that of our installation page, remember to specify the daemon address. To do this, you can use the `OLVID_DAEMON_TARGET` variable as an environment variable or in a `.env` file."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:54
+msgid "Il faut spécifier le nom de domaine ou l'adresse IP du daemon, suivie du port. Par exemple :"
+msgstr "You need to specify the domain name or IP address of the daemon, followed by the port. For example:"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:62
+msgid "**Invalid client key**"
+msgstr "**Invalid client key**"
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:64
+msgid "La clé client que vous utilisez n'est pas reconnue par le daemon."
+msgstr "The client key you are using is not recognized by the daemon."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:66
+msgid "Vérifiez qu'il n'y a pas de conflit entre deux valeurs de clé entre un fichier `.env`, vos variables d'environnement et votre code."
+msgstr "Make sure there are no conflicts between two key values across a `.env` file, your environment variables, and your code."
+
+# translated using ollama
+#: ../../source/python/troubleshooting.md:67
+msgid "Si vous avez plusieurs instances de daemon, vérifiez que vous vous connectez à la bonne."
+msgstr "If you have multiple daemon instances, make sure you are connecting to the correct one."
+

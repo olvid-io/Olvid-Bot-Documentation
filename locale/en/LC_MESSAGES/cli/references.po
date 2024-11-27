@@ -1,0 +1,522 @@
+### AUTO-TRANSLATION IGNORE
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../source/cli/references.md:1
+msgid "📚️ References"
+msgstr ""
+
+#: ../../source/cli/references.md:3
+msgid "Liste des commandes"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli identity"
+msgstr ""
+
+#: ../../olvid-cli identity:1
+msgid "select current identity, (admin) manage olvid identities"
+msgstr ""
+
+#: ../../olvid-cli current:1 identity
+msgid "get or update identity currently used for your commands"
+msgstr ""
+
+#: ../../source/cli/references.md
+msgid "Arguments"
+msgstr ""
+
+#: ../../olvid-cli current:1 identity impersonate:1 key location:1 message
+#: new:1 react:1 update:1
+msgid "Optional argument"
+msgstr ""
+
+#: ../../olvid-cli get:1 identity
+msgid "list identities on this daemon"
+msgstr ""
+
+#: ../../source/cli/references.md
+msgid "Options"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 attachment contact controlled:1 discussion get:1
+#: group identity invitation key message new read-only:1 rm:1 send:1 standard:1
+#: storage
+msgid "Optional argument(s)"
+msgstr ""
+
+#: ../../olvid-cli identity kc:1
+msgid "manage keycloak server for identities"
+msgstr ""
+
+#: ../../olvid-cli bind:1 identity kc
+msgid "attach your current identity to a keycloak server using a keycloak bot configuration link"
+msgstr ""
+
+#: ../../olvid-cli accept:1 admin:1 attachment bind:1 contact decline:1
+#: disband:1 discussion get:1 group identity introduce:1 invitation kc key
+#: key:1 leave:1 location:1 message new:1 permissions:1 photo react:1 sas:1
+#: save:1 send:1 set:1 settings storage unset:1 update:1 voip:1
+msgid "Required argument"
+msgstr ""
+
+#: ../../olvid-cli identity kc new:1
+msgid "create a new identity using a keycloak bot configuration link"
+msgstr ""
+
+#: ../../olvid-cli identity kc unbind:1
+msgid "remove keycloak server for current identity"
+msgstr ""
+
+#: ../../olvid-cli identity key:1
+msgid "set api key for current identity"
+msgstr ""
+
+#: ../../olvid-cli identity key:1
+msgid "Use a configuration link instead of a raw api key"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "create a new identity"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "first name"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "last name"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "position"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "company"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "custom server url (optional)"
+msgstr ""
+
+#: ../../olvid-cli identity new:1
+msgid "custom api key (optional)"
+msgstr ""
+
+#: ../../olvid-cli identity photo:1
+msgid "manage current identity photo"
+msgstr ""
+
+#: ../../olvid-cli identity photo set:1
+msgid "set current identity photo"
+msgstr ""
+
+#: ../../olvid-cli identity photo unset:1
+msgid "remove current identity photo"
+msgstr ""
+
+#: ../../olvid-cli identity rm:1
+msgid "delete identities"
+msgstr ""
+
+#: ../../olvid-cli identity update:1
+msgid "update your current identity details (name, position, ...)"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli key"
+msgstr ""
+
+#: ../../olvid-cli key:1
+msgid "(admin) manage your identities client keys"
+msgstr ""
+
+#: ../../olvid-cli get:1 key
+msgid "list existing client keys"
+msgstr ""
+
+#: ../../olvid-cli impersonate:1 key
+msgid "connect the cli to daemon using a specific client key (necessary to access storage api)"
+msgstr ""
+
+#: ../../olvid-cli key new:1
+msgid "create a new client key associated with an identity"
+msgstr ""
+
+#: ../../olvid-cli key rm:1
+msgid "delete a client key"
+msgstr ""
+
+#: ../../olvid-cli attachment contact discussion downgrade:1 empty:1
+#: introduce:1 invite:1 key locked message rm:1 update:1
+msgid "Required argument(s)"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli discussion"
+msgstr ""
+
+#: ../../olvid-cli discussion:1
+msgid "manage your discussions"
+msgstr ""
+
+#: ../../olvid-cli discussion empty:1
+msgid "delete all messages in a discussion"
+msgstr ""
+
+#: ../../olvid-cli discussion get:1
+msgid "list current identity discussions"
+msgstr ""
+
+#: ../../olvid-cli discussion locked:1
+msgid "manage locked discussion"
+msgstr ""
+
+#: ../../olvid-cli discussion get:1 locked
+msgid "list locked discussions"
+msgstr ""
+
+#: ../../olvid-cli discussion locked rm:1
+msgid "delete locked discussion"
+msgstr ""
+
+#: ../../olvid-cli discussion settings:1
+msgid "manage discussion settings"
+msgstr ""
+
+#: ../../olvid-cli discussion get:1 settings
+msgid "get a"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli message"
+msgstr ""
+
+#: ../../olvid-cli message:1
+msgid "send and manage messages"
+msgstr ""
+
+#: ../../olvid-cli get:1 message
+msgid "list current identity messages"
+msgstr ""
+
+#: ../../olvid-cli get:1 message
+msgid "get all messages in given discussion id"
+msgstr ""
+
+#: ../../olvid-cli get:1 message
+msgid "get only unread messages"
+msgstr ""
+
+#: ../../olvid-cli location:1 message
+msgid "send a location message"
+msgstr ""
+
+#: ../../olvid-cli message react:1
+msgid "react to a given message"
+msgstr ""
+
+#: ../../olvid-cli message refresh:1
+msgid "fore downloading last messages from server"
+msgstr ""
+
+#: ../../olvid-cli message rm:1
+msgid "delete messages"
+msgstr ""
+
+#: ../../olvid-cli message rm:1
+msgid "delete all messages in given discussion id"
+msgstr ""
+
+#: ../../olvid-cli message rm:1
+msgid "delete all messages for given identity id"
+msgstr ""
+
+#: ../../olvid-cli message rm:1
+msgid "Delete messages everywhere"
+msgstr ""
+
+#: ../../olvid-cli message send:1
+msgid "send text message in a given discussion"
+msgstr ""
+
+#: ../../olvid-cli message send:1
+msgid "Use passed id as a contact id"
+msgstr ""
+
+#: ../../olvid-cli message send:1
+msgid "Use passed id as a group id"
+msgstr ""
+
+#: ../../olvid-cli message update:1
+msgid "Update a message text body"
+msgstr ""
+
+#: ../../olvid-cli message voip:1
+msgid "start a fake call in a discussion"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli attachment"
+msgstr ""
+
+#: ../../olvid-cli attachment:1
+msgid "list and save your attachments"
+msgstr ""
+
+#: ../../olvid-cli attachment get:1
+msgid "list current identity attachments"
+msgstr ""
+
+#: ../../olvid-cli attachment get:1
+msgid "get attachments for current owned identity"
+msgstr ""
+
+#: ../../olvid-cli attachment get:1
+msgid "get attachments associated to a message id"
+msgstr ""
+
+#: ../../olvid-cli attachment rm:1
+msgid "delete attachments"
+msgstr ""
+
+#: ../../olvid-cli attachment save:1
+msgid "download an attachment file and save it in your filesystem"
+msgstr ""
+
+#: ../../olvid-cli attachment save:1
+msgid "directory to store downloaded attachment"
+msgstr ""
+
+#: ../../olvid-cli attachment save:1
+msgid "override original file name"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli invitation"
+msgstr ""
+
+#: ../../olvid-cli invitation:1
+msgid "send and answer invitations"
+msgstr ""
+
+#: ../../olvid-cli accept:1 invitation
+msgid "accept an invitation"
+msgstr ""
+
+#: ../../olvid-cli decline:1 invitation
+msgid "decline an invitation"
+msgstr ""
+
+#: ../../olvid-cli get:1 invitation
+msgid "list current identity invitations"
+msgstr ""
+
+#: ../../olvid-cli invitation rm:1
+msgid "delete an invitation"
+msgstr ""
+
+#: ../../olvid-cli invitation sas:1
+msgid "set your future contact sas code"
+msgstr ""
+
+#: ../../olvid-cli invitation send:1
+msgid "send a new invitation using an olvid invitation url"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli contact"
+msgstr ""
+
+#: ../../olvid-cli contact:1
+msgid "manage your contacts"
+msgstr ""
+
+#: ../../olvid-cli contact downgrade:1
+msgid "downgrade contacts and remove their one to one discussion"
+msgstr ""
+
+#: ../../olvid-cli contact get:1
+msgid "list current identity contacts"
+msgstr ""
+
+#: ../../olvid-cli contact introduce:1
+msgid "present a contact to other contacts"
+msgstr ""
+
+#: ../../olvid-cli contact invite:1
+msgid "invite contacts in one to one discussion"
+msgstr ""
+
+#: ../../olvid-cli contact new:1
+msgid "interactively add a  contact"
+msgstr ""
+
+#: ../../olvid-cli contact rm:1
+msgid "delete contacts"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli group"
+msgstr ""
+
+#: ../../olvid-cli group:1
+msgid "manage current identity groups"
+msgstr ""
+
+#: ../../olvid-cli admin:1 group
+msgid "manage group admins"
+msgstr ""
+
+#: ../../olvid-cli disband:1 group
+msgid "disband a group where you have admin permissions"
+msgstr ""
+
+#: ../../olvid-cli get:1 group
+msgid "list current identity groups"
+msgstr ""
+
+#: ../../olvid-cli group leave:1
+msgid "leave a group"
+msgstr ""
+
+#: ../../olvid-cli group new:1
+msgid "create new groups"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "create an advanced group with custom permissions for members (not recommended)"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "By default new members won't have the send_message permission"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "By default do not give remote delete permission to future members"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "By default give future admins remote delete permission"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "By default give future member remote delete permission"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "Set members as admin"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "Let members send message"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "Let members edit or delete their messages"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "Let members remote delete every messages"
+msgstr ""
+
+#: ../../olvid-cli advanced:1 group new
+msgid "Let members change discussion settings"
+msgstr ""
+
+#: ../../olvid-cli controlled:1 group new
+msgid "create a controlled group with admin and regular members"
+msgstr ""
+
+#: ../../olvid-cli group new read-only:1
+msgid "create a read-only group where only admin members can post messages"
+msgstr ""
+
+#: ../../olvid-cli group new standard:1
+msgid "create a standard group, where everyone have admin rights"
+msgstr ""
+
+#: ../../olvid-cli group permissions:1
+msgid "manage a group member permissions"
+msgstr ""
+
+#: ../../olvid-cli group photo:1
+msgid "get/update group photos"
+msgstr ""
+
+#: ../../olvid-cli group update:1
+msgid "update group details and/or members (advanced command)"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli storage"
+msgstr ""
+
+#: ../../olvid-cli storage:1
+msgid "(advanced) access a client key associated storage"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli tools"
+msgstr ""
+
+#: ../../olvid-cli tools:1
+msgid "advanced commands to debug and manage daemon"
+msgstr ""
+
+#: ../../olvid-cli auto-accept:1 tools
+msgid "accept every pending and incoming invitations"
+msgstr ""
+
+#: ../../olvid-cli auto-accept:1 auto-invite:1 tools
+msgid "Specify a specific identity to use"
+msgstr ""
+
+#: ../../olvid-cli auto-accept:1 tools
+msgid "Accept every invitation for every identity"
+msgstr ""
+
+#: ../../olvid-cli auto-invite:1 tools
+msgid "add every other identity on this daemon as a contact"
+msgstr ""
+
+#: ../../olvid-cli auto-invite:1 tools
+msgid "Present every identity in the server to each other (else it only present current identity to others)"
+msgstr ""
+
+#: ../../olvid-cli listen:1 tools
+msgid "listen notifications received for a specific or every notifications"
+msgstr ""
+
+#: ../../olvid-cli listen:1 tools
+msgid "Specify a specific identity to listen"
+msgstr ""
+
+#: ../../olvid-cli listen:1 tools
+msgid "Hide notification content"
+msgstr ""
+
+#: ../../olvid-cli listen:1 tools
+msgid "Coma separated list of notifications to listen (upper snake case: MESSAGE_SEND,MESSAGE_RECEIVED)"
+msgstr ""
+

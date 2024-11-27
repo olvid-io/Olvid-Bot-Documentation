@@ -1,0 +1,10 @@
+.venv
+.idea
+
+_build
+__pycache__
+
+.env
+
+# translation files
+*.mo

@@ -1,0 +1,40 @@
+.. click:: olvid.cli.handler.identity_tree:identity_tree
+	:prog: olvid-cli identity
+	:nested: full
+
+.. click:: olvid.cli.handler.key_tree:key_tree
+	:prog: olvid-cli key
+	:nested: full
+
+.. click:: olvid.cli.handler.discussion_tree:discussion_tree
+	:prog: olvid-cli discussion
+	:nested: full
+
+.. click:: olvid.cli.handler.message_tree:message_tree
+	:prog: olvid-cli message
+	:nested: full
+
+.. click:: olvid.cli.handler.attachment_tree:attachment_tree
+	:prog: olvid-cli attachment
+	:nested: full
+
+.. click:: olvid.cli.handler.invitation_tree:invitation_tree
+	:prog: olvid-cli invitation
+	:nested: full
+
+.. click:: olvid.cli.handler.contact_tree:contact_tree
+	:prog: olvid-cli contact
+	:nested: full
+
+.. click:: olvid.cli.handler.group_tree:group_tree
+	:prog: olvid-cli group
+	:nested: full
+
+.. click:: olvid.cli.handler.storage_tree:storage_tree
+	:prog: olvid-cli storage
+	:nested: full
+
+.. click:: olvid.cli.handler.tools_tree:tools_tree
+	:prog: olvid-cli tools
+	:nested: full
+

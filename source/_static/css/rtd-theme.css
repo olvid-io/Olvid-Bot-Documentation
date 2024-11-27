@@ -1,0 +1,34 @@
+/* Add separators between Class comments
+re-used code from .docutils class
+*/
+
+.py.attribute + .py.method::before {
+  content: "Methods";
+  font-size: large;
+  font-weight: bold;
+
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+
+  padding: 1px 8px 1px 5px;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+}
+
+/* attributes and between attributes and methods doc */
+p + .py.attribute::before {
+  content: "Attributes";
+  font-size: large;
+  font-weight: bold;
+
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+
+  padding: 1px 8px 1px 5px;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+}

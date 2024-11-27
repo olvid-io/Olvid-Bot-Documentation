@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-17 19:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:1
+msgid "👩‍🏫 Tutoriels"
+msgstr "👩‍🏫 Tutorials"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:3
+msgid "Dans cette page, nous essayons d'expliquer comment réaliser un certain nombre d'actions avec notre librairie Python. Idéalement, il vaut mieux la suivre étape par étape afin de suivre le cheminement, mais si vous vous sentez à l'aise, vous pouvez essayer d'accéder directement à la section qui vous intéresse."
+msgstr "In this page, we try to explain how to perform a number of actions with our Python library. Ideally, it is best to follow it step by step in order to understand the process, but if you feel comfortable, you can try to access directly to the section that interests you."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:13
+msgid "Les bases"
+msgstr "The basics"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:15
+msgid "OlvidClient"
+msgstr "OlvidClient"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:16
+msgid "Pour interagir avec le {term}`daemon`, il vous faudra systématiquement créer une instance de la classe **OlvidClient**. Il peut s'agir de la classe d'origine ou d'une classe enfant."
+msgstr "To interact with the {term}`daemon`, you will need to systematically create an instance of the **OlvidClient** class. This can be the original class or a subclass."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:19
+msgid "Cette classe va automatiquement récupérer une clé client en utilisant l'environnement ou un fichier `.env`. (cf. [](/python/python.md#configuration))"
+msgstr "This class will automatically retrieve a client key using the environment or a `.env` file. (see [Python Client Configuration](/python/python.md#configuration))"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:21
+msgid "Grâce à ce client, on pourra notamment exécuter des commandes et mettre en place des listeners de notifications."
+msgstr "Thanks to this client, you will be able to execute commands and set up notification listeners."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:23
+msgid "Voici à quoi ressemble un fichier *main.py* de base contenant la création d'un client Olvid et l'exécution d'une commande (afficher l'identité courante). Cette structure est à utiliser dans chacun des exemples de code de cette page, il suffit de remplacer le contenu de la fonction `main` par le code de votre choix."
+msgstr "Here's what a basic *main.py* file looks like containing the creation of an Olvid client and executing a command (display current identity). This structure should be used in each of the code examples on this page, simply replace the content of the `main` function with your chosen code."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:40
+msgid "Commande"
+msgstr "Command"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:41
+msgid "Toutes les méthodes gRPC de commandes exposées par le daemon sont facilement accessibles grâce à des méthodes de la classe **OlvidClient**. Par exemple, pour envoyer un message (méthode `MessageSend` en gRPC), on utilisera la méthode `message_send` de notre instance d'OlvidClient."
+msgstr "All command gRPC methods exposed by the daemon are easily accessible through methods of the **OlvidClient** class. For example, to send a message (gRPC method `MessageSend`), we will use the `message_send` method of our OlvidClient instance."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:44
+msgid "Dans le cas où nous connaissons l'identifiant de la discussion dans laquelle poster, cela donnerait :"
+msgstr "In the case where we know the identifier of the discussion in which to post, this would give:"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:52
+msgid "Notification"
+msgstr "Notification"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:53
+msgid "La classe **OlvidClient** implémente également des méthodes qui permettent de facilement écouter les notifications émises par le daemon. Ces méthodes commencent toutes par le préfixe `on_` et doivent être redéfinies dans une classe fille d'OlvidClient."
+msgstr "The **OlvidClient** class also implements methods that allow you to easily listen for notifications emitted by the daemon. These methods all start with the `on_` prefix and must be overridden in a subclass of OlvidClient."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:56
+msgid "Par exemple, pour afficher dans le terminal quand un message est reçu et lorsqu'une réaction est ajoutée, on peut faire :"
+msgstr "For example, to display in the terminal when a message is received and when a reaction is added, you can do:"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:76
+msgid "Utilisation avancée"
+msgstr "Advanced Usage"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:77
+msgid "Listener"
+msgstr "Listener"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:78
+msgid "Pour une implémentation plus fine de l'écoute des notifications, il est possible d'utiliser la notion de *Listener*. Un listener est une souscription d'une fonction callback à un type de notification. Cette fonction sera appelée à chaque fois qu'une notification de ce type est reçue."
+msgstr "For a more granular implementation of notifications listening, it is possible to use the concept of *Listener*. A listener is a subscription of a callback function to a notification type. This function will be called each time a notification of this type is received."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:82
+msgid "Chaque type de notification a sa propre classe dans le module `olvid.listeners`."
+msgstr "Each type of notification has its own class in the module `olvid.listeners`."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:84
+msgid "Dans cet exemple, la méthode `reply_to_message` sera appelée à chaque fois qu'un message arrive."
+msgstr "In this example, the `reply_to_message` method will be called every time a message arrives."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:103
+msgid "Listener: expiration"
+msgstr "Listener: expiration"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:104
+msgid "Par défaut, un listener écoute les notifications pour toujours, mais il est possible d'utiliser l'argument `count` pour n'écouter qu'un certain nombre de notifications. Dans ce cas, lorsque que *count* notifications ont été traitées, l'listener est arrêté."
+msgstr "By default, a listener listens to notifications indefinitely, but it is possible to use the `count` argument to only listen for a certain number of notifications. In this case, once *count* notifications have been processed, the listener is stopped."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:107
+msgid "Dans cet exemple, on répond au prochain message reçu puis le programme s'arrête."
+msgstr "In this example, we respond to the next received message and then the program stops."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:131
+msgid "Listener : filtrage"
+msgstr "Listener: Filtering"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:133
+msgid "Les listeners permettent également de filtrer les notifications à traiter.  Pour cela, on peut ajouter une ou plusieurs fonctions de filtrage à notre listener."
+msgstr "Listeners also allow filtering of notifications to be processed. To do this, we can add one or more filter functions to our listener."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:136
+msgid "Par exemple, on peut vouloir traiter uniquement les messages envoyés par un contact donné."
+msgstr "For example, we might want to process only messages sent by a specific contact."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:162
+msgid "Listener avancé"
+msgstr "Advanced listener"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:164
+msgid "Il est tout à fait possible de combiner le filtrage et l'expiration."
+msgstr "It is perfectly possible to combine filtering and expiration."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:166
+msgid "Ici, on l'utilise pour effectuer une action et quitter le programme quand le message que l'on vient d'envoyer arrive sur le téléphone de son destinataire."
+msgstr "Here, it is used to perform an action and exit the program when the message that has just been sent arrives on the recipient's phone."
+

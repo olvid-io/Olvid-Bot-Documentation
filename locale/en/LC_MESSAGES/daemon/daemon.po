@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-12-17 11:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:1
+msgid "👹 Daemon"
+msgstr "👹 Daemon"
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:13
+msgid "Daemon"
+msgstr "Daemon"
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:14
+msgid "Le daemon Olvid est le coeur de notre écosystème de bots. C'est sur lui que tout est basé. C'est un programme qui embarque le moteur cryptographique d'Olvid et un serveur gRPC. Les différentes méthodes gRPC implémentées permettent d'administrer le daemon et les identités Olvid qu'il contient."
+msgstr "The Olvid daemon is the heart of our bot ecosystem. It is on this that everything is based. It is a program that embeds the Olvid cryptographic engine and a gRPC server. The various implemented gRPC methods allow for administration of the daemon and the Olvid identities it contains."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:18
+msgid "Pour installer votre instance de daemon, rendez-vous dans notre section [](/index)."
+msgstr "To install your daemon instance, visit our [](/index) page."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:20
+msgid "Serveur gRPC"
+msgstr "gRPC Server"
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:22
+msgid "On peut distinguer deux types de méthodes (points d'entrée API) que le daemon expose :"
+msgstr "Daemon exposes two types of methods (API endpoints):"
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:23
+msgid "les commandes : un client envoie une requête au daemon qui exécute l'action attendue avant de renvoyer une réponse."
+msgstr "commands: a client sends a request to the daemon which executes the expected action before returning a response."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:24
+msgid "les notifications : un client s'inscrit pour recevoir un type de notification et le serveur lui enverra un message à chaque fois que nécessaire, tant que la connection reste ouverte."
+msgstr "notifications: a client subscribes to receive a type of notification and the server will send a message each time it is necessary, as long as the connection remains open."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:26
+msgid "Toutes les méthodes sont décrites dans le dossier [services](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/services/v1) du répertoire GitHub qui contient nos fichiers protobuf. Les messages de requête et réponse des commandes sont décrits dans le dossier [command](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/command/v1). Les messages de souscription et de notification sont regroupés dans le dossier [notification](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1)."
+msgstr "All methods are described in the [services](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/services/v1) folder of the GitHub repository that contains our protobuf files. The request and response messages of commands are described in the [command](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/command/v1) folder. Subscription and notification messages are grouped in the [notification](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) folder."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:30
+msgid "Enfin, le dossier [datatypes](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1) regroupe un ensemble de messages qui décrivent les objets que le daemon utilise. Ces messages sont donc utilisés dans de nombreux autres messages."
+msgstr "Finally, the [datatypes](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1) folder contains a set of messages that describe the objects used by the daemon. These messages are therefore used in many other messages."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:33
+msgid "Client"
+msgstr "Client"
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:35
+msgid "Nous avons choisi d'utiliser [protobuf](https://protobuf.dev/) et [gRPC](https://grpc.io/) pour permettre de facilement implémenter des clients capables de se connecter à notre daemon dans n'importe quel langage."
+msgstr "We have chosen to use [protobuf](https://protobuf.dev/) and [gRPC](https://grpc.io/) to easily enable implementing clients capable of connecting to our daemon in any language."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:37
+msgid "Pour faciliter la prise en main, nous avons déjà développé deux librairies en [python](/python/python) et [javascript](/js/js) qui permettent de commencer à écrire vos clients très rapidement."
+msgstr "To make it easier to get started, we have already developed two libraries in [python](/python/python) and [javascript](/js/js) that allow you to start writing your clients very quickly."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:39
+msgid "Mais si vous préférez utiliser un autre langage, il est possible d'utiliser nos fichiers *.proto* pour générer un client gRPC dans un langage supporté. Plus d'informations sont disponibles dans notre page [](/daemon/custom_client)"
+msgstr "However, if you prefer to use another language, it is possible to use our .proto files to generate a gRPC client in a supported language. More information is available on our [](/daemon/custom_client) page."
+

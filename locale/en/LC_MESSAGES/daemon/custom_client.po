@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-17 11:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:1
+msgid "🎨 Client personnalisé"
+msgstr "🎨 Custom client"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:4
+msgid "Cette page n'est pas un tutoriel. Écrire son propre client est une procédure complexe et nous vous recommandons, dans la mesure du possible, d'utiliser l'une de nos librairies clientes :"
+msgstr "This page is not a tutorial. Writing your own client is a complex procedure and we recommend, as much as possible, to use one of our client libraries:"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:6
+msgid "[](/python/python)"
+msgstr "[](/python/python)"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:7
+msgid "[](/js/js)"
+msgstr "[](/js/js)"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:11
+msgid "Nous essayons, dans cette page, de lister les éléments qu'il est bon de connaître avant de se lancer dans l'écriture de votre propre client. Cette liste est non-exhaustive."
+msgstr "We try, on this page, to list elements to know before diving into writing your own client. This list is non-exhaustive."
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:14
+msgid "Si vous souhaitez compléter cette page, vous pouvez ouvrir une issue ou une pull request en cliquant sur le bouton GitHub de la barre supérieure ou nous contacter par mail : [bot@olvid.io](mailto:bot@olvid.io)."
+msgstr "If you wish to contribute to this page, you can open an issue or a pull request by clicking on the GitHub button in the top bar, or contact us by email: [bot@olvid.io](mailto:bot@olvid.io)."
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:17
+msgid "Buf"
+msgstr "Buf"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:18
+msgid "Pour compiler nos fichiers protobuf, nous utilisons l'outil [Buf](https://buf.build/). Il est possible de faire autrement (avec protoc), mais cela facilite grandement la tâche."
+msgstr "To compile our protobuf files, we use the tool [Buf](https://buf.build/). It's possible to do it differently (with protoc), but this makes the task much easier."
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:21
+msgid "Nos fichiers protobuf sont disponibles ici : [Olvid-Bot-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)"
+msgstr "Our Protobuf files are available here: [Olvid-Bot-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:23
+msgid "Voici un exemple de fichier buf utilisé dans notre client Python : [buf.gen.yaml](https://github.com/olvid-io/Olvid-Bot-Python-Client/blob/main/buf.gen.yaml)."
+msgstr "Here is an example of a buf file used for our Python client: [buf.gen.yaml](https://github.com/olvid-io/Olvid-Bot-Python-Client/blob/main/buf.gen.yaml)."
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:25
+msgid "Authentification"
+msgstr "Authentication"
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:26
+msgid "Pour se connecter au daemon, votre client devra communiquer sa clé client. Nous utilisons les headers HTTP de gRPC pour communiquer cette information dans chaque requête."
+msgstr "To connect to the daemon, your client will need to communicate its client key. We use gRPC's HTTP headers to communicate this information in each request."
+
+# translated using ollama
+#: ../../source/daemon/custom_client.md:29
+msgid "Nous utilisons deux headers. Le premier, obligatoire, pour passer la clé client. Le deuxième, optionnel, pour passer l'identifiant de l'identité à utiliser dans le cas d'une clé client administrateur."
+msgstr "We use two headers. The first one, mandatory, to pass the client key. The second one, optional, to pass identity id to use in case of an admin client key."
+
