@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0.post1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-27 14:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../quickstart.md:1
+msgid "🚀 Quickstart"
+msgstr ""
+
+#: ../../quickstart.md:3
+msgid "Prerequisite"
+msgstr ""
+
+#: ../../quickstart.md:5
+msgid "In this installation guide we will use Docker and Python3."
+msgstr ""
+
+#: ../../quickstart.md:7
+msgid "You can install docker [here](https://docs.docker.com/engine/install/)."
+msgstr ""
+
+#: ../../quickstart.md:9
+msgid ""
+"We will need at least Python3.10 to use [olvid-"
+"bot](https://pypi.org/project/olvid-bot/) module. If your python install "
+"is older you will have to update it."
+msgstr ""
+
+#: ../../quickstart.md:13
+msgid "On macOS, we recommend homebrew if you need a newer Python version."
+msgstr ""
+
+#: ../../quickstart.md:20
+msgid "Setup Daemon"
+msgstr ""
+
+#: ../../quickstart.md:22
+msgid "Start daemon"
+msgstr ""
+
+#: ../../quickstart.md:24
+msgid ""
+"{term}`Daemon` is available as a docker image on [Docker "
+"Hub](https://hub.docker.com/r/olvid/bot-daemon)."
+msgstr ""
+
+#: ../../quickstart.md:26
+msgid ""
+"Because we want our daemon to persist data we will setup our container "
+"using [docker compose](https://docs.docker.com/compose/)."
+msgstr ""
+
+#: ../../quickstart.md:28
+msgid "Here is a minimal `docker-compose.yaml` file."
+msgstr ""
+
+#: ../../quickstart.md:42
+msgid ""
+"It defines a service named daemon, that will run a container from our "
+"public [daemon image](https://hub.docker.com/r/olvid/bot-daemon)."
+msgstr ""
+
+#: ../../quickstart.md:44
+msgid ""
+"Replace SetARandomValue with a random value. This will let daemon start "
+"with an admin client key set to the value you pass. We will pass the same"
+" value to the <project:#cli/cli> to grants admin permissions. You can use"
+" `uuidgen` bash command to generate a secure random key."
+msgstr ""
+
+#: ../../quickstart.md:49
+msgid ""
+"We also opened the 50051 port (default gRPC port), and mounted a data "
+"volume to persist data on host file system."
+msgstr ""
+
+#: ../../quickstart.md:51
+msgid "Now you can start your daemon in the background."
+msgstr ""
+
+#: ../../quickstart.md:57
+msgid "To check the daemon logs you can use this command."
+msgstr ""
+
+#: ../../quickstart.md:63
+msgid "Setup CLI"
+msgstr ""
+
+#: ../../quickstart.md:65
+msgid ""
+"To set up our daemon instance, we'll use the Olvid Command-Line Interface"
+" (CLI), which is embedded in our Python client module, available on "
+"`pip`."
+msgstr ""
+
+#: ../../quickstart.md:67
+msgid "First, install the olvid package:"
+msgstr ""
+
+#: ../../quickstart.md:74
+msgid ""
+"Currently CLI does not support Windows. To run CLI on windows use our "
+"docker image:"
+msgstr ""
+
+#: ../../quickstart.md:80
+msgid ""
+"Then set up the admin client key for CLI. It's the client key you "
+"previously set in daemon environment."
+msgstr ""
+
+#: ../../quickstart.md:83
+msgid "This admin client key can be passed to CLI using a file or environment."
+msgstr ""
+
+#: ../../quickstart.md
+msgid ":octicon:`command-palette;1em` Use .env file"
+msgstr ""
+
+#: ../../quickstart.md:89
+msgid ""
+"Create an .env file. Remember to always run your Command-Line Interface "
+"(CLI) from the current working directory."
+msgstr ""
+
+#: ../../quickstart.md
+msgid ":octicon:`command-palette;1em` Use environment"
+msgstr ""
+
+#: ../../quickstart.md:100
+msgid ""
+"You can also export your admin client key to environment every time you "
+"start a shell session."
+msgstr ""
+
+#: ../../quickstart.md:108
+msgid "Start CLI"
+msgstr ""
+
+#: ../../quickstart.md:110
+msgid "Now we can run the CLI in interactive mode."
+msgstr ""
+
+#: ../../quickstart.md:119
+msgid "If the `olvid-cli` binary is not available, you can start CLI with python:"
+msgstr ""
+
+#: ../../quickstart.md:128
+msgid "Initialize daemon"
+msgstr ""
+
+#: ../../quickstart.md:130
+msgid ""
+"When we set up cli and launched daemon we can start CLI to initialize "
+"daemon."
+msgstr ""
+
+#: ../../quickstart.md:132
+msgid ""
+"The aim will be to create a new {term}`identity` that our bot will use. "
+"We will also retrieve a client key to let our bot connect to daemon, and "
+"finally we will add bot to our Olvid contacts to exchange with him."
+msgstr ""
+
+#: ../../quickstart.md:135
+msgid ""
+"These three steps can be achieved with just one command: `identity new`. "
+"Then you can follow the instructions on the screen."
+msgstr ""
+
+#: ../../quickstart.md:138
+msgid ""
+"Here is a full example with comments. User inputs start with a > and "
+"comments with a #."
+msgstr ""
+
+#: ../../quickstart.md:176
+msgid ""
+"As you can see, the command prompt changed and is now prefixed with a 1 "
+"instead of a 0. This is because the CLI is now automatically using this "
+"new identity, designated by its ID: 1. Most commands you will run from "
+"now will be executed using this identity. For example if you list "
+"contacts using the contact get command you will see the contacts of this "
+"specific identity."
+msgstr ""
+
+#: ../../quickstart.md:178
+msgid ""
+"A daemon can host more than one identity. In that case, you'll need to "
+"change the identity in use with the identity current command."
+msgstr ""
+
+#: ../../quickstart.md:180
+msgid "To learn more about the CLI and its commands, see: [](cli/cli.md)."
+msgstr ""
+
+#: ../../quickstart.md:182
+msgid "Your first bot"
+msgstr ""
+
+#: ../../quickstart.md:184
+msgid "Setup client key"
+msgstr ""
+
+#: ../../quickstart.md:185
+msgid ""
+"To allow your bot to authenticate when connecting to the daemon, it will "
+"need the client key that was displayed earlier. If you lost it, you can "
+"list registered client keys using the CLI: `olvid-cli key get`."
+msgstr ""
+
+#: ../../quickstart.md:187
+msgid "This client key can be passed to your using environment variables:"
+msgstr ""
+
+#: ../../quickstart.md:193
+msgid "Create an .env file (or edit your previous .env file)."
+msgstr ""
+
+#: ../../quickstart.md:203
+msgid ""
+"You can also export your client key to environment every time you start a"
+" shell session."
+msgstr ""
+
+#: ../../quickstart.md:210
+msgid "Echo bot"
+msgstr ""
+
+#: ../../quickstart.md:212
+msgid "Now, let's write a minimalist bot in Python in a file named `main.py`."
+msgstr ""
+
+#: ../../quickstart.md:240
+msgid ""
+"This code requires the [olvid-bot] package, which you previously "
+"installed using *pip*. If not, you can install it with:"
+msgstr ""
+
+#: ../../quickstart.md:247
+msgid "To start your bot, simply run:"
+msgstr ""
+
+#: ../../quickstart.md:253
+msgid ""
+"You will need your daemon to be up and running, and your client key to be"
+" set in your environment if that's the method you chose."
+msgstr ""
+
+#: ../../quickstart.md:255
+msgid ""
+"When your bot has started, you can send it a message from your mobile or "
+"your desktop app to check that everything is working properly."
+msgstr ""
+
+#: ../../quickstart.md:257
+msgid "Here is an example of what your are expecting."
+msgstr ""
+
+#: ../../quickstart.md:262
+msgid "Olvid discussion with your echo bot."
+msgstr ""
+
+#: ../../quickstart.md:271
+msgid "Well done, you just created your first Olvid Bot 🤖 !"
+msgstr ""
+
+#: ../../quickstart.md:273
+msgid "Next Steps"
+msgstr ""
+
+#: ../../quickstart.md:276
+msgid "À faire"
+msgstr ""
+
+#: ../../quickstart.md:276
+msgid "add reference to bot examples section"
+msgstr ""
+
+#: ../../quickstart.md:279
+msgid "You can now check how to write more complex bots in [](/bots/bots.md)."
+msgstr ""
+
+#: ../../quickstart.md:281
+msgid ""
+"If you want to deploy a production ready environment check "
+"[](/configuration.md) section to see more advanced deployment use cases."
+msgstr ""
+

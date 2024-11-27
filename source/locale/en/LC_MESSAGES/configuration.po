@@ -1,0 +1,832 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0.post1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-27 14:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../configuration.md:1
+msgid "⚙️ Advanced Configuration"
+msgstr ""
+
+#: ../../configuration.md:3
+msgid ""
+"The following best practices should be implemented based on your specific"
+" requirements once your bot has been fully developed and is ready for "
+"deployment."
+msgstr ""
+
+#: ../../configuration.md:5
+msgid ""
+"If you come from [](/quickstart.md) section you set up a development "
+"environment with a daemon running locally with exposed ports, a manually "
+"started bot, ... When your bot is ready to be passed into production "
+"there are different steps you will need to implements, depending on your "
+"use case. You might have a look to the following sections and select "
+"which one is relevant for your use case."
+msgstr ""
+
+#: ../../configuration.md:10
+msgid ""
+"Before proceeding with your reading, please carefully consider the "
+"following points."
+msgstr ""
+
+#: ../../configuration.md:12
+msgid ""
+"The {term}`daemon` is an extremely sensitive entity that can access "
+"and/or store the content of your exchanges, attachments, etc. Ensure that"
+" its accesses and hosting are properly secured."
+msgstr ""
+
+#: ../../configuration.md:13
+msgid ""
+"Traffic between your bot and the daemon is not encrypted if you did not "
+"set up [TLS](#setup-tls). It should never be exposed under any "
+"circumstances."
+msgstr ""
+
+#: ../../configuration.md:14
+msgid ""
+"Similarly, without [TLS](#setup-tls), the concept of a {term}`client key`"
+" only serves to compartment usage and cannot be used for authentication "
+"purposes in any way."
+msgstr ""
+
+#: ../../configuration.md:24
+msgid "Create a Bot in Keycloak"
+msgstr ""
+
+#: ../../configuration.md:27
+msgid "This section is only for people with an Olvid Keycloak deployed 😬."
+msgstr ""
+
+#: ../../configuration.md:29
+msgid ""
+"If you're unsure about what this means, don't hesitate to click 👉️ "
+"[here](https://www.olvid.io/faq/olvid-management-console) 👈️ to learn "
+"more about this premium feature !"
+msgstr ""
+
+#: ../../configuration.md:32
+msgid ""
+"Setting up a Keycloak Bot enables you to manage it as one of your "
+"standard Keycloak users. It can be added and removed from groups, and "
+"users can interact with the bot through the directory tab in their "
+"application. This significantly facilitates its integration and "
+"utilization at medium and large scales."
+msgstr ""
+
+#: ../../configuration.md:36
+msgid ""
+"The following steps requires access to the Olvid Management Console "
+"within your Keycloak."
+msgstr ""
+
+#: ../../configuration.md:38
+msgid "Enable bots in keycloak"
+msgstr ""
+
+#: ../../configuration.md:41
+msgid "This step is only necessary for your first bot."
+msgstr ""
+
+#: ../../configuration.md:44
+msgid ""
+"For your realm if you cannot see the `Bots` button in the left sidebar, "
+"click on your realm `Settings` button."
+msgstr ""
+
+#: ../../configuration.md:51
+msgid "Bot button"
+msgstr ""
+
+#: ../../configuration.md:49 ../../configuration.md:87
+msgid "Bot settings button in keycloak administration console"
+msgstr ""
+
+#: ../../configuration.md:59
+msgid "Realm Settings button"
+msgstr ""
+
+#: ../../configuration.md:57
+msgid "Realm settings button in keycloak administration console"
+msgstr ""
+
+#: ../../configuration.md:66
+msgid "Then, in your realm settings switch on `Enable Bots` option."
+msgstr ""
+
+#: ../../configuration.md:73
+msgid "Enable bots"
+msgstr ""
+
+#: ../../configuration.md:71
+msgid "Customizable settings section in your realm settings page."
+msgstr ""
+
+#: ../../configuration.md:80
+msgid "Create a new Keycloak Bot"
+msgstr ""
+
+#: ../../configuration.md:82
+msgid "Go to your Realm `Bots` page. The button is in the left sidepanel."
+msgstr ""
+
+#: ../../configuration.md:89
+msgid "Bots button"
+msgstr ""
+
+#: ../../configuration.md:96
+msgid ""
+"When in your Bots Management Page, click on the `Create Bot` button in "
+"the upper-left corner."
+msgstr ""
+
+#: ../../configuration.md:103
+msgid "Bot Management Page"
+msgstr ""
+
+#: ../../configuration.md:101
+msgid "Bots management page in your keycload administration console."
+msgstr ""
+
+#: ../../configuration.md:110
+msgid ""
+"This will show you a form to fill with your new bot username and "
+"{term}`identity details`."
+msgstr ""
+
+#: ../../configuration.md:117
+msgid "Bot Creation Form"
+msgstr ""
+
+#: ../../configuration.md:115
+msgid "the form to create a new bot in your keycloak administration console."
+msgstr ""
+
+#: ../../configuration.md:124
+msgid ""
+"When you validated the form a configuration link (starting with "
+"`https://configuration.olvid.io/#`) will be shown. Save this link for the"
+" next steps."
+msgstr ""
+
+#: ../../configuration.md:127
+msgid ""
+"If you lost your configuration link you can reset it with the refresh "
+"button in your bots list."
+msgstr ""
+
+#: ../../configuration.md:130
+msgid "Create your bot identity"
+msgstr ""
+
+#: ../../configuration.md:132
+msgid ""
+"When you have your configuration link you will need to use CLI. Click "
+"[here](/cli/cli.md)` if you don't remember how to use it."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":octicon:`command-palette;1em` Create a new keycloak identity"
+msgstr ""
+
+#: ../../configuration.md:138
+msgid ""
+"Start CLI, and create your new identity using your configuratin link. It "
+"will automatically generate a :term:`client key` to pass to your future "
+"bot."
+msgstr ""
+
+#: ../../configuration.md
+msgid ""
+":octicon:`command-palette;1em` Bind an existing keycloak identity to a "
+"keycloak"
+msgstr ""
+
+#: ../../configuration.md:154
+msgid ""
+"If you already have an identity to your bot you can use the ``identity kc"
+" bind`` command to link it to your new Keycloak bot."
+msgstr ""
+
+#: ../../configuration.md:156
+msgid ""
+"It will register your bot on keycloak, and update it's :term:`Identity "
+"Details` to feat the details you just set up in Keycloak."
+msgstr ""
+
+#: ../../configuration.md:158
+msgid ""
+"Start CLI, choose your current identity (probably 1 if you only have one "
+"identity on your daemon), then bind it to keycloak using your "
+"configuration link"
+msgstr ""
+
+#: ../../configuration.md:167
+msgid ""
+"Every Keycloak user can now discover and interact with your bot through "
+"their `Directory` within the Olvid application. You can also manage your "
+"bot from your Administration Console! 🎉"
+msgstr ""
+
+#: ../../configuration.md:172
+msgid "Containerize Bot"
+msgstr ""
+
+#: ../../configuration.md:174
+msgid ""
+"When developing and testing your application, it's usually more "
+"convenient to use your local Python installation and a daemon container "
+"exposed to your host system. However, for a stable environment in "
+"production, we recommend to containerize your bot application."
+msgstr ""
+
+#: ../../configuration.md:177
+msgid "There are three ways to achieve this:"
+msgstr ""
+
+#: ../../configuration.md:179
+msgid ""
+"[](#run-with-python-runner): Use [python-"
+"runner](https://hub.docker.com/r/olvid/bot-python-runner) docker image to"
+" run your code. (fastest)"
+msgstr ""
+
+#: ../../configuration.md:180
+msgid ""
+"[](#build-with-python-runner): Build a docker image from [python-"
+"runner](https://hub.docker.com/r/olvid/bot-python-runner). (easier to "
+"package and distribute)"
+msgstr ""
+
+#: ../../configuration.md:181
+msgid ""
+"Build your own docker image from scratch. Manually manage your code and "
+"dependencies (not detailed here)."
+msgstr ""
+
+#: ../../configuration.md:183
+msgid "Run with python-runner"
+msgstr ""
+
+#: ../../configuration.md:185
+msgid ""
+"To start with our [python-runner](https://hub.docker.com/r/olvid/bot-"
+"python-runner) docker image is the fastest way to run you bot code in a "
+"container."
+msgstr ""
+
+#: ../../configuration.md:187
+msgid ""
+"You can find this image on [Docker Hub](https://hub.docker.com/r/olvid"
+"/bot-python-runner)"
+msgstr ""
+
+#: ../../configuration.md:189
+msgid ""
+"This image embeds our Python module and is set up to install your code "
+"dependencies and run your bot code."
+msgstr ""
+
+#: ../../configuration.md:191
+msgid ""
+"We will mount our code as a volume, and the image will manage "
+"dependencies and run our bot for us. You just need to put your code in a "
+"directory named `app`. You can put as may as file as you want, but your "
+"program will be launched using `python3 main.py` command."
+msgstr ""
+
+#: ../../configuration.md:195
+msgid ""
+"If you need extra Python dependencies (other than the `olvid-bot` module)"
+" add a `requirements.txt` file next to you `main.py`. Command `pip3 "
+"install -r requirements.txt` will run automatically on container start."
+msgstr ""
+
+#: ../../configuration.md:198
+msgid "Here is an example of file structure:"
+msgstr ""
+
+#: ../../configuration.md:208
+msgid ""
+"And here is a `docker-compose.yaml` file example, embedding a daemon, "
+"your bot and a cli to configure your daemon if necessary."
+msgstr ""
+
+#: ../../configuration.md:255
+msgid ""
+"We do not need to expose daemon ports because every other services will "
+"connect to daemon inside docker network."
+msgstr ""
+
+#: ../../configuration.md:258
+msgid ""
+"If this is the first time you launch your daemon you can use {term}`CLI` "
+"to configure your daemon."
+msgstr ""
+
+#: ../../configuration.md:260
+msgid "To launch CLI use:"
+msgstr ""
+
+#: ../../configuration.md:266
+msgid ""
+"You will enter CLI interactive mode and you can now follow "
+"[](/quickstart.md#initialize-daemon) procedure to create your bot "
+"identity, and retrieve it's client key."
+msgstr ""
+
+#: ../../configuration.md:268
+msgid ""
+"When you have your bot client key you can set it as OLVID_CLIENT_KEY "
+"value in bot service environment."
+msgstr ""
+
+#: ../../configuration.md:270
+msgid ""
+"Create a directory named `app` and move your `main.py` and eventually "
+"your `requirements.txt` files inside."
+msgstr ""
+
+#: ../../configuration.md:272
+msgid "You can now start your bot with:"
+msgstr ""
+
+#: ../../configuration.md:278
+msgid "If you need to check logs use:"
+msgstr ""
+
+#: ../../configuration.md:286
+msgid "Build with python-runner"
+msgstr ""
+
+#: ../../configuration.md:288
+msgid ""
+"Building your own docker image allows you to push it to a registry, "
+"making it easy to deploy your bot on one or multiple remote machines."
+msgstr ""
+
+#: ../../configuration.md:290
+msgid "Here is an example of a `Dockerfile`."
+msgstr ""
+
+#: ../../configuration.md:304
+msgid "To build your image run:"
+msgstr ""
+
+#: ../../configuration.md:310
+msgid ""
+"If you want to test your image locally you can use `docker run` command. "
+"We suppose you have a listening {term}`daemon` and an associated "
+"{term}`client key`."
+msgstr ""
+
+#: ../../configuration.md:313
+msgid ""
+"Mind to replace my-olvid-client-key and your_host_address with your "
+"client key, and your local ip address."
+msgstr ""
+
+#: ../../configuration.md:324
+msgid "Setup TLS"
+msgstr ""
+
+#: ../../configuration.md:330
+msgid "gRPC natively support TLS. We can distinguish two modes:"
+msgstr ""
+
+#: ../../configuration.md:332
+msgid ""
+"[](#tls-server-authentication): The daemon starts with its own self-"
+"signed certificate and associated private key. Clients will use this "
+"certificate to encrypt communications with the daemon."
+msgstr ""
+
+#: ../../configuration.md:333
+msgid ""
+"[](#tls-with-client-authentication): We create our own Certification "
+"Authority (CA) to create certificates. We will then create a certificate "
+"and a private key for the daemon and one per client. Like this, clients "
+"can encrypt communications with the daemon, and the daemon can verify "
+"that clients have been authorized to connect."
+msgstr ""
+
+#: ../../configuration.md:337
+msgid "TLS Server authentication"
+msgstr ""
+
+#: ../../configuration.md:339
+msgid "Generating Server Certificate and Private Key using OpenSSL"
+msgstr ""
+
+#: ../../configuration.md:342
+msgid ""
+"{material-outlined}`warning;1em;sd-text-danger` **Important**: Replace "
+"`localhost` with your daemon's hostname. The hostname is the IP address "
+"or domain name that clients will use to establish a connection with the "
+"daemon."
+msgstr ""
+
+#: ../../configuration.md:350
+msgid "Here is a rewritten version with corrected English and improved clarity:"
+msgstr ""
+
+#: ../../configuration.md:352 ../../configuration.md:521
+msgid "Set up daemon"
+msgstr ""
+
+#: ../../configuration.md:354
+msgid "Pass certificate and private key to daemon using environment variables:"
+msgstr ""
+
+#: ../../configuration.md:356 ../../configuration.md:526
+msgid "`DAEMON_CERTIFICATE_FILE`"
+msgstr ""
+
+#: ../../configuration.md:357 ../../configuration.md:527
+msgid "`DAEMON_KEY_FILE`"
+msgstr ""
+
+#: ../../configuration.md:359
+msgid ""
+"If you use docker, create a credentials directory, containing previously "
+"generated certificate and key. Add this directory as a read-only volume "
+"and use environment variable to enable simple TLS in daemon."
+msgstr ""
+
+#: ../../configuration.md:362
+msgid ""
+"If you are using Docker, create a credentials directory containing the "
+"previously generated certificate and key. Mount this directory as a read-"
+"only volume and utilize environment variables to enable TLS server "
+"authentication in the daemon."
+msgstr ""
+
+#: ../../configuration.md:381 ../../configuration.md:551
+msgid "Setting up bot"
+msgstr ""
+
+#: ../../configuration.md:383
+msgid "To ensure communication encryption, your bot needs the daemon certificate."
+msgstr ""
+
+#: ../../configuration.md:385
+msgid ""
+"Let's assume you have a `credentials` directory containing the previously"
+" generated `server.pem` file. If you're running in a Docker environment, "
+"you can mount this directory as a read-only volume."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":material-regular:`settings;1em` Using environment (for docker containers)"
+msgstr ""
+
+#: ../../configuration.md:392
+msgid "Set up environment variables."
+msgstr ""
+
+#: ../../configuration.md:398 ../../configuration.md:421
+msgid ""
+"Now ``OlvidClient`` sub-classes will automatically enable TLS server "
+"authentication on start."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":material-regular:`settings;1em` Using Files (for dev environment only)"
+msgstr ""
+
+#: ../../configuration.md:415
+msgid ""
+"OlvidClient can search for specific file names to load TLS "
+"configurations. For a persistent TLS configuration (compared to using "
+"environment variables), you can create symlinks or copy files to specific"
+" locations."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":material-regular:`settings;1em` Using Code"
+msgstr ""
+
+#: ../../configuration.md:437
+msgid ""
+"Create a `GrpcSimpleTlsConfiguration` object and pass it as "
+"tls_configuration parameter to an `OlvidClient` subclass constructor."
+msgstr ""
+
+#: ../../configuration.md:454
+msgid "TLS with Client authentication"
+msgstr ""
+
+#: ../../configuration.md:456
+msgid "Generating Certificates"
+msgstr ""
+
+#: ../../configuration.md:458
+msgid ""
+"We recommend that you create a `credentials` directory and moved in to "
+"run every following commands."
+msgstr ""
+
+#: ../../configuration.md:461
+msgid ""
+"To generate CA and server certificate you will need these two openssl "
+"templates, download or create them in your current working directory."
+msgstr ""
+
+#: ../../configuration.md:463
+msgid "{download}`ca-openssl.cnf <_static/code/ca-openssl.cnf>`"
+msgstr ""
+
+#: ../../configuration.md:464
+msgid "{download}`server-openssl.cnf <_static/code/server-openssl.cnf>`"
+msgstr ""
+
+#: ../../configuration.md:472
+msgid "**Generate our local Certification Authority (CA)**"
+msgstr ""
+
+#: ../../configuration.md:485
+msgid "**Generate server certificate and key.**"
+msgstr ""
+
+#: ../../configuration.md:490
+msgid ""
+":material-outlined:`warning;1em;sd-text-danger` **Important**: Replace "
+"`localhost` with your daemon's hostname. The hostname is the IP address "
+"or domain name that clients will use to establish a connection with the "
+"daemon."
+msgstr ""
+
+#: ../../configuration.md:506
+msgid "**Generate client certificate and key**"
+msgstr ""
+
+#: ../../configuration.md:523
+msgid ""
+"Daemon will need its certificate, its private key, and the CA to check "
+"client are allowed to connect. We will use three environment variables to"
+" specify file paths:"
+msgstr ""
+
+#: ../../configuration.md:528
+msgid "`DAEMON_ROOT_CERTIFICATE_FILE`"
+msgstr ""
+
+#: ../../configuration.md:530
+msgid ""
+"Create a `credentials` directory, `ca.pem`, `server.pem` and `server.key`"
+" files."
+msgstr ""
+
+#: ../../configuration.md:532
+msgid ""
+"Add this `credentials` directory as a read-only volume and use "
+"environment variable to enable TLS with client authentication in daemon."
+msgstr ""
+
+#: ../../configuration.md:553
+msgid ""
+"Your bots will need a valid certificate and private key pair, and the CA "
+"certificate. If you followed Generating Certificates section you will "
+"need `client.pem`, `client.key` and `ca.pem` files."
+msgstr ""
+
+#: ../../configuration.md:556
+msgid ""
+"If you are in docker you can mount `credentials` directory as a read-only"
+" volume."
+msgstr ""
+
+#: ../../configuration.md:562
+msgid "Set up three environment variables."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":material-regular:`settings;1em` Using files (for development environment)"
+msgstr ""
+
+#: ../../configuration.md:575
+msgid ""
+"On start OlvidClient can look for some specific files names to load a tls"
+" configuration. To have a persistent TLS configuration (compared to "
+"environment), you can create symlinks or copy files to specific "
+"locations."
+msgstr ""
+
+#: ../../configuration.md:587
+msgid ""
+"Create a `GrpcMutualAuthTlsConfiguration` object and pass it as "
+"tls_configuration parameter to an `OlvidClient` subclass constructor."
+msgstr ""
+
+#: ../../configuration.md:608
+msgid "Backups"
+msgstr ""
+
+#: ../../configuration.md:610
+msgid ""
+"In your projects, the daemon is a central element and it's where the data"
+" are stored. In reality, the data you manipulate (identities, messages, "
+"...) is only a tiny part of the data that the daemon manage. It's this "
+"invisible data that needs to be saved, as it enables secure exchange with"
+" the bot's contacts."
+msgstr ""
+
+#: ../../configuration.md:614
+msgid "Warnings"
+msgstr ""
+
+#: ../../configuration.md:617
+msgid ""
+"Please carefully review the following recommendations and warnings before"
+" continuing."
+msgstr ""
+
+#: ../../configuration.md:619
+msgid ""
+"Backups contain sensitive data equivalent to the daemon's data directory."
+" It is imperative to handle them with the same rigor and level of "
+"security."
+msgstr ""
+
+#: ../../configuration.md:620
+msgid ""
+"Backups mentioned here are Olvid backups, which do not contain messages "
+"or attachments. These backups allow you to restore your contact book and "
+"groups, but not the discussion content."
+msgstr ""
+
+#: ../../configuration.md:621
+msgid ""
+"Backups are ... backups. You will have to save them in a safe place to be"
+" able to re-use them if necessary. In a production environment, the "
+"minimal best practice would be to store backups on a separate disk from "
+"the rest of the system."
+msgstr ""
+
+#: ../../configuration.md:622
+msgid ""
+"Restoring a backup on another daemon and running both simultaneously will"
+" lead to unpredictable behavior."
+msgstr ""
+
+#: ../../configuration.md:625
+msgid "Setup automatic backups"
+msgstr ""
+
+#: ../../configuration.md:627
+msgid ""
+"Daemon automatically and periodically creates backup. Backups are created"
+" every time it's necessary (your  bot added a contact, joined or left a "
+"group, ...). These backups are stored in `/daemon/backups` directory."
+msgstr ""
+
+#: ../../configuration.md:630
+msgid ""
+"If you want to persist these backups you need to mount the "
+"`/daemon/backups` directory as a volume. Here is an example in a `docker-"
+"compose.yaml` file."
+msgstr ""
+
+#: ../../configuration.md:641
+msgid "Here is an example of `/daemon/backups` directory tree."
+msgstr ""
+
+#: ../../configuration.md:651
+msgid ""
+"Each subdirectory (0001, 0002) must contains it's own `backup_seed.txt` "
+"file daemon will increment and create a new directory. This backup seed "
+"is necessary to decrypt and restore backups, without the seed your backup"
+" is unusable."
+msgstr ""
+
+#: ../../configuration.md:654
+msgid ""
+"Inside a subdirectory the daemon create and stores up to 10 backup files "
+"before rotating them. All these backups are named with their creation "
+"epoch timestamp."
+msgstr ""
+
+#: ../../configuration.md:656
+msgid "Restore a backup"
+msgstr ""
+
+#: ../../configuration.md:659
+msgid ""
+"Restoring a backup is not a trivial action and should only be done as a "
+"last resort. You will lose all your stored messages and attachments in "
+"the daemon during this process. Only elements saved using the storage API"
+" will still be available."
+msgstr ""
+
+#: ../../configuration.md:664
+msgid ""
+"To restore a backup you will need a fresh daemon installation. If you "
+"want to reset an existing daemon delete the `data` folder content (this "
+"data is probably mounted as a volume on host system)."
+msgstr ""
+
+#: ../../configuration.md:667
+msgid ""
+"Daemon will also need to access backup files, so we will need another "
+"volume."
+msgstr ""
+
+#: ../../configuration.md:680
+msgid ""
+"Then choose the backup to restore in your backups (it's most of the time "
+"the most recent). Save the subdirectory and backup file name for later."
+msgstr ""
+
+#: ../../configuration.md:682
+msgid ""
+"Now we will need to start daemon in a recovery mode and tell him to "
+"restore our backup. There are two solutions, we can use `docker compose` "
+"or `docker run`."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":octicon:`command-palette;1em` docker compose"
+msgstr ""
+
+#: ../../configuration.md:689
+msgid ""
+"With docker compose you can reuse your current docker-compose.yaml file "
+"by verifying beforehand that:"
+msgstr ""
+
+#: ../../configuration.md:691
+msgid "The data volume has been properly cleared."
+msgstr ""
+
+#: ../../configuration.md:692
+msgid "Backup directory has been mounted to /daemon/backups."
+msgstr ""
+
+#: ../../configuration.md:693
+msgid ""
+"All other running services have been stopped using the command docker-"
+"compose down."
+msgstr ""
+
+#: ../../configuration.md:695
+msgid ""
+"Then you can start backup restoration with the following command. Do not "
+"forget to replace the backup subdirectory (0001) and filename "
+"(backup-1569233400.bytes) with your own values."
+msgstr ""
+
+#: ../../configuration.md
+msgid ":octicon:`command-palette;1em` docker run"
+msgstr ""
+
+#: ../../configuration.md:707
+msgid ""
+"First check that your original daemon is not running and the data "
+"directory you will mount is empty."
+msgstr ""
+
+#: ../../configuration.md:709
+msgid ""
+"Here is an example of ``docker run`` command to adapt to your situation. "
+"Mind to check the volume location on host system, daemon image version, "
+"your backup subdirectory and file name."
+msgstr ""
+
+#: ../../configuration.md:720
+msgid ""
+"When you see the message `💾 BackupRestoration: Finished backup "
+"restoration process`, you can stop the daemon (CTRL + C) and start it "
+"normally with the command `docker-compose up -d`."
+msgstr ""
+
+#: ../../configuration.md:722
+msgid ""
+"You can now verify using the CLI that the restoration was successful. You"
+" should find your identities, contacts, groups, client keys, ..."
+msgstr ""
+
+#: ../../configuration.md:725
+msgid "À faire"
+msgstr ""
+
+#: ../../configuration.md:725
+msgid "add something about storage API"
+msgstr ""
+

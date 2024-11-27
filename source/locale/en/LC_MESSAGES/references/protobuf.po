@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.1.0.post1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-27 14:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../references/protobuf.md:1
+msgid "Protobuf"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message:1
+msgid "Message class summary"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message:3
+msgid "Message class Full description. This is a really long description."
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message:8
+msgid "This message unique id."
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message:12
+msgid "The id of the discussion this message is related to."
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.get_discussion:1
+msgid "Get the discussion this message belongs to."
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.get_sender_contact:1
+msgid "Get the Contact who sent this message."
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.get_sender_contact:3
+msgid "Raised:"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.get_sender_contact:4
+msgid "ValueError: if message is not inbound"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.is_group_message:1
+msgid "Does this message belongs to a group discussion"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.is_inbound:1
+msgid "Is this message inbound (has been received from someone else) or not"
+msgstr ""
+
+#: ../../references/protobuf.md
+msgid "Renvoie"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.is_inbound:3
+msgid "True or False"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.is_one_to_one_message:1
+msgid "Does this message belongs to a discussion with a contact or not"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.reply:1
+msgid "Post a new message in this message discussion."
+msgstr ""
+
+#: ../../references/protobuf.md
+msgid "Paramètres"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.reply:3
+msgid "message text body (optional if you specified attachments)"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.reply:4
+msgid "Does the new message quote (reply to) this message, default to False"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.reply:5
+msgid "Ephemerality settings for this specific message, default to None"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.reply:6
+msgid ""
+"The list of attachments to send in this message. An attachment is "
+"represented as a tuple containing the original file name, and the file "
+"content as bytes, default to None"
+msgstr ""
+
+#: of olvid.datatypes.datatypes.Message.reply:9
+msgid "Sent message."
+msgstr ""
+
+#: ../../references/protobuf.md
+msgid "Type renvoyé"
+msgstr ""
+
