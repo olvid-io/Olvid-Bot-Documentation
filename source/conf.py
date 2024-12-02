@@ -35,11 +35,11 @@ extensions = [
 	"sphinx.ext.napoleon",  # allows support for Google docstring format
 ]
 
-templates_path = ['_templates']
+templates_path = ['../_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 language = 'fr'
-locale_dirs = ['locale']
+locale_dirs = ['../locale']
 gettext_compact = False
 
 # -- Options for HTML output -------------------------------------------------
@@ -58,13 +58,17 @@ html_copy_source = True  # can be disabled
 # -- Html Themes Options --------------------------------------------
 # Book theme
 if html_theme == "sphinx_book_theme":
-	html_css_files = ['css/book-theme.css']
+	html_css_files = [
+		# custom css for book theme
+		'css/book-theme.css',
+		# necessary for font-awesome icons
+		"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+	]
 	templates_path = ["_templates"]
 	html_theme_options = {
 		"collapse_navbar": True,
 		"show_navbar_depth": 2,
 		"show_toc_level": 2,
-		"announcement": "🚧 Documentation Under Construction! 🚧",
 		# hide some buttons
 		"use_download_button": False,
 		"use_fullscreen_button": False,
@@ -81,6 +85,12 @@ if html_theme == "sphinx_book_theme":
 		# templates
 		"article_header_start": [],  # remove toggle primary sidebar button
 	}
+
+	if language == "fr":
+		html_theme_options["announcement"] = "🚧 Documentation en cours de rédaction! 🚧"
+	else:
+		html_theme_options["announcement"] = "🚧 Documentation Under Construction! 🚧"
+
 # Read The Docs theme
 elif html_theme == "sphinx_rtd_theme":
 	html_css_files = ['css/rtd-theme.css']
@@ -96,4 +106,4 @@ myst_heading_anchors = 4
 
 # -- Custom scripts -------------------------------------------------
 import subprocess
-subprocess.run(["python3", "_scripts/generate_cli_commands.py"],)
+subprocess.run(["python3", "../_scripts/generate_cli_commands.py"],)

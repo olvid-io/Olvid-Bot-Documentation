@@ -1,58 +1,95 @@
-# {octicon}`code-square;1em` CLI
+# {fas}`terminal` CLI
 
-```{eval-rst}
-.. todo:: improve Setup section
+```{toctree}
+:maxdepth: 2
+:hidden:
+
+🛠️ Installation<self>
+usage
+troubleshooting
+references
 ```
 
-## Setup
+Il existe plusieurs manières d'installer et de lancer la CLI Olvid. La première (recommandée) est celle utilisée dans notre section [](/index).
+Mais il existe d'autres possibilités !
 
-To use the Olvid CLI you need a running {term}`daemon`. If you don't know what we are talking about you might start with our [](/quickstart.md).
+:::{note}
+Pour exécuter la CLI sans utiliser de configuration Docker Compose, il est nécessaire que le daemon expose son port 50051.
+Pensez à vérifier que le service `daemon` de votre fichier `docker-compose.yaml` expose le port 50051.
+```yaml
+  ports:
+  - 50051:50051
+```
+:::
 
-### Install
+Pour permettre à la CLI de se connecter au daemon, il vous faudra récupérer la clé administrateur de votre daemon.
+Elle se trouve normalement dans l'environnement de votre daemon. Vous pouvez vérifier sa valeur dans le fichier `docker-compose.yaml` à la section environnement du daemon.
+Il s'agit de la valeur d'une variable d'environnement qui commence par **OLVID_ADMIN_CLIENT_KEY**.  
+Pour plus de détails sur les clés d'administration du daemon [rendez-vous ici](/daemon/daemon).
+% TODO remplacer par un lien vers la configuration des clés administrateur dans le daemon.
 
-To install **olvid-cli** use pip3.
+::::{tab-set}
+:sync-group: cli
 
-```sh
+:::{tab-item} Python
+:sync: python
+
+## Installation
+```shell
 pip3 install olvid-bot
 ```
+:::
 
-### Common Actions
+:::{tab-item} Docker
+:sync: docker
 
-```{eval-rst}
-.. todo:: Set a profile photo
+## Installation
+```shell
+docker pull olvid/bot-python-runner
+```
+:::
+
+::::
+
+::::{tab-set}
+:sync-group: cli
+
+:::{tab-item} Python
+:sync: python
+## Configuration
+```shell
+export OLVID_ADMIN_CLIENT_KEY=adminClientKey
+export OLVID_DAEMON_TARGET=localhost:50051
 ```
 
-```{eval-rst}
-.. todo:: add a contact (specify how to find your bot invitation link)
+**ou**
+
+```shell
+echo OLVID_ADMIN_CLIENT_KEY=adminClientKey >> .env
+echo OLVID_DAEMON_TARGET=localhost:50051 >> .env
 ```
 
-```{eval-rst}
-.. todo:: create another identity
+## Lancement
+```shell
+python3 -m olvid-bot
+# ou si votre PATH est correctement configuré
+olvid-cli
 ```
 
-### Admin Client Key
+:::
 
-To connect to daemon CLI will need a client key with admin rights registered on daemon.
+:::{tab-item} Docker
+:sync: docker
 
-On first start this key can be passed to daemon ([](/references/daemon.md#admin-client-keys)).
-
-This client key can be passed to CLI using environment:
-
-```sh
-export OLVID_ADMIN_CLIENT_KEY=YourAdminClientKey
+## Lancement
+```shell
+docker run --rm -it \
+  -e OLVID_ADMIN_CLIENT_KEY=adminClientKey \
+  -e OLVID_DAEMON_TARGET=localhost:50051 \
+  olvid/bot-python-runner
 ```
+:::
+::::
 
-If you always launch CLI from the same working directory you can write your key in a file.
-CLI will automatically read it on start if OLVID_ADMIN_CLIENT_KEY variable was not set.
-
-```sh
-echo OLVID_ADMIN_CLIENT_KEY=YourAdminClientKey > .env
-```
-
-## References
-
-Here is a list of every commands available in {program}`olvid-cli`.
-
-```{eval-rst}
-.. include:: cli_commands.rstinc
-```
+Vous devriez maintenant voir un prompt constitué d'un nombre et du caractère **>**. Si ce n'est pas le cas, rendez-vous sur notre page [](/cli/troubleshooting).
+Sinon, vous pouvez continuer avec notre page [](/cli/usage) pour comprendre le fonctionnement de l'outil.

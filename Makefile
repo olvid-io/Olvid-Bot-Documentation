@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
-SPHINXOPTS    ?= -c source
+SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = ./source
 BUILDDIR      = _build
@@ -19,9 +19,9 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-serve: export REPOSITORY_URL=https://gitlab.com/Olvid/bots/python-client && echo exported ENv !!!
+serve: export REPOSITORY_URL=https://gitlab.com/Olvid/bots/python-client
 serve:
-	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --ignore ./cli/cli_commands.rstinc
+	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --ignore ./source/cli/cli_commands.rstinc
 
 update-translation: gettext
-	sphinx-intl update -p _build/gettext
+	sphinx-intl update -p _build/gettext --no-obsolete
