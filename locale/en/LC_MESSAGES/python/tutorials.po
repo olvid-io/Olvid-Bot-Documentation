@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 19:10+0100\n"
+"POT-Creation-Date: 2024-12-18 15:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -91,71 +91,101 @@ msgstr "For example, to display in the terminal when a message is received and w
 
 # translated using ollama
 #: ../../source/python/tutorials.md:76
+msgid "Conseils et astuces"
+msgstr "Tips and Tricks"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:77
+msgid "AutoInvitationBot"
+msgstr "AutoInvitationBot"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:78
+msgid "Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues."
+msgstr "To make it easier to connect with a bot, it is possible to set up a bot that will accept all received invitations."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:80
+msgid "Il suffit de créer un bot *AutoInvitationBot* du module `olvid.tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter."
+msgstr "Just create an *AutoInvitationBot* instance from the module `olvid.tools`. It will automatically register to receive new invitation notifications and accept them."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:83
+msgid "Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe.  Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code."
+msgstr "An *AutoInvitationBot* can only accept introductions and group invitations. It cannot automatically accept direct invitations with SAS code exchange."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:87
+msgid "Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond. Il est tout à fait possible de lancer plusieurs bots en parallèle."
+msgstr "Here is a program that launches an instance of AutoInvitationBot in the background. It is possible to launch several bots in parallel."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:107
 msgid "Utilisation avancée"
 msgstr "Advanced Usage"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:77
+#: ../../source/python/tutorials.md:108
 msgid "Listener"
 msgstr "Listener"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:78
+#: ../../source/python/tutorials.md:109
 msgid "Pour une implémentation plus fine de l'écoute des notifications, il est possible d'utiliser la notion de *Listener*. Un listener est une souscription d'une fonction callback à un type de notification. Cette fonction sera appelée à chaque fois qu'une notification de ce type est reçue."
 msgstr "For a more granular implementation of notifications listening, it is possible to use the concept of *Listener*. A listener is a subscription of a callback function to a notification type. This function will be called each time a notification of this type is received."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:82
+#: ../../source/python/tutorials.md:113
 msgid "Chaque type de notification a sa propre classe dans le module `olvid.listeners`."
 msgstr "Each type of notification has its own class in the module `olvid.listeners`."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:84
+#: ../../source/python/tutorials.md:115
 msgid "Dans cet exemple, la méthode `reply_to_message` sera appelée à chaque fois qu'un message arrive."
 msgstr "In this example, the `reply_to_message` method will be called every time a message arrives."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:103
+#: ../../source/python/tutorials.md:134
 msgid "Listener: expiration"
 msgstr "Listener: expiration"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:104
+#: ../../source/python/tutorials.md:135
 msgid "Par défaut, un listener écoute les notifications pour toujours, mais il est possible d'utiliser l'argument `count` pour n'écouter qu'un certain nombre de notifications. Dans ce cas, lorsque que *count* notifications ont été traitées, l'listener est arrêté."
 msgstr "By default, a listener listens to notifications indefinitely, but it is possible to use the `count` argument to only listen for a certain number of notifications. In this case, once *count* notifications have been processed, the listener is stopped."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:107
+#: ../../source/python/tutorials.md:138
 msgid "Dans cet exemple, on répond au prochain message reçu puis le programme s'arrête."
 msgstr "In this example, we respond to the next received message and then the program stops."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:131
+#: ../../source/python/tutorials.md:162
 msgid "Listener : filtrage"
 msgstr "Listener: Filtering"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:133
+#: ../../source/python/tutorials.md:164
 msgid "Les listeners permettent également de filtrer les notifications à traiter.  Pour cela, on peut ajouter une ou plusieurs fonctions de filtrage à notre listener."
 msgstr "Listeners also allow filtering of notifications to be processed. To do this, we can add one or more filter functions to our listener."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:136
+#: ../../source/python/tutorials.md:167
 msgid "Par exemple, on peut vouloir traiter uniquement les messages envoyés par un contact donné."
 msgstr "For example, we might want to process only messages sent by a specific contact."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:162
+#: ../../source/python/tutorials.md:193
 msgid "Listener avancé"
 msgstr "Advanced listener"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:164
+#: ../../source/python/tutorials.md:195
 msgid "Il est tout à fait possible de combiner le filtrage et l'expiration."
 msgstr "It is perfectly possible to combine filtering and expiration."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:166
+#: ../../source/python/tutorials.md:197
 msgid "Ici, on l'utilise pour effectuer une action et quitter le programme quand le message que l'on vient d'envoyer arrive sur le téléphone de son destinataire."
 msgstr "Here, it is used to perform an action and exit the program when the message that has just been sent arrives on the recipient's phone."
 

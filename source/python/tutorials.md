@@ -73,6 +73,37 @@ asyncio.set_event_loop(asyncio.new_event_loop())
 asyncio.get_event_loop().run_until_complete(main())
 ```
 
+## Conseils et astuces
+### AutoInvitationBot
+Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues.
+
+Il suffit de créer un bot *AutoInvitationBot* du module `olvid.tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter.
+
+:::{note}
+Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe. 
+Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code. 
+:::
+
+Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond.
+Il est tout à fait possible de lancer plusieurs bots en parallèle.
+
+```python
+import asyncio
+from olvid import OlvidClient, datatypes, tools
+
+class Bot(OlvidClient):
+    async def on_message_received(self, message: datatypes.Message):
+        print(f"Message received: {message.body}")
+
+async def main():
+    bot = Bot()
+    tools.AutoInvitationBot()
+    await bot.run_forever()
+
+asyncio.set_event_loop(asyncio.new_event_loop())
+asyncio.get_event_loop().run_until_complete(main())
+```
+
 ## Utilisation avancée
 ### Listener
 Pour une implémentation plus fine de l'écoute des notifications, il est possible d'utiliser la notion de *Listener*.
