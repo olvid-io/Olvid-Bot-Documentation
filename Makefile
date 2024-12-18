@@ -19,13 +19,20 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+# start dev server for french version
 serve: export BANNER_MESSAGE=🚧 Documentation en cours de rédaction! 🚧
 serve:
 	sphinx-autobuild "$(SOURCEDIR)" /tmp/doc-fr $(SPHINXOPTS) -D language=fr $(O) --ignore ./source/cli/cli_commands.rstinc --watch ./locale --port 8080
 
+# start dev server for english version
 serve-en: export BANNER_MESSAGE=🚧 Documentation Under Construction! 🚧
 serve-en:
 	sphinx-autobuild "$(SOURCEDIR)" /tmp/doc-en $(SPHINXOPTS) -D language=en $(O) --ignore ./source/cli/cli_commands.rstinc --watch ./locale --port 8081
 
+# extract translatable strings
 update-translation: gettext
 	sphinx-intl update -w 0 -p _build/gettext --no-obsolete -l en
+
+# translate translatable strings using ollama
+translate:
+    python3 translate/translate.py ./locale/en
