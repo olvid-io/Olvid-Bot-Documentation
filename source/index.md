@@ -106,46 +106,46 @@ Voici un exemple complet et commenté du déroulement de cette commande.
 % TODO change this ... screen ...
 % TODO translate comments if we do not change this
 ```shell
-# Création d'une nouvelle identité. Remplacez FirstName, LastName, ... par la valeur souhaitée.
-# LastName, Position, et Company sont optionnels. Et les valeurs saisies peuvent être mises à jour plus tard.
+# Create a new identity. Replace FirstName, LastName, ... with expected values
+# LastName, Position and Company are optionals and these details can be updated later.
 0 > identity new FirstName LastName Position Company
 
-# Une clé client pour authentifier vos futurs bots est automatiquement créée. 
-# Conservez-la en attendant.
+# A client key to connect to daemon is automatically created
+# Save it somewhere, you will need it to write your bots.
 identity creation > Here is your client key to connect to daemon with this identity:
 AAAAAAAA-BBBB-AAAA-AAAA-AAAAAAAAAAAA
 
-# Entrez "yes" pour valider que vous avez conservé votre clé client.
+# Enter "yes" to validate that you saved your client key
 identity creation > Did you saved your client key ? (y/N)
 
-# Entrez "yes" pour entrer en contact depuis votre identité personnelle Olvid avec cette nouvelle identité.
-# Cette étape est optionnelle mais nécessaire si vous voulez créer une discussion avec votre bot.
+# Enter "yes" to get in touch with this new identity with your personal identity in Olvid.
+# This step is optional but necessary if you want to create a discussion with your bot.
 identity creation > Do you want to add this identity to your contacts ? (y/N)
 >yes
 
-# Ceci est le lien d'invitation de l'identité du bot.
-# Vous pouvez l'ouvrir dans un navigateur internet pour afficher le QR code à scanner dans votre application mobile.
-# Vous pouvez aussi le copier pour l'importer dans votre application desktop
+# This is your Bot invitation link
+# You can open it in you web browser to show the QR to scan with your mobile application
+# You can also copy it to import it in your desktop client.
 identity creation > Send an invitation to this invitation link: https://invitation.olvid.io/#........
 
-# La CLI attend maintenant qu'une invitation arrive ...
-# Lorsqu'elle reçoit votre invitation, le processus reprend.
+# The CLI is now waiting for your invitation to arrive
+# When your invitation arrive process restarts 
 identity creation > Please enter sas code displayed on the other device
 
-# Entrez le code à 4 chiffres affiché dans votre Olvid personnel
+# Enter 4 digits code shown in your Olvid Application 
 > 0000
 
-# Entrez le code affiché dans votre Olvid personnel.
+# Enter code shown in your Olvid Application
 identity creation > Please enter this sas code on the other device: 1111
 
-# Le processus est maintenant terminé.
+# Process is now finished
 Now using identity: 1
 You can now send messages to YOUR NAME in discussion 1
 
-# Vous pouvez vous envoyer un message de test en utilisant la commande suivante
+# You can send a test message with this command
 1 > message send 1 Hello World !
 
-# Pour sortir du mode interactif, utilisez CTRL + D ou la commande exit
+# to leave interactive mode use CTRL + D or exit command
 1 > exit
 ```
 

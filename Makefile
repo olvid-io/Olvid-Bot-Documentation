@@ -35,4 +35,4 @@ update-translation: gettext
 
 # translate translatable strings using ollama
 translate:
-    python3 translate/translate.py ./locale/en
+	python3 translate/translate.py ./locale/en
