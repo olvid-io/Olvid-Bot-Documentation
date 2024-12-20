@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-20 12:09+0100\n"
+"POT-Creation-Date: 2024-12-20 13:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -36,7 +36,7 @@ msgstr "Welcome to the Olvid bots' documentation!"
 
 # translated using ollama
 #: ../../source/index.md:25
-msgid "Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io/faq/olvid-bots/), tout en conservant ses standards de sécurité maximale."
+msgid "Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io/faq/bots-olvid/), tout en conservant ses standards de sécurité maximale."
 msgstr "We have designed this set of tools to allow you to create your own chatbots and integrations for the [Olvid](https://olvid.io/faq/olvid-bots/) application, while maintaining its maximum security standards."
 
 # translated using ollama
