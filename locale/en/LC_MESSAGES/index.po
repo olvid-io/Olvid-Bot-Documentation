@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 20:19+0100\n"
+"POT-Creation-Date: 2024-12-20 12:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -36,8 +36,8 @@ msgstr "Welcome to the Olvid bots' documentation!"
 
 # translated using ollama
 #: ../../source/index.md:25
-msgid "Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io), tout en conservant ses standards de sécurité maximale."
-msgstr "We have designed this set of tools to allow you to create your own chatbots and integrations for the [Olvid](https://olvid.io) application, while maintaining its maximum security standards."
+msgid "Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io/faq/olvid-bots/), tout en conservant ses standards de sécurité maximale."
+msgstr "We have designed this set of tools to allow you to create your own chatbots and integrations for the [Olvid](https://olvid.io/faq/olvid-bots/) application, while maintaining its maximum security standards."
 
 # translated using ollama
 #: ../../source/index.md:27
@@ -135,32 +135,32 @@ msgid "Pour créer notre première identité, nous allons utiliser la commande `
 msgstr "To create our first identity, we will use the command `identity new`. Here is a complete and commented example of how this command works."
 
 # translated using ollama
-#: ../../source/index.md:150
+#: ../../source/index.md:152
 msgid "Premier programme"
 msgstr "First Program"
 
 # translated using ollama
-#: ../../source/index.md:152
+#: ../../source/index.md:154
 msgid "Vous disposez maintenant d'une infrastructure fonctionnelle, avec un daemon hébergeant une identité Olvid. Vous pouvez utiliser l'API gRPC du daemon pour contrôler cette identité."
 msgstr "You now have a functional infrastructure with a daemon hosting an Olvid identity. You can use the daemon's gRPC API to control this identity."
 
 # translated using ollama
-#: ../../source/index.md:155
+#: ../../source/index.md:157
 msgid "Pour continuer, il vous faut choisir la technologie que vous souhaitez utiliser pour écrire votre premier bot."
 msgstr "To continue, you need to choose the technology you want to use to write your first bot."
 
 # translated using ollama
-#: ../../source/index.md:157
+#: ../../source/index.md:159
 msgid "Actuellement, les langages suivants sont disponibles :"
 msgstr "Currently, the following languages are available:"
 
 # translated using ollama
-#: ../../source/index.md:159
+#: ../../source/index.md:161
 msgid "[](python/python)"
 msgstr "[](python/python)"
 
 # translated using ollama
-#: ../../source/index.md:160
+#: ../../source/index.md:162
 msgid "[](js/js)"
 msgstr "[](js/js)"
 

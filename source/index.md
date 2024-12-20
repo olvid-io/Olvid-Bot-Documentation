@@ -22,7 +22,7 @@ changelog
 
 Bienvenue dans la documentation des bots Olvid !
 
-Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io), tout en conservant ses standards de sécurité maximale.
+Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io/faq/olvid-bots/), tout en conservant ses standards de sécurité maximale.
 
 Nous vous recommandons de commencer par notre procédure d'[](#installation).
 Elle vous permettra d'installer et configurer votre propre daemon Olvid.
