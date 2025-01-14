@@ -34,5 +34,5 @@ update-translation: gettext
 	sphinx-intl update -w 0 -p _build/gettext --no-obsolete -l en
 
 # translate translatable strings using ollama
-translate:
+translate: update-translation
 	python3 translate/translate.py ./locale/en

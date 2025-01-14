@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 15:52+0100\n"
+"POT-Creation-Date: 2025-01-14 15:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -121,71 +121,91 @@ msgstr "Here is a program that launches an instance of AutoInvitationBot in the 
 
 # translated using ollama
 #: ../../source/python/tutorials.md:107
+msgid "Divers"
+msgstr "Various"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:108
+msgid "Envoyer un message éphémère"
+msgstr "Send an ephemeral message"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:109
+msgid "Les points d'entrée API `messageSend` et `messageSendWithAttachments` permettent de spécifier l'éphéméralité du message à envoyer. On utilisera pour cela l'objet *olvid.datatypes.MessageEphemerality*."
+msgstr "The API entry points `messageSend` and `messageSendWithAttachments` allow you to specify the ephemerality of the message to be sent. To do this, use the *olvid.datatypes.MessageEphemerality* object."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:112
+msgid "Voici un exemple en python. Il est possible de spécifier les paramètres `read_once`, `visibility_duration` et `existence_duration` de manière indépendante. Les durées d'existence et de visibilité sont en secondes."
+msgstr "Here is an example in Python. It is possible to specify the parameters `read_once`, `visibility_duration`, and `existence_duration` independently. The existence and visibility durations are in seconds."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:133
 msgid "Utilisation avancée"
 msgstr "Advanced Usage"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:108
+#: ../../source/python/tutorials.md:134
 msgid "Listener"
 msgstr "Listener"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:109
+#: ../../source/python/tutorials.md:135
 msgid "Pour une implémentation plus fine de l'écoute des notifications, il est possible d'utiliser la notion de *Listener*. Un listener est une souscription d'une fonction callback à un type de notification. Cette fonction sera appelée à chaque fois qu'une notification de ce type est reçue."
 msgstr "For a more granular implementation of notifications listening, it is possible to use the concept of *Listener*. A listener is a subscription of a callback function to a notification type. This function will be called each time a notification of this type is received."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:113
+#: ../../source/python/tutorials.md:139
 msgid "Chaque type de notification a sa propre classe dans le module `olvid.listeners`."
 msgstr "Each type of notification has its own class in the module `olvid.listeners`."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:115
+#: ../../source/python/tutorials.md:141
 msgid "Dans cet exemple, la méthode `reply_to_message` sera appelée à chaque fois qu'un message arrive."
 msgstr "In this example, the `reply_to_message` method will be called every time a message arrives."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:134
+#: ../../source/python/tutorials.md:160
 msgid "Listener: expiration"
 msgstr "Listener: expiration"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:135
+#: ../../source/python/tutorials.md:161
 msgid "Par défaut, un listener écoute les notifications pour toujours, mais il est possible d'utiliser l'argument `count` pour n'écouter qu'un certain nombre de notifications. Dans ce cas, lorsque que *count* notifications ont été traitées, l'listener est arrêté."
 msgstr "By default, a listener listens to notifications indefinitely, but it is possible to use the `count` argument to only listen for a certain number of notifications. In this case, once *count* notifications have been processed, the listener is stopped."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:138
+#: ../../source/python/tutorials.md:164
 msgid "Dans cet exemple, on répond au prochain message reçu puis le programme s'arrête."
 msgstr "In this example, we respond to the next received message and then the program stops."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:162
+#: ../../source/python/tutorials.md:188
 msgid "Listener : filtrage"
 msgstr "Listener: Filtering"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:164
+#: ../../source/python/tutorials.md:190
 msgid "Les listeners permettent également de filtrer les notifications à traiter.  Pour cela, on peut ajouter une ou plusieurs fonctions de filtrage à notre listener."
 msgstr "Listeners also allow filtering of notifications to be processed. To do this, we can add one or more filter functions to our listener."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:167
+#: ../../source/python/tutorials.md:193
 msgid "Par exemple, on peut vouloir traiter uniquement les messages envoyés par un contact donné."
 msgstr "For example, we might want to process only messages sent by a specific contact."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:193
+#: ../../source/python/tutorials.md:219
 msgid "Listener avancé"
 msgstr "Advanced listener"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:195
+#: ../../source/python/tutorials.md:221
 msgid "Il est tout à fait possible de combiner le filtrage et l'expiration."
 msgstr "It is perfectly possible to combine filtering and expiration."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:197
+#: ../../source/python/tutorials.md:223
 msgid "Ici, on l'utilise pour effectuer une action et quitter le programme quand le message que l'on vient d'envoyer arrive sur le téléphone de son destinataire."
 msgstr "Here, it is used to perform an action and exit the program when the message that has just been sent arrives on the recipient's phone."
 

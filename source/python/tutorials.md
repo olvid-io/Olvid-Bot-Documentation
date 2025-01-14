@@ -104,6 +104,35 @@ asyncio.set_event_loop(asyncio.new_event_loop())
 asyncio.get_event_loop().run_until_complete(main())
 ```
 
+## Divers
+### Envoyer un message éphémère
+Les points d'entrée API `messageSend` et `messageSendWithAttachments` permettent de spécifier l'éphéméralité du message à envoyer.
+On utilisera pour cela l'objet *olvid.datatypes.MessageEphemerality*.
+
+Voici un exemple en python. Il est possible de spécifier les paramètres `read_once`, `visibility_duration` et `existence_duration` de manière indépendante.
+Les durées d'existence et de visibilité sont en secondes.
+
+```python
+import asyncio
+
+from olvid import datatypes, OlvidClient
+
+async def main():
+    client = OlvidClient()
+    async for discussion in client.discussion_list():
+        await client.message_send(
+            discussion_id=discussion.id,
+            body="Self-destruct message",
+            ephemerality=datatypes.MessageEphemerality(
+                visibility_duration=10,
+                existence_duration=60,
+                read_once=True
+            )
+        )
+
+asyncio.run(main())
+```
+
 ## Utilisation avancée
 ### Listener
 Pour une implémentation plus fine de l'écoute des notifications, il est possible d'utiliser la notion de *Listener*.
