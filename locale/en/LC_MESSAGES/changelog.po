@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"POT-Creation-Date: 2025-01-21 12:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -41,101 +41,187 @@ msgstr "Minor and/or major versions will be incremented at a minimum for each ch
 
 # translated using ollama
 #: ../../source/changelog.md:13
-msgid "Dernière version : 1.1.0"
-msgstr "Latest version: 1.1.0"
+msgid "Dernière version : 1.2.0"
+msgstr "Latest version: 1.2.0"
 
 # translated using ollama
-#: ../../source/changelog.md:15
+#: ../../source/changelog.md:15 ../../source/changelog.md:45
 msgid "Ajouts"
 msgstr "Added"
 
 # translated using ollama
-#: ../../source/changelog.md:17
-msgid "**API**"
-msgstr "**API**"
-
-# translated using ollama
-#: ../../source/changelog.md:18
-msgid "il est maintenant possible d'envoyer des messages de position à l'aide de la nouvelle méthode gRPC `messageSendLocation`. (implementé dans les clients et la CLI)."
-msgstr "It is now possible to send location messages using the new gRPC method `messageSendLocation` (implemented in clients and CLI)."
-
-# translated using ollama
-#: ../../source/changelog.md:19
+#: ../../source/changelog.md:16 ../../source/changelog.md:35
+#: ../../source/changelog.md:47
 msgid "**Daemon**"
 msgstr "**Daemon**"
 
 # translated using ollama
+#: ../../source/changelog.md:17
+msgid "Ajout du service `KeycloakCommand` avec les méthodes *KeycloakUserList* et *KeycloakAddUserAsContact* afin de lister les utilisateurs présents sur Keycloak et de les ajouter en tant que contacts. (⚠️ Nécessite la version 4.1 ou supérieure du plugin Olvid pour Keycloak)"
+msgstr "Addition of the service `KeycloakCommand` with methods *KeycloakUserList* and *KeycloakAddUserAsContact* to list users present on Keycloak and add them as contacts. (⚠️ Requires version 4.1 or higher of the Olvid plugin for Keycloak)"
+
+# translated using ollama
+#: ../../source/changelog.md:19
+msgid "Ajout de la commande `downloadPhoto` pour les identités, les contacts et les groupes."
+msgstr "Addition of the `downloadPhoto` command for identities, contacts and groups."
+
+# translated using ollama
 #: ../../source/changelog.md:20
+msgid "Ajout des notifications `photoUpdated` pour les contacts et les groupes."
+msgstr "Addition of `photoUpdated` notifications for contacts and groups."
+
+# translated using ollama
+#: ../../source/changelog.md:21
+msgid "Ajout des commandes `getBytesIdentifier` pour les identités, les contacts, les groupes et les discussions. Cela permet de les identifier de manière unique à long terme, même en cas de restauration de sauvegarde."
+msgstr "Addition of the `getBytesIdentifier` commands for identities, contacts, groups and conversations. This allows them to be uniquely identified in the long term, even in case of backup restoration."
+
+# translated using ollama
+#: ../../source/changelog.md:22
+msgid "Ajout de la commande `getInvitationLink` pour les identités et les contacts (datatypes.Identity.invitation_link est maintenant marqué comme déprécié)."
+msgstr "Addition of the `getInvitationLink` command for identities and contacts (datatypes.Identity.invitation_link is now marked as deprecated)."
+
+# translated using ollama
+#: ../../source/changelog.md:23
+msgid "Ajout des champs *editedBody* et *forwarded* dans le message `datatypes.Message`"
+msgstr "Addition of the fields *editedBody* and *forwarded* in the message `datatypes.Message`"
+
+# translated using ollama
+#: ../../source/changelog.md:25
+msgid "**Python Client**"
+msgstr "**Python Client**"
+
+# translated using ollama
+#: ../../source/changelog.md:26
+msgid "Ajout de la classe *tools.KeycloakAutoInvitationBot* pour ajouter automatiquement tous les nouveaux utilisateurs Keycloak à ses contacts."
+msgstr "Addition of the class *tools.KeycloakAutoInvitationBot* to automatically add all new Keycloak users to its contacts."
+
+# translated using ollama
+#: ../../source/changelog.md:28 ../../source/changelog.md:38
+msgid "**CLI**"
+msgstr "**CLI**"
+
+# translated using ollama
+#: ../../source/changelog.md:29
+msgid "Implémentation des nouveaux points d'entrée du daemon dans les commandes suivantes :"
+msgstr "Implementation of new entry points for the daemon in the following commands:"
+
+# translated using ollama
+#: ../../source/changelog.md:30
+msgid "`contact kc get/add` : *KeycloakCommandService*"
+msgstr "`contact kc get/add` : *KeycloakCommandService*"
+
+# translated using ollama
+#: ../../source/changelog.md:31
+msgid "`identity/contact/group photo save` : *downloadPhoto*"
+msgstr "`identity/contact/group photo save` : *downloadPhoto*"
+
+# translated using ollama
+#: ../../source/changelog.md:32
+msgid "`identity/contact get -l` : *getInvitationLink*"
+msgstr "`identity/contact get -l` : *getInvitationLink*"
+
+# translated using ollama
+#: ../../source/changelog.md:34 ../../source/changelog.md:63
+msgid "Corrections"
+msgstr "Fixes"
+
+# translated using ollama
+#: ../../source/changelog.md:36
+msgid "Les champs *has_a_photo* n'étaient pas correctement remplis pour les contacts et les groupes."
+msgstr "The fields *has_a_photo* were not filled in correctly for contacts and groups."
+
+# translated using ollama
+#: ../../source/changelog.md:39
+msgid "`storage get -f` : l'option n'était pas bien gérée."
+msgstr "`storage get -f`: the option was not handled properly."
+
+# translated using ollama
+#: ../../source/changelog.md:40
+msgid "`olvid-cli -k` affichait une erreur inutile."
+msgstr "`olvid-cli -k` was displaying an unnecessary error."
+
+# translated using ollama
+#: ../../source/changelog.md:41
+msgid "`group get -f` : correction de la présentation."
+msgstr "`group get -f`: formatting fix."
+
+# translated using ollama
+#: ../../source/changelog.md:43
+msgid "Version 1.1.0"
+msgstr "Version 1.1.0"
+
+# translated using ollama
+#: ../../source/changelog.md:48
+msgid "il est maintenant possible d'envoyer des messages de position à l'aide de la nouvelle méthode gRPC `messageSendLocation`. (implementé dans les clients et la CLI)."
+msgstr "It is now possible to send location messages using the new gRPC method `messageSendLocation` (implemented in clients and CLI)."
+
+# translated using ollama
+#: ../../source/changelog.md:49
 msgid "ajout de la possibilité de chiffrer les communications entre le daemon et les clients en utilisant du TLS. ([](/daemon/tutorials.md#configuration-tls))"
 msgstr "added the ability to encrypt communications between the daemon and clients using TLS. ([](/daemon/tutorials.md#configuration-tls))"
 
 # translated using ollama
-#: ../../source/changelog.md:21
+#: ../../source/changelog.md:50
 msgid "possibilité d'ajouter des options personalisées a la JVM et notamment d'utiliser un proxy HTTP. ([](/daemon/tutorials.md#configuration-jvm))"
 msgstr "it is now possible to set custom options to the JVM and specifically to set up an HTTP proxy. ([](/daemon/tutorials.md#configuration-jvm))"
 
 # translated using ollama
-#: ../../source/changelog.md:22
+#: ../../source/changelog.md:51
 msgid "**Client Python**"
 msgstr "**Python Client**"
 
 # translated using ollama
-#: ../../source/changelog.md:23
+#: ../../source/changelog.md:52
 msgid "ajout du sous-paquet `olvid.errors` pour gérer les exceptions de manière plus simple."
 msgstr "added subpackage `olvid.errors` to handle exceptions in a simpler way."
 
 # translated using ollama
-#: ../../source/changelog.md:25
+#: ../../source/changelog.md:54
 msgid "Modifications"
 msgstr "Modifications"
 
 # translated using ollama
-#: ../../source/changelog.md:27 ../../source/changelog.md:36
+#: ../../source/changelog.md:56 ../../source/changelog.md:65
 msgid "**Client Python**:"
 msgstr "**Python Client**:"
 
 # translated using ollama
-#: ../../source/changelog.md:28
+#: ../../source/changelog.md:57
 msgid "remplacement des variables d'environnement *DAEMON_HOSTNAME* et *DAEMON_PORT* par *DAEMON_TARGET*."
-msgstr "replaced environment variables *DAEMON_HOSTNAME* and *DAEMON_PORT* by *DAEMON\_TARGET*."
+msgstr "replaced environment variables *DAEMON_HOSTNAME* and *DAEMON_PORT* by *DAEMON\\_TARGET*."
 
 # translated using ollama
-#: ../../source/changelog.md:29
+#: ../../source/changelog.md:58
 msgid "les fichiers *.client_key* et *.admin_client_key* sont dépréciés, utilisez un fichier `.env` à la place."
-msgstr "*.client_key* and *.admin\_client\_key* files are deprecated, use a `.env` file instead."
+msgstr "*.client_key* and *.admin\\_client\\_key* files are deprecated, use a `.env` file instead."
 
 # translated using ollama
-#: ../../source/changelog.md:30
+#: ../../source/changelog.md:59
 msgid "la classe `OlvidBot` est maintenant dépréciée, utilisez la classe `OlvidClient` à la place."
 msgstr "`OlvidBot` class is now deprecated, please use the class `OlvidClient` instead."
 
 # translated using ollama
-#: ../../source/changelog.md:31
+#: ../../source/changelog.md:60
 msgid "**Docker**:"
 msgstr "**Docker**:"
 
 # translated using ollama
-#: ../../source/changelog.md:32
+#: ../../source/changelog.md:61
 msgid "la construction et la taille des images Docker [bot-daemon](https://hub.docker.com/r/olvid/bot-daemon) et [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner) ont été grandement améliorées."
 msgstr "The construction and size of Docker images [bot-daemon](https://hub.docker.com/r/olvid/bot-daemon) and [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner) have been greatly improved."
 
 # translated using ollama
-#: ../../source/changelog.md:34
-msgid "Corrections"
-msgstr "Corrections"
-
-# translated using ollama
-#: ../../source/changelog.md:37
+#: ../../source/changelog.md:66
 msgid "`tools.SelfCleaningBot`: les paramètres `clean_inbound_messages` et `clean_outbound_messages` sont maintenant correctement gérés."
 msgstr "`tools.SelfCleaningBot`: the parameters `clean_inbound_messages` and `clean_outbound_messages` are now properly handled."
 
 # translated using ollama
-#: ../../source/changelog.md:41
+#: ../../source/changelog.md:70
 msgid "Version 1.0.0"
 msgstr "Version 1.0.0"
 
 # translated using ollama
-#: ../../source/changelog.md:43
+#: ../../source/changelog.md:72
 msgid "Version initiale du projet."
 msgstr "Initial version of the project."
 

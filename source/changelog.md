@@ -10,13 +10,42 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 1.1.0
+## Dernière version : 1.2.0
+
+### Ajouts
+- **Daemon**
+  - Ajout du service `KeycloakCommand` avec les méthodes *KeycloakUserList* et *KeycloakAddUserAsContact* afin de lister les utilisateurs présents sur Keycloak et de les ajouter en tant que contacts.
+  (⚠️ Nécessite la version 4.1 ou supérieure du plugin Olvid pour Keycloak)
+  - Ajout de la commande `downloadPhoto` pour les identités, les contacts et les groupes.
+  - Ajout des notifications `photoUpdated` pour les contacts et les groupes.
+  - Ajout des commandes `getBytesIdentifier` pour les identités, les contacts, les groupes et les discussions. Cela permet de les identifier de manière unique à long terme, même en cas de restauration de sauvegarde.
+  - Ajout de la commande `getInvitationLink` pour les identités et les contacts (datatypes.Identity.invitation_link est maintenant marqué comme déprécié).
+  - Ajout des champs *editedBody* et *forwarded* dans le message `datatypes.Message`
+
+- **Python Client**
+  - Ajout de la classe *tools.KeycloakAutoInvitationBot* pour ajouter automatiquement tous les nouveaux utilisateurs Keycloak à ses contacts.
+
+- **CLI**
+  - Implémentation des nouveaux points d'entrée du daemon dans les commandes suivantes :
+    - `contact kc get/add` : *KeycloakCommandService*
+    - `identity/contact/group photo save` : *downloadPhoto*
+    - `identity/contact get -l` : *getInvitationLink*
+
+### Corrections
+- **Daemon**
+  - Les champs *has_a_photo* n'étaient pas correctement remplis pour les contacts et les groupes.
+
+- **CLI**
+  - `storage get -f` : l'option n'était pas bien gérée.
+  - `olvid-cli -k` affichait une erreur inutile.
+  - `group get -f` : correction de la présentation.
+
+## Version 1.1.0
 
 ### Ajouts
 
-- **API**
-  - il est maintenant possible d'envoyer des messages de position à l'aide de la nouvelle méthode gRPC `messageSendLocation`. (implementé dans les clients et la CLI).
 - **Daemon**
+  - il est maintenant possible d'envoyer des messages de position à l'aide de la nouvelle méthode gRPC `messageSendLocation`. (implementé dans les clients et la CLI).
   - ajout de la possibilité de chiffrer les communications entre le daemon et les clients en utilisant du TLS. ([](/daemon/tutorials.md#configuration-tls))
   - possibilité d'ajouter des options personalisées a la JVM et notamment d'utiliser un proxy HTTP. ([](/daemon/tutorials.md#configuration-jvm)) 
 - **Client Python**
