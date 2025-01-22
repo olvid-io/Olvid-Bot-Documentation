@@ -83,6 +83,34 @@ python3 main.py
 
 Si tout a bien été configuré, vous devriez voir s'afficher le nom d'usage de l'identité que vous avez créée sur le daemon.
 
-Si c'est le cas, vous pouvez continuer avec notre section [](/python/tutorials) pour apprendre à utiliser notre librairie Python ou dans la section [](/python/examples) pour déployer des projets clés en main.
-
 Sinon, rendez-vous dans notre section [](/python/troubleshooting).
+
+## Premier Bot
+
+Pour commencer à coder votre premier bot, vous pouvez partir de l'exemple suivant.
+Il se contente de répondre à chaque message avec le même message, mais il peut facilement être modifié et amélioré.
+
+```python
+import asyncio
+from olvid import OlvidClient, datatypes, tools
+
+class EchoBot(OlvidClient):
+    async def on_message_received(self, message: datatypes.Message):
+        await message.reply(message.body)
+
+    async def on_discussion_new(self, discussion: datatypes.Discussion):
+        await discussion.post_message("Hello 👋")
+
+async def main():
+    bot = EchoBot()
+    tools.AutoInvitationBot()  # automatically accept presentation and group invitations
+    await bot.run_forever()
+
+asyncio.set_event_loop(asyncio.new_event_loop())
+asyncio.get_event_loop().run_until_complete(main())
+```
+
+## Et maintenant ?
+
+Pour en apprendre plus sur l'utilisation de notre librairie Python rendez-vous dans notre section [](/python/tutorials).
+Sinon rendez-vous dans la section [](/python/examples) pour déployer des projets clés en main.

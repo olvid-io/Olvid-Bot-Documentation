@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"POT-Creation-Date: 2025-01-22 16:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -116,11 +116,26 @@ msgstr "If everything has been properly configured, you should see the display n
 
 # translated using ollama
 #: ../../source/python/python.md:86
-msgid "Si c'est le cas, vous pouvez continuer avec notre section [](/python/tutorials) pour apprendre à utiliser notre librairie Python ou dans la section [](/python/examples) pour déployer des projets clés en main."
-msgstr "If this is the case, you can continue with our [Python tutorials](/python/tutorials) section to learn how to use our Python library or in the [examples](/python/examples) section to deploy turnkey projects."
+msgid "Sinon, rendez-vous dans notre section [](/python/troubleshooting)."
+msgstr "Alternatively, visit our [](/python/troubleshooting) section."
 
 # translated using ollama
 #: ../../source/python/python.md:88
-msgid "Sinon, rendez-vous dans notre section [](/python/troubleshooting)."
-msgstr "Alternatively, visit our [Python troubleshooting section](/python/troubleshooting)."
+msgid "Premier Bot"
+msgstr "First Bot"
+
+# translated using ollama
+#: ../../source/python/python.md:90
+msgid "Pour commencer à coder votre premier bot, vous pouvez partir de l'exemple suivant. Il se contente de répondre à chaque message avec le même message, mais il peut facilement être modifié et amélioré."
+msgstr "To start coding your first bot, you can use the following example. It simply responds to each message with the same message, but it can easily be modified and improved."
+
+# translated using ollama
+#: ../../source/python/python.md:113
+msgid "Et maintenant ?"
+msgstr "What's next?"
+
+# translated using ollama
+#: ../../source/python/python.md:115
+msgid "Pour en apprendre plus sur l'utilisation de notre librairie Python rendez-vous dans notre section [](/python/tutorials). Sinon rendez-vous dans la section [](/python/examples) pour déployer des projets clés en main."
+msgstr "To learn more about using our Python library, visit our [](/python/tutorials) section. Otherwise, head to the [](/python/examples) section for ready-to-use projects."
 
