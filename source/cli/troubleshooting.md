@@ -29,7 +29,7 @@ Dans votre fichier *docker-compose.yaml*, vérifiez la présence d'une variable 
 
 Copiez sa valeur et utilisez-la comme valeur de la variable d'environnement *OLVID_ADMIN_CLIENT_KEY* dans la section [précédente](/cli/cli).
 
-Pour plus de détails sur les clés d'administration du daemon, rendez-vous [ici](/daemon/configuration.md#clés-client-administrateur).
+Pour plus de détails sur les clés d'administration du daemon, rendez-vous [ici](/daemon/options.md#clés-client-administrateur).
 :::
 
 ### **Command not found: olvid-cli**

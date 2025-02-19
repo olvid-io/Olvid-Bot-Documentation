@@ -6,7 +6,7 @@
 
 self
 tutorials
-configuration
+options
 custom_client
 ```
 

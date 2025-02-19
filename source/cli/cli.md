@@ -25,7 +25,7 @@ Pensez à vérifier que le service `daemon` de votre fichier `docker-compose.yam
 Pour permettre à la CLI de se connecter au daemon, il vous faudra récupérer la clé administrateur de votre daemon.
 Elle se trouve normalement dans l'environnement de votre daemon. Vous pouvez vérifier sa valeur dans le fichier `docker-compose.yaml` à la section environnement du daemon.
 Il s'agit de la valeur d'une variable d'environnement qui commence par **OLVID_ADMIN_CLIENT_KEY**.  
-Pour plus de détails sur les clés d'administration du daemon [rendez-vous ici](/daemon/configuration.md#clés-client-administrateur).
+Pour plus de détails sur les clés d'administration du daemon [rendez-vous ici](/daemon/options.md#clés-client-administrateur).
 
 ::::{tab-set}
 :sync-group: cli

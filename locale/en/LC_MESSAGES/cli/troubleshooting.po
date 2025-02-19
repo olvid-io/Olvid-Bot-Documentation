@@ -71,8 +71,8 @@ msgstr "Copy its value and use it as the value of the environment variable *OLVI
 
 # translated using ollama
 #: ../../source/cli/troubleshooting.md:32
-msgid "Pour plus de détails sur les clés d'administration du daemon, rendez-vous [ici](/daemon/configuration.md#clés-client-administrateur)."
-msgstr "For more details on the administrator keys of the daemon, visit [here](/daemon/configuration.md#admin-client-keys)."
+msgid "Pour plus de détails sur les clés d'administration du daemon, rendez-vous [ici](/daemon/options.md#clés-client-administrateur)."
+msgstr "For more details on the administrator keys of the daemon, visit [here](/daemon/options.md#admin-client-keys)."
 
 # translated using ollama
 #: ../../source/cli/troubleshooting.md:36

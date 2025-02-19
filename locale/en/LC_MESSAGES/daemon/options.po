@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Olvid
 # This file is distributed under the same license as the Olvid Bots package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Olvid Bots 1.1.0\n"
+"Project-Id-Version: Olvid Bots 1.1.0.post1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 11:32+0100\n"
+"POT-Creation-Date: 2025-02-12 22:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -20,182 +20,182 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:1
-msgid "⚙️ Configuration"
-msgstr "⚙️ Configuration"
+#: ../../source/daemon/options.md:1
+msgid "⚙️ Options"
+msgstr "⚙️ Options"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:3
+#: ../../source/daemon/options.md:3
 msgid "Le daemon Olvid est distribué sous forme [d'image Docker](https://hub.docker.com/r/olvid/bot-daemon)."
 msgstr "The Olvid daemon is distributed in the form of a [Docker image](https://hub.docker.com/r/olvid/bot-daemon)."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:5
+#: ../../source/daemon/options.md:5
 msgid "Le comportement du conteneur Docker ainsi créé peut être configuré à l'aide de deux mécanismes :"
 msgstr "The behavior of the created Docker container can be configured using two mechanisms:"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:6
+#: ../../source/daemon/options.md:6
 msgid "les variables d'environnement"
 msgstr "environment variables"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:7
+#: ../../source/daemon/options.md:7
 msgid "les options en ligne de commande"
 msgstr "command line options"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:9
+#: ../../source/daemon/options.md:9
 msgid "**Nous vous conseillons très fortement d'utiliser les variables d'environnement !**"
 msgstr "**We strongly advise you to use environment variables.**"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:11
+#: ../../source/daemon/options.md:11
 msgid "Il existe deux moyens pour passer une variable d'environnement, selon que vous utilisez un fichier `docker-compose.yaml` ou la commande `docker run`."
 msgstr "There are two ways to pass an environment variable, depending on whether you are using a `docker-compose.yaml` file or the `docker run` command."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md
+#: ../../source/daemon/options.md
 msgid "**docker-compose.yaml**"
 msgstr "**docker-compose.yaml**"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md
+#: ../../source/daemon/options.md
 msgid "**docker run**"
 msgstr "**docker run**"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:32
+#: ../../source/daemon/options.md:32
 msgid "Pour ajouter des options en ligne de commande, il faut modifier votre fichier ou votre commande comme suit."
 msgstr "To add command line options, you need to modify your file or command as follows."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:51
+#: ../../source/daemon/options.md:51
 msgid "Options disponibles"
 msgstr "Options"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:53
+#: ../../source/daemon/options.md:53
 msgid "gRPC"
 msgstr "gRPC"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:55
+#: ../../source/daemon/options.md:55
 msgid "Changer le port d'écoute gRPC."
 msgstr "Change the listening gRPC port."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:57
+#: ../../source/daemon/options.md:57
 msgid "*(par défaut : 50051)*"
 msgstr "(default: 50051)"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md
+#: ../../source/daemon/options.md
 msgid "Environnement"
 msgstr "Environment"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md
+#: ../../source/daemon/options.md
 msgid "CLI"
 msgstr "CLI"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:72
+#: ../../source/daemon/options.md:72
 msgid "Logs"
 msgstr "Logs"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:74
+#: ../../source/daemon/options.md:74
 msgid "Changer la verbosité des logs."
 msgstr "Change logs verbosity."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:76
+#: ../../source/daemon/options.md:76
 msgid "*(défaut : INFO)*"
 msgstr "(default: INFO)"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:86
+#: ../../source/daemon/options.md:86
 msgid "Clés client administrateur"
 msgstr "Admin Client Keys"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:87
+#: ../../source/daemon/options.md:87
 msgid "Créer"
 msgstr "Create"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:88
+#: ../../source/daemon/options.md:88
 msgid "Il est possible de mettre en place une clé client administrateur temporaire (non sauvegardée en base de données)."
 msgstr "It is possible to set up a temporary administrator client key (not saved in the database)."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:90
+#: ../../source/daemon/options.md:90
 msgid "Cela est nécessaire au moins pour la première connexion au daemon."
 msgstr "This is necessary at least for the first connection to the daemon."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:95
+#: ../../source/daemon/options.md:95
 msgid "Il est possible de créer plusieurs clés en ajoutant un suffixe à la variable *OLVID_ADMIN_CLIENT_KEY*."
 msgstr "It is possible to create several keys by adding a suffix to the variable *OLVID_ADMIN_CLIENT_KEY*."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:108
+#: ../../source/daemon/options.md:108
 msgid "Lister"
 msgstr "List"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:109
+#: ../../source/daemon/options.md:109
 msgid "Il est également possible de lister les clés client disponibles. Dans ce cas, le daemon affiche les clés et se termine."
 msgstr "It is also possible to list the available client keys. In this case, the daemon displays the keys and then exits."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:118
+#: ../../source/daemon/options.md:118
 msgid "TLS"
 msgstr "TLS"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:119
+#: ../../source/daemon/options.md:119
 msgid "Pour plus d'informations sur l'utilisation du TLS avec le daemon, rendez-vous dans notre section [](/daemon/tutorials.md#configuration-tls)."
 msgstr "For more information on using TLS with the daemon, visit our section [TLS Configuration](/daemon/tutorials.md#configuration-tls)."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:121
+#: ../../source/daemon/options.md:121
 msgid "TLS avec authentification serveur"
 msgstr "TLS with server authentication"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:123
+#: ../../source/daemon/options.md:123
 msgid "Les deux éléments sont nécessaires."
 msgstr "Both elements are necessary."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:140
+#: ../../source/daemon/options.md:140
 msgid "TLS avec authentification client"
 msgstr "TLS with client authentication"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:141
+#: ../../source/daemon/options.md:141
 msgid "Les trois éléments sont nécessaires pour la mise en place de l'authentification client."
 msgstr "Three elements are necessary for setting up client authentication."
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:159
+#: ../../source/daemon/options.md:159
 msgid "Sauvegarde"
 msgstr "Backup"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:161
+#: ../../source/daemon/options.md:161
 msgid "Restaurer une sauvegarde"
 msgstr "Restore a backup"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:163
+#: ../../source/daemon/options.md:163
 msgid "Pour restaurer une sauvegarde rendez-vous a la section: [](/daemon/tutorials.md#sauvegardes)"
 msgstr "To restore a backup, go to the following section: [Backups](/daemon/tutorials.md#backups)"
 
 # translated using ollama
-#: ../../source/daemon/configuration.md:167
+#: ../../source/daemon/options.md:167
 msgid "La restauration d'une sauvegarde peut être lancée avec l'option:"
 msgstr "Restoring a backup can be initiated with the option:"
 

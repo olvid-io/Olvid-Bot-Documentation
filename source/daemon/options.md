@@ -1,4 +1,4 @@
-# ⚙️ Configuration
+# ⚙️ Options
 
 Le daemon Olvid est distribué sous forme [d'image Docker](https://hub.docker.com/r/olvid/bot-daemon).
 
