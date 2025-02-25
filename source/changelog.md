@@ -10,7 +10,30 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 1.2.0
+## Dernière version : 1.3.0
+Il est maintenant possible d'envoyer des messages de partage de position en continu 🗺️ !
+
+### Ajouts
+- **Daemon**
+  - Ajout de l'envoi de partage de position dans le service `MessageCommand`, avec les méthodes *MessageStartLocationSharing*, *MessageUpdateLocationSharing* et *MessageUpdateLocationSharing*.
+  - Ajout de la notification *MessageLocationSent* dans le service `MessageNotification` pour harmoniser l'API.
+  - Modification du comportement des méthodes *MessageLocationSharingStart*, *MessageLocationSharingUpdate* et *MessageLocationSharingEnd* qui sont maintenant aussi émises pour les messages sortants.
+
+- **CLI**
+  - Ajout du groupe de commande `message location` avec les commandes:
+    - `message location send`
+    - `message location start`
+    - `message location update`
+    - `message location end`
+  - Ajout de la commande `contact reset` (à utiliser prudemment !) pour résoudre certains blocages une identité et ses contacts.
+  - Ajout de la commande `storage reset` pour supprimer toutes les entrées du stockage (dans le stockage global, et tous les stockages de discussion).  
+
+### Correctif
+- **Python Client**
+  - tools.ChatBot: les messages d'aide étaient envoyés deux fois dans certaines conditions.
+  - tools.SelfCleaningBot: les messages étaient tous supprimés au démarrage lorsque la fonction *is_message_for_cleaning* était renseignée.
+
+## Version 1.2.0
 
 ### Ajouts
 - **Daemon**
