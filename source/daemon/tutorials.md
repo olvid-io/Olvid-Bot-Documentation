@@ -182,9 +182,10 @@ On utilise les variables d'environnement suivantes pour configurer le daemon :
 
 Ce qui nous donne un fichier `docker-compose.yaml` similaire à celui-ci.
 
-```yaml
+```{code-block} yaml
+  :substitutions:
 daemon:
-  image: olvid/bot-daemon:latest
+  image: olvid/bot-daemon::{{docker_version}}
   environment:
     - OLVID_ADMIN_CLIENT_KEY_CLI=ToSet
     - DAEMON_CERTIFICATE_FILE=./credentials/server.pem
@@ -318,9 +319,10 @@ Créez un répertoire **credentials** et copiez-y les fichiers générés préc�
 
 Ce qui nous donne un fichier *docker-compose.yaml* similaire à celui-ci.
 
-```yaml
+```{code-block} yaml
+  :substitutions:
 daemon:
-  image: olvid/bot-daemon
+  image: olvid/bot-daemon:{{docker_version}}
   environment:
     - OLVID_ADMIN_CLIENT_KEY_CLI=ToSet
     - DAEMON_CERTIFICATE_FILE=./credentials/server.pem
@@ -417,10 +419,11 @@ Ces sauvegardes sont stockées dans le répertoire */daemon/backups*.
 Si vous souhaitez conserver ces sauvegardes, vous devez monter le répertoire */daemon/backups* en tant que volume.
 Voici un exemple de fichier *docker-compose.yaml*.
 
-```sh
+```{code-block} yaml
+  :substitutions:
 services:
   daemon:
-    image: olvid/bot-daemon
+    image: olvid/bot-daemon:{{docker_version}}
     volumes:
       - ./data:/daemon/data
       - ./backups:/daemon/backups
@@ -454,11 +457,12 @@ Seuls les éléments enregistrés à l'aide de l'API de stockage seront encore d
 Pour restaurer une sauvegarde, vous devez exécuter la commande suivante depuis le repertoire qui contient votre daemon habituellement.
 Vérifiez bien que le répertoire data est vide avant de lancer une restauration, autrement, elle échouera. 
 
-```bash
+```{code-block} bash
+  :substitutions:
 docker run --rm \
     -v ./data:/daemon/data \
     -v ./backups:/daemon/backups \
-    olvid/bot-daemon -r backups/0001/backup-1569233400.bytes | grep Backup
+    olvid/bot-daemon:{{docker_version}} -r backups/0001/backup-1569233400.bytes | grep Backup
 ```
 
 Lorsque vous voyez le message `💾 BackupRestoration: Finished backup restoration process`, vous pouvez arrêter le daemon (CTRL + C) et le démarrer normalement avec la commande `docker-compose up -d`.

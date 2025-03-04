@@ -49,10 +49,11 @@ Nous allons utiliser un fichier Docker Compose pour configurer et lancer notre i
 
 Vous pouvez copier le contenu suivant dans un fichier nommé `docker-compose.yaml`.
 
-```yaml
+```{code-block} yaml
+  :substitutions:
 services:
   daemon:
-    image: olvid/bot-daemon
+    image: olvid/bot-daemon:{{docker_version}}
     environment:
       - OLVID_ADMIN_CLIENT_KEY_CLI=SetARandomValue
     ports:
@@ -60,7 +61,7 @@ services:
     volumes:
       - ./data:/daemon/data
   cli:
-    image: olvid/bot-python-runner
+    image: olvid/bot-python-runner:{{docker_version}}
     entrypoint: "olvid-cli"
     environment:
       - OLVID_ADMIN_CLIENT_KEY=SetARandomValue

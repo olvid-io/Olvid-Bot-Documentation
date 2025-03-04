@@ -1,5 +1,6 @@
 import os
 from olvid import __version__ as olvid_version
+from olvid import __docker_version__ as docker_version
 
 project = 'Olvid Bots'
 copyright = '2024, Olvid'
@@ -16,6 +17,8 @@ extensions = [
 	"sphinx_design",  # add dropdown menus and panels
 	"myst_parser",  # enable myst syntax (extended markdown)
 	"sphinx.ext.napoleon",  # allows support for Google docstring format
+	"sphinx_copybutton",  # add copy button to code blocks
+	"sphinx_substitution_extensions",  # use substitutions in code blocks
 ]
 
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -69,8 +72,14 @@ html_theme_options = {
 
 # -- Extensions -----------------------------------------------------
 # MySt configuration
-myst_enable_extensions = ["colon_fence", "deflist"]
+myst_enable_extensions = ["colon_fence", "deflist", "substitution"]
 myst_heading_anchors = 4
+
+myst_substitutions = {
+  "version": version,
+  "docker_version": docker_version,
+  "python_version": version,
+}
 
 # -- Custom scripts -------------------------------------------------
 import subprocess
