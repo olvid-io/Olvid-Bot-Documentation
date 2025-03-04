@@ -43,8 +43,8 @@ pip3 install olvid-bot
 :sync: docker
 
 **Installation**
-```{code-block}} shell
-  :substitution:
+```{code-block} shell
+  :substitutions:
 docker pull olvid/bot-python-runner:{{docker_version}}
 ```
 :::
@@ -83,7 +83,7 @@ olvid-cli
 
 **Lancement**
 ```{code-block} shell
-  :substitution:
+  :substitutions:
 docker run --rm -it \
   -e OLVID_ADMIN_CLIENT_KEY=adminClientKey \
   -e OLVID_DAEMON_TARGET=localhost:50051 \

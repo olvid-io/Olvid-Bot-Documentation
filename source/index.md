@@ -12,6 +12,7 @@
 self
 python/python
 js/js
+n8n/n8n
 cli/cli
 daemon/daemon
 glossary

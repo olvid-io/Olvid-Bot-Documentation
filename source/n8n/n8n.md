@@ -9,6 +9,10 @@
 
 ## Installation
 
+:::{warning}
+Le noeud Olvid pour n8n est encore en phase de test. En cas de soucis, vous pouvez ouvrir un ticket sur [GitHub](https://github.com/olvid-io/n8n-nodes-olvid/issues/new/choose) ou nous envoyer un email à [bot@olvid.io](mailto:bot@olvid.io).
+:::
+
 ### Installation d'un daemon et d'une instance N8N
 
 Dans cette partie vous allez déployer un daemon Olvid et une instance N8N à l'aide de docker et docker-compose.
@@ -24,10 +28,14 @@ Dans cette partie vous allez déployer un daemon Olvid et une instance N8N à l'
    cd olvid-n8n
    ```
 
-2. Il vous faudra ensuite **générer** une clé client administrateur. Le plus simple est d'utiliser la commande `uuidgen` et de stocker le résultat dans un fichier `.env`.
+2. Il vous faudra ensuite **générer** une clé client administrateur. Vous pouvez utiliser les commandes `uuidgen` ou `openssl` en fonction de votre configuration. Il faudra stocker le résultat dans un fichier `.env`.
 
    ```shell
    echo "OLVID_ADMIN_KEY=$(uuidgen)" >> .env
+   ```
+   **OU**
+   ```shell
+   echo "OLVID_ADMIN_KEY=$(openssl rand -hex 32)" >> .env
    ```
 
 3. Vous pouvez maintenant créer un fichier `docker-compose.yaml` avec le contenu suivant.
@@ -113,7 +121,7 @@ Vous avez lancé un daemon Olvid et une instance N8N qui tournent en fond, il fa
    :align: center
    ```
 
-5. **Entrer** `n8n-nodes-olvid` in _npm Package Name_, prendre le temps de considérer les risques d'installer un noeud communautaire avant de **cocher** la case et **cliquer** sur `Install`.
+5. **Entrer** `n8n-nodes-olvid` à la place de _npm Package Name_, prendre le temps de considérer les risques d'installer un noeud communautaire avant de **cocher** la case et **cliquer** sur `Install`.
 
    ```{image} /_static/images/n8n-install-olvid-node.png
    :alt: Installing Olvid node in N8N
