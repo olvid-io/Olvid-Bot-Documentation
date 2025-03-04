@@ -182,7 +182,7 @@ On utilise les variables d'environnement suivantes pour configurer le daemon :
 
 Ce qui nous donne un fichier `docker-compose.yaml` similaire à celui-ci.
 
-```{code-blocks} yaml
+```{code-block} yaml
   :substitutions:
 daemon:
   image: olvid/bot-daemon::{{docker_version}}

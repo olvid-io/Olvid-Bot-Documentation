@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"POT-Creation-Date: 2025-03-04 10:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -19,7 +19,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../source/cli/references.md:1
 msgid "📚️ References"
@@ -45,8 +45,8 @@ msgstr ""
 msgid "Arguments"
 msgstr ""
 
-#: ../../olvid-cli current:1 identity impersonate:1 key location:1 message
-#: new:1 react:1 update:1
+#: ../../olvid-cli current:1 identity impersonate:1 key message new:1 react:1
+#: update:1
 msgid "Optional argument"
 msgstr ""
 
@@ -59,8 +59,8 @@ msgid "Options"
 msgstr ""
 
 #: ../../olvid-cli advanced:1 attachment contact controlled:1 discussion get:1
-#: group identity invitation key message new read-only:1 rm:1 send:1 standard:1
-#: storage
+#: group identity invitation key message new photo read-only:1 reset:1 rm:1
+#: save:1 send:1 standard:1 storage
 msgid "Optional argument(s)"
 msgstr ""
 
@@ -72,10 +72,10 @@ msgstr ""
 msgid "attach your current identity to a keycloak server using a keycloak bot configuration link"
 msgstr ""
 
-#: ../../olvid-cli accept:1 admin:1 attachment bind:1 contact decline:1
-#: disband:1 discussion get:1 group identity introduce:1 invitation kc key
-#: key:1 leave:1 location:1 message new:1 permissions:1 photo react:1 sas:1
-#: save:1 send:1 set:1 settings storage unset:1 update:1 voip:1
+#: ../../olvid-cli accept:1 add:1 admin:1 attachment bind:1 contact decline:1
+#: disband:1 discussion end:1 get:1 group identity introduce:1 invitation kc
+#: key key:1 leave:1 location message new:1 permissions:1 photo react:1 sas:1
+#: save:1 send:1 set:1 settings start:1 storage unset:1 update:1 voip:1
 msgid "Required argument"
 msgstr ""
 
@@ -125,6 +125,22 @@ msgstr ""
 
 #: ../../olvid-cli identity photo:1
 msgid "manage current identity photo"
+msgstr ""
+
+#: ../../olvid-cli identity photo save:1
+msgid "Save identity photo to local files. Specify identity_ids to use or it uses current identity id by default"
+msgstr ""
+
+#: ../../olvid-cli identity photo save:1
+msgid "save all identity photos"
+msgstr ""
+
+#: ../../olvid-cli contact group identity photo save:1
+msgid "directory to store downloaded photo (default: ./photos)"
+msgstr ""
+
+#: ../../olvid-cli contact group identity photo save:1
+msgid "specify file name to use (ignored if saving more than one image)"
 msgstr ""
 
 #: ../../olvid-cli identity photo set:1
@@ -228,8 +244,20 @@ msgstr ""
 msgid "get only unread messages"
 msgstr ""
 
-#: ../../olvid-cli location:1 message
+#: ../../olvid-cli end:1 location message
+msgid "end a location sharing message"
+msgstr ""
+
+#: ../../olvid-cli location message send:1
 msgid "send a location message"
+msgstr ""
+
+#: ../../olvid-cli location message start:1
+msgid "start to share a location"
+msgstr ""
+
+#: ../../olvid-cli location message update:1
+msgid "update a location sharing message"
 msgstr ""
 
 #: ../../olvid-cli message react:1
@@ -368,8 +396,44 @@ msgstr ""
 msgid "invite contacts in one to one discussion"
 msgstr ""
 
+#: ../../olvid-cli contact kc:1
+msgid "manage keycloak contacts"
+msgstr ""
+
+#: ../../olvid-cli add:1 contact kc
+msgid "add a keycloak user as a contact"
+msgstr ""
+
+#: ../../olvid-cli contact get:1 kc
+msgid "list keycloak users"
+msgstr ""
+
+#: ../../olvid-cli contact get:1 kc
+msgid "last list user timestamp"
+msgstr ""
+
 #: ../../olvid-cli contact new:1
 msgid "interactively add a  contact"
+msgstr ""
+
+#: ../../olvid-cli contact photo:1
+msgid "get contact photos"
+msgstr ""
+
+#: ../../olvid-cli contact photo save:1
+msgid "Save contact photos to local files."
+msgstr ""
+
+#: ../../olvid-cli contact photo save:1
+msgid "Save all contact photos"
+msgstr ""
+
+#: ../../olvid-cli contact reset:1
+msgid "Recreate secure channels"
+msgstr ""
+
+#: ../../olvid-cli contact reset:1
+msgid "Re-create secure channels for every contact"
 msgstr ""
 
 #: ../../olvid-cli contact rm:1
@@ -464,6 +528,14 @@ msgstr ""
 msgid "get/update group photos"
 msgstr ""
 
+#: ../../olvid-cli group photo save:1
+msgid "Save group photos to local files."
+msgstr ""
+
+#: ../../olvid-cli group photo save:1
+msgid "Save all group photos"
+msgstr ""
+
 #: ../../olvid-cli group update:1
 msgid "update group details and/or members (advanced command)"
 msgstr ""
@@ -474,6 +546,18 @@ msgstr ""
 
 #: ../../olvid-cli storage:1
 msgid "(advanced) access a client key associated storage"
+msgstr ""
+
+#: ../../olvid-cli reset:1 storage
+msgid "Remove every entry in global and discussion storage"
+msgstr ""
+
+#: ../../olvid-cli rm:1 storage
+msgid "Delete every elements in global storage"
+msgstr ""
+
+#: ../../olvid-cli rm:1 storage
+msgid "Delete every elements in discussion storage"
 msgstr ""
 
 #: ../../source/cli/references.md:4
