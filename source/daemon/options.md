@@ -13,10 +13,11 @@ Il existe deux moyens pour passer une variable d'environnement, selon que vous u
 :::{dropdown} **docker-compose.yaml**
 :open:
 
-```yaml
+```{code-block} yaml
+  :substitutions:
 services:
   daemon:
-    image: olvid/bot-daemon
+    image: olvid/bot-daemon:{{docker_version}}
     environment:
       - KEY=VALUE
 ```
@@ -24,8 +25,9 @@ services:
 
 :::{dropdown} **docker run**
 
-```shell
-docker run -e KEY_VALUE olvid/bot-daemon
+```{code-block} shell
+  :substitutions:
+docker run -e KEY_VALUE olvid/bot-daemon:{{docker_version}}
 ```
 :::
 
@@ -33,18 +35,20 @@ Pour ajouter des options en ligne de commande, il faut modifier votre fichier ou
 :::{dropdown} **docker-compose.yaml**
 :open:
 
-```yaml
+```{code-block} yaml
+  :substitutions:
 services:
   daemon:
-    image: olvid/bot-daemon
+    image: olvid/bot-daemon:{{docker_version}}
     command: --key mySuperSecretKey
 ```
 :::
 
 :::{dropdown} **docker run**
 
-```shell
-docker run -e KEY_VALUE olvid/bot-daemon --key mySuperSecretKey
+```{code-block} shell
+  :substitutions:
+docker run -e KEY_VALUE olvid/bot-daemon:{{docker_version}} --key mySuperSecretKey
 ```
 :::
 

@@ -92,6 +92,7 @@ msgstr "Addition of the `message location` command group with commands:"
 msgid "`message location send`"
 msgstr "`message location send`"
 
+# translated using ollama
 #: ../../source/changelog.md:25
 msgid "`message location start`"
 msgstr "`message location start`"
@@ -126,9 +127,10 @@ msgstr "Fix"
 msgid "**Python Client**"
 msgstr "**Python Client**"
 
+# translated using ollama
 #: ../../source/changelog.md:33
 msgid "tools.ChatBot: les messages d'aide étaient envoyés deux fois dans certaines conditions."
-msgstr "tools.ChatBot: help messages might be sent twice under specific conditions"
+msgstr "tools.ChatBot: help messages were sent twice in certain conditions."
 
 # translated using ollama
 #: ../../source/changelog.md:34
