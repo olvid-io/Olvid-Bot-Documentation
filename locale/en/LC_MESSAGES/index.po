@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-20 13:47+0100\n"
+"POT-Creation-Date: 2025-05-07 14:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 # translated using ollama
 #: ../../source/index.md:1
@@ -41,7 +41,7 @@ msgstr "We have designed this set of tools to allow you to create your own chatb
 
 # translated using ollama
 #: ../../source/index.md:27
-msgid "Nous vous recommandons de commencer par notre procédure d'[](#installation). Elle vous permettra d'installer et configurer votre propre daemon Olvid. Ce daemon peut être vu comme une application Olvid pilotable par l'intermédiaire d'une API gRPC."
+msgid "Nous vous recommandons de commencer par notre procédure [d'installation](#installation). Elle vous permettra d'installer et configurer votre propre daemon Olvid. Ce daemon peut être vu comme une application Olvid pilotable par l'intermédiaire d'une API gRPC."
 msgstr "We recommend that you start with our [](#installation) procedure. It will allow you to install and configure your own Olvid daemon. This daemon can be seen as an Olvid application controllable through a gRPC API."
 
 # translated using ollama
