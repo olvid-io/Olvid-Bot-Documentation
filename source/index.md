@@ -162,3 +162,5 @@ Actuellement, les langages suivants sont disponibles :
 
 - [](python/python)
 - [](js/js)
+
+Vous pouvez également mettre en place votre propre [instance N8N](n8n/n8n.md) pour réaliser des bots sans code.

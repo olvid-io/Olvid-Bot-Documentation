@@ -25,142 +25,147 @@ msgid "Olvid logo"
 msgstr "Olvid logo"
 
 # translated using ollama
-#: ../../source/index.md:21
+#: ../../source/index.md:22
 msgid "🚀 Quickstart"
 msgstr "🚀 Quickstart"
 
 # translated using ollama
-#: ../../source/index.md:23
+#: ../../source/index.md:24
 msgid "Bienvenue dans la documentation des bots Olvid !"
 msgstr "Welcome to the Olvid bots' documentation!"
 
 # translated using ollama
-#: ../../source/index.md:25
+#: ../../source/index.md:26
 msgid "Nous avons conçu cet ensemble d'outils pour vous permettre de créer vos propres chatbots et intégrations pour l'application [Olvid](https://olvid.io/faq/bots-olvid/), tout en conservant ses standards de sécurité maximale."
 msgstr "We have designed this set of tools to allow you to create your own chatbots and integrations for the [Olvid](https://olvid.io/faq/olvid-bots/) application, while maintaining its maximum security standards."
 
 # translated using ollama
-#: ../../source/index.md:27
+#: ../../source/index.md:28
 msgid "Nous vous recommandons de commencer par notre procédure [d'installation](#installation). Elle vous permettra d'installer et configurer votre propre daemon Olvid. Ce daemon peut être vu comme une application Olvid pilotable par l'intermédiaire d'une API gRPC."
 msgstr "We recommend that you start with our [](#installation) procedure. It will allow you to install and configure your own Olvid daemon. This daemon can be seen as an Olvid application controllable through a gRPC API."
 
 # translated using ollama
-#: ../../source/index.md:31
+#: ../../source/index.md:32
 msgid "Une fois l'installation effectuée, vous pourrez commencer à écrire le code de vos premiers clients, afin d'interagir et de commander le profil Olvid que vous aurez créé sur le daemon."
 msgstr "Once the installation is complete, you will be able to start writing the code for your first clients, in order to interact and control the Olvid profile that you will have created on the daemon."
 
 # translated using ollama
-#: ../../source/index.md:35
+#: ../../source/index.md:36
 msgid "Cette documentation est toujours en cours d'écriture. Si quelque chose vous semble incorrect, mal écrit ou peu clair, vous pouvez :"
 msgstr "This documentation is still being written. If something seems incorrect, poorly written or unclear to you, you can:"
 
 # translated using ollama
-#: ../../source/index.md:36
+#: ../../source/index.md:37
 msgid "créer une issue et/ou ouvrir une pull request en cliquant sur le bouton GitHub disponible dans la barre supérieure."
 msgstr "create an issue and/or open a pull request by clicking on the available GitHub button in the top bar."
 
 # translated using ollama
-#: ../../source/index.md:37
+#: ../../source/index.md:38
 msgid "nous contacter par mail : [bot@olvid.io](mailto:bot@olvid.io)"
 msgstr "contact us by email : [bot@olvid.io](mailto:bot@olvid.io)"
 
 # translated using ollama
-#: ../../source/index.md:40
+#: ../../source/index.md:41
 msgid "Installation"
 msgstr "Installation"
 
 # translated using ollama
-#: ../../source/index.md:41
+#: ../../source/index.md:42
 msgid "Prérequis"
 msgstr "Prerequisites"
 
 # translated using ollama
-#: ../../source/index.md:43
+#: ../../source/index.md:44
 msgid "Pour suivre cette procédure, vous aurez besoin que Docker soit installé sur votre machine. La procédure d'installation est disponible ici : [Installer Docker](https://docs.docker.com/engine/install/)."
 msgstr "To follow this procedure, you will need to have Docker installed on your computer. The installation procedure is available here: [Install Docker](https://docs.docker.com/engine/install/)."
 
 # translated using ollama
-#: ../../source/index.md:46
+#: ../../source/index.md:47
 msgid "Infrastructure"
 msgstr "Infrastructure"
 
 # translated using ollama
-#: ../../source/index.md:48
+#: ../../source/index.md:49
 msgid "Nous allons utiliser un fichier Docker Compose pour configurer et lancer notre infrastructure."
 msgstr "We will use a Docker Compose file to configure and launch our infrastructure."
 
 # translated using ollama
-#: ../../source/index.md:50
+#: ../../source/index.md:51
 msgid "Vous pouvez copier le contenu suivant dans un fichier nommé `docker-compose.yaml`."
 msgstr "You can copy the following content into a file named `docker-compose.yaml`."
 
 # translated using ollama
-#: ../../source/index.md:73
+#: ../../source/index.md:75
 msgid "Nous allons maintenant lancer le daemon en tâche de fond avec la commande suivante :"
 msgstr "We will now launch the daemon in background with the following command:"
 
 # translated using ollama
-#: ../../source/index.md:79
+#: ../../source/index.md:81
 msgid "Pour vérifier que le daemon a démarré correctement, on peut regarder ses logs."
 msgstr "To check that the daemon has started correctly, we can look at its logs."
 
 # translated using ollama
-#: ../../source/index.md:85
+#: ../../source/index.md:87
 msgid "Une fois que les logs ont fini de défiler, le daemon a démarré et on peut sortir de l'affichage en utilisant CTRL + C."
 msgstr "Once the logs have finished scrolling, the daemon has started and you can exit the display using CTRL + C."
 
 # translated using ollama
-#: ../../source/index.md:87
+#: ../../source/index.md:89
 msgid "Identité Olvid"
 msgstr "Olvid Identity"
 
 # translated using ollama
-#: ../../source/index.md:89
+#: ../../source/index.md:91
 msgid "L'interface en ligne de commande d'Olvid (CLI) permet de se connecter directement au daemon et lui envoyer manuellement des commandes. On l'utilise, a minima, pour créer notre identité Olvid et entrer en contact avec elle. Mais elle pourra également servir plus tard pour débugger nos programmes ou déclencher manuellement des actions."
 msgstr "The command-line interface (CLI) of Olvid allows for direct connection to the daemon and manually sending commands. At a minimum, it is used to create our Olvid identity and establish contact with it. However, it can also be useful in the future for debugging programs or triggering manual actions."
 
 # translated using ollama
-#: ../../source/index.md:93
+#: ../../source/index.md:95
 msgid "Pour lancer la CLI en mode interactif, on utilisera la commande suivante :"
 msgstr "To launch the CLI in interactive mode, use the following command:"
 
 # translated using ollama
-#: ../../source/index.md:99
+#: ../../source/index.md:101
 msgid "Un nouveau prompt s'affiche désormais. Le nombre affiché correspond à l'identifiant de l'identité actuellement utilisée. Dans notre cas, il affiche 0 car nous n'avons pas encore d'identité sur le daemon. Pour plus d'informations, rendez-vous dans la section [](/cli/cli)."
 msgstr "A new prompt now appears. The number displayed corresponds to the identifier of the currently used identity. In our case, it displays 0 because we do not yet have an identity on the daemon. For more information, visit the [CLI section](/cli/cli)."
 
 # translated using ollama
-#: ../../source/index.md:103
+#: ../../source/index.md:105
 msgid "Pour créer notre première identité, nous allons utiliser la commande `identity new`. Voici un exemple complet et commenté du déroulement de cette commande."
 msgstr "To create our first identity, we will use the command `identity new`. Here is a complete and commented example of how this command works."
 
 # translated using ollama
-#: ../../source/index.md:152
+#: ../../source/index.md:154
 msgid "Premier programme"
 msgstr "First Program"
 
 # translated using ollama
-#: ../../source/index.md:154
+#: ../../source/index.md:156
 msgid "Vous disposez maintenant d'une infrastructure fonctionnelle, avec un daemon hébergeant une identité Olvid. Vous pouvez utiliser l'API gRPC du daemon pour contrôler cette identité."
 msgstr "You now have a functional infrastructure with a daemon hosting an Olvid identity. You can use the daemon's gRPC API to control this identity."
 
 # translated using ollama
-#: ../../source/index.md:157
+#: ../../source/index.md:159
 msgid "Pour continuer, il vous faut choisir la technologie que vous souhaitez utiliser pour écrire votre premier bot."
 msgstr "To continue, you need to choose the technology you want to use to write your first bot."
 
 # translated using ollama
-#: ../../source/index.md:159
+#: ../../source/index.md:161
 msgid "Actuellement, les langages suivants sont disponibles :"
 msgstr "Currently, the following languages are available:"
 
 # translated using ollama
-#: ../../source/index.md:161
+#: ../../source/index.md:163
 msgid "[](python/python)"
 msgstr "[](python/python)"
 
 # translated using ollama
-#: ../../source/index.md:162
+#: ../../source/index.md:164
 msgid "[](js/js)"
 msgstr "[](js/js)"
+
+# translated using ollama
+#: ../../source/index.md:166
+msgid "Vous pouvez également mettre en place votre propre [instance N8N](n8n/n8n.md) pour réaliser des bots sans code."
+msgstr "You can also set up your own [N8N instance](n8n/n8n.md) to create no-code bots."
 

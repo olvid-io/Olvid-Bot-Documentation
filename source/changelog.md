@@ -10,7 +10,43 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 1.3.0
+## Dernière version : 1.4.0
+
+### Nouveautés
+- **Filtrage des Notifications**: Il est maintenant possible d'utiliser des paramètres au moment de l'abonnement à un type de notifications. 
+Dans ce cas seules les notifications en accord avec ces paramètres (filtre, compteur ...) seront envoyées au client.
+- **Gestion minimaliste des appels**: Il est maintenant possible de démarrer des appels avec un/plusieurs contacts ou dans une discussion et de s'abonner aux événements en lien avec cet appel (quelqu'un a décroché, quelqu'un est déjà en communication ...)
+
+### Ajouts
+- **Daemon**
+  - **Filtrage des Notifications**: ajout de paramètres à toutes les méthodes du service de notifications, notamment des filtres et un compteur. Ces paramètres sont tous optionnels et donc rétro compatible.
+  - **Gestion minimaliste des appels**: Ajout des services gRPC CallCommandService et CallNotificationService
+    - commandes: *CallStartDiscussionCall*, *CallStartCustomCall*
+    - notifications: *CallIncoming*, *CallRinging*, *CallAccepted*, *CallDeclined*, *CallBusy*, *CallEnded*.
+    - datatypes: *Call*
+
+- **CLI**: 
+  - ajout de la commande `call start` pour commencer un appel en utilisant la nouvelle API d'appel (la command `message voip` est maintenant dépréciée).
+  - ajout de l'option `-i` aux commandes `identity get` et `contact get` pour afficher l'identifiant en bytes.
+
+### Correctifs
+- **Daemon**
+  - Changement dans l'envoi de notifications
+    - *ContactNewNotification*: est maintenant envoyée la première fois qu'un contact est ajouté (indépendamment de son status one-to-one). La notification est envoyé après qu'un canal sécurisé a été établie et les capabilities du contact aient été téléchargées.
+    - *DiscussionNewNotification*: est toujours envoyée quand une discussion est crée ou qu'elle passe du status Locked à Unlocked (retour dans un groupe, passage en one to one d'un contact).
+    - *MessageReceivedNotification* et *AttachmentReceivedNotification*: sont maintenant envoyées en même temps, lorsque le message et toute les pièces jointes ont été correctement écrites en base de données. (résout les problèmes de listing des pièces jointes qui viennent d'arriver).
+    - Corrections diverses de notifications qui pouvaient être envoyées deux fois
+  - `datatypes.ReactionFilter`: changement de nom, le champs `reaction` devient `has_reaction`
+
+- **CLI**
+  - `identity get -l`: la commande renvoyait toujours le lien d'invitation de la première identité.
+
+- **Python Client**
+  - tools.SelfCleaningBot: les messages pouvaient être supprimés à tort lorsque la fonction *is_message_for_cleaning* était renseignée.
+
+## Version : 1.3.0
+
+### Nouveautés
 Il est maintenant possible d'envoyer des messages de partage de position en continu 🗺️ !
 
 ### Ajouts
