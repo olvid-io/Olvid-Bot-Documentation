@@ -146,6 +146,32 @@ Tous les utilisateurs Keycloak peuvent maintenant découvrir et interagir avec v
 Vous pouvez également gérer votre bot à partir de la console d'administration !
 :::
 
+## Configuration SSL
+
+:::{versionadded} 1.4.1
+:::
+
+### Configuration du Daemon
+Voici un exemple de configuration nginx pour mettre en place un daemon derrière un reverse-proxy HTTP.
+Vous pouvez ensuite installer un certificat letsencrypt à l'aide de la commande `certbot` afin d'utiliser le protocole HTTPS.
+
+::: {include} /_static/code/grpc-reverse-proxy.conf
+   :code: nginx
+:::
+
+Fichier téléchargeable ici:
+{download}`grpc-reverse-proxy.conf </_static/code/grpc-reverse-proxy.conf>`
+
+:::{important}
+Si le daemon utilise également du chiffrement [TLS](#configuration-tls) remplacer **grpc://** par **grpcs://** dans la directive gprc_pass.
+:::
+
+### Configuration du Client Python
+Pour se connecter à un daemon en utilisant https, il suffit d'ajouter le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_TARGET*.
+
+### Configuration du Client Javascript
+Pour se connecter à un daemon en utilisant https, il suffit d'ajouter le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_TARGET*.
+
 ## Configuration TLS
 
 :::{versionadded} 1.0.1
@@ -313,7 +339,7 @@ Nous allons utiliser trois variables d'environnement pour spécifier les chemins
 
 - `DAEMON_CERTIFICATE_FILE`
 - `DAEMON_KEY_FILE`
-- `DAEMON_CA_FILE`
+- `DAEMON_ROOT_CERTIFICATE_FILE`
 
 Créez un répertoire **credentials** et copiez-y les fichiers générés précédemment.
 

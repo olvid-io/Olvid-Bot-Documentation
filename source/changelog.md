@@ -10,7 +10,20 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 1.4.0
+## Dernière version : 1.4.1
+### Ajouts
+- **Daemon**
+  - il est maintenant possible de se connecter à un daemon en utilisant une connection https. La mise en place est documentée ici: [](daemon/tutorials.md#configuration-ssl).
+
+- **Python Client**
+  - **tools.AutoInvitationBot**: il est maintenant possible de choisir les types d'invitation à accepter (invitation de groupe, présentations, ...).
+
+### Correctifs
+- **Daemon**
+  - TLS: changement de la JVM utilisée dans l'image docker. La précédente plantait lors de la mise en place du chiffrement TLS.  
+  - Correctifs divers
+
+## Version : 1.4.0
 
 ### Nouveautés
 - **Filtrage des Notifications**: Il est maintenant possible d'utiliser des paramètres au moment de l'abonnement à un type de notifications. 

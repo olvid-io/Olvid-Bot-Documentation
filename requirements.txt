@@ -1,4 +1,4 @@
-olvid-bot>=1.3.0.post2
+olvid-bot>=1.4.1
 sphinx==7.4.7
 sphinx-click==5.1.0
 sphinx-panels==0.4.1
