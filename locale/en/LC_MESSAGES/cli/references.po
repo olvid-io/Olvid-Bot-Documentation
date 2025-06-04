@@ -58,9 +58,9 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: ../../olvid-cli advanced:1 attachment contact controlled:1 discussion get:1
-#: group identity invitation key message new photo read-only:1 reset:1 rm:1
-#: save:1 send:1 standard:1 storage
+#: ../../olvid-cli advanced:1 attachment call contact controlled:1 discussion
+#: get:1 group identity invitation key message new photo read-only:1 reset:1
+#: rm:1 save:1 send:1 standard:1 start:1 storage
 msgid "Optional argument(s)"
 msgstr ""
 
@@ -302,6 +302,22 @@ msgstr ""
 
 #: ../../olvid-cli message voip:1
 msgid "start a fake call in a discussion"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli call"
+msgstr ""
+
+#: ../../olvid-cli call:1
+msgid "Manage your calls"
+msgstr ""
+
+#: ../../olvid-cli call start:1
+msgid "start a new call in a discussion"
+msgstr ""
+
+#: ../../olvid-cli call start:1
+msgid "Use passed id as discussion id"
 msgstr ""
 
 #: ../../source/cli/references.md:4

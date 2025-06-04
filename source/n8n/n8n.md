@@ -1,4 +1,4 @@
-# 🤖 N8N
+# 🟥 N8N
 
 ```{toctree}
 :maxdepth: 2

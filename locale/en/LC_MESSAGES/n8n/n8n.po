@@ -26,8 +26,8 @@ msgstr "🛠️ Installation"
 
 # translated using ollama
 #: ../../source/n8n/n8n.md:1
-msgid "🤖 N8N"
-msgstr "🤖 N8N"
+msgid "🟥 N8N"
+msgstr "🟥 N8N"
 
 # translated using ollama
 #: ../../source/n8n/n8n.md:10
