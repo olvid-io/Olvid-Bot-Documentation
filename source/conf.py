@@ -52,7 +52,7 @@ html_theme_options = {
 	"show_toc_level": 2,
 	# hide some buttons
 	"use_download_button": False,
-	"use_fullscreen_button": False,
+	"use_fullscreen_button": True,
 	"show_prev_next": False,
 	###########
 	# repository settings
@@ -65,7 +65,6 @@ html_theme_options = {
 	"repository_branch": "main",
 	###########
 	# templates
-	"article_header_start": [],  # remove toggle primary sidebar button
 	# workaround: remove simple quote char added by readthedocs in env variables.
 	"announcement": os.getenv("BANNER_MESSAGE", "🚧 Documentation Under Construction! 🚧").removeprefix("'").removesuffix("'")
 }

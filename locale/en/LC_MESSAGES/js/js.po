@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 15:40+0100\n"
+"POT-Creation-Date: 2025-06-26 20:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,15 +17,103 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/js/js.md:3
+msgid "🛠️ Installation"
+msgstr "🛠️ Installation"
 
 # translated using ollama
 #: ../../source/js/js.md:1
+#, python-brace-format
 msgid "{fab}`js;js-logo-color` Client JavaScript"
 msgstr "{fab}`js;js-logo-color` JavaScript Client"
 
 # translated using ollama
-#: ../../source/js/js.md:3
-msgid "Le client JavaScript est encore en cours de développement. On le sortira le plus vite possible 😬."
-msgstr "The JavaScript client is still under development. We will release it as soon as possible 😬."
+#: ../../source/js/js.md:10
+msgid "Pré-requis"
+msgstr "Prerequisites"
+
+# translated using ollama
+#: ../../source/js/js.md:13
+#, python-brace-format
+msgid "Si vous n'avez pas installé de {term}`daemon`, merci de suivre la section [](/index)."
+msgstr "If you have not installed a {term}`daemon`, please follow the [](/index)."
+
+# translated using ollama
+#: ../../source/js/js.md:15
+#, python-brace-format
+msgid "Avant de commencer, vérifiez bien que vous avez une instance du daemon Olvid qui tourne, avec une {term}`identité` créée dessus, et une {term}`clé client` valide pour vous connecter en utilisant cette identité."
+msgstr "Before you start, make sure you have a running instance of the Olvid daemon with an {term}`identity` created on it, and a valid {term}`client key` to connect using with this identity."
+
+# translated using ollama
+#: ../../source/js/js.md:18
+msgid "Si vous souhaitez vérifier que votre daemon est fonctionnel et/ou récupérer une clé client perdue, utilisez la commande : `docker compose run --rm cli key get`"
+msgstr "If you wish to verify that your daemon is functional and/or retrieve a lost client key, use the following command: `docker compose run --rm cli key get`"
+
+# translated using ollama
+#: ../../source/js/js.md:21
+msgid "Nous avons développé un module Node.js en typescript pour facilement créer des programmes qui intéragissent avec un daemon Olvid."
+msgstr "We have developed a Node.js module in TypeScript to create simple programs interacting with an Olvid daemon."
+
+# translated using ollama
+#: ../../source/js/js.md:23
+msgid "Voici la procédure de mise en place d'un programme de démonstration qui se connecte à votre instance de daemon et implémente les bases d'un chat bot."
+msgstr "Here is the procedure for setting up a demonstration program that connects to your daemon instance and implements a basic chatbot."
+
+# translated using ollama
+#: ../../source/js/js.md:25
+msgid "Installation"
+msgstr "Installation"
+
+# translated using ollama
+#: ../../source/js/js.md:26
+msgid "Créons tout d'abord notre répertoire de travail."
+msgstr "Let's first create our working directory."
+
+# translated using ollama
+#: ../../source/js/js.md:33
+msgid "On peut maintenant mettre en place le projet."
+msgstr "We can now set up the project."
+
+# translated using ollama
+#: ../../source/js/js.md:42
+msgid "Configuration"
+msgstr "Configuration"
+
+# translated using ollama
+#: ../../source/js/js.md:43
+msgid "Pour se connecter à un daemon, votre programme a besoin de connaitre l'addresse du daemon et la clé client à utiliser. Pour cela, on utilise des variables d'environnement ou un fichier *.env*."
+msgstr "To connect to a daemon, your program needs to know the address of the daemon and the client key to use. For this purpose, environment variables or a *.env* file are used."
+
+# translated using ollama
+#: ../../source/js/js.md:46
+msgid "Remplacez la clé client par celle que vous avez créée lors de la mise en place de votre daemon, et l'adresse du daemon si nécessaire."
+msgstr "Replace the client key with the one you created when setting up your daemon, and the daemon address if necessary."
+
+# translated using ollama
+#: ../../source/js/js.md:52
+msgid "Premier programme"
+msgstr "First program"
+
+# translated using ollama
+#: ../../source/js/js.md:54
+msgid "Vous pouvez maintenant copier/coller le code suivant dans le fichier **src/main.ts**."
+msgstr "You can now copy and paste the following code into the file **src/main.ts**."
+
+# translated using ollama
+#: ../../source/js/js.md:56
+msgid "Le programme va afficher l'identité avec laquelle vous êtes connecté au daemon puis attendre que des messages arrivent. Pour le moment il ne répond qu'à la commande *!ping* mais vous pouvez modifier le code pour adapter son comportement."
+msgstr "The program will display the identity with which you are connected to the daemon and then wait for messages to arrive. At the moment, it only responds to the *!ping* command, but you can modify the code to change its behavior."
+
+# translated using ollama
+#: ../../source/js/js.md:87
+msgid "Lancez votre programme à l'aide la commande suivante. (`CTRL+C` pour l'interrompre)."
+msgstr "Run your program using the following command. (Use `CTRL+C` to interrupt it)."
+
+# translated using ollama
+#: ../../source/js/js.md:95
+msgid "Lorsque tout fonctionne vous pouvez utiliser ce programme comme base pour votre projet en le modifiant."
+msgstr "When everything works, you can use this program as a basis for your project by modifying it."
 
