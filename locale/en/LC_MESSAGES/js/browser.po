@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-03 13:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/js/browser.md:1
+msgid "🌐 Navigateur"
+msgstr "🌐 Web Browser"
+
+# translated using ollama
+#: ../../source/js/browser.md:3
+msgid "Nous avons développé une librairie écrite en typescript qui permet d'écrire des applications clientes d'un daemon Olvid dans une page web. L'utilisation de ce module est cependant limité, amène des contraintes et des enjeux en termes de sécurité."
+msgstr "We have developed a library written in TypeScript that allows for writing client applications of an Olvid daemon within a web page. However, using this module is limited and brings constraints and security challenges."
+
+# translated using ollama
+#: ../../source/js/browser.md:6
+msgid "Limitations et contraintes"
+msgstr "Limitations and constraints"
+
+# translated using ollama
+#: ../../source/js/browser.md:8
+msgid "Utilisation d'un proxy"
+msgstr "Proxy"
+
+# translated using ollama
+#: ../../source/js/browser.md:9
+msgid "Actuellement une page web ne peut parler directement à un daemon gRPC. Il faut utiliser un proxy. Celui-ci sera mis en place en même temps que notre daemon dans la procédure suivante."
+msgstr "Currently, a web page cannot directly communicate with a gRPC daemon. A proxy must be used. This will be set up at the same time as our daemon in the following procedure."
+
+# translated using ollama
+#: ../../source/js/browser.md:11
+msgid "Envoi de fichiers impossible"
+msgstr "Sending files is not possible"
+
+# translated using ollama
+#: ../../source/js/browser.md:12
+msgid "Les outils que nous utilisons pour développer cette librairie ne permettent pas d'utiliser des méthodes de type *client side streaming* et *bidirectional streaming* de gRPC. Il en résulte qu'il n'est pas possible d'envoyer des pièces jointes, ou de changer les photos de profil."
+msgstr "The tools we use to develop this library do not allow us to use *client side streaming* and *bidirectional streaming* methods of gRPC. As a result, it is not possible to send attachments or change profile pictures."
+
+# translated using ollama
+#: ../../source/js/browser.md:15
+msgid "Sécurité"
+msgstr "Security"
+
+# translated using ollama
+#: ../../source/js/browser.md:16
+msgid "Dans le cas oú votre page / application web doit être accessible sur Internet nous vous recommandons d'être très prudent lors de l'exposition de votre daemon. Nous vous recommandons de mettre en place à minima une authentification HTTP, et si possible une authentification par certificat."
+msgstr "In case your web page / application needs to be accessible on the Internet, we strongly recommend that you exercise caution when exposing your daemon. We recommend implementing at least an HTTP authentication, and if possible, a certificate-based authentication."
+
+# translated using ollama
+#: ../../source/js/browser.md:19
+msgid "Faites également attention à ne pas stocker en clair votre *clé client* dans votre page web. Si votre proxy gRPC est authentifié (idéalement par certificat), vous pouvez ajouter la clé client directement au niveau du reverse-proxy, en ajoutant un header **daemon-client-key**."
+msgstr "Also make sure not to store your *client key* in plaintext on your webpage. If your gRPC proxy is authenticated (ideally by certificate), you can add the client key directly at the reverse-proxy level, by adding a header **daemon-client-key**."
+
+# translated using ollama
+#: ../../source/js/browser.md:22
+msgid "Installation"
+msgstr "Installation"
+
+# translated using ollama
+#: ../../source/js/browser.md:23
+msgid "Daemon et proxy"
+msgstr "Daemon and Proxy"
+
+# translated using ollama
+#: ../../source/js/browser.md:24
+msgid "Voici un exemple d'infrastructure *docker compose* pour déployer un daemon et son proxy gRPC."
+msgstr "Here is an example of a Docker Compose infrastructure for deploying a daemon and its gRPC proxy."
+
+# translated using ollama
+#: ../../source/js/browser.md:54
+msgid "Vous pouvez ensuite lancer votre daemon et son proxy."
+msgstr "You can then start your daemon and its proxy."
+
+# translated using ollama
+#: ../../source/js/browser.md:59
+msgid "Pour l'initialisation et la mise en place de ce daemon je vous invite à regarder notre section [🚀 Quickstart](/index.md#identité-olvid)."
+msgstr "For the initialization and setup of this daemon, I invite you to check out our [🚀 Quickstart](/index.md#identity-olvid) section."
+
+# translated using ollama
+#: ../../source/js/browser.md:61
+msgid "Client"
+msgstr "Client"
+
+# translated using ollama
+#: ../../source/js/browser.md:62
+msgid "Une fois votre daemon en place vous pouvez commencer à écrire votre page / application web. Il existe de nombreux moyens et framework pour faire cela, nous ne pourrons pas tous les détailler, mais nous allons voir les bases."
+msgstr "Once your daemon is in place, you can begin writing your webpage/application. There are many ways and frameworks to do this, we cannot detail them all, but we will cover the basics."
+
+# translated using ollama
+#: ../../source/js/browser.md:65
+msgid "Pour notre exemple nous réaliserons une page web simple qui envoie un message dans toutes les discussions de votre bot. Pour cela nous utiliserons `npm` pour l'installation du module, et le framework`vite`."
+msgstr "For our example, we will create a simple web page that sends a message in all conversations of your bot. For this, we will use `npm` for installing the module and the `vite` framework."
+
+# translated using ollama
+#: ../../source/js/browser.md:68
+msgid "On commence par préparer notre projet et installer les dépendances."
+msgstr "We start by preparing our project and installing the dependencies."
+
+# translated using ollama
+#: ../../source/js/browser.md:75
+msgid "On peut ensuite créer deux fichiers qui contiennent le code de notre page de démonstration."
+msgstr "We can then create two files that contain the code for our demonstration page."
+
+# translated using ollama
+#: ../../source/js/browser.md:77
+msgid "`index.html`"
+msgstr "`index.html`"
+
+# translated using ollama
+#: ../../source/js/browser.md:93
+msgid "`index.js`"
+msgstr "`index.js`"
+
+# translated using ollama
+#: ../../source/js/browser.md:132
+msgid "Pensez à remplacer la valeur de votre clé client dans le fichier `index.js` au moment de l'instanciation de la classe *OlvidClient*, et à modifier la valeur de `serverUrl` dans le cas oú celle par défaut ne conviendrait pas à votre infrastructure."
+msgstr "Please remember to replace your client key value in the `index.js` file when instantiating the *OlvidClient* class, and modify the value of `serverUrl` if the default one does not suit your infrastructure."
+
+# translated using ollama
+#: ../../source/js/browser.md:134
+msgid "Pour tester votre programme il suffit de lancer la commande suivante et de vous rendre à l'adresse indiquée."
+msgstr "To test your program, simply run the following command and go to the indicated address."
+
+# translated using ollama
+#: ../../source/js/browser.md:140
+msgid "Reverse-proxy"
+msgstr "Reverse Proxy"
+
+# translated using ollama
+#: ../../source/js/browser.md:141
+msgid "Une fois votre daemon en place et votre application web developpé, vous pourriez avoir besoin de la déployer en dehors de votre machine locale.  Nous allons donc voir les différentes configurations possibles de nginx en reverse-proxy."
+msgstr "Once your daemon is running and your web application developed, you might need to deploy it outside of your local network. We will then look at the different possible configurations of nginx as a reverse proxy."
+
+# translated using ollama
+#: ../../source/js/browser.md:144
+msgid "Configuration basique"
+msgstr "Basic configuration"
+
+# translated using ollama
+#: ../../source/js/browser.md:145
+msgid "Voici un exemple de configuration basique sans authentification. Attention, n'exposez pas ce proxy sur un réseau en l'état."
+msgstr "This is a basic example of a configuration without authentication. Warning, do not expose this proxy on a network in its current state."
+
+# translated using ollama
+#: ../../source/js/browser.md:164
+msgid "Ajouter de l'authentification"
+msgstr "Add authentication"
+
+# translated using ollama
+#: ../../source/js/browser.md:165
+msgid "HTTP"
+msgstr "HTTP"
+
+# translated using ollama
+#: ../../source/js/browser.md:166
+msgid "Il faut tout d'abord créer un fichier de mot de passe. Vous pouvez suivre la [documentation officielle de nginx](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/#creating-a-password-file)."
+msgstr "First, you need to create a password file. You can follow the [official nginx documentation](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/#creating-a-password-file)."
+
+# translated using ollama
+#: ../../source/js/browser.md:168
+msgid "Il suffit ensuite d'activer l'authentification HTTP pour notre reverse-proxy."
+msgstr "You just need to activate HTTP authentication for our reverse proxy."
+
+# translated using ollama
+#: ../../source/js/browser.md:190
+msgid "Certificats"
+msgstr "Certificates"
+
+# translated using ollama
+#: ../../source/js/browser.md:191
+msgid "Nous vous recommandons de mettre plutôt en place une authentification par certificat, pour cela vous pouvez vous réferrer à la [documentation officielle nginx](https://docs.nginx.com/nginx-instance-manager/system-configuration/secure-traffic/)."
+msgstr "We recommend setting up a certificate-based authentication instead, for this you can refer to the [official nginx documentation](https://docs.nginx.com/nginx-instance-manager/system-configuration/secure-traffic/)."
+
+# translated using ollama
+#: ../../source/js/browser.md:193
+msgid "Clé Client"
+msgstr "Client Key"
+
+# translated using ollama
+#: ../../source/js/browser.md:195
+msgid "Cette section ne doit être suivie que dans le cas oú l'accès à votre reverse-proxy est correctement authentifié   (cf [](#ajouter-de-lauthentification)) ! Dans le cas contraire votre daemon pourrait devenir librement accessible sur internet."
+msgstr "This section should only be followed if access to your reverse proxy is properly authenticated  (see [Adding Authentication](#ajouter-de-lauthentification)) ! Otherwise, your daemon could become freely accessible on the internet."
+
+# translated using ollama
+#: ../../source/js/browser.md:200
+msgid "Pour éviter de mettre la clé client dans votre page / application web vous pouvez la spécifier au niveau de votre reverse-proxy."
+msgstr "To avoid including your client key in your webpage/application, you can specify it at the level in your reverse proxy configuration."
+
+# translated using ollama
+#: ../../source/js/browser.md:202
+msgid "Pour cela vous pouvez ajouter la ligne suivante (en la modifiant) au bloc `location` de votre configuration nginx."
+msgstr "For this, you can add the following line (after editing it) to the `location` block of your nginx configuration."
+
+# translated using ollama
+#: ../../source/js/browser.md:208
+msgid "⚠️ Cela permettra que n'importe quel client, authentifié sur le proxy, accéde au daemon avec la clé client spécifié dans la configuration nginx."
+msgstr "⚠️ This will allow any client, authenticated on the proxy, to access the daemon with the client key specified in the Nginx configuration."
+
+# translated using ollama
+#: ../../source/js/browser.md:210
+msgid "Filtrage API"
+msgstr "API Filtering"
+
+# translated using ollama
+#: ../../source/js/browser.md:211
+msgid "Il est possible de n'exposer que les points d'entrée API nécessaires à votre application en faisant du filtrage au niveau du reverse-proxy."
+msgstr "It is possible to expose only the necessary API entry points for your application by filtering at the reverse proxy level."
+
+# translated using ollama
+#: ../../source/js/browser.md:213
+msgid "Pour cela au lieu de spécifier un seul bloc `location` dans notre configuration nginx, on en ajoute un par point d'entrée à exposer, avec le même contenu, mais des *path* différents."
+msgstr "For this, instead of specifying a single `location` block in our nginx configuration, we add one per entry point to expose, with the same content, but different *paths*."
+
+# translated using ollama
+#: ../../source/js/browser.md:215
+msgid "Voici un exemple de configuration qui n'autorise que les commandes messageSend et discussionGet, et la notification onMessageReceived."
+msgstr "Here is an example of a configuration that only allows the messageSend and discussionGet commands, as well as the onMessageReceived notification."
+
+# translated using ollama
+#: ../../source/js/browser.md:217
+msgid "⚠️ Cette configuration ne met pas en place d'authentification, mais nous vous conseillons fortement de le faire cf [](#ajouter-de-lauthentification)."
+msgstr "⚠ This configuration does not set up authentication, but we strongly recommend that you do so, see [adding authentication](#adding-authentication)."
+
+# translated using ollama
+#: ../../source/js/browser.md:251
+msgid "Partager le domaine"
+msgstr "Share domain name"
+
+# translated using ollama
+#: ../../source/js/browser.md:252
+msgid "Pour des raisons de praticité ou pour éviter des soucis de *Cross-Origin* vous pouvez être amené à héberger votre proxy daemon et votre page/application web sur le même domaine. Voici un exemple de configuration nginx pour ce cas de figure."
+msgstr "For practical reasons or to avoid *Cross-Origin* issues, you may need to host your proxy daemon and your web page/application on the same domain. Here's an example of an nginx configuration for this scenario."
+
+# translated using ollama
+#: ../../source/js/browser.md:255
+msgid "Dans ce cas, pensez à changer l'URL de connection à votre daemon en ajoutant le suffixe `/proxy` dans votre application."
+msgstr "In this case, you must change the connection URL to your daemon by adding the `/proxy` suffix in your application."
+

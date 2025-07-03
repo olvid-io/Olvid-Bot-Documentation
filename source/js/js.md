@@ -5,6 +5,7 @@
 :hidden:
 
 🛠️ Installation<self>
+browser
 ```
 
 :::{admonition} Pré-requis
