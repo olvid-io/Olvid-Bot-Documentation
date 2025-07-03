@@ -10,7 +10,23 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 1.4.1
+## Dernière version : 1.5.0
+### Nouveautés
+Trois nouveaux modules sont maintenant officiellement supportés :
+- **[@olvid/bot-node](https://www.npmjs.com/package/@olvid/bot-node)**: un module npm écrit en typescript qui vous permet de développer des bots et des scripts en Typescript ou Node.js.
+  (cf: [](/js/js.md))
+- **[@olvid/bot-web](https://www.npmjs.com/package/@olvid/bot-web)**: une version arrangée du module précédent qui peut tourner dans un navigateur web pour créer des pages web ou des applications métier qui intéragissent avec Olvid.
+  (cf: [](/js/browser.md))
+- **[n8n-nodes-olvid](https://www.npmjs.com/package/n8n-nodes-olvid)**: le noeud Olvid est maintenant disponible dans n8n en tant que noeud communautaire. Intégrer facilement Olvid avec des services extérieurs dans des workflow no-code.
+  (cf: [](/n8n/n8n.md))
+
+### Ajouts
+- **Daemon**
+  - Ajout du service tool et la command ping. Il s'agit d'un point non authentifié qui permet juste de vérifier que la connection au daemon est possible.
+
+-----
+
+## Version: 1.4.1
 ### Ajouts
 - **Daemon**
   - il est maintenant possible de se connecter à un daemon en utilisant une connection https. La mise en place est documentée ici: [](daemon/tutorials.md#configuration-ssl).
