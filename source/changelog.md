@@ -24,6 +24,11 @@ Trois nouveaux modules sont maintenant officiellement supportés :
 - **Daemon**
   - Ajout du service tool et la command ping. Il s'agit d'un point non authentifié qui permet juste de vérifier que la connection au daemon est possible.
 
+### Correctifs
+- **Daemon**
+  - La notification MessageDeletedNotification était envoyée deux fois dans le cas oú un message était supprimé à distance
+  - Les accusés de lecture sont maintenant envoyé plus tôt pour essayer qu'ils soient envoyés même si un bot de nettoyage les supprime.
+
 -----
 
 ## Version: 1.4.1
