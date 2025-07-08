@@ -27,7 +27,8 @@ Trois nouveaux modules sont maintenant officiellement supportés :
 ### Correctifs
 - **Daemon**
   - La notification MessageDeletedNotification était envoyée deux fois dans le cas oú un message était supprimé à distance
-  - Les accusés de lecture sont maintenant envoyé plus tôt pour essayer qu'ils soient envoyés même si un bot de nettoyage les supprime.
+  - *MessageNotificationService*: il n'était pas possible de filtrer certaines notifications par *messageId* pour des messages entrants. (*messageBodyUpdated*, *messageReactionAdded*, ...) 
+  - *MessageCommandService*: Il n'est plus possible de répondre à un message d'une autre discussion 
 
 -----
 

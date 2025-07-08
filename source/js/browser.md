@@ -36,7 +36,7 @@ services:
   proxy:
     image: olvid/grpc-web-proxy
     ports:
-      - "5174:8080"
+      - "8080:8080"
     command: ["--backend_addr=daemon:50051", "--run_tls_server=false", "--server_http_max_read_timeout=0s", "--server_http_max_write_timeout=0s"]
     restart: unless-stopped
 
@@ -80,7 +80,7 @@ On peut ensuite cr√©er deux fichiers qui contiennent le code de notre page de d√
 <html>
 <head>
     <meta charset="UTF-8" />
-    <script type="module" src="./index.js"/>
+    <script type="module" src="./index.js"></script>
     <title>Olvid in a Web Page</title>
 </head>
 <body>
@@ -95,7 +95,7 @@ On peut ensuite cr√©er deux fichiers qui contiennent le code de notre page de d√
 import {OlvidClient} from "@olvid/bot-web";
 
 const client = new OlvidClient({
-    serverUrl: "http://localhost:5174",
+    serverUrl: "http://localhost:8080",
     clientKey: ""  // TODO set me !
 });
 
