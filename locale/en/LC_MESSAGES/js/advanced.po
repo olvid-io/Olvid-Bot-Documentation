@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-26 20:26+0200\n"
+"POT-Creation-Date: 2025-07-08 16:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -21,21 +21,247 @@ msgstr ""
 
 # translated using ollama
 #: ../../source/js/advanced.md:1
-msgid "👩‍💻 Développement avancé"
-msgstr "👩‍💻 Advanced Development"
+msgid "👩‍💻 Développement"
+msgstr "👩‍💻 Development"
 
 # translated using ollama
 #: ../../source/js/advanced.md:3
+msgid "Nous allons essayer d'expliquer le fonctionnement et l'utilisation de notre paquet npm **@olvid/bot-node**.  Idéalement, il vaut mieux la suivre étape par étape afin de suivre le cheminement, mais si vous vous sentez à l'aise, vous pouvez essayer d'accéder directement à la section qui vous intéresse."
+msgstr "We will try to explain the functioning and usage of our npm package **@olvid/bot-node**. Ideally, it is better to follow step by step in order to understand the progression, but if you feel comfortable, you can try to access directly the section that interests you."
+
+# translated using ollama
+#: ../../source/js/advanced.md:6
+msgid "À propos de ***@olvid/bot-web***"
+msgstr "About **@olvid/bot-web**"
+
+# translated using ollama
+#: ../../source/js/advanced.md:7
+msgid "Le paquet ***@olvid/bot-web*** est très similaire dans son usage mais possède certaines contraintes. (voir [](/js/browser.md))"
+msgstr "***@olvid/bot-web*** package is very similar but have specificity (see [](/js/browser.md))"
+
+# translated using ollama
+#: ../../source/js/advanced.md:8
+msgid "il n'utilise pas gRPC directement, il doit donc utiliser un proxy cf: [](/js/browser.md#daemon-et-proxy)"
+msgstr "It does not use gRPC directly, so it must use a proxy cf: [](/js/browser.md#daemon-and-proxy)"
+
+# translated using ollama
+#: ../../source/js/advanced.md:9
+msgid "il n'a pas accès à l'environnement, il faut donc passer l'url du serveur et la clé client lors de la création d'un *OlvidClient* ([ou la passer par d'autre moyens](/js/browser.md#clé-client))"
+msgstr "He does not have access to the environment, so it is necessary to pass the server url and client key when creating an *OlvidClient* ([or passing it by other means](/js/browser.md#client-key))."
+
+# translated using ollama
+#: ../../source/js/advanced.md:10
+msgid "l'envoi de fichier ne fonctionne pas donc certaines méthodes comme *sendMessageWithAttachments* ne sont pas implémentées."
+msgstr "file sending does not work, therefore methods like *sendMessageWithAttachments* are not implemented."
+
+# translated using ollama
+#: ../../source/js/advanced.md:12
+msgid "Vous pouvez facilement adapter le code présent dans cette page, mais il ne fonctionnera pas tel quel."
+msgstr "You can easily adapt the code present on this page, but it will not work as is."
+
+# translated using ollama
+#: ../../source/js/advanced.md:20
 msgid "Les bases"
 msgstr "The basics"
 
 # translated using ollama
-#: ../../source/js/advanced.md:4
+#: ../../source/js/advanced.md:22
 msgid "OlvidClient"
 msgstr "OlvidClient"
 
 # translated using ollama
-#: ../../source/js/advanced.md:6
-msgid "Réagir aux notifications"
-msgstr "React to Notifications"
+#: ../../source/js/advanced.md:23
+#, python-brace-format
+msgid "Pour interagir avec le {term}`daemon`, il vous faudra systématiquement créer une instance de la classe **OlvidClient**. Il peut s'agir de la classe d'origine ou d'une classe enfant."
+msgstr "To interact with the {term}`daemon`, you will need to systematically create an instance of the **OlvidClient** class. This can be the original class or a child class."
+
+# translated using ollama
+#: ../../source/js/advanced.md:26
+msgid "En node cette classe va automatiquement récupérer une clé client en utilisant l'environnement ou un fichier `.env`. (cf. [](/js/js.md#configuration))"
+msgstr "In this node, this class will automatically retrieve a client key using the environment or a `.env` file. (cf. [Configuration](/js/js.md#configuration))"
+
+# translated using ollama
+#: ../../source/js/advanced.md:28
+msgid "Grâce à ce client, on pourra notamment exécuter des commandes et réagir à des notifications."
+msgstr "Thanks to this client, we will be able to execute commands and react to notifications."
+
+# translated using ollama
+#: ../../source/js/advanced.md:30
+msgid "Voici à quoi ressemble un fichier *main.ts* de base contenant la création d'un client Olvid et l'exécution d'une commande (afficher l'identité courante). Cette structure est à utiliser dans chacun des exemples de code de cette page, il suffit de remplacer le contenu de la fonction `main` par le code de votre choix."
+msgstr "Here is what a basic *main.ts* file looks like containing the creation of an Olvid client and the execution of a command (displaying the current identity). This structure should be used in each of the code examples on this page, just replace the contents of the `main` function with your code."
+
+# translated using ollama
+#: ../../source/js/advanced.md:45
+msgid "Commande"
+msgstr "Command"
+
+# translated using ollama
+#: ../../source/js/advanced.md:46
+msgid "Toutes les méthodes gRPC de commandes exposées par le daemon sont facilement accessibles grâce à des méthodes de la classe **OlvidClient**. Par exemple, pour envoyer un message (méthode `MessageSend` en gRPC), on utilisera la méthode `messageSend` de notre instance d'OlvidClient."
+msgstr "All the gRPC command methods exposed by the daemon are easily accessible through methods of the **OlvidClient** class. For example, to send a message (the `MessageSend` method in gRPC), you would use the `messageSend` method of our OlvidClient instance."
+
+# translated using ollama
+#: ../../source/js/advanced.md:49
+msgid "Dans le cas où nous connaissons l'identifiant de la discussion dans laquelle poster, cela donnerait :"
+msgstr "In cases where we know the identifier of the discussion in which to post, it would look like this:"
+
+# translated using ollama
+#: ../../source/js/advanced.md:62
+msgid "Notification"
+msgstr "Notification"
+
+# translated using ollama
+#: ../../source/js/advanced.md:63
+msgid "La classe **OlvidClient** permet de facilement écouter les notifications émises par le daemon. Ces méthodes commencent toutes par le préfixe `on` et permettent d'ajouter une fonction de rappel qui sera executé à chaque nouvelle notification."
+msgstr "The **OlvidClient** class makes it easy to listen for notifications emitted by the daemon. These methods all start with the prefix `on` and allow you to add a callback function that will be executed for each new notification."
+
+# translated using ollama
+#: ../../source/js/advanced.md:66
+msgid "Par exemple, pour afficher dans le terminal quand un message est reçu et lorsqu'une réaction est ajoutée, on peut faire :"
+msgstr "For example, to display in the terminal when a message is received and when a reaction is added, you can do:"
+
+# translated using ollama
+#: ../../source/js/advanced.md:89
+msgid "Utilisation avancée"
+msgstr "Advanced Usage"
+
+# translated using ollama
+#: ../../source/js/advanced.md:90
+msgid "Filtrage des éléments"
+msgstr "Filtering of elements"
+
+# translated using ollama
+#: ../../source/js/advanced.md:91
+msgid "Pour accéder à des éléments précis de la base donnée on peut appliquer un filtre lors des commandes de type ***List***."
+msgstr "To access specific elements in the database, you can apply a filter during commands of the **List** type."
+
+# translated using ollama
+#: ../../source/js/advanced.md:93
+msgid "Voici des exemples de filtres possibles, les différents filtres sont définis dans la description protobuf de l'API du daemon ([ici](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1))."
+msgstr "Here are some examples of possible filters, the different filters are defined in the protobuf description of the daemon's API ([here](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1))."
+
+# translated using ollama
+#: ../../source/js/advanced.md:125
+msgid "Filtrage des notifications"
+msgstr "Notification Filtering"
+
+# translated using ollama
+#: ../../source/js/advanced.md:126
+msgid "Pour une implémentation plus fine de l'écoute des notifications, on peut utiliser un système de filtrage. Les différentes formes de filtrage dépendent du type de notification et sont définis dans les messages du type *MessageReceivedNotificationSubscription* (cf [description protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) de l'API du daemon)."
+msgstr "For a more granular implementation of listening to notifications, a filtering system can be used. The different forms of filtering depend on the type of notification and are defined in messages of the *MessageReceivedNotificationSubscription* type (cf [protobuf description](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) of the daemon's API)."
+
+# translated using ollama
+#: ../../source/js/advanced.md:129
+msgid "*count*"
+msgstr "*count*"
+
+# translated using ollama
+#: ../../source/js/advanced.md:130
+msgid "Toutes les notifications peuvent être programmées pour n'être reçu qu'un nombre défini de fois à l'aide de l'argument count."
+msgstr "All notifications can be scheduled to only be received a set number of times using the argument count."
+
+# translated using ollama
+#: ../../source/js/advanced.md:132
+msgid "*filter*"
+msgstr "*filter*"
+
+# translated using ollama
+#: ../../source/js/advanced.md:133
+msgid "La plupart des notifications possèdent un ou plusieurs attributs *filter*. Si un filtre est spécifié une notification doit correspondre à l'ensemble des critères renseignés pour être envoyée."
+msgstr "Most notifications have one or more *filter* attributes. If a filter is specified, a notification must meet all of the specified criteria in order to be sent."
+
+# translated using ollama
+#: ../../source/js/advanced.md:136
+msgid "Exemple"
+msgstr "Example"
+
+# translated using ollama
+#: ../../source/js/advanced.md:138
+msgid "Par exemple, on peut répondre uniquement au prochain message qui contient *hello* puis quitter le programme. Pour cela, on construit un objet de type ***MessageFilter*** qui n'acceptera que les messages contenant le terme \"hello\" (*bodySearch*), et on spécifie qu'on ne veut traiter qu'une seule notification (*count* à 1)."
+msgstr "MessageFilter"
+
+# translated using ollama
+#: ../../source/js/advanced.md:164
+msgid "Dans les filtres, les champs de type string se terminant en **search** sont interprétés par un moteur de regexp pour une plus grande polyvalence."
+msgstr "In filters, string fields ending in **search** are interpreted by a regexp engine."
+
+# translated using ollama
+#: ../../source/js/advanced.md:167
+msgid "Raccourcis"
+msgstr "Shortcuts"
+
+# translated using ollama
+#: ../../source/js/advanced.md:168
+msgid "Les classes de base du module ***datatypes*** (*Message*, *Discussion*, *Attachment*, ...) implémentent des méthodes de raccourci pour avoir un code plus condensé et agréable à écrire."
+msgstr "The base classes of the **datatypes** module (such as *Message*, *Discussion*, *Attachment*, ...) implement shortcut methods to have more concise and pleasant code to write."
+
+# translated using ollama
+#: ../../source/js/advanced.md:170
+msgid "Voici des exemples de méthodes, la liste exhaustive est définie dans le code source des classes, ou est accessible [ici](https://github.com/olvid-io/Olvid-Bot-Js-Client/tree/main/node/src/enhancer/olvid/daemon/datatypes/v1)."
+msgstr "Here are some examples of methods, the exhaustive list is defined in the source code of the classes, or can be accessed [here](https://github.com/olvid-io/Olvid-Bot-Js-Client/tree/main/node/src/enhancer/olvid/daemon/datatypes/v1)."
+
+# translated using ollama
+#: ../../source/js/advanced.md:207
+msgid "Décorateurs"
+msgstr "Decorators"
+
+# translated using ollama
+#: ../../source/js/advanced.md:208
+msgid "Nous avons mis en place des décorateurs qui permettent de facilement écouter des notifications et mettre en place des commandes pour ChatBot. Ils permettent d'écrire du code plus joli pour les programmes de type *Bot* qui tournent à l'infini."
+msgstr "We have implemented decorators that allow you to easily listen for notifications and set up commands for ChatBot. They allows you to write cleaner code for infinite-looping bot programs."
+
+# translated using ollama
+#: ../../source/js/advanced.md:211
+msgid "Pour les utiliser, il faut sous-classer la classe OlvidClient, comme dans l'exemple suivant."
+msgstr "To use them, you need to subclass the OlvidClient class, as shown in the following example."
+
+# translated using ollama
+#: ../../source/js/advanced.md:247
+msgid "Conseils et astuces"
+msgstr "Tips and Tricks"
+
+# translated using ollama
+#: ../../source/js/advanced.md:248
+msgid "AutoInvitationBot"
+msgstr "AutoInvitationBot"
+
+# translated using ollama
+#: ../../source/js/advanced.md:249
+msgid "Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues."
+msgstr "To make it easier to connect with a bot, it's possible to set up another bot that has already been written and will accept all received invitations."
+
+# translated using ollama
+#: ../../source/js/advanced.md:251
+msgid "Il suffit de créer un bot *AutoInvitationBot* du module `tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter."
+msgstr "Just create an *AutoInvitationBot* from the `tools` module. It will automatically register to receive new invitation notifications and accept them."
+
+# translated using ollama
+#: ../../source/js/advanced.md:254
+msgid "Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe.  Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code."
+msgstr "An *AutoInvitationBot* can only accept introductions and group invitations. It cannot automatically accept direct invitations with SAS code exchange."
+
+# translated using ollama
+#: ../../source/js/advanced.md:258
+msgid "Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond. Il est tout à fait possible de lancer plusieurs instances de bots en parallèle."
+msgstr "Here is a program that launches an instance of AutoInvitationBot in the background. It is perfectly possible to run multiple bot instances in parallel."
+
+# translated using ollama
+#: ../../source/js/advanced.md:280
+msgid "Divers"
+msgstr "Various"
+
+# translated using ollama
+#: ../../source/js/advanced.md:281
+msgid "Envoyer un message éphémère"
+msgstr "Send an ephemeral message"
+
+# translated using ollama
+#: ../../source/js/advanced.md:282
+msgid "Les points d'entrée API `messageSend` et `messageSendWithAttachments` permettent de spécifier l'éphéméralité du message à envoyer. On utilisera pour cela l'objet *datatypes.MessageEphemerality*."
+msgstr "The API endpoints `messageSend` and `messageSendWithAttachments` allow you to specify the ephemerality of the message to be sent. To do this, use the `datatypes.MessageEphemerality` object."
+
+# translated using ollama
+#: ../../source/js/advanced.md:285
+msgid "Voici un exemple en typescript. Il est possible de spécifier les paramètres `read_once`, `visibility_duration` et `existence_duration` de manière indépendante. Les durées d'existence et de visibilité sont en secondes."
+msgstr "Here is an example in typescript. It is possible to specify the parameters `read_once`, `visibility_duration` and `existence_duration` independently. The existence duration and visibility duration are in seconds."
 

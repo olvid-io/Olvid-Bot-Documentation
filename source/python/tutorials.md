@@ -8,8 +8,6 @@ Idéalement, il vaut mieux la suivre étape par étape afin de suivre le chemine
 :depth: 2
 :::
 
-%  todo add auto invitation bot
-
 ## Les bases
 
 ### OlvidClient
@@ -162,7 +160,7 @@ asyncio.get_event_loop().run_until_complete(main())
 
 #### Listener: expiration
 Par défaut, un listener écoute les notifications pour toujours, mais il est possible d'utiliser l'argument `count` pour n'écouter qu'un certain nombre de notifications.
-Dans ce cas, lorsque que *count* notifications ont été traitées, l'listener est arrêté.
+Dans ce cas, lorsque que *count* notifications ont été traitées, le listener est arrêté.
 
 Dans cet exemple, on répond au prochain message reçu puis le programme s'arrête.
 
@@ -192,8 +190,9 @@ asyncio.get_event_loop().run_until_complete(main())
 
 Les listeners permettent également de filtrer les notifications à traiter. 
 Pour cela, on peut ajouter une ou plusieurs fonctions de filtrage à notre listener.
+Les différentes formes de filtrage dépendent du type de notification et sont défini dans les messages du type *MessageReceivedNotificationSubscription* (cf [description protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) de l'API du daemon).
 
-Par exemple, on peut vouloir traiter uniquement les messages envoyés par un contact donné.
+Par exemple, on peut vouloir traiter uniquement les messages envoyés par un certain contact.
 
 ```python
 import asyncio
@@ -204,13 +203,10 @@ CONTACT_ID: int = 1
 async def reply_to_message(message: datatypes.Message):
     await message.reply(f"Reply to: {message.body}")
 
-def check_sender_id(message: datatypes.Message):
-    return message.sender_id == CONTACT_ID
-    
 async def main():
     client = OlvidClient()
     # only notifications matching check_sender_id will be handled 
-    listener = listeners.MessageReceivedListener(handler=reply_to_message, checkers=[check_sender_id])
+    listener = listeners.MessageReceivedListener(handler=reply_to_message, filter=datatypes.MessageFilter(sender_contact_id=CONTACT_ID))
     client.add_listener(listener)
     
     await client.wait_for_listeners_end()

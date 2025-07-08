@@ -5,6 +5,7 @@
 :hidden:
 
 🛠️ Installation<self>
+advanced
 browser
 ```
 
@@ -41,7 +42,7 @@ npm pkg set scripts.main="npx tsx src/main.ts"
 ```
 
 ## Configuration
-Pour se connecter à un daemon, votre programme a besoin de connaitre l'addresse du daemon et la clé client à utiliser.
+Pour se connecter à un daemon, votre programme a besoin de connaitre l'adresse du daemon et la clé client à utiliser.
 Pour cela, on utilise des variables d'environnement ou un fichier *.env*.
 
 Remplacez la clé client par celle que vous avez créée lors de la mise en place de votre daemon, et l'adresse du daemon si nécessaire.

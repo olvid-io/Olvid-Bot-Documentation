@@ -1,7 +1,7 @@
 # 🌐 Navigateur
 
-Nous avons développé une librairie écrite en typescript qui permet d'écrire des applications clientes d'un daemon Olvid dans une page web.
-L'utilisation de ce module est cependant limité, amène des contraintes et des enjeux en termes de sécurité.
+Nous avons développé une librairie écrite en typescript qui permet d'écrire des applications clientes d'un daemon Olvid dans une page web: **@olvid/bot-web**.
+L'utilisation de ce module est cependant limité et amène des contraintes ainsi que des enjeux en termes de sécurité.
 
 ## Limitations et contraintes
 
