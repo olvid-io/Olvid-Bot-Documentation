@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-03 13:25+0200\n"
+"POT-Creation-Date: 2025-07-08 16:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -26,8 +26,8 @@ msgstr "🌐 Web Browser"
 
 # translated using ollama
 #: ../../source/js/browser.md:3
-msgid "Nous avons développé une librairie écrite en typescript qui permet d'écrire des applications clientes d'un daemon Olvid dans une page web. L'utilisation de ce module est cependant limité, amène des contraintes et des enjeux en termes de sécurité."
-msgstr "We have developed a library written in TypeScript that allows for writing client applications of an Olvid daemon within a web page. However, using this module is limited and brings constraints and security challenges."
+msgid "Nous avons développé une librairie écrite en typescript qui permet d'écrire des applications clientes d'un daemon Olvid dans une page web: **@olvid/bot-web**. L'utilisation de ce module est cependant limité et amène des contraintes ainsi que des enjeux en termes de sécurité."
+msgstr "We have developed a library written in TypeScript that allows you to write client applications of an Olvid daemon on a web page: **@olvid/bot-web**. However, using this module is limited and brings constraints as well as security challenges."
 
 # translated using ollama
 #: ../../source/js/browser.md:6
