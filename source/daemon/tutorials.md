@@ -134,9 +134,6 @@ Démarrez la CLI et créez votre nouvelle identité en utilisant le lien de conf
 0 > identity kc new https://configuration.olvid.io/#AAAAAAAAA.....
 # client is automatically created
 identity creation > Here is your client key to connect to daemon with this identity: 00000000-0000-0000-0000-000000000000
-# save your client key and enter yes to finish process
-identity creation > Did you saved your client key ? (y/N)
-> yes
 ```
 :::
 
@@ -509,8 +506,8 @@ Pour cela, vous pouvez utiliser la variable d'environnement **JAVA_FLAGS**.
 ### Configuration proxy
 Pour permettre au daemon d'utiliser un proxy HTTP, il faut passer des paramètres spécifiques a la JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840)).
 
-Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000.
+Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000, avec usage d'un login et mot de passe. Cette configuration est adaptable à vos besoins. 
 
 ```shell
-JAVA_FLAGS=-Dhttps.proxyHost=proxy.example.com -Dhttps.proxyPort=8000
+JAVA_FLAGS=-Dhttps.proxyHost=proxy.example.com -Dhttps.proxyPort=8000 -Dhttp.proxyUser=username -Dhttp.proxyPassword=password
 ```

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 10:50+0100\n"
+"POT-Creation-Date: 2026-01-07 16:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -68,30 +68,31 @@ msgstr ""
 msgid "manage keycloak server for identities"
 msgstr ""
 
-#: ../../olvid-cli bind:1 identity kc
-msgid "attach your current identity to a keycloak server using a keycloak bot configuration link"
-msgstr ""
-
-#: ../../olvid-cli accept:1 add:1 admin:1 attachment bind:1 contact decline:1
-#: disband:1 discussion end:1 get:1 group identity introduce:1 invitation kc
-#: key key:1 leave:1 location message new:1 permissions:1 photo react:1 sas:1
-#: save:1 send:1 set:1 settings start:1 storage unset:1 update:1 voip:1
-msgid "Required argument"
-msgstr ""
-
 #: ../../olvid-cli identity kc new:1
 msgid "create a new identity using a keycloak bot configuration link"
 msgstr ""
 
-#: ../../olvid-cli identity kc unbind:1
-msgid "remove keycloak server for current identity"
+#: ../../olvid-cli accept:1 admin:1 attachment backup contact daemon:1
+#: decline:1 disband:1 discussion end:1 get:1 group identity introduce:1
+#: invitation kc key leave:1 location message new:1 permissions:1 photo
+#: profile:1 react:1 restore sas:1 save:1 send:1 set:1 settings start:1 storage
+#: unset:1 update:1
+msgid "Required argument"
 msgstr ""
 
 #: ../../olvid-cli identity key:1
+msgid "manage current identity Olvid api key"
+msgstr ""
+
+#: ../../olvid-cli get:1 identity key
+msgid "get api key for current identity"
+msgstr ""
+
+#: ../../olvid-cli identity key set:1
 msgid "set api key for current identity"
 msgstr ""
 
-#: ../../olvid-cli identity key:1
+#: ../../olvid-cli identity key set:1
 msgid "Use a configuration link instead of a raw api key"
 msgstr ""
 
@@ -119,10 +120,6 @@ msgstr ""
 msgid "custom server url (optional)"
 msgstr ""
 
-#: ../../olvid-cli identity new:1
-msgid "custom api key (optional)"
-msgstr ""
-
 #: ../../olvid-cli identity photo:1
 msgid "manage current identity photo"
 msgstr ""
@@ -135,11 +132,11 @@ msgstr ""
 msgid "save all identity photos"
 msgstr ""
 
-#: ../../olvid-cli contact group identity photo save:1
+#: ../../olvid-cli contact discussion group identity photo save:1
 msgid "directory to store downloaded photo (default: ./photos)"
 msgstr ""
 
-#: ../../olvid-cli contact group identity photo save:1
+#: ../../olvid-cli contact discussion group identity photo save:1
 msgid "specify file name to use (ignored if saving more than one image)"
 msgstr ""
 
@@ -153,6 +150,10 @@ msgstr ""
 
 #: ../../olvid-cli identity rm:1
 msgid "delete identities"
+msgstr ""
+
+#: ../../olvid-cli identity rm:1
+msgid "delete identity on all your devices and notify contacts"
 msgstr ""
 
 #: ../../olvid-cli identity update:1
@@ -216,12 +217,16 @@ msgstr ""
 msgid "delete locked discussion"
 msgstr ""
 
-#: ../../olvid-cli discussion settings:1
-msgid "manage discussion settings"
+#: ../../olvid-cli discussion photo:1
+msgid "get discussion photos"
 msgstr ""
 
-#: ../../olvid-cli discussion get:1 settings
-msgid "get a"
+#: ../../olvid-cli discussion photo save:1
+msgid "Save discussion photos to local files."
+msgstr ""
+
+#: ../../olvid-cli discussion photo save:1
+msgid "Save all discussion photos"
 msgstr ""
 
 #: ../../source/cli/references.md:4
@@ -298,10 +303,6 @@ msgstr ""
 
 #: ../../olvid-cli message update:1
 msgid "Update a message text body"
-msgstr ""
-
-#: ../../olvid-cli message voip:1
-msgid "start a fake call in a discussion"
 msgstr ""
 
 #: ../../source/cli/references.md:4
@@ -410,22 +411,6 @@ msgstr ""
 
 #: ../../olvid-cli contact invite:1
 msgid "invite contacts in one to one discussion"
-msgstr ""
-
-#: ../../olvid-cli contact kc:1
-msgid "manage keycloak contacts"
-msgstr ""
-
-#: ../../olvid-cli add:1 contact kc
-msgid "add a keycloak user as a contact"
-msgstr ""
-
-#: ../../olvid-cli contact get:1 kc
-msgid "list keycloak users"
-msgstr ""
-
-#: ../../olvid-cli contact get:1 kc
-msgid "last list user timestamp"
 msgstr ""
 
 #: ../../olvid-cli contact new:1
@@ -584,24 +569,20 @@ msgstr ""
 msgid "advanced commands to debug and manage daemon"
 msgstr ""
 
-#: ../../olvid-cli auto-accept:1 tools
-msgid "accept every pending and incoming invitations"
-msgstr ""
-
-#: ../../olvid-cli auto-accept:1 auto-invite:1 tools
-msgid "Specify a specific identity to use"
-msgstr ""
-
-#: ../../olvid-cli auto-accept:1 tools
-msgid "Accept every invitation for every identity"
-msgstr ""
-
 #: ../../olvid-cli auto-invite:1 tools
 msgid "add every other identity on this daemon as a contact"
 msgstr ""
 
 #: ../../olvid-cli auto-invite:1 tools
+msgid "Specify a specific identity to use"
+msgstr ""
+
+#: ../../olvid-cli auto-invite:1 tools
 msgid "Present every identity in the server to each other (else it only present current identity to others)"
+msgstr ""
+
+#: ../../olvid-cli daemon-version:1 tools
+msgid "show daemon version"
 msgstr ""
 
 #: ../../olvid-cli listen:1 tools
@@ -617,6 +598,90 @@ msgid "Hide notification content"
 msgstr ""
 
 #: ../../olvid-cli listen:1 tools
+msgid "Show notification full content"
+msgstr ""
+
+#: ../../olvid-cli listen:1 tools
 msgid "Coma separated list of notifications to listen (upper snake case: MESSAGE_SEND,MESSAGE_RECEIVED)"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli backup"
+msgstr ""
+
+#: ../../olvid-cli backup:1
+msgid "manage your daemon backups"
+msgstr ""
+
+#: ../../olvid-cli backup get:1
+msgid "list backed up profiles and available snapshots"
+msgstr ""
+
+#: ../../olvid-cli backup key:1
+msgid "manage your daemon backup key"
+msgstr ""
+
+#: ../../olvid-cli backup get:1 key
+msgid "get current backup key (this key is common for every identity on this daemon)"
+msgstr ""
+
+#: ../../olvid-cli backup key renew:1
+msgid "revoke current backup key and generate a new one"
+msgstr ""
+
+#: ../../olvid-cli backup now:1
+msgid "start a full backup now"
+msgstr ""
+
+#: ../../olvid-cli backup restore:1
+msgid "restore an entire backup on a new daemon or only specific parts"
+msgstr ""
+
+#: ../../olvid-cli admin:1 backup restore
+msgid "restore admin backup only (admin client keys and storage)"
+msgstr ""
+
+#: ../../olvid-cli backup daemon:1 restore
+msgid "restore an entire backup on blank daemon instance"
+msgstr ""
+
+#: ../../olvid-cli backup daemon:1 restore
+msgid "Specify this new daemon instance name"
+msgstr ""
+
+#: ../../olvid-cli backup profile:1 restore
+msgid "restore a specific profile snapshot"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli settings"
+msgstr ""
+
+#: ../../olvid-cli settings:1
+msgid "manage your settings"
+msgstr ""
+
+#: ../../olvid-cli discussion:1 settings
+msgid "manage discussion settings"
+msgstr ""
+
+#: ../../olvid-cli identity:1 settings
+msgid "manage identity settings"
+msgstr ""
+
+#: ../../olvid-cli identity message set:1 settings
+msgid "Set a maximum number of messages to keep in each discussion"
+msgstr ""
+
+#: ../../olvid-cli identity message set:1 settings
+msgid "Set a maximum number of messages to keep globally"
+msgstr ""
+
+#: ../../olvid-cli identity message set:1 settings
+msgid "Set a duration after messages are deleted (in seconds)"
+msgstr ""
+
+#: ../../olvid-cli identity message set:1 settings
+msgid "Delete message in locked discussions"
 msgstr ""
 

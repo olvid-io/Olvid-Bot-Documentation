@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-02 08:29+0200\n"
+"POT-Creation-Date: 2026-01-07 16:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -211,126 +211,126 @@ msgid "Démarrez la CLI et créez votre nouvelle identité en utilisant le lien 
 msgstr "Start the CLI and create your new identity using the configuration link. It will automatically generate a client key to be passed to your future bot."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:144
+#: ../../source/daemon/tutorials.md:141
 msgid "Tous les utilisateurs Keycloak peuvent maintenant découvrir et interagir avec votre bot via leur bouton \"Annuaire\" dans l'application Olvid."
 msgstr "All Keycloak users can now discover and interact with your bot via their \"Directory\" button in the Olvid application."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:146
+#: ../../source/daemon/tutorials.md:143
 msgid "Vous pouvez également gérer votre bot à partir de la console d'administration !"
 msgstr "You can also manage your bot from the administration console!"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:149
+#: ../../source/daemon/tutorials.md:146
 msgid "Configuration SSL"
 msgstr "SSL Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:154 ../../source/daemon/tutorials.md:189
-#: ../../source/daemon/tutorials.md:336
+#: ../../source/daemon/tutorials.md:151 ../../source/daemon/tutorials.md:186
+#: ../../source/daemon/tutorials.md:333
 msgid "Configuration du Daemon"
 msgstr "Daemon configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:155
+#: ../../source/daemon/tutorials.md:152
 msgid "Voici un exemple de configuration nginx pour mettre en place un daemon derrière un reverse-proxy HTTP. Vous pouvez ensuite installer un certificat letsencrypt à l'aide de la commande `certbot` afin d'utiliser le protocole HTTPS."
 msgstr "Here is an example of nginx configuration to set up a daemon behind an HTTP reverse proxy. You can then install a letsencrypt certificate using the `certbot` command in order to use the HTTPS protocol."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:162
+#: ../../source/daemon/tutorials.md:159
 #, python-brace-format
 msgid "Fichier téléchargeable ici: {download}`grpc-reverse-proxy.conf </_static/code/grpc-reverse-proxy.conf>`"
 msgstr "Download configuration file here: {download}`grpc-reverse-proxy.conf </_static/code/grpc-reverse-proxy.conf>`"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:166
+#: ../../source/daemon/tutorials.md:163
 msgid "Si le daemon utilise également du chiffrement [TLS](#configuration-tls) remplacer **grpc://** par **grpcs://** dans la directive gprc_pass."
 msgstr "If the daemon also uses [TLS](#configuration-tls) encryption, replace **grpc://** with **grpcs://** in the gprc_pass directive."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:169 ../../source/daemon/tutorials.md:228
-#: ../../source/daemon/tutorials.md:366
+#: ../../source/daemon/tutorials.md:166 ../../source/daemon/tutorials.md:225
+#: ../../source/daemon/tutorials.md:363
 msgid "Configuration du Client Python"
 msgstr "Python Client configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:170 ../../source/daemon/tutorials.md:173
+#: ../../source/daemon/tutorials.md:167 ../../source/daemon/tutorials.md:170
 msgid "Pour se connecter à un daemon en utilisant https, il suffit d'ajouter le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_TARGET*."
 msgstr "To connect to a daemon using https, simply add the prefix `https://` in the value of the environment variable *OLVID_DAEMON_TARGET*."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:172 ../../source/daemon/tutorials.md:276
-#: ../../source/daemon/tutorials.md:416
+#: ../../source/daemon/tutorials.md:169 ../../source/daemon/tutorials.md:273
+#: ../../source/daemon/tutorials.md:413
 msgid "Configuration du Client Javascript"
 msgstr "JavaScript client configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:175
+#: ../../source/daemon/tutorials.md:172
 msgid "Configuration TLS"
 msgstr "TLS Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:180
+#: ../../source/daemon/tutorials.md:177
 msgid "Nativement gRPC prend en charge le chiffrement TLS. Nous pouvons distinguer deux modes :"
 msgstr "Natively, gRPC supports TLS encryption. We can distinguish two modes:"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:182
+#: ../../source/daemon/tutorials.md:179
 msgid "[](#authentification-serveur) : Le daemon utilise son propre certificat auto-signé et sa clé privée associée.  Les clients utiliseront ce certificat pour chiffrer les communications avec le daemon."
 msgstr "[](#authentification-serveur): The daemon uses its own self-signed certificate and associated private key. Clients will use this certificate to encrypt communications with the daemon."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:184
+#: ../../source/daemon/tutorials.md:181
 msgid "[](#authentification-client) : On crée notre propre Autorité de Certification (CA).  On peut ainsi créer un certificat et une clé privée pour le daemon et un par client. Ainsi, les clients peuvent chiffrer les communications avec le daemon, et le daemon peut vérifier que les clients ont été autorisés à se connecter."
 msgstr "[](#authentification-client) : We create our own Certificate Authority (CA). This allows us to create a certificate and private key for the daemon and one per client. Thus, clients can encrypt communications with the daemon, and the daemon can verify that clients have been authorized to connect."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:188
+#: ../../source/daemon/tutorials.md:185
 msgid "Authentification serveur"
 msgstr "Server Authentication"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:191
+#: ../../source/daemon/tutorials.md:188
 msgid "Dans un premier temps, on génère le certificat et la cle privée du serveur à l'aide de la commande `openssl`."
 msgstr "In a first step, we generate the server certificate and private key using the `openssl` command."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:194
+#: ../../source/daemon/tutorials.md:191
 msgid "Remplacez `localhost` par le nom d'hôte de votre daemon. Le nom d'hôte est l'adresse IP ou le nom de domaine que les clients utiliseront pour établir une connexion avec le daemon."
 msgstr "Replace `localhost` with your daemon's hostname. The hostname is the IP address or domain name that clients will use to establish a connection with the daemon."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:202
+#: ../../source/daemon/tutorials.md:199
 msgid "Si vous utilisez Docker, créez un répertoire *credentials* contenant le certificat et la clé générés précédemment. Ajoutez ce répertoire en tant que volume en lecture seule et utilisez une variable d'environnement pour activer l'authentification TLS simple dans le daemon."
 msgstr "If you are using Docker, create a *credentials* directory containing the previously generated certificate and key. Add this directory as a read-only volume and use an environment variable to enable simple TLS authentication in the daemon."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:205
+#: ../../source/daemon/tutorials.md:202
 msgid "On utilise les variables d'environnement suivantes pour configurer le daemon :"
 msgstr "We use the following environment variables to configure the daemon:"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:206 ../../source/daemon/tutorials.md:340
+#: ../../source/daemon/tutorials.md:203 ../../source/daemon/tutorials.md:337
 msgid "`DAEMON_CERTIFICATE_FILE`"
 msgstr "`DAEMON_CERTIFICATE_FILE`"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:207 ../../source/daemon/tutorials.md:341
+#: ../../source/daemon/tutorials.md:204 ../../source/daemon/tutorials.md:338
 msgid "`DAEMON_KEY_FILE`"
 msgstr "`DAEMON_KEY_FILE`"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:209
+#: ../../source/daemon/tutorials.md:206
 msgid "Ce qui nous donne un fichier `docker-compose.yaml` similaire à celui-ci."
 msgstr "This gives us a `docker-compose.yaml` file similar to this one."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:230
+#: ../../source/daemon/tutorials.md:227
 msgid "Pour assurer le chiffrement des communications, votre bot a besoin du certificat du daemon."
 msgstr "To ensure communications encryption, your bot needs daemon's certificate."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:232
+#: ../../source/daemon/tutorials.md:229
 msgid "On suppose que vous avez un répertoire **credentials** contenant le fichier `server.pem` généré précédemment. Il existe plusieurs moyens de faire en sorte que votre *client* utilise ce fichier pour authentifier le daemon et chiffrer le traffic."
 msgstr "It is assumed that you have a **credentials** directory containing the `server.pem` file generated previously. There are several ways to make your *client* use this file to authenticate the daemon and encrypt traffic."
 
@@ -341,12 +341,12 @@ msgid "{material-regular}`settings;1em` Environnement"
 msgstr "{material-regular}`settings;1em` Environnement"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:238
+#: ../../source/daemon/tutorials.md:235
 msgid "Configurez la variable d'environnement dans votre fichier *docker-compose.yaml*, dans votre commande docker ou votre environnement local."
 msgstr "Configure the environment variable in your *docker-compose.yaml* file, in your docker command or your local environment."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:244
+#: ../../source/daemon/tutorials.md:241
 msgid "N'importe quel sous-classe de la classe **OlvidClient** chargera automatiquement la configuration TLS."
 msgstr "Any subclass of the **OlvidClient** class will automatically load the TLS configuration."
 
@@ -357,7 +357,7 @@ msgid "{material-regular}`settings;1em` Fichiers"
 msgstr "{material-regular}`settings;1em` Files"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:248
+#: ../../source/daemon/tutorials.md:245
 msgid "Au démarrage les sous-classes de la classe **OlvidClient** cherchent des noms de fichiers spécifiques pour charger les configurations TLS. Si un fichier *.server.pem* existe il sera automatiquement utilisé pour configurer le TLS."
 msgstr "At startup, subclasses of the **OlvidClient** class look for specific filenames to load TLS configurations. If a file named \\*.server.pem exists, it will be automatically used to configure TLS."
 
@@ -368,255 +368,255 @@ msgid "{material-regular}`settings;1em` Code"
 msgstr "{material-regular}`settings;1em` Code"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:257
+#: ../../source/daemon/tutorials.md:254
 msgid "Vous pouvez également configurer manuellement les certificats et clés à utiliser dans votre code Python."
 msgstr "You can also manually configure the certificates and keys to be used in your Python code."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:259
+#: ../../source/daemon/tutorials.md:256
 msgid "Dans ce cas, il faut créer un object **GrpcSimpleTlsConfiguration** et le passer en tant que *tls_configuration* à la creation du client."
 msgstr "In this case, you need to create a **GrpcSimpleTlsConfiguration** object and pass it as *tls\\_configuration* when creating the client."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:277 ../../source/daemon/tutorials.md:417
+#: ../../source/daemon/tutorials.md:274 ../../source/daemon/tutorials.md:414
 msgid "Actuellement notre implementation de [](/js/js) ne supporte pas nativement l'utilisation du protocole TLS."
 msgstr "Currently, our implementation of [JavaScript](/js/js) does not natively support the use of the TLS protocol."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:279
+#: ../../source/daemon/tutorials.md:276
 msgid "Authentification client"
 msgstr "Client authentication"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:281
+#: ../../source/daemon/tutorials.md:278
 msgid "Génération des certificats"
 msgstr "Generation of Certificates"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:283
+#: ../../source/daemon/tutorials.md:280
 msgid "Nous vous recommandons de créer un répertoire **credentials** et d'exécuter les commandes suivantes depuis celui-ci."
 msgstr "We recommend that you create a **credentials** directory and run the following commands from it."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:286
+#: ../../source/daemon/tutorials.md:283
 msgid "Pour générer le CA et le certificat serveur, vous aurez besoin de ces deux modèles openssl. Téléchargez-les ou créez-les dans votre répertoire de travail actuel."
 msgstr "To generate the CA and server certificate, you will need these two OpenSSL templates. Download them or create them in your current working directory."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:289
+#: ../../source/daemon/tutorials.md:286
 #, python-brace-format
 msgid "{download}`ca-openssl.cnf </_static/code/ca-openssl.cnf>`"
 msgstr "{download}`ca-openssl.cnf </_static/code/ca-openssl.cnf>`"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:290
+#: ../../source/daemon/tutorials.md:287
 #, python-brace-format
 msgid "{download}`server-openssl.cnf </_static/code/server-openssl.cnf>`"
 msgstr "{download}`server-openssl.cnf </_static/code/server-openssl.cnf>`"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:295
+#: ../../source/daemon/tutorials.md:292
 msgid "**Génération de notre autorité de certification locale (CA)**"
 msgstr "**Generation of our local Certificate Authority (CA)**"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:305
+#: ../../source/daemon/tutorials.md:302
 msgid "**Génération du certificat et la clé serveur.**"
 msgstr "**Generation of the server certificate and key.**"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:307
+#: ../../source/daemon/tutorials.md:304
 #, python-brace-format
 msgid "{material-outlined}`warning;1em;sd-text-danger` Remplacez `localhost` par le nom d'hôte de votre daemon. Le nom d'hôte correspond à l'adresse IP ou le nom de domaine que les clients utiliseront pour établir une connexion avec le daemon."
 msgstr "{material-outlined}`warning;1em;sd-text-danger` Replace `localhost` with your daemon's hostname. The hostname corresponds to the IP address or domain name that clients will use to establish a connection with the daemon."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:322
+#: ../../source/daemon/tutorials.md:319
 msgid "**Génération d'un certificat et d'une clé privée pour un client**"
 msgstr "Generation of a certificate and private key for a client"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:337
+#: ../../source/daemon/tutorials.md:334
 msgid "Le daemon aura besoin de son certificat, de sa clé privée et du CA pour vérifier que les clients sont autorisés à se connecter. Nous allons utiliser trois variables d'environnement pour spécifier les chemins des fichiers :"
 msgstr "The daemon will need its certificate, its private key and the CA to verify that clients are authorized to connect. We will use three environment variables to specify the paths of the corresponding files:"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:342
+#: ../../source/daemon/tutorials.md:339
 msgid "`DAEMON_ROOT_CERTIFICATE_FILE`"
 msgstr "DAEMON_ROOT_CERTIFICATE_FILE"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:344
+#: ../../source/daemon/tutorials.md:341
 msgid "Créez un répertoire **credentials** et copiez-y les fichiers générés précédemment."
 msgstr "Create a directory called **credentials** and copy the previously generated files into it."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:346
+#: ../../source/daemon/tutorials.md:343
 msgid "Ce qui nous donne un fichier *docker-compose.yaml* similaire à celui-ci."
 msgstr "This gives us a *docker-compose.yaml* file similar to this one."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:368
+#: ../../source/daemon/tutorials.md:365
 msgid "Pour configurer le client, vous pouvez utiliser l'une des méthodes suivantes :"
 msgstr "To configure the client, you can use one of the following methods:"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:372
+#: ../../source/daemon/tutorials.md:369
 msgid "Configurez les variables d’environnement suivantes dans votre fichier docker-compose.yaml, dans votre commande docker ou votre environnement local."
 msgstr "Configure the following environment variables in your docker-compose.yaml file, in your docker command or your local environment."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:378
+#: ../../source/daemon/tutorials.md:375
 msgid "N’importe quel sous-classe de la classe OlvidClient chargera automatiquement la configuration TLS."
 msgstr "Any subclass of the OlvidClient class will automatically load the TLS configuration."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:382
+#: ../../source/daemon/tutorials.md:379
 msgid "Au démarrage les sous-classes de la classe **OlvidClient** cherchent des noms de fichiers spécifiques pour charger les configurations TLS. Si elle trouve les trois fichiers suivants, ils seront automatiquement utilisé pour configurer le TLS."
 msgstr "At startup, the subclasses of the **OlvidClient** class look for specific filenames to load TLS configurations. If it finds the following three files, they will be automatically used to configure TLS."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:384
+#: ../../source/daemon/tutorials.md:381
 msgid "*.ca.pem*"
 msgstr "*.ca.pem*"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:385
+#: ../../source/daemon/tutorials.md:382
 msgid "*.client.pem*"
 msgstr "*.client.pem*"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:386
+#: ../../source/daemon/tutorials.md:383
 msgid "*.client.key*"
 msgstr "*.client.key*"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:396
+#: ../../source/daemon/tutorials.md:393
 msgid "Vous pouvez également configurer manuellement les certificats et clés à utiliser dans votre code Python. Dans ce cas il faut créer un objet **GrpcMutualAuthTlsConfiguration** et le passer en tant que paramètre **tls_configuration** au constructeur d'une sous-classe **OlvidClient**."
 msgstr "You can also manually configure the certificates and keys to be used in your Python code. In this case, you need to create a **GrpcMutualAuthTlsConfiguration** object and pass it as the **tls_configuration** parameter to the constructor of an **OlvidClient** subclass."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:419
+#: ../../source/daemon/tutorials.md:416
 msgid "Sauvegardes"
 msgstr "Backups"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:420
+#: ../../source/daemon/tutorials.md:417
 msgid "Dans vos projets, le daemon est un élément central, c'est là où toutes les données sont stockées. En réalité, les données que vous manipulez (identités, messages, ...) ne constituent qu'une petite partie des données gérées par le daemon. Ce sont ces donnée invisibles qui doivent être sauvegardées, car elles permettent un échange sécurisé avec les contacts du bot."
 msgstr "In your projects, the daemon is a central element, it's where all data is stored. In reality, the data you manipulate (identities, messages, ...) only make up a small part of the data managed by the daemon. It's these invisible data that must be backed up, as they allow for secure exchange with bot contacts."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:424
+#: ../../source/daemon/tutorials.md:421
 msgid "Avertissements"
 msgstr "Warnings"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:427
+#: ../../source/daemon/tutorials.md:424
 msgid "Veuillez examiner attentivement les recommandations et avertissements suivants avant de continuer."
 msgstr "Please carefully review the following recommendations and warnings before proceeding."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:429
+#: ../../source/daemon/tutorials.md:426
 msgid "Les sauvegardes contiennent des données sensibles équivalentes au répertoire de données du daemon. Il est impératif de les manipuler avec la même rigueur et niveau de sécurité."
 msgstr "Backups contain sensitive data equivalent to the daemon's data directory. It is imperative to handle them with the same rigor and level of security."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:431
+#: ../../source/daemon/tutorials.md:428
 msgid "Les sauvegardes mentionnées ici sont des sauvegardes Olvid, qui ne contiennent pas de messages ou de pièces jointes Ces sauvegardes vous permettent de restaurer votre carnet d'adresses, vos groupes et votre stockage, mais pas le contenu des discussions (messages et pièces jointes)."
 msgstr "The backups mentioned here are Olvid backups, which do not contain messages or attachments. These backups allow you to restore your address book, groups, and storage, but not the content of discussions (messages and attachments)."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:433
+#: ../../source/daemon/tutorials.md:430
 msgid "Les sauvegardes sont... des sauvegardes.  Vous devrez les conserver dans un endroit sûr pour pouvoir les réutiliser si nécessaire. Dans un environnement de production, la meilleure pratique minimale serait de stocker les sauvegardes sur un disque séparé du reste du système."
 msgstr "Backups are... backups. You will need to keep them in a safe place so you can reuse them if necessary. In a production environment, the minimum best practice would be to store backups on a disk separate from the rest of the system."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:436
+#: ../../source/daemon/tutorials.md:433
 msgid "La restauration d'une sauvegarde sur un autre daemon et l'exécution simultanée des deux entraînera un comportement imprévisible."
 msgstr "Restoring a backup on another daemon and running the original simultaneously will result in unpredictable behavior."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:439
+#: ../../source/daemon/tutorials.md:436
 msgid "Configuration des sauvegardes automatiques"
 msgstr "Automatic Backups Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:441
+#: ../../source/daemon/tutorials.md:438
 msgid "Le daemon crée automatiquement et périodiquement des sauvegardes. Les sauvegardes sont créées chaque fois que cela est nécessaire (votre bot a ajouté un contact, rejoint ou quitte un groupe, ...). Ces sauvegardes sont stockées dans le répertoire */daemon/backups*."
 msgstr "The daemon automatically and periodically creates backups. Backups are created whenever necessary (your bot has added a contact, joined or left a group, ...). These backups are stored in the directory */daemon/backups*."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:445
+#: ../../source/daemon/tutorials.md:442
 msgid "Si vous souhaitez conserver ces sauvegardes, vous devez monter le répertoire */daemon/backups* en tant que volume. Voici un exemple de fichier *docker-compose.yaml*."
 msgstr "If you wish to keep these backups, you must mount the directory */daemon/backups* as a volume. Here's an example of a *docker-compose.yaml* file."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:458
+#: ../../source/daemon/tutorials.md:455
 msgid "Voici un exemple de l'arborescence du répertoire `/daemon/backups`."
 msgstr "Here is an example of the directory tree structure for `/daemon/backups`."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:468
+#: ../../source/daemon/tutorials.md:465
 msgid "Chaque sous-répertoire (0001, 0002) doit contenir son propre fichier `backup_seed.txt`, sinon le daemon incrémentera et créera automatiquement un nouveau répertoire. Ce fichier de graine est nécessaire pour déchiffrer et restaurer les sauvegardes. Sans lui votre sauvegarde est inutilisable."
 msgstr "Each subdirectory (0001, 0002) must contain its own `backup_seed.txt` file, otherwise the daemon will increment and automatically create a new directory. This seed file is necessary to decrypt and restore backups. Without it, your backup is unusable."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:472
+#: ../../source/daemon/tutorials.md:469
 msgid "À l'intérieur d'un sous-répertoire, le daemon crée et stocke jusqu'à 10 fichiers de sauvegarde avant de supprimer les plus anciens. Toutes ces sauvegardes sont nommées en utilisant l'horodatage de leur création."
 msgstr "Within a subdirectory, the daemon creates and stores up to 10 backup files before deleting the oldest ones. All these backups are named using their creation timestamps."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:475
+#: ../../source/daemon/tutorials.md:472
 msgid "Restauration d'une sauvegarde"
 msgstr "Restoring a backup"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:478
+#: ../../source/daemon/tutorials.md:475
 msgid "La restauration d'une sauvegarde n'est pas une action triviale et ne doit être effectuée qu'en dernier recours. Vous perdrez tous vos messages et pièces jointes stockés dans le daemon au cours de ce processus. Seuls les éléments enregistrés à l'aide de l'API de stockage seront encore disponibles."
 msgstr "Restoring a backup is not a trivial action and should only be done as a last resort. You will lose all your messages and attachments stored in the daemon during this process. Only items saved using the storage API will still be available."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:483
+#: ../../source/daemon/tutorials.md:480
 msgid "Pour restaurer une sauvegarde, vous devez exécuter la commande suivante depuis le repertoire qui contient votre daemon habituellement. Vérifiez bien que le répertoire data est vide avant de lancer une restauration, autrement, elle échouera."
 msgstr "To restore a backup, you must run the following command from the directory that usually contains your daemon. Make sure the data directory is empty before starting a restoration, otherwise it will fail."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:494
+#: ../../source/daemon/tutorials.md:491
 msgid "Lorsque vous voyez le message `💾 BackupRestoration: Finished backup restoration process`, vous pouvez arrêter le daemon (CTRL + C) et le démarrer normalement avec la commande `docker-compose up -d`."
 msgstr "When you see the message `💾 BackupRestoration: Finished backup restoration process`, you can stop the daemon (CTRL + C) and start it normally with the command `docker-compose up -d`."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:496
+#: ../../source/daemon/tutorials.md:493
 msgid "Vous pouvez maintenant vérifier à l'aide de la CLI que la restauration a été réussie. Vous devriez trouver vos identités, contacts, groupes, clés client, ..."
 msgstr "You can now verify using the CLI that the restoration was successful. You should find your identities, contacts, groups, client keys, ..."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:499
+#: ../../source/daemon/tutorials.md:496
 msgid "Les éléments stockés à l'aide de l'API de stockage du démon sont également accessibles par les moyens habituels."
 msgstr "Elements stored using the storage API of the daemon are also accessible through usual means."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:502
+#: ../../source/daemon/tutorials.md:499
 msgid "Configuration JVM"
 msgstr "JVM Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:506
+#: ../../source/daemon/tutorials.md:503
 msgid "Il est possible de passer des options arbitraires à la JVM qui fait tourner votre daemon. Pour cela, vous pouvez utiliser la variable d'environnement **JAVA_FLAGS**."
 msgstr "It is possible to pass arbitrary options to the JVM running your daemon. To do this, you can use the environment variable **JAVA\\_FLAGS**."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:509
+#: ../../source/daemon/tutorials.md:506
 msgid "Configuration proxy"
 msgstr "Proxy Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:510
+#: ../../source/daemon/tutorials.md:507
 msgid "Pour permettre au daemon d'utiliser un proxy HTTP, il faut passer des paramètres spécifiques a la JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840))."
 msgstr "To allow the daemon to use an HTTP proxy, specific parameters must be passed to the JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840))."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:512
-msgid "Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000."
-msgstr "Here is a possible example of configuration to use a fictional proxy accessible as *proxy.example.com* on port 8000."
+#: ../../source/daemon/tutorials.md:509
+msgid "Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000, avec usage d'un login et mot de passe. Cette configuration est adaptable à vos besoins."
+msgstr "Here is a possible example of configuration to use a fictional proxy accessible as *proxy.example.com* on port 8000, using a login and password. This configuration can be adapted to your needs."
 

@@ -34,11 +34,23 @@
 	:prog: olvid-cli group
 	:nested: full
 
+.. click:: olvid.cli.handler.kc_tree:kc_tree
+	:prog: olvid-cli kc
+	:nested: full
+
 .. click:: olvid.cli.handler.storage_tree:storage_tree
 	:prog: olvid-cli storage
 	:nested: full
 
 .. click:: olvid.cli.handler.tools_tree:tools_tree
 	:prog: olvid-cli tools
+	:nested: full
+
+.. click:: olvid.cli.handler.backup_tree:backup_tree
+	:prog: olvid-cli backup
+	:nested: full
+
+.. click:: olvid.cli.handler.settings_tree:settings_tree
+	:prog: olvid-cli settings
 	:nested: full
 

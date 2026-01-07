@@ -38,28 +38,15 @@ brew install python3
 :::
 
 ## Configuration
-Pour vous connecter au daemon, votre programme a besoin d'une clé client. 
-Cette clé peut être passée à votre programme en utilisant soit une variable d'environnement, soit un fichier *.env*.
+Pour se connecter à un daemon, votre programme a besoin de connaitre l'adresse du daemon et la clé client à utiliser.
+Pour cela, on utilise des variables d'environnement ou un fichier *.env*.
 
-:::{dropdown} {octicon}`command-palette;1em` Fichier *.env*
-  :open:
-
-Créez un fichier *.env* en utilisant la commande suivante. 
-Rappelez-vous que ce fichier doit être dans le répertoire courant lorsque vous lancez votre programme.
+Remplacez la clé client par celle que vous avez créée lors de la mise en place de votre daemon, et l'adresse du daemon si nécessaire.
 
 ```shell
-echo OLVID_CLIENT_KEY=ReplaceWithYourClientKey > .env
+echo OLVID_DAEMON_TARGET=localhost:50051 > .env
+echo OLVID_CLIENT_KEY=ReplaceWithYourClientKey >> .env
 ```
-:::
-
-:::{dropdown} {octicon}`command-palette;1em` Variable d'environnement
-Il est également possible d'exporter votre clé en tant que variable d'environnement. 
-Dans ce cas, il faut penser à l'exporter à chaque nouvelle session shell.
-
-```shell
-export OLVID_CLIENT_KEY=ReplaceWithYourClientKey
-```
-:::
 
 ## Premier programme
 Afin de vérifier que tout fonctionne correctement, vous pouvez copier/coller ce programme dans un fichier `main.py`.
