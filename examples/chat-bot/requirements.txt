@@ -1,1 +1,1 @@
-olvid-bot>=1.0.0
+olvid-bot>=2.0.0

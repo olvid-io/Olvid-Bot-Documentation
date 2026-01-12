@@ -17,6 +17,7 @@ cli/cli
 daemon/daemon
 glossary
 changelog
+migrations/migration_1_2
 ```
 
 # 🚀 Quickstart

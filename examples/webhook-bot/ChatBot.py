@@ -1,11 +1,11 @@
 import secrets
 
-from olvid import OlvidBot, datatypes
+from olvid import OlvidClient, datatypes
 
 from NonceHolder import NonceHolder
 
 
-class ChatBot(OlvidBot):
+class ChatBot(OlvidClient):
 	def __init__(self, nonce_holder: NonceHolder):
 		super().__init__()
 		self.nonce_holder: NonceHolder = nonce_holder
@@ -13,7 +13,7 @@ class ChatBot(OlvidBot):
 	####
 	# notification handlers
 	####
-	@OlvidBot.command(regexp_filter="^!help")
+	@OlvidClient.command(regexp_filter="^!help")
 	async def help_cmd(self, message: datatypes.Message):
 		await self.post_help_message(discussion_id=message.discussion_id)
 

@@ -1,9 +1,7 @@
 import base64
-import os
 
-import aiohttp
 from aiohttp import web
-from olvid import datatypes
+from olvid import datatypes, OlvidClient
 
 from logger import logger
 from NonceHolder import NonceHolder
@@ -12,7 +10,7 @@ from NonceHolder import NonceHolder
 #####
 # TODO edit this function to change how webhook payload is handled
 #####
-async def handler(discussion: datatypes.Discussion, json_payload: dict) -> web.Response:
+async def handler(client: OlvidClient, discussion: datatypes.Discussion, json_payload: dict) -> web.Response:
 	try:
 		# check payload validity
 		if not json_payload.get("text") and not json_payload.get("attachments"):
@@ -31,7 +29,7 @@ async def handler(discussion: datatypes.Discussion, json_payload: dict) -> web.R
 					logger.error(f"Invalid attachment received: {attachment}")
 
 		message_body = json_payload.get("text")
-		await discussion.post_message(body=message_body, attachments_filename_with_payload=filenames_with_attachments)
+		await discussion.post_message(client=client, body=message_body, attachments_filename_with_payload=filenames_with_attachments)
 		return web.Response(status=200)
 	except Exception as e:
 		logger.exception("Cannot parse json payload")
@@ -50,5 +48,5 @@ def get_webhook_handler(nonce_holder: NonceHolder):
 		# retrieve associated discussion
 		discussion: datatypes.Discussion = await nonce_holder.discussion_get(discussion_id=discussion_id)
 
-		return await handler(discussion=discussion, json_payload=json_payload)
+		return await handler(client=nonce_holder, discussion=discussion, json_payload=json_payload)
 	return webhook_handler

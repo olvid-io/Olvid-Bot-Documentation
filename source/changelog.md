@@ -10,7 +10,42 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 1.5.0
+## Dernière version : 2.0.0
+:::{danger}
+La version 2.0.0 des bots amène beaucoup de nouveautés et d'améliorations mais n'est ***pas rétrocompatible***. 
+Nous vous invitons à suivre notre [**guide de migration**](/migrations/migration_1_2) pour mettre à jour le code existant, ***AVANT*** de mettre à jour vos dépendances.
+:::
+
+### Nouveautés
+- Implémentation des nouvelles sauvegardes Olvid en prévision de l'implémentation du multi-device dans le daemon. Pour mettre en place les sauvegardes c'est [ici](/daemon/tutorials.md#sauvegardes).
+- Ajout de paramètres pour configurer le comportement de chaque identité sur un daemon (acceptation automatique des invitations, nettoyage des messages, ajout automatique des nouveaux membres de keycloak).
+- Implémentation d'un nouveau mécanisme d'authentification des bots dans Keycloak qui résout les problèmes de déconnexion.
+- Nombreuses améliorations de performance et de stabilité. 
+- En phase de test: ajout de la possibilité de piloter le plugin Olvid dans keycloak depuis un bot. (contactez nous pour plus d'informations: [bot@olvid.io](mailto:bot@olvid.io)).
+
+### Ajouts
+- **Daemon**
+  - **SettingsCommandService**: nouveau service pour changer les paramètres associés à une discussion ou une identité.
+  - **BackupAdminService**: nouveau service pour afficher et/ou restaurer des [sauvegardes](/daemon/tutorials.md#sauvegardes).
+  - **DiscussionCommandService**: ajout de la commande *DiscussionDownloadPhoto*
+  - **ToolCommandService**: nouvelles commandes pour vérifier la version du daemon et tester la validité des clés client.
+  - **KeycloakCommandService**: ajout de la commande *KeycloakGetApiCredentials* pour piloter au plugin Olvid dans keycloak (en phase de tests).
+- **Python Client**
+  - Améliorations et simplification du framework, voir le [guide de migration](/migrations/migration_1_2).
+
+### Suppressions
+- **Python Client**
+  - **tools**: suppression des classes AutoInvitationBot, DiscussionRetentionPolicyBot, SelfCleaningBot, KeycloakAutoInvitationBot. Utilisez la nouvelle [APi settings]() du daemon à la place.
+
+### Correctifs
+- **Daemon**
+  - **MessageCommandService**: le champ reaction est maintenant optionnel pour la commande *MessageReact* afin de supprimer une réaction existante.
+  - Ajout d'un service de nettoyage des bases de données pour nettoyer les pages vides (VACUUM).
+
+- **CLI**
+  - Amélioration de la fiabilité des commandes interactives (identity new, contact new, invitation send).
+
+## Version : 1.5.0
 ### Nouveautés
 Trois nouveaux modules sont maintenant officiellement supportés :
 - **[@olvid/bot-node](https://www.npmjs.com/package/@olvid/bot-node)**: un module npm écrit en typescript qui vous permet de développer des bots et des scripts en Typescript ou Node.js.

@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from olvid import OlvidClient, tools
+from olvid import OlvidClient, datatypes
 
 from ChatBot import ChatBot
 from NonceHolder import NonceHolder
@@ -23,28 +23,25 @@ async def main():
 	server: WebhookServer = WebhookServer(webhook_handler=get_webhook_handler(nonce_holder), server_host=WEBHOOK_SERVER_HOST, server_port=WEBHOOK_SERVER_PORT)
 	await server.background_start()
 
-	bots: list[OlvidClient] = [
-		# create chatbot
-		ChatBot(nonce_holder=nonce_holder),
-		# create other pre-written bots
-		# create a bot to automatically accept every invitation you receive
-		tools.AutoInvitationBot(),
-		# create a bot to delete every message when they have been handled.
-		# This avoids database to grow indefinitely and improve performances
-		tools.SelfCleaningBot()
-	]
+	# create chatbot
+	chat_bot: ChatBot = ChatBot(nonce_holder=nonce_holder)
+
+	# configure daemon to auto accept invitations and delete message history
+	settings: datatypes.IdentitySettings = await chat_bot.settings_identity_get()
+	settings.invitation = datatypes.IdentitySettings.AutoAcceptInvitation(True, True, True, True)
+	settings.message_retention = datatypes.IdentitySettings.MessageRetention(discussion_count=5, clean_locked_discussions=True)
+	settings.keycloak = datatypes.IdentitySettings.Keycloak(auto_invite_new_members=True)
+	await chat_bot.settings_identity_set(settings)
 
 	logger.info("Ready to start !")
 	logger.info(f"Webhook public url: {WEBHOOK_PUBLIC_URL}")
 
 	# wait forever
-	for bot in bots:
-		await bot.wait_for_listeners_end()
+	await chat_bot.wait_for_listeners_end()
 
 	# clean before exit
 	await server.background_stop()
-	for bot in bots:
-		await bot.stop()
+	await chat_bot.stop()
 
 if __name__ == '__main__':
 	asyncio.run(main())

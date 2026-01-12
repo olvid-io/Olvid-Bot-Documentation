@@ -37,6 +37,7 @@ When you retrieved the webhook URL associated with this discussion you can send 
 
 Here are soms examples using the `curl` command. (replace ${WEBHOOK_URL} with the correct url).
 ```shell
+export WEBHOOK_URL=http://localhost:8080/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 # send a basic text message
 curl -X POST --data '{"text":"Hello Olvid !"}' ${WEBHOOK_URL}
 # send a text message with an attachment
