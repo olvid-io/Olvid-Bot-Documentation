@@ -8,7 +8,7 @@ Il est important de la lire intégralement pour mettre à jour vos configuration
 d'une version 1.X.X vers une version 2.0.0 ou supérieure.
 :::
 
-### Client Python
+### Python
 #### Configuration
 Les variables d'environnement de configuration des différents clients ont été normalisées. 
 Cela peut induire des changements dans les variables d'environnement des fichiers *docker-compose.yaml*, ou dans les fichiers *.env*.
@@ -55,7 +55,8 @@ message: datatypes.Message
 discussion: datatypes.Discussion
 
 message.reply(body="Reply") => message.reply(client, body="Reply")
-discussion.post(body="new message") => discussion.post(client, body="new message")
+message.react("💚") => message.reply(client, "💚")
+discussion.post_message(body="new message") => discussion.post_message(client, body="new message")
 ```
 
 #### tools
@@ -63,16 +64,20 @@ Suppression des classes *tools.AutoInvitationBot*, tools.DiscussionRetentionPoli
 Il suffit maintenant de paramètrer le daemon avec l'API **SettingsCommandService**.
 
 ```
+tools.AutoInvitationBot()
+tools.SelfCleaningBot()
+tools.DiscussionRetentionPolicyBot(discussion_retention_number=10, global_retention_number=100, retention_delay_s=86_400)
+tools.KeycloakAutoInvitationBot()
+
+=>
+
 # retrieve original settings
 settings: datatypes.IdentitySettings = await client.settings_identity_get()
 
 # update settings depending on your needs
-tools.AutoInvitationBot()
-  => settings.invitation = datatypes.IdentitySettings.AutoAcceptInvitation(True, True, True, True)
-tools.SelfCleaningBot() OR tools.DiscussionRetentionPolicyBot(discussion_retention_number=10, global_retention_number=100, retention_delay_s=86_400)
-  => settings.message_retention = datatypes.IdentitySettings.MessageRetention(discussion_count=5, global_count=100, existence_duration=86_400, clean_locked_discussions=True)
-tools.KeycloakAutoInvitationBot()
-  => settings.keycloak = datatypes.IdentitySettings.Keycloak(auto_invite_new_members=True) 
+settings.invitation = datatypes.IdentitySettings.AutoAcceptInvitation(True, True, True, True)
+settings.message_retention = datatypes.IdentitySettings.MessageRetention(discussion_count=5, global_count=100, existence_duration=86_400, clean_locked_discussions=True)
+settings.keycloak = datatypes.IdentitySettings.Keycloak(auto_invite_new_members=True) 
 
 # set new settings
 await client.settings_identity_set(settings)
