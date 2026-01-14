@@ -1,5 +1,4 @@
-### AUTO-TRANSLATION IGNORE
-
+# ## AUTO-TRANSLATION IGNORE
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Olvid
 # This file is distributed under the same license as the Olvid Bots package.
@@ -10,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 16:40+0100\n"
+"POT-Creation-Date: 2026-01-14 13:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -683,5 +682,9 @@ msgstr ""
 
 #: ../../olvid-cli identity message set:1 settings
 msgid "Delete message in locked discussions"
+msgstr ""
+
+#: ../../olvid-cli identity message set:1 settings
+msgid "Do not delete non-finished location sharing messages"
 msgstr ""
 

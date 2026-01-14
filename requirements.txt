@@ -1,4 +1,4 @@
-olvid-bot>=2.0.0a1
+olvid-bot>=2.0.0a3
 ollama==0.6.1
 sphinx==7.4.7
 sphinx-click==5.1.0
