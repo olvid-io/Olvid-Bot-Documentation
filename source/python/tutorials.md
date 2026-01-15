@@ -71,23 +71,20 @@ asyncio.set_event_loop(asyncio.new_event_loop())
 asyncio.get_event_loop().run_until_complete(main())
 ```
 
-## Conseils et astuces
-### AutoInvitationBot
-Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues.
-
-Il suffit de créer un bot *AutoInvitationBot* du module `olvid.tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter.
+## Bonnes pratiques
+### Invitations
+Pour rendre plus facile la mise en relation avec un bot, il est possible d'activer l'acceptation automatique des invitations. Il suffit de modifier la configuration du daemon à l'aide la méthode *enable_auto_invitation* d'un client Olvid.
 
 :::{note}
-Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe. 
-Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code. 
+L'acceptation automatique des invitations ne peut accepter que les présentations, les invitations de groupe et les invitations à une discussion personnelle. 
+Il ne peut pas aller au bout des invitations directes avec échange de SAS code. 
 :::
 
-Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond.
-Il est tout à fait possible de lancer plusieurs bots en parallèle.
+Voici un programme qui lance un bot après avoir configuré l'acceptation automatique des invitations.
 
 ```python
 import asyncio
-from olvid import OlvidClient, datatypes, tools
+from olvid import OlvidClient, datatypes
 
 class Bot(OlvidClient):
     async def on_message_received(self, message: datatypes.Message):
@@ -95,11 +92,64 @@ class Bot(OlvidClient):
 
 async def main():
     bot = Bot()
-    tools.AutoInvitationBot()
+    await bot.enable_auto_invitation(accept_all=True)
     await bot.run_forever()
 
 asyncio.set_event_loop(asyncio.new_event_loop())
 asyncio.get_event_loop().run_until_complete(main())
+```
+
+### Nettoyage des messages
+Pour des raisons de performances et de confidentialité nous vous conseillons d'activer le nettoyage automatique des messages.
+
+Il est possible de limiter le nombre de messages conservés globalement ou par discussion (*global_count* et *discussion_count*) et/ou de définir l'âge maximal d'un message (*existence_duration*).
+
+Nous vous conseillons aussi d'activer la suppression des messages dans les discussions fermées.
+
+```python
+from olvid import OlvidClient
+
+async def main():
+  client = OlvidClient()
+  # keep messages up to 7 days,
+  # with a maximum of 100 messages and 20 messages per discussions,
+  # and deletes messages when a discussion is locked
+  await client.set_message_retention_policy(global_count=100, discussion_count=20,
+        existence_duration=60*60*24*7, clean_locked_discussions=True)
+```
+
+### Docker
+Une fois votre programme prêt à être déployé nous vous conseillons d'utiliser notre image docker *[python-runner](https://hub.docker.com/r/olvid/bot-python-runner)* pour l'exécuter.
+Elle est configurée pour installer les dépendances de votre projet et exécuter votre programme.
+
+Veillez simplement à ce que votre projet respecte l'arborescence suivante. Vous pouvez ajouter autant de fichiers que nécessaire, tant que votre programme se lance à partir d'un fichier `main.py`. 
+```
+| app
+|  | main.py
+|  | requirements.txt
+```
+
+Il vous suffit ensuite d'ajouter un service à votre fichier `docker-compose.yaml`.
+```yaml
+  bot:
+    image: olvid/bot-python-runner:{{docker_version}}
+    # pass client key to use in environment
+    environment:
+      - OLVID_CLIENT_KEY=  # TODO set value
+    # mount your bot code as a volume
+    volumes:
+      - ./app:/app
+    depends_on:
+      - daemon
+```
+
+Et enfin de lancer votre bot.
+
+```shell
+# start bot
+docker compose up -d bot
+# show bot logs
+docker compose logs -f bot
 ```
 
 ## Divers
@@ -215,8 +265,6 @@ asyncio.set_event_loop(asyncio.new_event_loop())
 asyncio.get_event_loop().run_until_complete(main())
 ```
 
-#### Listener avancé
-
 Il est tout à fait possible de combiner le filtrage et l'expiration. 
 
 Ici, on l'utilise pour effectuer une action et quitter le programme quand le message que l'on vient d'envoyer arrive sur le téléphone de son destinataire.
@@ -227,11 +275,6 @@ from olvid import OlvidClient, datatypes, listeners
 
 DISCUSSION_ID: int = 1
 
-def get_message_id_checker(message_id: datatypes.MessageId):
-  def checker(message: datatypes.Message):
-      return message.sender_id == message_id
-  return checker
-
 async def main():
     client = OlvidClient()
     
@@ -241,7 +284,7 @@ async def main():
     # add a listener to do something when message had been delivered, then program will exit 
     listener = listeners.MessageDeliveredListener(
         handler=lambda m: print("Message delivered"),
-        checkers=[get_message_id_checker(message.id)],
+        message_ids=[message.id],
         count=1
     )
     client.add_listener(listener)

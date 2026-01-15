@@ -21,7 +21,7 @@ OLVID_DAEMON_TARGET=http://daemon:50051
 ```
 
 - Les fichiers *.client_key* et *.admin_client_key* ne sont plus supportés, à la place utilisez un fichier *.env* avec les variables suivantes:
-```dotenv
+```{code-block} dotenv
 OLVID_CLIENT_KEY=00000000-0000-0000-0000-000000000000
 OLVID_ADMIN_CLIENT_KEY=00000000-0000-0000-0000-000000000000
 ```
@@ -111,12 +111,57 @@ Pour en savoir plus sur l'usage des listeners rendez-vous ici: [](/python/tutori
 La version de la librairie protobuf a été mise à jour dans les paquet npm *@olvid/bot-node* et *@olvid/bot-web*. Cela a un impact sur l'usage du code généré.
 Pour en savoir plus sur ces changements rendez-vous sur le guide de migration de [bufbuild](https://blog.bufbuild.ru/protobuf-es-v2/). 
 
+#### Protobuf
 Le changement principal concerne la création de nouveaux objets protobuf
-```node
+```{code-block} node
 import {OlvidClient} from "@olvid/bot-node";
 import {create} from "@bufbuild/protobuf";
 
 let messageFilter = create(datatypes.MessageFilterSchema, {location: datatypes.MessageFilter_Location.HAVE})}
+```
+
+#### tools
+Suppression des classes *tools.AutoInvitationBot*, tools.DiscussionRetentionPolicyBot, tools.SelfCleaningBot et tools.KeycloakAutoInvitationBot.  
+La classe OlvidClient embarque maintenant des méthodes permettant de paramètrer le comportement du daemon. 
+
+```python
+from olvid import OlvidClient
+
+async def main():
+    client = OlvidClient()
+    # replace tools.AutoInvitationBot()
+    # accept any invitation
+    await client.enable_auto_invitation(accept_all=True)
+
+    # replace tools.SelfCleaningBot() and/or tools.DiscussionRetentionPolicyBot()
+    # keep only 20 messages by discussion, delete messages older than one day and delete messages in locked discussions
+    await client.set_message_retention_policy(existence_duration=60*60*24, discussion_count=20, clean_locked_discussions=True)
+
+    # replace tools.KeycloakAutoInvitationBot()
+    # for keycloak bots only: invite every new user on your keycloak instance
+    await client.enable_keycloak_auto_invite(auto_invite_new_members=True)
+```
+
+#### datatypes
+Les méthodes raccourcies associées aux objets du module `datatypes` ont été déplacé dans un module `helpers` indépendant.
+Voici deux exemples avec la méthode *Message.reply* et *Discussion.postMessage*, mais ce ne sont **pas les seules** méthodes impactées.
+
+```typescript
+import {OlvidClient, datatypes, helpers, onMessageReceived, onDiscussionNew} from "@olvid/bot-node";
+
+class ExampleBot extends OlvidClient {
+    @onMessageReceived()
+    async messageReceived(message: datatypes.Message) {
+        // replace: await message.reply(this, "pong")
+        await helpers.message.reply(this, message,  "pong")
+    }
+
+    @onDiscussionNew()
+    async discussionNew(discussion: datatypes.Discussion) {
+        // replace: await discussion.postMessage(this, "Welcome !")
+        await helpers.discussion.postMessage(this, discussion,  "Welcome!")
+    }
+}
 ```
 
 ### Daemon

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 2.0.0a0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:55+0100\n"
+"POT-Creation-Date: 2026-01-15 12:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -20,252 +20,265 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:3
+#: ../../source/migrations/migration_1_2.md:1
 msgid "➡️ Migrations"
 msgstr "➡️ Migrations"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:5
+#: ../../source/migrations/migration_1_2.md:3
 msgid "Passage en V2"
 msgstr "Upgrade to V2"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:8
+#: ../../source/migrations/migration_1_2.md:6
 msgid "Cette page référence tous les changements non rétrocompatibles apportés par la version 2 du framework.  Il est important de la lire intégralement pour mettre à jour vos configurations et votre code lors de la mise à jour des différents outils d'une version 1.X.X vers une version 2.0.0 ou supérieure."
 msgstr "This page lists all non-backward compatible changes made by version 2 of the framework. It is important to read it in its entirety to update your configurations and your code when upgrading from any version 1.X.X to 2.0.0 or higher."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:13
+#: ../../source/migrations/migration_1_2.md:11
 msgid "Python"
 msgstr "Python"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:14
+#: ../../source/migrations/migration_1_2.md:12
 msgid "Environnement"
 msgstr "Environment"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:15
+#: ../../source/migrations/migration_1_2.md:13
 msgid "Les variables d'environnement de configuration des différents clients ont été normalisées.  Cela peut induire des changements dans les variables d'environnement des fichiers *docker-compose.yaml*, ou dans les fichiers *.env*."
 msgstr "The configuration environment variables of different clients have been standardized. This may result in changes to the environment variables in *docker-compose.yaml* files, or in *.env* files."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:18
+#: ../../source/migrations/migration_1_2.md:16
 msgid "Les variables d'environnement *DAEMON_HOSTNAME* et *DAEMON_PORT* ont été supprimées au profit de la variable *OLVID_DAEMON_TARGET*.  La nouvelle variable correspond à l'URL complète d'accès au daemon."
 msgstr "The environment variables *DAEMON_HOSTNAME* and *DAEMON_PORT* have been removed in favor of the variable *OLVID_DAEMON_TARGET*. The new variable corresponds to the full URL for accessing the daemon."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:25
+#: ../../source/migrations/migration_1_2.md:23
 msgid "Les fichiers *.client_key* et *.admin_client_key* ne sont plus supportés, à la place utilisez un fichier *.env* avec les variables suivantes:"
 msgstr "The *.client_key* and *.admin_client_key* files are no longer supported. Instead, use a *.env* file with the following variables:"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:31
+#: ../../source/migrations/migration_1_2.md:29
 msgid "OlvidBot"
 msgstr "OlvidBot"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:32
+#: ../../source/migrations/migration_1_2.md:30
 msgid "Les classes *OlvidBot* et *OlvidClient* ont été fusionnées, vous pouvez remplacer tous les usages de la classe *OlvidBot* par *OlvidClient*."
 msgstr "The *OlvidBot* and *OlvidClient* classes have been merged, you can replace all uses of the class *OlvidBot* with *OlvidClient*."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:42
+#: ../../source/migrations/migration_1_2.md:40
 msgid "OlvidClient"
 msgstr "OlvidClient"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:43
+#: ../../source/migrations/migration_1_2.md:41
 msgid "les méthodes *add_command* et *remove_command* sont supprimées et remplacées par *add_listener* et *remove_listener*."
 msgstr "the methods *add_command* and *remove_command* are replaced by *add_listener* and *remove_listener*."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:53
+#: ../../source/migrations/migration_1_2.md:51
 msgid "normalisation des noms de méthodes qui utilisent des fichiers, impliquant le renommage de certaines méthodes."
 msgstr "normalization of method names that use files, involving renaming some methods."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:66
+#: ../../source/migrations/migration_1_2.md:64
+#: ../../source/migrations/migration_1_2.md:145
 msgid "datatypes"
 msgstr "datatypes"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:67
+#: ../../source/migrations/migration_1_2.md:65
 msgid "Certaines méthodes associées aux objets du module `datatypes` prennent maintenant une instance de la classe *OlvidClient* en paramètre.  Voici quelque exemples **NON EXHAUSTIFS** de changements."
 msgstr "Certain methods associated with objects from the `datatypes` module now take an instance of the class *OlvidClient* as a parameter. Here are some **NON-EXHAUSTIVE** examples of changes."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:82
+#: ../../source/migrations/migration_1_2.md:80
+#: ../../source/migrations/migration_1_2.md:123
 msgid "tools"
 msgstr "tools"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:83
+#: ../../source/migrations/migration_1_2.md:81
+#: ../../source/migrations/migration_1_2.md:124
 msgid "Suppression des classes *tools.AutoInvitationBot*, tools.DiscussionRetentionPolicyBot, tools.SelfCleaningBot et tools.KeycloakAutoInvitationBot.   La classe OlvidClient embarque maintenant des méthodes permettant de paramètrer le comportement du daemon."
 msgstr "Removal of classes *tools.AutoInvitationBot*, tools.DiscussionRetentionPolicyBot, tools.SelfCleaningBot and tools.KeycloakAutoInvitationBot.   The OlvidClient class now includes methods for configuring daemon behavior."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:104
+#: ../../source/migrations/migration_1_2.md:102
 msgid "Listeners"
 msgstr "Listeners"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:105
+#: ../../source/migrations/migration_1_2.md:103
 msgid "La notion de listeners a évolué pour utiliser le mécanisme de filtrage des notifications sorti dans la version 1.4.0. Les changements suivants découlent de cette volonté de normalisation avec les autres clients.   Pour en savoir plus sur l'usage des listeners rendez-vous ici: [](/python/tutorials.md#listener)."
 msgstr "The concept of listeners has evolved to use the notification filtering mechanism introduced in version 1.4.0. The following changes stem from this desire for standardization with other clients.   To learn more about using listeners, click [here](/python/tutorials.md#listener)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:108
+#: ../../source/migrations/migration_1_2.md:106
 msgid "suppression de la notion de *checkers*, utilisez les filtres à la place."
 msgstr "removal of the concept of *checkers*, use filters instead."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:109
+#: ../../source/migrations/migration_1_2.md:107
 msgid "suppression du paramètre *priority*."
 msgstr "removal of the *priority* parameter."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:110
+#: ../../source/migrations/migration_1_2.md:108
 msgid "le paramètre *count* est maintenant strictement positif, il faut maintenant utiliser la valeur 0 pour avoir un listener infini (et plus -1)."
 msgstr "The parameter *count* is now strictly positive, you must now use the value 0 for an infinite listener (and no longer -1)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:112
+#: ../../source/migrations/migration_1_2.md:110
 msgid "Javascript"
 msgstr "Javascript"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:113
+#: ../../source/migrations/migration_1_2.md:111
 msgid "La version de la librairie protobuf a été mise à jour dans les paquet npm *@olvid/bot-node* et *@olvid/bot-web*. Cela a un impact sur l'usage du code généré. Pour en savoir plus sur ces changements rendez-vous sur le guide de migration de [bufbuild](https://blog.bufbuild.ru/protobuf-es-v2/)."
 msgstr "The version of the protobuf library has been updated in the npm packages *@olvid/bot-node* and *@olvid/bot-web*. This impacts the usage of generated code. For more information on these changes, please refer to the [bufbuild migration guide](https://blog.bufbuild.ru/protobuf-es-v2/)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:116
+#: ../../source/migrations/migration_1_2.md:114
+msgid "Protobuf"
+msgstr "Protobuf"
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:115
 msgid "Le changement principal concerne la création de nouveaux objets protobuf"
 msgstr "The main change concerns the creation of new protobuf objects"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:124
+#: ../../source/migrations/migration_1_2.md:146
+msgid "Les méthodes raccourcies associées aux objets du module `datatypes` ont été déplacé dans un module `helpers` indépendant. Voici deux exemples avec la méthode *Message.reply* et *Discussion.postMessage*, mais ce ne sont **pas les seules** méthodes impactées."
+msgstr "The shortcut methods associated with objects from the `datatypes` module have been moved to a separate `helpers` module. Here are two examples with the *Message.reply* and *Discussion.postMessage* methods, but these are **not the only** affected methods."
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:167
 msgid "Daemon"
 msgstr "Daemon"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:125
+#: ../../source/migrations/migration_1_2.md:168
 msgid "Les changements suivants dans l'API du daemon peuvent toucher tous les clients. Il faut donc vérifier pour chaque modification si votre code est concerné."
 msgstr "The following changes in the daemon API may affect all clients. Therefore, it is necessary to check for each change if your code is impacted."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:127
+#: ../../source/migrations/migration_1_2.md:170
 msgid "Sauvegardes"
 msgstr "Backups"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:128
+#: ../../source/migrations/migration_1_2.md:171
 msgid "La version 2 amène le nouveau système de sauvegarde Olvid. Les backups sont maintenant stockés sur notre serveur et il vous suffit de stocker la clé de chiffrement associée pour récupérer ou transférer tout ou partie de votre daemon."
 msgstr "Version 2 introduces Olvid's new backup system. Backups are now stored on our server and you only need to store the associated encryption key to recover your daemon."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:131
+#: ../../source/migrations/migration_1_2.md:174
 msgid "Comme dans la v1 le dossier `backups` du daemon contient tout le nécessaire à la restauration d'une sauvegarde, si vous sauvegardiez déjà son contenu aucun changement ne devrait être nécessaire, mais nous vous conseillons tout de même de vérifier que tout se passe bien."
 msgstr "As in v1, the `backups` folder of the daemon contains everything needed to restore a backup. If you were already backing up its contents, no changes should be necessary, but we still recommend checking that everything is working correctly."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:134
+#: ../../source/migrations/migration_1_2.md:177
 msgid "Pour en savoir plus sur la mise en place des sauvegardes: [](/daemon/tutorials.md#sauvegardes)."
 msgstr "For more information on setting up [backups](/daemon/tutorials.md#backups)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:136
+#: ../../source/migrations/migration_1_2.md:179
 msgid "Commandes"
 msgstr "Commands"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:138
+#: ../../source/migrations/migration_1_2.md:181
 msgid "MessageCommandeService"
 msgstr "MessageCommandeService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:139
+#: ../../source/migrations/migration_1_2.md:182
 msgid "**messageSendVoip**: Suppression de la commande, utilisez le service callCommandService à la place."
 msgstr "**messageSendVoip**: Removal of the command, use the callCommandService instead."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:148
+#: ../../source/migrations/migration_1_2.md:191
 msgid "IdentityCommandeService"
 msgstr "IdentityOrderService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:149
+#: ../../source/migrations/migration_1_2.md:192
 msgid "**keycloakBind** et **keycloakUnbind**: déplacement dans le service **keycloakCommandService**"
 msgstr "**keycloakBind** and **keycloakUnbind**: moved within the **keycloakCommandService**"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:159
+#: ../../source/migrations/migration_1_2.md:202
 msgid "DiscussionCommandService"
 msgstr "DiscussionCommandService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:160
+#: ../../source/migrations/migration_1_2.md:203
 msgid "**discussionEmpty**: suppression du paramètre delete_everywhere qui ne fonctionnait plus (plus possible de supprimer à distance les messages d'autrui)."
 msgstr "**discussionEmpty**: removal of the delete_everywhere parameter which no longer worked (it was no longer possible to remotely delete other people's messages)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:170
+#: ../../source/migrations/migration_1_2.md:213
 msgid "**discussionSettingsGet** et **discussionSettingsSet**: déplacement dans le nouveau service **settingsCommandService**"
 msgstr "**discussionSettingsGet** and **discussionSettingsSet**: moved within the new service **settingsCommandService**"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:180
+#: ../../source/migrations/migration_1_2.md:223
 msgid "Notifications"
 msgstr "Notifications"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:182
+#: ../../source/migrations/migration_1_2.md:225
 msgid "GroupNotificationService"
 msgstr "GroupNotificationService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:183
+#: ../../source/migrations/migration_1_2.md:226
 msgid "**GroupUpdateInProgress** et **GroupUpdateFinished**: suppression des notifications devenues inutiles (les modifications de groupes ont été rendues synchrones et attendent que le groupe soit disponible)."
 msgstr "**GroupUpdateInProgress** and **GroupUpdateFinished**: removal of obsolete notifications (group updates have been made synchronous and wait for the group to become available)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:185
+#: ../../source/migrations/migration_1_2.md:228
 msgid "Admin"
 msgstr "Admin"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:187
+#: ../../source/migrations/migration_1_2.md:230
 msgid "IdentityAdminService"
 msgstr "IdentityAdminService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:188
+#: ../../source/migrations/migration_1_2.md:231
 msgid "**identityNew**: suppression du paramètre api_key, utilisez la commande **identitySetApiKey** une fois l'identité crée."
 msgstr "**identityNew**: removal of the api_key parameter, use the command **identitySetApiKey** once the identity has been created."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:190
+#: ../../source/migrations/migration_1_2.md:233
 msgid "Datatypes"
 msgstr "Datatypes"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:192
+#: ../../source/migrations/migration_1_2.md:235
 msgid "Invitation"
 msgstr "Invitation"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:193
+#: ../../source/migrations/migration_1_2.md:236
 msgid "suppression du status *STATUS_GROUP_INVITATION_FROZEN* devenu inutile."
 msgstr "removal of the status *STATUS_GROUP_INVITATION_FROZEN*, which has become unnecessary."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:195
+#: ../../source/migrations/migration_1_2.md:238
 msgid "Discussion"
 msgstr "Discussion"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:196
+#: ../../source/migrations/migration_1_2.md:239
 msgid "déplacement du message protobuf **DiscussionSettings** du fichier *discussion.proto* vers *settings.proto*, mais il reste dans le module `datatypes`, cela ne devrait donc pas affecter le code."
 msgstr "moved the protobuf message **DiscussionSettings** from *discussion.proto* to *settings.proto*, but it remains in the `datatypes` module, so this should not affect the code."
 

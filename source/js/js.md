@@ -60,12 +60,12 @@ Pour le moment il ne répond qu'à la commande *!ping* mais vous pouvez modifier
 
 ```typescript
 import {OlvidClient, datatypes} from "@olvid/bot-node";
-import {command, onMessageReceived, onMessageSent} from "@olvid/bot-node";
+import {command, onMessageReceived, onMessageSent, helpers} from "@olvid/bot-node";
 
 class ExampleBot extends OlvidClient {
     @command("^!ping")
     async help(message: datatypes.Message) {
-        await message.reply(this, "pong")
+        await helpers.message.reply(this, message, "pong")
     }
     
     @onMessageReceived()
