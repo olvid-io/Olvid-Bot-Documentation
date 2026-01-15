@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:55+0100\n"
+"POT-Creation-Date: 2026-01-15 11:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -71,11 +71,11 @@ msgstr ""
 msgid "create a new identity using a keycloak bot configuration link"
 msgstr ""
 
-#: ../../olvid-cli accept:1 admin:1 attachment backup contact daemon:1
-#: decline:1 disband:1 discussion end:1 get:1 group identity introduce:1
-#: invitation kc key leave:1 location message new:1 permissions:1 photo
-#: profile:1 react:1 restore sas:1 save:1 send:1 set:1 settings start:1 storage
-#: unset:1 update:1
+#: ../../olvid-cli accept:1 add:1 admin:1 attachment backup bind:1 contact
+#: daemon:1 decline:1 disband:1 discussion end:1 get:1 group identity
+#: introduce:1 invitation kc key leave:1 location message new:1 permissions:1
+#: photo profile:1 react:1 restore sas:1 save:1 send:1 set:1 settings start:1
+#: storage unset:1 update:1
 msgid "Required argument"
 msgstr ""
 
@@ -538,6 +538,42 @@ msgstr ""
 
 #: ../../olvid-cli group update:1
 msgid "update group details and/or members (advanced command)"
+msgstr ""
+
+#: ../../source/cli/references.md:4
+msgid "olvid-cli kc"
+msgstr ""
+
+#: ../../olvid-cli kc:1
+msgid "interact with your keycloak server"
+msgstr ""
+
+#: ../../olvid-cli bind:1 kc
+msgid "attach your current identity to a keycloak server using a keycloak bot configuration link"
+msgstr ""
+
+#: ../../olvid-cli contact:1 kc
+msgid "manage keycloak contacts"
+msgstr ""
+
+#: ../../olvid-cli add:1 contact kc
+msgid "add a keycloak user as a contact"
+msgstr ""
+
+#: ../../olvid-cli contact get:1 kc
+msgid "list keycloak users"
+msgstr ""
+
+#: ../../olvid-cli contact get:1 kc
+msgid "last list user timestamp"
+msgstr ""
+
+#: ../../olvid-cli credentials:1 kc
+msgid "access your keycloak credentials to use keycloak admin API"
+msgstr ""
+
+#: ../../olvid-cli kc unbind:1
+msgid "remove keycloak server for current identity"
 msgstr ""
 
 #: ../../source/cli/references.md:4

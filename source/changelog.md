@@ -35,7 +35,7 @@ Nous vous invitons à suivre notre [**guide de migration**](/migrations/migratio
 
 ### Suppressions
 - **Python Client**
-  - **tools**: suppression des classes AutoInvitationBot, DiscussionRetentionPolicyBot, SelfCleaningBot, KeycloakAutoInvitationBot. Utilisez la nouvelle [APi settings]() du daemon à la place.
+  - **tools**: suppression des classes AutoInvitationBot, DiscussionRetentionPolicyBot, SelfCleaningBot, KeycloakAutoInvitationBot. Voir la section [](/python/tutorials.md#bonnes-pratiques) pour les remplacer.
 
 ### Correctifs
 - **Daemon**

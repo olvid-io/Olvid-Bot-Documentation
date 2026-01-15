@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-08 16:16+0200\n"
+"POT-Creation-Date: 2026-01-15 11:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -92,121 +92,156 @@ msgstr "For example, to display in the terminal when a message is received and w
 
 # translated using ollama
 #: ../../source/python/tutorials.md:74
-msgid "Conseils et astuces"
-msgstr "Tips and Tricks"
+msgid "Bonnes pratiques"
+msgstr "Good Practices"
 
 # translated using ollama
 #: ../../source/python/tutorials.md:75
-msgid "AutoInvitationBot"
-msgstr "AutoInvitationBot"
+msgid "Invitations"
+msgstr "Invitations"
 
 # translated using ollama
 #: ../../source/python/tutorials.md:76
-msgid "Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues."
-msgstr "To make it easier to connect with a bot, it is possible to set up a bot that will accept all received invitations."
+msgid "Pour rendre plus facile la mise en relation avec un bot, il est possible d'activer l'acceptation automatique des invitations. Il suffit de modifier la configuration du daemon à l'aide la méthode *enable_auto_invitation* d'un client Olvid."
+msgstr "To make it easier to connect with a bot, you can enable automatic acceptance of invitations. This can be done by modifying the configuration of the daemon using the *enable\_auto\_invitation* method of an Olvid client."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:78
-msgid "Il suffit de créer un bot *AutoInvitationBot* du module `olvid.tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter."
-msgstr "Just create an *AutoInvitationBot* instance from the module `olvid.tools`. It will automatically register to receive new invitation notifications and accept them."
+#: ../../source/python/tutorials.md:79
+msgid "L'acceptation automatique des invitations ne peut accepter que les présentations, les invitations de groupe et les invitations à une discussion personnelle.  Il ne peut pas aller au bout des invitations directes avec échange de SAS code."
+msgstr "Automatic acceptance of invitations can only accept introductions, group invitations, and personal conversation invitations. It cannot complete direct invitations with SAS code exchange."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:81
-msgid "Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe.  Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code."
-msgstr "An *AutoInvitationBot* can only accept introductions and group invitations. It cannot automatically accept direct invitations with SAS code exchange."
+#: ../../source/python/tutorials.md:83
+msgid "Voici un programme qui lance un bot après avoir configuré l'acceptation automatique des invitations."
+msgstr "Here is a program that launches a bot after setting up automatic acceptance of invitations."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:85
-msgid "Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond. Il est tout à fait possible de lancer plusieurs bots en parallèle."
-msgstr "Here is a program that launches an instance of AutoInvitationBot in the background. It is possible to launch several bots in parallel."
+#: ../../source/python/tutorials.md:102
+msgid "Nettoyage des messages"
+msgstr "Cleaning of Messages"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:103
+msgid "Pour des raisons de performances et de confidentialité nous vous conseillons d'activer le nettoyage automatique des messages."
+msgstr "For performance and privacy reasons, we recommend enabling automatic message cleanup."
 
 # translated using ollama
 #: ../../source/python/tutorials.md:105
+msgid "Il est possible de limiter le nombre de messages conservés globalement ou par discussion (*global_count* et *discussion_count*) et/ou de définir l'âge maximal d'un message (*existence_duration*)."
+msgstr "It is possible to limit the number of messages kept globally or per discussion (*global_count* and *discussion_count*) and/or define the maximum age of a message (*existence_duration*)."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:107
+msgid "Nous vous conseillons aussi d'activer la suppression des messages dans les discussions fermées."
+msgstr "We also advise you to activate the deletion of messages in locked discussions."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:121
+msgid "Docker"
+msgstr "Docker"
+
+# translated using ollama
+#: ../../source/python/tutorials.md:122
+msgid "Une fois votre programme prêt à être déployé nous vous conseillons d'utiliser notre image docker *[python-runner](https://hub.docker.com/r/olvid/bot-python-runner)* pour l'exécuter. Elle est configurée pour installer les dépendances de votre projet et exécuter votre programme."
+msgstr "Once your program is ready to be deployed, we recommend using our Docker image *[python-runner](https://hub.docker.com/r/olvid/bot-python-runner)* to run it. It is configured to install your project dependencies and execute your program."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:125
+msgid "Veillez simplement à ce que votre projet respecte l'arborescence suivante. Vous pouvez ajouter autant de fichiers que nécessaire, tant que votre programme se lance à partir d'un fichier `main.py`."
+msgstr "Just make sure your project follows this directory structure. You can add as many files as needed, as long as your program launches from a `main.py` file."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:132
+msgid "Il vous suffit ensuite d'ajouter un service à votre fichier `docker-compose.yaml`."
+msgstr "All you need to do then is add a service to your `docker-compose.yaml` file."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:144
+msgid "Et enfin de lancer votre bot."
+msgstr "And finally, launch your bot."
+
+# translated using ollama
+#: ../../source/python/tutorials.md:153
 msgid "Divers"
 msgstr "Various"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:106
+#: ../../source/python/tutorials.md:154
 msgid "Envoyer un message éphémère"
 msgstr "Send an ephemeral message"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:107
+#: ../../source/python/tutorials.md:155
 msgid "Les points d'entrée API `messageSend` et `messageSendWithAttachments` permettent de spécifier l'éphéméralité du message à envoyer. On utilisera pour cela l'objet *olvid.datatypes.MessageEphemerality*."
 msgstr "The API entry points `messageSend` and `messageSendWithAttachments` allow you to specify the ephemerality of the message to be sent. To do this, use the *olvid.datatypes.MessageEphemerality* object."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:110
+#: ../../source/python/tutorials.md:158
 msgid "Voici un exemple en python. Il est possible de spécifier les paramètres `read_once`, `visibility_duration` et `existence_duration` de manière indépendante. Les durées d'existence et de visibilité sont en secondes."
 msgstr "Here is an example in Python. It is possible to specify the parameters `read_once`, `visibility_duration`, and `existence_duration` independently. The existence and visibility durations are in seconds."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:134
+#: ../../source/python/tutorials.md:182
 msgid "Utilisation avancée"
 msgstr "Advanced Usage"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:135
+#: ../../source/python/tutorials.md:183
 msgid "Listener"
 msgstr "Listener"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:136
+#: ../../source/python/tutorials.md:184
 msgid "Pour une implémentation plus fine de l'écoute des notifications, il est possible d'utiliser la notion de *Listener*. Un listener est une souscription d'une fonction callback à un type de notification. Cette fonction sera appelée à chaque fois qu'une notification de ce type est reçue."
 msgstr "For a more granular implementation of notifications listening, it is possible to use the concept of *Listener*. A listener is a subscription of a callback function to a notification type. This function will be called each time a notification of this type is received."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:140
+#: ../../source/python/tutorials.md:188
 msgid "Chaque type de notification a sa propre classe dans le module `olvid.listeners`."
 msgstr "Each type of notification has its own class in the module `olvid.listeners`."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:142
+#: ../../source/python/tutorials.md:190
 msgid "Dans cet exemple, la méthode `reply_to_message` sera appelée à chaque fois qu'un message arrive."
 msgstr "In this example, the `reply_to_message` method will be called every time a message arrives."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:161
+#: ../../source/python/tutorials.md:209
 msgid "Listener: expiration"
 msgstr "Listener: expiration"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:162
+#: ../../source/python/tutorials.md:210
 msgid "Par défaut, un listener écoute les notifications pour toujours, mais il est possible d'utiliser l'argument `count` pour n'écouter qu'un certain nombre de notifications. Dans ce cas, lorsque que *count* notifications ont été traitées, le listener est arrêté."
 msgstr "By default, a listener listens to notifications indefinitely, but it is possible to use the `count` argument to only listen for a certain number of notifications. In this case, once *count* notifications have been processed, the listener is stopped."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:165
+#: ../../source/python/tutorials.md:213
 msgid "Dans cet exemple, on répond au prochain message reçu puis le programme s'arrête."
 msgstr "In this example, we respond to the next received message and then the program stops."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:189
+#: ../../source/python/tutorials.md:237
 msgid "Listener : filtrage"
 msgstr "Listener: Filtering"
 
 # translated using ollama
-#: ../../source/python/tutorials.md:191
+#: ../../source/python/tutorials.md:239
 msgid "Les listeners permettent également de filtrer les notifications à traiter.  Pour cela, on peut ajouter une ou plusieurs fonctions de filtrage à notre listener. Les différentes formes de filtrage dépendent du type de notification et sont défini dans les messages du type *MessageReceivedNotificationSubscription* (cf [description protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) de l'API du daemon)."
 msgstr "Listeners also allow filtering of notifications to be processed. To do this, we can add one or more filter functions to our listener. The different forms of filtering depend on the notification type and are defined in the messages of the *MessageReceivedNotificationSubscription* type (cf [protobuf description](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) of the daemon's API)."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:195
+#: ../../source/python/tutorials.md:243
 msgid "Par exemple, on peut vouloir traiter uniquement les messages envoyés par un certain contact."
 msgstr "For example, we might want to process only messages sent by a specific contact."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:218
-msgid "Listener avancé"
-msgstr "Advanced listener"
-
-# translated using ollama
-#: ../../source/python/tutorials.md:220
+#: ../../source/python/tutorials.md:266
 msgid "Il est tout à fait possible de combiner le filtrage et l'expiration."
 msgstr "It is perfectly possible to combine filtering and expiration."
 
 # translated using ollama
-#: ../../source/python/tutorials.md:222
+#: ../../source/python/tutorials.md:268
 msgid "Ici, on l'utilise pour effectuer une action et quitter le programme quand le message que l'on vient d'envoyer arrive sur le téléphone de son destinataire."
 msgstr "Here, it is used to perform an action and exit the program when the message that has just been sent arrives on the recipient's phone."
 
