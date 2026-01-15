@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-07 16:40+0100\n"
+"POT-Creation-Date: 2026-01-15 11:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -527,96 +527,131 @@ msgstr "The backups mentioned here are Olvid backups, which do not contain messa
 
 # translated using ollama
 #: ../../source/daemon/tutorials.md:430
-msgid "Les sauvegardes sont... des sauvegardes.  Vous devrez les conserver dans un endroit sûr pour pouvoir les réutiliser si nécessaire. Dans un environnement de production, la meilleure pratique minimale serait de stocker les sauvegardes sur un disque séparé du reste du système."
-msgstr "Backups are... backups. You will need to keep them in a safe place so you can reuse them if necessary. In a production environment, the minimum best practice would be to store backups on a disk separate from the rest of the system."
+msgid "Les sauvegardes sont... des sauvegardes. Vous devrez les conserver dans un endroit sûr pour pouvoir les réutiliser si nécessaire."
+msgstr "Backups are... backups. You will need to keep them in a safe place so you can reuse them if necessary."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:433
-msgid "La restauration d'une sauvegarde sur un autre daemon et l'exécution simultanée des deux entraînera un comportement imprévisible."
-msgstr "Restoring a backup on another daemon and running the original simultaneously will result in unpredictable behavior."
+#: ../../source/daemon/tutorials.md:431
+msgid "La restauration d'une sauvegarde sur un autre daemon et l'exécution simultanée sur l'ancienne instance entraînera un comportement imprévisible."
+msgstr "Restoring a backup on another daemon and running it simultaneously on the old instance will result in unpredictable behavior."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:436
+#: ../../source/daemon/tutorials.md:434
 msgid "Configuration des sauvegardes automatiques"
 msgstr "Automatic Backups Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:438
-msgid "Le daemon crée automatiquement et périodiquement des sauvegardes. Les sauvegardes sont créées chaque fois que cela est nécessaire (votre bot a ajouté un contact, rejoint ou quitte un groupe, ...). Ces sauvegardes sont stockées dans le répertoire */daemon/backups*."
-msgstr "The daemon automatically and periodically creates backups. Backups are created whenever necessary (your bot has added a contact, joined or left a group, ...). These backups are stored in the directory */daemon/backups*."
+#: ../../source/daemon/tutorials.md:436
+msgid "Le daemon crée automatiquement des sauvegardes chaque fois que cela est nécessaire (votre bot a ajouté un contact, rejoint ou quitte un groupe, ...). Ces sauvegardes sont stockées sur un serveur Olvid, et sont accessibles à l'aide d'une clé. Cette clé est accessible à l'aide de la commande cli `backup key get`."
+msgstr "The daemon automatically creates backups whenever necessary (your bot has added a contact, joined or left a group, ...). These backups are stored on an Olvid server and can be accessed using a key. This key can be obtained using the CLI command `backup key get`."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:442
-msgid "Si vous souhaitez conserver ces sauvegardes, vous devez monter le répertoire */daemon/backups* en tant que volume. Voici un exemple de fichier *docker-compose.yaml*."
-msgstr "If you wish to keep these backups, you must mount the directory */daemon/backups* as a volume. Here's an example of a *docker-compose.yaml* file."
+#: ../../source/daemon/tutorials.md:439
+msgid "La clé de sauvegarde est également stockée dans le dossier */daemon/backups*. Vous pouvez accéder au fichier en montant le répertoire */daemon/backups* en tant que volume. Voici un exemple de fichier *docker-compose.yaml*."
+msgstr "The backup key is also stored in the */daemon/backups* directory. You can access the file by mounting the */daemon/backups* directory as a volume. Here is an example of a *docker-compose.yaml* file."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:455
-msgid "Voici un exemple de l'arborescence du répertoire `/daemon/backups`."
-msgstr "Here is an example of the directory tree structure for `/daemon/backups`."
+#: ../../source/daemon/tutorials.md:452
+msgid "Validation d'une sauvegarde"
+msgstr "Verification of a backup"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:465
-msgid "Chaque sous-répertoire (0001, 0002) doit contenir son propre fichier `backup_seed.txt`, sinon le daemon incrémentera et créera automatiquement un nouveau répertoire. Ce fichier de graine est nécessaire pour déchiffrer et restaurer les sauvegardes. Sans lui votre sauvegarde est inutilisable."
-msgstr "Each subdirectory (0001, 0002) must contain its own `backup_seed.txt` file, otherwise the daemon will increment and automatically create a new directory. This seed file is necessary to decrypt and restore backups. Without it, your backup is unusable."
+#: ../../source/daemon/tutorials.md:453
+msgid "Pour valider le fonctionnement des sauvegardes vous pouvez accéder au contenu de votre sauvegarde à l'aide de la [CLI](/cli/cli) et de la commande `backup get $BACKUP_KEY`, en remplaçant *$BACKUP_KEY* par votre clé de sauvegarde."
+msgstr "To validate backups are working properly, you can access your backup content using the [CLI](/cli/cli) and the command `backup get $BACKUP_KEY`, replacing *$BACKUP\_KEY* with your backup key."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:469
-msgid "À l'intérieur d'un sous-répertoire, le daemon crée et stocke jusqu'à 10 fichiers de sauvegarde avant de supprimer les plus anciens. Toutes ces sauvegardes sont nommées en utilisant l'horodatage de leur création."
-msgstr "Within a subdirectory, the daemon creates and stores up to 10 backup files before deleting the oldest ones. All these backups are named using their creation timestamps."
-
-# translated using ollama
-#: ../../source/daemon/tutorials.md:472
+#: ../../source/daemon/tutorials.md:459
 msgid "Restauration d'une sauvegarde"
 msgstr "Restoring a backup"
 
 # translated using ollama
+#: ../../source/daemon/tutorials.md:462
+msgid "La restauration d'une sauvegarde n'est pas une action triviale et ne doit être effectuée qu'en dernier recours. Vous perdrez tous vos messages et pièces jointes stockés dans le daemon au cours de ce processus. Seuls les éléments enregistrés à l'aide de l'API de stockage, les clés client et les settings seront encore disponibles."
+msgstr "Restoring a backup is not a trivial action and should only be performed as a last resort. You will lose all your messages and attachments stored in the daemon during this process. Only items saved using the storage API, client keys, and settings will still be restored."
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:467
+msgid "Une procédure de restauration de sauvegarde classique devrait se faire comme suit."
+msgstr "A classic backup restoration procedure should be done as follows."
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:468
+msgid "Valider que le daemon d'origine ne tourne plus"
+msgstr "Ensure that the original daemon is no longer running"
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:469
+msgid "Dans la nouvelle installation exécuter la commande [CLI](/cli/cli) suivante: `backup restore daemon $BACKUP_KEY`."
+msgstr "In a new installation, run the following [CLI](/cli/cli) command: `backup restore daemon $BACKUP_KEY`."
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:470
+msgid "Valider la restauration des identités à l'aide de la commande cli: `identity get`"
+msgstr "Validate identity restoration using the CLI command: `identity get`"
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:472
+msgid "Commandes utiles"
+msgstr "Useful Commands"
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:473
+msgid "Voici une liste non-exhaustive de commandes [CLI](/cli/cli) en lien avec les sauvegardes."
+msgstr "Here is a non-exhaustive list of [CLI](/cli/cli) commands related to backups."
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:474
+msgid "`backup key get`: afficher la clé de sauvegarde actuelle."
+msgstr "`backup key get`: display the current backup key."
+
+# translated using ollama
 #: ../../source/daemon/tutorials.md:475
-msgid "La restauration d'une sauvegarde n'est pas une action triviale et ne doit être effectuée qu'en dernier recours. Vous perdrez tous vos messages et pièces jointes stockés dans le daemon au cours de ce processus. Seuls les éléments enregistrés à l'aide de l'API de stockage seront encore disponibles."
-msgstr "Restoring a backup is not a trivial action and should only be done as a last resort. You will lose all your messages and attachments stored in the daemon during this process. Only items saved using the storage API will still be available."
+msgid "`backup now`: forcer le lancement d'une sauvegarde."
+msgstr "`backup now`: force the launch of a backup."
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:476
+msgid "`backup get $BACKUP_KEY`: affiche le contenu d'une sauvegarde"
+msgstr "`backup get $BACKUP_KEY`: displays the content of a backup"
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:478
+msgid "`backup restore daemon $BACKUP_KEY`: restaurer la totalité d'une sauvegarde dans son état le plus récent."
+msgstr "`backup restore daemon $BACKUP_KEY`: restore a backup to its latest state in full."
+
+# translated using ollama
+#: ../../source/daemon/tutorials.md:479
+msgid "`backup restore admin $BACKUP_KEY`: restaure les clés clients administrateur et le stockage associé."
+msgstr "`backup restore admin $BACKUP_KEY`: restores admin client keys and associated storage."
 
 # translated using ollama
 #: ../../source/daemon/tutorials.md:480
-msgid "Pour restaurer une sauvegarde, vous devez exécuter la commande suivante depuis le repertoire qui contient votre daemon habituellement. Vérifiez bien que le répertoire data est vide avant de lancer une restauration, autrement, elle échouera."
-msgstr "To restore a backup, you must run the following command from the directory that usually contains your daemon. Make sure the data directory is empty before starting a restoration, otherwise it will fail."
+msgid "`backup restore admin $BACKUP_KEY $SNAPHOST_ID`: restaure une identité en particulier, à un état (snapshot) donné (contact, groupes, stockage, clé clients, settings). Les identifiants des snapshots sont disponibles dans la description des sauvegardes."
+msgstr "`backup restore admin $BACKUP_KEY $SNAPHOST_ID`: restores a particular identity to a given snapshot (contact, groups, storage, client keys, settings). The snapshot IDs are available in the backup descriptions."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:491
-msgid "Lorsque vous voyez le message `💾 BackupRestoration: Finished backup restoration process`, vous pouvez arrêter le daemon (CTRL + C) et le démarrer normalement avec la commande `docker-compose up -d`."
-msgstr "When you see the message `💾 BackupRestoration: Finished backup restoration process`, you can stop the daemon (CTRL + C) and start it normally with the command `docker-compose up -d`."
-
-# translated using ollama
-#: ../../source/daemon/tutorials.md:493
-msgid "Vous pouvez maintenant vérifier à l'aide de la CLI que la restauration a été réussie. Vous devriez trouver vos identités, contacts, groupes, clés client, ..."
-msgstr "You can now verify using the CLI that the restoration was successful. You should find your identities, contacts, groups, client keys, ..."
-
-# translated using ollama
-#: ../../source/daemon/tutorials.md:496
-msgid "Les éléments stockés à l'aide de l'API de stockage du démon sont également accessibles par les moyens habituels."
-msgstr "Elements stored using the storage API of the daemon are also accessible through usual means."
-
-# translated using ollama
-#: ../../source/daemon/tutorials.md:499
+#: ../../source/daemon/tutorials.md:482
 msgid "Configuration JVM"
 msgstr "JVM Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:503
+#: ../../source/daemon/tutorials.md:486
 msgid "Il est possible de passer des options arbitraires à la JVM qui fait tourner votre daemon. Pour cela, vous pouvez utiliser la variable d'environnement **JAVA_FLAGS**."
 msgstr "It is possible to pass arbitrary options to the JVM running your daemon. To do this, you can use the environment variable **JAVA\\_FLAGS**."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:506
+#: ../../source/daemon/tutorials.md:489
 msgid "Configuration proxy"
 msgstr "Proxy Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:507
+#: ../../source/daemon/tutorials.md:490
 msgid "Pour permettre au daemon d'utiliser un proxy HTTP, il faut passer des paramètres spécifiques a la JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840))."
 msgstr "To allow the daemon to use an HTTP proxy, specific parameters must be passed to the JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840))."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:509
+#: ../../source/daemon/tutorials.md:492
 msgid "Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000, avec usage d'un login et mot de passe. Cette configuration est adaptable à vos besoins."
 msgstr "Here is a possible example of configuration to use a fictional proxy accessible as *proxy.example.com* on port 8000, using a login and password. This configuration can be adapted to your needs."
 
