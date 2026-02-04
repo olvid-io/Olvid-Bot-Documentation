@@ -8,6 +8,9 @@ Il est important de la lire intégralement pour mettre à jour vos configuration
 d'une version 1.X.X vers une version 2.0.0 ou supérieure.
 :::
 
+[//]: # (TODO add references to already migrated bots)
+[//]: # (TODO add somewhere a way to create a community: write us, ask us, ...)
+
 ### Python
 #### Environnement
 Les variables d'environnement de configuration des différents clients ont été normalisées. 
@@ -52,7 +55,7 @@ client.add_listener(listeners.Command(handler=help_cmd, regexp_filter="!help"))
 ```python
 from olvid import OlvidClient, datatypes, listeners
 
-client = OlvidClient()
+client: OlvidClient = OlvidClient()
 
 async def change_identity_photo(photo_path: str):
     await client.identity_set_photo_file(file_path=photo_path)
