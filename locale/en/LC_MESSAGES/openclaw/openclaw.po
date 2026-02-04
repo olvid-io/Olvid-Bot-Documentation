@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 1.5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-04 15:24+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:1
+msgid "🦞 OpenClaw"
+msgstr "🦞 OpenClaw"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:7
+msgid "Cette intégration est encore en cours de développement, et pourrait changer sans préavis."
+msgstr "This integration is still under active development and may change without notice."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:9
+msgid "Pour vos remarques et suggestions, contactez nous par mail [bot@olvid.io](mailto:bot@olvid.io), ou rendez-vous sur notre dépôt GitHub: [openclaw-channel-olvid](https://github.com/olvid-io/openclaw-channel-olvid)."
+msgstr "For your comments and suggestions, contact us by email at [bot@olvid.io](mailto:bot@olvid.io), or visit our GitHub repository: [openclaw-channel-olvid](https://github.com/olvid-io/openclaw-channel-olvid)."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:12
+msgid "Installation"
+msgstr "Installation"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:13
+msgid "Si vous avez déjà une instance [OpenClaw](https://docs.openclaw.ai/install) fonctionnelle, il suffit d'installer et configurer un daemon, puis d'installer et configurer notre plugin OpenClaw.   Sinon rendez-vous sur la doc [d'installation d'OpenClaw avec docker](https://docs.openclaw.ai/install/docker)."
+msgstr "If you already have a functional [OpenClaw](https://docs.openclaw.ai/install) instance, all you need to do is install and configure a daemon, then install and configure our OpenClaw plugin.   Otherwise, refer to the docs for [installing OpenClaw with Docker](https://docs.openclaw.ai/install/docker)."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:17
+msgid "Prenez garde en installant et utilisant OpenClaw (et toute IA pouvant executer des commandes et du code).  Voici nos recommandations minimales en termes de sécurité:"
+msgstr "Beware when installing and using OpenClaw (and any AI capable of executing commands and code). Here are our minimum security recommendations:"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:19
+msgid "installer OpenClaw dans un conteneur Docker."
+msgstr "install OpenClaw in a Docker container."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:20
+msgid "utiliser uniquement des modèles d'IA hébergés localement (ollama ou autre)."
+msgstr "use only locally hosted AI models (ollama or other)."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:21
+msgid "utiliser le channel Olvid pour sécuriser vos échanges avec votre agent."
+msgstr "use the Olvid channel to secure your exchanges with your agent."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:22
+msgid "ne pas utiliser de skills vulnérables aux \"prompt injections\" (c'est-à-dire qui utilisent de la donnée définie par un tiers, comme un mail)."
+msgstr "do not use skills vulnerable to \"prompt injections\" (i.e., those that use data defined by a third party, such as an email)."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:25
+msgid "Daemon"
+msgstr "Daemon"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:26
+#, python-brace-format
+msgid "Voici un fichier `docker-compose.yaml` pour installer un {term}`daemon` Olvid localement. Si OpenClaw est installé avec Docker, ajoutez simplement les services *daemon* et *cli* à votre fichier `docker-compose.yml` existant."
+msgstr "Here is a `docker-compose.yaml` file to install a local Olvid {term}`daemon`. If OpenClaw is installed with Docker, simply add the *daemon* and *cli* services to your existing `docker-compose.yml` file."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:50
+msgid "Lançons maintenant notre daemon Olvid."
+msgstr "Let's now launch our Olvid daemon."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:55
+msgid "On peut ensuite lancer l'invite de commande olvid en mode interactif."
+msgstr "We can then launch the olvid CLI in interactive mode."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:60
+msgid "Vous pouvez ensuite créer votre bot avec la commande suivante, en suivant la procédure à l'écran."
+msgstr "You can then create your bot with the following command, following the on-screen procedure."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:65
+msgid "Pour terminer et quitter la CLI Olvid utilisez la commande `exit` ou `ctrl+d`."
+msgstr "To finish and quit the Olvid CLI, use the `exit` command or press `ctrl+d`."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:67
+msgid "Olvid Channel"
+msgstr "Olvid Channel"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:68
+msgid "On peut ensuite passer à l'installation du plugin Olvid dans OpenClaw."
+msgstr "We can then move install the Olvid plugin for OpenClaw."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:74
+msgid "Pour finir on configure le channel Olvid pour qu'il utilise l'identité créée précédemment dans notre daemon."
+msgstr "To finish, we configure the Olvid channel so that it uses the identity created previously in our daemon."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:79
+msgid "Pour le paramètre **daemonUrl** utilisez:"
+msgstr "For the **daemonUrl** parameter, use:"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:80
+msgid "'http://localhost:50051' si OpenClaw tourne localement."
+msgstr "'http://localhost:50051' if OpenClaw is running locally."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:81
+msgid "'http://daemon:50051' si OpenClaw et daemon tournent dans le même projet docker compose."
+msgstr "'http://daemon:50051' if OpenClaw and daemon are running in the same docker-compose project."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:83
+msgid "Pour le paramètre **clientKey** utilisez la clé client qu'on vous a communiqué lors de l'installation, ou le résultat de la commande suivnte:"
+msgstr "For the parameter **clientKey**, use the client key that was provided to you during installation, or the result of the following command:"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:88
+msgid "Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot sont transmis à votre agent OpenClaw."
+msgstr "If everything went well, the messages you send in Olvid to your Bot are transmitted to your OpenClaw agent."
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:90
+msgid "Sécuriser son installation"
+msgstr "Securing your installation"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:93
+msgid "***Section en cours de rédaction***"
+msgstr "Section under construction"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:95
+msgid "OpenClaw dans Docker"
+msgstr "OpenClaw in Docker"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:96
+msgid "Mise en place d'Ollama"
+msgstr "Setting up Ollama"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:97
+msgid "Installation du channel Olvid"
+msgstr "Installation of the Olvid channel"
+
+# translated using ollama
+#: ../../source/openclaw/openclaw.md:98
+msgid "Configuration d'OpenClaw"
+msgstr "Configuration of OpenClaw"
+

@@ -13,6 +13,7 @@ self
 python/python
 js/js
 n8n/n8n
+openclaw/openclaw
 cli/cli
 daemon/daemon
 glossary
