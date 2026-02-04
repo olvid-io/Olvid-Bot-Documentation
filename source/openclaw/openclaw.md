@@ -68,7 +68,7 @@ Pour terminer et quitter la CLI Olvid utilisez la commande `exit` ou `ctrl+d`.
 On peut ensuite passer à l'installation du plugin Olvid dans OpenClaw.
 ```shell
 openclaw plugins install olvid-channel
-openclaw plugins enable olvid-chanel
+openclaw plugins enable olvid-channel
 ```
 
 Pour finir on configure le channel Olvid pour qu'il utilise l'identité créée précédemment dans notre daemon.
