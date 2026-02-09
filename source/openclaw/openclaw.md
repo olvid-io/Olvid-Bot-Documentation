@@ -77,10 +77,10 @@ openclaw channels add
 ```
 
 Pour le paramètre **daemonUrl** utilisez:
-- 'http://localhost:50051' si OpenClaw tourne localement.
-- 'http://daemon:50051' si OpenClaw et daemon tournent dans le même projet docker compose.
+- **http://localhost:50051** si OpenClaw tourne localement.
+- **http://daemon:50051** si OpenClaw et daemon tournent dans le même projet docker compose.
 
-Pour le paramètre **clientKey** utilisez la clé client qu'on vous a communiqué lors de l'installation, ou le résultat de la commande suivnte:
+Pour le paramètre **clientKey** utilisez la clé client qu'on vous a communiqué lors de l'installation, ou le résultat de la commande suivante:
 ```shell
 docker compose run --rm cli key get -f key
 ```
@@ -92,7 +92,7 @@ Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot 
 
 ***Section en cours de rédaction***
 
-- OpenClaw dans Docker
-- Mise en place d'Ollama
-- Installation du channel Olvid
+- OpenClaw dans Docker: [](https://docs.openclaw.ai/install/docker)
+- Mise en place d'Ollama: [](https://docs.ollama.com/integrations/openclaw#quick-setup)
+- Installation du channel Olvid: [](https://doc.bot.olvid.io/openclaw)
 - Configuration d'OpenClaw
