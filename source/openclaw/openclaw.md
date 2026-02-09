@@ -1,8 +1,5 @@
 # 🦞 OpenClaw
 
-:::{note}
-:::
-
 :::{warning}
 Cette intégration est encore en cours de développement, et pourrait changer sans préavis.
 
@@ -92,7 +89,7 @@ Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot 
 
 ***Section en cours de rédaction***
 
-- OpenClaw dans Docker: [](https://docs.openclaw.ai/install/docker)
-- Mise en place d'Ollama: [](https://docs.ollama.com/integrations/openclaw#quick-setup)
-- Installation du channel Olvid: [](https://doc.bot.olvid.io/openclaw)
+- OpenClaw dans Docker: [https://docs.openclaw.ai/install/docker](https://docs.openclaw.ai/install/docker)
+- Mise en place d'Ollama: [https://docs.ollama.com/integrations/openclaw#quick-setup](https://docs.ollama.com/integrations/openclaw#quick-setup)
+- Installation du channel Olvid: [https://doc.bot.olvid.io/openclaw](https://doc.bot.olvid.io/openclaw)
 - Configuration d'OpenClaw

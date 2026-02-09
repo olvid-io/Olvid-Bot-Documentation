@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-09 11:58+0100\n"
+"POT-Creation-Date: 2026-02-09 14:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -152,18 +152,18 @@ msgstr "Section under construction"
 
 # translated using ollama
 #: ../../source/openclaw/openclaw.md:95
-msgid "OpenClaw dans Docker: [](https://docs.openclaw.ai/install/docker)"
-msgstr "OpenClaw in Docker: [](https://docs.openclaw.ai/install/docker)"
+msgid "OpenClaw dans Docker: [https://docs.openclaw.ai/install/docker](https://docs.openclaw.ai/install/docker)"
+msgstr "OpenClaw in Docker: [https://docs.openclaw.ai/install/docker](https://docs.openclaw.ai/install/docker)"
 
 # translated using ollama
 #: ../../source/openclaw/openclaw.md:96
-msgid "Mise en place d'Ollama: [](https://docs.ollama.com/integrations/openclaw#quick-setup)"
-msgstr "Setting up Ollama: [](https://docs.ollama.com/integrations/openclaw#quick-setup)"
+msgid "Mise en place d'Ollama: [https://docs.ollama.com/integrations/openclaw#quick-setup](https://docs.ollama.com/integrations/openclaw#quick-setup)"
+msgstr "Setting up Ollama: [https://docs.ollama.com/integrations/openclaw#quick-setup](https://docs.ollama.com/integrations/openclaw#quick-setup)"
 
 # translated using ollama
 #: ../../source/openclaw/openclaw.md:97
-msgid "Installation du channel Olvid: [](https://doc.bot.olvid.io/openclaw)"
-msgstr "Installation of the Olvid channel: [ ](https://doc.bot.olvid.io/openclaw)"
+msgid "Installation du channel Olvid: [https://doc.bot.olvid.io/openclaw](https://doc.bot.olvid.io/openclaw)"
+msgstr "Installation of the Olvid channel: [https://doc.bot.olvid.io/openclaw](https://doc.bot.olvid.io/openclaw)"
 
 # translated using ollama
 #: ../../source/openclaw/openclaw.md:98
