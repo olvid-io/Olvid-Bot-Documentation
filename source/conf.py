@@ -3,7 +3,7 @@ from olvid import __version__ as olvid_version
 from olvid import __docker_version__ as docker_version
 
 project = 'Olvid Bots'
-copyright = '2024, Olvid'
+copyright = '2026, Olvid'
 author = 'Olvid'
 version = olvid_version
 release = olvid_version
