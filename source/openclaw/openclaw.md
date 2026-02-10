@@ -62,27 +62,23 @@ identity new Claw Bot
 Pour terminer et quitter la CLI Olvid utilisez la commande `exit` ou `ctrl+d`.
 
 ### Olvid Channel
-On peut ensuite passer à l'installation du plugin Olvid dans OpenClaw.
+On peut ensuite passer à l'installation et la configuration du plugin Olvid dans OpenClaw.
 ```shell
 openclaw plugins install olvid-channel
 openclaw plugins enable olvid-channel
+openclaw channels add --channel olvid --url DAEMON_URL --token BOT_TOKEN 
 ```
 
-Pour finir on configure le channel Olvid pour qu'il utilise l'identité créée précédemment dans notre daemon.
-```shell
-openclaw channels add
-```
+⚠️ Il faut remplacer *DAEMON_URL* par http://daemon:50051 (ou http://localhost:50051 pour une installation en local) et BOT_TOKEN par la clé client créée auparavant.
 
-Pour le paramètre **daemonUrl** utilisez:
-- **http://localhost:50051** si OpenClaw tourne localement.
-- **http://daemon:50051** si OpenClaw et daemon tournent dans le même projet docker compose.
+C'est bon ! Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot sont transmis à votre agent OpenClaw. 🥳 
 
-Pour le paramètre **clientKey** utilisez la clé client qu'on vous a communiqué lors de l'installation, ou le résultat de la commande suivante:
+:::{note}
+Si vous avez perdu votre clé client utilisez la commande suivante.
 ```shell
 docker compose run --rm cli key get -f key
 ```
-
-Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot sont transmis à votre agent OpenClaw. 
+:::
 
 ## Sécuriser son installation 
 [//]: # (TODO )
@@ -93,3 +89,10 @@ Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot 
 - Mise en place d'Ollama: [https://docs.ollama.com/integrations/openclaw#quick-setup](https://docs.ollama.com/integrations/openclaw#quick-setup)
 - Installation du channel Olvid: [https://doc.bot.olvid.io/openclaw](https://doc.bot.olvid.io/openclaw)
 - Configuration d'OpenClaw
+
+### Configuration d'OpenClaw
+
+Si votre instance OpenClaw est utilisée par plusieurs canaux ou utilisateurs utilisez l'option **per-account-channel** pour le champ *session.dmScope*.  
+Cela permet de créer une session par discussion Olvid et de ne pas mélanger les contextes.  
+
+[https://docs.openclaw.ai/gateway/security/index#secure-dm-mode-recommended](https://docs.openclaw.ai/gateway/security/index#secure-dm-mode-recommended)
