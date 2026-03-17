@@ -26,7 +26,7 @@ class ChatBot(OlvidClient):
 	async def post_welcome_message(self, discussion: datatypes.Discussion):
 		greeting: str = secrets.choice(['Hi', 'Hello'])
 		if discussion.is_contact_discussion():
-			contact: datatypes.Contact = await discussion.get_contact()
+			contact: datatypes.Contact = await discussion.get_contact(self)
 			name: str = f"{' '.join([contact.details.first_name, contact.details.last_name])}"
 		else:
 			name: str = f"everyone"

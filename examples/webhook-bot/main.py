@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from olvid import OlvidClient, datatypes
+from olvid import datatypes
 
 from ChatBot import ChatBot
 from NonceHolder import NonceHolder
@@ -30,7 +30,6 @@ async def main():
 	settings: datatypes.IdentitySettings = await chat_bot.settings_identity_get()
 	settings.invitation = datatypes.IdentitySettings.AutoAcceptInvitation(True, True, True, True)
 	settings.message_retention = datatypes.IdentitySettings.MessageRetention(discussion_count=5, clean_locked_discussions=True)
-	settings.keycloak = datatypes.IdentitySettings.Keycloak(auto_invite_new_members=True)
 	await chat_bot.settings_identity_set(settings)
 
 	logger.info("Ready to start !")
