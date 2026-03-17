@@ -31,6 +31,8 @@ Nous vous invitons à suivre notre [**guide de migration**](/migrations/migratio
   - **Invitation**: ajout du champ optionnel *mediatorId* contenant l'id du contact ayant initialisé la présentation.
 - **Python Client**
   - Améliorations et simplification du framework, voir le [guide de migration](/migrations/migration_1_2).
+- **N8N**
+  - Ajout de l'opération `Send a message and wait for approval or response` pour ajouter une validation manuelle dans Olvid (message ou ajout de réaction).
 
 ### Suppressions
 - **Python Client**

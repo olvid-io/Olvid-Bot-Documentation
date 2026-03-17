@@ -85,10 +85,8 @@ Dans cette partie vous allez déployer un daemon Olvid et une instance N8N à l'
          - N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
          - NODES_EXCLUDE=["n8n-nodes-base.executeCommand","n8n-nodes-base.readWriteFile"]
          - N8N_REINSTALL_MISSING_PACKAGES=true
-         - WEBHOOK_URL=
        volumes:
          - ./n8n_data:/home/node/.n8n
-       entrypoint: sh -c "npm install @olvid/bot-node@0.0.15-alpha && tini -- /docker-entrypoint.sh" #* You can update the version of bot-node here
    ```
 
 4. **Créer** les conteneurs avec la commande suivante.
