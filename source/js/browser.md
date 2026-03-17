@@ -45,7 +45,7 @@ services:
     entrypoint: "olvid-cli"
     environment:
       - OLVID_ADMIN_CLIENT_KEY=SetARandomValue
-      - OLVID_DAEMON_TARGET=daemon:50051
+      - OLVID_DAEMON_URL=http://daemon:50051
     stdin_open: true
     tty: true
     profiles: ["cli"]

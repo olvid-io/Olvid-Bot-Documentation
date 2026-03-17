@@ -164,10 +164,10 @@ Si le daemon utilise également du chiffrement [TLS](#configuration-tls) remplac
 :::
 
 ### Configuration du Client Python
-Pour se connecter à un daemon en utilisant https, il suffit d'ajouter le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_TARGET*.
+Pour se connecter à un daemon en utilisant https, il suffit d'utiliser le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_URL*.
 
 ### Configuration du Client Javascript
-Pour se connecter à un daemon en utilisant https, il suffit d'ajouter le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_TARGET*.
+Pour se connecter à un daemon en utilisant https, il suffit d'utiliser le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_URL*.
 
 ## Configuration TLS
 

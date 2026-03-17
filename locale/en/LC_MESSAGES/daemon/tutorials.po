@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 11:33+0100\n"
+"POT-Creation-Date: 2026-03-16 13:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -255,8 +255,8 @@ msgstr "Python Client configuration"
 
 # translated using ollama
 #: ../../source/daemon/tutorials.md:167 ../../source/daemon/tutorials.md:170
-msgid "Pour se connecter à un daemon en utilisant https, il suffit d'ajouter le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_TARGET*."
-msgstr "To connect to a daemon using https, simply add the prefix `https://` in the value of the environment variable *OLVID_DAEMON_TARGET*."
+msgid "Pour se connecter à un daemon en utilisant https, il suffit d'utiliser le préfixe `https://` dans la valeur de la variable d'environnement *OLVID_DAEMON_URL*."
+msgstr "To connect to a daemon using https, simply use the prefix `https://` in the value of the environment variable *OLVID_DAEMON_URL*."
 
 # translated using ollama
 #: ../../source/daemon/tutorials.md:169 ../../source/daemon/tutorials.md:273
@@ -558,100 +558,100 @@ msgstr "Verification of a backup"
 # translated using ollama
 #: ../../source/daemon/tutorials.md:453
 msgid "Pour valider le fonctionnement des sauvegardes vous pouvez accéder au contenu de votre sauvegarde à l'aide de la [CLI](/cli/cli) et de la commande `backup get $BACKUP_KEY`, en remplaçant *$BACKUP_KEY* par votre clé de sauvegarde."
-msgstr "To validate backups are working properly, you can access your backup content using the [CLI](/cli/cli) and the command `backup get $BACKUP_KEY`, replacing *$BACKUP\_KEY* with your backup key."
+msgstr "To validate backups are working properly, you can access your backup content using the [CLI](/cli/cli) and the command `backup get $BACKUP_KEY`, replacing *$BACKUP_KEY* with your backup key."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:459
+#: ../../source/daemon/tutorials.md:455
 msgid "Restauration d'une sauvegarde"
 msgstr "Restoring a backup"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:462
+#: ../../source/daemon/tutorials.md:458
 msgid "La restauration d'une sauvegarde n'est pas une action triviale et ne doit être effectuée qu'en dernier recours. Vous perdrez tous vos messages et pièces jointes stockés dans le daemon au cours de ce processus. Seuls les éléments enregistrés à l'aide de l'API de stockage, les clés client et les settings seront encore disponibles."
 msgstr "Restoring a backup is not a trivial action and should only be performed as a last resort. You will lose all your messages and attachments stored in the daemon during this process. Only items saved using the storage API, client keys, and settings will still be restored."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:467
+#: ../../source/daemon/tutorials.md:463
 msgid "Une procédure de restauration de sauvegarde classique devrait se faire comme suit."
 msgstr "A classic backup restoration procedure should be done as follows."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:468
+#: ../../source/daemon/tutorials.md:464
 msgid "Valider que le daemon d'origine ne tourne plus"
 msgstr "Ensure that the original daemon is no longer running"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:469
+#: ../../source/daemon/tutorials.md:465
 msgid "Dans la nouvelle installation exécuter la commande [CLI](/cli/cli) suivante: `backup restore daemon $BACKUP_KEY`."
 msgstr "In a new installation, run the following [CLI](/cli/cli) command: `backup restore daemon $BACKUP_KEY`."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:470
+#: ../../source/daemon/tutorials.md:466
 msgid "Valider la restauration des identités à l'aide de la commande cli: `identity get`"
 msgstr "Validate identity restoration using the CLI command: `identity get`"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:472
+#: ../../source/daemon/tutorials.md:468
 msgid "Commandes utiles"
 msgstr "Useful Commands"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:473
+#: ../../source/daemon/tutorials.md:469
 msgid "Voici une liste non-exhaustive de commandes [CLI](/cli/cli) en lien avec les sauvegardes."
 msgstr "Here is a non-exhaustive list of [CLI](/cli/cli) commands related to backups."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:474
+#: ../../source/daemon/tutorials.md:470
 msgid "`backup key get`: afficher la clé de sauvegarde actuelle."
 msgstr "`backup key get`: display the current backup key."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:475
+#: ../../source/daemon/tutorials.md:471
 msgid "`backup now`: forcer le lancement d'une sauvegarde."
 msgstr "`backup now`: force the launch of a backup."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:476
+#: ../../source/daemon/tutorials.md:472
 msgid "`backup get $BACKUP_KEY`: affiche le contenu d'une sauvegarde"
 msgstr "`backup get $BACKUP_KEY`: displays the content of a backup"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:478
+#: ../../source/daemon/tutorials.md:474
 msgid "`backup restore daemon $BACKUP_KEY`: restaurer la totalité d'une sauvegarde dans son état le plus récent."
 msgstr "`backup restore daemon $BACKUP_KEY`: restore a backup to its latest state in full."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:479
+#: ../../source/daemon/tutorials.md:475
 msgid "`backup restore admin $BACKUP_KEY`: restaure les clés clients administrateur et le stockage associé."
 msgstr "`backup restore admin $BACKUP_KEY`: restores admin client keys and associated storage."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:480
+#: ../../source/daemon/tutorials.md:476
 msgid "`backup restore admin $BACKUP_KEY $SNAPHOST_ID`: restaure une identité en particulier, à un état (snapshot) donné (contact, groupes, stockage, clé clients, settings). Les identifiants des snapshots sont disponibles dans la description des sauvegardes."
 msgstr "`backup restore admin $BACKUP_KEY $SNAPHOST_ID`: restores a particular identity to a given snapshot (contact, groups, storage, client keys, settings). The snapshot IDs are available in the backup descriptions."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:482
+#: ../../source/daemon/tutorials.md:478
 msgid "Configuration JVM"
 msgstr "JVM Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:486
+#: ../../source/daemon/tutorials.md:482
 msgid "Il est possible de passer des options arbitraires à la JVM qui fait tourner votre daemon. Pour cela, vous pouvez utiliser la variable d'environnement **JAVA_FLAGS**."
 msgstr "It is possible to pass arbitrary options to the JVM running your daemon. To do this, you can use the environment variable **JAVA\\_FLAGS**."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:489
+#: ../../source/daemon/tutorials.md:485
 msgid "Configuration proxy"
 msgstr "Proxy Configuration"
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:490
+#: ../../source/daemon/tutorials.md:486
 msgid "Pour permettre au daemon d'utiliser un proxy HTTP, il faut passer des paramètres spécifiques a la JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840))."
 msgstr "To allow the daemon to use an HTTP proxy, specific parameters must be passed to the JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840))."
 
 # translated using ollama
-#: ../../source/daemon/tutorials.md:492
+#: ../../source/daemon/tutorials.md:488
 msgid "Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000, avec usage d'un login et mot de passe. Cette configuration est adaptable à vos besoins."
 msgstr "Here is a possible example of configuration to use a fictional proxy accessible as *proxy.example.com* on port 8000, using a login and password. This configuration can be adapted to your needs."
 

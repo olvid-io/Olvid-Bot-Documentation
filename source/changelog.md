@@ -21,7 +21,6 @@ Nous vous invitons à suivre notre [**guide de migration**](/migrations/migratio
 - Ajout de paramètres pour configurer le comportement de chaque identité sur un daemon (acceptation automatique des invitations, nettoyage des messages, ajout automatique des nouveaux membres de keycloak).
 - Implémentation d'un nouveau mécanisme d'authentification des bots dans Keycloak qui résout les problèmes de déconnexion.
 - Nombreuses améliorations de performance et de stabilité. 
-- En phase de test: ajout de la possibilité de piloter le plugin Olvid dans keycloak depuis un bot. (contactez nous pour plus d'informations: [bot@olvid.io](mailto:bot@olvid.io)).
 
 ### Ajouts
 - **Daemon**
@@ -29,7 +28,7 @@ Nous vous invitons à suivre notre [**guide de migration**](/migrations/migratio
   - **BackupAdminService**: nouveau service pour afficher et/ou restaurer des [sauvegardes](/daemon/tutorials.md#sauvegardes).
   - **DiscussionCommandService**: ajout de la commande *DiscussionDownloadPhoto*
   - **ToolCommandService**: nouvelles commandes pour vérifier la version du daemon et tester la validité des clés client.
-  - **KeycloakCommandService**: ajout de la commande *KeycloakGetApiCredentials* pour piloter au plugin Olvid dans keycloak (en phase de tests).
+  - **Invitation**: ajout du champ optionnel *mediatorId* contenant l'id du contact ayant initialisé la présentation.
 - **Python Client**
   - Améliorations et simplification du framework, voir le [guide de migration](/migrations/migration_1_2).
 

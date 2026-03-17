@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 11:41+0100\n"
+"POT-Creation-Date: 2026-03-17 12:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -566,10 +566,6 @@ msgstr ""
 
 #: ../../olvid-cli contact get:1 kc
 msgid "last list user timestamp"
-msgstr ""
-
-#: ../../olvid-cli credentials:1 kc
-msgid "access your keycloak credentials to use keycloak admin API"
 msgstr ""
 
 #: ../../olvid-cli kc unbind:1

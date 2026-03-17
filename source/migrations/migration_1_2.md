@@ -12,35 +12,29 @@ d'une version 1.X.X vers une version 2.0.0 ou supérieure.
 [//]: # (TODO add somewhere a way to create a community: write us, ask us, ...)
 
 ### Python
-#### Environnement
-Les variables d'environnement de configuration des différents clients ont été normalisées. 
-Cela peut induire des changements dans les variables d'environnement des fichiers *docker-compose.yaml*, ou dans les fichiers *.env*.
+#### OlvidClient
+##### Configuration
+La configuration des différents clients Olvid a été normalisées.
+Cela peut induire des changements dans les variables d'environnement des fichiers *docker-compose.yaml*, dans les fichiers *.env*, ou dans l'instanciation des classes *OlvidClient* et *OlvidAdminClient*. 
 
-- Les variables d'environnement *DAEMON_HOSTNAME* et *DAEMON_PORT* ont été supprimées au profit de la variable *OLVID_DAEMON_TARGET*. 
-La nouvelle variable correspond à l'URL complète d'accès au daemon.
+- Les variables d'environnement *DAEMON_HOSTNAME*, *DAEMON_PORT* et *OLVID_DAEMON_TARGET* ont été supprimées au profit de la variable *OLVID_DAEMON_URL*.
+  La nouvelle variable correspond à l'URL complète d'accès au daemon.
 
 ```dotenv
-OLVID_DAEMON_TARGET=http://daemon:50051
+OLVID_DAEMON_URL=http://daemon:50051
 ```
 
-- Les fichiers *.client_key* et *.admin_client_key* ne sont plus supportés, à la place utilisez un fichier *.env* avec les variables suivantes:
+:::{note}
+L'attribut d'OlvidClient *daemon_target* a également été renommé *daemon_url*.  
+:::
+
+- Les fichiers de configuration *.client_key* et *.admin_client_key* ne sont plus supportés, utilisez un fichier *.env* à la place, avec les variables suivantes:
 ```{code-block} dotenv
 OLVID_CLIENT_KEY=00000000-0000-0000-0000-000000000000
 OLVID_ADMIN_CLIENT_KEY=00000000-0000-0000-0000-000000000000
 ```
 
-#### OlvidBot
-Les classes *OlvidBot* et *OlvidClient* ont été fusionnées, vous pouvez remplacer tous les usages de la classe *OlvidBot* par *OlvidClient*.
-```python
-from olvid import OlvidClient, datatypes
-
-class Bot(OlvidClient):
-    @OlvidClient.command("!help")
-    async def help_cmd(self, message: datatypes.Message):
-        await self.message_send(discussion_id=message.discussion_id, body="Help")
-```
-
-#### OlvidClient
+##### Méthodes
 - les méthodes *add_command* et *remove_command* sont supprimées et remplacées par *add_listener* et *remove_listener*.
 ```python
 from olvid import OlvidClient, datatypes, listeners
@@ -62,6 +56,17 @@ async def change_identity_photo(photo_path: str):
 
 async def change_group_photo(group_id: int, photo_path: str):
     await client.group_set_photo_file(group_id=group_id, file_path=photo_path)
+```
+
+#### OlvidBot
+Les classes *OlvidBot* et *OlvidClient* ont été fusionnées, vous pouvez remplacer tous les usages de la classe *OlvidBot* par *OlvidClient*.
+```python
+from olvid import OlvidClient, datatypes
+
+class Bot(OlvidClient):
+    @OlvidClient.command("!help")
+    async def help_cmd(self, message: datatypes.Message):
+        await self.message_send(discussion_id=message.discussion_id, body="Help")
 ```
 
 #### datatypes
@@ -111,10 +116,23 @@ Pour en savoir plus sur l'usage des listeners rendez-vous ici: [](/python/tutori
 - le paramètre *count* est maintenant strictement positif, il faut maintenant utiliser la valeur 0 pour avoir un listener infini (et plus -1). 
 
 ### Javascript
-La version de la librairie protobuf a été mise à jour dans les paquet npm *@olvid/bot-node* et *@olvid/bot-web*. Cela a un impact sur l'usage du code généré.
-Pour en savoir plus sur ces changements rendez-vous sur le guide de migration de [bufbuild](https://blog.bufbuild.ru/protobuf-es-v2/). 
+#### Configuration
+La configuration des différents clients Olvid a été normalisées.
+Cela peut induire des changements dans les variables d'environnement des fichiers *docker-compose.yaml*, dans les fichiers *.env*, ou dans l'instanciation des classes *OlvidClient* et *OlvidAdminClient*.
+- La variable d'environnement *OLVID_DAEMON_TARGET* ont été remplacée par la variable *OLVID_DAEMON_URL*. La nouvelle variable correspond à l'URL complète d'accès au daemon.
+
+```dotenv
+OLVID_DAEMON_URL=http://daemon:50051
+```
+
+:::{note}
+L'attribut d'OlvidClient *serverUrl* a également été renommé *daemonUrl*.  
+:::
 
 #### Protobuf
+La version de la librairie protobuf a été mise à jour dans les paquet npm *@olvid/bot-node* et *@olvid/bot-web*. Cela a un impact sur l'usage du code généré.
+Pour en savoir plus sur ces changements rendez-vous sur le guide de migration de [bufbuild](https://blog.bufbuild.ru/protobuf-es-v2/).
+
 Le changement principal concerne la création de nouveaux objets protobuf
 ```{code-block} node
 import {OlvidClient} from "@olvid/bot-node";
@@ -122,6 +140,7 @@ import {create} from "@bufbuild/protobuf";
 
 let messageFilter = create(datatypes.MessageFilterSchema, {location: datatypes.MessageFilter_Location.HAVE})}
 ```
+
 
 #### tools
 Suppression des classes *tools.AutoInvitationBot*, tools.DiscussionRetentionPolicyBot, tools.SelfCleaningBot et tools.KeycloakAutoInvitationBot.  
@@ -240,3 +259,12 @@ async def get_discussion_settings(discussion_id: int):
 
 ##### Discussion
 - déplacement du message protobuf **DiscussionSettings** du fichier *discussion.proto* vers *settings.proto*, mais il reste dans le module `datatypes`, cela ne devrait donc pas affecter le code.
+
+### N8n
+:::{warning}
+Les nœuds Olvid pour n8n ont été remaniés en profondeur et pourraient donc en pas être rétrocompatibles. Nous vous recommandons de faire des sauvegardes de vos flows existants avant de mettre à jour le paquet.
+:::
+
+#### Credentials
+Les credentials Olvid ont été mis à jour. Si vos nœuds ne trouvent plus leur credentials, il faut en ajouter de nouveau et mettre à jour les credentials utilisés par chaque noeud Olvid.
+Pour créer vos nouveaux credential rendez-vous dans la section [](/n8n/n8n.md#configurer-le-noeud-olvid).

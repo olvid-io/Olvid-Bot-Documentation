@@ -9,10 +9,6 @@
 
 ## Installation
 
-:::{warning}
-Le noeud Olvid pour n8n est encore en phase de test. En cas de soucis, vous pouvez ouvrir un ticket sur [GitHub](https://github.com/olvid-io/n8n-nodes-olvid/issues/new/choose) ou nous envoyer un email à [bot@olvid.io](mailto:bot@olvid.io).
-:::
-
 ### Installation d'un daemon et d'une instance N8N
 
 Dans cette partie vous allez déployer un daemon Olvid et une instance N8N à l'aide de docker et docker-compose.
@@ -65,7 +61,7 @@ Dans cette partie vous allez déployer un daemon Olvid et une instance N8N à l'
        image: olvid/bot-python-runner:{{docker_version}}
        environment:
          - OLVID_ADMIN_CLIENT_KEY=${OLVID_ADMIN_KEY}
-         - OLVID_DAEMON_TARGET=daemon:50051
+         - OLVID_DAEMON_URL=http://daemon:50051
        stdin_open: true
        tty: true
        entrypoint: "olvid-cli"
@@ -87,9 +83,9 @@ Dans cette partie vous allez déployer un daemon Olvid et une instance N8N à l'
          - N8N_DIAGNOSTICS_ENABLED=false
          - N8N_PUBLIC_API_DISABLED=true
          - N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
-         - WEBHOOK_URL=https://n8n.olvid.cloud/
          - NODES_EXCLUDE=["n8n-nodes-base.executeCommand","n8n-nodes-base.readWriteFile"]
          - N8N_REINSTALL_MISSING_PACKAGES=true
+         - WEBHOOK_URL=
        volumes:
          - ./n8n_data:/home/node/.n8n
        entrypoint: sh -c "npm install @olvid/bot-node@0.0.15-alpha && tini -- /docker-entrypoint.sh" #* You can update the version of bot-node here
@@ -129,9 +125,7 @@ Vous avez lancé un daemon Olvid et une instance N8N qui tournent en fond, il fa
    :width: 50%
    ```
 
-6. **Rafraîchir** la page, avant de **retourner** sur la page principale pour **créer** votre premier workflow.
-
-**Bien joué 🎉!**
+6. **Retourner** sur la page principale pour **créer** votre premier workflow.
 
 Le noeud Olvid devrait maintenant être disponible dans vos workflows.
 
@@ -189,4 +183,4 @@ Maintenant que vous avez installé le noeud Olvid, avant de l'utiliser, il vous 
 
 **Félicitation 🎉!**
 
-Vous pouvez maintenant commencer à créer vos workflow intégrés dans Olvid ! 
+Vous pouvez maintenant utiliser les noeuds Olvid dans vos workflow ! 
