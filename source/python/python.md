@@ -44,7 +44,7 @@ Pour cela, on utilise des variables d'environnement ou un fichier *.env*.
 Remplacez la clé client par celle que vous avez créée lors de la mise en place de votre daemon, et l'adresse du daemon si nécessaire.
 
 ```shell
-echo OLVID_DAEMON_TARGET=localhost:50051 > .env
+echo OLVID_DAEMON_URL=http://localhost:50051 > .env
 echo OLVID_CLIENT_KEY=ReplaceWithYourClientKey >> .env
 ```
 

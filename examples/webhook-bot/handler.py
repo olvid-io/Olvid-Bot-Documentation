@@ -31,7 +31,7 @@ async def handler(client: OlvidClient, discussion: datatypes.Discussion, json_pa
 		message_body = json_payload.get("text")
 		await discussion.post_message(client=client, body=message_body, attachments_filename_with_payload=filenames_with_attachments)
 		return web.Response(status=200)
-	except Exception as e:
+	except Exception:
 		logger.exception("Cannot parse json payload")
 		return web.Response(status=400)
 

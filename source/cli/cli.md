@@ -59,14 +59,14 @@ docker pull olvid/bot-python-runner:{{docker_version}}
 **Configuration**
 ```shell
 export OLVID_ADMIN_CLIENT_KEY=adminClientKey
-export OLVID_DAEMON_TARGET=localhost:50051
+export OLVID_DAEMON_URL=http://localhost:50051
 ```
 
 **ou**
 
 ```shell
 echo OLVID_ADMIN_CLIENT_KEY=adminClientKey >> .env
-echo OLVID_DAEMON_TARGET=localhost:50051 >> .env
+echo OLVID_DAEMON_URL=http://localhost:50051 >> .env
 ```
 
 **Lancement**
@@ -86,7 +86,7 @@ olvid-cli
   :substitutions:
 docker run --rm -it \
   -e OLVID_ADMIN_CLIENT_KEY=adminClientKey \
-  -e OLVID_DAEMON_TARGET=localhost:50051 \
+  -e OLVID_DAEMON_URL=http://localhost:50051 \
   olvid/bot-python-runner:{{docker_version}}
 ```
 :::

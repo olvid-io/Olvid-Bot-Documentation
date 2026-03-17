@@ -120,6 +120,7 @@ msgstr "⚠️ You need to replace *DAEMON_URL* with <http://daemon:50051> (or <
 msgid "C'est bon ! Si tout s'est bien passé les messages que vous envoyez dans Olvid à votre Bot sont transmis à votre agent OpenClaw. 🥳"
 msgstr "That's great! If everything went well, the messages you send to your Bot in Olvid are forwarded to your OpenClaw agent. 🥳"
 
+# translated using ollama
 #: ../../source/openclaw/openclaw.md:77
 msgid "Si vous avez perdu votre clé client utilisez la commande suivante."
 msgstr "If you have lost your client key, use the following command."

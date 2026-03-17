@@ -48,13 +48,13 @@ Si vous venez de lancer le daemon, patientez un peu avant de réessayer, il est 
 Si le daemon semble fonctionner, vérifiez que le port 50051 est exposé ou accessible depuis l'environnement d'exécution de votre programme.
 
 Dans le cas d'une configuration différente de celle de notre page d'installation, pensez à stipuler l'adresse du daemon.
-Pour cela, vous pouvez utiliser la variable `OLVID_DAEMON_TARGET` en tant que variable d'environnement ou dans un fichier `.env`.
+Pour cela, vous pouvez utiliser la variable `OLVID_DAEMON_URL` en tant que variable d'environnement ou dans un fichier `.env`.
 
 Il faut spécifier le nom de domaine ou l'adresse IP du daemon, suivie du port. Par exemple :
 ```shell
-OLVID_DAEMON_TARGET=localhost:50051
+OLVID_DAEMON_URL=http://localhost:50051
 # ou
-OLVID_DAEMON_TARGET=daemon:50051
+OLVID_DAEMON_URL=http://daemon:50051
 ```
 :::
 
