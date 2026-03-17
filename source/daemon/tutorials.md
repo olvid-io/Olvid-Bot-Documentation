@@ -134,9 +134,6 @@ Démarrez la CLI et créez votre nouvelle identité en utilisant le lien de conf
 0 > identity kc new https://configuration.olvid.io/#AAAAAAAAA.....
 # client is automatically created
 identity creation > Here is your client key to connect to daemon with this identity: 00000000-0000-0000-0000-000000000000
-# save your client key and enter yes to finish process
-identity creation > Did you saved your client key ? (y/N)
-> yes
 ```
 :::
 
@@ -430,19 +427,16 @@ Veuillez examiner attentivement les recommandations et avertissements suivants a
 Il est impératif de les manipuler avec la même rigueur et niveau de sécurité.
 - Les sauvegardes mentionnées ici sont des sauvegardes Olvid, qui ne contiennent pas de messages ou de pièces jointes
 Ces sauvegardes vous permettent de restaurer votre carnet d'adresses, vos groupes et votre stockage, mais pas le contenu des discussions (messages et pièces jointes).
-- Les sauvegardes sont... des sauvegardes. 
-Vous devrez les conserver dans un endroit sûr pour pouvoir les réutiliser si nécessaire.
-Dans un environnement de production, la meilleure pratique minimale serait de stocker les sauvegardes sur un disque séparé du reste du système.
-- La restauration d'une sauvegarde sur un autre daemon et l'exécution simultanée des deux entraînera un comportement imprévisible.
+- Les sauvegardes sont... des sauvegardes. Vous devrez les conserver dans un endroit sûr pour pouvoir les réutiliser si nécessaire.
+- La restauration d'une sauvegarde sur un autre daemon et l'exécution simultanée sur l'ancienne instance entraînera un comportement imprévisible.
 :::
 
 ### Configuration des sauvegardes automatiques
 
-Le daemon crée automatiquement et périodiquement des sauvegardes.
-Les sauvegardes sont créées chaque fois que cela est nécessaire (votre bot a ajouté un contact, rejoint ou quitte un groupe, ...).
-Ces sauvegardes sont stockées dans le répertoire */daemon/backups*.
+Le daemon crée automatiquement des sauvegardes chaque fois que cela est nécessaire (votre bot a ajouté un contact, rejoint ou quitte un groupe, ...).
+Ces sauvegardes sont stockées sur un serveur Olvid, et sont accessibles à l'aide d'une clé. Cette clé est accessible à l'aide de la commande cli `backup key get`.
 
-Si vous souhaitez conserver ces sauvegardes, vous devez monter le répertoire */daemon/backups* en tant que volume.
+La clé de sauvegarde est également stockée dans le dossier */daemon/backups*. Vous pouvez accéder au fichier en montant le répertoire */daemon/backups* en tant que volume.
 Voici un exemple de fichier *docker-compose.yaml*.
 
 ```{code-block} yaml
@@ -455,49 +449,31 @@ services:
       - ./backups:/daemon/backups
 ```
 
-Voici un exemple de l'arborescence du répertoire `/daemon/backups`.
-
-```
-| backups
-|  | 0001
-|  |  | backup-1041588600.bytes
-|  |  | backup-1569233400.bytes
-|  |  | backup_seed.txt
-```
-
-Chaque sous-répertoire (0001, 0002) doit contenir son propre fichier `backup_seed.txt`, sinon le daemon incrémentera et créera automatiquement un nouveau répertoire.
-Ce fichier de graine est nécessaire pour déchiffrer et restaurer les sauvegardes.
-Sans lui votre sauvegarde est inutilisable.
-
-À l'intérieur d'un sous-répertoire, le daemon crée et stocke jusqu'à 10 fichiers de sauvegarde avant de supprimer les plus anciens.
-Toutes ces sauvegardes sont nommées en utilisant l'horodatage de leur création.
+### Validation d'une sauvegarde
+Pour valider le fonctionnement des sauvegardes vous pouvez accéder au contenu de votre sauvegarde à l'aide de la [CLI](/cli/cli) et de la commande `backup get $BACKUP_KEY`, en remplaçant *$BACKUP_KEY* par votre clé de sauvegarde.
 
 ### Restauration d'une sauvegarde
 
 :::{danger}
 La restauration d'une sauvegarde n'est pas une action triviale et ne doit être effectuée qu'en dernier recours.
 Vous perdrez tous vos messages et pièces jointes stockés dans le daemon au cours de ce processus.
-Seuls les éléments enregistrés à l'aide de l'API de stockage seront encore disponibles.
+Seuls les éléments enregistrés à l'aide de l'API de stockage, les clés client et les settings seront encore disponibles.
 :::
 
-Pour restaurer une sauvegarde, vous devez exécuter la commande suivante depuis le repertoire qui contient votre daemon habituellement.
-Vérifiez bien que le répertoire data est vide avant de lancer une restauration, autrement, elle échouera. 
+Une procédure de restauration de sauvegarde classique devrait se faire comme suit.
+- Valider que le daemon d'origine ne tourne plus
+- Dans la nouvelle installation exécuter la commande [CLI](/cli/cli) suivante: `backup restore daemon $BACKUP_KEY`.
+- Valider la restauration des identités à l'aide de la commande cli: `identity get`
 
-```{code-block} bash
-  :substitutions:
-docker run --rm \
-    -v ./data:/daemon/data \
-    -v ./backups:/daemon/backups \
-    olvid/bot-daemon:{{docker_version}} -r backups/0001/backup-1569233400.bytes | grep Backup
-```
+### Commandes utiles
+Voici une liste non-exhaustive de commandes [CLI](/cli/cli) en lien avec les sauvegardes. 
+- `backup key get`: afficher la clé de sauvegarde actuelle.
+- `backup now`: forcer le lancement d'une sauvegarde.
+- `backup get $BACKUP_KEY`: affiche le contenu d'une sauvegarde
 
-Lorsque vous voyez le message `💾 BackupRestoration: Finished backup restoration process`, vous pouvez arrêter le daemon (CTRL + C) et le démarrer normalement avec la commande `docker-compose up -d`.
-
-Vous pouvez maintenant vérifier à l'aide de la CLI que la restauration a été réussie.
-Vous devriez trouver vos identités, contacts, groupes, clés client, ...
-
-Les éléments stockés à l'aide de l'API de stockage du démon sont également accessibles par les moyens habituels.
-% todo:: ajouter un lien vers la documentation de l'API de stockage
+- `backup restore daemon $BACKUP_KEY`: restaurer la totalité d'une sauvegarde dans son état le plus récent.
+- `backup restore admin $BACKUP_KEY`: restaure les clés clients administrateur et le stockage associé.
+- `backup restore admin $BACKUP_KEY $SNAPHOST_ID`: restaure une identité en particulier, à un état (snapshot) donné (contact, groupes, stockage, clé clients, settings). Les identifiants des snapshots sont disponibles dans la description des sauvegardes. 
 
 ## Configuration JVM
 :::{versionadded} 1.0.1
@@ -509,8 +485,8 @@ Pour cela, vous pouvez utiliser la variable d'environnement **JAVA_FLAGS**.
 ### Configuration proxy
 Pour permettre au daemon d'utiliser un proxy HTTP, il faut passer des paramètres spécifiques a la JVM. (cf: [Proxy Properties](https://docs.oracle.com/en/java/javase/21/core/java-networking.html#GUID-2C88D6BD-F278-4BD5-B0E5-F39B2BFAA840)).
 
-Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000.
+Voici un exemple de configuration possible pour utiliser un proxy fictif accessible en tant que *proxy.example.com* sur le port 8000, avec usage d'un login et mot de passe. Cette configuration est adaptable à vos besoins. 
 
 ```shell
-JAVA_FLAGS=-Dhttps.proxyHost=proxy.example.com -Dhttps.proxyPort=8000
+JAVA_FLAGS=-Dhttps.proxyHost=proxy.example.com -Dhttps.proxyPort=8000 -Dhttp.proxyUser=username -Dhttp.proxyPassword=password
 ```

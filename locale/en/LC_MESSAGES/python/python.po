@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-22 16:18+0100\n"
+"POT-Creation-Date: 2026-01-07 16:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 # translated using ollama
 #: ../../source/python/python.md:3
@@ -36,11 +36,13 @@ msgstr "Prerequisites"
 
 # translated using ollama
 #: ../../source/python/python.md:16
+#, python-brace-format
 msgid "Si vous n'avez pas installé de {term}`daemon`, merci de suivre la section [](/index)."
 msgstr "If you have not installed a {term}`daemon`, please follow the [section](/index)."
 
 # translated using ollama
 #: ../../source/python/python.md:18
+#, python-brace-format
 msgid "Avant de commencer, vérifiez bien que vous avez une instance du daemon Olvid qui tourne, avec une {term}`identité` créée dessus, et une {term}`clé client` valide pour vous connecter en utilisant cette identité."
 msgstr "Before you start, make sure that you have an instance of the Olvid daemon running, with a {term}`identity` created on it, and a valid {term}`client key` to connect using this identity."
 
@@ -71,71 +73,56 @@ msgstr "Configuration"
 
 # translated using ollama
 #: ../../source/python/python.md:41
-msgid "Pour vous connecter au daemon, votre programme a besoin d'une clé client.  Cette clé peut être passée à votre programme en utilisant soit une variable d'environnement, soit un fichier *.env*."
-msgstr "To connect to the daemon, your program needs a client key. This key can be passed to your program using either an environment variable or a *.env* file."
+msgid "Pour se connecter à un daemon, votre programme a besoin de connaitre l'adresse du daemon et la clé client à utiliser. Pour cela, on utilise des variables d'environnement ou un fichier *.env*."
+msgstr "To connect to a daemon, your program needs to know the address of the daemon and the client key to use. To do this, we use environment variables or a .env file."
 
 # translated using ollama
-#: ../../source/python/python.md
-msgid "{octicon}`command-palette;1em` Fichier *.env*"
-msgstr "{octicon}`command-palette;1em` *.env* file"
+#: ../../source/python/python.md:44
+msgid "Remplacez la clé client par celle que vous avez créée lors de la mise en place de votre daemon, et l'adresse du daemon si nécessaire."
+msgstr "Replace the client key with the one you created when setting up your daemon, and the daemon address if necessary."
 
 # translated using ollama
-#: ../../source/python/python.md:47
-msgid "Créez un fichier *.env* en utilisant la commande suivante.  Rappelez-vous que ce fichier doit être dans le répertoire courant lorsque vous lancez votre programme."
-msgstr "Create a *.env* file using the following command. Remember that this file should be in the current directory when you run your program."
-
-# translated using ollama
-#: ../../source/python/python.md
-msgid "{octicon}`command-palette;1em` Variable d'environnement"
-msgstr "{octicon}`command-palette;1em` Environment variable"
-
-# translated using ollama
-#: ../../source/python/python.md:56
-msgid "Il est également possible d'exporter votre clé en tant que variable d'environnement.  Dans ce cas, il faut penser à l'exporter à chaque nouvelle session shell."
-msgstr "It is also possible to export your key as an environment variable. In this case, remember to export it at each new shell session."
-
-# translated using ollama
-#: ../../source/python/python.md:64
+#: ../../source/python/python.md:51
 msgid "Premier programme"
 msgstr "First program"
 
 # translated using ollama
-#: ../../source/python/python.md:65
+#: ../../source/python/python.md:52
 msgid "Afin de vérifier que tout fonctionne correctement, vous pouvez copier/coller ce programme dans un fichier `main.py`."
 msgstr "In order to verify that everything works correctly, you can copy/paste this program into a file named `main.py`."
 
 # translated using ollama
-#: ../../source/python/python.md:79
+#: ../../source/python/python.md:66
 msgid "Vous pouvez ensuite l'exécuter à l'aide de l'interpréteur Python."
 msgstr "You can then run it using the Python interpreter."
 
 # translated using ollama
-#: ../../source/python/python.md:84
+#: ../../source/python/python.md:71
 msgid "Si tout a bien été configuré, vous devriez voir s'afficher le nom d'usage de l'identité que vous avez créée sur le daemon."
 msgstr "If everything has been properly configured, you should see the display name of the identity you created on the daemon."
 
 # translated using ollama
-#: ../../source/python/python.md:86
+#: ../../source/python/python.md:73
 msgid "Sinon, rendez-vous dans notre section [](/python/troubleshooting)."
 msgstr "Alternatively, visit our [](/python/troubleshooting) section."
 
 # translated using ollama
-#: ../../source/python/python.md:88
+#: ../../source/python/python.md:75
 msgid "Premier Bot"
 msgstr "First Bot"
 
 # translated using ollama
-#: ../../source/python/python.md:90
+#: ../../source/python/python.md:77
 msgid "Pour commencer à coder votre premier bot, vous pouvez partir de l'exemple suivant. Il se contente de répondre à chaque message avec le même message, mais il peut facilement être modifié et amélioré."
 msgstr "To start coding your first bot, you can use the following example. It simply responds to each message with the same message, but it can easily be modified and improved."
 
 # translated using ollama
-#: ../../source/python/python.md:113
+#: ../../source/python/python.md:100
 msgid "Et maintenant ?"
 msgstr "What's next?"
 
 # translated using ollama
-#: ../../source/python/python.md:115
+#: ../../source/python/python.md:102
 msgid "Pour en apprendre plus sur l'utilisation de notre librairie Python rendez-vous dans notre section [](/python/tutorials). Sinon rendez-vous dans la section [](/python/examples) pour déployer des projets clés en main."
 msgstr "To learn more about using our Python library, visit our [](/python/tutorials) section. Otherwise, head to the [](/python/examples) section for ready-to-use projects."
 

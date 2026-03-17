@@ -18,6 +18,7 @@ cli/cli
 daemon/daemon
 glossary
 changelog
+migrations/migration_1_2
 ```
 
 # 🚀 Quickstart
@@ -117,9 +118,6 @@ Voici un exemple complet et commenté du déroulement de cette commande.
 # Save it somewhere, you will need it to write your bots.
 identity creation > Here is your client key to connect to daemon with this identity:
 AAAAAAAA-BBBB-AAAA-AAAA-AAAAAAAAAAAA
-
-# Enter "yes" to validate that you saved your client key
-identity creation > Did you saved your client key ? (y/N)
 
 # Enter "yes" to get in touch with this new identity with your personal identity in Olvid.
 # This step is optional but necessary if you want to create a discussion with your bot.

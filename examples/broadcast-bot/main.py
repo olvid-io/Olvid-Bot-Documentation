@@ -2,7 +2,7 @@ import asyncio
 import os
 
 from aiohttp import web
-from olvid import OlvidClient, tools, datatypes
+from olvid import OlvidClient, datatypes
 
 SERVER_HOST: str = os.getenv("SERVER_HOST", "0.0.0.0")
 SERVER_PORT: str = os.getenv("SERVER_PORT", "8080")
@@ -14,7 +14,7 @@ WELCOME_MESSAGE: str = os.getenv("WELCOME_MESSAGE", "Hi 👋 !")
 # An extensible ChatBot, sending Welcome messages
 class ChatBot(OlvidClient):
 	async def on_discussion_new(self, discussion: datatypes.Discussion):
-		await discussion.post_message(WELCOME_MESSAGE)
+		await discussion.post_message(client=self, body=WELCOME_MESSAGE)
 
 async def webhook_handler(request: web.Request) -> web.Response:
 	client = OlvidClient()
@@ -24,7 +24,7 @@ async def webhook_handler(request: web.Request) -> web.Response:
 	print(f"Broadcasting message: {body}")
 
 	async for discussion in client.discussion_list():
-		await discussion.post_message(await request.text())
+		await discussion.post_message(client=client, body=await request.text())
 	return web.Response(status=200)
 
 
@@ -46,8 +46,10 @@ async def main():
 	chatbot = ChatBot()
 	print("Starting bot !")
 
-	# we create a pre-written bot that will accept every incoming invitation
-	tools.AutoInvitationBot()
+	# configure daemon to auto accept invitations
+	settings: datatypes.IdentitySettings = await chatbot.settings_identity_get()
+	settings.invitation = datatypes.IdentitySettings.AutoAcceptInvitation(True, True, True, True)
+	await chatbot.settings_identity_set(settings)
 
 	# wait forever
 	await chatbot.run_forever()

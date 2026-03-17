@@ -1,2 +1,2 @@
-olvid-bot>=1.0.0
-aiohttp
+olvid-bot>=2.0.0
+aiohttp==3.13.3
