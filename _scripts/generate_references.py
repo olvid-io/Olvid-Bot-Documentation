@@ -1,6 +1,5 @@
 import os
 import sys
-from os import remove
 from typing import Dict, List, Tuple, Any
 from google.protobuf.descriptor_pb2 import FileDescriptorSet
 
@@ -268,16 +267,45 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 				dt_lines.append(f"> * **Admin:** {{ref}}`service-{admin.lower()}`")
 			dt_lines.append("\n")
 
-		# Iterate through sorted items to maintain exact file order
+		active_path = []
+		open_fences = []
+
 		for item in sorted_items:
-			# add link to this section
-			# for main message do not add link that is already at file level (ex: do not add datatypes-discusson to message Discussion, it is already there for file)
-			if item['name'].lower() != base_name:
-				dt_lines.append(f"(datatype-{item['name'].lower()})=")
-			dt_lines.append(f"### {item['name']}\n")
+			parts = item['name'].split('.')
+			parent_parts = parts[:-1]
+
+			# Close cards that are no longer active in the current hierarchy
+			while active_path and parent_parts[:len(active_path)] != active_path:
+				dt_lines.append(open_fences.pop())
+				active_path.pop()
+
+			# Dynamic Header Level (H3, H4, etc. based on depth)
+			depth = len(parts) - 1
+			h_level = "#" * min(6, 3 + depth)
+
+			# Dynamic Fence generation (Outer cards get 7 colons, inner get 6, 5, etc.)
+			fence = ":" * (7 - depth)
+			# parent card: normal title
+			if depth == 0:
+				# Set Anchor
+				if item['name'].lower() != base_name:
+					dt_lines.append(f"(datatype-{item['name'].lower()})=")
+				dt_lines.append(f"{h_level} {item['name']}\n")
+				dt_lines.append(f"{fence}{{card}}")
+			# nested card: title is in card title
+			else:
+				dt_lines.append(f"{fence}{{card}}")
+				# Set Anchor
+				if item['name'].lower() != base_name:
+					dt_lines.append(f"(datatype-{item['name'].lower()})=")
+				dt_lines.append(f"{h_level} {item['name']}\n")
+
+			# Push to stack
+			open_fences.append(fence)
+			active_path.append(parts[-1])
 
 			if item["desc"]:
-				dt_lines.append(f"```text\n{item['desc']}\n```\n")
+				dt_lines.append(f"> {item['desc']}\n")
 
 			if item["type"] == "message":
 				if item["fields"]:
@@ -289,16 +317,24 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 
 			elif item["type"] == "enum":
 				dt_lines.append("**Enum Values:**")
-				for val_name, (val_num, val_desc) in item["values"].items():
+				sorted_items_enum = sorted(item["values"].items(), key=lambda x: x[1][0])
+				for val_name, (val_num, val_desc) in sorted_items_enum:
 					line = f"* `{val_name}`: {val_num}"
 					if val_desc:
-						line += f" - *{val_desc}*: {val_num}"
+						line += f" - *{val_desc}*"
 					dt_lines.append(line)
 
-			dt_lines.append("\n---\n")
+			dt_lines.append("") # padding inside the card
+
+		# Close any remaining open cards at the end of the file
+		while open_fences:
+			dt_lines.append(open_fences.pop())
+
+		dt_lines.append("\n---\n")
 
 	# remove trailing separator
-	dt_lines.pop(-1)
+	if dt_lines[-1] == "\n---\n":
+		dt_lines.pop(-1)
 
 	with open(os.path.join(output_dir, "datatypes.md"), "w", encoding="utf-8") as f:
 		f.write("\n".join(dt_lines))
@@ -306,7 +342,7 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 	# --- Helper to generate payload blocks ---
 	def build_payload_block(msg_name: str, label: str, is_stream: bool, skip_desc: bool = False) -> List[str]:
 		stream_tag = " *(Stream)*" if is_stream else ""
-		lines = [f"**{label}{stream_tag}: `{msg_name}`**"]
+		lines = [f"**{label}{stream_tag}**: *{msg_name}*"]
 
 		msg_details = data["all_messages"].get(msg_name)
 		if msg_details:
@@ -339,11 +375,9 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 
 			lines.append(f"(service-{name.lower()})=")
 			lines.append(f"## {name}\n")
-			lines.append(f"> **Associated Datatype:** {{ref}}`datatype-{details['datatype'].lower()}`\n")
+			lines.append(f"```{{admonition}} Info\n**Associated Datatype:** {{ref}}`datatype-{details['datatype'].lower()}`\n```\n")
 
 			for rpc, rpc_info in details["rpcs"].items():
-				lines.append(f"### {rpc}")
-
 				# --- Hoisting Logic ---
 				# If the RPC doesn't have a comment in the service block,
 				# fetch it from the Request message block instead.
@@ -355,21 +389,26 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 					rpc_desc = req_msg["desc"]
 					hoisted_req_desc = True # Flag to avoid double-printing in the payload block
 
+				lines.append(f":::{{card}}")
+				lines.append(f"### {rpc}")
+
 				# remove service name in comment
 				rpc_desc = rpc_desc.strip().removeprefix(rpc).strip()
 				if rpc_desc:
-					lines.append(f"```text\n{rpc_desc}\n```\n")
+					lines.append(f"> {rpc_desc}\n")
 
 				req_label = "Request" if "Notification" not in title else "Subscription"
 				resp_label = "Response" if "Notification" not in title else "Notification"
 
 				lines.extend(build_payload_block(rpc_info["input"], req_label, rpc_info["client_streaming"], skip_desc=hoisted_req_desc))
 				lines.extend(build_payload_block(rpc_info["output"], resp_label, rpc_info["server_streaming"]))
-				lines.append("\n")
+				lines.append(f":::\n")
+
 			lines.append("---\n")
 
 		# remove trailing separator
-		lines.pop(-1)
+		if lines[-1] == "---\n":
+			lines.pop(-1)
 
 		with open(os.path.join(output_dir, output_filename), "w", encoding="utf-8") as f:
 			f.write("\n".join(lines))
