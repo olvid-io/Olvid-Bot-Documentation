@@ -2,7 +2,7 @@
 
 
 
-:::{contents}
+:::{contents} Commands
 :depth: 1
 :local:
 :::
@@ -12,6 +12,10 @@
 > **Associated Datatype:** {ref}`datatype-message`
 
 ### MessageList
+```
+return all messages for current identity
+```
+
 **Request: `MessageListRequest`**
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 * `unread` (**optional** bool - *only list unread messages (messages that have never been listed or sent in a MessageReceived notification)*)
@@ -30,11 +34,61 @@
 
 
 
-### MessageRefresh
-**Request: `MessageRefreshRequest`**
+### MessageSend
+```
+Post a message in a given discussion.
+A message must have a non empty body.
+```
+
+**Request: `MessageSendRequest`**
+* `discussion_id` (uint64)
+* `body` (string)
+* `reply_id` (**optional** {ref}`datatype-messageid`)
+* `ephemerality` (**optional** {ref}`datatype-messageephemerality`)
+* `disable_link_preview` (**optional** bool)
+
+**Response: `MessageSendResponse`**
+* `message` ({ref}`datatype-message`)
+
+
+
+### MessageSendWithAttachments
+```
+Post a message with attachments in a given discussion.
+A message must have a non empty body or at least one attachment.
+```
+
+**Request *(Stream)*: `MessageSendWithAttachmentsRequest`**
+* `metadata` ({ref}`datatype-messagesendwithattachmentsrequestmetadata`)
+* `payload` (bytes)
+* `file_delimiter` (bool)
+
+**Response: `MessageSendWithAttachmentsResponse`**
+* `message` ({ref}`datatype-message`)
+* `attachments` (**repeated** {ref}`datatype-attachment`)
+
+
+
+### MessageReact
+```
+if reaction is not set delete current reaction if there is one
+```
+
+**Request: `MessageReactRequest`**
+* `message_id` ({ref}`datatype-messageid`)
+* `reaction` (**optional** string)
+
+**Response: `MessageReactResponse`**
 * *Empty payload.*
 
-**Response: `MessageRefreshResponse`**
+
+
+### MessageUpdateBody
+**Request: `MessageUpdateBodyRequest`**
+* `message_id` ({ref}`datatype-messageid`)
+* `updated_body` (string)
+
+**Response: `MessageUpdateBodyResponse`**
 * *Empty payload.*
 
 
@@ -49,32 +103,11 @@
 
 
 
-### MessageSend
-**Request: `MessageSendRequest`**
-* `discussion_id` (uint64)
-* `body` (string)
-* `reply_id` (**optional** {ref}`datatype-messageid`)
-* `ephemerality` (**optional** {ref}`datatype-messageephemerality`)
-* `disable_link_preview` (**optional** bool)
-
-**Response: `MessageSendResponse`**
-* `message` ({ref}`datatype-message`)
-
-
-
-### MessageSendWithAttachments
-**Request *(Stream)*: `MessageSendWithAttachmentsRequest`**
-* `metadata` ({ref}`datatype-messagesendwithattachmentsrequestmetadata`)
-* `payload` (bytes)
-* `file_delimiter` (bool)
-
-**Response: `MessageSendWithAttachmentsResponse`**
-* `message` ({ref}`datatype-message`)
-* `attachments` (**repeated** {ref}`datatype-attachment`)
-
-
-
 ### MessageSendLocation
+```
+Post a location message in a discussion.
+```
+
 **Request: `MessageSendLocationRequest`**
 * `discussion_id` (uint64)
 * `latitude` (double)
@@ -126,22 +159,15 @@
 
 
 
-### MessageReact
-**Request: `MessageReactRequest`**
-* `message_id` ({ref}`datatype-messageid`)
-* `reaction` (**optional** string)
+### MessageRefresh
+```
+force download message on server
+```
 
-**Response: `MessageReactResponse`**
+**Request: `MessageRefreshRequest`**
 * *Empty payload.*
 
-
-
-### MessageUpdateBody
-**Request: `MessageUpdateBodyRequest`**
-* `message_id` ({ref}`datatype-messageid`)
-* `updated_body` (string)
-
-**Response: `MessageUpdateBodyResponse`**
+**Response: `MessageRefreshResponse`**
 * *Empty payload.*
 
 
@@ -154,6 +180,10 @@
 > **Associated Datatype:** {ref}`datatype-attachment`
 
 ### AttachmentList
+```
+return all attachments for current identity
+```
+
 **Request: `AttachmentListRequest`**
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
 
@@ -261,9 +291,13 @@
 
 
 ### DiscussionLockedList
+```
 locked discussions
+```
 
 **Request: `DiscussionLockedListRequest`**
+DiscussionLockedList
+
 * *Empty payload.*
 
 **Response *(Stream)*: `DiscussionLockedListResponse`**
@@ -288,6 +322,13 @@ locked discussions
 > **Associated Datatype:** {ref}`datatype-discussionstorage`
 
 ### DiscussionStorageList
+```
+Discussion storage api: store elements in daemon database, associated with a discussion id. They will remain associated to this discussion if you restore a backup.
+
+
+DiscussionStorageList
+```
+
 **Request: `DiscussionStorageListRequest`**
 * `discussion_id` (uint64)
 * `filter` (**optional** {ref}`datatype-storageelementfilter`)
@@ -400,6 +441,10 @@ locked discussions
 
 
 ### ContactRecreateChannels
+```
+USE CAREFULLY: this might fix some issues but every non sent / received messages will be lost.
+```
+
 **Request: `ContactRecreateChannelsRequest`**
 * `contact_id` (uint64)
 
@@ -409,9 +454,13 @@ locked discussions
 
 
 ### ContactInviteToOneToOneDiscussion
+```
 collected contacts
+```
 
 **Request: `ContactInviteToOneToOneDiscussionRequest`**
+ContactInviteToOneToOneDiscussion
+
 * `contact_id` (uint64)
 
 **Response: `ContactInviteToOneToOneDiscussionResponse`**
@@ -420,6 +469,10 @@ collected contacts
 
 
 ### ContactDowngradeOneToOneDiscussion
+```
+ContactDowngradeOneToOne
+```
+
 **Request: `ContactDowngradeOneToOneDiscussionRequest`**
 * `contact_id` (uint64)
 
@@ -436,6 +489,10 @@ collected contacts
 > **Associated Datatype:** {ref}`datatype-group`
 
 ### GroupList
+```
+return all groups for current identity
+```
+
 **Request: `GroupListRequest`**
 * `filter` (**optional** {ref}`datatype-groupfilter`)
 
@@ -528,6 +585,18 @@ collected contacts
 
 
 ### GroupUpdate
+```
+: update a group by modifying a Group object retrieved from groupList of groupGet.
+Supported modifications:
+- Add a member: create a new GroupMember and add it to members field
+- Remove a member: remove associated GroupMember from members field
+- Remove a pending member: remove associated GroupPendingMember from pendingMembers field
+- Update (pending) member permissions: update permissions in permissions field in GroupMember or GroupPendingMember
+- Update group name: modify name field
+- Update group description: modify description field
+Every other modifications will be ignored. You must keep groupId field properly set.
+```
+
 **Request: `GroupUpdateRequest`**
 * `group` ({ref}`datatype-group`)
 
@@ -670,6 +739,10 @@ collected contacts
 > **Associated Datatype:** {ref}`datatype-invitation`
 
 ### InvitationList
+```
+return all discussions for current identity
+```
+
 **Request: `InvitationListRequest`**
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
 
@@ -750,6 +823,11 @@ collected contacts
 
 
 ### SettingsIdentitySet
+```
+WARN: this entrypoint erase WHOLE settings. To update identity settings use SettingsIdentityGet to get current config
+and only edit fields you want to update.
+```
+
 **Request: `SettingsIdentitySetRequest`**
 * `identity_settings` ({ref}`datatype-identitysettings`)
 
@@ -784,6 +862,13 @@ collected contacts
 > **Associated Datatype:** {ref}`datatype-storage`
 
 ### StorageList
+```
+Global storage api: store key value elements in storage. They will be restored as is during backup restoration.
+
+
+StorageList
+```
+
 **Request: `StorageListRequest`**
 * `filter` (**optional** {ref}`datatype-storageelementfilter`)
 
@@ -899,6 +984,10 @@ collected contacts
 > **Associated Datatype:** {ref}`datatype-tool`
 
 ### Ping
+```
+unauthenticated rpc to check daemon is up and accessible
+```
+
 **Request: `PingRequest`**
 * *Empty payload.*
 
@@ -908,6 +997,10 @@ collected contacts
 
 
 ### DaemonVersion
+```
+authenticated rpc to get current daemon version
+```
+
 **Request: `DaemonVersionRequest`**
 * *Empty payload.*
 
@@ -917,6 +1010,10 @@ collected contacts
 
 
 ### AuthenticationTest
+```
+check that sent credentials are valid user credentials, else it returns an error
+```
+
 **Request: `AuthenticationTestRequest`**
 * *Empty payload.*
 
@@ -926,6 +1023,10 @@ collected contacts
 
 
 ### AuthenticationAdminTest
+```
+check that sent credentials are valid admin credentials, else it returns an error
+```
+
 **Request: `AuthenticationAdminTestRequest`**
 * *Empty payload.*
 
@@ -933,5 +1034,3 @@ collected contacts
 * *Empty payload.*
 
 
-
----

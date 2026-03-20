@@ -2,7 +2,7 @@
 
 Privileged commands requiring a valid admin client key.
 
-:::{contents}
+:::{contents} Admin Commands
 :depth: 1
 :local:
 :::
@@ -57,6 +57,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### IdentityDelete
+```
+delete everywhere: delete from every device and notify your contacts for deletion
+```
+
 **Request: `IdentityDeleteRequest`**
 * `identity_id` (uint64)
 * `delete_everywhere` (**optional** bool)
@@ -93,6 +97,10 @@ Privileged commands requiring a valid admin client key.
 > **Associated Datatype:** {ref}`datatype-backup`
 
 ### BackupKeyGet
+```
+get your current backup key (to store in a safe place to restore your identities)
+```
+
 **Request: `BackupKeyGetRequest`**
 * *Empty payload.*
 
@@ -102,6 +110,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### BackupKeyRenew
+```
+discard previous backup key and create a new one
+```
+
 **Request: `BackupKeyRenewRequest`**
 * *Empty payload.*
 
@@ -111,6 +123,12 @@ Privileged commands requiring a valid admin client key.
 
 
 ### BackupGet
+```
+show backup associated with a backup key.
+It contains an admin backup with admin client key and associated storage,
+and snapshots for each profile (identity).
+```
+
 **Request: `BackupGetRequest`**
 * `backup_key` (string)
 
@@ -120,6 +138,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### BackupNow
+```
+force to backup now
+```
+
 **Request: `BackupNowRequest`**
 * *Empty payload.*
 
@@ -129,6 +151,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### BackupRestoreDaemon
+```
+restore a complete daemon instance, only possible on a blank daemon instance
+```
+
 **Request: `BackupRestoreDaemonRequest`**
 * `backup_key` (string)
 * `new_device_name` (**optional** string - *specify a name for this new daemon*)
@@ -141,6 +167,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### BackupRestoreAdminBackup
+```
+restore a backup admin data (admin client keys and associated storage)
+```
+
 **Request: `BackupRestoreAdminBackupRequest`**
 * `backup_key` (string)
 
@@ -150,6 +180,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### BackupRestoreProfileSnapshot
+```
+restore a specific profile snapshot
+```
+
 **Request: `BackupRestoreProfileSnapshotRequest`**
 * `backup_key` (string)
 * `id` (string)
@@ -187,6 +221,10 @@ Privileged commands requiring a valid admin client key.
 
 
 ### ClientKeyNew
+```
+create a new api key associated with a given identity
+```
+
 **Request: `ClientKeyNewRequest`**
 * `name` (string)
 * `identity_id` (uint64 - *specify 0 to create an admin api key*)
@@ -204,5 +242,3 @@ Privileged commands requiring a valid admin client key.
 * *Empty payload.*
 
 
-
----

@@ -1,6 +1,6 @@
 # 📚️ References
-
-This section describes the core entities used by Olvid daemon and exposed entrypoints.
+This section describes the core entities used by Olvid daemon and exposed entrypoints.  
+This page describe all datatypes used by daemon api, and you can find these api description in the [](commands), [](notifications) and [](admins) sections.
 
 :::{toctree}
 :maxdepth: 1
@@ -10,40 +10,28 @@ commands
 notifications
 admins
 :::
-:::{contents}
+
+:::{contents} Datatypes
 :depth: 1
 :local:
 :::
+
 (datatype-message)=
-## `Message`
+## Message
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-messagecommandservice`
 > * **Notification:** {ref}`service-messagenotificationservice`
 
 
-(datatype-messageid)=
-### MessageId
-
-**Fields:**
-* `type` ({ref}`datatype-messageid.type`)
-* `id` (uint64)
-
----
-
-(datatype-messageid.type)=
-### MessageId.Type
-
-**Enum Values:**
-* `TYPE_UNSPECIFIED`
-* `TYPE_INBOUND`
-* `TYPE_OUTBOUND`
-
----
-
 ### Message
 
-**Fields:**
+```text
+Describe an Olvid message.
+It can be a text message with or without attachments, or a location message.
+```
+
+**Message Fields:**
 * `id` ({ref}`datatype-messageid`)
 * `discussion_id` (uint64)
 * `sender_id` (uint64 - *0 if you sent the message*)
@@ -59,10 +47,29 @@ admins
 
 ---
 
+(datatype-messageid)=
+### MessageId
+
+**Message Fields:**
+* `type` ({ref}`datatype-messageid.type`)
+* `id` (uint64)
+
+---
+
+(datatype-messageid.type)=
+### MessageId.Type
+
+**Enum Values:**
+* `TYPE_UNSPECIFIED`: 0
+* `TYPE_INBOUND`: 1
+* `TYPE_OUTBOUND`: 2
+
+---
+
 (datatype-messageephemerality)=
 ### MessageEphemerality
 
-**Fields:**
+**Message Fields:**
 * `read_once` (bool)
 * `existence_duration` (uint64 - *seconds*)
 * `visibility_duration` (uint64 - *seconds*)
@@ -72,7 +79,7 @@ admins
 (datatype-messagereaction)=
 ### MessageReaction
 
-**Fields:**
+**Message Fields:**
 * `contact_id` (uint64 - *id == 0 if own reaction*)
 * `reaction` (string)
 * `timestamp` (uint64)
@@ -82,7 +89,7 @@ admins
 (datatype-messagelocation)=
 ### MessageLocation
 
-**Fields:**
+**Message Fields:**
 * `type` ({ref}`datatype-messagelocation.locationtype`)
 * `timestamp` (uint64)
 * `latitude` (double)
@@ -97,17 +104,17 @@ admins
 ### MessageLocation.LocationType
 
 **Enum Values:**
-* `LOCATION_TYPE_UNSPECIFIED`
-* `LOCATION_TYPE_SEND`
-* `LOCATION_TYPE_SHARING`
-* `LOCATION_TYPE_SHARING_FINISHED`
+* `LOCATION_TYPE_UNSPECIFIED`: 0
+* `LOCATION_TYPE_SEND`: 1
+* `LOCATION_TYPE_SHARING`: 2
+* `LOCATION_TYPE_SHARING_FINISHED`: 3
 
 ---
 
 (datatype-messagefilter)=
 ### MessageFilter
 
-**Fields:**
+**Message Fields:**
 * `type` (**optional** {ref}`datatype-messageid.type` - *sender and recipient*)
 * `discussion_id` (**optional** uint64)
 * `sender_contact_id` (**optional** uint64)
@@ -128,13 +135,13 @@ admins
 ### MessageFilter.Attachment
 
 **Enum Values:**
-* `ATTACHMENT_UNSPECIFIED`
-* `ATTACHMENT_HAVE`
-* `ATTACHMENT_HAVE_NOT` - *currently not implementable
-    ATTACHMENT_HAVE_IMAGE = 3;
-    ATTACHMENT_HAVE_VIDEO = 4;
-    ATTACHMENT_HAVE_IMAGE_VIDEO = 5;
-    ATTACHMENT_HAVE_AUDIO = 6;*
+* `ATTACHMENT_UNSPECIFIED`: 0
+* `ATTACHMENT_HAVE`: 1
+* `ATTACHMENT_HAVE_NOT`: 2 - *currently not implementable
+ATTACHMENT_HAVE_IMAGE = 3;
+ATTACHMENT_HAVE_VIDEO = 4;
+ATTACHMENT_HAVE_IMAGE_VIDEO = 5;
+ATTACHMENT_HAVE_AUDIO = 6;*: 2
 
 ---
 
@@ -142,12 +149,12 @@ admins
 ### MessageFilter.Location
 
 **Enum Values:**
-* `LOCATION_UNSPECIFIED`
-* `LOCATION_HAVE`
-* `LOCATION_HAVE_NOT`
-* `LOCATION_IS_SEND`
-* `LOCATION_IS_SHARING`
-* `LOCATION_IS_SHARING_FINISHED`
+* `LOCATION_UNSPECIFIED`: 0
+* `LOCATION_HAVE`: 1
+* `LOCATION_HAVE_NOT`: 2
+* `LOCATION_IS_SEND`: 3
+* `LOCATION_IS_SHARING`: 5
+* `LOCATION_IS_SHARING_FINISHED`: 6
 
 ---
 
@@ -155,16 +162,16 @@ admins
 ### MessageFilter.Reaction
 
 **Enum Values:**
-* `REACTION_UNSPECIFIED`
-* `REACTION_HAS`
-* `REACTION_HAS_NOT`
+* `REACTION_UNSPECIFIED`: 0
+* `REACTION_HAS`: 1
+* `REACTION_HAS_NOT`: 2
 
 ---
 
 (datatype-reactionfilter)=
 ### ReactionFilter
 
-**Fields:**
+**Message Fields:**
 * `reacted_by_me` (bool)
 * `reacted_by_contact_id` (uint64)
 * `reaction` (**optional** string - *contains this reaction emoji (combined with reacted_by parameter)*)
@@ -172,35 +179,16 @@ admins
 ---
 
 (datatype-attachment)=
-## `Attachment`
+## Attachment
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-attachmentcommandservice`
 > * **Notification:** {ref}`service-attachmentnotificationservice`
 
 
-(datatype-attachmentid)=
-### AttachmentId
-
-**Fields:**
-* `type` ({ref}`datatype-attachmentid.type`)
-* `id` (uint64)
-
----
-
-(datatype-attachmentid.type)=
-### AttachmentId.Type
-
-**Enum Values:**
-* `TYPE_UNSPECIFIED`
-* `TYPE_INBOUND`
-* `TYPE_OUTBOUND`
-
----
-
 ### Attachment
 
-**Fields:**
+**Message Fields:**
 * `id` ({ref}`datatype-attachmentid`)
 * `discussion_id` (uint64)
 * `message_id` ({ref}`datatype-messageid`)
@@ -210,10 +198,29 @@ admins
 
 ---
 
+(datatype-attachmentid)=
+### AttachmentId
+
+**Message Fields:**
+* `type` ({ref}`datatype-attachmentid.type`)
+* `id` (uint64)
+
+---
+
+(datatype-attachmentid.type)=
+### AttachmentId.Type
+
+**Enum Values:**
+* `TYPE_UNSPECIFIED`: 0
+* `TYPE_INBOUND`: 1
+* `TYPE_OUTBOUND`: 2
+
+---
+
 (datatype-attachmentfilter)=
 ### AttachmentFilter
 
-**Fields:**
+**Message Fields:**
 * `type` (**optional** {ref}`datatype-attachmentid.type`)
 * `file_type` (**optional** {ref}`datatype-attachmentfilter.filetype`)
 * `discussion_id` (**optional** uint64)
@@ -229,18 +236,18 @@ admins
 ### AttachmentFilter.FileType
 
 **Enum Values:**
-* `FILE_TYPE_UNSPECIFIED`
-* `FILE_TYPE_IMAGE`
-* `FILE_TYPE_VIDEO`
-* `FILE_TYPE_IMAGE_VIDEO`
-* `FILE_TYPE_AUDIO`
-* `FILE_TYPE_LINK_PREVIEW`
-* `FILE_TYPE_NOT_LINK_PREVIEW`
+* `FILE_TYPE_UNSPECIFIED`: 0
+* `FILE_TYPE_IMAGE`: 3
+* `FILE_TYPE_VIDEO`: 4
+* `FILE_TYPE_IMAGE_VIDEO`: 5
+* `FILE_TYPE_AUDIO`: 6
+* `FILE_TYPE_LINK_PREVIEW`: 7
+* `FILE_TYPE_NOT_LINK_PREVIEW`: 8
 
 ---
 
 (datatype-discussion)=
-## `Discussion`
+## Discussion
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-discussioncommandservice`
@@ -249,7 +256,7 @@ admins
 
 ### Discussion
 
-**Fields:**
+**Message Fields:**
 * `id` (uint64)
 * `title` (string)
 * `contact_id` (uint64)
@@ -260,7 +267,7 @@ admins
 (datatype-discussionfilter)=
 ### DiscussionFilter
 
-**Fields:**
+**Message Fields:**
 * `type` (**optional** {ref}`datatype-discussionfilter.type`)
 * `contact_id` (uint64)
 * `group_id` (uint64)
@@ -272,14 +279,14 @@ admins
 ### DiscussionFilter.Type
 
 **Enum Values:**
-* `TYPE_UNSPECIFIED`
-* `TYPE_OTO`
-* `TYPE_GROUP`
+* `TYPE_UNSPECIFIED`: 0
+* `TYPE_OTO`: 1
+* `TYPE_GROUP`: 2
 
 ---
 
 (datatype-contact)=
-## `Contact`
+## Contact
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-contactcommandservice`
@@ -288,7 +295,7 @@ admins
 
 ### Contact
 
-**Fields:**
+**Message Fields:**
 * `id` (uint64)
 * `display_name` (string)
 * `details` ({ref}`datatype-identitydetails`)
@@ -303,7 +310,7 @@ admins
 (datatype-contactfilter)=
 ### ContactFilter
 
-**Fields:**
+**Message Fields:**
 * `one_to_one` (**optional** {ref}`datatype-contactfilter.onetoone`)
 * `photo` (**optional** {ref}`datatype-contactfilter.photo`)
 * `keycloak` (**optional** {ref}`datatype-contactfilter.keycloak`)
@@ -316,9 +323,9 @@ admins
 ### ContactFilter.OneToOne
 
 **Enum Values:**
-* `ONE_TO_ONE_UNSPECIFIED`
-* `ONE_TO_ONE_IS`
-* `ONE_TO_ONE_IS_NOT`
+* `ONE_TO_ONE_UNSPECIFIED`: 0
+* `ONE_TO_ONE_IS`: 1
+* `ONE_TO_ONE_IS_NOT`: 2
 
 ---
 
@@ -326,9 +333,9 @@ admins
 ### ContactFilter.Photo
 
 **Enum Values:**
-* `PHOTO_UNSPECIFIED`
-* `PHOTO_HAS`
-* `PHOTO_HAS_NOT`
+* `PHOTO_UNSPECIFIED`: 0
+* `PHOTO_HAS`: 1
+* `PHOTO_HAS_NOT`: 2
 
 ---
 
@@ -336,14 +343,14 @@ admins
 ### ContactFilter.Keycloak
 
 **Enum Values:**
-* `KEYCLOAK_UNSPECIFIED`
-* `KEYCLOAK_MANAGED`
-* `KEYCLOAK_NOT_MANAGED`
+* `KEYCLOAK_UNSPECIFIED`: 0
+* `KEYCLOAK_MANAGED`: 1
+* `KEYCLOAK_NOT_MANAGED`: 2
 
 ---
 
 (datatype-group)=
-## `Group`
+## Group
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-groupcommandservice`
@@ -352,7 +359,7 @@ admins
 
 ### Group
 
-**Fields:**
+**Message Fields:**
 * `id` (uint64)
 * `type` ({ref}`datatype-group.type`)
 * `advanced_configuration` (**optional** {ref}`datatype-group.advancedconfiguration` - *only set if group.type is TYPE_ADVANCED*)
@@ -371,18 +378,18 @@ admins
 ### Group.Type
 
 **Enum Values:**
-* `TYPE_UNSPECIFIED`
-* `TYPE_STANDARD`
-* `TYPE_CONTROLLED`
-* `TYPE_READ_ONLY`
-* `TYPE_ADVANCED`
+* `TYPE_UNSPECIFIED`: 0
+* `TYPE_STANDARD`: 1
+* `TYPE_CONTROLLED`: 2
+* `TYPE_READ_ONLY`: 3
+* `TYPE_ADVANCED`: 4
 
 ---
 
 (datatype-group.advancedconfiguration)=
 ### Group.AdvancedConfiguration
 
-**Fields:**
+**Message Fields:**
 * `read_only` (bool)
 * `remote_delete` ({ref}`datatype-group.advancedconfiguration.remotedelete`)
 
@@ -392,17 +399,17 @@ admins
 ### Group.AdvancedConfiguration.RemoteDelete
 
 **Enum Values:**
-* `REMOTE_DELETE_UNSPECIFIED`
-* `REMOTE_DELETE_NOBODY`
-* `REMOTE_DELETE_ADMINS`
-* `REMOTE_DELETE_EVERYONE`
+* `REMOTE_DELETE_UNSPECIFIED`: 0
+* `REMOTE_DELETE_NOBODY`: 1
+* `REMOTE_DELETE_ADMINS`: 2
+* `REMOTE_DELETE_EVERYONE`: 3
 
 ---
 
 (datatype-groupmember)=
 ### GroupMember
 
-**Fields:**
+**Message Fields:**
 * `contact_id` (uint64)
 * `permissions` ({ref}`datatype-groupmemberpermissions`)
 
@@ -411,7 +418,7 @@ admins
 (datatype-pendinggroupmember)=
 ### PendingGroupMember
 
-**Fields:**
+**Message Fields:**
 * `pending_member_id` (uint64)
 * `contact_id` (uint64 - *set to 0 if not in your contacts*)
 * `display_name` (string)
@@ -423,7 +430,7 @@ admins
 (datatype-groupmemberpermissions)=
 ### GroupMemberPermissions
 
-**Fields:**
+**Message Fields:**
 * `admin` (bool)
 * `remote_delete_anything` (bool)
 * `edit_or_remote_delete_own_messages` (bool)
@@ -435,7 +442,7 @@ admins
 (datatype-groupfilter)=
 ### GroupFilter
 
-**Fields:**
+**Message Fields:**
 * `type` (**optional** {ref}`datatype-group.type`)
 * `empty` (**optional** {ref}`datatype-groupfilter.empty`)
 * `photo` (**optional** {ref}`datatype-groupfilter.photo`)
@@ -452,9 +459,9 @@ admins
 ### GroupFilter.Empty
 
 **Enum Values:**
-* `EMPTY_UNSPECIFIED`
-* `EMPTY_IS`
-* `EMPTY_IS_NOT`
+* `EMPTY_UNSPECIFIED`: 0
+* `EMPTY_IS`: 2
+* `EMPTY_IS_NOT`: 1
 
 ---
 
@@ -462,9 +469,9 @@ admins
 ### GroupFilter.Keycloak
 
 **Enum Values:**
-* `KEYCLOAK_UNSPECIFIED`
-* `KEYCLOAK_IS`
-* `KEYCLOAK_IS_NOT`
+* `KEYCLOAK_UNSPECIFIED`: 0
+* `KEYCLOAK_IS`: 2
+* `KEYCLOAK_IS_NOT`: 1
 
 ---
 
@@ -472,16 +479,16 @@ admins
 ### GroupFilter.Photo
 
 **Enum Values:**
-* `PHOTO_UNSPECIFIED`
-* `PHOTO_HAS`
-* `PHOTO_HAS_NOT`
+* `PHOTO_UNSPECIFIED`: 0
+* `PHOTO_HAS`: 2
+* `PHOTO_HAS_NOT`: 1
 
 ---
 
 (datatype-groupmemberfilter)=
 ### GroupMemberFilter
 
-**Fields:**
+**Message Fields:**
 * `contact_id` (**optional** uint64)
 * `permissions` (**optional** {ref}`datatype-grouppermissionfilter`)
 
@@ -490,7 +497,7 @@ admins
 (datatype-pendinggroupmemberfilter)=
 ### PendingGroupMemberFilter
 
-**Fields:**
+**Message Fields:**
 * `is_contact` (**optional** {ref}`datatype-pendinggroupmemberfilter.contact`)
 * `has_declined` (**optional** {ref}`datatype-pendinggroupmemberfilter.declined`)
 * `contact_id` (**optional** uint64)
@@ -503,9 +510,9 @@ admins
 ### PendingGroupMemberFilter.Contact
 
 **Enum Values:**
-* `CONTACT_UNSPECIFIED`
-* `CONTACT_IS`
-* `CONTACT_IS_NOT`
+* `CONTACT_UNSPECIFIED`: 0
+* `CONTACT_IS`: 1
+* `CONTACT_IS_NOT`: 2
 
 ---
 
@@ -513,16 +520,16 @@ admins
 ### PendingGroupMemberFilter.Declined
 
 **Enum Values:**
-* `DECLINED_UNSPECIFIED`
-* `DECLINED_HAS`
-* `DECLINED_HAS_NOT`
+* `DECLINED_UNSPECIFIED`: 0
+* `DECLINED_HAS`: 1
+* `DECLINED_HAS_NOT`: 2
 
 ---
 
 (datatype-grouppermissionfilter)=
 ### GroupPermissionFilter
 
-**Fields:**
+**Message Fields:**
 * `admin` (**optional** {ref}`datatype-grouppermissionfilter.admin`)
 * `send_message` (**optional** {ref}`datatype-grouppermissionfilter.sendmessage`)
 * `remote_delete_anything` (**optional** {ref}`datatype-grouppermissionfilter.remotedeleteanything`)
@@ -535,9 +542,9 @@ admins
 ### GroupPermissionFilter.Admin
 
 **Enum Values:**
-* `ADMIN_UNSPECIFIED`
-* `ADMIN_IS`
-* `ADMIN_IS_NOT`
+* `ADMIN_UNSPECIFIED`: 0
+* `ADMIN_IS`: 1
+* `ADMIN_IS_NOT`: 2
 
 ---
 
@@ -545,9 +552,9 @@ admins
 ### GroupPermissionFilter.SendMessage
 
 **Enum Values:**
-* `SEND_MESSAGE_UNSPECIFIED`
-* `SEND_MESSAGE_CAN`
-* `SEND_MESSAGE_CANNOT`
+* `SEND_MESSAGE_UNSPECIFIED`: 0
+* `SEND_MESSAGE_CAN`: 1
+* `SEND_MESSAGE_CANNOT`: 2
 
 ---
 
@@ -555,9 +562,9 @@ admins
 ### GroupPermissionFilter.RemoteDeleteAnything
 
 **Enum Values:**
-* `REMOTE_DELETE_ANYTHING_UNSPECIFIED`
-* `REMOTE_DELETE_ANYTHING_CAN`
-* `REMOTE_DELETE_ANYTHING_CANNOT`
+* `REMOTE_DELETE_ANYTHING_UNSPECIFIED`: 0
+* `REMOTE_DELETE_ANYTHING_CAN`: 1
+* `REMOTE_DELETE_ANYTHING_CANNOT`: 2
 
 ---
 
@@ -565,9 +572,9 @@ admins
 ### GroupPermissionFilter.EditOrRemoteDeleteOwnMessage
 
 **Enum Values:**
-* `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_UNSPECIFIED`
-* `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CAN`
-* `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CANNOT`
+* `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_UNSPECIFIED`: 0
+* `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CAN`: 1
+* `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CANNOT`: 2
 
 ---
 
@@ -575,42 +582,33 @@ admins
 ### GroupPermissionFilter.ChangeSettings
 
 **Enum Values:**
-* `CHANGE_SETTINGS_UNSPECIFIED`
-* `CHANGE_SETTINGS_CAN`
-* `CHANGE_SETTINGS_CANNOT`
+* `CHANGE_SETTINGS_UNSPECIFIED`: 0
+* `CHANGE_SETTINGS_CAN`: 1
+* `CHANGE_SETTINGS_CANNOT`: 2
 
 ---
 
 (datatype-identity)=
-## `Identity`
+## Identity
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-identitycommandservice`
 > * **Admin:** {ref}`service-identityadminservice`
 
 
-(datatype-identitydetails)=
-### IdentityDetails
-
-**Fields:**
-* `first_name` (**optional** string)
-* `last_name` (**optional** string)
-* `company` (**optional** string)
-* `position` (**optional** string)
-
----
-
 ### Identity
 
+```text
 id == 0 is equivalent to null identity
- invitation_url field is deprecated, and will be removed in next major release
-   use IdentityCommandService.IdentityGetInvitationLink or IdentityAdminService.IdentityAdminGetInvitationLink instead
+invitation_url field is deprecated, and will be removed in next major release
+use IdentityCommandService.IdentityGetInvitationLink or IdentityAdminService.IdentityAdminGetInvitationLink instead
+```
 
-**Fields:**
+**Message Fields:**
 * `id` (uint64)
 * `display_name` (string)
 * `details` ({ref}`datatype-identitydetails`)
-* `invitation_url` (***deprecated*** string)
+* `invitation_url` (***deprecated*** string - *TODO TODEL !!!!*)
 * `keycloak_managed` (bool)
 * `has_a_photo` (bool)
 * `api_key` ({ref}`datatype-identity.apikey`)
@@ -620,7 +618,7 @@ id == 0 is equivalent to null identity
 (datatype-identity.apikey)=
 ### Identity.ApiKey
 
-**Fields:**
+**Message Fields:**
 * `permission` ({ref}`datatype-identity.apikey.permission`)
 * `expiration_timestamp` (uint64)
 
@@ -629,16 +627,27 @@ id == 0 is equivalent to null identity
 (datatype-identity.apikey.permission)=
 ### Identity.ApiKey.Permission
 
-**Fields:**
+**Message Fields:**
 * `call` (bool)
 * `multi_device` (bool)
+
+---
+
+(datatype-identitydetails)=
+### IdentityDetails
+
+**Message Fields:**
+* `first_name` (**optional** string)
+* `last_name` (**optional** string)
+* `company` (**optional** string)
+* `position` (**optional** string)
 
 ---
 
 (datatype-identityfilter)=
 ### IdentityFilter
 
-**Fields:**
+**Message Fields:**
 * `keycloak` (**optional** {ref}`datatype-identityfilter.keycloak`)
 * `photo` (**optional** {ref}`datatype-identityfilter.photo`)
 * `api_key` (**optional** {ref}`datatype-identityfilter.apikey`)
@@ -651,9 +660,9 @@ id == 0 is equivalent to null identity
 ### IdentityFilter.Keycloak
 
 **Enum Values:**
-* `KEYCLOAK_UNSPECIFIED`
-* `KEYCLOAK_IS`
-* `KEYCLOAK_IS_NOT`
+* `KEYCLOAK_UNSPECIFIED`: 0
+* `KEYCLOAK_IS`: 2
+* `KEYCLOAK_IS_NOT`: 1
 
 ---
 
@@ -661,9 +670,9 @@ id == 0 is equivalent to null identity
 ### IdentityFilter.Photo
 
 **Enum Values:**
-* `PHOTO_UNSPECIFIED`
-* `PHOTO_HAS`
-* `PHOTO_HAS_NOT`
+* `PHOTO_UNSPECIFIED`: 0
+* `PHOTO_HAS`: 2
+* `PHOTO_HAS_NOT`: 1
 
 ---
 
@@ -671,14 +680,14 @@ id == 0 is equivalent to null identity
 ### IdentityFilter.ApiKey
 
 **Enum Values:**
-* `API_KEY_UNSPECIFIED`
-* `API_KEY_HAS`
-* `API_KEY_HAS_NOT`
+* `API_KEY_UNSPECIFIED`: 0
+* `API_KEY_HAS`: 2
+* `API_KEY_HAS_NOT`: 1
 
 ---
 
 (datatype-client_key)=
-## `Client_Key`
+## Client_Key
 
 > **Related Endpoints:**
 > * **Admin:** {ref}`service-clientkeyadminservice`
@@ -687,7 +696,7 @@ id == 0 is equivalent to null identity
 (datatype-clientkey)=
 ### ClientKey
 
-**Fields:**
+**Message Fields:**
 * `name` (string)
 * `key` (string)
 * `identity_id` (uint64 - *0 if an admin key*)
@@ -697,7 +706,7 @@ id == 0 is equivalent to null identity
 (datatype-clientkeyfilter)=
 ### ClientKeyFilter
 
-**Fields:**
+**Message Fields:**
 * `admin_key` (bool)
 * `identity_id` (uint64)
 * `name_search` (**optional** string)
@@ -706,7 +715,7 @@ id == 0 is equivalent to null identity
 ---
 
 (datatype-invitation)=
-## `Invitation`
+## Invitation
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-invitationcommandservice`
@@ -715,7 +724,7 @@ id == 0 is equivalent to null identity
 
 ### Invitation
 
-**Fields:**
+**Message Fields:**
 * `id` (uint64)
 * `status` ({ref}`datatype-invitation.status`)
 * `display_name` (string)
@@ -729,24 +738,24 @@ id == 0 is equivalent to null identity
 ### Invitation.Status
 
 **Enum Values:**
-* `STATUS_UNSPECIFIED`
-* `STATUS_INVITATION_WAIT_YOU_TO_ACCEPT`
-* `STATUS_INVITATION_WAIT_IT_TO_ACCEPT`
-* `STATUS_INVITATION_STATUS_IN_PROGRESS`
-* `STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE`
-* `STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE`
-* `STATUS_INTRODUCTION_WAIT_IT_TO_ACCEPT`
-* `STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT`
-* `STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT`
-* `STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT`
-* `STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT`
+* `STATUS_UNSPECIFIED`: 0
+* `STATUS_INVITATION_WAIT_YOU_TO_ACCEPT`: 1
+* `STATUS_INVITATION_WAIT_IT_TO_ACCEPT`: 2
+* `STATUS_INVITATION_STATUS_IN_PROGRESS`: 3
+* `STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE`: 4
+* `STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE`: 5
+* `STATUS_INTRODUCTION_WAIT_IT_TO_ACCEPT`: 7
+* `STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT`: 8
+* `STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT`: 9
+* `STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT`: 10
+* `STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT`: 11
 
 ---
 
 (datatype-invitationfilter)=
 ### InvitationFilter
 
-**Fields:**
+**Message Fields:**
 * `status` (**optional** {ref}`datatype-invitation.status`)
 * `type` (**optional** {ref}`datatype-invitationfilter.type`)
 * `display_name_search` (**optional** string)
@@ -759,16 +768,16 @@ id == 0 is equivalent to null identity
 ### InvitationFilter.Type
 
 **Enum Values:**
-* `TYPE_UNSPECIFIED`
-* `TYPE_INVITATION`
-* `TYPE_INTRODUCTION`
-* `TYPE_GROUP`
-* `TYPE_ONE_TO_ONE`
+* `TYPE_UNSPECIFIED`: 0
+* `TYPE_INVITATION`: 1
+* `TYPE_INTRODUCTION`: 2
+* `TYPE_GROUP`: 3
+* `TYPE_ONE_TO_ONE`: 4
 
 ---
 
 (datatype-settings)=
-## `Settings`
+## Settings
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-settingscommandservice`
@@ -777,7 +786,7 @@ id == 0 is equivalent to null identity
 (datatype-identitysettings)=
 ### IdentitySettings
 
-**Fields:**
+**Message Fields:**
 * `invitation` ({ref}`datatype-identitysettings.autoacceptinvitation`)
 * `message_retention` ({ref}`datatype-identitysettings.messageretention`)
 * `keycloak` ({ref}`datatype-identitysettings.keycloak`)
@@ -787,7 +796,7 @@ id == 0 is equivalent to null identity
 (datatype-identitysettings.autoacceptinvitation)=
 ### IdentitySettings.AutoAcceptInvitation
 
-**Fields:**
+**Message Fields:**
 * `auto_accept_introduction` (bool)
 * `auto_accept_group` (bool)
 * `auto_accept_one_to_one` (bool)
@@ -798,7 +807,7 @@ id == 0 is equivalent to null identity
 (datatype-identitysettings.messageretention)=
 ### IdentitySettings.MessageRetention
 
-**Fields:**
+**Message Fields:**
 * `existence_duration` (uint64 - *0 -> disabled (seconds)*)
 * `discussion_count` (uint64 - *0 -> disabled*)
 * `global_count` (uint64 - *0 -> disabled*)
@@ -810,7 +819,7 @@ id == 0 is equivalent to null identity
 (datatype-identitysettings.keycloak)=
 ### IdentitySettings.Keycloak
 
-**Fields:**
+**Message Fields:**
 * `auto_invite_new_members` (bool)
 
 ---
@@ -818,7 +827,7 @@ id == 0 is equivalent to null identity
 (datatype-discussionsettings)=
 ### DiscussionSettings
 
-**Fields:**
+**Message Fields:**
 * `discussion_id` (uint64)
 * `read_once` (bool - *message ephemerality settings (does not use a proper message for legacy reasons)*)
 * `existence_duration` (uint64 - *0 -> disabled (seconds)*)
@@ -827,7 +836,7 @@ id == 0 is equivalent to null identity
 ---
 
 (datatype-storage)=
-## `Storage`
+## Storage
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-storagecommandservice`
@@ -836,7 +845,7 @@ id == 0 is equivalent to null identity
 (datatype-storageelement)=
 ### StorageElement
 
-**Fields:**
+**Message Fields:**
 * `key` (string)
 * `value` (string)
 
@@ -845,14 +854,14 @@ id == 0 is equivalent to null identity
 (datatype-storageelementfilter)=
 ### StorageElementFilter
 
-**Fields:**
+**Message Fields:**
 * `key_search` (**optional** string)
 * `value_search` (**optional** string)
 
 ---
 
 (datatype-backup)=
-## `Backup`
+## Backup
 
 > **Related Endpoints:**
 > * **Admin:** {ref}`service-backupadminservice`
@@ -860,7 +869,7 @@ id == 0 is equivalent to null identity
 
 ### Backup
 
-**Fields:**
+**Message Fields:**
 * `admin_backup` ({ref}`datatype-backup.adminbackup`)
 * `profile_backups` (**repeated** {ref}`datatype-backup.profilebackup`)
 
@@ -869,7 +878,7 @@ id == 0 is equivalent to null identity
 (datatype-backup.adminbackup)=
 ### Backup.AdminBackup
 
-**Fields:**
+**Message Fields:**
 * `admin_client_key_count` (uint64)
 * `storage_elements_count` (uint64)
 
@@ -878,7 +887,7 @@ id == 0 is equivalent to null identity
 (datatype-backup.profilebackup)=
 ### Backup.ProfileBackup
 
-**Fields:**
+**Message Fields:**
 * `profile_display_name` (string)
 * `already_exists_locally` (bool)
 * `keycloak_managed` (bool)
@@ -889,7 +898,7 @@ id == 0 is equivalent to null identity
 (datatype-backup.profilebackup.snapshot)=
 ### Backup.ProfileBackup.Snapshot
 
-**Fields:**
+**Message Fields:**
 * `id` (string)
 * `timestamp` (uint64)
 * `from_device_name` (string)
@@ -902,7 +911,7 @@ id == 0 is equivalent to null identity
 ---
 
 (datatype-call)=
-## `Call`
+## Call
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-callcommandservice`
@@ -912,14 +921,14 @@ id == 0 is equivalent to null identity
 (datatype-callparticipantid)=
 ### CallParticipantId
 
-**Fields:**
+**Message Fields:**
 * `contact_id` (uint64)
 * `participant_id` (string)
 
 ---
 
 (datatype-keycloak)=
-## `Keycloak`
+## Keycloak
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-keycloakcommandservice`
@@ -928,7 +937,7 @@ id == 0 is equivalent to null identity
 (datatype-keycloakuser)=
 ### KeycloakUser
 
-**Fields:**
+**Message Fields:**
 * `keycloak_id` (string)
 * `display_name` (string)
 * `details` ({ref}`datatype-identitydetails`)
@@ -939,7 +948,7 @@ id == 0 is equivalent to null identity
 (datatype-keycloakuserfilter)=
 ### KeycloakUserFilter
 
-**Fields:**
+**Message Fields:**
 * `contact` (**optional** {ref}`datatype-keycloakuserfilter.contact`)
 * `display_name_search` (**optional** string)
 * `details_search` (**optional** {ref}`datatype-identitydetails`)
@@ -950,8 +959,6 @@ id == 0 is equivalent to null identity
 ### KeycloakUserFilter.Contact
 
 **Enum Values:**
-* `CONTACT_UNSPECIFIED`
-* `CONTACT_IS`
-* `CONTACT_IS_NOT`
-
----
+* `CONTACT_UNSPECIFIED`: 0
+* `CONTACT_IS`: 1
+* `CONTACT_IS_NOT`: 2

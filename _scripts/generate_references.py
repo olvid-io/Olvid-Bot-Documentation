@@ -1,5 +1,6 @@
 import os
 import sys
+from os import remove
 from typing import Dict, List, Tuple, Any
 from google.protobuf.descriptor_pb2 import FileDescriptorSet
 
@@ -26,18 +27,26 @@ def build_source_info_maps(file_proto: Any) -> Tuple[Dict[Tuple[int, ...], str],
 		path = tuple(location.path)
 		comment = ""
 
-		# Capture detached block comments (e.g., /* ** MessageGet */)
+		# Capture detached block comments (e.g., /* ** BackupKeyGet */)
 		if location.leading_detached_comments:
 			for detached in location.leading_detached_comments:
-				comment += detached.strip() + "\n"
+				comment += detached + "\n"
 
 		if location.leading_comments:
-			comment += location.leading_comments.strip() + "\n"
+			comment += location.leading_comments + "\n"
 		if location.trailing_comments:
-			comment += location.trailing_comments.strip()
+			comment += location.trailing_comments + "\n"
 
-		if comment.strip():
-			comments_map[path] = comment.strip()
+		# Clean up block comment prefixes (e.g. `** `) so they don't break Markdown bolding
+		cleaned_lines = []
+		for line in comment.splitlines():
+			line = line.strip().lstrip("*").strip()
+			cleaned_lines.append(line)
+
+		final_comment = "\n".join(cleaned_lines).strip()
+
+		if final_comment:
+			comments_map[path] = final_comment
 
 		if location.span:
 			span_map[path] = location.span[0] # Capture the starting line number
@@ -215,9 +224,13 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 
 	######################
 	# --- 1. Datatypes ---
-	dt_lines: List[str] = ["# 📚️ References\n\nThis section describes the core entities used by Olvid daemon and exposed entrypoints.\n"]
-	dt_lines.extend([":::{toctree}", ":maxdepth: 1", ":hidden:", "Datatypes<self>", "commands", "notifications", "admins", ":::"])
-	dt_lines.extend([":::{contents}", ":depth: 1", ":local:", ":::"])
+	dt_lines: List[str] = [
+		"# 📚️ References\n"
+		"This section describes the core entities used by Olvid daemon and exposed entrypoints.  ",
+		"This page describe all datatypes used by daemon api, and you can find these api description in the [](commands), [](notifications) and [](admins) sections.\n",
+	]
+	dt_lines.extend([":::{toctree}", ":maxdepth: 1", ":hidden:", "Datatypes<self>", "commands", "notifications", "admins", ":::", ""])
+	dt_lines.extend([":::{contents} Datatypes", ":depth: 1", ":local:", ":::", ""])
 
 	for filename in sorted_datatypes_files:
 		file_info = data["files"][filename]
@@ -229,7 +242,7 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 		file_msgs_lower = [item["name"].lower() for item in sorted_items if item["type"] == "message"]
 
 		dt_lines.append(f"(datatype-{base_name.lower()})=")
-		dt_lines.append(f"## `{os.path.basename(filename).removesuffix('.proto').title()}`\n")
+		dt_lines.append(f"## {os.path.basename(filename).removesuffix('.proto').title()}\n")
 
 		file_cmds: List[str] = []
 		file_notifs: List[str] = []
@@ -264,11 +277,11 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 			dt_lines.append(f"### {item['name']}\n")
 
 			if item["desc"]:
-				dt_lines.append(f"{item['desc']}\n")
+				dt_lines.append(f"```text\n{item['desc']}\n```\n")
 
 			if item["type"] == "message":
 				if item["fields"]:
-					dt_lines.append("**Fields:**")
+					dt_lines.append("**Message Fields:**")
 					for field, f_type in item["fields"].items():
 						dt_lines.append(f"* `{field}` ({f_type})")
 				else:
@@ -277,25 +290,35 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 			elif item["type"] == "enum":
 				dt_lines.append("**Enum Values:**")
 				for val_name, (val_num, val_desc) in item["values"].items():
-					line = f"* `{val_name}`"
+					line = f"* `{val_name}`: {val_num}"
 					if val_desc:
-						line += f" - *{val_desc}*"
+						line += f" - *{val_desc}*: {val_num}"
 					dt_lines.append(line)
 
 			dt_lines.append("\n---\n")
+
+	# remove trailing separator
+	dt_lines.pop(-1)
 
 	with open(os.path.join(output_dir, "datatypes.md"), "w", encoding="utf-8") as f:
 		f.write("\n".join(dt_lines))
 
 	# --- Helper to generate payload blocks ---
-	def build_payload_block(msg_name: str, label: str, is_stream: bool) -> List[str]:
+	def build_payload_block(msg_name: str, label: str, is_stream: bool, skip_desc: bool = False) -> List[str]:
 		stream_tag = " *(Stream)*" if is_stream else ""
 		lines = [f"**{label}{stream_tag}: `{msg_name}`**"]
 
 		msg_details = data["all_messages"].get(msg_name)
-		if msg_details and msg_details["fields"]:
-			for field, f_type in msg_details["fields"].items():
-				lines.append(f"* `{field}` ({f_type})")
+		if msg_details:
+			# Print the description of the message (if we haven't already hoisted it)
+			if msg_details.get("desc") and not skip_desc:
+				lines.append(f"{msg_details['desc']}\n")
+
+			if msg_details.get("fields"):
+				for field, f_type in msg_details["fields"].items():
+					lines.append(f"* `{field}` ({f_type})")
+			else:
+				lines.append("* *Empty payload.*")
 		else:
 			lines.append("* *Empty payload.*")
 		lines.append("")
@@ -304,7 +327,7 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 	# --- Helper to generate service files ---
 	def generate_service_file(service_dict: Dict, title: str, subtitle: str, output_filename: str):
 		lines: List[str] = [f"# {title}\n\n{subtitle}\n"]
-		lines.extend([":::{contents}", ":depth: 1", ":local:", ":::"])
+		lines.extend([f":::{{contents}} {title}", ":depth: 1", ":local:", ":::"])
 
 		sorted_services = sorted(
 			service_dict.keys(),
@@ -320,15 +343,33 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 
 			for rpc, rpc_info in details["rpcs"].items():
 				lines.append(f"### {rpc}")
-				if rpc_info["desc"]:
-					lines.append(f"{rpc_info['desc']}\n")
+
+				# --- Hoisting Logic ---
+				# If the RPC doesn't have a comment in the service block,
+				# fetch it from the Request message block instead.
+				rpc_desc = rpc_info["desc"]
+				req_msg = data["all_messages"].get(rpc_info["input"])
+
+				hoisted_req_desc = False
+				if not rpc_desc and req_msg and req_msg.get("desc"):
+					rpc_desc = req_msg["desc"]
+					hoisted_req_desc = True # Flag to avoid double-printing in the payload block
+
+				# remove service name in comment
+				rpc_desc = rpc_desc.strip().removeprefix(rpc).strip()
+				if rpc_desc:
+					lines.append(f"```text\n{rpc_desc}\n```\n")
 
 				req_label = "Request" if "Notification" not in title else "Subscription"
 				resp_label = "Response" if "Notification" not in title else "Notification"
-				lines.extend(build_payload_block(rpc_info["input"], req_label, rpc_info["client_streaming"]))
+
+				lines.extend(build_payload_block(rpc_info["input"], req_label, rpc_info["client_streaming"], skip_desc=hoisted_req_desc))
 				lines.extend(build_payload_block(rpc_info["output"], resp_label, rpc_info["server_streaming"]))
 				lines.append("\n")
 			lines.append("---\n")
+
+		# remove trailing separator
+		lines.pop(-1)
 
 		with open(os.path.join(output_dir, output_filename), "w", encoding="utf-8") as f:
 			f.write("\n".join(lines))

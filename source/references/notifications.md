@@ -2,7 +2,7 @@
 
 Events you can subscribe to, and notification content.
 
-:::{contents}
+:::{contents} Notifications
 :depth: 1
 :local:
 :::
@@ -43,9 +43,13 @@ Events you can subscribe to, and notification content.
 
 
 ### MessageBodyUpdated
+```
 datatypes.v1.Message updates
+```
 
 **Subscription: `SubscribeToMessageBodyUpdatedNotification`**
+MessageBodyUpdated
+
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -57,6 +61,13 @@ datatypes.v1.Message updates
 
 
 ### MessageUploaded
+```
+You cannot guarantee this notification will arrive when working with ephemeral message
+
+
+MessageUploaded
+```
+
 **Subscription: `SubscribeToMessageUploadedNotification`**
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -68,6 +79,13 @@ datatypes.v1.Message updates
 
 
 ### MessageDelivered
+```
+You cannot guarantee this notification will arrive when working with ephemeral message
+
+
+MessageDelivered
+```
+
 **Subscription: `SubscribeToMessageDeliveredNotification`**
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -79,6 +97,13 @@ datatypes.v1.Message updates
 
 
 ### MessageRead
+```
+You cannot guarantee this notification will arrive when working with ephemeral message
+
+
+MessageRead
+```
+
 **Subscription: `SubscribeToMessageReadNotification`**
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -90,9 +115,14 @@ datatypes.v1.Message updates
 
 
 ### MessageLocationReceived
+```
 location message
+```
 
 **Subscription: `SubscribeToMessageLocationReceivedNotification`**
+MessageLocationReceived
+triggered by inbound messages
+
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
@@ -102,6 +132,10 @@ location message
 
 
 ### MessageLocationSent
+```
+triggered by outbound messages
+```
+
 **Subscription: `SubscribeToMessageLocationSentNotification`**
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -112,6 +146,10 @@ location message
 
 
 ### MessageLocationSharingStart
+```
+triggered by inbound AND outbound messages
+```
+
 **Subscription: `SubscribeToMessageLocationSharingStartNotification`**
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -122,6 +160,10 @@ location message
 
 
 ### MessageLocationSharingUpdate
+```
+triggered by inbound AND outbound messages
+```
+
 **Subscription: `SubscribeToMessageLocationSharingUpdateNotification`**
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -134,6 +176,10 @@ location message
 
 
 ### MessageLocationSharingEnd
+```
+triggered by inbound AND outbound messages
+```
+
 **Subscription: `SubscribeToMessageLocationSharingEndNotification`**
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -145,9 +191,13 @@ location message
 
 
 ### MessageReactionAdded
+```
 datatypes.v1.Message reactions
+```
 
 **Subscription: `SubscribeToMessageReactionAddedNotification`**
+MessageReactionAdded
+
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -438,6 +488,10 @@ datatypes.v1.Message reactions
 
 
 ### GroupOwnPermissionsUpdated
+```
+triggered when your permissions are updated
+```
+
 **Subscription: `SubscribeToGroupOwnPermissionsUpdatedNotification`**
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -453,6 +507,10 @@ datatypes.v1.Message reactions
 
 
 ### GroupMemberPermissionsUpdated
+```
+triggered when permissions of a group member are updated
+```
+
 **Subscription: `SubscribeToGroupMemberPermissionsUpdatedNotification`**
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -525,6 +583,13 @@ datatypes.v1.Message reactions
 > **Associated Datatype:** {ref}`datatype-call`
 
 ### CallIncomingCall
+```
+PUBLIC API
+
+
+CallIncomingCall (Inbound call)
+```
+
 **Subscription: `SubscribeToCallIncomingCallNotification`**
 * `count` (**optional** uint64)
 
@@ -538,6 +603,10 @@ datatypes.v1.Message reactions
 
 
 ### CallRinging
+```
+(Outbound call)
+```
+
 **Subscription: `SubscribeToCallRingingNotification`**
 * `count` (**optional** uint64)
 
@@ -548,6 +617,10 @@ datatypes.v1.Message reactions
 
 
 ### CallAccepted
+```
+(Outbound call)
+```
+
 **Subscription: `SubscribeToCallAcceptedNotification`**
 * `count` (**optional** uint64)
 
@@ -558,6 +631,10 @@ datatypes.v1.Message reactions
 
 
 ### CallDeclined
+```
+(Outbound call)
+```
+
 **Subscription: `SubscribeToCallDeclinedNotification`**
 * `count` (**optional** uint64)
 
@@ -568,6 +645,10 @@ datatypes.v1.Message reactions
 
 
 ### CallBusy
+```
+(Outbound call)
+```
+
 **Subscription: `SubscribeToCallBusyNotification`**
 * `count` (**optional** uint64)
 
@@ -578,6 +659,10 @@ datatypes.v1.Message reactions
 
 
 ### CallEnded
+```
+: everyone declined or left call
+```
+
 **Subscription: `SubscribeToCallEndedNotification`**
 * `count` (**optional** uint64)
 
@@ -585,5 +670,3 @@ datatypes.v1.Message reactions
 * `call_identifier` (string)
 
 
-
----
