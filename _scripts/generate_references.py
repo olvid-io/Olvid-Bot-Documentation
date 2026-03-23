@@ -97,8 +97,10 @@ def extract_messages(container: Any, base_path: Tuple[int, ...], tag: int, prefi
 		# 2. Extract Nested Messages (tag 3 inside messages)
 		extract_messages(msg, msg_path, 3, f"{full_name}.", filename, file_package, comments, spans, data)
 
-		# 3. Extract Fields
-		fields: Dict[str, str] = {}
+		# 3. Extract Fields and OneOfs
+		fields_data = []
+		oneof_track = set()
+
 		for j, field in enumerate(msg.field):
 			field_path = msg_path + (2, j)
 			field_desc = comments.get(field_path, "")
@@ -127,13 +129,47 @@ def extract_messages(container: Any, base_path: Tuple[int, ...], tag: int, prefi
 			if field_desc:
 				f_type += f" - *{field_desc}*"
 
-			fields[field.name] = f_type
+			# Handle `oneof` (filter out synthetic proto3 optional oneofs)
+			is_real_oneof = field.HasField("oneof_index") and not getattr(field, "proto3_optional", False)
+
+			if is_real_oneof:
+				idx = field.oneof_index
+				oneof_name = msg.oneof_decl[idx].name
+
+				# If it's the first time seeing this oneof_index, create a group block
+				if idx not in oneof_track:
+					oneof_track.add(idx)
+
+					# Fetch the block comment associated with the oneof declaration itself
+					# The 'oneof_decl' property is located at tag 8 inside a message
+					oneof_path = msg_path + (8, idx)
+					oneof_desc = comments.get(oneof_path, "")
+
+					fields_data.append({
+						"is_oneof": True,
+						"name": oneof_name,
+						"desc": oneof_desc,
+						"sub_fields": [(field.name, f_type)]
+					})
+				# If group block exists, append to it
+				else:
+					for fd in fields_data:
+						if fd.get("is_oneof") and fd["name"] == oneof_name:
+							fd["sub_fields"].append((field.name, f_type))
+							break
+			else:
+				# Standard field handling
+				fields_data.append({
+					"is_oneof": False,
+					"name": field.name,
+					"f_type": f_type
+				})
 
 		item = {
 			"type": "message",
 			"name": full_name,
 			"desc": desc,
-			"fields": fields,
+			"fields": fields_data,
 			"line": spans.get(msg_path, 0)
 		}
 
@@ -310,9 +346,16 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 
 			if item["type"] == "message":
 				if item["fields"]:
-					dt_lines.append("**Message Fields:**")
-					for field, f_type in item["fields"].items():
-						dt_lines.append(f"* `{field}` ({f_type})")
+					dt_lines.append("**Fields:**")
+					for fd in item["fields"]:
+						# Render OneOf Blocks recursively visually
+						if fd["is_oneof"]:
+							desc_str = f" - *{fd['desc']}*" if fd.get('desc') else ""
+							dt_lines.append(f"* **Oneof `{fd['name']}`**{desc_str}:")
+							for o_name, o_type in fd["sub_fields"]:
+								dt_lines.append(f"  * `{o_name}` ({o_type})")
+						else:
+							dt_lines.append(f"* `{fd['name']}` ({fd['f_type']})")
 				else:
 					dt_lines.append("*No fields.*")
 
@@ -352,8 +395,14 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 				lines.append(f"{msg_details['desc']}\n")
 
 			if msg_details.get("fields"):
-				for field, f_type in msg_details["fields"].items():
-					lines.append(f"* `{field}` ({f_type})")
+				for fd in msg_details["fields"]:
+					if fd["is_oneof"]:
+						desc_str = f" - *{fd['desc']}*" if fd.get('desc') else ""
+						lines.append(f"* **Oneof `{fd['name']}`**{desc_str}:")
+						for o_name, o_type in fd["sub_fields"]:
+							lines.append(f"  * `{o_name}` ({o_type})")
+					else:
+						lines.append(f"* `{fd['name']}` ({fd['f_type']})")
 			else:
 				lines.append("* *Empty payload.*")
 		else:
