@@ -9,206 +9,188 @@ Events you can subscribe to, and notification content.
 (service-messagenotificationservice)=
 ## MessageNotificationService
 
-> **Associated Datatype:** {ref}`datatype-message`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-message`
+```
 
+:::{card}
 ### MessageReceived
-:::{card}
-**Subscription: `SubscribeToMessageReceivedNotification`**
+**Subscription**: *SubscribeToMessageReceivedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageReceivedNotification`**
+**Notification *(Stream)***: *MessageReceivedNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
+:::{card}
 ### MessageSent
-:::{card}
-**Subscription: `SubscribeToMessageSentNotification`**
+**Subscription**: *SubscribeToMessageSentNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageSentNotification`**
+**Notification *(Stream)***: *MessageSentNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageDeleted
 :::{card}
-**Subscription: `SubscribeToMessageDeletedNotification`**
+### MessageDeleted
+**Subscription**: *SubscribeToMessageDeletedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageDeletedNotification`**
+**Notification *(Stream)***: *MessageDeletedNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageBodyUpdated
 :::{card}
-```text
-datatypes.v1.Message updates
-```
+### MessageBodyUpdated
+> datatypes.v1.Message updates
 
-**Subscription: `SubscribeToMessageBodyUpdatedNotification`**
+**Subscription**: *SubscribeToMessageBodyUpdatedNotification*
 MessageBodyUpdated
 
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageBodyUpdatedNotification`**
+**Notification *(Stream)***: *MessageBodyUpdatedNotification*
 * `message` ({ref}`datatype-message`)
 * `previous_body` (string)
 
 :::
 
+:::{card}
 ### MessageUploaded
-:::{card}
-```text
-You cannot guarantee this notification will arrive when working with ephemeral message
+> You cannot guarantee this notification will arrive when working with ephemeral message  
+>   
+>   
+> MessageUploaded
 
-
-MessageUploaded
-```
-
-**Subscription: `SubscribeToMessageUploadedNotification`**
+**Subscription**: *SubscribeToMessageUploadedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageUploadedNotification`**
+**Notification *(Stream)***: *MessageUploadedNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
+:::{card}
 ### MessageDelivered
-:::{card}
-```text
-You cannot guarantee this notification will arrive when working with ephemeral message
+> You cannot guarantee this notification will arrive when working with ephemeral message  
+>   
+>   
+> MessageDelivered
 
-
-MessageDelivered
-```
-
-**Subscription: `SubscribeToMessageDeliveredNotification`**
+**Subscription**: *SubscribeToMessageDeliveredNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageDeliveredNotification`**
+**Notification *(Stream)***: *MessageDeliveredNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
+:::{card}
 ### MessageRead
-:::{card}
-```text
-You cannot guarantee this notification will arrive when working with ephemeral message
+> You cannot guarantee this notification will arrive when working with ephemeral message  
+>   
+>   
+> MessageRead
 
-
-MessageRead
-```
-
-**Subscription: `SubscribeToMessageReadNotification`**
+**Subscription**: *SubscribeToMessageReadNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageReadNotification`**
+**Notification *(Stream)***: *MessageReadNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageLocationReceived
 :::{card}
-```text
-location message
-```
+### MessageLocationReceived
+> location message
 
-**Subscription: `SubscribeToMessageLocationReceivedNotification`**
+**Subscription**: *SubscribeToMessageLocationReceivedNotification*
 MessageLocationReceived
 triggered by inbound messages
 
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageLocationReceivedNotification`**
+**Notification *(Stream)***: *MessageLocationReceivedNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
+:::{card}
 ### MessageLocationSent
-:::{card}
-```text
-triggered by outbound messages
-```
+> triggered by outbound messages
 
-**Subscription: `SubscribeToMessageLocationSentNotification`**
+**Subscription**: *SubscribeToMessageLocationSentNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageLocationSentNotification`**
+**Notification *(Stream)***: *MessageLocationSentNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
+:::{card}
 ### MessageLocationSharingStart
-:::{card}
-```text
-triggered by inbound AND outbound messages
-```
+> triggered by inbound AND outbound messages
 
-**Subscription: `SubscribeToMessageLocationSharingStartNotification`**
+**Subscription**: *SubscribeToMessageLocationSharingStartNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageLocationSharingStartNotification`**
+**Notification *(Stream)***: *MessageLocationSharingStartNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageLocationSharingUpdate
 :::{card}
-```text
-triggered by inbound AND outbound messages
-```
+### MessageLocationSharingUpdate
+> triggered by inbound AND outbound messages
 
-**Subscription: `SubscribeToMessageLocationSharingUpdateNotification`**
+**Subscription**: *SubscribeToMessageLocationSharingUpdateNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageLocationSharingUpdateNotification`**
+**Notification *(Stream)***: *MessageLocationSharingUpdateNotification*
 * `message` ({ref}`datatype-message`)
 * `previous_location` ({ref}`datatype-messagelocation`)
 
 :::
 
-### MessageLocationSharingEnd
 :::{card}
-```text
-triggered by inbound AND outbound messages
-```
+### MessageLocationSharingEnd
+> triggered by inbound AND outbound messages
 
-**Subscription: `SubscribeToMessageLocationSharingEndNotification`**
+**Subscription**: *SubscribeToMessageLocationSharingEndNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 
-**Notification *(Stream)*: `MessageLocationSharingEndNotification`**
+**Notification *(Stream)***: *MessageLocationSharingEndNotification*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageReactionAdded
 :::{card}
-```text
-datatypes.v1.Message reactions
-```
+### MessageReactionAdded
+> datatypes.v1.Message reactions
 
-**Subscription: `SubscribeToMessageReactionAddedNotification`**
+**Subscription**: *SubscribeToMessageReactionAddedNotification*
 MessageReactionAdded
 
 * `count` (**optional** uint64)
@@ -216,37 +198,37 @@ MessageReactionAdded
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 * `reaction_filter` (**optional** {ref}`datatype-reactionfilter`)
 
-**Notification *(Stream)*: `MessageReactionAddedNotification`**
+**Notification *(Stream)***: *MessageReactionAddedNotification*
 * `message` ({ref}`datatype-message`)
 * `reaction` ({ref}`datatype-messagereaction`)
 
 :::
 
-### MessageReactionUpdated
 :::{card}
-**Subscription: `SubscribeToMessageReactionUpdatedNotification`**
+### MessageReactionUpdated
+**Subscription**: *SubscribeToMessageReactionUpdatedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `message_filter` (**optional** {ref}`datatype-messagefilter`)
 * `reaction_filter` (**optional** {ref}`datatype-reactionfilter`)
 * `previous_reaction_filter` (**optional** {ref}`datatype-reactionfilter`)
 
-**Notification *(Stream)*: `MessageReactionUpdatedNotification`**
+**Notification *(Stream)***: *MessageReactionUpdatedNotification*
 * `message` ({ref}`datatype-message`)
 * `reaction` ({ref}`datatype-messagereaction`)
 * `previous_reaction` ({ref}`datatype-messagereaction`)
 
 :::
 
-### MessageReactionRemoved
 :::{card}
-**Subscription: `SubscribeToMessageReactionRemovedNotification`**
+### MessageReactionRemoved
+**Subscription**: *SubscribeToMessageReactionRemovedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 * `reaction_filter` (**optional** {ref}`datatype-reactionfilter`)
 
-**Notification *(Stream)*: `MessageReactionRemovedNotification`**
+**Notification *(Stream)***: *MessageReactionRemovedNotification*
 * `message` ({ref}`datatype-message`)
 * `reaction` ({ref}`datatype-messagereaction`)
 
@@ -257,28 +239,30 @@ MessageReactionAdded
 (service-attachmentnotificationservice)=
 ## AttachmentNotificationService
 
-> **Associated Datatype:** {ref}`datatype-attachment`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-attachment`
+```
 
-### AttachmentReceived
 :::{card}
-**Subscription: `SubscribeToAttachmentReceivedNotification`**
+### AttachmentReceived
+**Subscription**: *SubscribeToAttachmentReceivedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
 
-**Notification *(Stream)*: `AttachmentReceivedNotification`**
+**Notification *(Stream)***: *AttachmentReceivedNotification*
 * `attachment` ({ref}`datatype-attachment`)
 
 :::
 
-### AttachmentUploaded
 :::{card}
-**Subscription: `SubscribeToAttachmentUploadedNotification`**
+### AttachmentUploaded
+**Subscription**: *SubscribeToAttachmentUploadedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
 * `attachment_ids` (**repeated** {ref}`datatype-attachmentid`)
 
-**Notification *(Stream)*: `AttachmentUploadedNotification`**
+**Notification *(Stream)***: *AttachmentUploadedNotification*
 * `attachment` ({ref}`datatype-attachment`)
 
 :::
@@ -288,52 +272,54 @@ MessageReactionAdded
 (service-discussionnotificationservice)=
 ## DiscussionNotificationService
 
-> **Associated Datatype:** {ref}`datatype-discussion`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-discussion`
+```
 
+:::{card}
 ### DiscussionNew
-:::{card}
-**Subscription: `SubscribeToDiscussionNewNotification`**
+**Subscription**: *SubscribeToDiscussionNewNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
 
-**Notification *(Stream)*: `DiscussionNewNotification`**
+**Notification *(Stream)***: *DiscussionNewNotification*
 * `discussion` ({ref}`datatype-discussion`)
 
 :::
 
+:::{card}
 ### DiscussionLocked
-:::{card}
-**Subscription: `SubscribeToDiscussionLockedNotification`**
+**Subscription**: *SubscribeToDiscussionLockedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
 * `discussion_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `DiscussionLockedNotification`**
+**Notification *(Stream)***: *DiscussionLockedNotification*
 * `discussion` ({ref}`datatype-discussion`)
 
 :::
 
-### DiscussionTitleUpdated
 :::{card}
-**Subscription: `SubscribeToDiscussionTitleUpdatedNotification`**
+### DiscussionTitleUpdated
+**Subscription**: *SubscribeToDiscussionTitleUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
 * `discussion_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `DiscussionTitleUpdatedNotification`**
+**Notification *(Stream)***: *DiscussionTitleUpdatedNotification*
 * `discussion` ({ref}`datatype-discussion`)
 * `previous_title` (string)
 
 :::
 
-### DiscussionSettingsUpdated
 :::{card}
-**Subscription: `SubscribeToDiscussionSettingsUpdatedNotification`**
+### DiscussionSettingsUpdated
+**Subscription**: *SubscribeToDiscussionSettingsUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
 * `discussion_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `DiscussionSettingsUpdatedNotification`**
+**Notification *(Stream)***: *DiscussionSettingsUpdatedNotification*
 * `discussion` ({ref}`datatype-discussion`)
 * `new_settings` ({ref}`datatype-discussionsettings`)
 * `previous_settings` ({ref}`datatype-discussionsettings`)
@@ -345,52 +331,54 @@ MessageReactionAdded
 (service-contactnotificationservice)=
 ## ContactNotificationService
 
-> **Associated Datatype:** {ref}`datatype-contact`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-contact`
+```
 
+:::{card}
 ### ContactNew
-:::{card}
-**Subscription: `SubscribeToContactNewNotification`**
+**Subscription**: *SubscribeToContactNewNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
 
-**Notification *(Stream)*: `ContactNewNotification`**
+**Notification *(Stream)***: *ContactNewNotification*
 * `contact` ({ref}`datatype-contact`)
 
 :::
 
+:::{card}
 ### ContactDeleted
-:::{card}
-**Subscription: `SubscribeToContactDeletedNotification`**
+**Subscription**: *SubscribeToContactDeletedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
 * `contact_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `ContactDeletedNotification`**
+**Notification *(Stream)***: *ContactDeletedNotification*
 * `contact` ({ref}`datatype-contact`)
 
 :::
 
-### ContactDetailsUpdated
 :::{card}
-**Subscription: `SubscribeToContactDetailsUpdatedNotification`**
+### ContactDetailsUpdated
+**Subscription**: *SubscribeToContactDetailsUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
 * `contact_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `ContactDetailsUpdatedNotification`**
+**Notification *(Stream)***: *ContactDetailsUpdatedNotification*
 * `contact` ({ref}`datatype-contact`)
 * `previous_details` ({ref}`datatype-identitydetails`)
 
 :::
 
-### ContactPhotoUpdated
 :::{card}
-**Subscription: `SubscribeToContactPhotoUpdatedNotification`**
+### ContactPhotoUpdated
+**Subscription**: *SubscribeToContactPhotoUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
 * `contact_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `ContactPhotoUpdatedNotification`**
+**Notification *(Stream)***: *ContactPhotoUpdatedNotification*
 * `contact` ({ref}`datatype-contact`)
 
 :::
@@ -400,161 +388,159 @@ MessageReactionAdded
 (service-groupnotificationservice)=
 ## GroupNotificationService
 
-> **Associated Datatype:** {ref}`datatype-group`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-group`
+```
 
-### GroupNew
 :::{card}
-**Subscription: `SubscribeToGroupNewNotification`**
+### GroupNew
+**Subscription**: *SubscribeToGroupNewNotification*
 * `count` (**optional** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 
-**Notification *(Stream)*: `GroupNewNotification`**
+**Notification *(Stream)***: *GroupNewNotification*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupDeleted
 :::{card}
-**Subscription: `SubscribeToGroupDeletedNotification`**
+### GroupDeleted
+**Subscription**: *SubscribeToGroupDeletedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 
-**Notification *(Stream)*: `GroupDeletedNotification`**
+**Notification *(Stream)***: *GroupDeletedNotification*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupNameUpdated
 :::{card}
-**Subscription: `SubscribeToGroupNameUpdatedNotification`**
+### GroupNameUpdated
+**Subscription**: *SubscribeToGroupNameUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `previous_name_search` (**optional** string)
 
-**Notification *(Stream)*: `GroupNameUpdatedNotification`**
+**Notification *(Stream)***: *GroupNameUpdatedNotification*
 * `group` ({ref}`datatype-group`)
 * `previous_name` (string)
 
 :::
 
-### GroupPhotoUpdated
 :::{card}
-**Subscription: `SubscribeToGroupPhotoUpdatedNotification`**
+### GroupPhotoUpdated
+**Subscription**: *SubscribeToGroupPhotoUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 
-**Notification *(Stream)*: `GroupPhotoUpdatedNotification`**
+**Notification *(Stream)***: *GroupPhotoUpdatedNotification*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupDescriptionUpdated
 :::{card}
-**Subscription: `SubscribeToGroupDescriptionUpdatedNotification`**
+### GroupDescriptionUpdated
+**Subscription**: *SubscribeToGroupDescriptionUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `previous_description_search` (**optional** string)
 
-**Notification *(Stream)*: `GroupDescriptionUpdatedNotification`**
+**Notification *(Stream)***: *GroupDescriptionUpdatedNotification*
 * `group` ({ref}`datatype-group`)
 * `previous_description` (string)
 
 :::
 
+:::{card}
 ### GroupPendingMemberAdded
-:::{card}
-**Subscription: `SubscribeToGroupPendingMemberAddedNotification`**
+**Subscription**: *SubscribeToGroupPendingMemberAddedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `pending_member_filter` (**optional** {ref}`datatype-pendinggroupmemberfilter`)
 
-**Notification *(Stream)*: `GroupPendingMemberAddedNotification`**
+**Notification *(Stream)***: *GroupPendingMemberAddedNotification*
 * `group` ({ref}`datatype-group`)
 * `pending_member` ({ref}`datatype-pendinggroupmember`)
 
 :::
 
+:::{card}
 ### GroupPendingMemberRemoved
-:::{card}
-**Subscription: `SubscribeToGroupPendingMemberRemovedNotification`**
+**Subscription**: *SubscribeToGroupPendingMemberRemovedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `pending_member_filter` (**optional** {ref}`datatype-pendinggroupmemberfilter`)
 
-**Notification *(Stream)*: `GroupPendingMemberRemovedNotification`**
+**Notification *(Stream)***: *GroupPendingMemberRemovedNotification*
 * `group` ({ref}`datatype-group`)
 * `pending_member` ({ref}`datatype-pendinggroupmember`)
 
 :::
 
+:::{card}
 ### GroupMemberJoined
-:::{card}
-**Subscription: `SubscribeToGroupMemberJoinedNotification`**
+**Subscription**: *SubscribeToGroupMemberJoinedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `member_filter` (**optional** {ref}`datatype-groupmemberfilter`)
 
-**Notification *(Stream)*: `GroupMemberJoinedNotification`**
+**Notification *(Stream)***: *GroupMemberJoinedNotification*
 * `group` ({ref}`datatype-group`)
 * `member` ({ref}`datatype-groupmember`)
 
 :::
 
+:::{card}
 ### GroupMemberLeft
-:::{card}
-**Subscription: `SubscribeToGroupMemberLeftNotification`**
+**Subscription**: *SubscribeToGroupMemberLeftNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `member_filter` (**optional** {ref}`datatype-groupmemberfilter`)
 
-**Notification *(Stream)*: `GroupMemberLeftNotification`**
+**Notification *(Stream)***: *GroupMemberLeftNotification*
 * `group` ({ref}`datatype-group`)
 * `member` ({ref}`datatype-groupmember`)
 
 :::
 
-### GroupOwnPermissionsUpdated
 :::{card}
-```text
-triggered when your permissions are updated
-```
+### GroupOwnPermissionsUpdated
+> triggered when your permissions are updated
 
-**Subscription: `SubscribeToGroupOwnPermissionsUpdatedNotification`**
+**Subscription**: *SubscribeToGroupOwnPermissionsUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `permissions_filter` (**optional** {ref}`datatype-grouppermissionfilter`)
 * `previous_permissions_filter` (**optional** {ref}`datatype-grouppermissionfilter`)
 
-**Notification *(Stream)*: `GroupOwnPermissionsUpdatedNotification`**
+**Notification *(Stream)***: *GroupOwnPermissionsUpdatedNotification*
 * `group` ({ref}`datatype-group`)
 * `permissions` ({ref}`datatype-groupmemberpermissions`)
 * `previous_permissions` ({ref}`datatype-groupmemberpermissions`)
 
 :::
 
-### GroupMemberPermissionsUpdated
 :::{card}
-```text
-triggered when permissions of a group member are updated
-```
+### GroupMemberPermissionsUpdated
+> triggered when permissions of a group member are updated
 
-**Subscription: `SubscribeToGroupMemberPermissionsUpdatedNotification`**
+**Subscription**: *SubscribeToGroupMemberPermissionsUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
 * `member_filter` (**optional** {ref}`datatype-groupmemberfilter`)
 * `previous_permission_filter` (**optional** {ref}`datatype-groupmemberfilter`)
 
-**Notification *(Stream)*: `GroupMemberPermissionsUpdatedNotification`**
+**Notification *(Stream)***: *GroupMemberPermissionsUpdatedNotification*
 * `group` ({ref}`datatype-group`)
 * `member` ({ref}`datatype-groupmember`)
 * `previous_permissions` ({ref}`datatype-groupmemberpermissions`)
@@ -566,50 +552,52 @@ triggered when permissions of a group member are updated
 (service-invitationnotificationservice)=
 ## InvitationNotificationService
 
-> **Associated Datatype:** {ref}`datatype-invitation`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-invitation`
+```
 
+:::{card}
 ### InvitationReceived
-:::{card}
-**Subscription: `SubscribeToInvitationReceivedNotification`**
+**Subscription**: *SubscribeToInvitationReceivedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
 
-**Notification *(Stream)*: `InvitationReceivedNotification`**
+**Notification *(Stream)***: *InvitationReceivedNotification*
 * `invitation` ({ref}`datatype-invitation`)
 
 :::
 
+:::{card}
 ### InvitationSent
-:::{card}
-**Subscription: `SubscribeToInvitationSentNotification`**
+**Subscription**: *SubscribeToInvitationSentNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
 
-**Notification *(Stream)*: `InvitationSentNotification`**
+**Notification *(Stream)***: *InvitationSentNotification*
 * `invitation` ({ref}`datatype-invitation`)
 
 :::
 
+:::{card}
 ### InvitationDeleted
-:::{card}
-**Subscription: `SubscribeToInvitationDeletedNotification`**
+**Subscription**: *SubscribeToInvitationDeletedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
 * `invitation_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `InvitationDeletedNotification`**
+**Notification *(Stream)***: *InvitationDeletedNotification*
 * `invitation` ({ref}`datatype-invitation`)
 
 :::
 
-### InvitationUpdated
 :::{card}
-**Subscription: `SubscribeToInvitationUpdatedNotification`**
+### InvitationUpdated
+**Subscription**: *SubscribeToInvitationUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
 * `invitation_ids` (**repeated** uint64)
 
-**Notification *(Stream)*: `InvitationUpdatedNotification`**
+**Notification *(Stream)***: *InvitationUpdatedNotification*
 * `invitation` ({ref}`datatype-invitation`)
 * `previous_invitation_status` ({ref}`datatype-status`)
 
@@ -620,21 +608,21 @@ triggered when permissions of a group member are updated
 (service-callnotificationservice)=
 ## CallNotificationService
 
-> **Associated Datatype:** {ref}`datatype-call`
-
-### CallIncomingCall
-:::{card}
-```text
-PUBLIC API
-
-
-CallIncomingCall (Inbound call)
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-call`
 ```
 
-**Subscription: `SubscribeToCallIncomingCallNotification`**
+:::{card}
+### CallIncomingCall
+> PUBLIC API  
+>   
+>   
+> CallIncomingCall (Inbound call)
+
+**Subscription**: *SubscribeToCallIncomingCallNotification*
 * `count` (**optional** uint64)
 
-**Notification *(Stream)*: `CallIncomingCallNotification`**
+**Notification *(Stream)***: *CallIncomingCallNotification*
 * `call_identifier` (string)
 * `discussion_id` (uint64 - *set to group discussion if calling a group, else to contact's discussion, even if there are multiple participants*)
 * `participant_id` ({ref}`datatype-callparticipantid` - *obviously contains a contact id*)
@@ -643,76 +631,66 @@ CallIncomingCall (Inbound call)
 
 :::
 
+:::{card}
 ### CallRinging
-:::{card}
-```text
-(Outbound call)
-```
+> (Outbound call)
 
-**Subscription: `SubscribeToCallRingingNotification`**
+**Subscription**: *SubscribeToCallRingingNotification*
 * `count` (**optional** uint64)
 
-**Notification *(Stream)*: `CallRingingNotification`**
+**Notification *(Stream)***: *CallRingingNotification*
 * `call_identifier` (string)
 * `participant_id` ({ref}`datatype-callparticipantid`)
 
 :::
 
+:::{card}
 ### CallAccepted
-:::{card}
-```text
-(Outbound call)
-```
+> (Outbound call)
 
-**Subscription: `SubscribeToCallAcceptedNotification`**
+**Subscription**: *SubscribeToCallAcceptedNotification*
 * `count` (**optional** uint64)
 
-**Notification *(Stream)*: `CallAcceptedNotification`**
+**Notification *(Stream)***: *CallAcceptedNotification*
 * `call_identifier` (string)
 * `participant_id` ({ref}`datatype-callparticipantid`)
 
 :::
 
+:::{card}
 ### CallDeclined
-:::{card}
-```text
-(Outbound call)
-```
+> (Outbound call)
 
-**Subscription: `SubscribeToCallDeclinedNotification`**
+**Subscription**: *SubscribeToCallDeclinedNotification*
 * `count` (**optional** uint64)
 
-**Notification *(Stream)*: `CallDeclinedNotification`**
+**Notification *(Stream)***: *CallDeclinedNotification*
 * `call_identifier` (string)
 * `participant_id` ({ref}`datatype-callparticipantid`)
 
 :::
 
+:::{card}
 ### CallBusy
-:::{card}
-```text
-(Outbound call)
-```
+> (Outbound call)
 
-**Subscription: `SubscribeToCallBusyNotification`**
+**Subscription**: *SubscribeToCallBusyNotification*
 * `count` (**optional** uint64)
 
-**Notification *(Stream)*: `CallBusyNotification`**
+**Notification *(Stream)***: *CallBusyNotification*
 * `call_identifier` (string)
 * `participant_id` ({ref}`datatype-callparticipantid`)
 
 :::
 
-### CallEnded
 :::{card}
-```text
-: everyone declined or left call
-```
+### CallEnded
+> : everyone declined or left call
 
-**Subscription: `SubscribeToCallEndedNotification`**
+**Subscription**: *SubscribeToCallEndedNotification*
 * `count` (**optional** uint64)
 
-**Notification *(Stream)*: `CallEndedNotification`**
+**Notification *(Stream)***: *CallEndedNotification*
 * `call_identifier` (string)
 
 :::

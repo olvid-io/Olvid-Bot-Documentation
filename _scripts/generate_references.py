@@ -6,7 +6,8 @@ from google.protobuf.descriptor_pb2 import FileDescriptorSet
 # --- CONFIGURATION ---
 PREFERRED_FILES: List[str] = [
 	"message", "attachment", "discussion", "contact", "group",
-	"identity", "client_key", "invitation", "settings", "storage"
+	"identity", "client_key", "invitation", "settings", "storage",
+	"keycloak", "call", "backup"
 ]
 
 # Map protobuf internal type integers to human-readable strings
@@ -305,7 +306,7 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 			active_path.append(parts[-1])
 
 			if item["desc"]:
-				dt_lines.append(f"> {item['desc']}\n")
+				dt_lines.append(f"> {item['desc'].replace('\n', '  \n> ')}\n")
 
 			if item["type"] == "message":
 				if item["fields"]:
@@ -395,7 +396,7 @@ def generate_markdown(data: Dict[str, Any], output_dir: str) -> None:
 				# remove service name in comment
 				rpc_desc = rpc_desc.strip().removeprefix(rpc).strip()
 				if rpc_desc:
-					lines.append(f"> {rpc_desc}\n")
+					lines.append(f"> {rpc_desc.replace('\n', '  \n> ')}\n")
 
 				req_label = "Request" if "Notification" not in title else "Subscription"
 				resp_label = "Response" if "Notification" not in title else "Notification"

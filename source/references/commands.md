@@ -9,114 +9,106 @@
 (service-messagecommandservice)=
 ## MessageCommandService
 
-> **Associated Datatype:** {ref}`datatype-message`
-
-### MessageList
-:::{card}
-```text
-return all messages for current identity
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-message`
 ```
 
-**Request: `MessageListRequest`**
+:::{card}
+### MessageList
+> Return all messages for current identity
+
+**Request**: *MessageListRequest*
 * `filter` (**optional** {ref}`datatype-messagefilter`)
 * `unread` (**optional** bool - *only list unread messages (messages that have never been listed or sent in a MessageReceived notification)*)
 
-**Response *(Stream)*: `MessageListResponse`**
+**Response *(Stream)***: *MessageListResponse*
 * `messages` (**repeated** {ref}`datatype-message`)
 
 :::
 
-### MessageGet
 :::{card}
-**Request: `MessageGetRequest`**
+### MessageGet
+**Request**: *MessageGetRequest*
 * `message_id` ({ref}`datatype-messageid`)
 
-**Response: `MessageGetResponse`**
+**Response**: *MessageGetResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageSend
 :::{card}
-```text
-Post a message in a given discussion.
-A message must have a non empty body.
-```
+### MessageSend
+> Post a message in a given discussion.  
+> A message must have a non empty body.
 
-**Request: `MessageSendRequest`**
+**Request**: *MessageSendRequest*
 * `discussion_id` (uint64)
 * `body` (string)
 * `reply_id` (**optional** {ref}`datatype-messageid`)
 * `ephemerality` (**optional** {ref}`datatype-messageephemerality`)
 * `disable_link_preview` (**optional** bool)
 
-**Response: `MessageSendResponse`**
+**Response**: *MessageSendResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageSendWithAttachments
 :::{card}
-```text
-Post a message with attachments in a given discussion.
-A message must have a non empty body or at least one attachment.
-```
+### MessageSendWithAttachments
+> Post a message with attachments in a given discussion.  
+> A message must have a non empty body or at least one attachment.
 
-**Request *(Stream)*: `MessageSendWithAttachmentsRequest`**
+**Request *(Stream)***: *MessageSendWithAttachmentsRequest*
 * `metadata` ({ref}`datatype-messagesendwithattachmentsrequestmetadata`)
 * `payload` (bytes)
 * `file_delimiter` (bool)
 
-**Response: `MessageSendWithAttachmentsResponse`**
+**Response**: *MessageSendWithAttachmentsResponse*
 * `message` ({ref}`datatype-message`)
 * `attachments` (**repeated** {ref}`datatype-attachment`)
 
 :::
 
-### MessageReact
 :::{card}
-```text
-if reaction is not set delete current reaction if there is one
-```
+### MessageReact
+> if reaction is not set delete current reaction if there is one
 
-**Request: `MessageReactRequest`**
+**Request**: *MessageReactRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `reaction` (**optional** string)
 
-**Response: `MessageReactResponse`**
+**Response**: *MessageReactResponse*
 * *Empty payload.*
 
 :::
 
-### MessageUpdateBody
 :::{card}
-**Request: `MessageUpdateBodyRequest`**
+### MessageUpdateBody
+**Request**: *MessageUpdateBodyRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `updated_body` (string)
 
-**Response: `MessageUpdateBodyResponse`**
+**Response**: *MessageUpdateBodyResponse*
 * *Empty payload.*
 
 :::
 
-### MessageDelete
 :::{card}
-**Request: `MessageDeleteRequest`**
+### MessageDelete
+**Request**: *MessageDeleteRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `delete_everywhere` (**optional** bool)
 
-**Response: `MessageDeleteResponse`**
+**Response**: *MessageDeleteResponse*
 * *Empty payload.*
 
 :::
 
-### MessageSendLocation
 :::{card}
-```text
-Post a location message in a discussion.
-```
+### MessageSendLocation
+> Post a location message in a discussion.
 
-**Request: `MessageSendLocationRequest`**
+**Request**: *MessageSendLocationRequest*
 * `discussion_id` (uint64)
 * `latitude` (double)
 * `longitude` (double)
@@ -127,59 +119,57 @@ Post a location message in a discussion.
 * `preview_payload` (**optional** bytes)
 * `ephemerality` (**optional** {ref}`datatype-messageephemerality`)
 
-**Response: `MessageSendLocationResponse`**
+**Response**: *MessageSendLocationResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageStartLocationSharing
 :::{card}
-**Request: `MessageStartLocationSharingRequest`**
+### MessageStartLocationSharing
+**Request**: *MessageStartLocationSharingRequest*
 * `discussion_id` (uint64)
 * `latitude` (double)
 * `longitude` (double)
 * `altitude` (**optional** double)
 * `precision` (**optional** float)
 
-**Response: `MessageStartLocationSharingResponse`**
+**Response**: *MessageStartLocationSharingResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageUpdateLocationSharing
 :::{card}
-**Request: `MessageUpdateLocationSharingRequest`**
+### MessageUpdateLocationSharing
+**Request**: *MessageUpdateLocationSharingRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `latitude` (double)
 * `longitude` (double)
 * `altitude` (**optional** double)
 * `precision` (**optional** float)
 
-**Response: `MessageUpdateLocationSharingResponse`**
+**Response**: *MessageUpdateLocationSharingResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageEndLocationSharing
 :::{card}
-**Request: `MessageEndLocationSharingRequest`**
+### MessageEndLocationSharing
+**Request**: *MessageEndLocationSharingRequest*
 * `message_id` ({ref}`datatype-messageid`)
 
-**Response: `MessageEndLocationSharingResponse`**
+**Response**: *MessageEndLocationSharingResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-### MessageRefresh
 :::{card}
-```text
-force download message on server
-```
+### MessageRefresh
+> force download message on server
 
-**Request: `MessageRefreshRequest`**
+**Request**: *MessageRefreshRequest*
 * *Empty payload.*
 
-**Response: `MessageRefreshResponse`**
+**Response**: *MessageRefreshResponse*
 * *Empty payload.*
 
 :::
@@ -189,49 +179,49 @@ force download message on server
 (service-attachmentcommandservice)=
 ## AttachmentCommandService
 
-> **Associated Datatype:** {ref}`datatype-attachment`
-
-### AttachmentList
-:::{card}
-```text
-return all attachments for current identity
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-attachment`
 ```
 
-**Request: `AttachmentListRequest`**
+:::{card}
+### AttachmentList
+> return all attachments for current identity
+
+**Request**: *AttachmentListRequest*
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
 
-**Response *(Stream)*: `AttachmentListResponse`**
+**Response *(Stream)***: *AttachmentListResponse*
 * `attachments` (**repeated** {ref}`datatype-attachment`)
 
 :::
 
-### AttachmentGet
 :::{card}
-**Request: `AttachmentGetRequest`**
+### AttachmentGet
+**Request**: *AttachmentGetRequest*
 * `attachment_id` ({ref}`datatype-attachmentid`)
 
-**Response: `AttachmentGetResponse`**
+**Response**: *AttachmentGetResponse*
 * `attachment` ({ref}`datatype-attachment`)
 
 :::
 
-### AttachmentDelete
 :::{card}
-**Request: `AttachmentDeleteRequest`**
+### AttachmentDelete
+**Request**: *AttachmentDeleteRequest*
 * `attachment_id` ({ref}`datatype-attachmentid`)
 * `delete_everywhere` (**optional** bool)
 
-**Response: `AttachmentDeleteResponse`**
+**Response**: *AttachmentDeleteResponse*
 * *Empty payload.*
 
 :::
 
-### AttachmentDownload
 :::{card}
-**Request: `AttachmentDownloadRequest`**
+### AttachmentDownload
+**Request**: *AttachmentDownloadRequest*
 * `attachment_id` ({ref}`datatype-attachmentid`)
 
-**Response *(Stream)*: `AttachmentDownloadResponse`**
+**Response *(Stream)***: *AttachmentDownloadResponse*
 * `chunk` (bytes)
 
 :::
@@ -241,100 +231,100 @@ return all attachments for current identity
 (service-discussioncommandservice)=
 ## DiscussionCommandService
 
-> **Associated Datatype:** {ref}`datatype-discussion`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-discussion`
+```
 
-### DiscussionList
 :::{card}
-**Request: `DiscussionListRequest`**
+### DiscussionList
+**Request**: *DiscussionListRequest*
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
 
-**Response *(Stream)*: `DiscussionListResponse`**
+**Response *(Stream)***: *DiscussionListResponse*
 * `discussions` (**repeated** {ref}`datatype-discussion`)
 
 :::
 
-### DiscussionGet
 :::{card}
-**Request: `DiscussionGetRequest`**
+### DiscussionGet
+**Request**: *DiscussionGetRequest*
 * `discussion_id` (uint64)
 
-**Response: `DiscussionGetResponse`**
+**Response**: *DiscussionGetResponse*
 * `discussion` ({ref}`datatype-discussion`)
 
 :::
 
-### DiscussionGetBytesIdentifier
 :::{card}
-**Request: `DiscussionGetBytesIdentifierRequest`**
+### DiscussionGetBytesIdentifier
+**Request**: *DiscussionGetBytesIdentifierRequest*
 * `discussion_id` (uint64)
 
-**Response: `DiscussionGetBytesIdentifierResponse`**
+**Response**: *DiscussionGetBytesIdentifierResponse*
 * `identifier` (bytes)
 
 :::
 
-### DiscussionGetByContact
 :::{card}
-**Request: `DiscussionGetByContactRequest`**
+### DiscussionGetByContact
+**Request**: *DiscussionGetByContactRequest*
 * `contact_id` (uint64)
 
-**Response: `DiscussionGetByContactResponse`**
+**Response**: *DiscussionGetByContactResponse*
 * `discussion` ({ref}`datatype-discussion`)
 
 :::
 
-### DiscussionGetByGroup
 :::{card}
-**Request: `DiscussionGetByGroupRequest`**
+### DiscussionGetByGroup
+**Request**: *DiscussionGetByGroupRequest*
 * `group_id` (uint64)
 
-**Response: `DiscussionGetByGroupResponse`**
+**Response**: *DiscussionGetByGroupResponse*
 * `discussion` ({ref}`datatype-discussion`)
 
 :::
 
-### DiscussionEmpty
 :::{card}
-**Request: `DiscussionEmptyRequest`**
+### DiscussionEmpty
+**Request**: *DiscussionEmptyRequest*
 * `discussion_id` (uint64)
 
-**Response: `DiscussionEmptyResponse`**
+**Response**: *DiscussionEmptyResponse*
 * *Empty payload.*
 
 :::
 
-### DiscussionDownloadPhoto
 :::{card}
-**Request: `DiscussionDownloadPhotoRequest`**
+### DiscussionDownloadPhoto
+**Request**: *DiscussionDownloadPhotoRequest*
 * `discussion_id` (uint64)
 
-**Response: `DiscussionDownloadPhotoResponse`**
+**Response**: *DiscussionDownloadPhotoResponse*
 * `photo` (bytes)
 
 :::
 
-### DiscussionLockedList
 :::{card}
-```text
-locked discussions
-```
+### DiscussionLockedList
+> locked discussions
 
-**Request: `DiscussionLockedListRequest`**
+**Request**: *DiscussionLockedListRequest*
 DiscussionLockedList
 
 * *Empty payload.*
 
-**Response *(Stream)*: `DiscussionLockedListResponse`**
+**Response *(Stream)***: *DiscussionLockedListResponse*
 * `discussions` (**repeated** {ref}`datatype-discussion`)
 
 :::
 
-### DiscussionLockedDelete
 :::{card}
-**Request: `DiscussionLockedDeleteRequest`**
+### DiscussionLockedDelete
+**Request**: *DiscussionLockedDeleteRequest*
 * `discussion_id` (uint64)
 
-**Response: `DiscussionLockedDeleteResponse`**
+**Response**: *DiscussionLockedDeleteResponse*
 * *Empty payload.*
 
 :::
@@ -344,56 +334,56 @@ DiscussionLockedList
 (service-discussionstoragecommandservice)=
 ## DiscussionStorageCommandService
 
-> **Associated Datatype:** {ref}`datatype-discussionstorage`
-
-### DiscussionStorageList
-:::{card}
-```text
-Discussion storage api: store elements in daemon database, associated with a discussion id. They will remain associated to this discussion if you restore a backup.
-
-
-DiscussionStorageList
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-discussionstorage`
 ```
 
-**Request: `DiscussionStorageListRequest`**
+:::{card}
+### DiscussionStorageList
+> Discussion storage api: store elements in daemon database, associated with a discussion id. They will remain associated to this discussion if you restore a backup.  
+>   
+>   
+> DiscussionStorageList
+
+**Request**: *DiscussionStorageListRequest*
 * `discussion_id` (uint64)
 * `filter` (**optional** {ref}`datatype-storageelementfilter`)
 
-**Response *(Stream)*: `DiscussionStorageListResponse`**
+**Response *(Stream)***: *DiscussionStorageListResponse*
 * `elements` (**repeated** {ref}`datatype-storageelement`)
 
 :::
 
-### DiscussionStorageGet
 :::{card}
-**Request: `DiscussionStorageGetRequest`**
+### DiscussionStorageGet
+**Request**: *DiscussionStorageGetRequest*
 * `discussion_id` (uint64)
 * `key` (string)
 
-**Response: `DiscussionStorageGetResponse`**
+**Response**: *DiscussionStorageGetResponse*
 * `value` (string)
 
 :::
 
-### DiscussionStorageSet
 :::{card}
-**Request: `DiscussionStorageSetRequest`**
+### DiscussionStorageSet
+**Request**: *DiscussionStorageSetRequest*
 * `discussion_id` (uint64)
 * `key` (string)
 * `value` (string)
 
-**Response: `DiscussionStorageSetResponse`**
+**Response**: *DiscussionStorageSetResponse*
 * `previous_value` (string)
 
 :::
 
-### DiscussionStorageUnset
 :::{card}
-**Request: `DiscussionStorageUnsetRequest`**
+### DiscussionStorageUnset
+**Request**: *DiscussionStorageUnsetRequest*
 * `discussion_id` (uint64)
 * `key` (string)
 
-**Response: `DiscussionStorageUnsetResponse`**
+**Response**: *DiscussionStorageUnsetResponse*
 * `previous_value` (string)
 
 :::
@@ -403,119 +393,115 @@ DiscussionStorageList
 (service-contactcommandservice)=
 ## ContactCommandService
 
-> **Associated Datatype:** {ref}`datatype-contact`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-contact`
+```
 
-### ContactList
 :::{card}
-**Request: `ContactListRequest`**
+### ContactList
+**Request**: *ContactListRequest*
 * `filter` (**optional** {ref}`datatype-contactfilter`)
 
-**Response *(Stream)*: `ContactListResponse`**
+**Response *(Stream)***: *ContactListResponse*
 * `contacts` (**repeated** {ref}`datatype-contact`)
 
 :::
 
-### ContactGet
 :::{card}
-**Request: `ContactGetRequest`**
+### ContactGet
+**Request**: *ContactGetRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactGetResponse`**
+**Response**: *ContactGetResponse*
 * `contact` ({ref}`datatype-contact`)
 
 :::
 
-### ContactGetBytesIdentifier
 :::{card}
-**Request: `ContactGetBytesIdentifierRequest`**
+### ContactGetBytesIdentifier
+**Request**: *ContactGetBytesIdentifierRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactGetBytesIdentifierResponse`**
+**Response**: *ContactGetBytesIdentifierResponse*
 * `identifier` (bytes)
 
 :::
 
-### ContactGetInvitationLink
 :::{card}
-**Request: `ContactGetInvitationLinkRequest`**
+### ContactGetInvitationLink
+**Request**: *ContactGetInvitationLinkRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactGetInvitationLinkResponse`**
+**Response**: *ContactGetInvitationLinkResponse*
 * `invitation_link` (string)
 
 :::
 
-### ContactDelete
 :::{card}
-**Request: `ContactDeleteRequest`**
+### ContactDelete
+**Request**: *ContactDeleteRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactDeleteResponse`**
+**Response**: *ContactDeleteResponse*
 * *Empty payload.*
 
 :::
 
-### ContactIntroduction
 :::{card}
-**Request: `ContactIntroductionRequest`**
+### ContactIntroduction
+**Request**: *ContactIntroductionRequest*
 * `first_contact_id` (uint64)
 * `second_contact_id` (uint64)
 
-**Response: `ContactIntroductionResponse`**
+**Response**: *ContactIntroductionResponse*
 * *Empty payload.*
 
 :::
 
-### ContactDownloadPhoto
 :::{card}
-**Request: `ContactDownloadPhotoRequest`**
+### ContactDownloadPhoto
+**Request**: *ContactDownloadPhotoRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactDownloadPhotoResponse`**
+**Response**: *ContactDownloadPhotoResponse*
 * `photo` (bytes)
 
 :::
 
-### ContactRecreateChannels
 :::{card}
-```text
-USE CAREFULLY: this might fix some issues but every non sent / received messages will be lost.
-```
+### ContactRecreateChannels
+> USE CAREFULLY: this might fix some issues but every non sent / received messages will be lost.
 
-**Request: `ContactRecreateChannelsRequest`**
+**Request**: *ContactRecreateChannelsRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactRecreateChannelsResponse`**
+**Response**: *ContactRecreateChannelsResponse*
 * *Empty payload.*
 
 :::
 
-### ContactInviteToOneToOneDiscussion
 :::{card}
-```text
-collected contacts
-```
+### ContactInviteToOneToOneDiscussion
+> collected contacts
 
-**Request: `ContactInviteToOneToOneDiscussionRequest`**
+**Request**: *ContactInviteToOneToOneDiscussionRequest*
 ContactInviteToOneToOneDiscussion
 
 * `contact_id` (uint64)
 
-**Response: `ContactInviteToOneToOneDiscussionResponse`**
+**Response**: *ContactInviteToOneToOneDiscussionResponse*
 * `invitation` ({ref}`datatype-invitation`)
 
 :::
 
-### ContactDowngradeOneToOneDiscussion
 :::{card}
-```text
-ContactDowngradeOneToOne
-```
+### ContactDowngradeOneToOneDiscussion
+> ContactDowngradeOneToOne
 
-**Request: `ContactDowngradeOneToOneDiscussionRequest`**
+**Request**: *ContactDowngradeOneToOneDiscussionRequest*
 * `contact_id` (uint64)
 
-**Response: `ContactDowngradeOneToOneDiscussionResponse`**
+**Response**: *ContactDowngradeOneToOneDiscussionResponse*
 * *Empty payload.*
 
 :::
@@ -525,162 +511,160 @@ ContactDowngradeOneToOne
 (service-groupcommandservice)=
 ## GroupCommandService
 
-> **Associated Datatype:** {ref}`datatype-group`
-
-### GroupList
-:::{card}
-```text
-return all groups for current identity
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-group`
 ```
 
-**Request: `GroupListRequest`**
+:::{card}
+### GroupList
+> return all groups for current identity
+
+**Request**: *GroupListRequest*
 * `filter` (**optional** {ref}`datatype-groupfilter`)
 
-**Response *(Stream)*: `GroupListResponse`**
+**Response *(Stream)***: *GroupListResponse*
 * `groups` (**repeated** {ref}`datatype-group`)
 
 :::
 
-### GroupGet
 :::{card}
-**Request: `GroupGetRequest`**
+### GroupGet
+**Request**: *GroupGetRequest*
 * `group_id` (uint64)
 
-**Response: `GroupGetResponse`**
+**Response**: *GroupGetResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupGetBytesIdentifier
 :::{card}
-**Request: `GroupGetBytesIdentifierRequest`**
+### GroupGetBytesIdentifier
+**Request**: *GroupGetBytesIdentifierRequest*
 * `group_id` (uint64)
 
-**Response: `GroupGetBytesIdentifierResponse`**
+**Response**: *GroupGetBytesIdentifierResponse*
 * `identifier` (bytes)
 
 :::
 
+:::{card}
 ### GroupNewStandardGroup
-:::{card}
-**Request: `GroupNewStandardGroupRequest`**
+**Request**: *GroupNewStandardGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
 * `admin_contact_ids` (**repeated** uint64)
 
-**Response: `GroupNewStandardGroupResponse`**
+**Response**: *GroupNewStandardGroupResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
+:::{card}
 ### GroupNewControlledGroup
-:::{card}
-**Request: `GroupNewControlledGroupRequest`**
+**Request**: *GroupNewControlledGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
 * `admin_contact_ids` (**repeated** uint64)
 * `contact_ids` (**repeated** uint64)
 
-**Response: `GroupNewControlledGroupResponse`**
+**Response**: *GroupNewControlledGroupResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
+:::{card}
 ### GroupNewReadOnlyGroup
-:::{card}
-**Request: `GroupNewReadOnlyGroupRequest`**
+**Request**: *GroupNewReadOnlyGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
 * `admin_contact_ids` (**repeated** uint64)
 * `contact_ids` (**repeated** uint64)
 
-**Response: `GroupNewReadOnlyGroupResponse`**
+**Response**: *GroupNewReadOnlyGroupResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupNewAdvancedGroup
 :::{card}
-**Request: `GroupNewAdvancedGroupRequest`**
+### GroupNewAdvancedGroup
+**Request**: *GroupNewAdvancedGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
 * `advanced_configuration` (**optional** {ref}`datatype-advancedconfiguration`)
 * `members` (**repeated** {ref}`datatype-groupmember`)
 
-**Response: `GroupNewAdvancedGroupResponse`**
+**Response**: *GroupNewAdvancedGroupResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
+:::{card}
 ### GroupDisband
-:::{card}
-**Request: `GroupDisbandRequest`**
+**Request**: *GroupDisbandRequest*
 * `group_id` (uint64)
 
-**Response: `GroupDisbandResponse`**
+**Response**: *GroupDisbandResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
+:::{card}
 ### GroupLeave
-:::{card}
-**Request: `GroupLeaveRequest`**
+**Request**: *GroupLeaveRequest*
 * `group_id` (uint64)
 
-**Response: `GroupLeaveResponse`**
+**Response**: *GroupLeaveResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
+:::{card}
 ### GroupUpdate
-:::{card}
-```text
-: update a group by modifying a Group object retrieved from groupList of groupGet.
-Supported modifications:
-- Add a member: create a new GroupMember and add it to members field
-- Remove a member: remove associated GroupMember from members field
-- Remove a pending member: remove associated GroupPendingMember from pendingMembers field
-- Update (pending) member permissions: update permissions in permissions field in GroupMember or GroupPendingMember
-- Update group name: modify name field
-- Update group description: modify description field
-Every other modifications will be ignored. You must keep groupId field properly set.
-```
+> : update a group by modifying a Group object retrieved from groupList of groupGet.  
+> Supported modifications:  
+> - Add a member: create a new GroupMember and add it to members field  
+> - Remove a member: remove associated GroupMember from members field  
+> - Remove a pending member: remove associated GroupPendingMember from pendingMembers field  
+> - Update (pending) member permissions: update permissions in permissions field in GroupMember or GroupPendingMember  
+> - Update group name: modify name field  
+> - Update group description: modify description field  
+> Every other modifications will be ignored. You must keep groupId field properly set.
 
-**Request: `GroupUpdateRequest`**
+**Request**: *GroupUpdateRequest*
 * `group` ({ref}`datatype-group`)
 
-**Response: `GroupUpdateResponse`**
+**Response**: *GroupUpdateResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupUnsetPhoto
 :::{card}
-**Request: `GroupUnsetPhotoRequest`**
+### GroupUnsetPhoto
+**Request**: *GroupUnsetPhotoRequest*
 * `group_id` (uint64)
 
-**Response: `GroupUnsetPhotoResponse`**
+**Response**: *GroupUnsetPhotoResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupSetPhoto
 :::{card}
-**Request *(Stream)*: `GroupSetPhotoRequest`**
+### GroupSetPhoto
+**Request *(Stream)***: *GroupSetPhotoRequest*
 * `metadata` ({ref}`datatype-groupsetphotorequestmetadata`)
 * `payload` (bytes)
 
-**Response: `GroupSetPhotoResponse`**
+**Response**: *GroupSetPhotoResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-### GroupDownloadPhoto
 :::{card}
-**Request: `GroupDownloadPhotoRequest`**
+### GroupDownloadPhoto
+**Request**: *GroupDownloadPhotoRequest*
 * `group_id` (uint64)
 
-**Response: `GroupDownloadPhotoResponse`**
+**Response**: *GroupDownloadPhotoResponse*
 * `photo` (bytes)
 
 :::
@@ -690,105 +674,107 @@ Every other modifications will be ignored. You must keep groupId field properly 
 (service-identitycommandservice)=
 ## IdentityCommandService
 
-> **Associated Datatype:** {ref}`datatype-identity`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-identity`
+```
 
-### IdentityGet
 :::{card}
-**Request: `IdentityGetRequest`**
+### IdentityGet
+**Request**: *IdentityGetRequest*
 * *Empty payload.*
 
-**Response: `IdentityGetResponse`**
+**Response**: *IdentityGetResponse*
 * `identity` ({ref}`datatype-identity`)
 
 :::
 
-### IdentityGetBytesIdentifier
 :::{card}
-**Request: `IdentityGetBytesIdentifierRequest`**
+### IdentityGetBytesIdentifier
+**Request**: *IdentityGetBytesIdentifierRequest*
 * *Empty payload.*
 
-**Response: `IdentityGetBytesIdentifierResponse`**
+**Response**: *IdentityGetBytesIdentifierResponse*
 * `identifier` (bytes)
 
 :::
 
-### IdentityGetInvitationLink
 :::{card}
-**Request: `IdentityGetInvitationLinkRequest`**
+### IdentityGetInvitationLink
+**Request**: *IdentityGetInvitationLinkRequest*
 * *Empty payload.*
 
-**Response: `IdentityGetInvitationLinkResponse`**
+**Response**: *IdentityGetInvitationLinkResponse*
 * `invitation_link` (string)
 
 :::
 
-### IdentityUpdateDetails
 :::{card}
-**Request: `IdentityUpdateDetailsRequest`**
+### IdentityUpdateDetails
+**Request**: *IdentityUpdateDetailsRequest*
 * `new_details` ({ref}`datatype-identitydetails`)
 
-**Response: `IdentityUpdateDetailsResponse`**
+**Response**: *IdentityUpdateDetailsResponse*
 * *Empty payload.*
 
 :::
 
+:::{card}
 ### IdentityRemovePhoto
-:::{card}
-**Request: `IdentityRemovePhotoRequest`**
+**Request**: *IdentityRemovePhotoRequest*
 * *Empty payload.*
 
-**Response: `IdentityRemovePhotoResponse`**
+**Response**: *IdentityRemovePhotoResponse*
 * *Empty payload.*
 
 :::
 
-### IdentitySetPhoto
 :::{card}
-**Request *(Stream)*: `IdentitySetPhotoRequest`**
+### IdentitySetPhoto
+**Request *(Stream)***: *IdentitySetPhotoRequest*
 * `metadata` ({ref}`datatype-identitysetphotorequestmetadata`)
 * `payload` (bytes)
 
-**Response: `IdentitySetPhotoResponse`**
+**Response**: *IdentitySetPhotoResponse*
 * *Empty payload.*
 
 :::
 
-### IdentityDownloadPhoto
 :::{card}
-**Request: `IdentityDownloadPhotoRequest`**
+### IdentityDownloadPhoto
+**Request**: *IdentityDownloadPhotoRequest*
 * *Empty payload.*
 
-**Response: `IdentityDownloadPhotoResponse`**
+**Response**: *IdentityDownloadPhotoResponse*
 * `photo` (bytes)
 
 :::
 
-### IdentityGetApiKeyStatus
 :::{card}
-**Request: `IdentityGetApiKeyStatusRequest`**
+### IdentityGetApiKeyStatus
+**Request**: *IdentityGetApiKeyStatusRequest*
 * *Empty payload.*
 
-**Response: `IdentityGetApiKeyStatusResponse`**
+**Response**: *IdentityGetApiKeyStatusResponse*
 * `api_key` ({ref}`datatype-apikey`)
 
 :::
 
-### IdentitySetApiKey
 :::{card}
-**Request: `IdentitySetApiKeyRequest`**
+### IdentitySetApiKey
+**Request**: *IdentitySetApiKeyRequest*
 * `api_key` (string)
 
-**Response: `IdentitySetApiKeyResponse`**
+**Response**: *IdentitySetApiKeyResponse*
 * `api_key` ({ref}`datatype-apikey`)
 
 :::
 
-### IdentitySetConfigurationLink
 :::{card}
-**Request: `IdentitySetConfigurationLinkRequest`**
+### IdentitySetConfigurationLink
+**Request**: *IdentitySetConfigurationLinkRequest*
 * `configuration_link` (string)
 
-**Response: `IdentitySetConfigurationLinkResponse`**
+**Response**: *IdentitySetConfigurationLinkResponse*
 * `api_key` ({ref}`datatype-apikey`)
 
 :::
@@ -798,79 +784,79 @@ Every other modifications will be ignored. You must keep groupId field properly 
 (service-invitationcommandservice)=
 ## InvitationCommandService
 
-> **Associated Datatype:** {ref}`datatype-invitation`
-
-### InvitationList
-:::{card}
-```text
-return all discussions for current identity
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-invitation`
 ```
 
-**Request: `InvitationListRequest`**
+:::{card}
+### InvitationList
+> return all discussions for current identity
+
+**Request**: *InvitationListRequest*
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
 
-**Response *(Stream)*: `InvitationListResponse`**
+**Response *(Stream)***: *InvitationListResponse*
 * `invitations` (**repeated** {ref}`datatype-invitation`)
 
 :::
 
-### InvitationGet
 :::{card}
-**Request: `InvitationGetRequest`**
+### InvitationGet
+**Request**: *InvitationGetRequest*
 * `invitation_id` (uint64)
 
-**Response: `InvitationGetResponse`**
+**Response**: *InvitationGetResponse*
 * `invitation` ({ref}`datatype-invitation`)
 
 :::
 
-### InvitationNew
 :::{card}
-**Request: `InvitationNewRequest`**
+### InvitationNew
+**Request**: *InvitationNewRequest*
 * `invitation_url` (string)
 
-**Response: `InvitationNewResponse`**
+**Response**: *InvitationNewResponse*
 * `invitation` ({ref}`datatype-invitation`)
 
 :::
 
+:::{card}
 ### InvitationAccept
-:::{card}
-**Request: `InvitationAcceptRequest`**
+**Request**: *InvitationAcceptRequest*
 * `invitation_id` (uint64)
 
-**Response: `InvitationAcceptResponse`**
+**Response**: *InvitationAcceptResponse*
 * *Empty payload.*
 
 :::
 
+:::{card}
 ### InvitationDecline
-:::{card}
-**Request: `InvitationDeclineRequest`**
+**Request**: *InvitationDeclineRequest*
 * `invitation_id` (uint64)
 
-**Response: `InvitationDeclineResponse`**
+**Response**: *InvitationDeclineResponse*
 * *Empty payload.*
 
 :::
 
-### InvitationSas
 :::{card}
-**Request: `InvitationSasRequest`**
+### InvitationSas
+**Request**: *InvitationSasRequest*
 * `invitation_id` (uint64)
 * `sas` (string)
 
-**Response: `InvitationSasResponse`**
+**Response**: *InvitationSasResponse*
 * *Empty payload.*
 
 :::
 
-### InvitationDelete
 :::{card}
-**Request: `InvitationDeleteRequest`**
+### InvitationDelete
+**Request**: *InvitationDeleteRequest*
 * `invitation_id` (uint64)
 
-**Response: `InvitationDeleteResponse`**
+**Response**: *InvitationDeleteResponse*
 * *Empty payload.*
 
 :::
@@ -880,49 +866,49 @@ return all discussions for current identity
 (service-settingscommandservice)=
 ## SettingsCommandService
 
-> **Associated Datatype:** {ref}`datatype-settings`
-
-### SettingsIdentityGet
-:::{card}
-**Request: `SettingsIdentityGetRequest`**
-* *Empty payload.*
-
-**Response: `SettingsIdentityGetResponse`**
-* `identity_settings` ({ref}`datatype-identitysettings`)
-
-:::
-
-### SettingsIdentitySet
-:::{card}
-```text
-WARN: this entrypoint erase WHOLE settings. To update identity settings use SettingsIdentityGet to get current config
-and only edit fields you want to update.
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-settings`
 ```
 
-**Request: `SettingsIdentitySetRequest`**
-* `identity_settings` ({ref}`datatype-identitysettings`)
+:::{card}
+### SettingsIdentityGet
+**Request**: *SettingsIdentityGetRequest*
+* *Empty payload.*
 
-**Response: `SettingsIdentitySetResponse`**
+**Response**: *SettingsIdentityGetResponse*
 * `identity_settings` ({ref}`datatype-identitysettings`)
 
 :::
 
-### SettingsDiscussionGet
 :::{card}
-**Request: `SettingsDiscussionGetRequest`**
+### SettingsIdentitySet
+> WARN: this entrypoint erase WHOLE settings. To update identity settings use SettingsIdentityGet to get current config  
+> and only edit fields you want to update.
+
+**Request**: *SettingsIdentitySetRequest*
+* `identity_settings` ({ref}`datatype-identitysettings`)
+
+**Response**: *SettingsIdentitySetResponse*
+* `identity_settings` ({ref}`datatype-identitysettings`)
+
+:::
+
+:::{card}
+### SettingsDiscussionGet
+**Request**: *SettingsDiscussionGetRequest*
 * `discussion_id` (uint64)
 
-**Response: `SettingsDiscussionGetResponse`**
+**Response**: *SettingsDiscussionGetResponse*
 * `discussion_settings` ({ref}`datatype-discussionsettings`)
 
 :::
 
-### SettingsDiscussionSet
 :::{card}
-**Request: `SettingsDiscussionSetRequest`**
+### SettingsDiscussionSet
+**Request**: *SettingsDiscussionSetRequest*
 * `discussion_settings` ({ref}`datatype-discussionsettings`)
 
-**Response: `SettingsDiscussionSetResponse`**
+**Response**: *SettingsDiscussionSetResponse*
 * `discussion_settings` ({ref}`datatype-discussionsettings`)
 
 :::
@@ -932,81 +918,53 @@ and only edit fields you want to update.
 (service-storagecommandservice)=
 ## StorageCommandService
 
-> **Associated Datatype:** {ref}`datatype-storage`
-
-### StorageList
-:::{card}
-```text
-Global storage api: store key value elements in storage. They will be restored as is during backup restoration.
-
-
-StorageList
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-storage`
 ```
 
-**Request: `StorageListRequest`**
+:::{card}
+### StorageList
+> Global storage api: store key value elements in storage. They will be restored as is during backup restoration.  
+>   
+>   
+> StorageList
+
+**Request**: *StorageListRequest*
 * `filter` (**optional** {ref}`datatype-storageelementfilter`)
 
-**Response *(Stream)*: `StorageListResponse`**
+**Response *(Stream)***: *StorageListResponse*
 * `elements` (**repeated** {ref}`datatype-storageelement`)
 
 :::
 
+:::{card}
 ### StorageGet
-:::{card}
-**Request: `StorageGetRequest`**
+**Request**: *StorageGetRequest*
 * `key` (string)
 
-**Response: `StorageGetResponse`**
+**Response**: *StorageGetResponse*
 * `value` (string)
 
 :::
 
+:::{card}
 ### StorageSet
-:::{card}
-**Request: `StorageSetRequest`**
+**Request**: *StorageSetRequest*
 * `key` (string)
 * `value` (string)
 
-**Response: `StorageSetResponse`**
+**Response**: *StorageSetResponse*
 * `previous_value` (string)
 
 :::
 
-### StorageUnset
 :::{card}
-**Request: `StorageUnsetRequest`**
+### StorageUnset
+**Request**: *StorageUnsetRequest*
 * `key` (string)
 
-**Response: `StorageUnsetResponse`**
+**Response**: *StorageUnsetResponse*
 * `previous_value` (string)
-
-:::
-
----
-
-(service-callcommandservice)=
-## CallCommandService
-
-> **Associated Datatype:** {ref}`datatype-call`
-
-### CallStartDiscussionCall
-:::{card}
-**Request: `CallStartDiscussionCallRequest`**
-* `discussion_id` (uint64)
-
-**Response: `CallStartDiscussionCallResponse`**
-* `call_identifier` (string)
-
-:::
-
-### CallStartCustomCall
-:::{card}
-**Request: `CallStartCustomCallRequest`**
-* `contact_ids` (**repeated** uint64)
-* `discussion_id` (**optional** uint64)
-
-**Response: `CallStartCustomCallResponse`**
-* `call_identifier` (string)
 
 :::
 
@@ -1015,47 +973,79 @@ StorageList
 (service-keycloakcommandservice)=
 ## KeycloakCommandService
 
-> **Associated Datatype:** {ref}`datatype-keycloak`
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-keycloak`
+```
 
-### KeycloakBindIdentity
 :::{card}
-**Request: `KeycloakBindIdentityRequest`**
+### KeycloakBindIdentity
+**Request**: *KeycloakBindIdentityRequest*
 * `configuration_link` (string)
 
-**Response: `KeycloakBindIdentityResponse`**
+**Response**: *KeycloakBindIdentityResponse*
 * *Empty payload.*
 
 :::
 
+:::{card}
 ### KeycloakUnbindIdentity
-:::{card}
-**Request: `KeycloakUnbindIdentityRequest`**
+**Request**: *KeycloakUnbindIdentityRequest*
 * *Empty payload.*
 
-**Response: `KeycloakUnbindIdentityResponse`**
+**Response**: *KeycloakUnbindIdentityResponse*
 * *Empty payload.*
 
 :::
 
-### KeycloakUserList
 :::{card}
-**Request: `KeycloakUserListRequest`**
+### KeycloakUserList
+**Request**: *KeycloakUserListRequest*
 * `filter` (**optional** {ref}`datatype-keycloakuserfilter`)
 * `last_list_timestamp` (**optional** uint64)
 
-**Response *(Stream)*: `KeycloakUserListResponse`**
+**Response *(Stream)***: *KeycloakUserListResponse*
 * `users` (**repeated** {ref}`datatype-keycloakuser`)
 * `last_list_timestamp` (uint64)
 
 :::
 
-### KeycloakAddUserAsContact
 :::{card}
-**Request: `KeycloakAddUserAsContactRequest`**
+### KeycloakAddUserAsContact
+**Request**: *KeycloakAddUserAsContactRequest*
 * `keycloak_id` (string)
 
-**Response: `KeycloakAddUserAsContactResponse`**
+**Response**: *KeycloakAddUserAsContactResponse*
 * *Empty payload.*
+
+:::
+
+---
+
+(service-callcommandservice)=
+## CallCommandService
+
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-call`
+```
+
+:::{card}
+### CallStartDiscussionCall
+**Request**: *CallStartDiscussionCallRequest*
+* `discussion_id` (uint64)
+
+**Response**: *CallStartDiscussionCallResponse*
+* `call_identifier` (string)
+
+:::
+
+:::{card}
+### CallStartCustomCall
+**Request**: *CallStartCustomCallRequest*
+* `contact_ids` (**repeated** uint64)
+* `discussion_id` (**optional** uint64)
+
+**Response**: *CallStartCustomCallResponse*
+* `call_identifier` (string)
 
 :::
 
@@ -1064,60 +1054,54 @@ StorageList
 (service-toolcommandservice)=
 ## ToolCommandService
 
-> **Associated Datatype:** {ref}`datatype-tool`
-
-### Ping
-:::{card}
-```text
-unauthenticated rpc to check daemon is up and accessible
+```{admonition} Info
+**Associated Datatype:** {ref}`datatype-tool`
 ```
 
-**Request: `PingRequest`**
+:::{card}
+### Ping
+> unauthenticated rpc to check daemon is up and accessible
+
+**Request**: *PingRequest*
 * *Empty payload.*
 
-**Response: `PingResponse`**
+**Response**: *PingResponse*
 * *Empty payload.*
 
 :::
 
-### DaemonVersion
 :::{card}
-```text
-authenticated rpc to get current daemon version
-```
+### DaemonVersion
+> authenticated rpc to get current daemon version
 
-**Request: `DaemonVersionRequest`**
+**Request**: *DaemonVersionRequest*
 * *Empty payload.*
 
-**Response: `DaemonVersionResponse`**
+**Response**: *DaemonVersionResponse*
 * `version` (string)
 
 :::
 
-### AuthenticationTest
 :::{card}
-```text
-check that sent credentials are valid user credentials, else it returns an error
-```
+### AuthenticationTest
+> check that sent credentials are valid user credentials, else it returns an error
 
-**Request: `AuthenticationTestRequest`**
+**Request**: *AuthenticationTestRequest*
 * *Empty payload.*
 
-**Response: `AuthenticationTestResponse`**
+**Response**: *AuthenticationTestResponse*
 * *Empty payload.*
 
 :::
 
-### AuthenticationAdminTest
 :::{card}
-```text
-check that sent credentials are valid admin credentials, else it returns an error
-```
+### AuthenticationAdminTest
+> check that sent credentials are valid admin credentials, else it returns an error
 
-**Request: `AuthenticationAdminTestRequest`**
+**Request**: *AuthenticationAdminTestRequest*
 * *Empty payload.*
 
-**Response: `AuthenticationAdminTestResponse`**
+**Response**: *AuthenticationAdminTestResponse*
 * *Empty payload.*
 
 :::
