@@ -1,15 +1,4 @@
-# 📚️ References
-This section describes the core entities used by Olvid daemon and exposed entrypoints.  
-This page describe all datatypes used by daemon api, and you can find these api description in the [](commands), [](notifications) and [](admins) sections.
-
-:::{toctree}
-:maxdepth: 1
-:hidden:
-Datatypes<self>
-commands
-notifications
-admins
-:::
+# Datatypes
 
 :::{contents} Datatypes
 :depth: 1
@@ -28,10 +17,10 @@ admins
 
 :::::::{card}
 > An Olvid message posted in a discussion.  
-> Send message are Outbound, received messages are Inbound.  
+> Sent message are Outbound, received messages are Inbound.  
 > Messages must have a body and/or one or more attachment.
 
-**Message Fields:**
+**Fields:**
 * `id` ({ref}`datatype-messageid` - *the message unique identifier*)
 * `discussion_id` (uint64 - *the discussion the message belongs to*)
 * `sender_id` (uint64 - *set to a contact_id, or 0 if you sent the message*)
@@ -52,7 +41,7 @@ admins
 :::::::{card}
 > A composite id to uniquely identify a message.
 
-**Message Fields:**
+**Fields:**
 * `type` ({ref}`datatype-messageid.type` - *inbound or outbound message*)
 * `id` (uint64)
 
@@ -73,7 +62,7 @@ admins
 :::::::{card}
 > Describe message ephemerality.
 
-**Message Fields:**
+**Fields:**
 * `read_once` (bool - *message can only be read once (destroyed when discusion is closed)*)
 * `existence_duration` (uint64 - *message in destroyed after this duration, in seconds*)
 * `visibility_duration` (uint64 - *message is only visible for this duration, in seconds
@@ -87,7 +76,7 @@ seconds*)
 :::::::{card}
 > Describe a reaction to a message, by a contact or yourself.
 
-**Message Fields:**
+**Fields:**
 * `contact_id` (uint64 - *set to 0 for owned reactions*)
 * `reaction` (string - *reaction emoji*)
 * `timestamp` (uint64 - *the timestamp at which the reaction was added.*)
@@ -102,7 +91,7 @@ seconds*)
 > - location sending: send a specific location.  
 > - location sharing: share someone's location for a given duration.
 
-**Message Fields:**
+**Fields:**
 * `type` ({ref}`datatype-messagelocation.locationtype`)
 * `timestamp` (uint64 - *sending: when location was sent
 sharing: the last location update timestamp*)
@@ -131,8 +120,8 @@ sharing: the last location update timestamp*)
 > Filter messages by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
-* `type` (**optional** {ref}`datatype-messageid.type` - *id message inbound or outbound*)
+**Fields:**
+* `type` (**optional** {ref}`datatype-messageid.type` - *is message inbound or outbound*)
 * `discussion_id` (**optional** uint64 - *does message belongs to a specific discussion*)
 * `sender_contact_id` (**optional** uint64 - *is message sent by a specific contact*)
 * `body_search` (**optional** string - *regexp filter on *body* field*)
@@ -142,9 +131,10 @@ sharing: the last location update timestamp*)
 * `max_timestamp` (**optional** uint64 - *is timestamp more or equal than *max_timestamp**)
 * `has_reaction` (**optional** {ref}`datatype-messagefilter.reaction` - *does message have reactions or not*)
 * `reactions_filter` (**repeated** {ref}`datatype-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)
-* `reply_to_a_message` (bool - *is message a reply to another message*)
-* `do_not_reply_to_a_message` (bool - *is message not a reply to a message*)
-* `replied_message_id` ({ref}`datatype-messageid` - *is message a reply to a specific message id*)
+* **Oneof `reply`**:
+  * `reply_to_a_message` (bool - *is message a reply to another message*)
+  * `do_not_reply_to_a_message` (bool - *is message not a reply to a message*)
+  * `replied_message_id` ({ref}`datatype-messageid` - *is message a reply to a specific message id*)
 
 ::::::{card}
 (datatype-messagefilter.attachment)=
@@ -184,9 +174,10 @@ sharing: the last location update timestamp*)
 ### ReactionFilter
 
 :::::::{card}
-**Message Fields:**
-* `reacted_by_me` (bool - *is the reaction from yourself*)
-* `reacted_by_contact_id` (uint64 - *is the reaction from a specific contact*)
+**Fields:**
+* **Oneof `reacted_by`**:
+  * `reacted_by_me` (bool - *is the reaction from yourself*)
+  * `reacted_by_contact_id` (uint64 - *is the reaction from a specific contact*)
 * `reaction` (**optional** string - *is *reaction* equal to the *reaction* field*)
 
 :::::::
@@ -209,7 +200,7 @@ sharing: the last location update timestamp*)
 >   
 > Link previews are attachments with specific mime type: *olvid/link-preview*.
 
-**Message Fields:**
+**Fields:**
 * `id` ({ref}`datatype-attachmentid`)
 * `discussion_id` (uint64)
 * `message_id` ({ref}`datatype-messageid`)
@@ -224,7 +215,7 @@ sharing: the last location update timestamp*)
 :::::::{card}
 > A composite id to uniquely identify an attachment.
 
-**Message Fields:**
+**Fields:**
 * `type` ({ref}`datatype-attachmentid.type` - *inbound or outbound attachment*)
 * `id` (uint64)
 
@@ -246,7 +237,7 @@ sharing: the last location update timestamp*)
 > Filter attachments by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `type` (**optional** {ref}`datatype-attachmentid.type` - *select only INBOUND or OUTBOUND attachments*)
 * `file_type` (**optional** {ref}`datatype-attachmentfilter.filetype` - *filter by file type (pre-defined regexp for *mime_type*)*)
 * `discussion_id` (**optional** uint64)
@@ -260,7 +251,7 @@ sharing: the last location update timestamp*)
 (datatype-attachmentfilter.filetype)=
 #### AttachmentFilter.FileType
 
-> apply pre-defined regexp filters on *mime_type*.
+> apply pre-defined regexp filters on *mime_type* field.
 
 **Enum Values:**
 * `FILE_TYPE_UNSPECIFIED`: 0
@@ -290,11 +281,12 @@ sharing: the last location update timestamp*)
 > A discussion must be associated to a contact or to a group.  
 > If *contact_id* and *group_id* are both zero, then it is an existing locked discussion.
 
-**Message Fields:**
+**Fields:**
 * `id` (uint64)
 * `title` (string - *contact.display_name* or *group.name**)
-* `contact_id` (uint64)
-* `group_id` (uint64)
+* **Oneof `identifier`**:
+  * `contact_id` (uint64)
+  * `group_id` (uint64)
 
 :::::::
 (datatype-discussionfilter)=
@@ -304,10 +296,11 @@ sharing: the last location update timestamp*)
 > Filter discussions by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `type` (**optional** {ref}`datatype-discussionfilter.type` - *select group or contact discussions*)
-* `contact_id` (uint64)
-* `group_id` (uint64)
+* **Oneof `identifier`**:
+  * `contact_id` (uint64)
+  * `group_id` (uint64)
 * `title_search` (**optional** string - *regexp filter on title field*)
 
 ::::::{card}
@@ -339,7 +332,7 @@ sharing: the last location update timestamp*)
 > A contact can have an associated discussion if has_one_to_one_discussion is true, else it's probably a collected contact you met in a group discussion.  
 > If keycloak_managed managed contact is registered on the same keycloak.
 
-**Message Fields:**
+**Fields:**
 * `id` (uint64)
 * `display_name` (string - *computed from *details**)
 * `details` ({ref}`datatype-identitydetails`)
@@ -357,7 +350,7 @@ sharing: the last location update timestamp*)
 > Filter contacts by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `one_to_one` (**optional** {ref}`datatype-contactfilter.onetoone` - *select only contacts with or without one to one discussions*)
 * `photo` (**optional** {ref}`datatype-contactfilter.photo` - *select only contacts with or without profile photo*)
 * `keycloak` (**optional** {ref}`datatype-contactfilter.keycloak` - *select only contacts registered or not on you keycloak*)
@@ -409,10 +402,10 @@ sharing: the last location update timestamp*)
 ### Group
 
 :::::::{card}
-> A group  
+> An Olvid group.  
 > *keycloak_managed* groups are not editable, and you cannot leave them. Group is managed from the keycloak admin console.
 
-**Message Fields:**
+**Fields:**
 * `id` (uint64)
 * `type` ({ref}`datatype-group.type` - *specify a pre-set of permissions given to group members.*)
 * `advanced_configuration` (**optional** {ref}`datatype-group.advancedconfiguration` - *only set if group.type is TYPE_ADVANCED*)
@@ -441,7 +434,7 @@ sharing: the last location update timestamp*)
 (datatype-group.advancedconfiguration)=
 #### Group.AdvancedConfiguration
 
-**Message Fields:**
+**Fields:**
 * `read_only` (bool - *is group read only*)
 * `remote_delete` ({ref}`datatype-group.advancedconfiguration.remotedelete` - *who has permission to delete message for everyone*)
 
@@ -464,7 +457,7 @@ sharing: the last location update timestamp*)
 :::::::{card}
 > Associate a contact, member of a group, with its permissions in this group.
 
-**Message Fields:**
+**Fields:**
 * `contact_id` (uint64)
 * `permissions` ({ref}`datatype-groupmemberpermissions`)
 
@@ -475,7 +468,7 @@ sharing: the last location update timestamp*)
 :::::::{card}
 > Member of a group who has not yet accepted the invitation to join the group.
 
-**Message Fields:**
+**Fields:**
 * `pending_member_id` (uint64 - *unique identifier*)
 * `contact_id` (uint64 - *set to 0 if this identity is not a contact yet*)
 * `display_name` (string - *computed display name from their identity details.*)
@@ -489,7 +482,7 @@ sharing: the last location update timestamp*)
 :::::::{card}
 > Describe permission set associated to any group member.
 
-**Message Fields:**
+**Fields:**
 * `admin` (bool - *can edit the group (change name or description, and manage group members)*)
 * `remote_delete_anything` (bool - *can delete everywhere someone's else message*)
 * `edit_or_remote_delete_own_messages` (bool - *can edit or delete everywhere own messages*)
@@ -504,7 +497,7 @@ sharing: the last location update timestamp*)
 > Filter groups by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `type` (**optional** {ref}`datatype-group.type`)
 * `empty` (**optional** {ref}`datatype-groupfilter.empty` - *does group have members or not*)
 * `photo` (**optional** {ref}`datatype-groupfilter.photo` - *does group have a photo or not*)
@@ -550,7 +543,7 @@ sharing: the last location update timestamp*)
 ### GroupMemberFilter
 
 :::::::{card}
-**Message Fields:**
+**Fields:**
 * `contact_id` (**optional** uint64 - *is member a specific contact*)
 * `permissions` (**optional** {ref}`datatype-grouppermissionfilter` - *does member's permissions match this permission filter*)
 
@@ -559,7 +552,7 @@ sharing: the last location update timestamp*)
 ### PendingGroupMemberFilter
 
 :::::::{card}
-**Message Fields:**
+**Fields:**
 * `is_contact` (**optional** {ref}`datatype-pendinggroupmemberfilter.contact` - *is pending member a contact or not*)
 * `has_declined` (**optional** {ref}`datatype-pendinggroupmemberfilter.declined` - *does pending member declined invitation or not*)
 * `contact_id` (**optional** uint64 - *is pending member a specific known contact*)
@@ -591,7 +584,7 @@ sharing: the last location update timestamp*)
 ### GroupPermissionFilter
 
 :::::::{card}
-**Message Fields:**
+**Fields:**
 * `admin` (**optional** {ref}`datatype-grouppermissionfilter.admin` - *is user a group admin or not*)
 * `send_message` (**optional** {ref}`datatype-grouppermissionfilter.sendmessage` - *does user can post message in discussion*)
 * `remote_delete_anything` (**optional** {ref}`datatype-grouppermissionfilter.remotedeleteanything` - *does user can remote delete any message, even other members messages*)
@@ -666,7 +659,7 @@ sharing: the last location update timestamp*)
 > Your own Olvid identity, stored on this daemon instance.  
 > A daemon can manage multiple Olvid identities.
 
-**Message Fields:**
+**Fields:**
 * `id` (uint64)
 * `display_name` (string - *computed from *details**)
 * `details` ({ref}`datatype-identitydetails`)
@@ -679,7 +672,7 @@ sharing: the last location update timestamp*)
 (datatype-identity.apikey)=
 #### Identity.ApiKey
 
-**Message Fields:**
+**Fields:**
 * `permission` ({ref}`datatype-identity.apikey.permission`)
 * `expiration_timestamp` (uint64)
 
@@ -687,7 +680,7 @@ sharing: the last location update timestamp*)
 (datatype-identity.apikey.permission)=
 ##### Identity.ApiKey.Permission
 
-**Message Fields:**
+**Fields:**
 * `call` (bool)
 * `multi_device` (bool)
 
@@ -702,7 +695,7 @@ sharing: the last location update timestamp*)
 > Used for any Olvid identity (owned identity or other contact).  
 > Details are valid only if at least one field is not blank.
 
-**Message Fields:**
+**Fields:**
 * `first_name` (**optional** string)
 * `last_name` (**optional** string)
 * `company` (**optional** string)
@@ -716,7 +709,7 @@ sharing: the last location update timestamp*)
 > Filter identities by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `keycloak` (**optional** {ref}`datatype-identityfilter.keycloak` - *is identity keycloak managed or not*)
 * `photo` (**optional** {ref}`datatype-identityfilter.photo` - *does identity have a profile photo or not*)
 * `api_key` (**optional** {ref}`datatype-identityfilter.apikey` - *does identity have an Olvid api key or not*)
@@ -772,7 +765,7 @@ sharing: the last location update timestamp*)
 > It can be associated to a daemon identity if identity_id is specified, if not (identity_id is equal to zero) it is an admin client.  
 > An admin client key can use admin command services and impersonate any daemon identity.
 
-**Message Fields:**
+**Fields:**
 * `name` (string - *user defined name*)
 * `key` (string)
 * `identity_id` (uint64 - *0 if an admin client key*)
@@ -784,9 +777,10 @@ sharing: the last location update timestamp*)
 :::::::{card}
 > Filter client keys by attributes.
 
-**Message Fields:**
-* `admin_key` (bool - *filter admin client keys*)
-* `identity_id` (uint64 - *filter keys associated to an identity id*)
+**Fields:**
+* **Oneof `identity`**:
+  * `admin_key` (bool - *filter admin client keys*)
+  * `identity_id` (uint64 - *filter keys associated to an identity id*)
 * `name_search` (**optional** string - *regexp filter on *name**)
 * `key` (**optional** string - *key value*)
 
@@ -814,7 +808,7 @@ sharing: the last location update timestamp*)
 >   
 > Each invitation have a status representing the protocol, and it's current step.
 
-**Message Fields:**
+**Fields:**
 * `id` (uint64 - *invitation unique identifier*)
 * `status` ({ref}`datatype-invitation.status` - *current protocol step*)
 * `display_name` (string - *display name of the other identity or the group name*)
@@ -850,7 +844,7 @@ the contact id of the person who initiated introduction protocol*)
 > Filter invitation by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `status` (**optional** {ref}`datatype-invitation.status` - *does invitation have a specific status*)
 * `type` (**optional** {ref}`datatype-invitationfilter.type` - *does invitation belongs to a specific protocol*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name* field*)
@@ -899,7 +893,7 @@ the contact id of the person who initiated introduction protocol*)
 > - MessageRetention: when at least one element is set daemon will regularly check if some message can be deleted, matching filled criteria. This allows to save space and save performances by keeping database as small as possible.  
 > - Keycloak: directory related settings
 
-**Message Fields:**
+**Fields:**
 * `invitation` ({ref}`datatype-identitysettings.autoacceptinvitation`)
 * `message_retention` ({ref}`datatype-identitysettings.messageretention`)
 * `keycloak` ({ref}`datatype-identitysettings.keycloak`)
@@ -908,7 +902,7 @@ the contact id of the person who initiated introduction protocol*)
 (datatype-identitysettings.autoacceptinvitation)=
 #### IdentitySettings.AutoAcceptInvitation
 
-**Message Fields:**
+**Fields:**
 * `auto_accept_introduction` (bool - *auto accept introductions (a trusted contact pushed a new contact)*)
 * `auto_accept_group` (bool - *auto accept invitations to a group*)
 * `auto_accept_one_to_one` (bool - *auto accept contact invitations to one to one discussions*)
@@ -919,7 +913,7 @@ the contact id of the person who initiated introduction protocol*)
 (datatype-identitysettings.messageretention)=
 #### IdentitySettings.MessageRetention
 
-**Message Fields:**
+**Fields:**
 * `existence_duration` (uint64 - *if set, message older than *existence_duration* seconds will be deleted
 set to 0 to disable*)
 * `discussion_count` (uint64 - *if set, if a discussion has more than *discussion_count* messages, older messages will be deleted.
@@ -934,7 +928,7 @@ set to 0 to disable*)
 (datatype-identitysettings.keycloak)=
 #### IdentitySettings.Keycloak
 
-**Message Fields:**
+**Fields:**
 * `auto_invite_new_members` (bool - *if true, directory will regularly be scanned to add new members as contacts.*)
 
 ::::::
@@ -945,7 +939,7 @@ set to 0 to disable*)
 :::::::{card}
 > Settings for a discussion. Those settings are shared with other contacts in this discussion.
 
-**Message Fields:**
+**Fields:**
 * `discussion_id` (uint64)
 * `read_once` (bool - *are message read once*)
 * `existence_duration` (uint64 - *if set, message are destroyed after *existence_duration* seconds, 0 to disable*)
@@ -970,7 +964,7 @@ set to 0 to disable*)
 > Each client-key have it's own global storage space, and a dedicated storage space for each discussion (see DiscussionStorageCommandService).  
 > StorageElement is used for global and discussion storage.
 
-**Message Fields:**
+**Fields:**
 * `key` (string)
 * `value` (string)
 
@@ -982,7 +976,7 @@ set to 0 to disable*)
 > Filter storage elements by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `key_search` (**optional** string - *regexp filter applied on *key_search* field*)
 * `value_search` (**optional** string - *regexp filter applied on *value_search* field*)
 
@@ -1003,7 +997,7 @@ set to 0 to disable*)
 :::::::{card}
 > One of your directory user.
 
-**Message Fields:**
+**Fields:**
 * `keycloak_id` (string - *unique identifier for directory, to use to add this user as a contact*)
 * `display_name` (string - *name computed from details*)
 * `details` ({ref}`datatype-identitydetails` - *full identity details*)
@@ -1017,7 +1011,7 @@ set to 0 to disable*)
 > Filter keycloak users by attributes.  
 > To pass a filter an element must match all specified conditions.
 
-**Message Fields:**
+**Fields:**
 * `contact` (**optional** {ref}`datatype-keycloakuserfilter.contact` - *is user a contact or not*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name* field*)
 * `details_search` (**optional** {ref}`datatype-identitydetails` - *a set of regexp filters, one for each field of *details**)
@@ -1050,9 +1044,10 @@ set to 0 to disable*)
 :::::::{card}
 > Identify a call participant by it's contact id, or a random identifier if it is not a contact.
 
-**Message Fields:**
-* `contact_id` (uint64)
-* `participant_id` (string)
+**Fields:**
+* **Oneof `id`**:
+  * `contact_id` (uint64)
+  * `participant_id` (string)
 
 :::::::
 
@@ -1076,7 +1071,7 @@ set to 0 to disable*)
 >   
 > Mind a backup does not contain any message or attachment.
 
-**Message Fields:**
+**Fields:**
 * `admin_backup` ({ref}`datatype-backup.adminbackup`)
 * `profile_backups` (**repeated** {ref}`datatype-backup.profilebackup`)
 
@@ -1084,7 +1079,7 @@ set to 0 to disable*)
 (datatype-backup.adminbackup)=
 #### Backup.AdminBackup
 
-**Message Fields:**
+**Fields:**
 * `admin_client_key_count` (uint64)
 * `storage_elements_count` (uint64)
 
@@ -1093,7 +1088,7 @@ set to 0 to disable*)
 (datatype-backup.profilebackup)=
 #### Backup.ProfileBackup
 
-**Message Fields:**
+**Fields:**
 * `profile_display_name` (string)
 * `already_exists_locally` (bool)
 * `keycloak_managed` (bool)
@@ -1103,7 +1098,7 @@ set to 0 to disable*)
 (datatype-backup.profilebackup.snapshot)=
 ##### Backup.ProfileBackup.Snapshot
 
-**Message Fields:**
+**Fields:**
 * `id` (string - *id to specify to restore an identity backup*)
 * `timestamp` (uint64)
 * `from_device_name` (string)

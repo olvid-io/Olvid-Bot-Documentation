@@ -16,7 +16,7 @@ n8n/n8n
 openclaw/openclaw
 cli/cli
 daemon/daemon
-references/datatypes
+reference/reference
 glossary
 changelog
 migrations/migration_1_2

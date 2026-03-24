@@ -7,14 +7,14 @@ Events you can subscribe to, and notification content.
 :local:
 :::
 (service-messagenotificationservice)=
-## MessageNotificationService
+## Message Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-message`
-```
-
-:::{card}
+:::
 ### MessageReceived
+:::{card}
 **Subscription**: *SubscribeToMessageReceivedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -24,8 +24,8 @@ Events you can subscribe to, and notification content.
 
 :::
 
-:::{card}
 ### MessageSent
+:::{card}
 **Subscription**: *SubscribeToMessageSentNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -35,8 +35,8 @@ Events you can subscribe to, and notification content.
 
 :::
 
-:::{card}
 ### MessageDeleted
+:::{card}
 **Subscription**: *SubscribeToMessageDeletedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -47,8 +47,8 @@ Events you can subscribe to, and notification content.
 
 :::
 
-:::{card}
 ### MessageBodyUpdated
+:::{card}
 > datatypes.v1.Message updates
 
 **Subscription**: *SubscribeToMessageBodyUpdatedNotification*
@@ -64,8 +64,8 @@ MessageBodyUpdated
 
 :::
 
-:::{card}
 ### MessageUploaded
+:::{card}
 > You cannot guarantee this notification will arrive when working with ephemeral message  
 >   
 >   
@@ -81,8 +81,8 @@ MessageBodyUpdated
 
 :::
 
-:::{card}
 ### MessageDelivered
+:::{card}
 > You cannot guarantee this notification will arrive when working with ephemeral message  
 >   
 >   
@@ -98,8 +98,8 @@ MessageBodyUpdated
 
 :::
 
-:::{card}
 ### MessageRead
+:::{card}
 > You cannot guarantee this notification will arrive when working with ephemeral message  
 >   
 >   
@@ -115,8 +115,8 @@ MessageBodyUpdated
 
 :::
 
-:::{card}
 ### MessageLocationReceived
+:::{card}
 > location message
 
 **Subscription**: *SubscribeToMessageLocationReceivedNotification*
@@ -131,8 +131,8 @@ triggered by inbound messages
 
 :::
 
-:::{card}
 ### MessageLocationSent
+:::{card}
 > triggered by outbound messages
 
 **Subscription**: *SubscribeToMessageLocationSentNotification*
@@ -144,8 +144,8 @@ triggered by inbound messages
 
 :::
 
-:::{card}
 ### MessageLocationSharingStart
+:::{card}
 > triggered by inbound AND outbound messages
 
 **Subscription**: *SubscribeToMessageLocationSharingStartNotification*
@@ -157,8 +157,8 @@ triggered by inbound messages
 
 :::
 
-:::{card}
 ### MessageLocationSharingUpdate
+:::{card}
 > triggered by inbound AND outbound messages
 
 **Subscription**: *SubscribeToMessageLocationSharingUpdateNotification*
@@ -172,8 +172,8 @@ triggered by inbound messages
 
 :::
 
-:::{card}
 ### MessageLocationSharingEnd
+:::{card}
 > triggered by inbound AND outbound messages
 
 **Subscription**: *SubscribeToMessageLocationSharingEndNotification*
@@ -186,8 +186,8 @@ triggered by inbound messages
 
 :::
 
-:::{card}
 ### MessageReactionAdded
+:::{card}
 > datatypes.v1.Message reactions
 
 **Subscription**: *SubscribeToMessageReactionAddedNotification*
@@ -204,8 +204,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### MessageReactionUpdated
+:::{card}
 **Subscription**: *SubscribeToMessageReactionUpdatedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -220,8 +220,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### MessageReactionRemoved
+:::{card}
 **Subscription**: *SubscribeToMessageReactionRemovedNotification*
 * `count` (**optional** uint64)
 * `message_ids` (**repeated** {ref}`datatype-messageid`)
@@ -237,14 +237,14 @@ MessageReactionAdded
 ---
 
 (service-attachmentnotificationservice)=
-## AttachmentNotificationService
+## Attachment Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-attachment`
-```
-
-:::{card}
+:::
 ### AttachmentReceived
+:::{card}
 **Subscription**: *SubscribeToAttachmentReceivedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
@@ -254,8 +254,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### AttachmentUploaded
+:::{card}
 **Subscription**: *SubscribeToAttachmentUploadedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
@@ -270,14 +270,14 @@ MessageReactionAdded
 ---
 
 (service-discussionnotificationservice)=
-## DiscussionNotificationService
+## Discussion Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-discussion`
-```
-
-:::{card}
+:::
 ### DiscussionNew
+:::{card}
 **Subscription**: *SubscribeToDiscussionNewNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
@@ -287,8 +287,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### DiscussionLocked
+:::{card}
 **Subscription**: *SubscribeToDiscussionLockedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
@@ -299,8 +299,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### DiscussionTitleUpdated
+:::{card}
 **Subscription**: *SubscribeToDiscussionTitleUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
@@ -312,8 +312,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### DiscussionSettingsUpdated
+:::{card}
 **Subscription**: *SubscribeToDiscussionSettingsUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
@@ -329,14 +329,14 @@ MessageReactionAdded
 ---
 
 (service-contactnotificationservice)=
-## ContactNotificationService
+## Contact Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-contact`
-```
-
-:::{card}
+:::
 ### ContactNew
+:::{card}
 **Subscription**: *SubscribeToContactNewNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
@@ -346,8 +346,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### ContactDeleted
+:::{card}
 **Subscription**: *SubscribeToContactDeletedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
@@ -358,8 +358,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### ContactDetailsUpdated
+:::{card}
 **Subscription**: *SubscribeToContactDetailsUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
@@ -371,8 +371,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### ContactPhotoUpdated
+:::{card}
 **Subscription**: *SubscribeToContactPhotoUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-contactfilter`)
@@ -386,14 +386,14 @@ MessageReactionAdded
 ---
 
 (service-groupnotificationservice)=
-## GroupNotificationService
+## Group Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-group`
-```
-
-:::{card}
+:::
 ### GroupNew
+:::{card}
 **Subscription**: *SubscribeToGroupNewNotification*
 * `count` (**optional** uint64)
 * `group_filter` (**optional** {ref}`datatype-groupfilter`)
@@ -403,8 +403,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupDeleted
+:::{card}
 **Subscription**: *SubscribeToGroupDeletedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -415,8 +415,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupNameUpdated
+:::{card}
 **Subscription**: *SubscribeToGroupNameUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -429,8 +429,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupPhotoUpdated
+:::{card}
 **Subscription**: *SubscribeToGroupPhotoUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -441,8 +441,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupDescriptionUpdated
+:::{card}
 **Subscription**: *SubscribeToGroupDescriptionUpdatedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -455,8 +455,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupPendingMemberAdded
+:::{card}
 **Subscription**: *SubscribeToGroupPendingMemberAddedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -469,8 +469,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupPendingMemberRemoved
+:::{card}
 **Subscription**: *SubscribeToGroupPendingMemberRemovedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -483,8 +483,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupMemberJoined
+:::{card}
 **Subscription**: *SubscribeToGroupMemberJoinedNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -497,8 +497,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupMemberLeft
+:::{card}
 **Subscription**: *SubscribeToGroupMemberLeftNotification*
 * `count` (**optional** uint64)
 * `group_ids` (**repeated** uint64)
@@ -511,8 +511,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupOwnPermissionsUpdated
+:::{card}
 > triggered when your permissions are updated
 
 **Subscription**: *SubscribeToGroupOwnPermissionsUpdatedNotification*
@@ -529,8 +529,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### GroupMemberPermissionsUpdated
+:::{card}
 > triggered when permissions of a group member are updated
 
 **Subscription**: *SubscribeToGroupMemberPermissionsUpdatedNotification*
@@ -550,14 +550,24 @@ MessageReactionAdded
 ---
 
 (service-invitationnotificationservice)=
-## InvitationNotificationService
+## Invitation Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+must be for admin only  
+// Identity  
+service IdentityNotificationService {  
+rpc IdentityCreated(notification.v1.SubscribeToIdentityCreatedNotification) returns (stream notification.v1.IdentityCreatedNotification) {}  
+rpc IdentityDeleted(notification.v1.SubscribeToIdentityDeletedNotification) returns (stream notification.v1.IdentityDeletedNotification) {}  
+rpc IdentityDetailsUpdated(notification.v1.SubscribeToIdentityDetailsUpdatedNotification) returns (stream notification.v1.IdentityDetailsUpdatedNotification) {}  
+}  
+  
+Invitation
+
+
 **Associated Datatype:** {ref}`datatype-invitation`
-```
-
-:::{card}
+:::
 ### InvitationReceived
+:::{card}
 **Subscription**: *SubscribeToInvitationReceivedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
@@ -567,8 +577,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### InvitationSent
+:::{card}
 **Subscription**: *SubscribeToInvitationSentNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
@@ -578,8 +588,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### InvitationDeleted
+:::{card}
 **Subscription**: *SubscribeToInvitationDeletedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
@@ -590,8 +600,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### InvitationUpdated
+:::{card}
 **Subscription**: *SubscribeToInvitationUpdatedNotification*
 * `count` (**optional** uint64)
 * `filter` (**optional** {ref}`datatype-invitationfilter`)
@@ -606,14 +616,14 @@ MessageReactionAdded
 ---
 
 (service-callnotificationservice)=
-## CallNotificationService
+## Call Notification Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-call`
-```
-
-:::{card}
+:::
 ### CallIncomingCall
+:::{card}
 > PUBLIC API  
 >   
 >   
@@ -631,8 +641,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### CallRinging
+:::{card}
 > (Outbound call)
 
 **Subscription**: *SubscribeToCallRingingNotification*
@@ -644,8 +654,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### CallAccepted
+:::{card}
 > (Outbound call)
 
 **Subscription**: *SubscribeToCallAcceptedNotification*
@@ -657,8 +667,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### CallDeclined
+:::{card}
 > (Outbound call)
 
 **Subscription**: *SubscribeToCallDeclinedNotification*
@@ -670,8 +680,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### CallBusy
+:::{card}
 > (Outbound call)
 
 **Subscription**: *SubscribeToCallBusyNotification*
@@ -683,8 +693,8 @@ MessageReactionAdded
 
 :::
 
-:::{card}
 ### CallEnded
+:::{card}
 > : everyone declined or left call
 
 **Subscription**: *SubscribeToCallEndedNotification*

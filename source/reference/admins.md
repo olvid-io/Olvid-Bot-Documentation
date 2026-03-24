@@ -7,14 +7,14 @@ Privileged commands requiring a valid admin client key.
 :local:
 :::
 (service-identityadminservice)=
-## IdentityAdminService
+## Identity Admin Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-identity`
-```
-
-:::{card}
+:::
 ### IdentityList
+:::{card}
 > List all identities on this daemon.
 
 **Request**: *IdentityListRequest*
@@ -25,8 +25,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityAdminGet
+:::{card}
 > Get a specific identity, identified by it's id.
 
 **Request**: *IdentityAdminGetRequest*
@@ -37,8 +37,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityAdminGetBytesIdentifier
+:::{card}
 > Get identity long term identifier.
 
 **Request**: *IdentityAdminGetBytesIdentifierRequest*
@@ -49,8 +49,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityAdminGetInvitationLink
+:::{card}
 > Get identity invitation link.  
 > This link allows other identities to send invitations.
 
@@ -62,8 +62,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityAdminDownloadPhoto
+:::{card}
 > Download profile photo of an identity.
 
 **Request**: *IdentityAdminDownloadPhotoRequest*
@@ -74,8 +74,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityDelete
+:::{card}
 > Delete an identity on this daemon, identified by it's id.
 
 **Request**: *IdentityDeleteRequest*
@@ -87,8 +87,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityNew
+:::{card}
 > Create a new identity on this daemon.  
 > You must specify at least a non blank firstname or lastname in identity_details.  
 > You can specify a server_url to create identity on, by default it use Olvid main distribution server.
@@ -102,8 +102,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### IdentityKeycloakNew
+:::{card}
 > Create a new keycloak managed identity on this daemon.  
 > Pass the configuration link you created in the keycloak management console.
 
@@ -118,14 +118,14 @@ Privileged commands requiring a valid admin client key.
 ---
 
 (service-backupadminservice)=
-## BackupAdminService
+## Backup Admin Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-backup`
-```
-
-:::{card}
+:::
 ### BackupKeyGet
+:::{card}
 > Get your current backup key  
 > ⚠️ Store it in a safe place.  
 > This key allows to restore this daemon identities on another device/daemon.
@@ -138,8 +138,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### BackupKeyRenew
+:::{card}
 > Discard previous backup key and create a new one.
 
 **Request**: *BackupKeyRenewRequest*
@@ -150,8 +150,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### BackupGet
+:::{card}
 > Show the backup associated with a backup key.  
 > It contains an admin backup with admin client key and associated storage,  
 > and snapshots for each identity.
@@ -164,8 +164,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### BackupNow
+:::{card}
 > Force to backup now
 
 **Request**: *BackupNowRequest*
@@ -176,8 +176,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### BackupRestoreDaemon
+:::{card}
 > Restore a complete daemon instance. This is only possible on a blank daemon instance.
 
 **Request**: *BackupRestoreDaemonRequest*
@@ -191,8 +191,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### BackupRestoreAdminBackup
+:::{card}
 > Restore admin data of a backup (admin client keys and associated storage)
 
 **Request**: *BackupRestoreAdminBackupRequest*
@@ -203,8 +203,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### BackupRestoreProfileSnapshot
+:::{card}
 > Restore a identity from a backup.  
 > Pass the identity snapshot id you want to restore.
 
@@ -222,14 +222,14 @@ Privileged commands requiring a valid admin client key.
 ---
 
 (service-clientkeyadminservice)=
-## ClientKeyAdminService
+## Client Key Admin Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-clientkey`
-```
-
-:::{card}
+:::
 ### ClientKeyList
+:::{card}
 > List all client keys of this daemon.  
 > This does not return temporary client keys passed in environment or as command line arguments.
 
@@ -241,8 +241,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### ClientKeyGet
+:::{card}
 > Get a specific client key details, identified by it's value.
 
 **Request**: *ClientKeyGetRequest*
@@ -253,8 +253,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### ClientKeyNew
+:::{card}
 > Create a new api key associated with a given identity  
 > Pass 0 as identity id to create and admin api key.
 
@@ -267,8 +267,8 @@ Privileged commands requiring a valid admin client key.
 
 :::
 
-:::{card}
 ### ClientKeyDelete
+:::{card}
 > Delete a specific client key, identified by it's value.
 
 **Request**: *ClientKeyDeleteRequest*

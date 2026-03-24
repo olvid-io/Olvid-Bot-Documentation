@@ -7,15 +7,20 @@
 :local:
 :::
 (service-messagecommandservice)=
-## MessageCommandService
+## Message Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-message`
-```
-
-:::{card}
+:::
 ### MessageList
-> Return all messages for current identity
+:::{card}
+> List messages for current identity.  
+> Pass a filter to select only messages that match specific criteria.  
+>   
+> **Error codes**:  
+> `INVALID_ARGUMENT`: filter is invalid  
+> `INTERNAL`
 
 **Request**: *MessageListRequest*
 * `filter` (**optional** {ref}`datatype-messagefilter`)
@@ -26,8 +31,13 @@
 
 :::
 
-:::{card}
 ### MessageGet
+:::{card}
+> get a specific message by id.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: message not found.
+
 **Request**: *MessageGetRequest*
 * `message_id` ({ref}`datatype-messageid`)
 
@@ -36,10 +46,15 @@
 
 :::
 
-:::{card}
 ### MessageSend
-> Post a message in a given discussion.  
-> A message must have a non empty body.
+:::{card}
+> Post a text message in a discussion.  
+> A message must have a non-blank body.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: discussion / replied message not found.  
+> `INVALID_ARGUMENT`: message body is empty or blank.  
+> `INTERNAL`
 
 **Request**: *MessageSendRequest*
 * `discussion_id` (uint64)
@@ -53,15 +68,26 @@
 
 :::
 
-:::{card}
 ### MessageSendWithAttachments
+:::{card}
 > Post a message with attachments in a given discussion.  
-> A message must have a non empty body or at least one attachment.
+> A message must have a non empty body or at least one attachment.  
+> To allow sending multiple files with no size limitations this entry point is a client stream.  
+> First send a MessageSendWithAttachmentsRequest filling metadata field.  
+> Then send each file separately by chunks of any size.  
+> Always send an empty MessageSendWithAttachmentsRequest with only file_delimiter set to true at the end of each file upload.  
+> When all attachments are uploaded server will answer with a MessageSendWithAttachmentsResponse and close stream.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: discussion / replied message not found.  
+> `INVALID_ARGUMENT`: message body is empty or blank with no attached file / attached the same file twice.  
+> `INTERNAL`
 
 **Request *(Stream)***: *MessageSendWithAttachmentsRequest*
-* `metadata` ({ref}`datatype-messagesendwithattachmentsrequestmetadata`)
-* `payload` (bytes)
-* `file_delimiter` (bool)
+* **Oneof `request`**:
+  * `metadata` ({ref}`datatype-messagesendwithattachmentsrequestmetadata`)
+  * `payload` (bytes)
+  * `file_delimiter` (bool)
 
 **Response**: *MessageSendWithAttachmentsResponse*
 * `message` ({ref}`datatype-message`)
@@ -69,9 +95,14 @@
 
 :::
 
-:::{card}
 ### MessageReact
-> if reaction is not set delete current reaction if there is one
+:::{card}
+> Add, update or remove a reaction from a message.  
+> If reaction is an empty string your previous reaction will be removed if there were any.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: message not found.  
+> `INTERNAL`
 
 **Request**: *MessageReactRequest*
 * `message_id` ({ref}`datatype-messageid`)
@@ -82,8 +113,16 @@
 
 :::
 
-:::{card}
 ### MessageUpdateBody
+:::{card}
+> Update one of your message body.  
+> Body cannot be empty or blank.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: message not found.  
+> `INVALID_ARGUMENT`: you can only edit your own messages / new body cannot be empty or blank.  
+> `INTERNAL`
+
 **Request**: *MessageUpdateBodyRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `updated_body` (string)
@@ -93,8 +132,15 @@
 
 :::
 
-:::{card}
 ### MessageDelete
+:::{card}
+> Delete a message giving it's id.  
+> TODO delete everywhere ?  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: message not found.  
+> `INTERNAL`
+
 **Request**: *MessageDeleteRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `delete_everywhere` (**optional** bool)
@@ -104,9 +150,15 @@
 
 :::
 
-:::{card}
 ### MessageSendLocation
-> Post a location message in a discussion.
+:::{card}
+> Post a location message in a discussion.  
+> A location message represent a specific location, and is different of a location sharing that can be updated.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: discussion not found.  
+> `INVALID_ARGUMENT: latitude and longitude are both equal to zero / preview_filename and preview_payload must be set together.  
+> `INTERNAL`
 
 **Request**: *MessageSendLocationRequest*
 * `discussion_id` (uint64)
@@ -115,17 +167,24 @@
 * `altitude` (**optional** double)
 * `precision` (**optional** float)
 * `address` (**optional** string)
-* `preview_filename` (**optional** string - *preview filename and payload must be set together. Payload might not exceed protobuf max message size.*)
-* `preview_payload` (**optional** bytes)
-* `ephemerality` (**optional** {ref}`datatype-messageephemerality`)
+* `preview_filename` (**optional** string - *attach an option preview as a picture, specify filename to use*)
+* `preview_payload` (**optional** bytes - *attach an option preview as a picture, specify payload (must be smaller than grpc max message size)*)
+* `ephemerality` (**optional** {ref}`datatype-messageephemerality` - *make your location message ephemeral*)
 
 **Response**: *MessageSendLocationResponse*
 * `message` ({ref}`datatype-message`)
 
 :::
 
-:::{card}
 ### MessageStartLocationSharing
+:::{card}
+> Start sharing a location in a discussion.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: discussion not found.  
+> `INVALID_ARGUMENT: latitude and longitude are both equal to zero.  
+> `INTERNAL`
+
 **Request**: *MessageStartLocationSharingRequest*
 * `discussion_id` (uint64)
 * `latitude` (double)
@@ -138,8 +197,15 @@
 
 :::
 
-:::{card}
 ### MessageUpdateLocationSharing
+:::{card}
+> Update one of your sharing location message with a new location.  
+>   
+> **Error codes**:  
+> `NOT_FOUND`: message not found.  
+> `INVALID_ARGUMENT: you can only update your location sharing messages / sharing is no longer active.  
+> `INTERNAL`
+
 **Request**: *MessageUpdateLocationSharingRequest*
 * `message_id` ({ref}`datatype-messageid`)
 * `latitude` (double)
@@ -152,8 +218,13 @@
 
 :::
 
-:::{card}
 ### MessageEndLocationSharing
+:::{card}
+> **Error codes**:  
+> `NOT_FOUND`: message not found.  
+> `INVALID_ARGUMENT: you can only end your location sharing messages / sharing is no longer active.  
+> `INTERNAL`
+
 **Request**: *MessageEndLocationSharingRequest*
 * `message_id` ({ref}`datatype-messageid`)
 
@@ -162,9 +233,9 @@
 
 :::
 
-:::{card}
 ### MessageRefresh
-> force download message on server
+:::{card}
+> Manually refresh messages available on server.
 
 **Request**: *MessageRefreshRequest*
 * *Empty payload.*
@@ -177,15 +248,19 @@
 ---
 
 (service-attachmentcommandservice)=
-## AttachmentCommandService
+## Attachment Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-attachment`
-```
-
-:::{card}
+:::
 ### AttachmentList
-> return all attachments for current identity
+:::{card}
+> List attachments for current identity.  
+> Pass a filter to select only attachments that match specific criteria.  
+>   
+> **Error codes**:  
+> `NOT_FOUND` ("Message not found"): filter.messageId does not belong to an identity message.
 
 **Request**: *AttachmentListRequest*
 * `filter` (**optional** {ref}`datatype-attachmentfilter`)
@@ -195,8 +270,13 @@
 
 :::
 
-:::{card}
 ### AttachmentGet
+:::{card}
+> Get an attachment by id.  
+>   
+> **Error codes**:  
+> `NOT_FOUND` (*Attachment not found*): attachment_id does not belong to an identity attachment.
+
 **Request**: *AttachmentGetRequest*
 * `attachment_id` ({ref}`datatype-attachmentid`)
 
@@ -205,8 +285,13 @@
 
 :::
 
-:::{card}
 ### AttachmentDelete
+:::{card}
+> Delete an attachment by id.  
+>   
+> **Error codes**:  
+> `NOT_FOUND` (*Attachment not found*): attachment_id does not belong to an identity attachment.
+
 **Request**: *AttachmentDeleteRequest*
 * `attachment_id` ({ref}`datatype-attachmentid`)
 * `delete_everywhere` (**optional** bool)
@@ -216,8 +301,15 @@
 
 :::
 
-:::{card}
 ### AttachmentDownload
+:::{card}
+> Download the file associated to an attachment.  
+> This returns one or more chunks of bytes.  
+>   
+> **Error codes**:  
+> `NOT_FOUND` (*Attachment not found*): attachment_id does not belong to an identity attachment.  
+> `INTERNAL`
+
 **Request**: *AttachmentDownloadRequest*
 * `attachment_id` ({ref}`datatype-attachmentid`)
 
@@ -229,14 +321,14 @@
 ---
 
 (service-discussioncommandservice)=
-## DiscussionCommandService
+## Discussion Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-discussion`
-```
-
-:::{card}
+:::
 ### DiscussionList
+:::{card}
 **Request**: *DiscussionListRequest*
 * `filter` (**optional** {ref}`datatype-discussionfilter`)
 
@@ -245,8 +337,8 @@
 
 :::
 
-:::{card}
 ### DiscussionGet
+:::{card}
 **Request**: *DiscussionGetRequest*
 * `discussion_id` (uint64)
 
@@ -255,8 +347,8 @@
 
 :::
 
-:::{card}
 ### DiscussionGetBytesIdentifier
+:::{card}
 **Request**: *DiscussionGetBytesIdentifierRequest*
 * `discussion_id` (uint64)
 
@@ -265,8 +357,8 @@
 
 :::
 
-:::{card}
 ### DiscussionGetByContact
+:::{card}
 **Request**: *DiscussionGetByContactRequest*
 * `contact_id` (uint64)
 
@@ -275,8 +367,8 @@
 
 :::
 
-:::{card}
 ### DiscussionGetByGroup
+:::{card}
 **Request**: *DiscussionGetByGroupRequest*
 * `group_id` (uint64)
 
@@ -285,8 +377,8 @@
 
 :::
 
-:::{card}
 ### DiscussionEmpty
+:::{card}
 **Request**: *DiscussionEmptyRequest*
 * `discussion_id` (uint64)
 
@@ -295,8 +387,8 @@
 
 :::
 
-:::{card}
 ### DiscussionDownloadPhoto
+:::{card}
 **Request**: *DiscussionDownloadPhotoRequest*
 * `discussion_id` (uint64)
 
@@ -305,8 +397,8 @@
 
 :::
 
-:::{card}
 ### DiscussionLockedList
+:::{card}
 > locked discussions
 
 **Request**: *DiscussionLockedListRequest*
@@ -319,8 +411,8 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### DiscussionLockedDelete
+:::{card}
 **Request**: *DiscussionLockedDeleteRequest*
 * `discussion_id` (uint64)
 
@@ -332,14 +424,14 @@ DiscussionLockedList
 ---
 
 (service-discussionstoragecommandservice)=
-## DiscussionStorageCommandService
+## Discussion Storage Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-discussionstorage`
-```
-
-:::{card}
+:::
 ### DiscussionStorageList
+:::{card}
 > Discussion storage api: store elements in daemon database, associated with a discussion id. They will remain associated to this discussion if you restore a backup.  
 >   
 >   
@@ -354,8 +446,8 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### DiscussionStorageGet
+:::{card}
 **Request**: *DiscussionStorageGetRequest*
 * `discussion_id` (uint64)
 * `key` (string)
@@ -365,8 +457,8 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### DiscussionStorageSet
+:::{card}
 **Request**: *DiscussionStorageSetRequest*
 * `discussion_id` (uint64)
 * `key` (string)
@@ -377,8 +469,8 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### DiscussionStorageUnset
+:::{card}
 **Request**: *DiscussionStorageUnsetRequest*
 * `discussion_id` (uint64)
 * `key` (string)
@@ -391,14 +483,17 @@ DiscussionLockedList
 ---
 
 (service-contactcommandservice)=
-## ContactCommandService
+## Contact Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-contact`
-```
-
-:::{card}
+:::
 ### ContactList
+:::{card}
+> List contacts for current identity.  
+> Pass a filter to select only contacts that match specific criteria.
+
 **Request**: *ContactListRequest*
 * `filter` (**optional** {ref}`datatype-contactfilter`)
 
@@ -407,8 +502,10 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactGet
+:::{card}
+> Get a contact specifying it's id.
+
 **Request**: *ContactGetRequest*
 * `contact_id` (uint64)
 
@@ -417,8 +514,11 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactGetBytesIdentifier
+:::{card}
+> Get a contact identity as bytes.  
+> This is useful to have a long term identifier for a contact, backup-proof, and common to any device.
+
 **Request**: *ContactGetBytesIdentifierRequest*
 * `contact_id` (uint64)
 
@@ -427,8 +527,10 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactGetInvitationLink
+:::{card}
+> Get invitation link for a contact.
+
 **Request**: *ContactGetInvitationLinkRequest*
 * `contact_id` (uint64)
 
@@ -437,8 +539,10 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactDelete
+:::{card}
+> Delete a contact giving it's id.
+
 **Request**: *ContactDeleteRequest*
 * `contact_id` (uint64)
 
@@ -447,8 +551,12 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactIntroduction
+:::{card}
+> Introduce two of your contacts together.  
+> They will both receive an invitation to accept.  
+> If each of the two accepts, they will be added to each other's contact book and can exchange.
+
 **Request**: *ContactIntroductionRequest*
 * `first_contact_id` (uint64)
 * `second_contact_id` (uint64)
@@ -458,8 +566,8 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactDownloadPhoto
+:::{card}
 **Request**: *ContactDownloadPhotoRequest*
 * `contact_id` (uint64)
 
@@ -468,8 +576,8 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactRecreateChannels
+:::{card}
 > USE CAREFULLY: this might fix some issues but every non sent / received messages will be lost.
 
 **Request**: *ContactRecreateChannelsRequest*
@@ -480,12 +588,14 @@ DiscussionLockedList
 
 :::
 
-:::{card}
 ### ContactInviteToOneToOneDiscussion
+:::{card}
 > collected contacts
 
 **Request**: *ContactInviteToOneToOneDiscussionRequest*
 ContactInviteToOneToOneDiscussion
+Invite a non one-to-one contact to have a one-to-one discussion.
+If *contact.
 
 * `contact_id` (uint64)
 
@@ -494,8 +604,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### ContactDowngradeOneToOneDiscussion
+:::{card}
 > ContactDowngradeOneToOne
 
 **Request**: *ContactDowngradeOneToOneDiscussionRequest*
@@ -509,14 +619,14 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-groupcommandservice)=
-## GroupCommandService
+## Group Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-group`
-```
-
-:::{card}
+:::
 ### GroupList
+:::{card}
 > return all groups for current identity
 
 **Request**: *GroupListRequest*
@@ -527,8 +637,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupGet
+:::{card}
 **Request**: *GroupGetRequest*
 * `group_id` (uint64)
 
@@ -537,8 +647,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupGetBytesIdentifier
+:::{card}
 **Request**: *GroupGetBytesIdentifierRequest*
 * `group_id` (uint64)
 
@@ -547,8 +657,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupNewStandardGroup
+:::{card}
 **Request**: *GroupNewStandardGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
@@ -559,8 +669,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupNewControlledGroup
+:::{card}
 **Request**: *GroupNewControlledGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
@@ -572,8 +682,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupNewReadOnlyGroup
+:::{card}
 **Request**: *GroupNewReadOnlyGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
@@ -585,8 +695,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupNewAdvancedGroup
+:::{card}
 **Request**: *GroupNewAdvancedGroupRequest*
 * `name` (**optional** string)
 * `description` (**optional** string)
@@ -598,8 +708,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupDisband
+:::{card}
 **Request**: *GroupDisbandRequest*
 * `group_id` (uint64)
 
@@ -608,8 +718,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupLeave
+:::{card}
 **Request**: *GroupLeaveRequest*
 * `group_id` (uint64)
 
@@ -618,8 +728,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupUpdate
+:::{card}
 > : update a group by modifying a Group object retrieved from groupList of groupGet.  
 > Supported modifications:  
 > - Add a member: create a new GroupMember and add it to members field  
@@ -638,8 +748,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupUnsetPhoto
+:::{card}
 **Request**: *GroupUnsetPhotoRequest*
 * `group_id` (uint64)
 
@@ -648,19 +758,20 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### GroupSetPhoto
+:::{card}
 **Request *(Stream)***: *GroupSetPhotoRequest*
-* `metadata` ({ref}`datatype-groupsetphotorequestmetadata`)
-* `payload` (bytes)
+* **Oneof `request`**:
+  * `metadata` ({ref}`datatype-groupsetphotorequestmetadata`)
+  * `payload` (bytes)
 
 **Response**: *GroupSetPhotoResponse*
 * `group` ({ref}`datatype-group`)
 
 :::
 
-:::{card}
 ### GroupDownloadPhoto
+:::{card}
 **Request**: *GroupDownloadPhotoRequest*
 * `group_id` (uint64)
 
@@ -672,14 +783,14 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-identitycommandservice)=
-## IdentityCommandService
+## Identity Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-identity`
-```
-
-:::{card}
+:::
 ### IdentityGet
+:::{card}
 **Request**: *IdentityGetRequest*
 * *Empty payload.*
 
@@ -688,8 +799,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentityGetBytesIdentifier
+:::{card}
 **Request**: *IdentityGetBytesIdentifierRequest*
 * *Empty payload.*
 
@@ -698,8 +809,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentityGetInvitationLink
+:::{card}
 **Request**: *IdentityGetInvitationLinkRequest*
 * *Empty payload.*
 
@@ -708,8 +819,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentityUpdateDetails
+:::{card}
 **Request**: *IdentityUpdateDetailsRequest*
 * `new_details` ({ref}`datatype-identitydetails`)
 
@@ -718,8 +829,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentityRemovePhoto
+:::{card}
 **Request**: *IdentityRemovePhotoRequest*
 * *Empty payload.*
 
@@ -728,19 +839,20 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentitySetPhoto
+:::{card}
 **Request *(Stream)***: *IdentitySetPhotoRequest*
-* `metadata` ({ref}`datatype-identitysetphotorequestmetadata`)
-* `payload` (bytes)
+* **Oneof `request`**:
+  * `metadata` ({ref}`datatype-identitysetphotorequestmetadata`)
+  * `payload` (bytes)
 
 **Response**: *IdentitySetPhotoResponse*
 * *Empty payload.*
 
 :::
 
-:::{card}
 ### IdentityDownloadPhoto
+:::{card}
 **Request**: *IdentityDownloadPhotoRequest*
 * *Empty payload.*
 
@@ -749,8 +861,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentityGetApiKeyStatus
+:::{card}
 **Request**: *IdentityGetApiKeyStatusRequest*
 * *Empty payload.*
 
@@ -759,8 +871,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentitySetApiKey
+:::{card}
 **Request**: *IdentitySetApiKeyRequest*
 * `api_key` (string)
 
@@ -769,8 +881,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### IdentitySetConfigurationLink
+:::{card}
 **Request**: *IdentitySetConfigurationLinkRequest*
 * `configuration_link` (string)
 
@@ -782,14 +894,14 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-invitationcommandservice)=
-## InvitationCommandService
+## Invitation Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-invitation`
-```
-
-:::{card}
+:::
 ### InvitationList
+:::{card}
 > return all discussions for current identity
 
 **Request**: *InvitationListRequest*
@@ -800,8 +912,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### InvitationGet
+:::{card}
 **Request**: *InvitationGetRequest*
 * `invitation_id` (uint64)
 
@@ -810,8 +922,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### InvitationNew
+:::{card}
 **Request**: *InvitationNewRequest*
 * `invitation_url` (string)
 
@@ -820,8 +932,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### InvitationAccept
+:::{card}
 **Request**: *InvitationAcceptRequest*
 * `invitation_id` (uint64)
 
@@ -830,8 +942,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### InvitationDecline
+:::{card}
 **Request**: *InvitationDeclineRequest*
 * `invitation_id` (uint64)
 
@@ -840,8 +952,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### InvitationSas
+:::{card}
 **Request**: *InvitationSasRequest*
 * `invitation_id` (uint64)
 * `sas` (string)
@@ -851,8 +963,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### InvitationDelete
+:::{card}
 **Request**: *InvitationDeleteRequest*
 * `invitation_id` (uint64)
 
@@ -864,14 +976,14 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-settingscommandservice)=
-## SettingsCommandService
+## Settings Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-settings`
-```
-
-:::{card}
+:::
 ### SettingsIdentityGet
+:::{card}
 **Request**: *SettingsIdentityGetRequest*
 * *Empty payload.*
 
@@ -880,8 +992,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### SettingsIdentitySet
+:::{card}
 > WARN: this entrypoint erase WHOLE settings. To update identity settings use SettingsIdentityGet to get current config  
 > and only edit fields you want to update.
 
@@ -893,8 +1005,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### SettingsDiscussionGet
+:::{card}
 **Request**: *SettingsDiscussionGetRequest*
 * `discussion_id` (uint64)
 
@@ -903,8 +1015,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### SettingsDiscussionSet
+:::{card}
 **Request**: *SettingsDiscussionSetRequest*
 * `discussion_settings` ({ref}`datatype-discussionsettings`)
 
@@ -916,14 +1028,14 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-storagecommandservice)=
-## StorageCommandService
+## Storage Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-storage`
-```
-
-:::{card}
+:::
 ### StorageList
+:::{card}
 > Global storage api: store key value elements in storage. They will be restored as is during backup restoration.  
 >   
 >   
@@ -937,8 +1049,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### StorageGet
+:::{card}
 **Request**: *StorageGetRequest*
 * `key` (string)
 
@@ -947,8 +1059,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### StorageSet
+:::{card}
 **Request**: *StorageSetRequest*
 * `key` (string)
 * `value` (string)
@@ -958,8 +1070,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### StorageUnset
+:::{card}
 **Request**: *StorageUnsetRequest*
 * `key` (string)
 
@@ -971,14 +1083,14 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-keycloakcommandservice)=
-## KeycloakCommandService
+## Keycloak Command Service
 
-```{admonition} Info
+:::{admonition} Info
+
 **Associated Datatype:** {ref}`datatype-keycloak`
-```
-
-:::{card}
+:::
 ### KeycloakBindIdentity
+:::{card}
 **Request**: *KeycloakBindIdentityRequest*
 * `configuration_link` (string)
 
@@ -987,8 +1099,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### KeycloakUnbindIdentity
+:::{card}
 **Request**: *KeycloakUnbindIdentityRequest*
 * *Empty payload.*
 
@@ -997,8 +1109,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### KeycloakUserList
+:::{card}
 **Request**: *KeycloakUserListRequest*
 * `filter` (**optional** {ref}`datatype-keycloakuserfilter`)
 * `last_list_timestamp` (**optional** uint64)
@@ -1009,8 +1121,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### KeycloakAddUserAsContact
+:::{card}
 **Request**: *KeycloakAddUserAsContactRequest*
 * `keycloak_id` (string)
 
@@ -1022,14 +1134,22 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-callcommandservice)=
-## CallCommandService
+## Call Command Service
 
-```{admonition} Info
+:::{admonition} Info
+Currently daemon cannot handle Olvid calls properly.  
+You can be notified on incoming calls, and you can initiate call within discussions or with any contact.  
+But, you we cannot manage audio or video stream, that's why a daemon will always answer any incoming call with a "busy" response.
+
+
 **Associated Datatype:** {ref}`datatype-call`
-```
-
-:::{card}
+:::
 ### CallStartDiscussionCall
+:::{card}
+> Start a call with one discussion member(s).  
+> This will start a one to one call or a group call depending on discussion type.  
+> You can use *call_identifier* to filter later call notifications.
+
 **Request**: *CallStartDiscussionCallRequest*
 * `discussion_id` (uint64)
 
@@ -1038,11 +1158,14 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### CallStartCustomCall
+:::{card}
+> Start a call with any contacts, even if they do not belong to the same discussion.  
+> You can use *call_identifier* to filter later call notifications.
+
 **Request**: *CallStartCustomCallRequest*
 * `contact_ids` (**repeated** uint64)
-* `discussion_id` (**optional** uint64)
+* `discussion_id` (**optional** uint64 - *specify in which discussion other contacts will log call*)
 
 **Response**: *CallStartCustomCallResponse*
 * `call_identifier` (string)
@@ -1052,14 +1175,16 @@ ContactInviteToOneToOneDiscussion
 ---
 
 (service-toolcommandservice)=
-## ToolCommandService
+## Tool Command Service
 
-```{admonition} Info
+:::{admonition} Info
+s
+
+
 **Associated Datatype:** {ref}`datatype-tool`
-```
-
-:::{card}
+:::
 ### Ping
+:::{card}
 > unauthenticated rpc to check daemon is up and accessible
 
 **Request**: *PingRequest*
@@ -1070,8 +1195,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### DaemonVersion
+:::{card}
 > authenticated rpc to get current daemon version
 
 **Request**: *DaemonVersionRequest*
@@ -1082,8 +1207,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### AuthenticationTest
+:::{card}
 > check that sent credentials are valid user credentials, else it returns an error
 
 **Request**: *AuthenticationTestRequest*
@@ -1094,8 +1219,8 @@ ContactInviteToOneToOneDiscussion
 
 :::
 
-:::{card}
 ### AuthenticationAdminTest
+:::{card}
 > check that sent credentials are valid admin credentials, else it returns an error
 
 **Request**: *AuthenticationAdminTestRequest*
