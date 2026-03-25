@@ -4,8 +4,8 @@ from olvid import __docker_version__ as docker_version
 
 project = 'Olvid Bots'
 copyright = '2026, Olvid'
-author = 'Olvid'
 version = olvid_version
+author = 'Olvid'
 release = olvid_version
 
 # -- General configuration ---------------------------------------------------

@@ -1,5 +1,6 @@
 # Datatypes
 
+This section describes the core entities used by Olvid daemon and exposed entrypoints.  
 :::{contents} Datatypes
 :depth: 1
 :local:
@@ -17,13 +18,13 @@
 
 :::::::{card}
 > An Olvid message posted in a discussion.  
-> Sent message are Outbound, received messages are Inbound.  
-> Messages must have a body and/or one or more attachment.
+> Sent messages are Outbound, received messages are Inbound.  
+> Messages must have a body and/or one or more attachments.
 
 **Fields:**
 * `id` ({ref}`datatype-messageid` - *the message unique identifier*)
 * `discussion_id` (uint64 - *the discussion the message belongs to*)
-* `sender_id` (uint64 - *set to a contact_id, or 0 if you sent the message*)
+* `sender_id` (uint64 - *set to 0 if you sent the message, or to the contact id referencing the sender*)
 * `body` (string - *text body*)
 * `sort_index` (double - *index used to sort messages in a discussion*)
 * `timestamp` (uint64 - *the timestamp on which the message was received*)
@@ -63,8 +64,8 @@
 > Describe message ephemerality.
 
 **Fields:**
-* `read_once` (bool - *message can only be read once (destroyed when discusion is closed)*)
-* `existence_duration` (uint64 - *message in destroyed after this duration, in seconds*)
+* `read_once` (bool - *message can only be read once (destroyed when discussion is closed)*)
+* `existence_duration` (uint64 - *message is destroyed after this duration, in seconds*)
 * `visibility_duration` (uint64 - *message is only visible for this duration, in seconds
 
 seconds*)
@@ -328,9 +329,8 @@ sharing: the last location update timestamp*)
 ### Contact
 
 :::::::{card}
-> A contact is an other olvid identity you are in contact with.  
-> A contact can have an associated discussion if has_one_to_one_discussion is true, else it's probably a collected contact you met in a group discussion.  
-> If keycloak_managed managed contact is registered on the same keycloak.
+> A contact is another Olvid identity you are in contact with.  
+> A contact can have an associated discussion if has_one_to_one_discussion is true, else it's probably a collected contact you met in a group discussion.
 
 **Fields:**
 * `id` (uint64)
@@ -340,7 +340,7 @@ sharing: the last location update timestamp*)
 * `device_count` (uint32)
 * `has_one_to_one_discussion` (bool)
 * `has_a_photo` (bool)
-* `keycloak_managed` (bool)
+* `keycloak_managed` (bool - *contact is registered on the same directory*)
 
 :::::::
 (datatype-contactfilter)=
@@ -353,7 +353,7 @@ sharing: the last location update timestamp*)
 **Fields:**
 * `one_to_one` (**optional** {ref}`datatype-contactfilter.onetoone` - *select only contacts with or without one to one discussions*)
 * `photo` (**optional** {ref}`datatype-contactfilter.photo` - *select only contacts with or without profile photo*)
-* `keycloak` (**optional** {ref}`datatype-contactfilter.keycloak` - *select only contacts registered or not on you keycloak*)
+* `keycloak` (**optional** {ref}`datatype-contactfilter.keycloak` - *select only contacts registered or not on your keycloak*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name**)
 * `details_search` (**optional** {ref}`datatype-identitydetails` - *a set of regexp filters, one for each field of *details**)
 
@@ -402,7 +402,8 @@ sharing: the last location update timestamp*)
 ### Group
 
 :::::::{card}
-> An Olvid group.  
+> An Olvid group is a discussion with you and other Olvid identities.  
+> Other identities in a group are automatically added to your contact book if they were not before as collected contacts (you do not have a one to one discussion with them).  
 > *keycloak_managed* groups are not editable, and you cannot leave them. Group is managed from the keycloak admin console.
 
 **Fields:**
@@ -484,7 +485,7 @@ sharing: the last location update timestamp*)
 
 **Fields:**
 * `admin` (bool - *can edit the group (change name or description, and manage group members)*)
-* `remote_delete_anything` (bool - *can delete everywhere someone's else message*)
+* `remote_delete_anything` (bool - *can delete everywhere someone else's message*)
 * `edit_or_remote_delete_own_messages` (bool - *can edit or delete everywhere own messages*)
 * `change_settings` (bool - *can change discussion shared settings (message ephemerality)*)
 * `send_message` (bool - *can post message in the group discussion*)
@@ -586,10 +587,10 @@ sharing: the last location update timestamp*)
 :::::::{card}
 **Fields:**
 * `admin` (**optional** {ref}`datatype-grouppermissionfilter.admin` - *is user a group admin or not*)
-* `send_message` (**optional** {ref}`datatype-grouppermissionfilter.sendmessage` - *does user can post message in discussion*)
-* `remote_delete_anything` (**optional** {ref}`datatype-grouppermissionfilter.remotedeleteanything` - *does user can remote delete any message, even other members messages*)
-* `edit_or_remote_delete_own_messages` (**optional** {ref}`datatype-grouppermissionfilter.editorremotedeleteownmessage` - *does user can edit or remote delete its messages*)
-* `change_settings` (**optional** {ref}`datatype-grouppermissionfilter.changesettings` - *does user can change group settings*)
+* `send_message` (**optional** {ref}`datatype-grouppermissionfilter.sendmessage` - *can the user post a message in the discussion*)
+* `remote_delete_anything` (**optional** {ref}`datatype-grouppermissionfilter.remotedeleteanything` - *can the user remote-delete any message, even other members' messages*)
+* `edit_or_remote_delete_own_messages` (**optional** {ref}`datatype-grouppermissionfilter.editorremotedeleteownmessage` - *can the user edit or remote-delete their own messages*)
+* `change_settings` (**optional** {ref}`datatype-grouppermissionfilter.changesettings` - *can the user change group settings*)
 
 ::::::{card}
 (datatype-grouppermissionfilter.admin)=
@@ -918,7 +919,7 @@ the contact id of the person who initiated introduction protocol*)
 set to 0 to disable*)
 * `discussion_count` (uint64 - *if set, if a discussion has more than *discussion_count* messages, older messages will be deleted.
 set to 0 to disable*)
-* `global_count` (uint64 - *if set, if identty has more than *global_count* messages, older messages will be deleted.
+* `global_count` (uint64 - *if set, if identity has more than *global_count* messages, older messages will be deleted.
 set to 0 to disable*)
 * `clean_locked_discussions` (bool - *if true, messages in locked discussions will be deleted.*)
 * `preserve_is_sharing_location_messages` (bool - *if true, live sharing location messages will never be deleted.*)
@@ -942,8 +943,8 @@ set to 0 to disable*)
 **Fields:**
 * `discussion_id` (uint64)
 * `read_once` (bool - *are message read once*)
-* `existence_duration` (uint64 - *if set, message are destroyed after *existence_duration* seconds, 0 to disable*)
-* `visibility_duration` (uint64 - *if set, message are only visible for *visibility_duration* seconds, 0 to disable*)
+* `existence_duration` (uint64 - *if set, messages are destroyed after *existence_duration* seconds, 0 to disable*)
+* `visibility_duration` (uint64 - *if set, messages are only visible for *visibility_duration* seconds, 0 to disable*)
 
 :::::::
 
@@ -1042,7 +1043,7 @@ set to 0 to disable*)
 ### CallParticipantId
 
 :::::::{card}
-> Identify a call participant by it's contact id, or a random identifier if it is not a contact.
+> Identify a call participant by its contact id, or a random identifier if it is not a contact.
 
 **Fields:**
 * **Oneof `id`**:
@@ -1066,10 +1067,10 @@ set to 0 to disable*)
 > Describe a full backup obtained with a backup key.  
 > A backup contains multiple parts.  
 > The AdminBackup contains the admin client keys and the elements contained in the global daemon storage.  
-> A backup may contains multiple profile backup (one per identity), and each may contains one or more snapshot.  
-> A profile snapshot contains an identity it's discussion, contacts, groups, client keys, and discussion storage.  
+> A backup may contain multiple profile backups (one per identity), and each may contain one or more snapshots.  
+> A profile snapshot contains an identity, its discussions, contacts, groups, client keys, and discussion storage.  
 >   
-> Mind a backup does not contain any message or attachment.
+> Note: a backup does not contain any messages or attachments.
 
 **Fields:**
 * `admin_backup` ({ref}`datatype-backup.adminbackup`)

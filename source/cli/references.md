@@ -1,4 +1,4 @@
-# 📚️ References
+# 📚️ CLI reference
 
 ## Liste des commandes
 :::{contents}

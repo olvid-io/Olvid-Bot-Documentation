@@ -8,7 +8,7 @@ from google.protobuf.descriptor_pb2 import FileDescriptorSet
 # --- CONFIGURATION ---
 PREFERRED_FILES: List[str] = [
 	"message", "attachment", "discussion", "contact", "group",
-	"identity", "client_key", "invitation", "settings", "storage",
+	"identity", "client_key", "invitation", "settings", "storage", "discussionstorage",
 	"keycloak", "call", "backup"
 ]
 
@@ -324,7 +324,7 @@ class MarkdownRenderer:
 	def _get_sort_key(name: str) -> int:
 		base = os.path.basename(name).replace('.proto', '').lower()
 		for i, pref in enumerate(PREFERRED_FILES):
-			if pref.lower() in base:
+			if pref.lower() == base:
 				return i
 		return 999
 
@@ -400,7 +400,7 @@ class MarkdownRenderer:
 				active_path.append(parts[-1])
 
 				if item.desc:
-					dt_lines.append(f"> {item.desc.replace(chr(10), '  ' + chr(10) + '> ')}\n")
+					dt_lines.append(f"> {item.desc.replace('\n', '  \n> ')}\n")
 
 				if isinstance(item, ParsedMessage):
 					if item.fields:
@@ -496,16 +496,23 @@ class MarkdownRenderer:
 				lines.append(f"### {rpc_name}")
 				lines.append(f":::{{card}}")
 
-				# Clean service name from comment
+				# parse description: remove rpc name from comment, and extract error codes
 				rpc_desc = rpc_desc.strip().removeprefix(rpc_name).strip()
-				if rpc_desc:
-					lines.append(f"> {rpc_desc.replace(chr(10), '  ' + chr(10) + '> ')}\n")
+				rpc_desc_comment: str = rpc_desc.split("**Error codes**:")[0].strip()
+				rpc_desc_error_codes: str = rpc_desc.split("**Error codes**:")[1].strip() if "**Error codes**:" in rpc_desc else ""
+				if rpc_desc_comment:
+					lines.append(f"> {rpc_desc_comment.replace('\n', '  \n> ')}\n")
 
 				req_label = "Request" if "Notification" not in title else "Subscription"
 				resp_label = "Response" if "Notification" not in title else "Notification"
 
 				lines.extend(self._build_payload_block(rpc_info.input, req_label, rpc_info.client_streaming, skip_desc=hoisted_req_desc))
 				lines.extend(self._build_payload_block(rpc_info.output, resp_label, rpc_info.server_streaming))
+				if rpc_desc_error_codes:
+					lines.extend([
+						"**Error Codes**:",
+						"- " + rpc_desc_error_codes.replace("\n", "\n - ")
+					])
 				lines.append(f":::\n")
 
 			lines.append("---\n")

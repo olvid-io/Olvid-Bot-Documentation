@@ -23,11 +23,16 @@ Privileged commands requiring a valid admin client key.
 **Response *(Stream)***: *IdentityListResponse*
 * `identities` (**repeated** {ref}`datatype-identity`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INVALID_ARGUMENT`: invalid filter.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityAdminGet
 :::{card}
-> Get a specific identity, identified by it's id.
+> Get a specific identity, identified by its id.
 
 **Request**: *IdentityAdminGetRequest*
 * `identity_id` (uint64)
@@ -35,6 +40,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityAdminGetResponse*
 * `identity` ({ref}`datatype-identity`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: identity not found.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityAdminGetBytesIdentifier
@@ -47,6 +56,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityAdminGetBytesIdentifierResponse*
 * `identifier` (bytes)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: identity not found.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityAdminGetInvitationLink
@@ -60,6 +73,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityAdminGetInvitationLinkResponse*
 * `invitation_link` (string)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: identity not found.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityAdminDownloadPhoto
@@ -72,11 +89,16 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityAdminDownloadPhotoResponse*
 * `photo` (bytes)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: identity not found.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityDelete
 :::{card}
-> Delete an identity on this daemon, identified by it's id.
+> Delete an identity on this daemon, identified by its id.
 
 **Request**: *IdentityDeleteRequest*
 * `identity_id` (uint64)
@@ -85,13 +107,18 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityDeleteResponse*
 * *Empty payload.*
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: identity not found.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityNew
 :::{card}
 > Create a new identity on this daemon.  
 > You must specify at least a non blank firstname or lastname in identity_details.  
-> You can specify a server_url to create identity on, by default it use Olvid main distribution server.
+> You can specify a server_url to create identity on, by default it uses Olvid main distribution server.
 
 **Request**: *IdentityNewRequest*
 * `identity_details` ({ref}`datatype-identitydetails`)
@@ -100,6 +127,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityNewResponse*
 * `identity` ({ref}`datatype-identity`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INVALID_ARGUMENT`: one of first name or last name must be non empty.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### IdentityKeycloakNew
@@ -113,6 +144,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *IdentityKeycloakNewResponse*
 * `identity` ({ref}`datatype-identity`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ---
@@ -121,14 +156,16 @@ Privileged commands requiring a valid admin client key.
 ## Backup Admin Service
 
 :::{admonition} Info
+Olvid Backups are accessible using a simple key. They contain data necessary to restore or to transfer an identity from a device (a daemon) to another.  
+Note: Backups do not contain any messages or attachments; they are only designed to re-create secure channels with your contacts, restore your discussions and your daemon configuration (client keys, settings, ...)
+
 
 **Associated Datatype:** {ref}`datatype-backup`
 :::
 ### BackupKeyGet
 :::{card}
-> Get your current backup key  
-> ⚠️ Store it in a safe place.  
-> This key allows to restore this daemon identities on another device/daemon.
+> Get your current backup key.  
+> ⚠️ Store it in a safe place, this key allows to restore this daemon identities on another device/daemon.
 
 **Request**: *BackupKeyGetRequest*
 * *Empty payload.*
@@ -136,6 +173,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *BackupKeyGetResponse*
 * `backup_key` (string)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### BackupKeyRenew
@@ -148,6 +189,10 @@ Privileged commands requiring a valid admin client key.
 **Response**: *BackupKeyRenewResponse*
 * `backup_key` (string)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### BackupGet
@@ -162,11 +207,15 @@ Privileged commands requiring a valid admin client key.
 **Response**: *BackupGetResponse*
 * `backup` ({ref}`datatype-backup`)
 
+**Error Codes**:
+- `INVALID_ARGUMENT`: cannot access backup.
+ - `PERMISSION_DENIED`: an admin client key is necessary.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### BackupNow
 :::{card}
-> Force to backup now
+> Force a new backup.
 
 **Request**: *BackupNowRequest*
 * *Empty payload.*
@@ -174,49 +223,68 @@ Privileged commands requiring a valid admin client key.
 **Response**: *BackupNowResponse*
 * *Empty payload.*
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### BackupRestoreDaemon
 :::{card}
-> Restore a complete daemon instance. This is only possible on a blank daemon instance.
+> Restore a complete daemon instance.  
+> This is only possible on a blank daemon instance.
 
 **Request**: *BackupRestoreDaemonRequest*
-* `backup_key` (string)
-* `new_device_name` (**optional** string - *specify a name for this new daemon*)
+* `backup_key` (string - *key of the backup to restore*)
+* `new_device_name` (**optional** string - *specify a name for this new device (*daemon* is set as default)*)
 
 **Response**: *BackupRestoreDaemonResponse*
 * `restored_identities` (**repeated** {ref}`datatype-identity`)
 * `restored_admin_client_keys` (**repeated** {ref}`datatype-clientkey`)
 * `restored_client_keys` (**repeated** {ref}`datatype-clientkey`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INVALID_ARGUMENT`: your daemon database is not empty.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### BackupRestoreAdminBackup
 :::{card}
-> Restore admin data of a backup (admin client keys and associated storage)
+> Restore admin data of a backup (admin client keys and associated storage).
 
 **Request**: *BackupRestoreAdminBackupRequest*
-* `backup_key` (string)
+* `backup_key` (string - *key of the backup to restore*)
 
 **Response**: *BackupRestoreAdminBackupResponse*
 * `restored_admin_client_keys` (**repeated** {ref}`datatype-clientkey`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### BackupRestoreProfileSnapshot
 :::{card}
-> Restore a identity from a backup.  
+> Restore an identity from a backup.  
 > Pass the identity snapshot id you want to restore.
 
 **Request**: *BackupRestoreProfileSnapshotRequest*
-* `backup_key` (string)
-* `id` (string)
-* `new_device_name` (**optional** string - *specify a name for this new daemon*)
+* `backup_key` (string - *key of the backup to restore*)
+* `id` (string - *id of the snapshot to restore*)
+* `new_device_name` (**optional** string - *specify a name for this new device (*daemon* is set as default)*)
 
 **Response**: *BackupRestoreProfileSnapshotResponse*
 * `restored_identity` ({ref}`datatype-identity`)
 * `restored_client_keys` (**repeated** {ref}`datatype-clientkey`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: snapshot not found.
+ - `INVALID_ARGUMENT`: identity already exists locally.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ---
@@ -230,7 +298,7 @@ Privileged commands requiring a valid admin client key.
 :::
 ### ClientKeyList
 :::{card}
-> List all client keys of this daemon.  
+> List all client keys of this daemon (admin and non admin).  
 > This does not return temporary client keys passed in environment or as command line arguments.
 
 **Request**: *ClientKeyListRequest*
@@ -239,11 +307,17 @@ Privileged commands requiring a valid admin client key.
 **Response *(Stream)***: *ClientKeyListResponse*
 * `client_keys` (**repeated** {ref}`datatype-clientkey`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `INVALID_ARGUMENT`: filter is invalid.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### ClientKeyGet
 :::{card}
-> Get a specific client key details, identified by it's value.
+> Get a specific client key details, identified by its value.  
+> This does not return temporary client keys passed in environment or as command line arguments.
 
 **Request**: *ClientKeyGetRequest*
 * `client_key` (string)
@@ -251,12 +325,16 @@ Privileged commands requiring a valid admin client key.
 **Response**: *ClientKeyGetResponse*
 * `client_key` ({ref}`datatype-clientkey`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: client key not found.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### ClientKeyNew
 :::{card}
-> Create a new api key associated with a given identity  
-> Pass 0 as identity id to create and admin api key.
+> Create a new client key associated with a given identity.  
+> Pass 0 as identity id to create an admin client key.
 
 **Request**: *ClientKeyNewRequest*
 * `name` (string)
@@ -265,11 +343,16 @@ Privileged commands requiring a valid admin client key.
 **Response**: *ClientKeyNewResponse*
 * `client_key` ({ref}`datatype-clientkey`)
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: identity not found.
+ - `INTERNAL`
+ - `UNAUTHENTICATED`: client key is invalid.
 :::
 
 ### ClientKeyDelete
 :::{card}
-> Delete a specific client key, identified by it's value.
+> Delete a specific client key, identified by its value.
 
 **Request**: *ClientKeyDeleteRequest*
 * `client_key` (string)
@@ -277,4 +360,8 @@ Privileged commands requiring a valid admin client key.
 **Response**: *ClientKeyDeleteResponse*
 * *Empty payload.*
 
+**Error Codes**:
+- `PERMISSION_DENIED`: an admin client key is necessary.
+ - `NOT_FOUND`: client key not found.
+ - `UNAUTHENTICATED`: client key is invalid.
 :::

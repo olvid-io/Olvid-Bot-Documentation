@@ -21,7 +21,7 @@ The daemon primarily manipulates objects described in the [](datatypes) section,
 :link-type: doc
 **Commands**
 ^^^
-Cctions that can be performed, such as sending a message, updating your identity or creating a new group.
+Actions that can be performed, such as sending a message, updating your identity or creating a new group.
 :::
 :::
 
