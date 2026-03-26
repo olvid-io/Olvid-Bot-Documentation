@@ -32,7 +32,7 @@ Nous vous recommandons de commencer par notre procédure [d'installation](#insta
 Elle vous permettra d'installer et configurer votre propre daemon Olvid.
 Ce daemon peut être vu comme une application Olvid pilotable par l'intermédiaire d'une API gRPC.
 
-Une fois l'installation effectuée, vous pourrez commencer à écrire le code de vos premiers clients, afin d'interagir et de commander le profil Olvid que vous aurez créé sur le daemon.
+Une fois l'installation effectuée, vous pourrez commencer à piloter l'identité Olvid que vous avez créé sur votre daemon. Cela peut se faire à l'aide d'une de no librairies, de notre [cli](cli/cli) ou d'une de nos intégrations déjà existante.
 
 %todo todel
 :::{note}

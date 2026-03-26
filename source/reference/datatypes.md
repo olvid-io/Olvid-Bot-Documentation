@@ -6,7 +6,7 @@ This section describes the core entities used by Olvid daemon and exposed entryp
 :local:
 :::
 
-(datatype-message)=
+(file-message)=
 ## Message
 
 > **Related Endpoints:**
@@ -14,6 +14,7 @@ This section describes the core entities used by Olvid daemon and exposed entryp
 > * **Notification:** {ref}`service-messagenotificationservice`
 
 
+(message-message)=
 ### Message
 
 :::::::{card}
@@ -22,42 +23,42 @@ This section describes the core entities used by Olvid daemon and exposed entryp
 > Messages must have a body and/or one or more attachments.
 
 **Fields:**
-* `id` ({ref}`datatype-messageid` - *the message unique identifier*)
+* `id` ({ref}`message-messageid` - *the message unique identifier*)
 * `discussion_id` (uint64 - *the discussion the message belongs to*)
 * `sender_id` (uint64 - *set to 0 if you sent the message, or to the contact id referencing the sender*)
 * `body` (string - *text body*)
 * `sort_index` (double - *index used to sort messages in a discussion*)
 * `timestamp` (uint64 - *the timestamp on which the message was received*)
 * `attachments_count` (uint64 - *number of attachments for this message*)
-* `replied_message_id` (**optional** {ref}`datatype-messageid` - *set if this message is a reply to another message in this discussion*)
-* `message_location` (**optional** {ref}`datatype-messagelocation` - *set if this message is a location message*)
-* `reactions` (**repeated** {ref}`datatype-messagereaction` - *list of the reactions added on this message*)
+* `replied_message_id` (**optional** {ref}`message-messageid` - *set if this message is a reply to another message in this discussion*)
+* `message_location` (**optional** {ref}`message-messagelocation` - *set if this message is a location message*)
+* `reactions` (**repeated** {ref}`message-messagereaction` - *list of the reactions added on this message*)
 * `forwarded` (bool - *does this message have been forwarded from another discussion by sender*)
 * `edited_body` (bool - *does this message body have been edited*)
 
 :::::::
-(datatype-messageid)=
+(message-messageid)=
 ### MessageId
 
 :::::::{card}
 > A composite id to uniquely identify a message.
 
 **Fields:**
-* `type` ({ref}`datatype-messageid.type` - *inbound or outbound message*)
+* `type` ({ref}`enum-messageid.type` - *inbound or outbound message*)
 * `id` (uint64)
 
 ::::::{card}
-(datatype-messageid.type)=
+(enum-messageid.type)=
 #### MessageId.Type
 
 **Enum Values:**
 * `TYPE_UNSPECIFIED`: 0
 * `TYPE_INBOUND`: 1 - *received message*
 * `TYPE_OUTBOUND`: 2 - *sent message*
-
 ::::::
+
 :::::::
-(datatype-messageephemerality)=
+(message-messageephemerality)=
 ### MessageEphemerality
 
 :::::::{card}
@@ -71,7 +72,7 @@ This section describes the core entities used by Olvid daemon and exposed entryp
 seconds*)
 
 :::::::
-(datatype-messagereaction)=
+(message-messagereaction)=
 ### MessageReaction
 
 :::::::{card}
@@ -83,7 +84,7 @@ seconds*)
 * `timestamp` (uint64 - *the timestamp at which the reaction was added.*)
 
 :::::::
-(datatype-messagelocation)=
+(message-messagelocation)=
 ### MessageLocation
 
 :::::::{card}
@@ -93,7 +94,7 @@ seconds*)
 > - location sharing: share someone's location for a given duration.
 
 **Fields:**
-* `type` ({ref}`datatype-messagelocation.locationtype`)
+* `type` ({ref}`enum-messagelocation.locationtype`)
 * `timestamp` (uint64 - *sending: when location was sent
 sharing: the last location update timestamp*)
 * `latitude` (double)
@@ -103,7 +104,7 @@ sharing: the last location update timestamp*)
 * `address` (**optional** string - *optionally set for sending, a human readable address for this location*)
 
 ::::::{card}
-(datatype-messagelocation.locationtype)=
+(enum-messagelocation.locationtype)=
 #### MessageLocation.LocationType
 
 **Enum Values:**
@@ -111,10 +112,10 @@ sharing: the last location update timestamp*)
 * `LOCATION_TYPE_SEND`: 1 - *a one shot location sending*
 * `LOCATION_TYPE_SHARING`: 2 - *a live location sharing*
 * `LOCATION_TYPE_SHARING_FINISHED`: 3 - *a completed location sharing*
-
 ::::::
+
 :::::::
-(datatype-messagefilter)=
+(message-messagefilter)=
 ### MessageFilter
 
 :::::::{card}
@@ -122,33 +123,33 @@ sharing: the last location update timestamp*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `type` (**optional** {ref}`datatype-messageid.type` - *is message inbound or outbound*)
+* `type` (**optional** {ref}`enum-messageid.type` - *is message inbound or outbound*)
 * `discussion_id` (**optional** uint64 - *does message belongs to a specific discussion*)
 * `sender_contact_id` (**optional** uint64 - *is message sent by a specific contact*)
 * `body_search` (**optional** string - *regexp filter on *body* field*)
-* `attachment` (**optional** {ref}`datatype-messagefilter.attachment` - *does message have attachments or not*)
-* `location` (**optional** {ref}`datatype-messagefilter.location` - *is message a location message*)
+* `attachment` (**optional** {ref}`enum-messagefilter.attachment` - *does message have attachments or not*)
+* `location` (**optional** {ref}`enum-messagefilter.location` - *is message a location message*)
 * `min_timestamp` (**optional** uint64 - *is timestamp less or equal than *min_timestamp**)
 * `max_timestamp` (**optional** uint64 - *is timestamp more or equal than *max_timestamp**)
-* `has_reaction` (**optional** {ref}`datatype-messagefilter.reaction` - *does message have reactions or not*)
-* `reactions_filter` (**repeated** {ref}`datatype-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)
+* `has_reaction` (**optional** {ref}`enum-messagefilter.reaction` - *does message have reactions or not*)
+* `reactions_filter` (**repeated** {ref}`message-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)
 * **Oneof `reply`**:
   * `reply_to_a_message` (bool - *is message a reply to another message*)
   * `do_not_reply_to_a_message` (bool - *is message not a reply to a message*)
-  * `replied_message_id` ({ref}`datatype-messageid` - *is message a reply to a specific message id*)
+  * `replied_message_id` ({ref}`message-messageid` - *is message a reply to a specific message id*)
 
 ::::::{card}
-(datatype-messagefilter.attachment)=
+(enum-messagefilter.attachment)=
 #### MessageFilter.Attachment
 
 **Enum Values:**
 * `ATTACHMENT_UNSPECIFIED`: 0
 * `ATTACHMENT_HAVE`: 1
 * `ATTACHMENT_HAVE_NOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-messagefilter.location)=
+(enum-messagefilter.location)=
 #### MessageFilter.Location
 
 **Enum Values:**
@@ -158,20 +159,20 @@ sharing: the last location update timestamp*)
 * `LOCATION_IS_SEND`: 3
 * `LOCATION_IS_SHARING`: 5
 * `LOCATION_IS_SHARING_FINISHED`: 6
-
 ::::::
+
 ::::::{card}
-(datatype-messagefilter.reaction)=
+(enum-messagefilter.reaction)=
 #### MessageFilter.Reaction
 
 **Enum Values:**
 * `REACTION_UNSPECIFIED`: 0
 * `REACTION_HAS`: 1
 * `REACTION_HAS_NOT`: 2
-
 ::::::
+
 :::::::
-(datatype-reactionfilter)=
+(message-reactionfilter)=
 ### ReactionFilter
 
 :::::::{card}
@@ -185,7 +186,7 @@ sharing: the last location update timestamp*)
 
 ---
 
-(datatype-attachment)=
+(file-attachment)=
 ## Attachment
 
 > **Related Endpoints:**
@@ -193,6 +194,7 @@ sharing: the last location update timestamp*)
 > * **Notification:** {ref}`service-attachmentnotificationservice`
 
 
+(message-attachment)=
 ### Attachment
 
 :::::::{card}
@@ -202,36 +204,36 @@ sharing: the last location update timestamp*)
 > Link previews are attachments with specific mime type: *olvid/link-preview*.
 
 **Fields:**
-* `id` ({ref}`datatype-attachmentid`)
+* `id` ({ref}`message-attachmentid`)
 * `discussion_id` (uint64)
-* `message_id` ({ref}`datatype-messageid`)
+* `message_id` ({ref}`message-messageid`)
 * `file_name` (string)
 * `mime_type` (string)
 * `size` (uint64 - *file size in bytes*)
 
 :::::::
-(datatype-attachmentid)=
+(message-attachmentid)=
 ### AttachmentId
 
 :::::::{card}
 > A composite id to uniquely identify an attachment.
 
 **Fields:**
-* `type` ({ref}`datatype-attachmentid.type` - *inbound or outbound attachment*)
+* `type` ({ref}`enum-attachmentid.type` - *inbound or outbound attachment*)
 * `id` (uint64)
 
 ::::::{card}
-(datatype-attachmentid.type)=
+(enum-attachmentid.type)=
 #### AttachmentId.Type
 
 **Enum Values:**
 * `TYPE_UNSPECIFIED`: 0
 * `TYPE_INBOUND`: 1 - *received attachments*
 * `TYPE_OUTBOUND`: 2 - *sent attachments*
-
 ::::::
+
 :::::::
-(datatype-attachmentfilter)=
+(message-attachmentfilter)=
 ### AttachmentFilter
 
 :::::::{card}
@@ -239,17 +241,17 @@ sharing: the last location update timestamp*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `type` (**optional** {ref}`datatype-attachmentid.type` - *select only INBOUND or OUTBOUND attachments*)
-* `file_type` (**optional** {ref}`datatype-attachmentfilter.filetype` - *filter by file type (pre-defined regexp for *mime_type*)*)
+* `type` (**optional** {ref}`enum-attachmentid.type` - *select only INBOUND or OUTBOUND attachments*)
+* `file_type` (**optional** {ref}`enum-attachmentfilter.filetype` - *filter by file type (pre-defined regexp for *mime_type*)*)
 * `discussion_id` (**optional** uint64)
-* `message_id` (**optional** {ref}`datatype-messageid` - *optional uint64 contact_id = 4; not implementable now*)
+* `message_id` (**optional** {ref}`message-messageid` - *optional uint64 contact_id = 4; not implementable now*)
 * `filename_search` (**optional** string - *regexp filter on *filename* field*)
 * `mime_type_search` (**optional** string - *regexp filter on *mime_type* field*)
 * `min_size` (**optional** uint64 - *minimum or equal file size*)
 * `max_size` (**optional** uint64 - *maximum or equal file size*)
 
 ::::::{card}
-(datatype-attachmentfilter.filetype)=
+(enum-attachmentfilter.filetype)=
 #### AttachmentFilter.FileType
 
 > apply pre-defined regexp filters on *mime_type* field.
@@ -262,13 +264,13 @@ sharing: the last location update timestamp*)
 * `FILE_TYPE_AUDIO`: 6
 * `FILE_TYPE_LINK_PREVIEW`: 7
 * `FILE_TYPE_NOT_LINK_PREVIEW`: 8 - *all except link previews*
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-discussion)=
+(file-discussion)=
 ## Discussion
 
 > **Related Endpoints:**
@@ -276,6 +278,7 @@ sharing: the last location update timestamp*)
 > * **Notification:** {ref}`service-discussionnotificationservice`
 
 
+(message-discussion)=
 ### Discussion
 
 :::::::{card}
@@ -290,7 +293,7 @@ sharing: the last location update timestamp*)
   * `group_id` (uint64)
 
 :::::::
-(datatype-discussionfilter)=
+(message-discussionfilter)=
 ### DiscussionFilter
 
 :::::::{card}
@@ -298,27 +301,27 @@ sharing: the last location update timestamp*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `type` (**optional** {ref}`datatype-discussionfilter.type` - *select group or contact discussions*)
+* `type` (**optional** {ref}`enum-discussionfilter.type` - *select group or contact discussions*)
 * **Oneof `identifier`**:
   * `contact_id` (uint64)
   * `group_id` (uint64)
 * `title_search` (**optional** string - *regexp filter on title field*)
 
 ::::::{card}
-(datatype-discussionfilter.type)=
+(enum-discussionfilter.type)=
 #### DiscussionFilter.Type
 
 **Enum Values:**
 * `TYPE_UNSPECIFIED`: 0
 * `TYPE_OTO`: 1
 * `TYPE_GROUP`: 2
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-contact)=
+(file-contact)=
 ## Contact
 
 > **Related Endpoints:**
@@ -326,6 +329,7 @@ sharing: the last location update timestamp*)
 > * **Notification:** {ref}`service-contactnotificationservice`
 
 
+(message-contact)=
 ### Contact
 
 :::::::{card}
@@ -335,7 +339,7 @@ sharing: the last location update timestamp*)
 **Fields:**
 * `id` (uint64)
 * `display_name` (string - *computed from *details**)
-* `details` ({ref}`datatype-identitydetails`)
+* `details` ({ref}`message-identitydetails`)
 * `established_channel_count` (uint32 - *shall be equal to device_count to exchange messages*)
 * `device_count` (uint32)
 * `has_one_to_one_discussion` (bool)
@@ -343,7 +347,7 @@ sharing: the last location update timestamp*)
 * `keycloak_managed` (bool - *contact is registered on the same directory*)
 
 :::::::
-(datatype-contactfilter)=
+(message-contactfilter)=
 ### ContactFilter
 
 :::::::{card}
@@ -351,47 +355,47 @@ sharing: the last location update timestamp*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `one_to_one` (**optional** {ref}`datatype-contactfilter.onetoone` - *select only contacts with or without one to one discussions*)
-* `photo` (**optional** {ref}`datatype-contactfilter.photo` - *select only contacts with or without profile photo*)
-* `keycloak` (**optional** {ref}`datatype-contactfilter.keycloak` - *select only contacts registered or not on your keycloak*)
+* `one_to_one` (**optional** {ref}`enum-contactfilter.onetoone` - *select only contacts with or without one to one discussions*)
+* `photo` (**optional** {ref}`enum-contactfilter.photo` - *select only contacts with or without profile photo*)
+* `keycloak` (**optional** {ref}`enum-contactfilter.keycloak` - *select only contacts registered or not on your keycloak*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name**)
-* `details_search` (**optional** {ref}`datatype-identitydetails` - *a set of regexp filters, one for each field of *details**)
+* `details_search` (**optional** {ref}`message-identitydetails` - *a set of regexp filters, one for each field of *details**)
 
 ::::::{card}
-(datatype-contactfilter.onetoone)=
+(enum-contactfilter.onetoone)=
 #### ContactFilter.OneToOne
 
 **Enum Values:**
 * `ONE_TO_ONE_UNSPECIFIED`: 0
 * `ONE_TO_ONE_IS`: 1
 * `ONE_TO_ONE_IS_NOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-contactfilter.photo)=
+(enum-contactfilter.photo)=
 #### ContactFilter.Photo
 
 **Enum Values:**
 * `PHOTO_UNSPECIFIED`: 0
 * `PHOTO_HAS`: 1
 * `PHOTO_HAS_NOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-contactfilter.keycloak)=
+(enum-contactfilter.keycloak)=
 #### ContactFilter.Keycloak
 
 **Enum Values:**
 * `KEYCLOAK_UNSPECIFIED`: 0
 * `KEYCLOAK_MANAGED`: 1
 * `KEYCLOAK_NOT_MANAGED`: 2
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-group)=
+(file-group)=
 ## Group
 
 > **Related Endpoints:**
@@ -399,6 +403,7 @@ sharing: the last location update timestamp*)
 > * **Notification:** {ref}`service-groupnotificationservice`
 
 
+(message-group)=
 ### Group
 
 :::::::{card}
@@ -408,11 +413,11 @@ sharing: the last location update timestamp*)
 
 **Fields:**
 * `id` (uint64)
-* `type` ({ref}`datatype-group.type` - *specify a pre-set of permissions given to group members.*)
-* `advanced_configuration` (**optional** {ref}`datatype-group.advancedconfiguration` - *only set if group.type is TYPE_ADVANCED*)
-* `own_permissions` ({ref}`datatype-groupmemberpermissions` - *your permissions in this group*)
-* `members` (**repeated** {ref}`datatype-groupmember` - *members that accepted invitation*)
-* `pending_members` (**repeated** {ref}`datatype-pendinggroupmember` - *members invited to join group*)
+* `type` ({ref}`enum-group.type` - *specify a pre-set of permissions given to group members.*)
+* `advanced_configuration` (**optional** {ref}`message-group.advancedconfiguration` - *only set if group.type is TYPE_ADVANCED*)
+* `own_permissions` ({ref}`message-groupmemberpermissions` - *your permissions in this group*)
+* `members` (**repeated** {ref}`message-groupmember` - *members that accepted invitation*)
+* `pending_members` (**repeated** {ref}`message-pendinggroupmember` - *members invited to join group*)
 * `update_in_progress` (bool - *group is locked, edition will be delayed*)
 * `keycloak_managed` (bool - *group automatically pushed by keycloak*)
 * `name` (string)
@@ -420,7 +425,7 @@ sharing: the last location update timestamp*)
 * `has_a_photo` (bool)
 
 ::::::{card}
-(datatype-group.type)=
+(enum-group.type)=
 #### Group.Type
 
 **Enum Values:**
@@ -429,18 +434,19 @@ sharing: the last location update timestamp*)
 * `TYPE_CONTROLLED`: 2 - *non admin members cannot manage the group*
 * `TYPE_READ_ONLY`: 3 - *only admin members can post messages*
 * `TYPE_ADVANCED`: 4 - *specify an advanced configuration field*
-
 ::::::
+
 ::::::{card}
-(datatype-group.advancedconfiguration)=
+(message-group.advancedconfiguration)=
 #### Group.AdvancedConfiguration
 
 **Fields:**
 * `read_only` (bool - *is group read only*)
-* `remote_delete` ({ref}`datatype-group.advancedconfiguration.remotedelete` - *who has permission to delete message for everyone*)
+* `remote_delete` ({ref}`enum-group.advancedconfiguration.remotedelete` - *who has permission to delete message for everyone*)
+::::::
 
 :::::{card}
-(datatype-group.advancedconfiguration.remotedelete)=
+(enum-group.advancedconfiguration.remotedelete)=
 ##### Group.AdvancedConfiguration.RemoteDelete
 
 **Enum Values:**
@@ -448,11 +454,10 @@ sharing: the last location update timestamp*)
 * `REMOTE_DELETE_NOBODY`: 1
 * `REMOTE_DELETE_ADMINS`: 2
 * `REMOTE_DELETE_EVERYONE`: 3
-
 :::::
-::::::
+
 :::::::
-(datatype-groupmember)=
+(message-groupmember)=
 ### GroupMember
 
 :::::::{card}
@@ -460,10 +465,10 @@ sharing: the last location update timestamp*)
 
 **Fields:**
 * `contact_id` (uint64)
-* `permissions` ({ref}`datatype-groupmemberpermissions`)
+* `permissions` ({ref}`message-groupmemberpermissions`)
 
 :::::::
-(datatype-pendinggroupmember)=
+(message-pendinggroupmember)=
 ### PendingGroupMember
 
 :::::::{card}
@@ -474,10 +479,10 @@ sharing: the last location update timestamp*)
 * `contact_id` (uint64 - *set to 0 if this identity is not a contact yet*)
 * `display_name` (string - *computed display name from their identity details.*)
 * `declined` (bool - *does pending member declined invitation*)
-* `permissions` ({ref}`datatype-groupmemberpermissions` - *permissions given to this member*)
+* `permissions` ({ref}`message-groupmemberpermissions` - *permissions given to this member*)
 
 :::::::
-(datatype-groupmemberpermissions)=
+(message-groupmemberpermissions)=
 ### GroupMemberPermissions
 
 :::::::{card}
@@ -491,7 +496,7 @@ sharing: the last location update timestamp*)
 * `send_message` (bool - *can post message in the group discussion*)
 
 :::::::
-(datatype-groupfilter)=
+(message-groupfilter)=
 ### GroupFilter
 
 :::::::{card}
@@ -499,154 +504,154 @@ sharing: the last location update timestamp*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `type` (**optional** {ref}`datatype-group.type`)
-* `empty` (**optional** {ref}`datatype-groupfilter.empty` - *does group have members or not*)
-* `photo` (**optional** {ref}`datatype-groupfilter.photo` - *does group have a photo or not*)
-* `keycloak` (**optional** {ref}`datatype-groupfilter.keycloak` - *is group keycloak managed or not*)
-* `own_permissions_filter` (**optional** {ref}`datatype-grouppermissionfilter` - *filter on your own permissions in the group*)
+* `type` (**optional** {ref}`enum-group.type`)
+* `empty` (**optional** {ref}`enum-groupfilter.empty` - *does group have members or not*)
+* `photo` (**optional** {ref}`enum-groupfilter.photo` - *does group have a photo or not*)
+* `keycloak` (**optional** {ref}`enum-groupfilter.keycloak` - *is group keycloak managed or not*)
+* `own_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *filter on your own permissions in the group*)
 * `name_search` (**optional** string - *regexp filter on *name_search* field*)
 * `description_search` (**optional** string - *regexp filter on *description_search* field*)
-* `member_filters` (**repeated** {ref}`datatype-groupmemberfilter` - *group must have at least one matching member for each *member_filters**)
-* `pending_member_filters` (**repeated** {ref}`datatype-pendinggroupmemberfilter` - *group must have at least one pending member matching each *pending_member_filters**)
+* `member_filters` (**repeated** {ref}`message-groupmemberfilter` - *group must have at least one matching member for each *member_filters**)
+* `pending_member_filters` (**repeated** {ref}`message-pendinggroupmemberfilter` - *group must have at least one pending member matching each *pending_member_filters**)
 
 ::::::{card}
-(datatype-groupfilter.empty)=
+(enum-groupfilter.empty)=
 #### GroupFilter.Empty
 
 **Enum Values:**
 * `EMPTY_UNSPECIFIED`: 0
 * `EMPTY_IS_NOT`: 1
 * `EMPTY_IS`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-groupfilter.keycloak)=
+(enum-groupfilter.keycloak)=
 #### GroupFilter.Keycloak
 
 **Enum Values:**
 * `KEYCLOAK_UNSPECIFIED`: 0
 * `KEYCLOAK_IS_NOT`: 1
 * `KEYCLOAK_IS`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-groupfilter.photo)=
+(enum-groupfilter.photo)=
 #### GroupFilter.Photo
 
 **Enum Values:**
 * `PHOTO_UNSPECIFIED`: 0
 * `PHOTO_HAS_NOT`: 1
 * `PHOTO_HAS`: 2
-
 ::::::
+
 :::::::
-(datatype-groupmemberfilter)=
+(message-groupmemberfilter)=
 ### GroupMemberFilter
 
 :::::::{card}
 **Fields:**
 * `contact_id` (**optional** uint64 - *is member a specific contact*)
-* `permissions` (**optional** {ref}`datatype-grouppermissionfilter` - *does member's permissions match this permission filter*)
+* `permissions` (**optional** {ref}`message-grouppermissionfilter` - *does member's permissions match this permission filter*)
 
 :::::::
-(datatype-pendinggroupmemberfilter)=
+(message-pendinggroupmemberfilter)=
 ### PendingGroupMemberFilter
 
 :::::::{card}
 **Fields:**
-* `is_contact` (**optional** {ref}`datatype-pendinggroupmemberfilter.contact` - *is pending member a contact or not*)
-* `has_declined` (**optional** {ref}`datatype-pendinggroupmemberfilter.declined` - *does pending member declined invitation or not*)
+* `is_contact` (**optional** {ref}`enum-pendinggroupmemberfilter.contact` - *is pending member a contact or not*)
+* `has_declined` (**optional** {ref}`enum-pendinggroupmemberfilter.declined` - *does pending member declined invitation or not*)
 * `contact_id` (**optional** uint64 - *is pending member a specific known contact*)
 * `display_name_search` (**optional** string - *regexp filter applied on *display_name* field*)
-* `permissions` (**optional** {ref}`datatype-grouppermissionfilter` - *pending member's permissions match this permission filter*)
+* `permissions` (**optional** {ref}`message-grouppermissionfilter` - *pending member's permissions match this permission filter*)
 
 ::::::{card}
-(datatype-pendinggroupmemberfilter.contact)=
+(enum-pendinggroupmemberfilter.contact)=
 #### PendingGroupMemberFilter.Contact
 
 **Enum Values:**
 * `CONTACT_UNSPECIFIED`: 0
 * `CONTACT_IS`: 1
 * `CONTACT_IS_NOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-pendinggroupmemberfilter.declined)=
+(enum-pendinggroupmemberfilter.declined)=
 #### PendingGroupMemberFilter.Declined
 
 **Enum Values:**
 * `DECLINED_UNSPECIFIED`: 0
 * `DECLINED_HAS`: 1
 * `DECLINED_HAS_NOT`: 2
-
 ::::::
+
 :::::::
-(datatype-grouppermissionfilter)=
+(message-grouppermissionfilter)=
 ### GroupPermissionFilter
 
 :::::::{card}
 **Fields:**
-* `admin` (**optional** {ref}`datatype-grouppermissionfilter.admin` - *is user a group admin or not*)
-* `send_message` (**optional** {ref}`datatype-grouppermissionfilter.sendmessage` - *can the user post a message in the discussion*)
-* `remote_delete_anything` (**optional** {ref}`datatype-grouppermissionfilter.remotedeleteanything` - *can the user remote-delete any message, even other members' messages*)
-* `edit_or_remote_delete_own_messages` (**optional** {ref}`datatype-grouppermissionfilter.editorremotedeleteownmessage` - *can the user edit or remote-delete their own messages*)
-* `change_settings` (**optional** {ref}`datatype-grouppermissionfilter.changesettings` - *can the user change group settings*)
+* `admin` (**optional** {ref}`enum-grouppermissionfilter.admin` - *is user a group admin or not*)
+* `send_message` (**optional** {ref}`enum-grouppermissionfilter.sendmessage` - *can the user post a message in the discussion*)
+* `remote_delete_anything` (**optional** {ref}`enum-grouppermissionfilter.remotedeleteanything` - *can the user remote-delete any message, even other members' messages*)
+* `edit_or_remote_delete_own_messages` (**optional** {ref}`enum-grouppermissionfilter.editorremotedeleteownmessage` - *can the user edit or remote-delete their own messages*)
+* `change_settings` (**optional** {ref}`enum-grouppermissionfilter.changesettings` - *can the user change group settings*)
 
 ::::::{card}
-(datatype-grouppermissionfilter.admin)=
+(enum-grouppermissionfilter.admin)=
 #### GroupPermissionFilter.Admin
 
 **Enum Values:**
 * `ADMIN_UNSPECIFIED`: 0
 * `ADMIN_IS`: 1
 * `ADMIN_IS_NOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-grouppermissionfilter.sendmessage)=
+(enum-grouppermissionfilter.sendmessage)=
 #### GroupPermissionFilter.SendMessage
 
 **Enum Values:**
 * `SEND_MESSAGE_UNSPECIFIED`: 0
 * `SEND_MESSAGE_CAN`: 1
 * `SEND_MESSAGE_CANNOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-grouppermissionfilter.remotedeleteanything)=
+(enum-grouppermissionfilter.remotedeleteanything)=
 #### GroupPermissionFilter.RemoteDeleteAnything
 
 **Enum Values:**
 * `REMOTE_DELETE_ANYTHING_UNSPECIFIED`: 0
 * `REMOTE_DELETE_ANYTHING_CAN`: 1
 * `REMOTE_DELETE_ANYTHING_CANNOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-grouppermissionfilter.editorremotedeleteownmessage)=
+(enum-grouppermissionfilter.editorremotedeleteownmessage)=
 #### GroupPermissionFilter.EditOrRemoteDeleteOwnMessage
 
 **Enum Values:**
 * `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_UNSPECIFIED`: 0
 * `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CAN`: 1
 * `EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CANNOT`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-grouppermissionfilter.changesettings)=
+(enum-grouppermissionfilter.changesettings)=
 #### GroupPermissionFilter.ChangeSettings
 
 **Enum Values:**
 * `CHANGE_SETTINGS_UNSPECIFIED`: 0
 * `CHANGE_SETTINGS_CAN`: 1
 * `CHANGE_SETTINGS_CANNOT`: 2
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-identity)=
+(file-identity)=
 ## Identity
 
 > **Related Endpoints:**
@@ -654,6 +659,7 @@ sharing: the last location update timestamp*)
 > * **Admin:** {ref}`service-identityadminservice`
 
 
+(message-identity)=
 ### Identity
 
 :::::::{card}
@@ -663,32 +669,32 @@ sharing: the last location update timestamp*)
 **Fields:**
 * `id` (uint64)
 * `display_name` (string - *computed from *details**)
-* `details` ({ref}`datatype-identitydetails`)
+* `details` ({ref}`message-identitydetails`)
 * `invitation_url` (***deprecated*** string - *TODO TODEL !!!!*)
 * `keycloak_managed` (bool - *identity is linked to a keycloak directory*)
 * `has_a_photo` (bool)
-* `api_key` ({ref}`datatype-identity.apikey` - *Olvid api key to grant permissions*)
+* `api_key` ({ref}`message-identity.apikey` - *Olvid api key to grant permissions*)
 
 ::::::{card}
-(datatype-identity.apikey)=
+(message-identity.apikey)=
 #### Identity.ApiKey
 
 **Fields:**
-* `permission` ({ref}`datatype-identity.apikey.permission`)
+* `permission` ({ref}`message-identity.apikey.permission`)
 * `expiration_timestamp` (uint64)
+::::::
 
 :::::{card}
-(datatype-identity.apikey.permission)=
+(message-identity.apikey.permission)=
 ##### Identity.ApiKey.Permission
 
 **Fields:**
 * `call` (bool)
 * `multi_device` (bool)
-
 :::::
-::::::
+
 :::::::
-(datatype-identitydetails)=
+(message-identitydetails)=
 ### IdentityDetails
 
 :::::::{card}
@@ -703,7 +709,7 @@ sharing: the last location update timestamp*)
 * `position` (**optional** string)
 
 :::::::
-(datatype-identityfilter)=
+(message-identityfilter)=
 ### IdentityFilter
 
 :::::::{card}
@@ -711,54 +717,54 @@ sharing: the last location update timestamp*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `keycloak` (**optional** {ref}`datatype-identityfilter.keycloak` - *is identity keycloak managed or not*)
-* `photo` (**optional** {ref}`datatype-identityfilter.photo` - *does identity have a profile photo or not*)
-* `api_key` (**optional** {ref}`datatype-identityfilter.apikey` - *does identity have an Olvid api key or not*)
+* `keycloak` (**optional** {ref}`enum-identityfilter.keycloak` - *is identity keycloak managed or not*)
+* `photo` (**optional** {ref}`enum-identityfilter.photo` - *does identity have a profile photo or not*)
+* `api_key` (**optional** {ref}`enum-identityfilter.apikey` - *does identity have an Olvid api key or not*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name**)
-* `details_search` (**optional** {ref}`datatype-identitydetails` - *a set of regexp filters, one for each field of *details**)
+* `details_search` (**optional** {ref}`message-identitydetails` - *a set of regexp filters, one for each field of *details**)
 
 ::::::{card}
-(datatype-identityfilter.keycloak)=
+(enum-identityfilter.keycloak)=
 #### IdentityFilter.Keycloak
 
 **Enum Values:**
 * `KEYCLOAK_UNSPECIFIED`: 0
 * `KEYCLOAK_IS_NOT`: 1
 * `KEYCLOAK_IS`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-identityfilter.photo)=
+(enum-identityfilter.photo)=
 #### IdentityFilter.Photo
 
 **Enum Values:**
 * `PHOTO_UNSPECIFIED`: 0
 * `PHOTO_HAS_NOT`: 1
 * `PHOTO_HAS`: 2
-
 ::::::
+
 ::::::{card}
-(datatype-identityfilter.apikey)=
+(enum-identityfilter.apikey)=
 #### IdentityFilter.ApiKey
 
 **Enum Values:**
 * `API_KEY_UNSPECIFIED`: 0
 * `API_KEY_HAS_NOT`: 1
 * `API_KEY_HAS`: 2
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-client_key)=
+(file-client_key)=
 ## Client_Key
 
 > **Related Endpoints:**
 > * **Admin:** {ref}`service-clientkeyadminservice`
 
 
-(datatype-clientkey)=
+(message-clientkey)=
 ### ClientKey
 
 :::::::{card}
@@ -772,7 +778,7 @@ sharing: the last location update timestamp*)
 * `identity_id` (uint64 - *0 if an admin client key*)
 
 :::::::
-(datatype-clientkeyfilter)=
+(message-clientkeyfilter)=
 ### ClientKeyFilter
 
 :::::::{card}
@@ -789,7 +795,7 @@ sharing: the last location update timestamp*)
 
 ---
 
-(datatype-invitation)=
+(file-invitation)=
 ## Invitation
 
 > **Related Endpoints:**
@@ -797,6 +803,7 @@ sharing: the last location update timestamp*)
 > * **Notification:** {ref}`service-invitationnotificationservice`
 
 
+(message-invitation)=
 ### Invitation
 
 :::::::{card}
@@ -811,7 +818,7 @@ sharing: the last location update timestamp*)
 
 **Fields:**
 * `id` (uint64 - *invitation unique identifier*)
-* `status` ({ref}`datatype-invitation.status` - *current protocol step*)
+* `status` ({ref}`enum-invitation.status` - *current protocol step*)
 * `display_name` (string - *display name of the other identity or the group name*)
 * `timestamp` (uint64 - *latest status update timestamp*)
 * `sas` (**optional** string - *only set for STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE and STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE
@@ -820,7 +827,7 @@ four digit code to give to the other in an invitation protocol*)
 the contact id of the person who initiated introduction protocol*)
 
 ::::::{card}
-(datatype-invitation.status)=
+(enum-invitation.status)=
 #### Invitation.Status
 
 **Enum Values:**
@@ -835,10 +842,10 @@ the contact id of the person who initiated introduction protocol*)
 * `STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT`: 9 - *you sent a one to one invitation, wait for the other to accept*
 * `STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT`: 10 - *you received a one to one invitation, accept or decline it*
 * `STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT`: 11 - *you received a group invitation, accept or decline it*
-
 ::::::
+
 :::::::
-(datatype-invitationfilter)=
+(message-invitationfilter)=
 ### InvitationFilter
 
 :::::::{card}
@@ -846,14 +853,14 @@ the contact id of the person who initiated introduction protocol*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `status` (**optional** {ref}`datatype-invitation.status` - *does invitation have a specific status*)
-* `type` (**optional** {ref}`datatype-invitationfilter.type` - *does invitation belongs to a specific protocol*)
+* `status` (**optional** {ref}`enum-invitation.status` - *does invitation have a specific status*)
+* `type` (**optional** {ref}`enum-invitationfilter.type` - *does invitation belongs to a specific protocol*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name* field*)
 * `min_timestamp` (**optional** uint64 - *is timestamp less or equal than *min_timestamp**)
 * `max_timestamp` (**optional** uint64 - *is timestamp more or equal than *max_timestamp**)
 
 ::::::{card}
-(datatype-invitationfilter.type)=
+(enum-invitationfilter.type)=
 #### InvitationFilter.Type
 
 **Enum Values:**
@@ -872,20 +879,20 @@ the contact id of the person who initiated introduction protocol*)
 * `TYPE_ONE_TO_ONE`: 4 - *is status one of :
 - STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT
 - STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT*
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-settings)=
+(file-settings)=
 ## Settings
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-settingscommandservice`
 
 
-(datatype-identitysettings)=
+(message-identitysettings)=
 ### IdentitySettings
 
 :::::::{card}
@@ -895,12 +902,12 @@ the contact id of the person who initiated introduction protocol*)
 > - Keycloak: directory related settings
 
 **Fields:**
-* `invitation` ({ref}`datatype-identitysettings.autoacceptinvitation`)
-* `message_retention` ({ref}`datatype-identitysettings.messageretention`)
-* `keycloak` ({ref}`datatype-identitysettings.keycloak`)
+* `invitation` ({ref}`message-identitysettings.autoacceptinvitation`)
+* `message_retention` ({ref}`message-identitysettings.messageretention`)
+* `keycloak` ({ref}`message-identitysettings.keycloak`)
 
 ::::::{card}
-(datatype-identitysettings.autoacceptinvitation)=
+(message-identitysettings.autoacceptinvitation)=
 #### IdentitySettings.AutoAcceptInvitation
 
 **Fields:**
@@ -908,10 +915,10 @@ the contact id of the person who initiated introduction protocol*)
 * `auto_accept_group` (bool - *auto accept invitations to a group*)
 * `auto_accept_one_to_one` (bool - *auto accept contact invitations to one to one discussions*)
 * `auto_accept_invitation` (bool - *auto accept olvid invitations (mind this will only accept invitation and not exchange sas code for you)*)
-
 ::::::
+
 ::::::{card}
-(datatype-identitysettings.messageretention)=
+(message-identitysettings.messageretention)=
 #### IdentitySettings.MessageRetention
 
 **Fields:**
@@ -923,18 +930,18 @@ set to 0 to disable*)
 set to 0 to disable*)
 * `clean_locked_discussions` (bool - *if true, messages in locked discussions will be deleted.*)
 * `preserve_is_sharing_location_messages` (bool - *if true, live sharing location messages will never be deleted.*)
-
 ::::::
+
 ::::::{card}
-(datatype-identitysettings.keycloak)=
+(message-identitysettings.keycloak)=
 #### IdentitySettings.Keycloak
 
 **Fields:**
 * `auto_invite_new_members` (bool - *if true, directory will regularly be scanned to add new members as contacts.*)
-
 ::::::
+
 :::::::
-(datatype-discussionsettings)=
+(message-discussionsettings)=
 ### DiscussionSettings
 
 :::::::{card}
@@ -950,14 +957,14 @@ set to 0 to disable*)
 
 ---
 
-(datatype-storage)=
+(file-storage)=
 ## Storage
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-storagecommandservice`
 
 
-(datatype-storageelement)=
+(message-storageelement)=
 ### StorageElement
 
 :::::::{card}
@@ -970,7 +977,7 @@ set to 0 to disable*)
 * `value` (string)
 
 :::::::
-(datatype-storageelementfilter)=
+(message-storageelementfilter)=
 ### StorageElementFilter
 
 :::::::{card}
@@ -985,14 +992,14 @@ set to 0 to disable*)
 
 ---
 
-(datatype-keycloak)=
+(file-keycloak)=
 ## Keycloak
 
 > **Related Endpoints:**
 > * **Command:** {ref}`service-keycloakcommandservice`
 
 
-(datatype-keycloakuser)=
+(message-keycloakuser)=
 ### KeycloakUser
 
 :::::::{card}
@@ -1001,11 +1008,11 @@ set to 0 to disable*)
 **Fields:**
 * `keycloak_id` (string - *unique identifier for directory, to use to add this user as a contact*)
 * `display_name` (string - *name computed from details*)
-* `details` ({ref}`datatype-identitydetails` - *full identity details*)
+* `details` ({ref}`message-identitydetails` - *full identity details*)
 * `contact_id` (**optional** uint64 - *filled if this user is already a contact, else set to 0*)
 
 :::::::
-(datatype-keycloakuserfilter)=
+(message-keycloakuserfilter)=
 ### KeycloakUserFilter
 
 :::::::{card}
@@ -1013,25 +1020,25 @@ set to 0 to disable*)
 > To pass a filter an element must match all specified conditions.
 
 **Fields:**
-* `contact` (**optional** {ref}`datatype-keycloakuserfilter.contact` - *is user a contact or not*)
+* `contact` (**optional** {ref}`enum-keycloakuserfilter.contact` - *is user a contact or not*)
 * `display_name_search` (**optional** string - *regexp filter on *display_name* field*)
-* `details_search` (**optional** {ref}`datatype-identitydetails` - *a set of regexp filters, one for each field of *details**)
+* `details_search` (**optional** {ref}`message-identitydetails` - *a set of regexp filters, one for each field of *details**)
 
 ::::::{card}
-(datatype-keycloakuserfilter.contact)=
+(enum-keycloakuserfilter.contact)=
 #### KeycloakUserFilter.Contact
 
 **Enum Values:**
 * `CONTACT_UNSPECIFIED`: 0
 * `CONTACT_IS`: 1
 * `CONTACT_IS_NOT`: 2
-
 ::::::
+
 :::::::
 
 ---
 
-(datatype-call)=
+(file-call)=
 ## Call
 
 > **Related Endpoints:**
@@ -1039,7 +1046,7 @@ set to 0 to disable*)
 > * **Notification:** {ref}`service-callnotificationservice`
 
 
-(datatype-callparticipantid)=
+(message-callparticipantid)=
 ### CallParticipantId
 
 :::::::{card}
@@ -1054,13 +1061,14 @@ set to 0 to disable*)
 
 ---
 
-(datatype-backup)=
+(file-backup)=
 ## Backup
 
 > **Related Endpoints:**
 > * **Admin:** {ref}`service-backupadminservice`
 
 
+(message-backup)=
 ### Backup
 
 :::::::{card}
@@ -1073,30 +1081,31 @@ set to 0 to disable*)
 > Note: a backup does not contain any messages or attachments.
 
 **Fields:**
-* `admin_backup` ({ref}`datatype-backup.adminbackup`)
-* `profile_backups` (**repeated** {ref}`datatype-backup.profilebackup`)
+* `admin_backup` ({ref}`message-backup.adminbackup`)
+* `profile_backups` (**repeated** {ref}`message-backup.profilebackup`)
 
 ::::::{card}
-(datatype-backup.adminbackup)=
+(message-backup.adminbackup)=
 #### Backup.AdminBackup
 
 **Fields:**
 * `admin_client_key_count` (uint64)
 * `storage_elements_count` (uint64)
-
 ::::::
+
 ::::::{card}
-(datatype-backup.profilebackup)=
+(message-backup.profilebackup)=
 #### Backup.ProfileBackup
 
 **Fields:**
 * `profile_display_name` (string)
 * `already_exists_locally` (bool)
 * `keycloak_managed` (bool)
-* `snapshots` (**repeated** {ref}`datatype-backup.profilebackup.snapshot`)
+* `snapshots` (**repeated** {ref}`message-backup.profilebackup.snapshot`)
+::::::
 
 :::::{card}
-(datatype-backup.profilebackup.snapshot)=
+(message-backup.profilebackup.snapshot)=
 ##### Backup.ProfileBackup.Snapshot
 
 **Fields:**
@@ -1107,8 +1116,7 @@ set to 0 to disable*)
 * `group_count` (uint64)
 * `client_key_count` (uint64)
 * `storage_elements_count` (uint64)
-* `identity_settings` ({ref}`datatype-identitysettings`)
-
+* `identity_settings` ({ref}`message-identitysettings`)
 :::::
-::::::
+
 :::::::

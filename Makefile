@@ -22,12 +22,12 @@ help:
 # start dev server for french version
 serve: export BANNER_MESSAGE=🚧 Documentation en cours de rédaction! 🚧
 serve:
-	sphinx-autobuild "$(SOURCEDIR)" /tmp/doc-fr $(SPHINXOPTS) -D language=fr $(O) --ignore ./source/cli/cli_commands.rstinc --watch ./locale --port 8080
+	sphinx-autobuild "$(SOURCEDIR)" /tmp/doc-fr $(SPHINXOPTS) -D language=fr $(O) --ignore ./source/cli/cli_commands.rstinc --ignore ./source/reference --ignore ./source/_build --watch ./locale --port 8080
 
 # start dev server for english version
 serve-en: export BANNER_MESSAGE=🚧 Documentation Under Construction! 🚧
 serve-en:
-	sphinx-autobuild "$(SOURCEDIR)" /tmp/doc-en $(SPHINXOPTS) -D language=en $(O) --ignore ./source/cli/cli_commands.rstinc --watch ./locale --port 8081
+	sphinx-autobuild "$(SOURCEDIR)" /tmp/doc-en $(SPHINXOPTS) -D language=en $(O) --ignore ./source/cli/cli_commands.rstinc --ignore ./source/reference --ignore ./source/_build --watch ./locale --port 8081
 
 # extract translatable strings
 update-translation: gettext
