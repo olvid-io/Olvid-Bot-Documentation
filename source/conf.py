@@ -84,6 +84,3 @@ myst_substitutions = {
 import subprocess
 # generate cli references
 subprocess.run(["python3", "../_scripts/generate_cli_commands.py"],)
-# generate daemon references from protobuf
-subprocess.run(["buf", "build", "-o", "_build/daemon_descriptor.pb", "../protobuf"],)
-subprocess.run(["python3", "../_scripts/generate_reference.py", "_build/daemon_descriptor.pb" , "reference"],)

@@ -36,3 +36,12 @@ update-translation: gettext
 # translate translatable strings using ollama
 translate: update-translation
 	python3 translate/translate.py ./locale/en
+
+# update daemon api description (cannot be compiled by readthedocs)
+update-api-description:
+	mkdir -p ./source/_protobuf
+	buf build -o ./source/_protobuf/daemon_descriptor.pb ./protobuf
+
+# update api reference section from protobuf repository
+reference: update-api-description
+	python3 ./_scripts/generate_reference.py ./source/_build/daemon_descriptor.pb ./source/reference
