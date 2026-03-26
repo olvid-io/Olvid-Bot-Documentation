@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-17 12:06+0100\n"
+"POT-Creation-Date: 2026-03-26 21:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -133,8 +133,13 @@ msgstr "Improvements and simplification of the framework, see the [migration gui
 
 # translated using ollama
 #: ../../source/changelog.md:34
-msgid "**N8N** [//]: # (  - TODO added Human In The Loop)"
-msgstr "**N8N** [//]: # (  - TODO added Human In The Loop)"
+msgid "**N8N**"
+msgstr "**N8N**"
+
+# translated using ollama
+#: ../../source/changelog.md:35
+msgid "Ajout de l'opération `Send a message and wait for approval or response` pour ajouter une validation manuelle dans Olvid (message ou ajout de réaction)."
+msgstr "Addition of the operation `Send a message and wait for approval or response` to add manual validation in Olvid (message or addition of reaction)."
 
 # translated using ollama
 #: ../../source/changelog.md:37
