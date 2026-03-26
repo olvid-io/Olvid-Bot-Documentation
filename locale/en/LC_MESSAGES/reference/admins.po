@@ -1,0 +1,574 @@
+# AUTO-TRANSLATION IGNORE
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-26 22:41+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference/admins.md:1 ../../source/reference/admins.md:4
+msgid "Admin Commands"
+msgstr ""
+
+#: ../../source/reference/admins.md:3
+msgid "List all privileged commands an admin can execute to manage the daemon. Those commands require a valid admin client key."
+msgstr ""
+
+#: ../../source/reference/admins.md:10
+msgid "Identity Admin Service"
+msgstr ""
+
+#: ../../source/reference/admins.md:12 ../../source/reference/admins.md:182
+#: ../../source/reference/admins.md:340
+msgid "Info"
+msgstr ""
+
+#: ../../source/reference/admins.md:14 ../../source/reference/admins.md:342
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-identity`"
+msgstr ""
+
+#: ../../source/reference/admins.md:17
+msgid "IdentityList"
+msgstr ""
+
+#: ../../source/reference/admins.md:19
+msgid "List all identities on this daemon."
+msgstr ""
+
+#: ../../source/reference/admins.md:22
+msgid "**Request**: *IdentityListRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:23
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-identityfilter`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:26
+msgid "**Response *(Stream)***: *IdentityListResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:27
+#, python-brace-format
+msgid "`identities` (**repeated** {ref}`message-identity`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:29 ../../source/reference/admins.md:49
+#: ../../source/reference/admins.md:68 ../../source/reference/admins.md:88
+#: ../../source/reference/admins.md:107 ../../source/reference/admins.md:128
+#: ../../source/reference/admins.md:151 ../../source/reference/admins.md:171
+#: ../../source/reference/admins.md:203 ../../source/reference/admins.md:222
+#: ../../source/reference/admins.md:243 ../../source/reference/admins.md:262
+#: ../../source/reference/admins.md:285 ../../source/reference/admins.md:304
+#: ../../source/reference/admins.md:327 ../../source/reference/admins.md:358
+#: ../../source/reference/admins.md:379 ../../source/reference/admins.md:400
+#: ../../source/reference/admins.md:420
+msgid "**Error Codes**:"
+msgstr ""
+
+#: ../../source/reference/admins.md:30 ../../source/reference/admins.md:50
+#: ../../source/reference/admins.md:69 ../../source/reference/admins.md:89
+#: ../../source/reference/admins.md:108 ../../source/reference/admins.md:129
+#: ../../source/reference/admins.md:152 ../../source/reference/admins.md:172
+#: ../../source/reference/admins.md:204 ../../source/reference/admins.md:223
+#: ../../source/reference/admins.md:245 ../../source/reference/admins.md:263
+#: ../../source/reference/admins.md:286 ../../source/reference/admins.md:305
+#: ../../source/reference/admins.md:328 ../../source/reference/admins.md:359
+#: ../../source/reference/admins.md:380 ../../source/reference/admins.md:401
+#: ../../source/reference/admins.md:421
+msgid "`PERMISSION_DENIED`: an admin client key is necessary."
+msgstr ""
+
+#: ../../source/reference/admins.md:31
+msgid "`INVALID_ARGUMENT`: invalid filter."
+msgstr ""
+
+#: ../../source/reference/admins.md:32 ../../source/reference/admins.md:110
+#: ../../source/reference/admins.md:131 ../../source/reference/admins.md:173
+#: ../../source/reference/admins.md:205 ../../source/reference/admins.md:224
+#: ../../source/reference/admins.md:264 ../../source/reference/admins.md:306
+#: ../../source/reference/admins.md:331 ../../source/reference/admins.md:361
+#: ../../source/reference/admins.md:403
+msgid "`INTERNAL`"
+msgstr ""
+
+#: ../../source/reference/admins.md:33 ../../source/reference/admins.md:52
+#: ../../source/reference/admins.md:71 ../../source/reference/admins.md:91
+#: ../../source/reference/admins.md:111 ../../source/reference/admins.md:132
+#: ../../source/reference/admins.md:154 ../../source/reference/admins.md:174
+#: ../../source/reference/admins.md:206 ../../source/reference/admins.md:225
+#: ../../source/reference/admins.md:246 ../../source/reference/admins.md:265
+#: ../../source/reference/admins.md:288 ../../source/reference/admins.md:307
+#: ../../source/reference/admins.md:332 ../../source/reference/admins.md:362
+#: ../../source/reference/admins.md:382 ../../source/reference/admins.md:404
+#: ../../source/reference/admins.md:423
+msgid "`UNAUTHENTICATED`: client key is invalid."
+msgstr ""
+
+#: ../../source/reference/admins.md:37
+msgid "IdentityAdminGet"
+msgstr ""
+
+#: ../../source/reference/admins.md:39
+msgid "Get a specific identity, identified by its id."
+msgstr ""
+
+#: ../../source/reference/admins.md:42
+msgid "**Request**: *IdentityAdminGetRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:43 ../../source/reference/admins.md:62
+#: ../../source/reference/admins.md:82 ../../source/reference/admins.md:101
+#: ../../source/reference/admins.md:121 ../../source/reference/admins.md:394
+msgid "`identity_id` (uint64)"
+msgstr ""
+
+#: ../../source/reference/admins.md:46
+msgid "**Response**: *IdentityAdminGetResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:47 ../../source/reference/admins.md:149
+#: ../../source/reference/admins.md:169
+#, python-brace-format
+msgid "`identity` ({ref}`message-identity`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:51 ../../source/reference/admins.md:70
+#: ../../source/reference/admins.md:90 ../../source/reference/admins.md:109
+#: ../../source/reference/admins.md:130 ../../source/reference/admins.md:402
+msgid "`NOT_FOUND`: identity not found."
+msgstr ""
+
+#: ../../source/reference/admins.md:56
+msgid "IdentityAdminGetBytesIdentifier"
+msgstr ""
+
+#: ../../source/reference/admins.md:58
+msgid "Get identity long term identifier."
+msgstr ""
+
+#: ../../source/reference/admins.md:61
+msgid "**Request**: *IdentityAdminGetBytesIdentifierRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:65
+msgid "**Response**: *IdentityAdminGetBytesIdentifierResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:66
+msgid "`identifier` (bytes)"
+msgstr ""
+
+#: ../../source/reference/admins.md:75
+msgid "IdentityAdminGetInvitationLink"
+msgstr ""
+
+#: ../../source/reference/admins.md:77
+msgid "Get identity invitation link.   This link allows other identities to send invitations."
+msgstr ""
+
+#: ../../source/reference/admins.md:81
+msgid "**Request**: *IdentityAdminGetInvitationLinkRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:85
+msgid "**Response**: *IdentityAdminGetInvitationLinkResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:86
+msgid "`invitation_link` (string)"
+msgstr ""
+
+#: ../../source/reference/admins.md:95
+msgid "IdentityAdminDownloadPhoto"
+msgstr ""
+
+#: ../../source/reference/admins.md:97
+msgid "Download profile photo of an identity."
+msgstr ""
+
+#: ../../source/reference/admins.md:100
+msgid "**Request**: *IdentityAdminDownloadPhotoRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:104
+msgid "**Response**: *IdentityAdminDownloadPhotoResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:105
+msgid "`photo` (bytes)"
+msgstr ""
+
+#: ../../source/reference/admins.md:115
+msgid "IdentityDelete"
+msgstr ""
+
+#: ../../source/reference/admins.md:117
+msgid "Delete an identity on this daemon, identified by its id."
+msgstr ""
+
+#: ../../source/reference/admins.md:120
+msgid "**Request**: *IdentityDeleteRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:122
+msgid "`delete_everywhere` (**optional** bool - *delete from every device and notify your contacts for deletion*)"
+msgstr ""
+
+#: ../../source/reference/admins.md:125
+msgid "**Response**: *IdentityDeleteResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:126 ../../source/reference/admins.md:197
+#: ../../source/reference/admins.md:216 ../../source/reference/admins.md:256
+#: ../../source/reference/admins.md:260 ../../source/reference/admins.md:418
+msgid "*Empty payload.*"
+msgstr ""
+
+#: ../../source/reference/admins.md:136
+msgid "IdentityNew"
+msgstr ""
+
+#: ../../source/reference/admins.md:138
+msgid "Create a new identity on this daemon.   You must specify at least a non blank firstname or lastname in identity_details.   You can specify a server_url to create identity on, by default it uses Olvid main distribution server."
+msgstr ""
+
+#: ../../source/reference/admins.md:143
+msgid "**Request**: *IdentityNewRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:144
+#, python-brace-format
+msgid "`identity_details` ({ref}`message-identitydetails`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:145
+msgid "`server_url` (**optional** string)"
+msgstr ""
+
+#: ../../source/reference/admins.md:148
+msgid "**Response**: *IdentityNewResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:153
+msgid "`INVALID_ARGUMENT`: one of first name or last name must be non empty."
+msgstr ""
+
+#: ../../source/reference/admins.md:158
+msgid "IdentityKeycloakNew"
+msgstr ""
+
+#: ../../source/reference/admins.md:160
+msgid "Create a new keycloak managed identity on this daemon.   Pass the configuration link you created in the keycloak management console."
+msgstr ""
+
+#: ../../source/reference/admins.md:164
+msgid "**Request**: *IdentityKeycloakNewRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:165
+msgid "`configuration_link` (string)"
+msgstr ""
+
+#: ../../source/reference/admins.md:168
+msgid "**Response**: *IdentityKeycloakNewResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:180
+msgid "Backup Admin Service"
+msgstr ""
+
+#: ../../source/reference/admins.md:183
+msgid "Olvid Backups are accessible using a simple key. They contain data necessary to restore or to transfer an identity from a device (a daemon) to another.   Note: Backups do not contain any messages or attachments; they are only designed to re-create secure channels with your contacts, restore your discussions and your daemon configuration (client keys, settings, ...)"
+msgstr ""
+
+#: ../../source/reference/admins.md:187
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-backup`"
+msgstr ""
+
+#: ../../source/reference/admins.md:190
+msgid "BackupKeyGet"
+msgstr ""
+
+#: ../../source/reference/admins.md:192
+msgid "Get your current backup key.   ⚠️ Store it in a safe place, this key allows to restore this daemon identities on another device/daemon."
+msgstr ""
+
+#: ../../source/reference/admins.md:196
+msgid "**Request**: *BackupKeyGetRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:200
+msgid "**Response**: *BackupKeyGetResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:201 ../../source/reference/admins.md:220
+#: ../../source/reference/admins.md:237
+msgid "`backup_key` (string)"
+msgstr ""
+
+#: ../../source/reference/admins.md:210
+msgid "BackupKeyRenew"
+msgstr ""
+
+#: ../../source/reference/admins.md:212
+msgid "Discard previous backup key and create a new one."
+msgstr ""
+
+#: ../../source/reference/admins.md:215
+msgid "**Request**: *BackupKeyRenewRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:219
+msgid "**Response**: *BackupKeyRenewResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:229
+msgid "BackupGet"
+msgstr ""
+
+#: ../../source/reference/admins.md:231
+msgid "Show the backup associated with a backup key.   It contains an admin backup with admin client key and associated storage,   and snapshots for each identity."
+msgstr ""
+
+#: ../../source/reference/admins.md:236
+msgid "**Request**: *BackupGetRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:240
+msgid "**Response**: *BackupGetResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:241
+#, python-brace-format
+msgid "`backup` ({ref}`message-backup`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:244
+msgid "`INVALID_ARGUMENT`: cannot access backup."
+msgstr ""
+
+#: ../../source/reference/admins.md:250
+msgid "BackupNow"
+msgstr ""
+
+#: ../../source/reference/admins.md:252
+msgid "Force a new backup."
+msgstr ""
+
+#: ../../source/reference/admins.md:255
+msgid "**Request**: *BackupNowRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:259
+msgid "**Response**: *BackupNowResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:269
+msgid "BackupRestoreDaemon"
+msgstr ""
+
+#: ../../source/reference/admins.md:271
+msgid "Restore a complete daemon instance.   This is only possible on a blank daemon instance."
+msgstr ""
+
+#: ../../source/reference/admins.md:275
+msgid "**Request**: *BackupRestoreDaemonRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:276 ../../source/reference/admins.md:298
+#: ../../source/reference/admins.md:318
+msgid "`backup_key` (string - *key of the backup to restore*)"
+msgstr ""
+
+#: ../../source/reference/admins.md:277 ../../source/reference/admins.md:320
+msgid "`new_device_name` (**optional** string - *specify a name for this new device (*daemon* is set as default)*)"
+msgstr ""
+
+#: ../../source/reference/admins.md:280
+msgid "**Response**: *BackupRestoreDaemonResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:281
+#, python-brace-format
+msgid "`restored_identities` (**repeated** {ref}`message-identity`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:282 ../../source/reference/admins.md:302
+#, python-brace-format
+msgid "`restored_admin_client_keys` (**repeated** {ref}`message-clientkey`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:283 ../../source/reference/admins.md:325
+#, python-brace-format
+msgid "`restored_client_keys` (**repeated** {ref}`message-clientkey`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:287
+msgid "`INVALID_ARGUMENT`: your daemon database is not empty."
+msgstr ""
+
+#: ../../source/reference/admins.md:292
+msgid "BackupRestoreAdminBackup"
+msgstr ""
+
+#: ../../source/reference/admins.md:294
+msgid "Restore admin data of a backup (admin client keys and associated storage)."
+msgstr ""
+
+#: ../../source/reference/admins.md:297
+msgid "**Request**: *BackupRestoreAdminBackupRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:301
+msgid "**Response**: *BackupRestoreAdminBackupResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:311
+msgid "BackupRestoreProfileSnapshot"
+msgstr ""
+
+#: ../../source/reference/admins.md:313
+msgid "Restore an identity from a backup.   Pass the identity snapshot id you want to restore."
+msgstr ""
+
+#: ../../source/reference/admins.md:317
+msgid "**Request**: *BackupRestoreProfileSnapshotRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:319
+msgid "`id` (string - *id of the snapshot to restore*)"
+msgstr ""
+
+#: ../../source/reference/admins.md:323
+msgid "**Response**: *BackupRestoreProfileSnapshotResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:324
+#, python-brace-format
+msgid "`restored_identity` ({ref}`message-identity`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:329
+msgid "`NOT_FOUND`: snapshot not found."
+msgstr ""
+
+#: ../../source/reference/admins.md:330
+msgid "`INVALID_ARGUMENT`: identity already exists locally."
+msgstr ""
+
+#: ../../source/reference/admins.md:338
+msgid "Client Key Admin Service"
+msgstr ""
+
+#: ../../source/reference/admins.md:345
+msgid "ClientKeyList"
+msgstr ""
+
+#: ../../source/reference/admins.md:347
+msgid "List all client keys of this daemon (admin and non admin).   This does not return temporary client keys passed in environment or as command line arguments."
+msgstr ""
+
+#: ../../source/reference/admins.md:351
+msgid "**Request**: *ClientKeyListRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:352
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-clientkeyfilter`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:355
+msgid "**Response *(Stream)***: *ClientKeyListResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:356
+#, python-brace-format
+msgid "`client_keys` (**repeated** {ref}`message-clientkey`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:360
+msgid "`INVALID_ARGUMENT`: filter is invalid."
+msgstr ""
+
+#: ../../source/reference/admins.md:366
+msgid "ClientKeyGet"
+msgstr ""
+
+#: ../../source/reference/admins.md:368
+msgid "Get a specific client key details, identified by its value.   This does not return temporary client keys passed in environment or as command line arguments."
+msgstr ""
+
+#: ../../source/reference/admins.md:372
+msgid "**Request**: *ClientKeyGetRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:373 ../../source/reference/admins.md:414
+msgid "`client_key` (string)"
+msgstr ""
+
+#: ../../source/reference/admins.md:376
+msgid "**Response**: *ClientKeyGetResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:377 ../../source/reference/admins.md:398
+#, python-brace-format
+msgid "`client_key` ({ref}`message-clientkey`)"
+msgstr ""
+
+#: ../../source/reference/admins.md:381 ../../source/reference/admins.md:422
+msgid "`NOT_FOUND`: client key not found."
+msgstr ""
+
+#: ../../source/reference/admins.md:386
+msgid "ClientKeyNew"
+msgstr ""
+
+#: ../../source/reference/admins.md:388
+msgid "Create a new client key associated with a given identity.   Pass 0 as identity id to create an admin client key."
+msgstr ""
+
+#: ../../source/reference/admins.md:392
+msgid "**Request**: *ClientKeyNewRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:393
+msgid "`name` (string)"
+msgstr ""
+
+#: ../../source/reference/admins.md:397
+msgid "**Response**: *ClientKeyNewResponse*"
+msgstr ""
+
+#: ../../source/reference/admins.md:408
+msgid "ClientKeyDelete"
+msgstr ""
+
+#: ../../source/reference/admins.md:410
+msgid "Delete a specific client key, identified by its value."
+msgstr ""
+
+#: ../../source/reference/admins.md:413
+msgid "**Request**: *ClientKeyDeleteRequest*"
+msgstr ""
+
+#: ../../source/reference/admins.md:417
+msgid "**Response**: *ClientKeyDeleteResponse*"
+msgstr ""
+

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-02-12 22:32+0100\n"
+"POT-Creation-Date: 2026-03-26 22:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 # translated using ollama
 #: ../../source/daemon/daemon.md:1
@@ -48,41 +48,46 @@ msgstr "Daemon exposes two types of methods (API endpoints):"
 
 # translated using ollama
 #: ../../source/daemon/daemon.md:23
-msgid "les commandes : un client envoie une requête au daemon qui exécute l'action attendue avant de renvoyer une réponse."
-msgstr "commands: a client sends a request to the daemon which executes the expected action before returning a response."
+msgid "les [commandes](/reference/commands) : un client envoie une requête au daemon qui exécute l'action attendue avant de renvoyer une réponse."
+msgstr "the [commands](/reference/commands): a client sends a request to the daemon which executes the expected action before returning a response."
 
 # translated using ollama
 #: ../../source/daemon/daemon.md:24
-msgid "les notifications : un client s'inscrit pour recevoir un type de notification et le serveur lui enverra un message à chaque fois que nécessaire, tant que la connection reste ouverte."
-msgstr "notifications: a client subscribes to receive a type of notification and the server will send a message each time it is necessary, as long as the connection remains open."
+msgid "les [notifications](/reference/notifications) : un client s'inscrit pour recevoir un type de notification et le serveur lui enverra un message à chaque fois que nécessaire, tant que la connection reste ouverte."
+msgstr "[Notifications](/reference/notifications): a client subscribes to receive a type of notification and the server will send them a message each time it's needed, as long as the connection remains open."
 
 # translated using ollama
 #: ../../source/daemon/daemon.md:26
-msgid "Toutes les méthodes sont décrites dans le dossier [services](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/services/v1) du répertoire GitHub qui contient nos fichiers protobuf. Les messages de requête et réponse des commandes sont décrits dans le dossier [command](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/command/v1). Les messages de souscription et de notification sont regroupés dans le dossier [notification](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1)."
-msgstr "All methods are described in the [services](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/services/v1) folder of the GitHub repository that contains our protobuf files. The request and response messages of commands are described in the [command](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/command/v1) folder. Subscription and notification messages are grouped in the [notification](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1) folder."
+msgid "Toutes les méthodes sont décrites dans la page [](/reference/reference)."
+msgstr "All methods are described in the [reference page][]\."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:28
+msgid "Enfin, la page [](/reference/datatypes) décrit les structures de donnée de base utilisées par le daemon."
+msgstr "Finally, the [page](/reference/datatypes) describes the basic data structures used by the daemon."
 
 # translated using ollama
 #: ../../source/daemon/daemon.md:30
-msgid "Enfin, le dossier [datatypes](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1) regroupe un ensemble de messages qui décrivent les objets que le daemon utilise. Ces messages sont donc utilisés dans de nombreux autres messages."
-msgstr "Finally, the [datatypes](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1) folder contains a set of messages that describe the objects used by the daemon. These messages are therefore used in many other messages."
-
-# translated using ollama
-#: ../../source/daemon/daemon.md:33
 msgid "Client"
 msgstr "Client"
 
 # translated using ollama
-#: ../../source/daemon/daemon.md:35
+#: ../../source/daemon/daemon.md:32
 msgid "Nous avons choisi d'utiliser [protobuf](https://protobuf.dev/) et [gRPC](https://grpc.io/) pour permettre de facilement implémenter des clients capables de se connecter à notre daemon dans n'importe quel langage."
 msgstr "We have chosen to use [protobuf](https://protobuf.dev/) and [gRPC](https://grpc.io/) to easily enable implementing clients capable of connecting to our daemon in any language."
 
 # translated using ollama
-#: ../../source/daemon/daemon.md:37
+#: ../../source/daemon/daemon.md:34
 msgid "Pour faciliter la prise en main, nous avons déjà développé deux librairies en [python](/python/python) et [javascript](/js/js) qui permettent de commencer à écrire vos clients très rapidement."
 msgstr "To make it easier to get started, we have already developed two libraries in [python](/python/python) and [javascript](/js/js) that allow you to start writing your clients very quickly."
 
 # translated using ollama
-#: ../../source/daemon/daemon.md:39
-msgid "Mais si vous préférez utiliser un autre langage, il est possible d'utiliser nos fichiers *.proto* pour générer un client gRPC dans un langage supporté. Plus d'informations sont disponibles dans notre page [](/daemon/custom_client)"
-msgstr "However, if you prefer to use another language, it is possible to use our .proto files to generate a gRPC client in a supported language. More information is available on our [](/daemon/custom_client) page."
+#: ../../source/daemon/daemon.md:36
+msgid "Nous avons également développé des intégrations clé en main pour [](/n8n/n8n) et [](/openclaw/openclaw)."
+msgstr "We have also developed integrations for [](/n8n/n8n) and [](/openclaw/openclaw)."
+
+# translated using ollama
+#: ../../source/daemon/daemon.md:38
+msgid "Si vous préférez utiliser un autre langage que ceux déjà supportés, il est possible d'utiliser les fichiers proto de description de notre api, disponibles sur notre repo [GitHub](https://github.com/olvid-io/Olvid-Bot-Protobuf). Plus d'informations sont disponibles dans notre page [](/daemon/custom_client)"
+msgstr "If you prefer to use a language other than those already supported, it is possible to use the proto files describing our api, available on our [GitHub](https://github.com/olvid-io/Olvid-Bot-Protobuf) repository. More information is available on our [page](/daemon/custom_client)."
 

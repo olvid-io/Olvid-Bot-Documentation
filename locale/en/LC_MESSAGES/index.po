@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 21:28+0100\n"
+"POT-Creation-Date: 2026-03-26 22:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -166,6 +166,11 @@ msgstr "[](js/js)"
 
 # translated using ollama
 #: ../../source/index.md:166
-msgid "Vous pouvez également mettre en place votre propre [instance N8N](n8n/n8n.md) pour réaliser des bots sans code."
-msgstr "You can also set up your own [N8N instance](n8n/n8n.md) to create no-code bots."
+msgid "Vous pouvez également mettre en place votre propre instance [](n8n/n8n.md) pour réaliser des bots sans code, ou commencer à utiliser notre intégration Olvid pour [](/openclaw/openclaw)."
+msgstr "You can also set up your own instance of [](n8n/n8n.md) to create no-code bots, or start using our Olvid integration for [](/openclaw/openclaw)."
+
+# translated using ollama
+#: ../../source/index.md:168
+msgid "Pour découvrir toute les possibilités offertes par un daemon rendez vous dans notre page [](/reference/reference)."
+msgstr "To discover all the possibilities offered by a daemon, visit our [](/reference/reference) page."
 

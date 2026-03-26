@@ -67,7 +67,7 @@ def translate_files(path: str, language: str, ollama_url: str, model: str):
 
 
 def translate(content: str, target_language: str, ollama_url: str, model: str) -> str:
-    if content.__contains__("## AUTO-TRANSLATION IGNORE"):
+    if content.__contains__("AUTO-TRANSLATION IGNORE"):
         print("❕ File marked as ignored")
         return content
 

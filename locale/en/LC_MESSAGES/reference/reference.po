@@ -1,0 +1,71 @@
+# AUTO-TRANSLATION IGNORE
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-26 22:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/reference/reference.md:1
+msgid "📚️ Reference"
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:12
+msgid "This section describes the complete API of an Olvid daemon. The daemon primarily manipulates objects described in the [](datatypes) section, while other sections describe the various entry points exposed by the daemon."
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:19
+msgid "**Commands**"
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:21
+msgid "Actions that can be performed, such as sending a message, updating your identity or creating a new group."
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:28
+msgid "**Notifications**"
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:30
+msgid "Notifications that can be subscribed to, such as \"you received a message\" or \"you joined a new group\"."
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:37
+msgid "**Admin Commands**"
+msgstr ""
+
+#: ../../source/reference/reference.md:39
+msgid "Actions that can be performed only with an *admin_client_key*, such as managing identities and client keys."
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:46
+msgid "**Datatypes**"
+msgstr ""
+
+# translated using ollama
+#: ../../source/reference/reference.md:48
+msgid "The main objects manipulated by the API, such as messages, attachments or discussions."
+msgstr ""
+

@@ -1,6 +1,6 @@
 # Admin Commands
 
-Privileged commands requiring a valid admin client key.
+List all privileged commands an admin can execute to manage the daemon. Those commands require a valid admin client key.
 
 :::{contents} Admin Commands
 :depth: 1

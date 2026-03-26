@@ -1,6 +1,6 @@
 # Commands
 
-
+List all the actions you can perform with your Olvid identity, using daemon APi.
 
 :::{contents} Commands
 :depth: 1

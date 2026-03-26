@@ -20,15 +20,12 @@ Pour installer votre instance de daemon, rendez-vous dans notre section [](/inde
 ## Serveur gRPC
 
 On peut distinguer deux types de méthodes (points d'entrée API) que le daemon expose :
-- les commandes : un client envoie une requête au daemon qui exécute l'action attendue avant de renvoyer une réponse.
-- les notifications : un client s'inscrit pour recevoir un type de notification et le serveur lui enverra un message à chaque fois que nécessaire, tant que la connection reste ouverte.
+- les [commandes](/reference/commands) : un client envoie une requête au daemon qui exécute l'action attendue avant de renvoyer une réponse.
+- les [notifications](/reference/notifications) : un client s'inscrit pour recevoir un type de notification et le serveur lui enverra un message à chaque fois que nécessaire, tant que la connection reste ouverte.
 
-Toutes les méthodes sont décrites dans le dossier [services](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/services/v1) du répertoire GitHub qui contient nos fichiers protobuf.
-Les messages de requête et réponse des commandes sont décrits dans le dossier [command](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/command/v1).
-Les messages de souscription et de notification sont regroupés dans le dossier [notification](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/notification/v1).
+Toutes les méthodes sont décrites dans la page [](/reference/reference).
 
-Enfin, le dossier [datatypes](https://github.com/olvid-io/Olvid-Bot-Protobuf/tree/main/olvid/daemon/datatypes/v1) regroupe un ensemble de messages qui décrivent les objets que le daemon utilise.
-Ces messages sont donc utilisés dans de nombreux autres messages.
+Enfin, la page [](/reference/datatypes) décrit les structures de donnée de base utilisées par le daemon.
 
 ## Client
 
@@ -36,5 +33,7 @@ Nous avons choisi d'utiliser [protobuf](https://protobuf.dev/) et [gRPC](https:/
 
 Pour faciliter la prise en main, nous avons déjà développé deux librairies en [python](/python/python) et [javascript](/js/js) qui permettent de commencer à écrire vos clients très rapidement.
 
-Mais si vous préférez utiliser un autre langage, il est possible d'utiliser nos fichiers *.proto* pour générer un client gRPC dans un langage supporté.
+Nous avons également développé des intégrations clé en main pour [](/n8n/n8n) et [](/openclaw/openclaw).
+
+Si vous préférez utiliser un autre langage que ceux déjà supportés, il est possible d'utiliser les fichiers proto de description de notre api, disponibles sur notre repo [GitHub](https://github.com/olvid-io/Olvid-Bot-Protobuf).
 Plus d'informations sont disponibles dans notre page [](/daemon/custom_client)

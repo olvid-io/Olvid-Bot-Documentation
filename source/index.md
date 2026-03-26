@@ -163,4 +163,6 @@ Actuellement, les langages suivants sont disponibles :
 - [](python/python)
 - [](js/js)
 
-Vous pouvez également mettre en place votre propre [instance N8N](n8n/n8n.md) pour réaliser des bots sans code.
+Vous pouvez également mettre en place votre propre instance [](n8n/n8n.md) pour réaliser des bots sans code, ou commencer à utiliser notre intégration Olvid pour [](/openclaw/openclaw).
+
+Pour découvrir toute les possibilités offertes par un daemon rendez vous dans notre page [](/reference/reference).

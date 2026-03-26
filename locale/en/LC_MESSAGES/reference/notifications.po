@@ -1,0 +1,1581 @@
+# AUTO-TRANSLATION IGNORE
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-26 22:41+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference/notifications.md:1
+#: ../../source/reference/notifications.md:4
+msgid "Notifications"
+msgstr ""
+
+#: ../../source/reference/notifications.md:3
+msgid "Events you can subscribe to, and the associated notifications content."
+msgstr ""
+
+#: ../../source/reference/notifications.md:10
+msgid "Message Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:12
+#: ../../source/reference/notifications.md:356
+#: ../../source/reference/notifications.md:407
+#: ../../source/reference/notifications.md:508
+#: ../../source/reference/notifications.md:604
+#: ../../source/reference/notifications.md:887
+#: ../../source/reference/notifications.md:980
+msgid "Info"
+msgstr ""
+
+#: ../../source/reference/notifications.md:14
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-message`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:17
+msgid "MessageReceived"
+msgstr ""
+
+#: ../../source/reference/notifications.md:19
+msgid "Receive a notification each time you receive a new message."
+msgstr ""
+
+#: ../../source/reference/notifications.md:22
+msgid "**Subscription**: *SubscribeToMessageReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:23
+#: ../../source/reference/notifications.md:41
+#: ../../source/reference/notifications.md:62
+#: ../../source/reference/notifications.md:90
+#: ../../source/reference/notifications.md:109
+#: ../../source/reference/notifications.md:131
+#: ../../source/reference/notifications.md:153
+#: ../../source/reference/notifications.md:182
+#: ../../source/reference/notifications.md:200
+#: ../../source/reference/notifications.md:220
+#: ../../source/reference/notifications.md:239
+#: ../../source/reference/notifications.md:262
+#: ../../source/reference/notifications.md:291
+#: ../../source/reference/notifications.md:311
+#: ../../source/reference/notifications.md:336
+#: ../../source/reference/notifications.md:368
+#: ../../source/reference/notifications.md:387
+#: ../../source/reference/notifications.md:421
+#: ../../source/reference/notifications.md:442
+#: ../../source/reference/notifications.md:465
+#: ../../source/reference/notifications.md:488
+#: ../../source/reference/notifications.md:519
+#: ../../source/reference/notifications.md:541
+#: ../../source/reference/notifications.md:565
+#: ../../source/reference/notifications.md:586
+#: ../../source/reference/notifications.md:619
+#: ../../source/reference/notifications.md:643
+#: ../../source/reference/notifications.md:667
+#: ../../source/reference/notifications.md:693
+#: ../../source/reference/notifications.md:717
+#: ../../source/reference/notifications.md:742
+#: ../../source/reference/notifications.md:767
+#: ../../source/reference/notifications.md:792
+#: ../../source/reference/notifications.md:818
+#: ../../source/reference/notifications.md:840
+#: ../../source/reference/notifications.md:864
+#: ../../source/reference/notifications.md:899
+#: ../../source/reference/notifications.md:918
+#: ../../source/reference/notifications.md:940
+#: ../../source/reference/notifications.md:961
+#: ../../source/reference/notifications.md:993
+#: ../../source/reference/notifications.md:1015
+#: ../../source/reference/notifications.md:1034
+#: ../../source/reference/notifications.md:1052
+#: ../../source/reference/notifications.md:1071
+#: ../../source/reference/notifications.md:1090
+msgid "`count` (**optional** uint64 - *limit the number of notifications you will receive , set to 0 to disable*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:24
+#: ../../source/reference/notifications.md:42
+#: ../../source/reference/notifications.md:64
+#: ../../source/reference/notifications.md:92
+#: ../../source/reference/notifications.md:111
+#: ../../source/reference/notifications.md:133
+#: ../../source/reference/notifications.md:155
+#: ../../source/reference/notifications.md:183
+#: ../../source/reference/notifications.md:201
+#: ../../source/reference/notifications.md:221
+#: ../../source/reference/notifications.md:241
+#: ../../source/reference/notifications.md:264
+#: ../../source/reference/notifications.md:293
+#: ../../source/reference/notifications.md:338
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-messagefilter` - *you will only receive notifications about messages that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:27
+msgid "**Notification *(Stream)***: *MessageReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:28
+#: ../../source/reference/notifications.md:46
+#: ../../source/reference/notifications.md:68
+#: ../../source/reference/notifications.md:96
+#: ../../source/reference/notifications.md:115
+#: ../../source/reference/notifications.md:137
+#: ../../source/reference/notifications.md:159
+#: ../../source/reference/notifications.md:187
+#: ../../source/reference/notifications.md:205
+#: ../../source/reference/notifications.md:225
+#: ../../source/reference/notifications.md:245
+#: ../../source/reference/notifications.md:268
+#: ../../source/reference/notifications.md:298
+#: ../../source/reference/notifications.md:319
+#: ../../source/reference/notifications.md:343
+#, python-brace-format
+msgid "`message` ({ref}`message-message`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:30
+#: ../../source/reference/notifications.md:48
+#: ../../source/reference/notifications.md:70
+#: ../../source/reference/notifications.md:117
+#: ../../source/reference/notifications.md:139
+#: ../../source/reference/notifications.md:161
+#: ../../source/reference/notifications.md:207
+#: ../../source/reference/notifications.md:227
+#: ../../source/reference/notifications.md:248
+#: ../../source/reference/notifications.md:270
+#: ../../source/reference/notifications.md:323
+#: ../../source/reference/notifications.md:346
+#: ../../source/reference/notifications.md:375
+#: ../../source/reference/notifications.md:396
+#: ../../source/reference/notifications.md:428
+#: ../../source/reference/notifications.md:450
+#: ../../source/reference/notifications.md:474
+#: ../../source/reference/notifications.md:498
+#: ../../source/reference/notifications.md:526
+#: ../../source/reference/notifications.md:549
+#: ../../source/reference/notifications.md:574
+#: ../../source/reference/notifications.md:594
+#: ../../source/reference/notifications.md:626
+#: ../../source/reference/notifications.md:651
+#: ../../source/reference/notifications.md:677
+#: ../../source/reference/notifications.md:701
+#: ../../source/reference/notifications.md:727
+#: ../../source/reference/notifications.md:752
+#: ../../source/reference/notifications.md:777
+#: ../../source/reference/notifications.md:802
+#: ../../source/reference/notifications.md:828
+#: ../../source/reference/notifications.md:852
+#: ../../source/reference/notifications.md:877
+#: ../../source/reference/notifications.md:906
+#: ../../source/reference/notifications.md:925
+#: ../../source/reference/notifications.md:948
+#: ../../source/reference/notifications.md:970
+#: ../../source/reference/notifications.md:1003
+#: ../../source/reference/notifications.md:1022
+#: ../../source/reference/notifications.md:1041
+#: ../../source/reference/notifications.md:1059
+#: ../../source/reference/notifications.md:1078
+#: ../../source/reference/notifications.md:1096
+msgid "**Error Codes**:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:31
+#: ../../source/reference/notifications.md:49
+#: ../../source/reference/notifications.md:72
+#: ../../source/reference/notifications.md:120
+#: ../../source/reference/notifications.md:142
+#: ../../source/reference/notifications.md:164
+#: ../../source/reference/notifications.md:208
+#: ../../source/reference/notifications.md:228
+#: ../../source/reference/notifications.md:251
+#: ../../source/reference/notifications.md:273
+#: ../../source/reference/notifications.md:325
+#: ../../source/reference/notifications.md:348
+#: ../../source/reference/notifications.md:376
+#: ../../source/reference/notifications.md:397
+#: ../../source/reference/notifications.md:452
+#: ../../source/reference/notifications.md:476
+#: ../../source/reference/notifications.md:500
+#: ../../source/reference/notifications.md:527
+#: ../../source/reference/notifications.md:551
+#: ../../source/reference/notifications.md:576
+#: ../../source/reference/notifications.md:596
+#: ../../source/reference/notifications.md:627
+#: ../../source/reference/notifications.md:653
+#: ../../source/reference/notifications.md:679
+#: ../../source/reference/notifications.md:703
+#: ../../source/reference/notifications.md:729
+#: ../../source/reference/notifications.md:754
+#: ../../source/reference/notifications.md:779
+#: ../../source/reference/notifications.md:804
+#: ../../source/reference/notifications.md:830
+#: ../../source/reference/notifications.md:854
+#: ../../source/reference/notifications.md:879
+#: ../../source/reference/notifications.md:926
+#: ../../source/reference/notifications.md:950
+#: ../../source/reference/notifications.md:972
+#: ../../source/reference/notifications.md:1004
+#: ../../source/reference/notifications.md:1023
+#: ../../source/reference/notifications.md:1042
+#: ../../source/reference/notifications.md:1060
+#: ../../source/reference/notifications.md:1079
+#: ../../source/reference/notifications.md:1097
+msgid "`UNAUTHENTICATED`: client key is invalid."
+msgstr ""
+
+#: ../../source/reference/notifications.md:35
+msgid "MessageSent"
+msgstr ""
+
+#: ../../source/reference/notifications.md:37
+msgid "Receive a notification each time an you sent a new message."
+msgstr ""
+
+#: ../../source/reference/notifications.md:40
+msgid "**Subscription**: *SubscribeToMessageSentNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:45
+msgid "**Notification *(Stream)***: *MessageSentNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:53
+msgid "MessageDeleted"
+msgstr ""
+
+#: ../../source/reference/notifications.md:55
+msgid "Receive a notification each time a message has been deleted.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:57
+msgid "you deleted a message locally"
+msgstr ""
+
+#: ../../source/reference/notifications.md:58
+msgid "someone else deleted it's own message for everyone in the discussion"
+msgstr ""
+
+#: ../../source/reference/notifications.md:61
+msgid "**Subscription**: *SubscribeToMessageDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:63
+#: ../../source/reference/notifications.md:91
+#: ../../source/reference/notifications.md:110
+#: ../../source/reference/notifications.md:132
+#: ../../source/reference/notifications.md:154
+#: ../../source/reference/notifications.md:240
+#: ../../source/reference/notifications.md:263
+#: ../../source/reference/notifications.md:292
+#: ../../source/reference/notifications.md:312
+#: ../../source/reference/notifications.md:337
+#, python-brace-format
+msgid "`message_ids` (**repeated** {ref}`message-messageid` - *you will only receive notifications about messages specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:67
+msgid "**Notification *(Stream)***: *MessageDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:71
+#: ../../source/reference/notifications.md:119
+#: ../../source/reference/notifications.md:141
+#: ../../source/reference/notifications.md:163
+#: ../../source/reference/notifications.md:249
+#: ../../source/reference/notifications.md:271
+#: ../../source/reference/notifications.md:324
+#: ../../source/reference/notifications.md:347
+msgid "`NOT_FOUND`: at least one of the _message_ids_ does not exists."
+msgstr ""
+
+#: ../../source/reference/notifications.md:76
+msgid "MessageBodyUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:78
+msgid "datatypes.v1.Message updates"
+msgstr ""
+
+#: ../../source/reference/notifications.md:81
+msgid "**Subscription**: *SubscribeToMessageBodyUpdatedNotification* MessageBodyUpdated Receive a notification each time a message text body have been updated. Only the message sender can edit its own messages."
+msgstr ""
+
+#: ../../source/reference/notifications.md:86
+#: ../../source/reference/notifications.md:287
+msgid "**Error codes**: `NOT_FOUND`: at least one of the _message_ids_ does not exists. `UNAUTHENTICATED`: client key is invalid."
+msgstr ""
+
+#: ../../source/reference/notifications.md:95
+msgid "**Notification *(Stream)***: *MessageBodyUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:97
+msgid "`previous_body` (string)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:102
+msgid "MessageUploaded"
+msgstr ""
+
+#: ../../source/reference/notifications.md:104
+msgid "Receive a notification each time an outbound message have been uploaded on server.   Note: You cannot guarantee this notification will arrive when working with ephemeral message"
+msgstr ""
+
+#: ../../source/reference/notifications.md:108
+msgid "**Subscription**: *SubscribeToMessageUploadedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:114
+msgid "**Notification *(Stream)***: *MessageUploadedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:118
+#: ../../source/reference/notifications.md:140
+#: ../../source/reference/notifications.md:162
+msgid "`INVALID_ARGUMENT`: at least one of _message_ids_ is not an outbound message."
+msgstr ""
+
+#: ../../source/reference/notifications.md:124
+msgid "MessageDelivered"
+msgstr ""
+
+#: ../../source/reference/notifications.md:126
+msgid "Receive a notification each time an outbound message have been delivered on at least one recipient's device.   Note: You cannot guarantee this notification will arrive when working with ephemeral message"
+msgstr ""
+
+#: ../../source/reference/notifications.md:130
+msgid "**Subscription**: *SubscribeToMessageDeliveredNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:136
+msgid "**Notification *(Stream)***: *MessageDeliveredNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:146
+msgid "MessageRead"
+msgstr ""
+
+#: ../../source/reference/notifications.md:148
+msgid "Receive a notification each time an outbound message have been read by at least one recipient.   Note: You cannot guarantee this notification will arrive when working with ephemeral message"
+msgstr ""
+
+#: ../../source/reference/notifications.md:152
+msgid "**Subscription**: *SubscribeToMessageReadNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:158
+msgid "**Notification *(Stream)***: *MessageReadNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:168
+msgid "MessageLocationReceived"
+msgstr ""
+
+#: ../../source/reference/notifications.md:170
+msgid "location message"
+msgstr ""
+
+#: ../../source/reference/notifications.md:173
+msgid "**Subscription**: *SubscribeToMessageLocationReceivedNotification* MessageLocationReceived Receive a notification each time you received a location message. Location messages are different from location sharing messages as they contains one static position. A received location message also triggers the MessageReceived notification."
+msgstr ""
+
+#: ../../source/reference/notifications.md:179
+msgid "**Error codes**: `UNAUTHENTICATED`: client key is invalid."
+msgstr ""
+
+#: ../../source/reference/notifications.md:186
+msgid "**Notification *(Stream)***: *MessageLocationReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:192
+msgid "MessageLocationSent"
+msgstr ""
+
+#: ../../source/reference/notifications.md:194
+msgid "Receive a notification each time you sent a location message.   Location messages are different from location sharing messages as they contains one static position.   A sent location message also triggers the MessageSent notification."
+msgstr ""
+
+#: ../../source/reference/notifications.md:199
+msgid "**Subscription**: *SubscribeToMessageLocationSentNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:204
+msgid "**Notification *(Stream)***: *MessageLocationSentNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:212
+msgid "MessageLocationSharingStart"
+msgstr ""
+
+#: ../../source/reference/notifications.md:214
+msgid "Receive a notification each time you sent or you received a new location sharing message.   Location sharing messages are supposed to be updated for a given while.   A new location sharing message also triggers the MessageReceived or MessageSent notification."
+msgstr ""
+
+#: ../../source/reference/notifications.md:219
+msgid "**Subscription**: *SubscribeToMessageLocationSharingStartNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:224
+msgid "**Notification *(Stream)***: *MessageLocationSharingStartNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:232
+msgid "MessageLocationSharingUpdate"
+msgstr ""
+
+#: ../../source/reference/notifications.md:234
+msgid "Receive a notification each time a location sharing message have been updated with a new location.   This might concern inbound or outbound messages."
+msgstr ""
+
+#: ../../source/reference/notifications.md:238
+msgid "**Subscription**: *SubscribeToMessageLocationSharingUpdateNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:244
+msgid "**Notification *(Stream)***: *MessageLocationSharingUpdateNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:246
+#, python-brace-format
+msgid "`previous_location` ({ref}`message-messagelocation`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:250
+#: ../../source/reference/notifications.md:272
+msgid "`INVALID_ARGUMENT`: one of _message_ids_ is not a live location sharing."
+msgstr ""
+
+#: ../../source/reference/notifications.md:255
+msgid "MessageLocationSharingEnd"
+msgstr ""
+
+#: ../../source/reference/notifications.md:257
+msgid "Receive a notification each time a location sharing message have been stopped or automatically finished.   This might concern inbound or outbound messages."
+msgstr ""
+
+#: ../../source/reference/notifications.md:261
+msgid "**Subscription**: *SubscribeToMessageLocationSharingEndNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:267
+msgid "**Notification *(Stream)***: *MessageLocationSharingEndNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:277
+msgid "MessageReactionAdded"
+msgstr ""
+
+#: ../../source/reference/notifications.md:279
+msgid "datatypes.v1.Message reactions"
+msgstr ""
+
+#: ../../source/reference/notifications.md:282
+msgid "**Subscription**: *SubscribeToMessageReactionAddedNotification* MessageReactionAdded Receive a notification each time a reaction was added to a message. It can concern your reactions or any contact reactions."
+msgstr ""
+
+#: ../../source/reference/notifications.md:294
+#: ../../source/reference/notifications.md:314
+#: ../../source/reference/notifications.md:339
+#, python-brace-format
+msgid "`reaction_filter` (**optional** {ref}`message-reactionfilter` - *you will only receive notifications about reactions that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:297
+msgid "**Notification *(Stream)***: *MessageReactionAddedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:299
+#: ../../source/reference/notifications.md:320
+#: ../../source/reference/notifications.md:344
+#, python-brace-format
+msgid "`reaction` ({ref}`message-messagereaction`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:304
+msgid "MessageReactionUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:306
+msgid "Receive a notification each time a reaction on a message was updated.   It can concern your reactions or any contact reactions."
+msgstr ""
+
+#: ../../source/reference/notifications.md:310
+msgid "**Subscription**: *SubscribeToMessageReactionUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:313
+#, python-brace-format
+msgid "`message_filter` (**optional** {ref}`message-messagefilter` - *you will only receive notifications about messages that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:315
+#, python-brace-format
+msgid "`previous_reaction_filter` (**optional** {ref}`message-reactionfilter` - *you will only receive notifications about reactions that match this filter, before update.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:318
+msgid "**Notification *(Stream)***: *MessageReactionUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:321
+#, python-brace-format
+msgid "`previous_reaction` ({ref}`message-messagereaction`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:329
+msgid "MessageReactionRemoved"
+msgstr ""
+
+#: ../../source/reference/notifications.md:331
+msgid "Receive a notification each time a reaction on a message was removed.   It can concern your reactions or any contact reactions."
+msgstr ""
+
+#: ../../source/reference/notifications.md:335
+msgid "**Subscription**: *SubscribeToMessageReactionRemovedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:342
+msgid "**Notification *(Stream)***: *MessageReactionRemovedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:354
+msgid "Attachment Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:358
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-attachment`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:361
+msgid "AttachmentReceived"
+msgstr ""
+
+#: ../../source/reference/notifications.md:363
+msgid "Receive a notification every time you receive an attachment in a discussion (one-to-one or group discussion).   When you receive a message with multiple attachments, you will receive one notification for each attachment."
+msgstr ""
+
+#: ../../source/reference/notifications.md:367
+msgid "**Subscription**: *SubscribeToAttachmentReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:369
+#: ../../source/reference/notifications.md:388
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-attachmentfilter` - *you will only receive notifications about attachments that match all the filter params.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:372
+msgid "**Notification *(Stream)***: *AttachmentReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:373
+#: ../../source/reference/notifications.md:394
+#, python-brace-format
+msgid "`attachment` ({ref}`message-attachment`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:380
+msgid "AttachmentUploaded"
+msgstr ""
+
+#: ../../source/reference/notifications.md:382
+msgid "Receive a notification every time an attachment you sent has been marked as uploaded.   A message with attachments is delivered to recipients only when all attachments have been uploaded."
+msgstr ""
+
+#: ../../source/reference/notifications.md:386
+msgid "**Subscription**: *SubscribeToAttachmentUploadedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:389
+#, python-brace-format
+msgid "`message_ids` (**repeated** {ref}`message-messageid` - *you will only receive notifications about attachments related to messages specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:390
+#, python-brace-format
+msgid "`attachment_ids` (**repeated** {ref}`message-attachmentid` - *you will only receive notifications about attachments specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:393
+msgid "**Notification *(Stream)***: *AttachmentUploadedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:398
+msgid "`INVALID_ARGUMENT`: cannot subscribe for non-outbound messages."
+msgstr ""
+
+#: ../../source/reference/notifications.md:399
+msgid "`NOT_FOUND`: at least one of the _message_ids_ is incorrect."
+msgstr ""
+
+#: ../../source/reference/notifications.md:405
+msgid "Discussion Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:409
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-discussion`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:412
+msgid "DiscussionNew"
+msgstr ""
+
+#: ../../source/reference/notifications.md:414
+msgid "Receive a notification every time a discussion is created or re-used.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:416
+msgid "a new contact was added"
+msgstr ""
+
+#: ../../source/reference/notifications.md:417
+msgid "you created or joined a group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:420
+msgid "**Subscription**: *SubscribeToDiscussionNewNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:422
+#: ../../source/reference/notifications.md:443
+#: ../../source/reference/notifications.md:466
+#: ../../source/reference/notifications.md:489
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-discussionfilter` - *you will only receive notifications about discussions that match all the filter params.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:425
+msgid "**Notification *(Stream)***: *DiscussionNewNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:426
+#: ../../source/reference/notifications.md:448
+#: ../../source/reference/notifications.md:471
+#: ../../source/reference/notifications.md:494
+#, python-brace-format
+msgid "`discussion` ({ref}`message-discussion`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:429
+#: ../../source/reference/notifications.md:907
+msgid "`UNAUTHENTICATED`: Client key is invalid."
+msgstr ""
+
+#: ../../source/reference/notifications.md:433
+msgid "DiscussionLocked"
+msgstr ""
+
+#: ../../source/reference/notifications.md:435
+msgid "Receive a notification each time a discussion is locked.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:437
+msgid "the contact associated to this discussion was removed from your contact book"
+msgstr ""
+
+#: ../../source/reference/notifications.md:438
+msgid "you left the associated group or the group was disbanded"
+msgstr ""
+
+#: ../../source/reference/notifications.md:441
+msgid "**Subscription**: *SubscribeToDiscussionLockedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:444
+#: ../../source/reference/notifications.md:467
+#: ../../source/reference/notifications.md:490
+msgid "`discussion_ids` (**repeated** uint64 - *you will only receive notifications about discussions specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:447
+msgid "**Notification *(Stream)***: *DiscussionLockedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:451
+#: ../../source/reference/notifications.md:475
+#: ../../source/reference/notifications.md:499
+msgid "`NOT_FOUND`: at least one of the _discussion_ids_ was not found."
+msgstr ""
+
+#: ../../source/reference/notifications.md:456
+msgid "DiscussionTitleUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:458
+msgid "Receive a notification each time a discussion title changed.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:460
+msgid "the contact associated to this discussion changed it's details"
+msgstr ""
+
+#: ../../source/reference/notifications.md:461
+msgid "the associated group was renamed"
+msgstr ""
+
+#: ../../source/reference/notifications.md:464
+msgid "**Subscription**: *SubscribeToDiscussionTitleUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:470
+msgid "**Notification *(Stream)***: *DiscussionTitleUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:472
+msgid "`previous_title` (string)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:480
+msgid "DiscussionSettingsUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:482
+msgid "Receive a notification each time the discussion shared settings have been updated.   Any group group member with the _change_settings_ permission can update shared settings.   By default admin members have this permission."
+msgstr ""
+
+#: ../../source/reference/notifications.md:487
+msgid "**Subscription**: *SubscribeToDiscussionSettingsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:493
+msgid "**Notification *(Stream)***: *DiscussionSettingsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:495
+#, python-brace-format
+msgid "`new_settings` ({ref}`message-discussionsettings` - *the new current discussion settings*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:496
+#, python-brace-format
+msgid "`previous_settings` ({ref}`message-discussionsettings` - *settings before this update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:506
+msgid "Contact Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:510
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-contact`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:513
+msgid "ContactNew"
+msgstr ""
+
+#: ../../source/reference/notifications.md:515
+msgid "Receive a notification each time a contact is added to your contact book."
+msgstr ""
+
+#: ../../source/reference/notifications.md:518
+msgid "**Subscription**: *SubscribeToContactNewNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:520
+#: ../../source/reference/notifications.md:542
+#: ../../source/reference/notifications.md:566
+#: ../../source/reference/notifications.md:587
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-contactfilter` - *you will only receive notifications about contacts that match all the filter params.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:523
+msgid "**Notification *(Stream)***: *ContactNewNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:524
+#: ../../source/reference/notifications.md:547
+#: ../../source/reference/notifications.md:571
+#: ../../source/reference/notifications.md:592
+#, python-brace-format
+msgid "`contact` ({ref}`message-contact`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:531
+msgid "ContactDeleted"
+msgstr ""
+
+#: ../../source/reference/notifications.md:533
+msgid "Receive a notification each time a contact is removed from your contact book.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:535
+msgid "you deleted the contact"
+msgstr ""
+
+#: ../../source/reference/notifications.md:536
+msgid "he contact deleted you"
+msgstr ""
+
+#: ../../source/reference/notifications.md:537
+msgid "the contact deleted his identity and chose to notify his contacts"
+msgstr ""
+
+#: ../../source/reference/notifications.md:540
+msgid "**Subscription**: *SubscribeToContactDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:543
+#: ../../source/reference/notifications.md:567
+#: ../../source/reference/notifications.md:588
+msgid "`contact_ids` (**repeated** uint64 - *you will only receive notifications about contacts specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:546
+msgid "**Notification *(Stream)***: *ContactDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:550
+#: ../../source/reference/notifications.md:575
+#: ../../source/reference/notifications.md:595
+msgid "`NOT_FOUND`: at least one of the _contact_ids_ was not found."
+msgstr ""
+
+#: ../../source/reference/notifications.md:555
+msgid "ContactDetailsUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:557
+msgid "Receive a notification each time a contact update it's identity details.   This implies that this contact display name changed.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:560
+msgid "the contact updated his details"
+msgstr ""
+
+#: ../../source/reference/notifications.md:561
+msgid "for _keycloak_managed_ contacts the directory updated it's details"
+msgstr ""
+
+#: ../../source/reference/notifications.md:564
+msgid "**Subscription**: *SubscribeToContactDetailsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:570
+msgid "**Notification *(Stream)***: *ContactDetailsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:572
+#, python-brace-format
+msgid "`previous_details` ({ref}`message-identitydetails`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:580
+msgid "ContactPhotoUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:582
+msgid "Receive a notification each time a contact profile picture has been updated."
+msgstr ""
+
+#: ../../source/reference/notifications.md:585
+msgid "**Subscription**: *SubscribeToContactPhotoUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:591
+msgid "**Notification *(Stream)***: *ContactPhotoUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:602
+msgid "Group Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:606
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-group`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:609
+msgid "GroupNew"
+msgstr ""
+
+#: ../../source/reference/notifications.md:611
+msgid "Receive a notification each time you join a new group.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:613
+msgid "you created a group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:614
+msgid "you accepted a group invitation"
+msgstr ""
+
+#: ../../source/reference/notifications.md:615
+msgid "for keycloak managed group: the directory created a group or added you to an existing group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:618
+msgid "**Subscription**: *SubscribeToGroupNewNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:620
+#: ../../source/reference/notifications.md:645
+#: ../../source/reference/notifications.md:669
+#: ../../source/reference/notifications.md:695
+#: ../../source/reference/notifications.md:719
+#: ../../source/reference/notifications.md:744
+#: ../../source/reference/notifications.md:769
+#: ../../source/reference/notifications.md:794
+#: ../../source/reference/notifications.md:820
+#: ../../source/reference/notifications.md:842
+#: ../../source/reference/notifications.md:866
+#, python-brace-format
+msgid "`group_filter` (**optional** {ref}`message-groupfilter` - *you will only receive notifications about groups that match all the filter params.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:623
+msgid "**Notification *(Stream)***: *GroupNewNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:624
+#: ../../source/reference/notifications.md:649
+#: ../../source/reference/notifications.md:674
+#: ../../source/reference/notifications.md:699
+#: ../../source/reference/notifications.md:724
+#: ../../source/reference/notifications.md:749
+#: ../../source/reference/notifications.md:774
+#: ../../source/reference/notifications.md:799
+#: ../../source/reference/notifications.md:825
+#: ../../source/reference/notifications.md:848
+#: ../../source/reference/notifications.md:873
+#, python-brace-format
+msgid "`group` ({ref}`message-group`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:631
+msgid "GroupDeleted"
+msgstr ""
+
+#: ../../source/reference/notifications.md:633
+msgid "Receive a notification each time you leave a group.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:635
+msgid "you chose to leave a group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:636
+msgid "you disbanded a group (you must be admin of this group)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:637
+msgid "a group admin disbanded the group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:638
+msgid "a group admin removed you from the group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:639
+msgid "for keycloak managed group: the keycloak directory removed you from the group or disbanded the group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:642
+msgid "**Subscription**: *SubscribeToGroupDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:644
+#: ../../source/reference/notifications.md:668
+#: ../../source/reference/notifications.md:694
+#: ../../source/reference/notifications.md:718
+#: ../../source/reference/notifications.md:743
+#: ../../source/reference/notifications.md:768
+#: ../../source/reference/notifications.md:793
+#: ../../source/reference/notifications.md:819
+#: ../../source/reference/notifications.md:841
+#: ../../source/reference/notifications.md:865
+msgid "`group_ids` (**repeated** uint64 - *you will only receive notifications about groups specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:648
+msgid "**Notification *(Stream)***: *GroupDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:652
+msgid "`NOT_FOUND`: at least one of the _group_ids_ does not exist."
+msgstr ""
+
+#: ../../source/reference/notifications.md:657
+msgid "GroupNameUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:659
+msgid "Receive a notification each time a group name have been updated.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:661
+msgid "you updated the group name (you must be admin of this group)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:662
+msgid "an admin updated the group name"
+msgstr ""
+
+#: ../../source/reference/notifications.md:663
+msgid "for keycloak managed groups: the group name were changed by the keycloak directory"
+msgstr ""
+
+#: ../../source/reference/notifications.md:666
+msgid "**Subscription**: *SubscribeToGroupNameUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:670
+msgid "`previous_name_search` (**optional** string - *regexp filter on *group.name* field, before update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:673
+msgid "**Notification *(Stream)***: *GroupNameUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:675
+msgid "`previous_name` (string - *the group name before update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:678
+#: ../../source/reference/notifications.md:702
+#: ../../source/reference/notifications.md:728
+#: ../../source/reference/notifications.md:753
+#: ../../source/reference/notifications.md:778
+#: ../../source/reference/notifications.md:803
+#: ../../source/reference/notifications.md:829
+#: ../../source/reference/notifications.md:853
+#: ../../source/reference/notifications.md:878
+msgid "`NOT_FOUND`: at least one of the _group_ids_ does not exists."
+msgstr ""
+
+#: ../../source/reference/notifications.md:683
+msgid "GroupPhotoUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:685
+msgid "Receive a notification when a group picture have been updated.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:687
+msgid "you updated the group picture (you must be admin of this group)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:688
+msgid "an admin updated the group picture"
+msgstr ""
+
+#: ../../source/reference/notifications.md:689
+msgid "for keycloak managed groups: the group picture were changed by the keycloak directory"
+msgstr ""
+
+#: ../../source/reference/notifications.md:692
+msgid "**Subscription**: *SubscribeToGroupPhotoUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:698
+msgid "**Notification *(Stream)***: *GroupPhotoUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:707
+msgid "GroupDescriptionUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:709
+msgid "Receive a notification when a group description have been updated.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:711
+msgid "you updated the group description (you must be admin of this group)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:712
+msgid "an admin updated the group description"
+msgstr ""
+
+#: ../../source/reference/notifications.md:713
+msgid "for keycloak managed groups: the group description were changed by the keycloak directory"
+msgstr ""
+
+#: ../../source/reference/notifications.md:716
+msgid "**Subscription**: *SubscribeToGroupDescriptionUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:720
+msgid "`previous_description_search` (**optional** string - *regexp filter on previous *group.description* field, before update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:723
+msgid "**Notification *(Stream)***: *GroupDescriptionUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:725
+msgid "`previous_description` (string)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:733
+msgid "GroupPendingMemberAdded"
+msgstr ""
+
+#: ../../source/reference/notifications.md:735
+msgid "Receive a notification when a pending member was added from a group.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:737
+msgid "an admin added a new member to the group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:738
+msgid "you joined a group and all group members are all considered as pending until each one acknowledge you joined this group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:741
+msgid "**Subscription**: *SubscribeToGroupPendingMemberAddedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:745
+#: ../../source/reference/notifications.md:770
+#, python-brace-format
+msgid "`pending_member_filter` (**optional** {ref}`message-pendinggroupmemberfilter` - *you will only receive notifications about groups with a pending member that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:748
+msgid "**Notification *(Stream)***: *GroupPendingMemberAddedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:750
+#: ../../source/reference/notifications.md:775
+#, python-brace-format
+msgid "`pending_member` ({ref}`message-pendinggroupmember`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:758
+msgid "GroupPendingMemberRemoved"
+msgstr ""
+
+#: ../../source/reference/notifications.md:760
+msgid "Receive a notification when a pending member was removed from a group.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:762
+msgid "a pending group member accepted or declined the group invitation"
+msgstr ""
+
+#: ../../source/reference/notifications.md:763
+msgid "you joined a group and a member acknowledged you joined this group"
+msgstr ""
+
+#: ../../source/reference/notifications.md:766
+msgid "**Subscription**: *SubscribeToGroupPendingMemberRemovedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:773
+msgid "**Notification *(Stream)***: *GroupPendingMemberRemovedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:783
+msgid "GroupMemberJoined"
+msgstr ""
+
+#: ../../source/reference/notifications.md:785
+msgid "Receive a notification when a new member joined a group.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:787
+msgid "a pending group member accepted the group invitation"
+msgstr ""
+
+#: ../../source/reference/notifications.md:788
+msgid "for keycloak managed groups: directory added a new group member / a user registered on directory and was automatically added to existing groups"
+msgstr ""
+
+#: ../../source/reference/notifications.md:791
+msgid "**Subscription**: *SubscribeToGroupMemberJoinedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:795
+#: ../../source/reference/notifications.md:821
+#, python-brace-format
+msgid "`member_filter` (**optional** {ref}`message-groupmemberfilter` - *you will only receive notifications about groups with a member that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:798
+msgid "**Notification *(Stream)***: *GroupMemberJoinedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:800
+#: ../../source/reference/notifications.md:826
+#, python-brace-format
+msgid "`member` ({ref}`message-groupmember`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:808
+msgid "GroupMemberLeft"
+msgstr ""
+
+#: ../../source/reference/notifications.md:810
+msgid "Receive a notification when a group member was removed from a group.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:812
+msgid "you removed a group member (you must be a group admin)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:813
+msgid "a group member was removed by an admin"
+msgstr ""
+
+#: ../../source/reference/notifications.md:814
+msgid "for keycloak managed groups: directory removed a group member / a user unregistered from directory and was automatically removed from groups"
+msgstr ""
+
+#: ../../source/reference/notifications.md:817
+msgid "**Subscription**: *SubscribeToGroupMemberLeftNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:824
+msgid "**Notification *(Stream)***: *GroupMemberLeftNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:834
+msgid "GroupOwnPermissionsUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:836
+msgid "Receive a notification when your permissions have been updated in a group."
+msgstr ""
+
+#: ../../source/reference/notifications.md:839
+msgid "**Subscription**: *SubscribeToGroupOwnPermissionsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:843
+#, python-brace-format
+msgid "`permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications about groups where your permissions match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:844
+#, python-brace-format
+msgid "`previous_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications about groups where your permissions match this filter, before update.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:847
+msgid "**Notification *(Stream)***: *GroupOwnPermissionsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:849
+#, python-brace-format
+msgid "`permissions` ({ref}`message-groupmemberpermissions` - *your new permissions*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:850
+#, python-brace-format
+msgid "`previous_permissions` ({ref}`message-groupmemberpermissions` - *your permissions before update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:858
+msgid "GroupMemberPermissionsUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:860
+msgid "Receive a notification when a group member permissions have been updated."
+msgstr ""
+
+#: ../../source/reference/notifications.md:863
+msgid "**Subscription**: *SubscribeToGroupMemberPermissionsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:867
+#, python-brace-format
+msgid "`member_filter` (**optional** {ref}`message-groupmemberfilter` - *you will only receive notifications about group members that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:868
+#, python-brace-format
+msgid "`previous_permission_filter` (**optional** {ref}`message-groupmemberfilter` - *you will only receive notifications about group members that match this filter. TODO update to GroupPermissionsFilter !*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:872
+msgid "**Notification *(Stream)***: *GroupMemberPermissionsUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:874
+#, python-brace-format
+msgid "`member` ({ref}`message-groupmember` - *the group member permissions have been updated for*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:875
+#, python-brace-format
+msgid "`previous_permissions` ({ref}`message-groupmemberpermissions` - *the member permissions before update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:885
+msgid "Invitation Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:889
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-invitation`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:892
+msgid "InvitationReceived"
+msgstr ""
+
+#: ../../source/reference/notifications.md:894
+msgid "Receive a notification each time you receive a new invitation.   A new invitation marks the first step of an invitation protocol."
+msgstr ""
+
+#: ../../source/reference/notifications.md:898
+msgid "**Subscription**: *SubscribeToInvitationReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:900
+#: ../../source/reference/notifications.md:919
+#: ../../source/reference/notifications.md:941
+#: ../../source/reference/notifications.md:962
+#, python-brace-format
+msgid "`filter` (**optional** {ref}`message-invitationfilter` - *you will only receive notifications about invitations that match this filter.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:903
+msgid "**Notification *(Stream)***: *InvitationReceivedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:904
+#: ../../source/reference/notifications.md:923
+#: ../../source/reference/notifications.md:946
+#: ../../source/reference/notifications.md:967
+#, python-brace-format
+msgid "`invitation` ({ref}`message-invitation`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:911
+msgid "InvitationSent"
+msgstr ""
+
+#: ../../source/reference/notifications.md:913
+msgid "Receive a notification each time you send a new invitation.   A new invitation is the first step of an invitation protocol."
+msgstr ""
+
+#: ../../source/reference/notifications.md:917
+msgid "**Subscription**: *SubscribeToInvitationSentNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:922
+msgid "**Notification *(Stream)***: *InvitationSentNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:930
+msgid "InvitationDeleted"
+msgstr ""
+
+#: ../../source/reference/notifications.md:932
+msgid "Receive a notification each time an invitation is deleted.   This can happen under different circumstances:"
+msgstr ""
+
+#: ../../source/reference/notifications.md:934
+msgid "an invitation protocol ended and invitation was automatically removed"
+msgstr ""
+
+#: ../../source/reference/notifications.md:935
+msgid "you aborted a protocol"
+msgstr ""
+
+#: ../../source/reference/notifications.md:936
+msgid "you deleted an invitation"
+msgstr ""
+
+#: ../../source/reference/notifications.md:939
+msgid "**Subscription**: *SubscribeToInvitationDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:942
+#: ../../source/reference/notifications.md:963
+msgid "`invitation_ids` (**repeated** uint64 - *you will only receive notifications about invitations specified in this list.*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:945
+msgid "**Notification *(Stream)***: *InvitationDeletedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:949
+#: ../../source/reference/notifications.md:971
+msgid "`NOT_FOUND`: at least one of the _invitation_ids_ does not exists."
+msgstr ""
+
+#: ../../source/reference/notifications.md:954
+msgid "InvitationUpdated"
+msgstr ""
+
+#: ../../source/reference/notifications.md:956
+msgid "Receive a notification each time an invitation status have been updated.   Invitation status are updated when a new protocol step is passed."
+msgstr ""
+
+#: ../../source/reference/notifications.md:960
+msgid "**Subscription**: *SubscribeToInvitationUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:966
+msgid "**Notification *(Stream)***: *InvitationUpdatedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:968
+#, python-brace-format
+msgid "`previous_invitation_status` ({ref}`enum-invitation.status` - *_invitation.status_ before update*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:978
+msgid "Call Notification Service"
+msgstr ""
+
+#: ../../source/reference/notifications.md:982
+#, python-brace-format
+msgid "**Associated Datatype:** {ref}`file-call`"
+msgstr ""
+
+#: ../../source/reference/notifications.md:985
+msgid "CallIncomingCall"
+msgstr ""
+
+#: ../../source/reference/notifications.md:987
+msgid "Receive a notification when someone tries to call you.   Daemon will automatically answer with a busy message to notify that you won't be able to answer.   Call details are available in notification content."
+msgstr ""
+
+#: ../../source/reference/notifications.md:992
+msgid "**Subscription**: *SubscribeToCallIncomingCallNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:996
+msgid "**Notification *(Stream)***: *CallIncomingCallNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:997
+#: ../../source/reference/notifications.md:1019
+#: ../../source/reference/notifications.md:1038
+#: ../../source/reference/notifications.md:1056
+#: ../../source/reference/notifications.md:1075
+#: ../../source/reference/notifications.md:1094
+msgid "`call_identifier` (string)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:998
+msgid "`discussion_id` (uint64 - *set to group discussion if calling a group, else to contact's discussion, even if there are multiple participants*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:999
+#, python-brace-format
+msgid "`participant_id` ({ref}`message-callparticipantid` - *obviously contains a contact id*)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1000
+msgid "`caller_display_name` (string)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1001
+msgid "`participant_count` (uint32)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1008
+msgid "CallRinging"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1010
+msgid "When you initiated a call, receive a notification when a participant phone starts to ring.   Under some network circumstances a participant phone might never start ringing."
+msgstr ""
+
+#: ../../source/reference/notifications.md:1014
+msgid "**Subscription**: *SubscribeToCallRingingNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1018
+msgid "**Notification *(Stream)***: *CallRingingNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1020
+#: ../../source/reference/notifications.md:1039
+#: ../../source/reference/notifications.md:1057
+#: ../../source/reference/notifications.md:1076
+#, python-brace-format
+msgid "`participant_id` ({ref}`message-callparticipantid`)"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1027
+msgid "CallAccepted"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1029
+msgid "When you initiated a call, receive a notification if a participant accepted the call.   Daemon will automatically hang up when a participant accept the call because we currently cannot manage the call."
+msgstr ""
+
+#: ../../source/reference/notifications.md:1033
+msgid "**Subscription**: *SubscribeToCallAcceptedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1037
+msgid "**Notification *(Stream)***: *CallAcceptedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1046
+msgid "CallDeclined"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1048
+msgid "When you initiated a call, receive a notification if a participant declined the call."
+msgstr ""
+
+#: ../../source/reference/notifications.md:1051
+msgid "**Subscription**: *SubscribeToCallDeclinedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1055
+msgid "**Notification *(Stream)***: *CallDeclinedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1064
+msgid "CallBusy"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1066
+msgid "(Outbound call)   When you initiated a call, receive a notification if a participant accepted the call."
+msgstr ""
+
+#: ../../source/reference/notifications.md:1070
+msgid "**Subscription**: *SubscribeToCallBusyNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1074
+msgid "**Notification *(Stream)***: *CallBusyNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1083
+msgid "CallEnded"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1085
+msgid ":   For inbound or outbound call, receive a notification when every call participant left a call or declined it."
+msgstr ""
+
+#: ../../source/reference/notifications.md:1089
+msgid "**Subscription**: *SubscribeToCallEndedNotification*"
+msgstr ""
+
+#: ../../source/reference/notifications.md:1093
+msgid "**Notification *(Stream)***: *CallEndedNotification*"
+msgstr ""
+

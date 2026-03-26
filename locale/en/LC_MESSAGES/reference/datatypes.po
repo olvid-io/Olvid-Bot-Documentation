@@ -1,0 +1,2035 @@
+# AUTO-TRANSLATION IGNORE
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-26 22:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../source/reference/datatypes.md:1 ../../source/reference/datatypes.md:3
+msgid "Datatypes"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:3
+msgid "This section describes the core entities used by Olvid daemon and exposed entrypoints."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:10
+#: ../../source/reference/datatypes.md:18
+msgid "Message"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:12
+#: ../../source/reference/datatypes.md:192
+#: ../../source/reference/datatypes.md:276
+#: ../../source/reference/datatypes.md:327
+#: ../../source/reference/datatypes.md:401
+#: ../../source/reference/datatypes.md:657
+#: ../../source/reference/datatypes.md:763
+#: ../../source/reference/datatypes.md:801
+#: ../../source/reference/datatypes.md:891
+#: ../../source/reference/datatypes.md:963
+#: ../../source/reference/datatypes.md:998
+#: ../../source/reference/datatypes.md:1044
+#: ../../source/reference/datatypes.md:1067
+msgid "**Related Endpoints:**"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:13
+#, python-brace-format
+msgid "**Command:** {ref}`service-messagecommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:14
+#, python-brace-format
+msgid "**Notification:** {ref}`service-messagenotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:21
+msgid "An Olvid message posted in a discussion.   Sent messages are Outbound, received messages are Inbound.   Messages must have a body and/or one or more attachments."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:25
+#: ../../source/reference/datatypes.md:46
+#: ../../source/reference/datatypes.md:67
+#: ../../source/reference/datatypes.md:81
+#: ../../source/reference/datatypes.md:96
+#: ../../source/reference/datatypes.md:125
+#: ../../source/reference/datatypes.md:179
+#: ../../source/reference/datatypes.md:206
+#: ../../source/reference/datatypes.md:221
+#: ../../source/reference/datatypes.md:243
+#: ../../source/reference/datatypes.md:288
+#: ../../source/reference/datatypes.md:303
+#: ../../source/reference/datatypes.md:339
+#: ../../source/reference/datatypes.md:357
+#: ../../source/reference/datatypes.md:414
+#: ../../source/reference/datatypes.md:443
+#: ../../source/reference/datatypes.md:466
+#: ../../source/reference/datatypes.md:477
+#: ../../source/reference/datatypes.md:491
+#: ../../source/reference/datatypes.md:506
+#: ../../source/reference/datatypes.md:552
+#: ../../source/reference/datatypes.md:561
+#: ../../source/reference/datatypes.md:593
+#: ../../source/reference/datatypes.md:669
+#: ../../source/reference/datatypes.md:682
+#: ../../source/reference/datatypes.md:691
+#: ../../source/reference/datatypes.md:705
+#: ../../source/reference/datatypes.md:719
+#: ../../source/reference/datatypes.md:775
+#: ../../source/reference/datatypes.md:787
+#: ../../source/reference/datatypes.md:819
+#: ../../source/reference/datatypes.md:855
+#: ../../source/reference/datatypes.md:904
+#: ../../source/reference/datatypes.md:913
+#: ../../source/reference/datatypes.md:924
+#: ../../source/reference/datatypes.md:939
+#: ../../source/reference/datatypes.md:950
+#: ../../source/reference/datatypes.md:975
+#: ../../source/reference/datatypes.md:987
+#: ../../source/reference/datatypes.md:1008
+#: ../../source/reference/datatypes.md:1022
+#: ../../source/reference/datatypes.md:1055
+#: ../../source/reference/datatypes.md:1083
+#: ../../source/reference/datatypes.md:1091
+#: ../../source/reference/datatypes.md:1100
+#: ../../source/reference/datatypes.md:1111
+msgid "**Fields:**"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:26
+#, python-brace-format
+msgid "`id` ({ref}`message-messageid` - *the message unique identifier*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:27
+msgid "`discussion_id` (uint64 - *the discussion the message belongs to*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:28
+msgid "`sender_id` (uint64 - *set to 0 if you sent the message, or to the contact id referencing the sender*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:29
+msgid "`body` (string - *text body*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:30
+msgid "`sort_index` (double - *index used to sort messages in a discussion*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:31
+msgid "`timestamp` (uint64 - *the timestamp on which the message was received*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:32
+msgid "`attachments_count` (uint64 - *number of attachments for this message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:33
+#, python-brace-format
+msgid "`replied_message_id` (**optional** {ref}`message-messageid` - *set if this message is a reply to another message in this discussion*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:34
+#, python-brace-format
+msgid "`message_location` (**optional** {ref}`message-messagelocation` - *set if this message is a location message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:35
+#, python-brace-format
+msgid "`reactions` (**repeated** {ref}`message-messagereaction` - *list of the reactions added on this message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:36
+msgid "`forwarded` (bool - *does this message have been forwarded from another discussion by sender*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:37
+msgid "`edited_body` (bool - *does this message body have been edited*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:41
+msgid "MessageId"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:44
+msgid "A composite id to uniquely identify a message."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:47
+#, python-brace-format
+msgid "`type` ({ref}`enum-messageid.type` - *inbound or outbound message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:48
+#: ../../source/reference/datatypes.md:223
+#: ../../source/reference/datatypes.md:289
+#: ../../source/reference/datatypes.md:340
+#: ../../source/reference/datatypes.md:415
+#: ../../source/reference/datatypes.md:670
+msgid "`id` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:52
+msgid "MessageId.Type"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:54
+#: ../../source/reference/datatypes.md:110
+#: ../../source/reference/datatypes.md:145
+#: ../../source/reference/datatypes.md:155
+#: ../../source/reference/datatypes.md:168
+#: ../../source/reference/datatypes.md:229
+#: ../../source/reference/datatypes.md:259
+#: ../../source/reference/datatypes.md:314
+#: ../../source/reference/datatypes.md:368
+#: ../../source/reference/datatypes.md:378
+#: ../../source/reference/datatypes.md:388
+#: ../../source/reference/datatypes.md:431
+#: ../../source/reference/datatypes.md:452
+#: ../../source/reference/datatypes.md:521
+#: ../../source/reference/datatypes.md:531
+#: ../../source/reference/datatypes.md:541
+#: ../../source/reference/datatypes.md:572
+#: ../../source/reference/datatypes.md:582
+#: ../../source/reference/datatypes.md:604
+#: ../../source/reference/datatypes.md:614
+#: ../../source/reference/datatypes.md:624
+#: ../../source/reference/datatypes.md:634
+#: ../../source/reference/datatypes.md:644
+#: ../../source/reference/datatypes.md:730
+#: ../../source/reference/datatypes.md:740
+#: ../../source/reference/datatypes.md:750
+#: ../../source/reference/datatypes.md:833
+#: ../../source/reference/datatypes.md:866
+#: ../../source/reference/datatypes.md:1031
+msgid "**Enum Values:**"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:55
+#: ../../source/reference/datatypes.md:230
+#: ../../source/reference/datatypes.md:315
+#: ../../source/reference/datatypes.md:432
+#: ../../source/reference/datatypes.md:867
+msgid "`TYPE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:56
+msgid "`TYPE_INBOUND`: 1 - *received message*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:57
+msgid "`TYPE_OUTBOUND`: 2 - *sent message*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:62
+msgid "MessageEphemerality"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:65
+msgid "Describe message ephemerality."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:68
+msgid "`read_once` (bool - *message can only be read once (destroyed when discussion is closed)*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:69
+msgid "`existence_duration` (uint64 - *message is destroyed after this duration, in seconds*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:70
+msgid "`visibility_duration` (uint64 - *message is only visible for this duration, in seconds"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:72
+msgid "seconds*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:76
+msgid "MessageReaction"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:79
+msgid "Describe a reaction to a message, by a contact or yourself."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:82
+msgid "`contact_id` (uint64 - *set to 0 for owned reactions*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:83
+msgid "`reaction` (string - *reaction emoji*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:84
+msgid "`timestamp` (uint64 - *the timestamp at which the reaction was added.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:88
+msgid "MessageLocation"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:91
+msgid "A location message content.   There are two location message families:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:93
+msgid "location sending: send a specific location."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:94
+msgid "location sharing: share someone's location for a given duration."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:97
+#, python-brace-format
+msgid "`type` ({ref}`enum-messagelocation.locationtype`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:98
+msgid "`timestamp` (uint64 - *sending: when location was sent sharing: the last location update timestamp*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:100
+msgid "`latitude` (double)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:101
+msgid "`longitude` (double)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:102
+msgid "`altitude` (**optional** double)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:103
+msgid "`precision` (**optional** float - *the accuracy this location was recorded with.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:104
+msgid "`address` (**optional** string - *optionally set for sending, a human readable address for this location*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:108
+msgid "MessageLocation.LocationType"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:111
+msgid "`LOCATION_TYPE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:112
+msgid "`LOCATION_TYPE_SEND`: 1 - *a one shot location sending*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:113
+msgid "`LOCATION_TYPE_SHARING`: 2 - *a live location sharing*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:114
+msgid "`LOCATION_TYPE_SHARING_FINISHED`: 3 - *a completed location sharing*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:119
+msgid "MessageFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:122
+msgid "Filter messages by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:126
+#, python-brace-format
+msgid "`type` (**optional** {ref}`enum-messageid.type` - *is message inbound or outbound*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:127
+msgid "`discussion_id` (**optional** uint64 - *does message belongs to a specific discussion*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:128
+msgid "`sender_contact_id` (**optional** uint64 - *is message sent by a specific contact*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:129
+msgid "`body_search` (**optional** string - *regexp filter on *body* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:130
+#, python-brace-format
+msgid "`attachment` (**optional** {ref}`enum-messagefilter.attachment` - *does message have attachments or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:131
+#, python-brace-format
+msgid "`location` (**optional** {ref}`enum-messagefilter.location` - *is message a location message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:132
+#: ../../source/reference/datatypes.md:859
+msgid "`min_timestamp` (**optional** uint64 - *is timestamp less or equal than *min_timestamp**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:133
+#: ../../source/reference/datatypes.md:860
+msgid "`max_timestamp` (**optional** uint64 - *is timestamp more or equal than *max_timestamp**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:134
+#, python-brace-format
+msgid "`has_reaction` (**optional** {ref}`enum-messagefilter.reaction` - *does message have reactions or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:135
+#, python-brace-format
+msgid "`reactions_filter` (**repeated** {ref}`message-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:136
+msgid "**Oneof `reply`**:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:137
+msgid "`reply_to_a_message` (bool - *is message a reply to another message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:138
+msgid "`do_not_reply_to_a_message` (bool - *is message not a reply to a message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:139
+#, python-brace-format
+msgid "`replied_message_id` ({ref}`message-messageid` - *is message a reply to a specific message id*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:143
+msgid "MessageFilter.Attachment"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:146
+msgid "`ATTACHMENT_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:147
+msgid "`ATTACHMENT_HAVE`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:148
+msgid "`ATTACHMENT_HAVE_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:153
+msgid "MessageFilter.Location"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:156
+msgid "`LOCATION_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:157
+msgid "`LOCATION_HAVE`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:158
+msgid "`LOCATION_HAVE_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:159
+msgid "`LOCATION_IS_SEND`: 3"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:160
+msgid "`LOCATION_IS_SHARING`: 5"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:161
+msgid "`LOCATION_IS_SHARING_FINISHED`: 6"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:166
+msgid "MessageFilter.Reaction"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:169
+msgid "`REACTION_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:170
+msgid "`REACTION_HAS`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:171
+msgid "`REACTION_HAS_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:176
+msgid "ReactionFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:180
+msgid "**Oneof `reacted_by`**:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:181
+msgid "`reacted_by_me` (bool - *is the reaction from yourself*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:182
+msgid "`reacted_by_contact_id` (uint64 - *is the reaction from a specific contact*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:183
+msgid "`reaction` (**optional** string - *is *reaction* equal to the *reaction* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:190
+#: ../../source/reference/datatypes.md:198
+msgid "Attachment"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:193
+#, python-brace-format
+msgid "**Command:** {ref}`service-attachmentcommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:194
+#, python-brace-format
+msgid "**Notification:** {ref}`service-attachmentnotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:201
+msgid "An attachment represents a file attached to a message.   It is associated to a *message_id* and a *discussion_id*."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:204
+msgid "Link previews are attachments with specific mime type: *olvid/link-preview*."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:207
+#, python-brace-format
+msgid "`id` ({ref}`message-attachmentid`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:208
+#: ../../source/reference/datatypes.md:951
+msgid "`discussion_id` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:209
+#, python-brace-format
+msgid "`message_id` ({ref}`message-messageid`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:210
+msgid "`file_name` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:211
+msgid "`mime_type` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:212
+msgid "`size` (uint64 - *file size in bytes*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:216
+msgid "AttachmentId"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:219
+msgid "A composite id to uniquely identify an attachment."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:222
+#, python-brace-format
+msgid "`type` ({ref}`enum-attachmentid.type` - *inbound or outbound attachment*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:227
+msgid "AttachmentId.Type"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:231
+msgid "`TYPE_INBOUND`: 1 - *received attachments*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:232
+msgid "`TYPE_OUTBOUND`: 2 - *sent attachments*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:237
+msgid "AttachmentFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:240
+msgid "Filter attachments by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:244
+#, python-brace-format
+msgid "`type` (**optional** {ref}`enum-attachmentid.type` - *select only INBOUND or OUTBOUND attachments*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:245
+#, python-brace-format
+msgid "`file_type` (**optional** {ref}`enum-attachmentfilter.filetype` - *filter by file type (pre-defined regexp for *mime_type*)*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:246
+msgid "`discussion_id` (**optional** uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:247
+#, python-brace-format
+msgid "`message_id` (**optional** {ref}`message-messageid` - *optional uint64 contact_id = 4; not implementable now*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:248
+msgid "`filename_search` (**optional** string - *regexp filter on *filename* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:249
+msgid "`mime_type_search` (**optional** string - *regexp filter on *mime_type* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:250
+msgid "`min_size` (**optional** uint64 - *minimum or equal file size*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:251
+msgid "`max_size` (**optional** uint64 - *maximum or equal file size*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:255
+msgid "AttachmentFilter.FileType"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:257
+msgid "apply pre-defined regexp filters on *mime_type* field."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:260
+msgid "`FILE_TYPE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:261
+msgid "`FILE_TYPE_IMAGE`: 3"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:262
+msgid "`FILE_TYPE_VIDEO`: 4"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:263
+msgid "`FILE_TYPE_IMAGE_VIDEO`: 5 - *image or video*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:264
+msgid "`FILE_TYPE_AUDIO`: 6"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:265
+msgid "`FILE_TYPE_LINK_PREVIEW`: 7"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:266
+msgid "`FILE_TYPE_NOT_LINK_PREVIEW`: 8 - *all except link previews*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:274
+#: ../../source/reference/datatypes.md:282
+msgid "Discussion"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:277
+#, python-brace-format
+msgid "**Command:** {ref}`service-discussioncommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:278
+#, python-brace-format
+msgid "**Notification:** {ref}`service-discussionnotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:285
+msgid "A discussion must be associated to a contact or to a group.   If *contact_id* and *group_id* are both zero, then it is an existing locked discussion."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:290
+msgid "`title` (string - *contact.display_name* or *group.name**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:291
+#: ../../source/reference/datatypes.md:305
+msgid "**Oneof `identifier`**:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:292
+#: ../../source/reference/datatypes.md:306
+#: ../../source/reference/datatypes.md:467
+#: ../../source/reference/datatypes.md:1057
+msgid "`contact_id` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:293
+#: ../../source/reference/datatypes.md:307
+msgid "`group_id` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:297
+msgid "DiscussionFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:300
+msgid "Filter discussions by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:304
+#, python-brace-format
+msgid "`type` (**optional** {ref}`enum-discussionfilter.type` - *select group or contact discussions*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:308
+msgid "`title_search` (**optional** string - *regexp filter on title field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:312
+msgid "DiscussionFilter.Type"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:316
+msgid "`TYPE_OTO`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:317
+msgid "`TYPE_GROUP`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:325
+#: ../../source/reference/datatypes.md:333
+msgid "Contact"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:328
+#, python-brace-format
+msgid "**Command:** {ref}`service-contactcommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:329
+#, python-brace-format
+msgid "**Notification:** {ref}`service-contactnotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:336
+msgid "A contact is another Olvid identity you are in contact with.   A contact can have an associated discussion if has_one_to_one_discussion is true, else it's probably a collected contact you met in a group discussion."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:341
+#: ../../source/reference/datatypes.md:671
+msgid "`display_name` (string - *computed from *details**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:342
+#: ../../source/reference/datatypes.md:672
+#, python-brace-format
+msgid "`details` ({ref}`message-identitydetails`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:343
+msgid "`established_channel_count` (uint32 - *shall be equal to device_count to exchange messages*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:344
+msgid "`device_count` (uint32)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:345
+msgid "`has_one_to_one_discussion` (bool)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:346
+#: ../../source/reference/datatypes.md:425
+#: ../../source/reference/datatypes.md:675
+msgid "`has_a_photo` (bool)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:347
+msgid "`keycloak_managed` (bool - *contact is registered on the same directory*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:351
+msgid "ContactFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:354
+msgid "Filter contacts by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:358
+#, python-brace-format
+msgid "`one_to_one` (**optional** {ref}`enum-contactfilter.onetoone` - *select only contacts with or without one to one discussions*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:359
+#, python-brace-format
+msgid "`photo` (**optional** {ref}`enum-contactfilter.photo` - *select only contacts with or without profile photo*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:360
+#, python-brace-format
+msgid "`keycloak` (**optional** {ref}`enum-contactfilter.keycloak` - *select only contacts registered or not on your keycloak*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:361
+#: ../../source/reference/datatypes.md:723
+msgid "`display_name_search` (**optional** string - *regexp filter on *display_name**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:362
+#: ../../source/reference/datatypes.md:724
+#: ../../source/reference/datatypes.md:1025
+#, python-brace-format
+msgid "`details_search` (**optional** {ref}`message-identitydetails` - *a set of regexp filters, one for each field of *details**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:366
+msgid "ContactFilter.OneToOne"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:369
+msgid "`ONE_TO_ONE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:370
+msgid "`ONE_TO_ONE_IS`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:371
+msgid "`ONE_TO_ONE_IS_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:376
+msgid "ContactFilter.Photo"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:379
+#: ../../source/reference/datatypes.md:542
+#: ../../source/reference/datatypes.md:741
+msgid "`PHOTO_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:380
+msgid "`PHOTO_HAS`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:381
+msgid "`PHOTO_HAS_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:386
+msgid "ContactFilter.Keycloak"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:389
+#: ../../source/reference/datatypes.md:532
+#: ../../source/reference/datatypes.md:731
+msgid "`KEYCLOAK_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:390
+msgid "`KEYCLOAK_MANAGED`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:391
+msgid "`KEYCLOAK_NOT_MANAGED`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:399
+#: ../../source/reference/datatypes.md:407
+msgid "Group"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:402
+#, python-brace-format
+msgid "**Command:** {ref}`service-groupcommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:403
+#, python-brace-format
+msgid "**Notification:** {ref}`service-groupnotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:410
+msgid "An Olvid group is a discussion with you and other Olvid identities.   Other identities in a group are automatically added to your contact book if they were not before as collected contacts (you do not have a one to one discussion with them).   *keycloak_managed* groups are not editable, and you cannot leave them. Group is managed from the keycloak admin console."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:416
+#, python-brace-format
+msgid "`type` ({ref}`enum-group.type` - *specify a pre-set of permissions given to group members.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:417
+#, python-brace-format
+msgid "`advanced_configuration` (**optional** {ref}`message-group.advancedconfiguration` - *only set if group.type is TYPE_ADVANCED*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:418
+#, python-brace-format
+msgid "`own_permissions` ({ref}`message-groupmemberpermissions` - *your permissions in this group*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:419
+#, python-brace-format
+msgid "`members` (**repeated** {ref}`message-groupmember` - *members that accepted invitation*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:420
+#, python-brace-format
+msgid "`pending_members` (**repeated** {ref}`message-pendinggroupmember` - *members invited to join group*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:421
+msgid "`update_in_progress` (bool - *group is locked, edition will be delayed*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:422
+msgid "`keycloak_managed` (bool - *group automatically pushed by keycloak*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:423
+msgid "`name` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:424
+msgid "`description` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:429
+msgid "Group.Type"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:433
+msgid "`TYPE_STANDARD`: 1 - *all members are admin*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:434
+msgid "`TYPE_CONTROLLED`: 2 - *non admin members cannot manage the group*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:435
+msgid "`TYPE_READ_ONLY`: 3 - *only admin members can post messages*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:436
+msgid "`TYPE_ADVANCED`: 4 - *specify an advanced configuration field*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:441
+msgid "Group.AdvancedConfiguration"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:444
+msgid "`read_only` (bool - *is group read only*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:445
+#, python-brace-format
+msgid "`remote_delete` ({ref}`enum-group.advancedconfiguration.remotedelete` - *who has permission to delete message for everyone*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:450
+msgid "Group.AdvancedConfiguration.RemoteDelete"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:453
+msgid "`REMOTE_DELETE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:454
+msgid "`REMOTE_DELETE_NOBODY`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:455
+msgid "`REMOTE_DELETE_ADMINS`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:456
+msgid "`REMOTE_DELETE_EVERYONE`: 3"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:461
+msgid "GroupMember"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:464
+msgid "Associate a contact, member of a group, with its permissions in this group."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:468
+#, python-brace-format
+msgid "`permissions` ({ref}`message-groupmemberpermissions`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:472
+msgid "PendingGroupMember"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:475
+msgid "Member of a group who has not yet accepted the invitation to join the group."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:478
+msgid "`pending_member_id` (uint64 - *unique identifier*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:479
+msgid "`contact_id` (uint64 - *set to 0 if this identity is not a contact yet*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:480
+msgid "`display_name` (string - *computed display name from their identity details.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:481
+msgid "`declined` (bool - *does pending member declined invitation*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:482
+#, python-brace-format
+msgid "`permissions` ({ref}`message-groupmemberpermissions` - *permissions given to this member*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:486
+msgid "GroupMemberPermissions"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:489
+msgid "Describe permission set associated to any group member."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:492
+msgid "`admin` (bool - *can edit the group (change name or description, and manage group members)*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:493
+msgid "`remote_delete_anything` (bool - *can delete everywhere someone else's message*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:494
+msgid "`edit_or_remote_delete_own_messages` (bool - *can edit or delete everywhere own messages*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:495
+msgid "`change_settings` (bool - *can change discussion shared settings (message ephemerality)*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:496
+msgid "`send_message` (bool - *can post message in the group discussion*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:500
+msgid "GroupFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:503
+msgid "Filter groups by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:507
+#, python-brace-format
+msgid "`type` (**optional** {ref}`enum-group.type`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:508
+#, python-brace-format
+msgid "`empty` (**optional** {ref}`enum-groupfilter.empty` - *does group have members or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:509
+#, python-brace-format
+msgid "`photo` (**optional** {ref}`enum-groupfilter.photo` - *does group have a photo or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:510
+#, python-brace-format
+msgid "`keycloak` (**optional** {ref}`enum-groupfilter.keycloak` - *is group keycloak managed or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:511
+#, python-brace-format
+msgid "`own_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *filter on your own permissions in the group*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:512
+msgid "`name_search` (**optional** string - *regexp filter on *name_search* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:513
+msgid "`description_search` (**optional** string - *regexp filter on *description_search* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:514
+#, python-brace-format
+msgid "`member_filters` (**repeated** {ref}`message-groupmemberfilter` - *group must have at least one matching member for each *member_filters**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:515
+#, python-brace-format
+msgid "`pending_member_filters` (**repeated** {ref}`message-pendinggroupmemberfilter` - *group must have at least one pending member matching each *pending_member_filters**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:519
+msgid "GroupFilter.Empty"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:522
+msgid "`EMPTY_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:523
+msgid "`EMPTY_IS_NOT`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:524
+msgid "`EMPTY_IS`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:529
+msgid "GroupFilter.Keycloak"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:533
+#: ../../source/reference/datatypes.md:732
+msgid "`KEYCLOAK_IS_NOT`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:534
+#: ../../source/reference/datatypes.md:733
+msgid "`KEYCLOAK_IS`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:539
+msgid "GroupFilter.Photo"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:543
+#: ../../source/reference/datatypes.md:742
+msgid "`PHOTO_HAS_NOT`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:544
+#: ../../source/reference/datatypes.md:743
+msgid "`PHOTO_HAS`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:549
+msgid "GroupMemberFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:553
+msgid "`contact_id` (**optional** uint64 - *is member a specific contact*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:554
+#, python-brace-format
+msgid "`permissions` (**optional** {ref}`message-grouppermissionfilter` - *does member's permissions match this permission filter*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:558
+msgid "PendingGroupMemberFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:562
+#, python-brace-format
+msgid "`is_contact` (**optional** {ref}`enum-pendinggroupmemberfilter.contact` - *is pending member a contact or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:563
+#, python-brace-format
+msgid "`has_declined` (**optional** {ref}`enum-pendinggroupmemberfilter.declined` - *does pending member declined invitation or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:564
+msgid "`contact_id` (**optional** uint64 - *is pending member a specific known contact*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:565
+msgid "`display_name_search` (**optional** string - *regexp filter applied on *display_name* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:566
+#, python-brace-format
+msgid "`permissions` (**optional** {ref}`message-grouppermissionfilter` - *pending member's permissions match this permission filter*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:570
+msgid "PendingGroupMemberFilter.Contact"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:573
+#: ../../source/reference/datatypes.md:1032
+msgid "`CONTACT_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:574
+#: ../../source/reference/datatypes.md:1033
+msgid "`CONTACT_IS`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:575
+#: ../../source/reference/datatypes.md:1034
+msgid "`CONTACT_IS_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:580
+msgid "PendingGroupMemberFilter.Declined"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:583
+msgid "`DECLINED_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:584
+msgid "`DECLINED_HAS`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:585
+msgid "`DECLINED_HAS_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:590
+msgid "GroupPermissionFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:594
+#, python-brace-format
+msgid "`admin` (**optional** {ref}`enum-grouppermissionfilter.admin` - *is user a group admin or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:595
+#, python-brace-format
+msgid "`send_message` (**optional** {ref}`enum-grouppermissionfilter.sendmessage` - *can the user post a message in the discussion*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:596
+#, python-brace-format
+msgid "`remote_delete_anything` (**optional** {ref}`enum-grouppermissionfilter.remotedeleteanything` - *can the user remote-delete any message, even other members' messages*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:597
+#, python-brace-format
+msgid "`edit_or_remote_delete_own_messages` (**optional** {ref}`enum-grouppermissionfilter.editorremotedeleteownmessage` - *can the user edit or remote-delete their own messages*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:598
+#, python-brace-format
+msgid "`change_settings` (**optional** {ref}`enum-grouppermissionfilter.changesettings` - *can the user change group settings*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:602
+msgid "GroupPermissionFilter.Admin"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:605
+msgid "`ADMIN_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:606
+msgid "`ADMIN_IS`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:607
+msgid "`ADMIN_IS_NOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:612
+msgid "GroupPermissionFilter.SendMessage"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:615
+msgid "`SEND_MESSAGE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:616
+msgid "`SEND_MESSAGE_CAN`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:617
+msgid "`SEND_MESSAGE_CANNOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:622
+msgid "GroupPermissionFilter.RemoteDeleteAnything"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:625
+msgid "`REMOTE_DELETE_ANYTHING_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:626
+msgid "`REMOTE_DELETE_ANYTHING_CAN`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:627
+msgid "`REMOTE_DELETE_ANYTHING_CANNOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:632
+msgid "GroupPermissionFilter.EditOrRemoteDeleteOwnMessage"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:635
+msgid "`EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:636
+msgid "`EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CAN`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:637
+msgid "`EDIT_OR_REMOTE_DELETE_OWN_MESSAGE_CANNOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:642
+msgid "GroupPermissionFilter.ChangeSettings"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:645
+msgid "`CHANGE_SETTINGS_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:646
+msgid "`CHANGE_SETTINGS_CAN`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:647
+msgid "`CHANGE_SETTINGS_CANNOT`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:655
+#: ../../source/reference/datatypes.md:663
+msgid "Identity"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:658
+#, python-brace-format
+msgid "**Command:** {ref}`service-identitycommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:659
+#, python-brace-format
+msgid "**Admin:** {ref}`service-identityadminservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:666
+msgid "Your own Olvid identity, stored on this daemon instance.   A daemon can manage multiple Olvid identities."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:673
+msgid "`invitation_url` (***deprecated*** string - *TODO TODEL !!!!*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:674
+msgid "`keycloak_managed` (bool - *identity is linked to a keycloak directory*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:676
+#, python-brace-format
+msgid "`api_key` ({ref}`message-identity.apikey` - *Olvid api key to grant permissions*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:680
+msgid "Identity.ApiKey"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:683
+#, python-brace-format
+msgid "`permission` ({ref}`message-identity.apikey.permission`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:684
+msgid "`expiration_timestamp` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:689
+msgid "Identity.ApiKey.Permission"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:692
+msgid "`call` (bool)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:693
+msgid "`multi_device` (bool)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:698
+msgid "IdentityDetails"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:701
+msgid "Represents an Olvid identity details.   Used for any Olvid identity (owned identity or other contact).   Details are valid only if at least one field is not blank."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:706
+msgid "`first_name` (**optional** string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:707
+msgid "`last_name` (**optional** string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:708
+msgid "`company` (**optional** string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:709
+msgid "`position` (**optional** string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:713
+msgid "IdentityFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:716
+msgid "Filter identities by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:720
+#, python-brace-format
+msgid "`keycloak` (**optional** {ref}`enum-identityfilter.keycloak` - *is identity keycloak managed or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:721
+#, python-brace-format
+msgid "`photo` (**optional** {ref}`enum-identityfilter.photo` - *does identity have a profile photo or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:722
+#, python-brace-format
+msgid "`api_key` (**optional** {ref}`enum-identityfilter.apikey` - *does identity have an Olvid api key or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:728
+msgid "IdentityFilter.Keycloak"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:738
+msgid "IdentityFilter.Photo"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:748
+msgid "IdentityFilter.ApiKey"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:751
+msgid "`API_KEY_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:752
+msgid "`API_KEY_HAS_NOT`: 1"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:753
+msgid "`API_KEY_HAS`: 2"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:761
+msgid "Client_Key"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:764
+#, python-brace-format
+msgid "**Admin:** {ref}`service-clientkeyadminservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:768
+msgid "ClientKey"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:771
+msgid "A client key can be used to authenticate on the daemon.   It can be associated to a daemon identity if identity_id is specified, if not (identity_id is equal to zero) it is an admin client.   An admin client key can use admin command services and impersonate any daemon identity."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:776
+msgid "`name` (string - *user defined name*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:777
+#: ../../source/reference/datatypes.md:976
+msgid "`key` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:778
+msgid "`identity_id` (uint64 - *0 if an admin client key*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:782
+msgid "ClientKeyFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:785
+msgid "Filter client keys by attributes."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:788
+msgid "**Oneof `identity`**:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:789
+msgid "`admin_key` (bool - *filter admin client keys*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:790
+msgid "`identity_id` (uint64 - *filter keys associated to an identity id*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:791
+msgid "`name_search` (**optional** string - *regexp filter on *name**)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:792
+msgid "`key` (**optional** string - *key value*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:799
+#: ../../source/reference/datatypes.md:807
+msgid "Invitation"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:802
+#, python-brace-format
+msgid "**Command:** {ref}`service-invitationcommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:803
+#, python-brace-format
+msgid "**Notification:** {ref}`service-invitationnotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:810
+msgid "An invitation represents an instance of a protocol among several possibilities.   Protocols can be:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:812
+msgid "Invitation: the classic Olvid invitation protocol to add someone else to your contact book. Protocol implies multiple manual steps, with invitation acceptation and four digit code exchange."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:813
+msgid "Introduction: a third party identity presents two of its contacts to each other."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:814
+msgid "One to one invitation: One of your contact asked you to create a one to one discussion."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:815
+msgid "Group invitation: Someone invited you to join a group."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:817
+msgid "Each invitation have a status representing the protocol, and it's current step."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:820
+msgid "`id` (uint64 - *invitation unique identifier*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:821
+#, python-brace-format
+msgid "`status` ({ref}`enum-invitation.status` - *current protocol step*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:822
+msgid "`display_name` (string - *display name of the other identity or the group name*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:823
+msgid "`timestamp` (uint64 - *latest status update timestamp*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:824
+msgid "`sas` (**optional** string - *only set for STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE and STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE four digit code to give to the other in an invitation protocol*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:826
+msgid "`mediatorId` (**optional** uint64 - *introductions protocol only the contact id of the person who initiated introduction protocol*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:831
+msgid "Invitation.Status"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:834
+msgid "`STATUS_UNSPECIFIED`: 0"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:835
+msgid "`STATUS_INVITATION_WAIT_YOU_TO_ACCEPT`: 1 - *you received an invitation, accept or decline it*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:836
+msgid "`STATUS_INVITATION_WAIT_IT_TO_ACCEPT`: 2 - *you sent an invitation, recipient must accept it to continue*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:837
+msgid "`STATUS_INVITATION_STATUS_IN_PROGRESS`: 3 - *invitation process is in progress and will continue after automatic protocol message exchange between protagonist*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:838
+msgid "`STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE`: 4 - *you must set other sas code*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:839
+msgid "`STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE`: 5 - *you set other sas code, give your sas code to other*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:840
+msgid "`STATUS_INTRODUCTION_WAIT_IT_TO_ACCEPT`: 7 - *you accepted an introduction, wait for the other to accept too*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:841
+msgid "`STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT`: 8 - *you received an introduction*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:842
+msgid "`STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT`: 9 - *you sent a one to one invitation, wait for the other to accept*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:843
+msgid "`STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT`: 10 - *you received a one to one invitation, accept or decline it*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:844
+msgid "`STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT`: 11 - *you received a group invitation, accept or decline it*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:849
+msgid "InvitationFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:852
+msgid "Filter invitation by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:856
+#, python-brace-format
+msgid "`status` (**optional** {ref}`enum-invitation.status` - *does invitation have a specific status*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:857
+#, python-brace-format
+msgid "`type` (**optional** {ref}`enum-invitationfilter.type` - *does invitation belongs to a specific protocol*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:858
+#: ../../source/reference/datatypes.md:1024
+msgid "`display_name_search` (**optional** string - *regexp filter on *display_name* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:864
+msgid "InvitationFilter.Type"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:868
+msgid "`TYPE_INVITATION`: 1 - *is status one of :"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:869
+msgid "STATUS_INVITATION_WAIT_YOU_TO_ACCEPT"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:870
+msgid "STATUS_INVITATION_WAIT_IT_TO_ACCEPT"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:871
+msgid "STATUS_INVITATION_STATUS_IN_PROGRESS"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:872
+msgid "STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:873
+msgid "STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:874
+msgid "`TYPE_INTRODUCTION`: 2 - *is status one of :"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:875
+msgid "STATUS_INTRODUCTION_WAIT_IT_TO_ACCEPT"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:876
+msgid "STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:877
+msgid "`TYPE_GROUP`: 3 - *is status equals to:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:878
+msgid "STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:879
+msgid "`TYPE_ONE_TO_ONE`: 4 - *is status one of :"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:880
+msgid "STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:881
+msgid "STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT*"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:889
+msgid "Settings"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:892
+#, python-brace-format
+msgid "**Command:** {ref}`service-settingscommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:896
+msgid "IdentitySettings"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:899
+msgid "Settings for an Identity managed by a daemon."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:900
+msgid "AutoAcceptInvitation: when enabled the daemon will automatically accept incoming and existing invitations from specified protocol."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:901
+msgid "MessageRetention: when at least one element is set daemon will regularly check if some message can be deleted, matching filled criteria. This allows to save space and save performances by keeping database as small as possible."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:902
+msgid "Keycloak: directory related settings"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:905
+#, python-brace-format
+msgid "`invitation` ({ref}`message-identitysettings.autoacceptinvitation`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:906
+#, python-brace-format
+msgid "`message_retention` ({ref}`message-identitysettings.messageretention`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:907
+#, python-brace-format
+msgid "`keycloak` ({ref}`message-identitysettings.keycloak`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:911
+msgid "IdentitySettings.AutoAcceptInvitation"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:914
+msgid "`auto_accept_introduction` (bool - *auto accept introductions (a trusted contact pushed a new contact)*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:915
+msgid "`auto_accept_group` (bool - *auto accept invitations to a group*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:916
+msgid "`auto_accept_one_to_one` (bool - *auto accept contact invitations to one to one discussions*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:917
+msgid "`auto_accept_invitation` (bool - *auto accept olvid invitations (mind this will only accept invitation and not exchange sas code for you)*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:922
+msgid "IdentitySettings.MessageRetention"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:925
+msgid "`existence_duration` (uint64 - *if set, message older than *existence_duration* seconds will be deleted set to 0 to disable*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:927
+msgid "`discussion_count` (uint64 - *if set, if a discussion has more than *discussion_count* messages, older messages will be deleted. set to 0 to disable*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:929
+msgid "`global_count` (uint64 - *if set, if identity has more than *global_count* messages, older messages will be deleted. set to 0 to disable*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:931
+msgid "`clean_locked_discussions` (bool - *if true, messages in locked discussions will be deleted.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:932
+msgid "`preserve_is_sharing_location_messages` (bool - *if true, live sharing location messages will never be deleted.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:937
+msgid "IdentitySettings.Keycloak"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:940
+msgid "`auto_invite_new_members` (bool - *if true, directory will regularly be scanned to add new members as contacts.*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:945
+msgid "DiscussionSettings"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:948
+msgid "Settings for a discussion. Those settings are shared with other contacts in this discussion."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:952
+msgid "`read_once` (bool - *are message read once*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:953
+msgid "`existence_duration` (uint64 - *if set, messages are destroyed after *existence_duration* seconds, 0 to disable*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:954
+msgid "`visibility_duration` (uint64 - *if set, messages are only visible for *visibility_duration* seconds, 0 to disable*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:961
+msgid "Storage"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:964
+#, python-brace-format
+msgid "**Command:** {ref}`service-storagecommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:968
+msgid "StorageElement"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:971
+msgid "Daemon embed a key-value storage, accessible for clients.   Each client-key have it's own global storage space, and a dedicated storage space for each discussion (see DiscussionStorageCommandService).   StorageElement is used for global and discussion storage."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:977
+msgid "`value` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:981
+msgid "StorageElementFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:984
+msgid "Filter storage elements by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:988
+msgid "`key_search` (**optional** string - *regexp filter applied on *key_search* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:989
+msgid "`value_search` (**optional** string - *regexp filter applied on *value_search* field*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:996
+msgid "Keycloak"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:999
+#, python-brace-format
+msgid "**Command:** {ref}`service-keycloakcommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1003
+msgid "KeycloakUser"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1006
+msgid "One of your directory user."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1009
+msgid "`keycloak_id` (string - *unique identifier for directory, to use to add this user as a contact*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1010
+msgid "`display_name` (string - *name computed from details*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1011
+#, python-brace-format
+msgid "`details` ({ref}`message-identitydetails` - *full identity details*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1012
+msgid "`contact_id` (**optional** uint64 - *filled if this user is already a contact, else set to 0*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1016
+msgid "KeycloakUserFilter"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1019
+msgid "Filter keycloak users by attributes.   To pass a filter an element must match all specified conditions."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1023
+#, python-brace-format
+msgid "`contact` (**optional** {ref}`enum-keycloakuserfilter.contact` - *is user a contact or not*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1029
+msgid "KeycloakUserFilter.Contact"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1042
+msgid "Call"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1045
+#, python-brace-format
+msgid "**Command:** {ref}`service-callcommandservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1046
+#, python-brace-format
+msgid "**Notification:** {ref}`service-callnotificationservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1050
+msgid "CallParticipantId"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1053
+msgid "Identify a call participant by its contact id, or a random identifier if it is not a contact."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1056
+msgid "**Oneof `id`**:"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1058
+msgid "`participant_id` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1065
+#: ../../source/reference/datatypes.md:1072
+msgid "Backup"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1068
+#, python-brace-format
+msgid "**Admin:** {ref}`service-backupadminservice`"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1075
+msgid "Describe a full backup obtained with a backup key.   A backup contains multiple parts.   The AdminBackup contains the admin client keys and the elements contained in the global daemon storage.   A backup may contain multiple profile backups (one per identity), and each may contain one or more snapshots.   A profile snapshot contains an identity, its discussions, contacts, groups, client keys, and discussion storage."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1081
+msgid "Note: a backup does not contain any messages or attachments."
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1084
+#, python-brace-format
+msgid "`admin_backup` ({ref}`message-backup.adminbackup`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1085
+#, python-brace-format
+msgid "`profile_backups` (**repeated** {ref}`message-backup.profilebackup`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1089
+msgid "Backup.AdminBackup"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1092
+msgid "`admin_client_key_count` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1093
+#: ../../source/reference/datatypes.md:1118
+msgid "`storage_elements_count` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1098
+msgid "Backup.ProfileBackup"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1101
+msgid "`profile_display_name` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1102
+msgid "`already_exists_locally` (bool)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1103
+msgid "`keycloak_managed` (bool)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1104
+#, python-brace-format
+msgid "`snapshots` (**repeated** {ref}`message-backup.profilebackup.snapshot`)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1109
+msgid "Backup.ProfileBackup.Snapshot"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1112
+msgid "`id` (string - *id to specify to restore an identity backup*)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1113
+msgid "`timestamp` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1114
+msgid "`from_device_name` (string)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1115
+msgid "`contact_count` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1116
+msgid "`group_count` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1117
+msgid "`client_key_count` (uint64)"
+msgstr ""
+
+#: ../../source/reference/datatypes.md:1119
+#, python-brace-format
+msgid "`identity_settings` ({ref}`message-identitysettings`)"
+msgstr ""
+

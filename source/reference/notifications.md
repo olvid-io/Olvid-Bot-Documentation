@@ -1,6 +1,6 @@
 # Notifications
 
-Events you can subscribe to, and notification content.
+Events you can subscribe to, and the associated notifications content.
 
 :::{contents} Notifications
 :depth: 1

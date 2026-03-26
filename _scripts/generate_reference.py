@@ -406,9 +406,9 @@ class MarkdownRenderer:
 	def generate_all(self) -> None:
 		os.makedirs(self.output_dir, exist_ok=True)
 		self._generate_datatypes()
-		self._generate_service_file(self.model.commands, "Commands", "", "commands.md")
-		self._generate_service_file(self.model.notifications, "Notifications", "Events you can subscribe to, and notification content.", "notifications.md")
-		self._generate_service_file(self.model.admins, "Admin Commands", "Privileged commands requiring a valid admin client key.", "admins.md")
+		self._generate_service_file(self.model.commands, "Commands", "List all the actions you can perform with your Olvid identity, using daemon APi.", "commands.md")
+		self._generate_service_file(self.model.notifications, "Notifications", "Events you can subscribe to, and the associated notifications content.", "notifications.md")
+		self._generate_service_file(self.model.admins, "Admin Commands", "List all privileged commands an admin can execute to manage the daemon. Those commands require a valid admin client key.", "admins.md")
 
 	@staticmethod
 	def _get_sort_key(name: str) -> int:
