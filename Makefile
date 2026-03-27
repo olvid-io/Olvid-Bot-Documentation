@@ -44,4 +44,4 @@ update-api-description:
 
 # update api reference section from protobuf repository
 reference: update-api-description
-	python3 ./_scripts/generate_reference.py ./source/_build/daemon_descriptor.pb ./source/reference
+	python3 ./_scripts/generate_reference.py ./source/_protobuf/daemon_descriptor.pb ./source/reference

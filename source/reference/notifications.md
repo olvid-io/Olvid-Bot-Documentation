@@ -841,7 +841,7 @@ It can concern your reactions or any contact reactions.
 * `group_ids` (**repeated** uint64 - *you will only receive notifications about groups specified in this list.*)
 * `group_filter` (**optional** {ref}`message-groupfilter` - *you will only receive notifications about groups that match all the filter params.*)
 * `permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications about groups where your permissions match this filter.*)
-* `previous_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications about groups where your permissions match this filter, before update.*)
+* `previous_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications when your previous permissions match this filter.*)
 
 (message-groupownpermissionsupdatednotification)=
 **Notification *(Stream)***: *GroupOwnPermissionsUpdatedNotification*
@@ -865,8 +865,7 @@ It can concern your reactions or any contact reactions.
 * `group_ids` (**repeated** uint64 - *you will only receive notifications about groups specified in this list.*)
 * `group_filter` (**optional** {ref}`message-groupfilter` - *you will only receive notifications about groups that match all the filter params.*)
 * `member_filter` (**optional** {ref}`message-groupmemberfilter` - *you will only receive notifications about group members that match this filter.*)
-* `previous_permission_filter` (**optional** {ref}`message-groupmemberfilter` - *you will only receive notifications about group members that match this filter.
-TODO update to GroupPermissionsFilter !*)
+* `previous_permission_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications when previous permissions match this filter.*)
 
 (message-groupmemberpermissionsupdatednotification)=
 **Notification *(Stream)***: *GroupMemberPermissionsUpdatedNotification*

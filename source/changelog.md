@@ -10,9 +10,9 @@ Il est tout de même recommandé de toujours utiliser la même version de patch.
 Les versions mineures et/ou majeures seront incrémentées à minima pour chaque changement dans l'API [gRPC-Protobuf](https://github.com/olvid-io/Olvid-Bot-Protobuf)
 :::
 
-## Dernière version : 2.0.0
+## Dernière version : 2.0.1
 :::{danger}
-La version 2.0.0 des bots amène beaucoup de nouveautés et d'améliorations mais n'est ***pas rétrocompatible***. 
+La version 2 des bots amène beaucoup de nouveautés et d'améliorations mais n'est ***pas rétrocompatible***. 
 Nous vous invitons à suivre notre [**guide de migration**](/migrations/migration_1_2) pour mettre à jour le code existant, ***AVANT*** de mettre à jour vos dépendances.
 :::
 
@@ -21,6 +21,7 @@ Nous vous invitons à suivre notre [**guide de migration**](/migrations/migratio
 - Ajout de paramètres pour configurer le comportement de chaque identité sur un daemon (acceptation automatique des invitations, nettoyage des messages, ajout automatique des nouveaux membres de keycloak).
 - Implémentation d'un nouveau mécanisme d'authentification des bots dans Keycloak qui résout les problèmes de déconnexion.
 - Nombreuses améliorations de performance et de stabilité. 
+- Ajout de la page [](/reference/reference) dans la documentation pour décrire et documenter l'ensemble des possibilitées du daemon. 
 
 ### Ajouts
 - **Daemon**
@@ -40,8 +41,11 @@ Nous vous invitons à suivre notre [**guide de migration**](/migrations/migratio
 
 ### Correctifs
 - **Daemon**
-  - **MessageCommandService**: le champ reaction est maintenant optionnel pour la commande *MessageReact* afin de supprimer une réaction existante.
+  - **MessageCommandService**: 
+    - le champ reaction est maintenant optionnel pour la commande *MessageReact* afin de supprimer une réaction existante.
+    - *messageDelete*: _(v2.0.1)_ révision du comportement de l'API pour le champs _delete_everywhere_ pour refléter la réalité de l'implémentation. 
   - Ajout d'un service de nettoyage des bases de données pour nettoyer les pages vides (VACUUM).
+  - *GroupNotificationService*: _(v2.0.1)_ résolution de nombreux problèmes dans le filtrage des notifications.
 
 - **CLI**
   - Amélioration de la fiabilité des commandes interactives (identity new, contact new, invitation send).

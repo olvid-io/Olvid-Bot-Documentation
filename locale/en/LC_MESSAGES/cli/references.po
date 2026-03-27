@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 21:28+0100\n"
+"POT-Creation-Date: 2026-03-27 17:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -127,6 +127,10 @@ msgstr ""
 msgid "Save identity photo to local files. Specify identity_ids to use or it uses current identity id by default"
 msgstr ""
 
+#: ../../olvid-cli attachment contact discussion group identity photo save:1
+msgid "⚠️ When CLI is used in a docker container mind to check the path exists inside the container."
+msgstr ""
+
 #: ../../olvid-cli identity photo save:1
 msgid "save all identity photos"
 msgstr ""
@@ -140,7 +144,11 @@ msgid "specify file name to use (ignored if saving more than one image)"
 msgstr ""
 
 #: ../../olvid-cli identity photo set:1
-msgid "set current identity photo"
+msgid "Set current identity photo."
+msgstr ""
+
+#: ../../olvid-cli group identity photo set:1
+msgid "⚠️ When CLI is used in a docker container mind to check the file exists inside the container."
 msgstr ""
 
 #: ../../olvid-cli identity photo unset:1
@@ -256,6 +264,10 @@ msgstr ""
 msgid "send a location message"
 msgstr ""
 
+#: ../../olvid-cli location message send:1
+msgid "⚠️ When CLI is used in a docker container mind to check the preview file exists inside the container."
+msgstr ""
+
 #: ../../olvid-cli location message start:1
 msgid "start to share a location"
 msgstr ""
@@ -290,6 +302,10 @@ msgstr ""
 
 #: ../../olvid-cli message send:1
 msgid "send text message in a given discussion"
+msgstr ""
+
+#: ../../olvid-cli message send:1
+msgid "⚠️ When CLI is used in a docker container mind to check the attachment file exists inside the container."
 msgstr ""
 
 #: ../../olvid-cli message send:1
@@ -534,6 +550,10 @@ msgstr ""
 
 #: ../../olvid-cli group photo save:1
 msgid "Save all group photos"
+msgstr ""
+
+#: ../../olvid-cli group photo set:1
+msgid "Set group photo."
 msgstr ""
 
 #: ../../olvid-cli group update:1

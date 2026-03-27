@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 22:41+0100\n"
+"POT-Creation-Date: 2026-03-27 17:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -32,18 +32,18 @@ msgstr ""
 msgid "Message Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:12 ../../source/reference/commands.md:316
-#: ../../source/reference/commands.md:401
-#: ../../source/reference/commands.md:586
-#: ../../source/reference/commands.md:798
-#: ../../source/reference/commands.md:1106
-#: ../../source/reference/commands.md:1323
-#: ../../source/reference/commands.md:1479
-#: ../../source/reference/commands.md:1565
-#: ../../source/reference/commands.md:1660
-#: ../../source/reference/commands.md:1763
-#: ../../source/reference/commands.md:1859
-#: ../../source/reference/commands.md:1914
+#: ../../source/reference/commands.md:12 ../../source/reference/commands.md:324
+#: ../../source/reference/commands.md:410
+#: ../../source/reference/commands.md:595
+#: ../../source/reference/commands.md:807
+#: ../../source/reference/commands.md:1115
+#: ../../source/reference/commands.md:1332
+#: ../../source/reference/commands.md:1488
+#: ../../source/reference/commands.md:1574
+#: ../../source/reference/commands.md:1669
+#: ../../source/reference/commands.md:1772
+#: ../../source/reference/commands.md:1868
+#: ../../source/reference/commands.md:1923
 msgid "Info"
 msgstr ""
 
@@ -86,81 +86,81 @@ msgstr ""
 #: ../../source/reference/commands.md:75 ../../source/reference/commands.md:127
 #: ../../source/reference/commands.md:150
 #: ../../source/reference/commands.md:171
-#: ../../source/reference/commands.md:193
-#: ../../source/reference/commands.md:221
-#: ../../source/reference/commands.md:245
-#: ../../source/reference/commands.md:269
-#: ../../source/reference/commands.md:287
-#: ../../source/reference/commands.md:307
-#: ../../source/reference/commands.md:334
-#: ../../source/reference/commands.md:352
-#: ../../source/reference/commands.md:371
-#: ../../source/reference/commands.md:390
-#: ../../source/reference/commands.md:419
-#: ../../source/reference/commands.md:439
-#: ../../source/reference/commands.md:458
-#: ../../source/reference/commands.md:476
-#: ../../source/reference/commands.md:494
-#: ../../source/reference/commands.md:512
-#: ../../source/reference/commands.md:532
-#: ../../source/reference/commands.md:576
-#: ../../source/reference/commands.md:604
-#: ../../source/reference/commands.md:623
-#: ../../source/reference/commands.md:642
-#: ../../source/reference/commands.md:660
-#: ../../source/reference/commands.md:678
-#: ../../source/reference/commands.md:701
-#: ../../source/reference/commands.md:721
-#: ../../source/reference/commands.md:740
-#: ../../source/reference/commands.md:786
-#: ../../source/reference/commands.md:816
-#: ../../source/reference/commands.md:834
-#: ../../source/reference/commands.md:853
-#: ../../source/reference/commands.md:874
-#: ../../source/reference/commands.md:899
-#: ../../source/reference/commands.md:924
-#: ../../source/reference/commands.md:948
-#: ../../source/reference/commands.md:969
-#: ../../source/reference/commands.md:991
-#: ../../source/reference/commands.md:1019
-#: ../../source/reference/commands.md:1075
-#: ../../source/reference/commands.md:1094
-#: ../../source/reference/commands.md:1123
-#: ../../source/reference/commands.md:1142
-#: ../../source/reference/commands.md:1162
-#: ../../source/reference/commands.md:1184
-#: ../../source/reference/commands.md:1237
-#: ../../source/reference/commands.md:1257
-#: ../../source/reference/commands.md:1277
-#: ../../source/reference/commands.md:1295
-#: ../../source/reference/commands.md:1313
-#: ../../source/reference/commands.md:1341
-#: ../../source/reference/commands.md:1360
-#: ../../source/reference/commands.md:1380
-#: ../../source/reference/commands.md:1404
-#: ../../source/reference/commands.md:1430
-#: ../../source/reference/commands.md:1451
-#: ../../source/reference/commands.md:1470
-#: ../../source/reference/commands.md:1496
-#: ../../source/reference/commands.md:1515
-#: ../../source/reference/commands.md:1535
-#: ../../source/reference/commands.md:1555
-#: ../../source/reference/commands.md:1594
-#: ../../source/reference/commands.md:1614
-#: ../../source/reference/commands.md:1633
-#: ../../source/reference/commands.md:1651
-#: ../../source/reference/commands.md:1687
-#: ../../source/reference/commands.md:1709
-#: ../../source/reference/commands.md:1731
-#: ../../source/reference/commands.md:1752
-#: ../../source/reference/commands.md:1783
-#: ../../source/reference/commands.md:1805
-#: ../../source/reference/commands.md:1826
-#: ../../source/reference/commands.md:1848
-#: ../../source/reference/commands.md:1882
-#: ../../source/reference/commands.md:1904
-#: ../../source/reference/commands.md:1965
-#: ../../source/reference/commands.md:1983
+#: ../../source/reference/commands.md:200
+#: ../../source/reference/commands.md:229
+#: ../../source/reference/commands.md:253
+#: ../../source/reference/commands.md:277
+#: ../../source/reference/commands.md:295
+#: ../../source/reference/commands.md:315
+#: ../../source/reference/commands.md:342
+#: ../../source/reference/commands.md:360
+#: ../../source/reference/commands.md:380
+#: ../../source/reference/commands.md:399
+#: ../../source/reference/commands.md:428
+#: ../../source/reference/commands.md:448
+#: ../../source/reference/commands.md:467
+#: ../../source/reference/commands.md:485
+#: ../../source/reference/commands.md:503
+#: ../../source/reference/commands.md:521
+#: ../../source/reference/commands.md:541
+#: ../../source/reference/commands.md:585
+#: ../../source/reference/commands.md:613
+#: ../../source/reference/commands.md:632
+#: ../../source/reference/commands.md:651
+#: ../../source/reference/commands.md:669
+#: ../../source/reference/commands.md:687
+#: ../../source/reference/commands.md:710
+#: ../../source/reference/commands.md:730
+#: ../../source/reference/commands.md:749
+#: ../../source/reference/commands.md:795
+#: ../../source/reference/commands.md:825
+#: ../../source/reference/commands.md:843
+#: ../../source/reference/commands.md:862
+#: ../../source/reference/commands.md:883
+#: ../../source/reference/commands.md:908
+#: ../../source/reference/commands.md:933
+#: ../../source/reference/commands.md:957
+#: ../../source/reference/commands.md:978
+#: ../../source/reference/commands.md:1000
+#: ../../source/reference/commands.md:1028
+#: ../../source/reference/commands.md:1084
+#: ../../source/reference/commands.md:1103
+#: ../../source/reference/commands.md:1132
+#: ../../source/reference/commands.md:1151
+#: ../../source/reference/commands.md:1171
+#: ../../source/reference/commands.md:1193
+#: ../../source/reference/commands.md:1246
+#: ../../source/reference/commands.md:1266
+#: ../../source/reference/commands.md:1286
+#: ../../source/reference/commands.md:1304
+#: ../../source/reference/commands.md:1322
+#: ../../source/reference/commands.md:1350
+#: ../../source/reference/commands.md:1369
+#: ../../source/reference/commands.md:1389
+#: ../../source/reference/commands.md:1413
+#: ../../source/reference/commands.md:1439
+#: ../../source/reference/commands.md:1460
+#: ../../source/reference/commands.md:1479
+#: ../../source/reference/commands.md:1505
+#: ../../source/reference/commands.md:1524
+#: ../../source/reference/commands.md:1544
+#: ../../source/reference/commands.md:1564
+#: ../../source/reference/commands.md:1603
+#: ../../source/reference/commands.md:1623
+#: ../../source/reference/commands.md:1642
+#: ../../source/reference/commands.md:1660
+#: ../../source/reference/commands.md:1696
+#: ../../source/reference/commands.md:1718
+#: ../../source/reference/commands.md:1740
+#: ../../source/reference/commands.md:1761
+#: ../../source/reference/commands.md:1792
+#: ../../source/reference/commands.md:1814
+#: ../../source/reference/commands.md:1835
+#: ../../source/reference/commands.md:1857
+#: ../../source/reference/commands.md:1891
+#: ../../source/reference/commands.md:1913
+#: ../../source/reference/commands.md:1974
+#: ../../source/reference/commands.md:1992
 msgid "**Error Codes**:"
 msgstr ""
 
@@ -168,70 +168,70 @@ msgstr ""
 #: ../../source/reference/commands.md:76 ../../source/reference/commands.md:128
 #: ../../source/reference/commands.md:151
 #: ../../source/reference/commands.md:172
-#: ../../source/reference/commands.md:194
-#: ../../source/reference/commands.md:222
-#: ../../source/reference/commands.md:246
-#: ../../source/reference/commands.md:270
-#: ../../source/reference/commands.md:288
-#: ../../source/reference/commands.md:308
-#: ../../source/reference/commands.md:336
-#: ../../source/reference/commands.md:354
-#: ../../source/reference/commands.md:373
-#: ../../source/reference/commands.md:393
-#: ../../source/reference/commands.md:422
-#: ../../source/reference/commands.md:441
-#: ../../source/reference/commands.md:460
-#: ../../source/reference/commands.md:478
-#: ../../source/reference/commands.md:496
-#: ../../source/reference/commands.md:514
-#: ../../source/reference/commands.md:534
-#: ../../source/reference/commands.md:578
-#: ../../source/reference/commands.md:625
-#: ../../source/reference/commands.md:644
-#: ../../source/reference/commands.md:662
-#: ../../source/reference/commands.md:681
-#: ../../source/reference/commands.md:703
-#: ../../source/reference/commands.md:723
-#: ../../source/reference/commands.md:742
-#: ../../source/reference/commands.md:789
-#: ../../source/reference/commands.md:818
-#: ../../source/reference/commands.md:836
-#: ../../source/reference/commands.md:855
-#: ../../source/reference/commands.md:877
-#: ../../source/reference/commands.md:902
-#: ../../source/reference/commands.md:927
-#: ../../source/reference/commands.md:951
-#: ../../source/reference/commands.md:973
-#: ../../source/reference/commands.md:994
-#: ../../source/reference/commands.md:1023
-#: ../../source/reference/commands.md:1077
-#: ../../source/reference/commands.md:1097
-#: ../../source/reference/commands.md:1124
-#: ../../source/reference/commands.md:1144
-#: ../../source/reference/commands.md:1164
-#: ../../source/reference/commands.md:1187
-#: ../../source/reference/commands.md:1239
-#: ../../source/reference/commands.md:1259
-#: ../../source/reference/commands.md:1278
-#: ../../source/reference/commands.md:1297
-#: ../../source/reference/commands.md:1315
-#: ../../source/reference/commands.md:1342
-#: ../../source/reference/commands.md:1362
-#: ../../source/reference/commands.md:1382
-#: ../../source/reference/commands.md:1407
-#: ../../source/reference/commands.md:1432
-#: ../../source/reference/commands.md:1454
-#: ../../source/reference/commands.md:1471
-#: ../../source/reference/commands.md:1497
-#: ../../source/reference/commands.md:1517
-#: ../../source/reference/commands.md:1537
-#: ../../source/reference/commands.md:1557
-#: ../../source/reference/commands.md:1785
-#: ../../source/reference/commands.md:1807
-#: ../../source/reference/commands.md:1828
-#: ../../source/reference/commands.md:1851
-#: ../../source/reference/commands.md:1886
-#: ../../source/reference/commands.md:1906
+#: ../../source/reference/commands.md:201
+#: ../../source/reference/commands.md:230
+#: ../../source/reference/commands.md:254
+#: ../../source/reference/commands.md:278
+#: ../../source/reference/commands.md:296
+#: ../../source/reference/commands.md:316
+#: ../../source/reference/commands.md:344
+#: ../../source/reference/commands.md:362
+#: ../../source/reference/commands.md:382
+#: ../../source/reference/commands.md:402
+#: ../../source/reference/commands.md:431
+#: ../../source/reference/commands.md:450
+#: ../../source/reference/commands.md:469
+#: ../../source/reference/commands.md:487
+#: ../../source/reference/commands.md:505
+#: ../../source/reference/commands.md:523
+#: ../../source/reference/commands.md:543
+#: ../../source/reference/commands.md:587
+#: ../../source/reference/commands.md:634
+#: ../../source/reference/commands.md:653
+#: ../../source/reference/commands.md:671
+#: ../../source/reference/commands.md:690
+#: ../../source/reference/commands.md:712
+#: ../../source/reference/commands.md:732
+#: ../../source/reference/commands.md:751
+#: ../../source/reference/commands.md:798
+#: ../../source/reference/commands.md:827
+#: ../../source/reference/commands.md:845
+#: ../../source/reference/commands.md:864
+#: ../../source/reference/commands.md:886
+#: ../../source/reference/commands.md:911
+#: ../../source/reference/commands.md:936
+#: ../../source/reference/commands.md:960
+#: ../../source/reference/commands.md:982
+#: ../../source/reference/commands.md:1003
+#: ../../source/reference/commands.md:1032
+#: ../../source/reference/commands.md:1086
+#: ../../source/reference/commands.md:1106
+#: ../../source/reference/commands.md:1133
+#: ../../source/reference/commands.md:1153
+#: ../../source/reference/commands.md:1173
+#: ../../source/reference/commands.md:1196
+#: ../../source/reference/commands.md:1248
+#: ../../source/reference/commands.md:1268
+#: ../../source/reference/commands.md:1287
+#: ../../source/reference/commands.md:1306
+#: ../../source/reference/commands.md:1324
+#: ../../source/reference/commands.md:1351
+#: ../../source/reference/commands.md:1371
+#: ../../source/reference/commands.md:1391
+#: ../../source/reference/commands.md:1416
+#: ../../source/reference/commands.md:1441
+#: ../../source/reference/commands.md:1463
+#: ../../source/reference/commands.md:1480
+#: ../../source/reference/commands.md:1506
+#: ../../source/reference/commands.md:1526
+#: ../../source/reference/commands.md:1546
+#: ../../source/reference/commands.md:1566
+#: ../../source/reference/commands.md:1794
+#: ../../source/reference/commands.md:1816
+#: ../../source/reference/commands.md:1837
+#: ../../source/reference/commands.md:1860
+#: ../../source/reference/commands.md:1895
+#: ../../source/reference/commands.md:1915
 msgid "`UNAUTHENTICATED`: client key is invalid."
 msgstr ""
 
@@ -243,44 +243,44 @@ msgstr ""
 #: ../../source/reference/commands.md:131
 #: ../../source/reference/commands.md:153
 #: ../../source/reference/commands.md:175
-#: ../../source/reference/commands.md:196
-#: ../../source/reference/commands.md:225
-#: ../../source/reference/commands.md:249
-#: ../../source/reference/commands.md:273
-#: ../../source/reference/commands.md:291
-#: ../../source/reference/commands.md:392
-#: ../../source/reference/commands.md:423
-#: ../../source/reference/commands.md:535
-#: ../../source/reference/commands.md:607
-#: ../../source/reference/commands.md:682
-#: ../../source/reference/commands.md:704
-#: ../../source/reference/commands.md:743
-#: ../../source/reference/commands.md:790
-#: ../../source/reference/commands.md:878
-#: ../../source/reference/commands.md:903
-#: ../../source/reference/commands.md:928
-#: ../../source/reference/commands.md:952
-#: ../../source/reference/commands.md:974
-#: ../../source/reference/commands.md:995
-#: ../../source/reference/commands.md:1024
-#: ../../source/reference/commands.md:1078
-#: ../../source/reference/commands.md:1098
-#: ../../source/reference/commands.md:1125
-#: ../../source/reference/commands.md:1145
-#: ../../source/reference/commands.md:1165
-#: ../../source/reference/commands.md:1240
-#: ../../source/reference/commands.md:1260
-#: ../../source/reference/commands.md:1344
-#: ../../source/reference/commands.md:1383
-#: ../../source/reference/commands.md:1408
-#: ../../source/reference/commands.md:1433
-#: ../../source/reference/commands.md:1597
-#: ../../source/reference/commands.md:1635
-#: ../../source/reference/commands.md:1691
-#: ../../source/reference/commands.md:1735
-#: ../../source/reference/commands.md:1786
-#: ../../source/reference/commands.md:1829
-#: ../../source/reference/commands.md:1885
+#: ../../source/reference/commands.md:204
+#: ../../source/reference/commands.md:233
+#: ../../source/reference/commands.md:257
+#: ../../source/reference/commands.md:281
+#: ../../source/reference/commands.md:299
+#: ../../source/reference/commands.md:401
+#: ../../source/reference/commands.md:432
+#: ../../source/reference/commands.md:544
+#: ../../source/reference/commands.md:616
+#: ../../source/reference/commands.md:691
+#: ../../source/reference/commands.md:713
+#: ../../source/reference/commands.md:752
+#: ../../source/reference/commands.md:799
+#: ../../source/reference/commands.md:887
+#: ../../source/reference/commands.md:912
+#: ../../source/reference/commands.md:937
+#: ../../source/reference/commands.md:961
+#: ../../source/reference/commands.md:983
+#: ../../source/reference/commands.md:1004
+#: ../../source/reference/commands.md:1033
+#: ../../source/reference/commands.md:1087
+#: ../../source/reference/commands.md:1107
+#: ../../source/reference/commands.md:1134
+#: ../../source/reference/commands.md:1154
+#: ../../source/reference/commands.md:1174
+#: ../../source/reference/commands.md:1249
+#: ../../source/reference/commands.md:1269
+#: ../../source/reference/commands.md:1353
+#: ../../source/reference/commands.md:1392
+#: ../../source/reference/commands.md:1417
+#: ../../source/reference/commands.md:1442
+#: ../../source/reference/commands.md:1606
+#: ../../source/reference/commands.md:1644
+#: ../../source/reference/commands.md:1700
+#: ../../source/reference/commands.md:1744
+#: ../../source/reference/commands.md:1795
+#: ../../source/reference/commands.md:1838
+#: ../../source/reference/commands.md:1894
 msgid "`INTERNAL`"
 msgstr ""
 
@@ -296,9 +296,9 @@ msgstr ""
 msgid "**Request**: *MessageGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:46 ../../source/reference/commands.md:186
-#: ../../source/reference/commands.md:259
-#: ../../source/reference/commands.md:281
+#: ../../source/reference/commands.md:46 ../../source/reference/commands.md:193
+#: ../../source/reference/commands.md:267
+#: ../../source/reference/commands.md:289
 #, python-brace-format
 msgid "`message_id` ({ref}`message-messageid`)"
 msgstr ""
@@ -307,19 +307,19 @@ msgstr ""
 msgid "**Response**: *MessageGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:50 ../../source/reference/commands.md:219
-#: ../../source/reference/commands.md:243
-#: ../../source/reference/commands.md:267
-#: ../../source/reference/commands.md:285
+#: ../../source/reference/commands.md:50 ../../source/reference/commands.md:227
+#: ../../source/reference/commands.md:251
+#: ../../source/reference/commands.md:275
+#: ../../source/reference/commands.md:293
 #, python-brace-format
 msgid "`message` ({ref}`message-message`)"
 msgstr ""
 
 #: ../../source/reference/commands.md:54 ../../source/reference/commands.md:152
 #: ../../source/reference/commands.md:173
-#: ../../source/reference/commands.md:195
-#: ../../source/reference/commands.md:271
-#: ../../source/reference/commands.md:289
+#: ../../source/reference/commands.md:202
+#: ../../source/reference/commands.md:279
+#: ../../source/reference/commands.md:297
 msgid "`NOT_FOUND`: message not found."
 msgstr ""
 
@@ -388,8 +388,8 @@ msgid "**Request *(Stream)***: *MessageSendWithAttachmentsRequest*"
 msgstr ""
 
 #: ../../source/reference/commands.md:95
-#: ../../source/reference/commands.md:1032
-#: ../../source/reference/commands.md:1195
+#: ../../source/reference/commands.md:1041
+#: ../../source/reference/commands.md:1204
 msgid "**Oneof `request`**:"
 msgstr ""
 
@@ -399,8 +399,8 @@ msgid "`metadata` ({ref}`message-messagesendwithattachmentsrequestmetadata`)"
 msgstr ""
 
 #: ../../source/reference/commands.md:97
-#: ../../source/reference/commands.md:1034
-#: ../../source/reference/commands.md:1197
+#: ../../source/reference/commands.md:1043
+#: ../../source/reference/commands.md:1206
 msgid "`payload` (bytes)"
 msgstr ""
 
@@ -423,8 +423,8 @@ msgstr ""
 
 #: ../../source/reference/commands.md:109
 #: ../../source/reference/commands.md:123
-#: ../../source/reference/commands.md:1054
-#: ../../source/reference/commands.md:1217
+#: ../../source/reference/commands.md:1063
+#: ../../source/reference/commands.md:1226
 msgid "**Fields:**"
 msgstr ""
 
@@ -451,8 +451,8 @@ msgid "describe a file you want to attach to a message"
 msgstr ""
 
 #: ../../source/reference/commands.md:124
-#: ../../source/reference/commands.md:1056
-#: ../../source/reference/commands.md:1218
+#: ../../source/reference/commands.md:1065
+#: ../../source/reference/commands.md:1227
 msgid "`filename` (string)"
 msgstr ""
 
@@ -491,42 +491,42 @@ msgstr ""
 
 #: ../../source/reference/commands.md:148
 #: ../../source/reference/commands.md:169
-#: ../../source/reference/commands.md:191
-#: ../../source/reference/commands.md:301
-#: ../../source/reference/commands.md:305
-#: ../../source/reference/commands.md:369
-#: ../../source/reference/commands.md:510
-#: ../../source/reference/commands.md:554
-#: ../../source/reference/commands.md:574
-#: ../../source/reference/commands.md:676
-#: ../../source/reference/commands.md:699
-#: ../../source/reference/commands.md:738
-#: ../../source/reference/commands.md:784
-#: ../../source/reference/commands.md:1117
-#: ../../source/reference/commands.md:1136
-#: ../../source/reference/commands.md:1156
-#: ../../source/reference/commands.md:1182
-#: ../../source/reference/commands.md:1201
-#: ../../source/reference/commands.md:1231
-#: ../../source/reference/commands.md:1251
-#: ../../source/reference/commands.md:1255
-#: ../../source/reference/commands.md:1271
-#: ../../source/reference/commands.md:1402
-#: ../../source/reference/commands.md:1428
-#: ../../source/reference/commands.md:1449
-#: ../../source/reference/commands.md:1468
-#: ../../source/reference/commands.md:1490
-#: ../../source/reference/commands.md:1781
-#: ../../source/reference/commands.md:1799
-#: ../../source/reference/commands.md:1803
-#: ../../source/reference/commands.md:1846
-#: ../../source/reference/commands.md:1927
-#: ../../source/reference/commands.md:1931
-#: ../../source/reference/commands.md:1943
-#: ../../source/reference/commands.md:1959
-#: ../../source/reference/commands.md:1963
-#: ../../source/reference/commands.md:1977
-#: ../../source/reference/commands.md:1981
+#: ../../source/reference/commands.md:198
+#: ../../source/reference/commands.md:309
+#: ../../source/reference/commands.md:313
+#: ../../source/reference/commands.md:378
+#: ../../source/reference/commands.md:519
+#: ../../source/reference/commands.md:563
+#: ../../source/reference/commands.md:583
+#: ../../source/reference/commands.md:685
+#: ../../source/reference/commands.md:708
+#: ../../source/reference/commands.md:747
+#: ../../source/reference/commands.md:793
+#: ../../source/reference/commands.md:1126
+#: ../../source/reference/commands.md:1145
+#: ../../source/reference/commands.md:1165
+#: ../../source/reference/commands.md:1191
+#: ../../source/reference/commands.md:1210
+#: ../../source/reference/commands.md:1240
+#: ../../source/reference/commands.md:1260
+#: ../../source/reference/commands.md:1264
+#: ../../source/reference/commands.md:1280
+#: ../../source/reference/commands.md:1411
+#: ../../source/reference/commands.md:1437
+#: ../../source/reference/commands.md:1458
+#: ../../source/reference/commands.md:1477
+#: ../../source/reference/commands.md:1499
+#: ../../source/reference/commands.md:1790
+#: ../../source/reference/commands.md:1808
+#: ../../source/reference/commands.md:1812
+#: ../../source/reference/commands.md:1855
+#: ../../source/reference/commands.md:1936
+#: ../../source/reference/commands.md:1940
+#: ../../source/reference/commands.md:1952
+#: ../../source/reference/commands.md:1968
+#: ../../source/reference/commands.md:1972
+#: ../../source/reference/commands.md:1986
+#: ../../source/reference/commands.md:1990
 msgid "*Empty payload.*"
 msgstr ""
 
@@ -564,2114 +564,2133 @@ msgid "MessageDelete"
 msgstr ""
 
 #: ../../source/reference/commands.md:181
-msgid "Delete a message giving its id.   TODO delete everywhere ?"
+msgid "Delete a message giving its id.   If *delete_everywhere* is specified, the message (and associated attachments) will be deleted on every other participant devices.   *delete_everywhere* is only allowed in certain circumstances.   For one to one discussions:"
 msgstr ""
 
 #: ../../source/reference/commands.md:185
+msgid "inbound message: you cannot remote delete your contact messages"
+msgstr ""
+
+#: ../../source/reference/commands.md:186
+msgid "outbound message: you can always remote delete your own messages   For group discussions:"
+msgstr ""
+
+#: ../../source/reference/commands.md:188
+msgid "inbound message: you must have *remote_delete_anything* permission"
+msgstr ""
+
+#: ../../source/reference/commands.md:189
+msgid "outbound message: you must have *remote_delete_anything* or *edit_or_remote_delete_own_messages* permission."
+msgstr ""
+
+#: ../../source/reference/commands.md:192
 msgid "**Request**: *MessageDeleteRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:187
-#: ../../source/reference/commands.md:365
+#: ../../source/reference/commands.md:194
 msgid "`delete_everywhere` (**optional** bool)"
 msgstr ""
 
-#: ../../source/reference/commands.md:190
+#: ../../source/reference/commands.md:197
 msgid "**Response**: *MessageDeleteResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:200
-msgid "MessageSendLocation"
-msgstr ""
-
-#: ../../source/reference/commands.md:202
-msgid "Post a location message in a discussion.   A location message represents a specific location, and is different from a location sharing that can be updated later."
-msgstr ""
-
-#: ../../source/reference/commands.md:206
-msgid "**Request**: *MessageSendLocationRequest*"
-msgstr ""
-
-#: ../../source/reference/commands.md:207
-#: ../../source/reference/commands.md:235
-#: ../../source/reference/commands.md:433
-#: ../../source/reference/commands.md:452
-#: ../../source/reference/commands.md:506
-#: ../../source/reference/commands.md:526
-#: ../../source/reference/commands.md:570
-#: ../../source/reference/commands.md:1529
-#: ../../source/reference/commands.md:1680
-#: ../../source/reference/commands.md:1702
-#: ../../source/reference/commands.md:1723
-#: ../../source/reference/commands.md:1745
-#: ../../source/reference/commands.md:1876
-msgid "`discussion_id` (uint64)"
+#: ../../source/reference/commands.md:203
+msgid "`INVALID_ARGUMENT`: cannot delete everywhere this message"
 msgstr ""
 
 #: ../../source/reference/commands.md:208
-#: ../../source/reference/commands.md:236
-#: ../../source/reference/commands.md:260
-msgid "`latitude` (double)"
-msgstr ""
-
-#: ../../source/reference/commands.md:209
-#: ../../source/reference/commands.md:237
-#: ../../source/reference/commands.md:261
-msgid "`longitude` (double)"
+msgid "MessageSendLocation"
 msgstr ""
 
 #: ../../source/reference/commands.md:210
-#: ../../source/reference/commands.md:238
-#: ../../source/reference/commands.md:262
-msgid "`altitude` (**optional** double)"
-msgstr ""
-
-#: ../../source/reference/commands.md:211
-#: ../../source/reference/commands.md:239
-#: ../../source/reference/commands.md:263
-msgid "`precision` (**optional** float)"
-msgstr ""
-
-#: ../../source/reference/commands.md:212
-msgid "`address` (**optional** string)"
-msgstr ""
-
-#: ../../source/reference/commands.md:213
-msgid "`preview_filename` (**optional** string - *attach an option preview as a picture, specify filename to use*)"
+msgid "Post a location message in a discussion.   A location message represents a specific location, and is different from a location sharing that can be updated later."
 msgstr ""
 
 #: ../../source/reference/commands.md:214
-msgid "`preview_payload` (**optional** bytes - *attach an option preview as a picture, specify payload (must be smaller than grpc max message size)*)"
+msgid "**Request**: *MessageSendLocationRequest*"
 msgstr ""
 
 #: ../../source/reference/commands.md:215
+#: ../../source/reference/commands.md:243
+#: ../../source/reference/commands.md:442
+#: ../../source/reference/commands.md:461
+#: ../../source/reference/commands.md:515
+#: ../../source/reference/commands.md:535
+#: ../../source/reference/commands.md:579
+#: ../../source/reference/commands.md:1538
+#: ../../source/reference/commands.md:1689
+#: ../../source/reference/commands.md:1711
+#: ../../source/reference/commands.md:1732
+#: ../../source/reference/commands.md:1754
+#: ../../source/reference/commands.md:1885
+msgid "`discussion_id` (uint64)"
+msgstr ""
+
+#: ../../source/reference/commands.md:216
+#: ../../source/reference/commands.md:244
+#: ../../source/reference/commands.md:268
+msgid "`latitude` (double)"
+msgstr ""
+
+#: ../../source/reference/commands.md:217
+#: ../../source/reference/commands.md:245
+#: ../../source/reference/commands.md:269
+msgid "`longitude` (double)"
+msgstr ""
+
+#: ../../source/reference/commands.md:218
+#: ../../source/reference/commands.md:246
+#: ../../source/reference/commands.md:270
+msgid "`altitude` (**optional** double)"
+msgstr ""
+
+#: ../../source/reference/commands.md:219
+#: ../../source/reference/commands.md:247
+#: ../../source/reference/commands.md:271
+msgid "`precision` (**optional** float)"
+msgstr ""
+
+#: ../../source/reference/commands.md:220
+msgid "`address` (**optional** string)"
+msgstr ""
+
+#: ../../source/reference/commands.md:221
+msgid "`preview_filename` (**optional** string - *attach an option preview as a picture, specify filename to use*)"
+msgstr ""
+
+#: ../../source/reference/commands.md:222
+msgid "`preview_payload` (**optional** bytes - *attach an option preview as a picture, specify payload (must be smaller than grpc max message size)*)"
+msgstr ""
+
+#: ../../source/reference/commands.md:223
 #, python-brace-format
 msgid "`ephemerality` (**optional** {ref}`message-messageephemerality` - *make your location message ephemeral*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:218
+#: ../../source/reference/commands.md:226
 msgid "**Response**: *MessageSendLocationResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:223
-#: ../../source/reference/commands.md:247
-#: ../../source/reference/commands.md:440
-#: ../../source/reference/commands.md:459
-#: ../../source/reference/commands.md:477
-#: ../../source/reference/commands.md:495
-#: ../../source/reference/commands.md:513
-#: ../../source/reference/commands.md:533
-#: ../../source/reference/commands.md:577
-#: ../../source/reference/commands.md:1690
-#: ../../source/reference/commands.md:1712
-#: ../../source/reference/commands.md:1734
-#: ../../source/reference/commands.md:1755
-#: ../../source/reference/commands.md:1883
+#: ../../source/reference/commands.md:231
+#: ../../source/reference/commands.md:255
+#: ../../source/reference/commands.md:449
+#: ../../source/reference/commands.md:468
+#: ../../source/reference/commands.md:486
+#: ../../source/reference/commands.md:504
+#: ../../source/reference/commands.md:522
+#: ../../source/reference/commands.md:542
+#: ../../source/reference/commands.md:586
+#: ../../source/reference/commands.md:1699
+#: ../../source/reference/commands.md:1721
+#: ../../source/reference/commands.md:1743
+#: ../../source/reference/commands.md:1764
+#: ../../source/reference/commands.md:1892
 msgid "`NOT_FOUND`: discussion not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:224
+#: ../../source/reference/commands.md:232
 msgid "`INVALID_ARGUMENT`: latitude and longitude are both equal to zero / preview_filename and preview_payload must be set together."
 msgstr ""
 
-#: ../../source/reference/commands.md:229
+#: ../../source/reference/commands.md:237
 msgid "MessageStartLocationSharing"
 msgstr ""
 
-#: ../../source/reference/commands.md:231
+#: ../../source/reference/commands.md:239
 msgid "Start sharing a location in a discussion."
 msgstr ""
 
-#: ../../source/reference/commands.md:234
+#: ../../source/reference/commands.md:242
 msgid "**Request**: *MessageStartLocationSharingRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:242
+#: ../../source/reference/commands.md:250
 msgid "**Response**: *MessageStartLocationSharingResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:248
+#: ../../source/reference/commands.md:256
 msgid "`INVALID_ARGUMENT`: latitude and longitude are both equal to zero."
 msgstr ""
 
-#: ../../source/reference/commands.md:253
+#: ../../source/reference/commands.md:261
 msgid "MessageUpdateLocationSharing"
 msgstr ""
 
-#: ../../source/reference/commands.md:255
+#: ../../source/reference/commands.md:263
 msgid "Update one of your sharing location message with a new location."
 msgstr ""
 
-#: ../../source/reference/commands.md:258
+#: ../../source/reference/commands.md:266
 msgid "**Request**: *MessageUpdateLocationSharingRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:266
+#: ../../source/reference/commands.md:274
 msgid "**Response**: *MessageUpdateLocationSharingResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:272
+#: ../../source/reference/commands.md:280
 msgid "`INVALID_ARGUMENT`: you can only update your location sharing messages / sharing is no longer active."
 msgstr ""
 
-#: ../../source/reference/commands.md:277
+#: ../../source/reference/commands.md:285
 msgid "MessageEndLocationSharing"
 msgstr ""
 
-#: ../../source/reference/commands.md:280
+#: ../../source/reference/commands.md:288
 msgid "**Request**: *MessageEndLocationSharingRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:284
+#: ../../source/reference/commands.md:292
 msgid "**Response**: *MessageEndLocationSharingResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:290
+#: ../../source/reference/commands.md:298
 msgid "`INVALID_ARGUMENT`: you can only end your location sharing messages / sharing is no longer active."
 msgstr ""
 
-#: ../../source/reference/commands.md:295
+#: ../../source/reference/commands.md:303
 msgid "MessageRefresh"
 msgstr ""
 
-#: ../../source/reference/commands.md:297
+#: ../../source/reference/commands.md:305
 msgid "Manually refresh messages available on server."
 msgstr ""
 
-#: ../../source/reference/commands.md:300
+#: ../../source/reference/commands.md:308
 msgid "**Request**: *MessageRefreshRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:304
+#: ../../source/reference/commands.md:312
 msgid "**Response**: *MessageRefreshResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:314
+#: ../../source/reference/commands.md:322
 msgid "Attachment Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:318
+#: ../../source/reference/commands.md:326
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-attachment`"
 msgstr ""
 
-#: ../../source/reference/commands.md:321
+#: ../../source/reference/commands.md:329
 msgid "AttachmentList"
 msgstr ""
 
-#: ../../source/reference/commands.md:323
+#: ../../source/reference/commands.md:331
 msgid "List attachments for current identity.   Pass a filter to select only attachments that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:327
+#: ../../source/reference/commands.md:335
 msgid "**Request**: *AttachmentListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:328
+#: ../../source/reference/commands.md:336
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-attachmentfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:331
+#: ../../source/reference/commands.md:339
 msgid "**Response *(Stream)***: *AttachmentListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:332
+#: ../../source/reference/commands.md:340
 #, python-brace-format
 msgid "`attachments` (**repeated** {ref}`message-attachment`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:335
+#: ../../source/reference/commands.md:343
 msgid "`NOT_FOUND` (\"Message not found\"): filter.messageId does not belong to an identity message."
 msgstr ""
 
-#: ../../source/reference/commands.md:340
+#: ../../source/reference/commands.md:348
 msgid "AttachmentGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:342
+#: ../../source/reference/commands.md:350
 msgid "Get an attachment by id."
 msgstr ""
 
-#: ../../source/reference/commands.md:345
+#: ../../source/reference/commands.md:353
 msgid "**Request**: *AttachmentGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:346
-#: ../../source/reference/commands.md:364
-#: ../../source/reference/commands.md:384
+#: ../../source/reference/commands.md:354
+#: ../../source/reference/commands.md:374
+#: ../../source/reference/commands.md:393
 #, python-brace-format
 msgid "`attachment_id` ({ref}`message-attachmentid`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:349
+#: ../../source/reference/commands.md:357
 msgid "**Response**: *AttachmentGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:350
+#: ../../source/reference/commands.md:358
 #, python-brace-format
 msgid "`attachment` ({ref}`message-attachment`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:353
-#: ../../source/reference/commands.md:372
-#: ../../source/reference/commands.md:391
+#: ../../source/reference/commands.md:361
+#: ../../source/reference/commands.md:381
+#: ../../source/reference/commands.md:400
 msgid "`NOT_FOUND` (*Attachment not found*): attachment_id does not belong to an identity attachment."
 msgstr ""
 
-#: ../../source/reference/commands.md:358
+#: ../../source/reference/commands.md:366
 msgid "AttachmentDelete"
 msgstr ""
 
-#: ../../source/reference/commands.md:360
-msgid "Delete an attachment by id."
+#: ../../source/reference/commands.md:368
+msgid "Delete an attachment by id.   Use this to delete attachment and associated file locally to save space.   Else message deletion implies associated attachments deletion."
 msgstr ""
 
-#: ../../source/reference/commands.md:363
+#: ../../source/reference/commands.md:373
 msgid "**Request**: *AttachmentDeleteRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:368
+#: ../../source/reference/commands.md:377
 msgid "**Response**: *AttachmentDeleteResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:377
+#: ../../source/reference/commands.md:386
 msgid "AttachmentDownload"
 msgstr ""
 
-#: ../../source/reference/commands.md:379
+#: ../../source/reference/commands.md:388
 msgid "Download the file associated to an attachment.   This returns one or more chunks of bytes."
 msgstr ""
 
-#: ../../source/reference/commands.md:383
+#: ../../source/reference/commands.md:392
 msgid "**Request**: *AttachmentDownloadRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:387
+#: ../../source/reference/commands.md:396
 msgid "**Response *(Stream)***: *AttachmentDownloadResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:388
+#: ../../source/reference/commands.md:397
 msgid "`chunk` (bytes)"
 msgstr ""
 
-#: ../../source/reference/commands.md:399
+#: ../../source/reference/commands.md:408
 msgid "Discussion Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:403
+#: ../../source/reference/commands.md:412
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-discussion`"
 msgstr ""
 
-#: ../../source/reference/commands.md:406
+#: ../../source/reference/commands.md:415
 msgid "DiscussionList"
 msgstr ""
 
-#: ../../source/reference/commands.md:408
+#: ../../source/reference/commands.md:417
 msgid "List discussions for current identity.   Pass a filter to select only discussions that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:412
+#: ../../source/reference/commands.md:421
 msgid "**Request**: *DiscussionListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:413
+#: ../../source/reference/commands.md:422
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-discussionfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:416
+#: ../../source/reference/commands.md:425
 msgid "**Response *(Stream)***: *DiscussionListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:417
-#: ../../source/reference/commands.md:558
+#: ../../source/reference/commands.md:426
+#: ../../source/reference/commands.md:567
 #, python-brace-format
 msgid "`discussions` (**repeated** {ref}`message-discussion`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:420
-#: ../../source/reference/commands.md:605
-#: ../../source/reference/commands.md:817
-#: ../../source/reference/commands.md:1343
+#: ../../source/reference/commands.md:429
+#: ../../source/reference/commands.md:614
+#: ../../source/reference/commands.md:826
+#: ../../source/reference/commands.md:1352
 msgid "`INVALID_ARGUMENT`: invalid filter."
 msgstr ""
 
-#: ../../source/reference/commands.md:421
+#: ../../source/reference/commands.md:430
 msgid "`NOT_FOUND`: filter contact not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:427
+#: ../../source/reference/commands.md:436
 msgid "DiscussionGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:429
+#: ../../source/reference/commands.md:438
 msgid "Get discussion by id."
 msgstr ""
 
-#: ../../source/reference/commands.md:432
+#: ../../source/reference/commands.md:441
 msgid "**Request**: *DiscussionGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:436
+#: ../../source/reference/commands.md:445
 msgid "**Response**: *DiscussionGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:437
-#: ../../source/reference/commands.md:474
-#: ../../source/reference/commands.md:492
+#: ../../source/reference/commands.md:446
+#: ../../source/reference/commands.md:483
+#: ../../source/reference/commands.md:501
 #, python-brace-format
 msgid "`discussion` ({ref}`message-discussion`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:445
+#: ../../source/reference/commands.md:454
 msgid "DiscussionGetBytesIdentifier"
 msgstr ""
 
-#: ../../source/reference/commands.md:447
+#: ../../source/reference/commands.md:456
 msgid "Get a discussion identifier as bytes.   This is useful to have a long term identifier for a discussion, backup-proof, and common to any device."
 msgstr ""
 
-#: ../../source/reference/commands.md:451
+#: ../../source/reference/commands.md:460
 msgid "**Request**: *DiscussionGetBytesIdentifierRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:455
+#: ../../source/reference/commands.md:464
 msgid "**Response**: *DiscussionGetBytesIdentifierResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:456
-#: ../../source/reference/commands.md:640
-#: ../../source/reference/commands.md:851
-#: ../../source/reference/commands.md:1140
+#: ../../source/reference/commands.md:465
+#: ../../source/reference/commands.md:649
+#: ../../source/reference/commands.md:860
+#: ../../source/reference/commands.md:1149
 msgid "`identifier` (bytes)"
 msgstr ""
 
-#: ../../source/reference/commands.md:464
+#: ../../source/reference/commands.md:473
 msgid "DiscussionGetByContact"
 msgstr ""
 
-#: ../../source/reference/commands.md:466
+#: ../../source/reference/commands.md:475
 msgid "Get discussion by contact id."
 msgstr ""
 
-#: ../../source/reference/commands.md:469
+#: ../../source/reference/commands.md:478
 msgid "**Request**: *DiscussionGetByContactRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:470
-#: ../../source/reference/commands.md:617
-#: ../../source/reference/commands.md:636
-#: ../../source/reference/commands.md:654
-#: ../../source/reference/commands.md:672
-#: ../../source/reference/commands.md:715
-#: ../../source/reference/commands.md:734
-#: ../../source/reference/commands.md:762
-#: ../../source/reference/commands.md:780
+#: ../../source/reference/commands.md:479
+#: ../../source/reference/commands.md:626
+#: ../../source/reference/commands.md:645
+#: ../../source/reference/commands.md:663
+#: ../../source/reference/commands.md:681
+#: ../../source/reference/commands.md:724
+#: ../../source/reference/commands.md:743
+#: ../../source/reference/commands.md:771
+#: ../../source/reference/commands.md:789
 msgid "`contact_id` (uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:473
+#: ../../source/reference/commands.md:482
 msgid "**Response**: *DiscussionGetByContactResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:482
+#: ../../source/reference/commands.md:491
 msgid "DiscussionGetByGroup"
 msgstr ""
 
-#: ../../source/reference/commands.md:484
+#: ../../source/reference/commands.md:493
 msgid "Get discussion by group id."
 msgstr ""
 
-#: ../../source/reference/commands.md:487
+#: ../../source/reference/commands.md:496
 msgid "**Request**: *DiscussionGetByGroupRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:488
-#: ../../source/reference/commands.md:828
-#: ../../source/reference/commands.md:847
-#: ../../source/reference/commands.md:963
-#: ../../source/reference/commands.md:985
-#: ../../source/reference/commands.md:1055
-#: ../../source/reference/commands.md:1069
-#: ../../source/reference/commands.md:1088
+#: ../../source/reference/commands.md:497
+#: ../../source/reference/commands.md:837
+#: ../../source/reference/commands.md:856
+#: ../../source/reference/commands.md:972
+#: ../../source/reference/commands.md:994
+#: ../../source/reference/commands.md:1064
+#: ../../source/reference/commands.md:1078
+#: ../../source/reference/commands.md:1097
 msgid "`group_id` (uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:491
+#: ../../source/reference/commands.md:500
 msgid "**Response**: *DiscussionGetByGroupResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:500
+#: ../../source/reference/commands.md:509
 msgid "DiscussionEmpty"
 msgstr ""
 
-#: ../../source/reference/commands.md:502
+#: ../../source/reference/commands.md:511
 msgid "Delete all messages and attachments in a discussion."
 msgstr ""
 
-#: ../../source/reference/commands.md:505
+#: ../../source/reference/commands.md:514
 msgid "**Request**: *DiscussionEmptyRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:509
+#: ../../source/reference/commands.md:518
 msgid "**Response**: *DiscussionEmptyResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:518
+#: ../../source/reference/commands.md:527
 msgid "DiscussionDownloadPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:520
+#: ../../source/reference/commands.md:529
 msgid "Download a discussion photo.   The photo can be the contact photo, the group photo, or a generated image for the discussion if a specific image was not set.   Photos are always jpeg files with a maximum of 1080x1080 resolution."
 msgstr ""
 
-#: ../../source/reference/commands.md:525
+#: ../../source/reference/commands.md:534
 msgid "**Request**: *DiscussionDownloadPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:529
+#: ../../source/reference/commands.md:538
 msgid "**Response**: *DiscussionDownloadPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:530
-#: ../../source/reference/commands.md:719
-#: ../../source/reference/commands.md:1073
-#: ../../source/reference/commands.md:1235
+#: ../../source/reference/commands.md:539
+#: ../../source/reference/commands.md:728
+#: ../../source/reference/commands.md:1082
+#: ../../source/reference/commands.md:1244
 msgid "`photo` (bytes)"
 msgstr ""
 
-#: ../../source/reference/commands.md:539
+#: ../../source/reference/commands.md:548
 msgid "DiscussionLockedList"
 msgstr ""
 
-#: ../../source/reference/commands.md:541
+#: ../../source/reference/commands.md:550
 msgid "locked discussions"
 msgstr ""
 
-#: ../../source/reference/commands.md:544
+#: ../../source/reference/commands.md:553
 msgid "**Request**: *DiscussionLockedListRequest* DiscussionLockedList List locked discussions. Locked discussions are discussions associated to a deleted contact or a group you left. Messages in those discussions are still accessible, but you cannot post new messages in those discussions."
 msgstr ""
 
-#: ../../source/reference/commands.md:550
+#: ../../source/reference/commands.md:559
 msgid "**Error codes**: `UNAUTHENTICATED`: client key is invalid. `INTERNAL`"
 msgstr ""
 
-#: ../../source/reference/commands.md:557
+#: ../../source/reference/commands.md:566
 msgid "**Response *(Stream)***: *DiscussionLockedListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:563
+#: ../../source/reference/commands.md:572
 msgid "DiscussionLockedDelete"
 msgstr ""
 
-#: ../../source/reference/commands.md:565
+#: ../../source/reference/commands.md:574
 msgid "Delete a locked discussion by id.   This will delete discussion and its content, including messages and attached files."
 msgstr ""
 
-#: ../../source/reference/commands.md:569
+#: ../../source/reference/commands.md:578
 msgid "**Request**: *DiscussionLockedDeleteRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:573
+#: ../../source/reference/commands.md:582
 msgid "**Response**: *DiscussionLockedDeleteResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:584
+#: ../../source/reference/commands.md:593
 msgid "Contact Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:588
+#: ../../source/reference/commands.md:597
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-contact`"
 msgstr ""
 
-#: ../../source/reference/commands.md:591
+#: ../../source/reference/commands.md:600
 msgid "ContactList"
 msgstr ""
 
-#: ../../source/reference/commands.md:593
+#: ../../source/reference/commands.md:602
 msgid "List contacts for current identity.   Pass a filter to select only contacts that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:597
+#: ../../source/reference/commands.md:606
 msgid "**Request**: *ContactListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:598
+#: ../../source/reference/commands.md:607
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-contactfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:601
+#: ../../source/reference/commands.md:610
 msgid "**Response *(Stream)***: *ContactListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:602
+#: ../../source/reference/commands.md:611
 #, python-brace-format
 msgid "`contacts` (**repeated** {ref}`message-contact`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:606
+#: ../../source/reference/commands.md:615
 msgid "`UNAUTHENTICATED`: client key is invalid"
 msgstr ""
 
-#: ../../source/reference/commands.md:611
+#: ../../source/reference/commands.md:620
 msgid "ContactGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:613
+#: ../../source/reference/commands.md:622
 msgid "Get a contact by id."
 msgstr ""
 
-#: ../../source/reference/commands.md:616
+#: ../../source/reference/commands.md:625
 msgid "**Request**: *ContactGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:620
+#: ../../source/reference/commands.md:629
 msgid "**Response**: *ContactGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:621
+#: ../../source/reference/commands.md:630
 #, python-brace-format
 msgid "`contact` ({ref}`message-contact`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:624
-#: ../../source/reference/commands.md:643
-#: ../../source/reference/commands.md:661
-#: ../../source/reference/commands.md:679
-#: ../../source/reference/commands.md:722
-#: ../../source/reference/commands.md:741
-#: ../../source/reference/commands.md:787
+#: ../../source/reference/commands.md:633
+#: ../../source/reference/commands.md:652
+#: ../../source/reference/commands.md:670
+#: ../../source/reference/commands.md:688
+#: ../../source/reference/commands.md:731
+#: ../../source/reference/commands.md:750
+#: ../../source/reference/commands.md:796
 msgid "`NOT_FOUND`: contact not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:629
+#: ../../source/reference/commands.md:638
 msgid "ContactGetBytesIdentifier"
 msgstr ""
 
-#: ../../source/reference/commands.md:631
+#: ../../source/reference/commands.md:640
 msgid "Get a contact identity as bytes.   This is useful to have a long term identifier for a contact, backup-proof, and common to any device."
 msgstr ""
 
-#: ../../source/reference/commands.md:635
+#: ../../source/reference/commands.md:644
 msgid "**Request**: *ContactGetBytesIdentifierRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:639
+#: ../../source/reference/commands.md:648
 msgid "**Response**: *ContactGetBytesIdentifierResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:648
+#: ../../source/reference/commands.md:657
 msgid "ContactGetInvitationLink"
 msgstr ""
 
-#: ../../source/reference/commands.md:650
+#: ../../source/reference/commands.md:659
 msgid "Get a contact invitation link."
 msgstr ""
 
-#: ../../source/reference/commands.md:653
+#: ../../source/reference/commands.md:662
 msgid "**Request**: *ContactGetInvitationLinkRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:657
+#: ../../source/reference/commands.md:666
 msgid "**Response**: *ContactGetInvitationLinkResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:658
-#: ../../source/reference/commands.md:1160
+#: ../../source/reference/commands.md:667
+#: ../../source/reference/commands.md:1169
 msgid "`invitation_link` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:666
+#: ../../source/reference/commands.md:675
 msgid "ContactDelete"
 msgstr ""
 
-#: ../../source/reference/commands.md:668
+#: ../../source/reference/commands.md:677
 msgid "Delete a contact by id."
 msgstr ""
 
-#: ../../source/reference/commands.md:671
+#: ../../source/reference/commands.md:680
 msgid "**Request**: *ContactDeleteRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:675
+#: ../../source/reference/commands.md:684
 msgid "**Response**: *ContactDeleteResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:680
+#: ../../source/reference/commands.md:689
 msgid "`INVALID_ARGUMENT`: contact is still in a group."
 msgstr ""
 
-#: ../../source/reference/commands.md:686
+#: ../../source/reference/commands.md:695
 msgid "ContactIntroduction"
 msgstr ""
 
-#: ../../source/reference/commands.md:688
+#: ../../source/reference/commands.md:697
 msgid "Introduce two of your contacts together.   They will both receive an invitation to accept.   If each of the two accepts, they will be added to each other's contact book and can exchange."
 msgstr ""
 
-#: ../../source/reference/commands.md:693
+#: ../../source/reference/commands.md:702
 msgid "**Request**: *ContactIntroductionRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:694
+#: ../../source/reference/commands.md:703
 msgid "`first_contact_id` (uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:695
+#: ../../source/reference/commands.md:704
 msgid "`second_contact_id` (uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:698
+#: ../../source/reference/commands.md:707
 msgid "**Response**: *ContactIntroductionResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:702
+#: ../../source/reference/commands.md:711
 msgid "`NOT_FOUND`: first or second contact not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:708
+#: ../../source/reference/commands.md:717
 msgid "ContactDownloadPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:710
+#: ../../source/reference/commands.md:719
 msgid "Download the contact profile picture as bytes, or the group picture, or the generated image for this discussion.   Pictures are always jpeg files with a maximum of 1080x1080 resolution."
 msgstr ""
 
-#: ../../source/reference/commands.md:714
+#: ../../source/reference/commands.md:723
 msgid "**Request**: *ContactDownloadPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:718
+#: ../../source/reference/commands.md:727
 msgid "**Response**: *ContactDownloadPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:727
+#: ../../source/reference/commands.md:736
 msgid "ContactRecreateChannels"
 msgstr ""
 
-#: ../../source/reference/commands.md:729
+#: ../../source/reference/commands.md:738
 msgid "Reset cryptographic channels with a contact.   USE CAREFULLY: this might fix some issues but every non sent / received messages will be lost."
 msgstr ""
 
-#: ../../source/reference/commands.md:733
+#: ../../source/reference/commands.md:742
 msgid "**Request**: *ContactRecreateChannelsRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:737
+#: ../../source/reference/commands.md:746
 msgid "**Response**: *ContactRecreateChannelsResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:747
+#: ../../source/reference/commands.md:756
 msgid "ContactInviteToOneToOneDiscussion"
 msgstr ""
 
-#: ../../source/reference/commands.md:749
+#: ../../source/reference/commands.md:758
 msgid "collected contacts"
 msgstr ""
 
-#: ../../source/reference/commands.md:752
+#: ../../source/reference/commands.md:761
 msgid "**Request**: *ContactInviteToOneToOneDiscussionRequest* ContactInviteToOneToOneDiscussion Invite a non one-to-one contact to have a one-to-one discussion."
 msgstr ""
 
-#: ../../source/reference/commands.md:756
+#: ../../source/reference/commands.md:765
 msgid "**Error codes**: `NOT_FOUND`: contact not found. `INVALID_ARGUMENT`: contact already has a one to one discussion. `UNAUTHENTICATED`: client key is invalid. `INTERNAL`"
 msgstr ""
 
-#: ../../source/reference/commands.md:765
+#: ../../source/reference/commands.md:774
 msgid "**Response**: *ContactInviteToOneToOneDiscussionResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:766
-#: ../../source/reference/commands.md:1358
-#: ../../source/reference/commands.md:1378
+#: ../../source/reference/commands.md:775
+#: ../../source/reference/commands.md:1367
+#: ../../source/reference/commands.md:1387
 #, python-brace-format
 msgid "`invitation` ({ref}`message-invitation`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:771
+#: ../../source/reference/commands.md:780
 msgid "ContactDowngradeOneToOneDiscussion"
 msgstr ""
 
-#: ../../source/reference/commands.md:773
+#: ../../source/reference/commands.md:782
 msgid "ContactDowngradeOneToOne   Downgrade a one-to-one contact to a non one-to-one contact.   This will lock current discussion with this contact.   The contact will always be in your contact book and common groups but you will no longer be able to exchange direct message."
 msgstr ""
 
-#: ../../source/reference/commands.md:779
+#: ../../source/reference/commands.md:788
 msgid "**Request**: *ContactDowngradeOneToOneDiscussionRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:783
+#: ../../source/reference/commands.md:792
 msgid "**Response**: *ContactDowngradeOneToOneDiscussionResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:788
+#: ../../source/reference/commands.md:797
 msgid "`INVALID_ARGUMENT`: contact is not one to one, does not have established channel or does not support one to one downgrade."
 msgstr ""
 
-#: ../../source/reference/commands.md:796
+#: ../../source/reference/commands.md:805
 msgid "Group Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:800
+#: ../../source/reference/commands.md:809
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-group`"
 msgstr ""
 
-#: ../../source/reference/commands.md:803
+#: ../../source/reference/commands.md:812
 msgid "GroupList"
 msgstr ""
 
-#: ../../source/reference/commands.md:805
+#: ../../source/reference/commands.md:814
 msgid "List groups for current identity.   Pass a filter to select only groups that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:809
+#: ../../source/reference/commands.md:818
 msgid "**Request**: *GroupListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:810
+#: ../../source/reference/commands.md:819
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-groupfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:813
+#: ../../source/reference/commands.md:822
 msgid "**Response *(Stream)***: *GroupListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:814
+#: ../../source/reference/commands.md:823
 #, python-brace-format
 msgid "`groups` (**repeated** {ref}`message-group`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:822
+#: ../../source/reference/commands.md:831
 msgid "GroupGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:824
+#: ../../source/reference/commands.md:833
 msgid "Get group by id."
 msgstr ""
 
-#: ../../source/reference/commands.md:827
+#: ../../source/reference/commands.md:836
 msgid "**Request**: *GroupGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:831
+#: ../../source/reference/commands.md:840
 msgid "**Response**: *GroupGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:832
-#: ../../source/reference/commands.md:872
-#: ../../source/reference/commands.md:897
-#: ../../source/reference/commands.md:922
-#: ../../source/reference/commands.md:946
-#: ../../source/reference/commands.md:967
-#: ../../source/reference/commands.md:989
-#: ../../source/reference/commands.md:1013
-#: ../../source/reference/commands.md:1017
-#: ../../source/reference/commands.md:1038
-#: ../../source/reference/commands.md:1092
+#: ../../source/reference/commands.md:841
+#: ../../source/reference/commands.md:881
+#: ../../source/reference/commands.md:906
+#: ../../source/reference/commands.md:931
+#: ../../source/reference/commands.md:955
+#: ../../source/reference/commands.md:976
+#: ../../source/reference/commands.md:998
+#: ../../source/reference/commands.md:1022
+#: ../../source/reference/commands.md:1026
+#: ../../source/reference/commands.md:1047
+#: ../../source/reference/commands.md:1101
 #, python-brace-format
 msgid "`group` ({ref}`message-group`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:835
-#: ../../source/reference/commands.md:854
-#: ../../source/reference/commands.md:970
-#: ../../source/reference/commands.md:992
-#: ../../source/reference/commands.md:1020
-#: ../../source/reference/commands.md:1076
-#: ../../source/reference/commands.md:1095
+#: ../../source/reference/commands.md:844
+#: ../../source/reference/commands.md:863
+#: ../../source/reference/commands.md:979
+#: ../../source/reference/commands.md:1001
+#: ../../source/reference/commands.md:1029
+#: ../../source/reference/commands.md:1085
+#: ../../source/reference/commands.md:1104
 msgid "`NOT_FOUND`: group not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:840
+#: ../../source/reference/commands.md:849
 msgid "GroupGetBytesIdentifier"
 msgstr ""
 
-#: ../../source/reference/commands.md:842
+#: ../../source/reference/commands.md:851
 msgid "Get a group identifier as bytes.   This is useful to have a long term identifier for a group, backup-proof, and common to any device."
 msgstr ""
 
-#: ../../source/reference/commands.md:846
+#: ../../source/reference/commands.md:855
 msgid "**Request**: *GroupGetBytesIdentifierRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:850
+#: ../../source/reference/commands.md:859
 msgid "**Response**: *GroupGetBytesIdentifierResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:859
+#: ../../source/reference/commands.md:868
 msgid "GroupNewStandardGroup"
 msgstr ""
 
-#: ../../source/reference/commands.md:861
+#: ../../source/reference/commands.md:870
 msgid "Create a new standard group.   In a standard group all members are administrators, everyone can edit group details and manage group members."
 msgstr ""
 
-#: ../../source/reference/commands.md:865
+#: ../../source/reference/commands.md:874
 msgid "**Request**: *GroupNewStandardGroupRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:866
-#: ../../source/reference/commands.md:890
-#: ../../source/reference/commands.md:915
-#: ../../source/reference/commands.md:939
+#: ../../source/reference/commands.md:875
+#: ../../source/reference/commands.md:899
+#: ../../source/reference/commands.md:924
+#: ../../source/reference/commands.md:948
 msgid "`name` (**optional** string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:867
-#: ../../source/reference/commands.md:891
-#: ../../source/reference/commands.md:916
-#: ../../source/reference/commands.md:940
-msgid "`description` (**optional** string)"
-msgstr ""
-
-#: ../../source/reference/commands.md:868
-#: ../../source/reference/commands.md:892
-#: ../../source/reference/commands.md:917
-msgid "`admin_contact_ids` (**repeated** uint64)"
-msgstr ""
-
-#: ../../source/reference/commands.md:871
-msgid "**Response**: *GroupNewStandardGroupResponse*"
-msgstr ""
-
-#: ../../source/reference/commands.md:875
+#: ../../source/reference/commands.md:876
 #: ../../source/reference/commands.md:900
 #: ../../source/reference/commands.md:925
 #: ../../source/reference/commands.md:949
-msgid "`NOT_FOUND`: contacts not found."
+msgid "`description` (**optional** string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:876
-msgid "`INVALID_ARGUMENT`: at least one contact does not support group v2."
+#: ../../source/reference/commands.md:877
+#: ../../source/reference/commands.md:901
+#: ../../source/reference/commands.md:926
+msgid "`admin_contact_ids` (**repeated** uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:882
-msgid "GroupNewControlledGroup"
+#: ../../source/reference/commands.md:880
+msgid "**Response**: *GroupNewStandardGroupResponse*"
 msgstr ""
 
 #: ../../source/reference/commands.md:884
-msgid "Create a new controlled group.   In a controlled group Administrators are specifically designated and they can edit group details and manage group members.   Simple members cannot manage the group but they can post messages, attachments and reactions."
+#: ../../source/reference/commands.md:909
+#: ../../source/reference/commands.md:934
+#: ../../source/reference/commands.md:958
+msgid "`NOT_FOUND`: contacts not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:889
-msgid "**Request**: *GroupNewControlledGroupRequest*"
+#: ../../source/reference/commands.md:885
+msgid "`INVALID_ARGUMENT`: at least one contact does not support group v2."
+msgstr ""
+
+#: ../../source/reference/commands.md:891
+msgid "GroupNewControlledGroup"
 msgstr ""
 
 #: ../../source/reference/commands.md:893
-#: ../../source/reference/commands.md:918
-#: ../../source/reference/commands.md:1897
+msgid "Create a new controlled group.   In a controlled group Administrators are specifically designated and they can edit group details and manage group members.   Simple members cannot manage the group but they can post messages, attachments and reactions."
+msgstr ""
+
+#: ../../source/reference/commands.md:898
+msgid "**Request**: *GroupNewControlledGroupRequest*"
+msgstr ""
+
+#: ../../source/reference/commands.md:902
+#: ../../source/reference/commands.md:927
+#: ../../source/reference/commands.md:1906
 msgid "`contact_ids` (**repeated** uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:896
+#: ../../source/reference/commands.md:905
 msgid "**Response**: *GroupNewControlledGroupResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:901
-#: ../../source/reference/commands.md:926
-#: ../../source/reference/commands.md:950
+#: ../../source/reference/commands.md:910
+#: ../../source/reference/commands.md:935
+#: ../../source/reference/commands.md:959
 msgid "`INVALID_ARGUMENT`: a contact cannot be in admins and members at the same time / at least one contact does not support group v2."
 msgstr ""
 
-#: ../../source/reference/commands.md:907
+#: ../../source/reference/commands.md:916
 msgid "GroupNewReadOnlyGroup"
 msgstr ""
 
-#: ../../source/reference/commands.md:909
+#: ../../source/reference/commands.md:918
 msgid "Create a new read-only group.   In read only groups only group administrators can manage the group and post messages.   Other users can only react to messages."
 msgstr ""
 
-#: ../../source/reference/commands.md:914
+#: ../../source/reference/commands.md:923
 msgid "**Request**: *GroupNewReadOnlyGroupRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:921
+#: ../../source/reference/commands.md:930
 msgid "**Response**: *GroupNewReadOnlyGroupResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:932
+#: ../../source/reference/commands.md:941
 msgid "GroupNewAdvancedGroup"
 msgstr ""
 
-#: ../../source/reference/commands.md:934
+#: ../../source/reference/commands.md:943
 msgid "Create a new advanced group.   An advanced group allows to manually assign permissions to all members."
 msgstr ""
 
-#: ../../source/reference/commands.md:938
+#: ../../source/reference/commands.md:947
 msgid "**Request**: *GroupNewAdvancedGroupRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:941
+#: ../../source/reference/commands.md:950
 #, python-brace-format
 msgid "`advanced_configuration` (**optional** {ref}`message-group.advancedconfiguration`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:942
+#: ../../source/reference/commands.md:951
 #, python-brace-format
 msgid "`members` (**repeated** {ref}`message-groupmember`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:945
+#: ../../source/reference/commands.md:954
 msgid "**Response**: *GroupNewAdvancedGroupResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:956
+#: ../../source/reference/commands.md:965
 msgid "GroupDisband"
 msgstr ""
 
-#: ../../source/reference/commands.md:958
+#: ../../source/reference/commands.md:967
 msgid "Close a group, every member will leave the group and the discussion will be locked for everyone.   Only administrators are allowed to disband a group."
 msgstr ""
 
-#: ../../source/reference/commands.md:962
+#: ../../source/reference/commands.md:971
 msgid "**Request**: *GroupDisbandRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:966
+#: ../../source/reference/commands.md:975
 msgid "**Response**: *GroupDisbandResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:971
+#: ../../source/reference/commands.md:980
 msgid "`INVALID_ARGUMENT`: impossible to disband a keycloak group."
 msgstr ""
 
-#: ../../source/reference/commands.md:972
-#: ../../source/reference/commands.md:1021
+#: ../../source/reference/commands.md:981
+#: ../../source/reference/commands.md:1030
 msgid "`PERMISSION_DENIED`: you are not admin in this group."
 msgstr ""
 
-#: ../../source/reference/commands.md:978
+#: ../../source/reference/commands.md:987
 msgid "GroupLeave"
 msgstr ""
 
-#: ../../source/reference/commands.md:980
+#: ../../source/reference/commands.md:989
 msgid "Leave a group, the discussion will still exists for other group members.   Any group member can leave a group at any time, except if you are the last administrator in this group (a group must always have an administrator)."
 msgstr ""
 
-#: ../../source/reference/commands.md:984
+#: ../../source/reference/commands.md:993
 msgid "**Request**: *GroupLeaveRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:988
+#: ../../source/reference/commands.md:997
 msgid "**Response**: *GroupLeaveResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:993
+#: ../../source/reference/commands.md:1002
 msgid "`INVALID_ARGUMENT`: impossible to disband a keycloak group / you cannot leave a group if you are the only group administrator."
 msgstr ""
 
-#: ../../source/reference/commands.md:999
+#: ../../source/reference/commands.md:1008
 msgid "GroupUpdate"
 msgstr ""
 
-#: ../../source/reference/commands.md:1001
+#: ../../source/reference/commands.md:1010
 msgid "Update a group by modifying a Group object retrieved from groupList of groupGet.   Supported modifications:"
 msgstr ""
 
-#: ../../source/reference/commands.md:1003
+#: ../../source/reference/commands.md:1012
 msgid "Add a member: create a new GroupMember and add it to members field"
 msgstr ""
 
-#: ../../source/reference/commands.md:1004
+#: ../../source/reference/commands.md:1013
 msgid "Remove a member: remove associated GroupMember from members field"
 msgstr ""
 
-#: ../../source/reference/commands.md:1005
+#: ../../source/reference/commands.md:1014
 msgid "Remove a pending member: remove associated GroupPendingMember from pendingMembers field"
 msgstr ""
 
-#: ../../source/reference/commands.md:1006
+#: ../../source/reference/commands.md:1015
 msgid "Update (pending) member permissions: update permissions in permissions field in GroupMember or GroupPendingMember"
 msgstr ""
 
-#: ../../source/reference/commands.md:1007
+#: ../../source/reference/commands.md:1016
 msgid "Update group name: modify name field"
 msgstr ""
 
-#: ../../source/reference/commands.md:1008
+#: ../../source/reference/commands.md:1017
 msgid "Update group description: modify description field   Every other modifications will be ignored. You must keep groupId field properly set."
 msgstr ""
 
-#: ../../source/reference/commands.md:1012
+#: ../../source/reference/commands.md:1021
 msgid "**Request**: *GroupUpdateRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1016
+#: ../../source/reference/commands.md:1025
 msgid "**Response**: *GroupUpdateResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1022
+#: ../../source/reference/commands.md:1031
 msgid "`INVALID_ARGUMENT`: the new group version has not been updated / new group member not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:1028
+#: ../../source/reference/commands.md:1037
 msgid "GroupSetPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:1031
+#: ../../source/reference/commands.md:1040
 msgid "**Request *(Stream)***: *GroupSetPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1033
+#: ../../source/reference/commands.md:1042
 #, python-brace-format
 msgid "`metadata` ({ref}`message-groupsetphotorequestmetadata`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1037
+#: ../../source/reference/commands.md:1046
 msgid "**Response**: *GroupSetPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1042
+#: ../../source/reference/commands.md:1051
 msgid "GroupSetPhotoRequestMetadata"
 msgstr ""
 
-#: ../../source/reference/commands.md:1044
+#: ../../source/reference/commands.md:1053
 msgid "GroupSetPhoto   Set a new photo for a group.   The photo can be jpeg or png but will be converted to jpeg and resolution will be limited to 1080x1080."
 msgstr ""
 
-#: ../../source/reference/commands.md:1048
+#: ../../source/reference/commands.md:1057
 msgid "**Error codes**:   `NOT_FOUND`: group not found.   `PERMISSION_DENIED`: you are not admin in this group.   `UNAUTHENTICATED`: client key is invalid.   `INTERNAL`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1057
-#: ../../source/reference/commands.md:1219
+#: ../../source/reference/commands.md:1066
+#: ../../source/reference/commands.md:1228
 msgid "`file_size` (uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1062
+#: ../../source/reference/commands.md:1071
 msgid "GroupDownloadPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:1064
+#: ../../source/reference/commands.md:1073
 msgid "Download the group picture as bytes, or the generated image for this group.   Pictures are always jpeg files with a maximum of 1080x1080 resolution."
 msgstr ""
 
-#: ../../source/reference/commands.md:1068
+#: ../../source/reference/commands.md:1077
 msgid "**Request**: *GroupDownloadPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1072
+#: ../../source/reference/commands.md:1081
 msgid "**Response**: *GroupDownloadPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1082
+#: ../../source/reference/commands.md:1091
 msgid "GroupUnsetPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:1084
+#: ../../source/reference/commands.md:1093
 msgid "Unset the current group picture if there is one."
 msgstr ""
 
-#: ../../source/reference/commands.md:1087
+#: ../../source/reference/commands.md:1096
 msgid "**Request**: *GroupUnsetPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1091
+#: ../../source/reference/commands.md:1100
 msgid "**Response**: *GroupUnsetPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1096
+#: ../../source/reference/commands.md:1105
 msgid "`INVALID_ARGUMENT`: group does not have a photo."
 msgstr ""
 
-#: ../../source/reference/commands.md:1104
+#: ../../source/reference/commands.md:1113
 msgid "Identity Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1108
+#: ../../source/reference/commands.md:1117
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-identity`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1111
+#: ../../source/reference/commands.md:1120
 msgid "IdentityGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1113
+#: ../../source/reference/commands.md:1122
 msgid "Get your identity details."
 msgstr ""
 
-#: ../../source/reference/commands.md:1116
+#: ../../source/reference/commands.md:1125
 msgid "**Request**: *IdentityGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1120
+#: ../../source/reference/commands.md:1129
 msgid "**Response**: *IdentityGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1121
+#: ../../source/reference/commands.md:1130
 #, python-brace-format
 msgid "`identity` ({ref}`message-identity`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1129
+#: ../../source/reference/commands.md:1138
 msgid "IdentityGetBytesIdentifier"
 msgstr ""
 
-#: ../../source/reference/commands.md:1131
+#: ../../source/reference/commands.md:1140
 msgid "Get your Olvid identity as bytes.   This is useful to have a long term identifier for an identity, backup-proof, and common to any device."
 msgstr ""
 
-#: ../../source/reference/commands.md:1135
+#: ../../source/reference/commands.md:1144
 msgid "**Request**: *IdentityGetBytesIdentifierRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1139
+#: ../../source/reference/commands.md:1148
 msgid "**Response**: *IdentityGetBytesIdentifierResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1143
-#: ../../source/reference/commands.md:1163
-#: ../../source/reference/commands.md:1185
-#: ../../source/reference/commands.md:1238
-#: ../../source/reference/commands.md:1258
+#: ../../source/reference/commands.md:1152
+#: ../../source/reference/commands.md:1172
+#: ../../source/reference/commands.md:1194
+#: ../../source/reference/commands.md:1247
+#: ../../source/reference/commands.md:1267
 msgid "`NOT_FOUND`: identity not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:1149
+#: ../../source/reference/commands.md:1158
 msgid "IdentityGetInvitationLink"
 msgstr ""
 
-#: ../../source/reference/commands.md:1151
+#: ../../source/reference/commands.md:1160
 msgid "Get your invitation link. This link can be sent to other Olvid users to let them send you an invitation.   Invitation links can be opened with any Olvid application or opened in a web browser to show a QR code to scan."
 msgstr ""
 
-#: ../../source/reference/commands.md:1155
+#: ../../source/reference/commands.md:1164
 msgid "**Request**: *IdentityGetInvitationLinkRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1159
+#: ../../source/reference/commands.md:1168
 msgid "**Response**: *IdentityGetInvitationLinkResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1169
+#: ../../source/reference/commands.md:1178
 msgid "IdentityUpdateDetails"
 msgstr ""
 
-#: ../../source/reference/commands.md:1171
+#: ../../source/reference/commands.md:1180
 msgid "Update your Olvid identity details (first name, last name, company and position).   At least one field in first and last name must be non empty.   Your details will be visible by your contacts, and your display name is computed from these details.   Details for a keycloak managed identity cannot be updated."
 msgstr ""
 
-#: ../../source/reference/commands.md:1177
+#: ../../source/reference/commands.md:1186
 msgid "**Request**: *IdentityUpdateDetailsRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1178
+#: ../../source/reference/commands.md:1187
 #, python-brace-format
 msgid "`new_details` ({ref}`message-identitydetails` - *your new identity details*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1181
+#: ../../source/reference/commands.md:1190
 msgid "**Response**: *IdentityUpdateDetailsResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1186
+#: ../../source/reference/commands.md:1195
 msgid "`INVALID_ARGUMENT`: at least one of first name and last name must be non empty / cannot update a keycloak managed identity."
 msgstr ""
 
-#: ../../source/reference/commands.md:1191
+#: ../../source/reference/commands.md:1200
 msgid "IdentitySetPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:1194
+#: ../../source/reference/commands.md:1203
 msgid "**Request *(Stream)***: *IdentitySetPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1196
+#: ../../source/reference/commands.md:1205
 #, python-brace-format
 msgid "`metadata` ({ref}`message-identitysetphotorequestmetadata`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1200
+#: ../../source/reference/commands.md:1209
 msgid "**Response**: *IdentitySetPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1205
+#: ../../source/reference/commands.md:1214
 msgid "IdentitySetPhotoRequestMetadata"
 msgstr ""
 
-#: ../../source/reference/commands.md:1207
+#: ../../source/reference/commands.md:1216
 msgid "IdentitySetPhoto   Set a profile picture for your identity.   This picture will be visible by your contacts.   The photo can be jpeg or png but will be converted to jpeg and resolution will be limited to 1080x1080."
 msgstr ""
 
-#: ../../source/reference/commands.md:1212
+#: ../../source/reference/commands.md:1221
 msgid "**Error codes**:   `NOT_FOUND`: identity not found.   `UNAUTHENTICATED`: client key is invalid.   `INTERNAL`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1224
+#: ../../source/reference/commands.md:1233
 msgid "IdentityDownloadPhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:1226
+#: ../../source/reference/commands.md:1235
 msgid "Download your current identity picture.   Pictures are always jpeg files with a maximum of 1080x1080 resolution."
 msgstr ""
 
-#: ../../source/reference/commands.md:1230
+#: ../../source/reference/commands.md:1239
 msgid "**Request**: *IdentityDownloadPhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1234
+#: ../../source/reference/commands.md:1243
 msgid "**Response**: *IdentityDownloadPhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1244
+#: ../../source/reference/commands.md:1253
 msgid "IdentityRemovePhoto"
 msgstr ""
 
-#: ../../source/reference/commands.md:1246
+#: ../../source/reference/commands.md:1255
 msgid "Remove your current identity picture.   The automatically generated identity image will be used instead."
 msgstr ""
 
-#: ../../source/reference/commands.md:1250
+#: ../../source/reference/commands.md:1259
 msgid "**Request**: *IdentityRemovePhotoRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1254
+#: ../../source/reference/commands.md:1263
 msgid "**Response**: *IdentityRemovePhotoResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1264
+#: ../../source/reference/commands.md:1273
 msgid "IdentityGetApiKeyStatus"
 msgstr ""
 
-#: ../../source/reference/commands.md:1266
+#: ../../source/reference/commands.md:1275
 msgid "Check your current Olvid API key status.   API keys allow an identity to initiate calls or to use multi device."
 msgstr ""
 
-#: ../../source/reference/commands.md:1270
+#: ../../source/reference/commands.md:1279
 msgid "**Request**: *IdentityGetApiKeyStatusRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1274
+#: ../../source/reference/commands.md:1283
 msgid "**Response**: *IdentityGetApiKeyStatusResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1275
-#: ../../source/reference/commands.md:1293
-#: ../../source/reference/commands.md:1311
+#: ../../source/reference/commands.md:1284
+#: ../../source/reference/commands.md:1302
+#: ../../source/reference/commands.md:1320
 #, python-brace-format
 msgid "`api_key` ({ref}`message-identity.apikey`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1282
+#: ../../source/reference/commands.md:1291
 msgid "IdentitySetApiKey"
 msgstr ""
 
-#: ../../source/reference/commands.md:1284
+#: ../../source/reference/commands.md:1293
 msgid "Manually set an Olvid api key.   Olvid api keys are standard uuids."
 msgstr ""
 
-#: ../../source/reference/commands.md:1288
+#: ../../source/reference/commands.md:1297
 msgid "**Request**: *IdentitySetApiKeyRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1289
+#: ../../source/reference/commands.md:1298
 msgid "`api_key` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1292
+#: ../../source/reference/commands.md:1301
 msgid "**Response**: *IdentitySetApiKeyResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1296
+#: ../../source/reference/commands.md:1305
 msgid "`INVALID_ARGUMENT`: api key format is not valid."
 msgstr ""
 
-#: ../../source/reference/commands.md:1301
+#: ../../source/reference/commands.md:1310
 msgid "IdentitySetConfigurationLink"
 msgstr ""
 
-#: ../../source/reference/commands.md:1303
+#: ../../source/reference/commands.md:1312
 msgid "Set an Olvid configuration link with an api key."
 msgstr ""
 
-#: ../../source/reference/commands.md:1306
+#: ../../source/reference/commands.md:1315
 msgid "**Request**: *IdentitySetConfigurationLinkRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1307
-#: ../../source/reference/commands.md:1777
+#: ../../source/reference/commands.md:1316
+#: ../../source/reference/commands.md:1786
 msgid "`configuration_link` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1310
+#: ../../source/reference/commands.md:1319
 msgid "**Response**: *IdentitySetConfigurationLinkResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1314
+#: ../../source/reference/commands.md:1323
 msgid "`INVALID_ARGUMENT`: configuration link is invalid / configuration link is for another server."
 msgstr ""
 
-#: ../../source/reference/commands.md:1321
+#: ../../source/reference/commands.md:1330
 msgid "Invitation Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1325
+#: ../../source/reference/commands.md:1334
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-invitation`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1328
+#: ../../source/reference/commands.md:1337
 msgid "InvitationList"
 msgstr ""
 
-#: ../../source/reference/commands.md:1330
+#: ../../source/reference/commands.md:1339
 msgid "List invitations for current identity.   Pass a filter to select only invitations that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:1334
+#: ../../source/reference/commands.md:1343
 msgid "**Request**: *InvitationListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1335
+#: ../../source/reference/commands.md:1344
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-invitationfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1338
+#: ../../source/reference/commands.md:1347
 msgid "**Response *(Stream)***: *InvitationListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1339
+#: ../../source/reference/commands.md:1348
 #, python-brace-format
 msgid "`invitations` (**repeated** {ref}`message-invitation`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1348
+#: ../../source/reference/commands.md:1357
 msgid "InvitationGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1350
+#: ../../source/reference/commands.md:1359
 msgid "Get invitation by id."
 msgstr ""
 
-#: ../../source/reference/commands.md:1353
+#: ../../source/reference/commands.md:1362
 msgid "**Request**: *InvitationGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1354
-#: ../../source/reference/commands.md:1398
-#: ../../source/reference/commands.md:1424
-#: ../../source/reference/commands.md:1444
-#: ../../source/reference/commands.md:1464
+#: ../../source/reference/commands.md:1363
+#: ../../source/reference/commands.md:1407
+#: ../../source/reference/commands.md:1433
+#: ../../source/reference/commands.md:1453
+#: ../../source/reference/commands.md:1473
 msgid "`invitation_id` (uint64)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1357
+#: ../../source/reference/commands.md:1366
 msgid "**Response**: *InvitationGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1361
-#: ../../source/reference/commands.md:1405
-#: ../../source/reference/commands.md:1431
-#: ../../source/reference/commands.md:1452
+#: ../../source/reference/commands.md:1370
+#: ../../source/reference/commands.md:1414
+#: ../../source/reference/commands.md:1440
+#: ../../source/reference/commands.md:1461
 msgid "`NOT_FOUND`: invitation not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:1366
+#: ../../source/reference/commands.md:1375
 msgid "InvitationNew"
 msgstr ""
 
-#: ../../source/reference/commands.md:1368
+#: ../../source/reference/commands.md:1377
 msgid "Send an invitation to another Olvid user using its invitation link.   Invitation links start with https://invitation.olvid.io#.   Sending an invitation will initiate an invitation protocol and create a new Invitation."
 msgstr ""
 
-#: ../../source/reference/commands.md:1373
+#: ../../source/reference/commands.md:1382
 msgid "**Request**: *InvitationNewRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1374
+#: ../../source/reference/commands.md:1383
 msgid "`invitation_url` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1377
+#: ../../source/reference/commands.md:1386
 msgid "**Response**: *InvitationNewResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1381
+#: ../../source/reference/commands.md:1390
 msgid "`INVALID_ARGUMENT`: you cannot invite yourself / invitation link is invalid."
 msgstr ""
 
-#: ../../source/reference/commands.md:1387
+#: ../../source/reference/commands.md:1396
 msgid "InvitationAccept"
 msgstr ""
 
-#: ../../source/reference/commands.md:1389
+#: ../../source/reference/commands.md:1398
 msgid "Accept a pending invitation. This will allow protocol to continue.   This command is only possible if `invitation.status` is one of the following:"
 msgstr ""
 
-#: ../../source/reference/commands.md:1391
-#: ../../source/reference/commands.md:1417
+#: ../../source/reference/commands.md:1400
+#: ../../source/reference/commands.md:1426
 msgid "STATUS_INVITATION_WAIT_YOU_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/commands.md:1392
-#: ../../source/reference/commands.md:1418
+#: ../../source/reference/commands.md:1401
+#: ../../source/reference/commands.md:1427
 msgid "STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/commands.md:1393
-#: ../../source/reference/commands.md:1419
+#: ../../source/reference/commands.md:1402
+#: ../../source/reference/commands.md:1428
 msgid "STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/commands.md:1394
-#: ../../source/reference/commands.md:1420
+#: ../../source/reference/commands.md:1403
+#: ../../source/reference/commands.md:1429
 msgid "STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/commands.md:1397
+#: ../../source/reference/commands.md:1406
 msgid "**Request**: *InvitationAcceptRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1401
+#: ../../source/reference/commands.md:1410
 msgid "**Response**: *InvitationAcceptResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1406
+#: ../../source/reference/commands.md:1415
 msgid "`INVALID_ARGUMENT`: cannot accept an invitation with this status."
 msgstr ""
 
-#: ../../source/reference/commands.md:1412
+#: ../../source/reference/commands.md:1421
 msgid "InvitationDecline"
 msgstr ""
 
-#: ../../source/reference/commands.md:1414
+#: ../../source/reference/commands.md:1423
 msgid "Decline a pending invitation. This will abort protocol.   For invitation, introduction and one to one invitation the other user is not notified you declined the invitation.   This command is only possible if `invitation.status` is one of the following:"
 msgstr ""
 
-#: ../../source/reference/commands.md:1423
+#: ../../source/reference/commands.md:1432
 msgid "**Request**: *InvitationDeclineRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1427
+#: ../../source/reference/commands.md:1436
 msgid "**Response**: *InvitationDeclineResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1437
+#: ../../source/reference/commands.md:1446
 msgid "InvitationSas"
 msgstr ""
 
-#: ../../source/reference/commands.md:1439
+#: ../../source/reference/commands.md:1448
 msgid "Only possible if `invitation.status` is equal to STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE.   Set the 4 digit code shown on your partner device."
 msgstr ""
 
-#: ../../source/reference/commands.md:1443
+#: ../../source/reference/commands.md:1452
 msgid "**Request**: *InvitationSasRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1445
+#: ../../source/reference/commands.md:1454
 msgid "`sas` (string - *4 digit pin code shown on your partner device*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1448
+#: ../../source/reference/commands.md:1457
 msgid "**Response**: *InvitationSasResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1453
+#: ../../source/reference/commands.md:1462
 msgid "`INVALID_ARGUMENT`: unexpected invitation status."
 msgstr ""
 
-#: ../../source/reference/commands.md:1458
+#: ../../source/reference/commands.md:1467
 msgid "InvitationDelete"
 msgstr ""
 
-#: ../../source/reference/commands.md:1460
+#: ../../source/reference/commands.md:1469
 msgid "Abort the protocol associated to any invitation and delete this invitation."
 msgstr ""
 
-#: ../../source/reference/commands.md:1463
+#: ../../source/reference/commands.md:1472
 msgid "**Request**: *InvitationDeleteRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1467
+#: ../../source/reference/commands.md:1476
 msgid "**Response**: *InvitationDeleteResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1477
+#: ../../source/reference/commands.md:1486
 msgid "Settings Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1481
+#: ../../source/reference/commands.md:1490
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-settings`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1484
+#: ../../source/reference/commands.md:1493
 msgid "SettingsIdentityGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1486
+#: ../../source/reference/commands.md:1495
 msgid "Get current settings for your identity."
 msgstr ""
 
-#: ../../source/reference/commands.md:1489
+#: ../../source/reference/commands.md:1498
 msgid "**Request**: *SettingsIdentityGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1493
+#: ../../source/reference/commands.md:1502
 msgid "**Response**: *SettingsIdentityGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1494
-#: ../../source/reference/commands.md:1509
-#: ../../source/reference/commands.md:1513
+#: ../../source/reference/commands.md:1503
+#: ../../source/reference/commands.md:1518
+#: ../../source/reference/commands.md:1522
 #, python-brace-format
 msgid "`identity_settings` ({ref}`message-identitysettings`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1501
+#: ../../source/reference/commands.md:1510
 msgid "SettingsIdentitySet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1503
+#: ../../source/reference/commands.md:1512
 msgid "Update your identity settings.   ⚠️ Update erases the WHOLE settings.   To update current settings use SettingsIdentityGet to get current config, and only edit fields you want to update."
 msgstr ""
 
-#: ../../source/reference/commands.md:1508
+#: ../../source/reference/commands.md:1517
 msgid "**Request**: *SettingsIdentitySetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1512
+#: ../../source/reference/commands.md:1521
 msgid "**Response**: *SettingsIdentitySetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1516
+#: ../../source/reference/commands.md:1525
 msgid "`INVALID_ARGUMENT`: cannot set keycloak settings if your identity is not keycloak managed."
 msgstr ""
 
-#: ../../source/reference/commands.md:1521
+#: ../../source/reference/commands.md:1530
 msgid "SettingsDiscussionGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1523
+#: ../../source/reference/commands.md:1532
 msgid "Get a discussion settings.   Those settings are shared with other members of this discussion.   For example, a parameter for ephemeral message parameters concerning a discussion would affect all future messages posted in this discussion, from any member."
 msgstr ""
 
-#: ../../source/reference/commands.md:1528
+#: ../../source/reference/commands.md:1537
 msgid "**Request**: *SettingsDiscussionGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1532
+#: ../../source/reference/commands.md:1541
 msgid "**Response**: *SettingsDiscussionGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1533
-#: ../../source/reference/commands.md:1549
-#: ../../source/reference/commands.md:1553
+#: ../../source/reference/commands.md:1542
+#: ../../source/reference/commands.md:1558
+#: ../../source/reference/commands.md:1562
 #, python-brace-format
 msgid "`discussion_settings` ({ref}`message-discussionsettings`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1536
-#: ../../source/reference/commands.md:1556
+#: ../../source/reference/commands.md:1545
+#: ../../source/reference/commands.md:1565
 msgid "`NOT_FOUND`: discussion not found"
 msgstr ""
 
-#: ../../source/reference/commands.md:1541
+#: ../../source/reference/commands.md:1550
 msgid "SettingsDiscussionSet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1543
+#: ../../source/reference/commands.md:1552
 msgid "Update a discussion settings.   ⚠️ Update erases the WHOLE settings.   To update current settings use SettingsDiscussionGet to get current config, and only edit fields you want to update."
 msgstr ""
 
-#: ../../source/reference/commands.md:1548
+#: ../../source/reference/commands.md:1557
 msgid "**Request**: *SettingsDiscussionSetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1552
+#: ../../source/reference/commands.md:1561
 msgid "**Response**: *SettingsDiscussionSetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1563
+#: ../../source/reference/commands.md:1572
 msgid "Storage Command Service"
-msgstr ""
-
-#: ../../source/reference/commands.md:1566
-#: ../../source/reference/commands.md:1661
-msgid "Each client key has its own independent storage space, with a simple key-value system.   _Storage_ can be seen as a global storage space, compared to _Discussion Storage_ that offers a space associated with a specific discussion."
-msgstr ""
-
-#: ../../source/reference/commands.md:1569
-#: ../../source/reference/commands.md:1664
-msgid "Both mechanisms are backup resilient, and will be restored with their associated client key in a backup restoration process."
-msgstr ""
-
-#: ../../source/reference/commands.md:1571
-#: ../../source/reference/commands.md:1666
-msgid "Mind that temporary client keys (specified in daemon environment or as command line arguments) do not have an allocated storage space.   You must create a client in database to use storage commands."
 msgstr ""
 
 #: ../../source/reference/commands.md:1575
 #: ../../source/reference/commands.md:1670
+msgid "Each client key has its own independent storage space, with a simple key-value system.   _Storage_ can be seen as a global storage space, compared to _Discussion Storage_ that offers a space associated with a specific discussion."
+msgstr ""
+
+#: ../../source/reference/commands.md:1578
+#: ../../source/reference/commands.md:1673
+msgid "Both mechanisms are backup resilient, and will be restored with their associated client key in a backup restoration process."
+msgstr ""
+
+#: ../../source/reference/commands.md:1580
+#: ../../source/reference/commands.md:1675
+msgid "Mind that temporary client keys (specified in daemon environment or as command line arguments) do not have an allocated storage space.   You must create a client in database to use storage commands."
+msgstr ""
+
+#: ../../source/reference/commands.md:1584
+#: ../../source/reference/commands.md:1679
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-storage`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1578
+#: ../../source/reference/commands.md:1587
 msgid "StorageList"
 msgstr ""
 
-#: ../../source/reference/commands.md:1580
+#: ../../source/reference/commands.md:1589
 msgid "List stored elements in global storage scope, for current client key.   Pass a filter to select only elements that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:1583
+#: ../../source/reference/commands.md:1592
 msgid "Mind that temporary client keys (specified in daemon environment or as command line arguments) does not have an allocated storage space.   You must create a client in database to use storage commands."
 msgstr ""
 
-#: ../../source/reference/commands.md:1587
+#: ../../source/reference/commands.md:1596
 msgid "**Request**: *StorageListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1588
-#: ../../source/reference/commands.md:1681
+#: ../../source/reference/commands.md:1597
+#: ../../source/reference/commands.md:1690
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-storageelementfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1591
+#: ../../source/reference/commands.md:1600
 msgid "**Response *(Stream)***: *StorageListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1592
-#: ../../source/reference/commands.md:1685
+#: ../../source/reference/commands.md:1601
+#: ../../source/reference/commands.md:1694
 #, python-brace-format
 msgid "`elements` (**repeated** {ref}`message-storageelement`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1595
-#: ../../source/reference/commands.md:1615
-#: ../../source/reference/commands.md:1634
-#: ../../source/reference/commands.md:1652
-#: ../../source/reference/commands.md:1688
-#: ../../source/reference/commands.md:1710
-#: ../../source/reference/commands.md:1732
-#: ../../source/reference/commands.md:1753
+#: ../../source/reference/commands.md:1604
+#: ../../source/reference/commands.md:1624
+#: ../../source/reference/commands.md:1643
+#: ../../source/reference/commands.md:1661
+#: ../../source/reference/commands.md:1697
+#: ../../source/reference/commands.md:1719
+#: ../../source/reference/commands.md:1741
+#: ../../source/reference/commands.md:1762
 msgid "`UNAUTHENTICATED`: client key is invalid or a temporary client key."
 msgstr ""
 
-#: ../../source/reference/commands.md:1596
+#: ../../source/reference/commands.md:1605
 msgid "`INVALID_ARGUMENT`: invalid filter"
 msgstr ""
 
-#: ../../source/reference/commands.md:1601
+#: ../../source/reference/commands.md:1610
 msgid "StorageGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1603
+#: ../../source/reference/commands.md:1612
 msgid "Request the value associated to a key in your global storage.   If the key does not already exist, return an empty string."
 msgstr ""
 
-#: ../../source/reference/commands.md:1607
+#: ../../source/reference/commands.md:1616
 msgid "**Request**: *StorageGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1608
-#: ../../source/reference/commands.md:1626
-#: ../../source/reference/commands.md:1645
-#: ../../source/reference/commands.md:1703
-#: ../../source/reference/commands.md:1724
-#: ../../source/reference/commands.md:1746
+#: ../../source/reference/commands.md:1617
+#: ../../source/reference/commands.md:1635
+#: ../../source/reference/commands.md:1654
+#: ../../source/reference/commands.md:1712
+#: ../../source/reference/commands.md:1733
+#: ../../source/reference/commands.md:1755
 msgid "`key` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1611
+#: ../../source/reference/commands.md:1620
 msgid "**Response**: *StorageGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1612
-#: ../../source/reference/commands.md:1627
-#: ../../source/reference/commands.md:1707
-#: ../../source/reference/commands.md:1725
+#: ../../source/reference/commands.md:1621
+#: ../../source/reference/commands.md:1636
+#: ../../source/reference/commands.md:1716
+#: ../../source/reference/commands.md:1734
 msgid "`value` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1619
+#: ../../source/reference/commands.md:1628
 msgid "StorageSet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1621
+#: ../../source/reference/commands.md:1630
 msgid "Set the value for a key in your global storage.   If the key was already set the value is updated and it returns the *previous_value* in response."
 msgstr ""
 
-#: ../../source/reference/commands.md:1625
+#: ../../source/reference/commands.md:1634
 msgid "**Request**: *StorageSetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1630
+#: ../../source/reference/commands.md:1639
 msgid "**Response**: *StorageSetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1631
+#: ../../source/reference/commands.md:1640
 msgid "`previous_value` (string - *if the key already exists, this contains the erased value.*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1639
+#: ../../source/reference/commands.md:1648
 msgid "StorageUnset"
 msgstr ""
 
-#: ../../source/reference/commands.md:1641
+#: ../../source/reference/commands.md:1650
 msgid "Unset a key in your global storage."
 msgstr ""
 
-#: ../../source/reference/commands.md:1644
+#: ../../source/reference/commands.md:1653
 msgid "**Request**: *StorageUnsetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1648
+#: ../../source/reference/commands.md:1657
 msgid "**Response**: *StorageUnsetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1649
+#: ../../source/reference/commands.md:1658
 msgid "`previous_value` (string - *the value previously associated to this key*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1658
+#: ../../source/reference/commands.md:1667
 msgid "Discussion Storage Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1673
+#: ../../source/reference/commands.md:1682
 msgid "DiscussionStorageList"
 msgstr ""
 
-#: ../../source/reference/commands.md:1675
+#: ../../source/reference/commands.md:1684
 msgid "List stored elements in a specific discussion storage scope, for current client key.   Pass a filter to select only elements that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:1679
+#: ../../source/reference/commands.md:1688
 msgid "**Request**: *DiscussionStorageListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1684
+#: ../../source/reference/commands.md:1693
 msgid "**Response *(Stream)***: *DiscussionStorageListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1689
+#: ../../source/reference/commands.md:1698
 msgid "`INVALID_ARGUMENT`: discussion storage is not available with an admin client key / invalid filter."
 msgstr ""
 
-#: ../../source/reference/commands.md:1695
+#: ../../source/reference/commands.md:1704
 msgid "DiscussionStorageGet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1697
+#: ../../source/reference/commands.md:1706
 msgid "Request the value associated to a key in the specified discussion storage.   If the key does not already exist, return an empty string."
 msgstr ""
 
-#: ../../source/reference/commands.md:1701
+#: ../../source/reference/commands.md:1710
 msgid "**Request**: *DiscussionStorageGetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1706
+#: ../../source/reference/commands.md:1715
 msgid "**Response**: *DiscussionStorageGetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1711
-#: ../../source/reference/commands.md:1733
-#: ../../source/reference/commands.md:1754
+#: ../../source/reference/commands.md:1720
+#: ../../source/reference/commands.md:1742
+#: ../../source/reference/commands.md:1763
 msgid "`INVALID_ARGUMENT`: discussion storage is not available with an admin client key."
 msgstr ""
 
-#: ../../source/reference/commands.md:1716
+#: ../../source/reference/commands.md:1725
 msgid "DiscussionStorageSet"
 msgstr ""
 
-#: ../../source/reference/commands.md:1718
+#: ../../source/reference/commands.md:1727
 msgid "Set the value for a key in the specified discussion storage.   If the key was already set the value is updated and it returns the *previous_value* in response."
 msgstr ""
 
-#: ../../source/reference/commands.md:1722
+#: ../../source/reference/commands.md:1731
 msgid "**Request**: *DiscussionStorageSetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1728
+#: ../../source/reference/commands.md:1737
 msgid "**Response**: *DiscussionStorageSetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1729
-#: ../../source/reference/commands.md:1750
+#: ../../source/reference/commands.md:1738
+#: ../../source/reference/commands.md:1759
 msgid "`previous_value` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1739
+#: ../../source/reference/commands.md:1748
 msgid "DiscussionStorageUnset"
 msgstr ""
 
-#: ../../source/reference/commands.md:1741
+#: ../../source/reference/commands.md:1750
 msgid "Unset a key in the specified discussion storage."
 msgstr ""
 
-#: ../../source/reference/commands.md:1744
+#: ../../source/reference/commands.md:1753
 msgid "**Request**: *DiscussionStorageUnsetRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1749
+#: ../../source/reference/commands.md:1758
 msgid "**Response**: *DiscussionStorageUnsetResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1761
+#: ../../source/reference/commands.md:1770
 msgid "Keycloak Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1765
+#: ../../source/reference/commands.md:1774
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-keycloak`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1768
+#: ../../source/reference/commands.md:1777
 msgid "KeycloakBindIdentity"
 msgstr ""
 
-#: ../../source/reference/commands.md:1770
+#: ../../source/reference/commands.md:1779
 msgid "Register your identity in a keycloak directory.   Your identity should not already be registered in a keycloak directory (`identity.keycloak_managed`).   When registered your directory might add you to some managed groups, and you will be granted access to other directory users.   Other directory users can be added as contacts with no further confirmation (see *KeycloakUserList* and *KeycloakAddUserAsContact*)."
 msgstr ""
 
-#: ../../source/reference/commands.md:1776
+#: ../../source/reference/commands.md:1785
 msgid "**Request**: *KeycloakBindIdentityRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1780
+#: ../../source/reference/commands.md:1789
 msgid "**Response**: *KeycloakBindIdentityResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1784
+#: ../../source/reference/commands.md:1793
 msgid "`INVALID_ARGUMENT`: identity is already keycloak managed."
 msgstr ""
 
-#: ../../source/reference/commands.md:1790
+#: ../../source/reference/commands.md:1799
 msgid "KeycloakUnbindIdentity"
 msgstr ""
 
-#: ../../source/reference/commands.md:1792
+#: ../../source/reference/commands.md:1801
 msgid "Unregister from a keycloak directory.   Your identity should already be keycloak managed.   You will lose access to keycloak user directory and you will leave keycloak managed groups.   Your keycloak managed contacts will remain contacts but won't be keycloak managed anymore."
 msgstr ""
 
-#: ../../source/reference/commands.md:1798
+#: ../../source/reference/commands.md:1807
 msgid "**Request**: *KeycloakUnbindIdentityRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1802
+#: ../../source/reference/commands.md:1811
 msgid "**Response**: *KeycloakUnbindIdentityResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1806
-#: ../../source/reference/commands.md:1849
+#: ../../source/reference/commands.md:1815
+#: ../../source/reference/commands.md:1858
 msgid "`INVALID_ARGUMENT`: identity is not keycloak managed."
 msgstr ""
 
-#: ../../source/reference/commands.md:1811
+#: ../../source/reference/commands.md:1820
 msgid "KeycloakUserList"
 msgstr ""
 
-#: ../../source/reference/commands.md:1813
+#: ../../source/reference/commands.md:1822
 msgid "List other users registered on your keycloak directory.   Pass a filter to select only users that match specific criteria."
 msgstr ""
 
-#: ../../source/reference/commands.md:1817
+#: ../../source/reference/commands.md:1826
 msgid "**Request**: *KeycloakUserListRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1818
+#: ../../source/reference/commands.md:1827
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-keycloakuserfilter`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1819
+#: ../../source/reference/commands.md:1828
 msgid "`last_list_timestamp` (**optional** uint64 - *only users that registered on keycloak since this timestamp, set to 0 to list all users.*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1822
+#: ../../source/reference/commands.md:1831
 msgid "**Response *(Stream)***: *KeycloakUserListResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1823
+#: ../../source/reference/commands.md:1832
 #, python-brace-format
 msgid "`users` (**repeated** {ref}`message-keycloakuser`)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1824
+#: ../../source/reference/commands.md:1833
 msgid "`last_list_timestamp` (uint64 - *set this timestamp in request.last_list_timestamp if you want to list only new users.*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1827
+#: ../../source/reference/commands.md:1836
 msgid "`INVALID_ARGUMENT`: identity is not keycloak managed / invalid filter."
 msgstr ""
 
-#: ../../source/reference/commands.md:1833
+#: ../../source/reference/commands.md:1842
 msgid "KeycloakAddUserAsContact"
 msgstr ""
 
-#: ../../source/reference/commands.md:1835
+#: ../../source/reference/commands.md:1844
 msgid "Add a user from keycloak directory as a contact.   This will not trigger any invitation protocol.   Directory is considered as a trusted third party so no further confirmation is required.   Contact and discussion will be created as soon as one of the other user's device is online and automatically answer \"invitation\"."
 msgstr ""
 
-#: ../../source/reference/commands.md:1841
+#: ../../source/reference/commands.md:1850
 msgid "**Request**: *KeycloakAddUserAsContactRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1842
+#: ../../source/reference/commands.md:1851
 msgid "`keycloak_id` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1845
+#: ../../source/reference/commands.md:1854
 msgid "**Response**: *KeycloakAddUserAsContactResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1850
+#: ../../source/reference/commands.md:1859
 msgid "`NOT_FOUND`: keycloak user not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:1857
+#: ../../source/reference/commands.md:1866
 msgid "Call Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1860
+#: ../../source/reference/commands.md:1869
 msgid "Currently daemon cannot handle Olvid calls properly.   You can be notified on incoming calls, and you can initiate call within discussions or with any contact.   But we cannot manage audio or video streams, that's why a daemon will always answer any incoming call with a \"busy\" response."
 msgstr ""
 
-#: ../../source/reference/commands.md:1865
+#: ../../source/reference/commands.md:1874
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-call`"
 msgstr ""
 
-#: ../../source/reference/commands.md:1868
+#: ../../source/reference/commands.md:1877
 msgid "CallStartDiscussionCall"
 msgstr ""
 
-#: ../../source/reference/commands.md:1870
+#: ../../source/reference/commands.md:1879
 msgid "Start a call with one discussion member(s).   This will start a one to one call or a group call depending on discussion type.   You can use *call_identifier* to filter later call notifications."
 msgstr ""
 
-#: ../../source/reference/commands.md:1875
+#: ../../source/reference/commands.md:1884
 msgid "**Request**: *CallStartDiscussionCallRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1879
+#: ../../source/reference/commands.md:1888
 msgid "**Response**: *CallStartDiscussionCallResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1880
-#: ../../source/reference/commands.md:1902
+#: ../../source/reference/commands.md:1889
+#: ../../source/reference/commands.md:1911
 msgid "`call_identifier` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1884
+#: ../../source/reference/commands.md:1893
 msgid "`INVALID_ARGUMENT`: cannot start a call in an empty group."
 msgstr ""
 
-#: ../../source/reference/commands.md:1890
+#: ../../source/reference/commands.md:1899
 msgid "CallStartCustomCall"
 msgstr ""
 
-#: ../../source/reference/commands.md:1892
+#: ../../source/reference/commands.md:1901
 msgid "Start a call with any contacts, even if they do not belong to the same discussion.   You can use *call_identifier* to filter later call notifications."
 msgstr ""
 
-#: ../../source/reference/commands.md:1896
+#: ../../source/reference/commands.md:1905
 msgid "**Request**: *CallStartCustomCallRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1898
+#: ../../source/reference/commands.md:1907
 msgid "`discussion_id` (**optional** uint64 - *specify in which discussion other contacts will log call*)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1901
+#: ../../source/reference/commands.md:1910
 msgid "**Response**: *CallStartCustomCallResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1905
+#: ../../source/reference/commands.md:1914
 msgid "`NOT_FOUND`: discussion or contact not found."
 msgstr ""
 
-#: ../../source/reference/commands.md:1912
+#: ../../source/reference/commands.md:1921
 msgid "Tool Command Service"
 msgstr ""
 
-#: ../../source/reference/commands.md:1915
+#: ../../source/reference/commands.md:1924
 msgid "A set of utility entrypoint to test debug and your configuration."
 msgstr ""
 
-#: ../../source/reference/commands.md:1920
+#: ../../source/reference/commands.md:1929
 msgid "Ping"
 msgstr ""
 
-#: ../../source/reference/commands.md:1922
+#: ../../source/reference/commands.md:1931
 msgid "Unauthenticated method.   Just check if daemon is reachable."
 msgstr ""
 
-#: ../../source/reference/commands.md:1926
+#: ../../source/reference/commands.md:1935
 msgid "**Request**: *PingRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1930
+#: ../../source/reference/commands.md:1939
 msgid "**Response**: *PingResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1936
+#: ../../source/reference/commands.md:1945
 msgid "DaemonVersion"
 msgstr ""
 
-#: ../../source/reference/commands.md:1938
+#: ../../source/reference/commands.md:1947
 msgid "Authenticated method.   Ask daemon its version."
 msgstr ""
 
-#: ../../source/reference/commands.md:1942
+#: ../../source/reference/commands.md:1951
 msgid "**Request**: *DaemonVersionRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1946
+#: ../../source/reference/commands.md:1955
 msgid "**Response**: *DaemonVersionResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1947
+#: ../../source/reference/commands.md:1956
 msgid "`version` (string)"
 msgstr ""
 
-#: ../../source/reference/commands.md:1952
+#: ../../source/reference/commands.md:1961
 msgid "AuthenticationTest"
 msgstr ""
 
-#: ../../source/reference/commands.md:1954
+#: ../../source/reference/commands.md:1963
 msgid "Authenticated rpc.   Check that sent credentials are valid user credentials, else it returns an error."
 msgstr ""
 
-#: ../../source/reference/commands.md:1958
+#: ../../source/reference/commands.md:1967
 msgid "**Request**: *AuthenticationTestRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1962
+#: ../../source/reference/commands.md:1971
 msgid "**Response**: *AuthenticationTestResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1966
+#: ../../source/reference/commands.md:1975
 msgid "`PERMISSION_DENIED`: invalid client key."
 msgstr ""
 
-#: ../../source/reference/commands.md:1970
+#: ../../source/reference/commands.md:1979
 msgid "AuthenticationAdminTest"
 msgstr ""
 
-#: ../../source/reference/commands.md:1972
+#: ../../source/reference/commands.md:1981
 msgid "Authenticated rpc (admin key only).   Check that sent credentials are valid admin credentials, else it returns an error."
 msgstr ""
 
-#: ../../source/reference/commands.md:1976
+#: ../../source/reference/commands.md:1985
 msgid "**Request**: *AuthenticationAdminTestRequest*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1980
+#: ../../source/reference/commands.md:1989
 msgid "**Response**: *AuthenticationAdminTestResponse*"
 msgstr ""
 
-#: ../../source/reference/commands.md:1984
+#: ../../source/reference/commands.md:1993
 msgid "`PERMISSION_DENIED`: client key is not an admin client key."
 msgstr ""
 

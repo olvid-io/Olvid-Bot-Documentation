@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 2.0.0a0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-17 12:06+0100\n"
+"POT-Creation-Date: 2026-03-27 17:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -226,101 +226,136 @@ msgstr "**messageSendVoip**: Removal of the command, use the callCommandService 
 
 # translated using ollama
 #: ../../source/migrations/migration_1_2.md:213
+msgid "AttachmentCommandeService"
+msgstr "AttachmentOrderService"
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:214
+msgid "_(à partir de la version 2.0.1)_"
+msgstr "_(from version 2.0.1)_"
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:215
+msgid "**attachmentDelete**: suppression du paramètre delete_everywhere qui ne fonctionnait pas."
+msgstr "**attachmentDelete**: removal of the delete_everywhere parameter that did not work."
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:225
 msgid "IdentityCommandeService"
 msgstr "IdentityOrderService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:214
+#: ../../source/migrations/migration_1_2.md:226
 msgid "**keycloakBind** et **keycloakUnbind**: déplacement dans le service **keycloakCommandService**"
 msgstr "**keycloakBind** and **keycloakUnbind**: moved within the **keycloakCommandService**"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:224
+#: ../../source/migrations/migration_1_2.md:236
 msgid "DiscussionCommandService"
 msgstr "DiscussionCommandService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:225
+#: ../../source/migrations/migration_1_2.md:237
 msgid "**discussionEmpty**: suppression du paramètre delete_everywhere qui ne fonctionnait plus (plus possible de supprimer à distance les messages d'autrui)."
 msgstr "**discussionEmpty**: removal of the delete_everywhere parameter which no longer worked (it was no longer possible to remotely delete other people's messages)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:235
+#: ../../source/migrations/migration_1_2.md:247
 msgid "**discussionSettingsGet** et **discussionSettingsSet**: déplacement dans le nouveau service **settingsCommandService**"
 msgstr "**discussionSettingsGet** and **discussionSettingsSet**: moved within the new service **settingsCommandService**"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:245
+#: ../../source/migrations/migration_1_2.md:257
 msgid "Notifications"
 msgstr "Notifications"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:247
+#: ../../source/migrations/migration_1_2.md:259
 msgid "GroupNotificationService"
 msgstr "GroupNotificationService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:248
+#: ../../source/migrations/migration_1_2.md:260
 msgid "**GroupUpdateInProgress** et **GroupUpdateFinished**: suppression des notifications devenues inutiles (les modifications de groupes ont été rendues synchrones et attendent que le groupe soit disponible)."
 msgstr "**GroupUpdateInProgress** and **GroupUpdateFinished**: removal of obsolete notifications (group updates have been made synchronous and wait for the group to become available)."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:250
+#: ../../source/migrations/migration_1_2.md:262
 msgid "Admin"
 msgstr "Admin"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:252
+#: ../../source/migrations/migration_1_2.md:264
 msgid "IdentityAdminService"
 msgstr "IdentityAdminService"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:253
+#: ../../source/migrations/migration_1_2.md:265
 msgid "**identityNew**: suppression du paramètre api_key, utilisez la commande **identitySetApiKey** une fois l'identité crée."
 msgstr "**identityNew**: removal of the api_key parameter, use the command **identitySetApiKey** once the identity has been created."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:255
+#: ../../source/migrations/migration_1_2.md:267
 msgid "Datatypes"
 msgstr "Datatypes"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:257
+#: ../../source/migrations/migration_1_2.md:269
+msgid "Identity"
+msgstr "Identity"
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:270
+msgid "suppression du champ *invitation_url*, à la place utilisez **IdentityGetInvitationLink** ou **IdentityAdminGetInvitationLink**."
+msgstr "removed the field *invitation_url*, instead use **IdentityGetInvitationLink** or **IdentityAdminGetInvitationLink** commands."
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:272
 msgid "Invitation"
 msgstr "Invitation"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:258
+#: ../../source/migrations/migration_1_2.md:273
 msgid "suppression du status *STATUS_GROUP_INVITATION_FROZEN* devenu inutile."
 msgstr "removal of the status *STATUS_GROUP_INVITATION_FROZEN*, which has become unnecessary."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:260
+#: ../../source/migrations/migration_1_2.md:275
 msgid "Discussion"
 msgstr "Discussion"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:261
+#: ../../source/migrations/migration_1_2.md:276
 msgid "déplacement du message protobuf **DiscussionSettings** du fichier *discussion.proto* vers *settings.proto*, mais il reste dans le module `datatypes`, cela ne devrait donc pas affecter le code."
 msgstr "moved the protobuf message **DiscussionSettings** from *discussion.proto* to *settings.proto*, but it remains in the `datatypes` module, so this should not affect the code."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:263
+#: ../../source/migrations/migration_1_2.md:278
+msgid "MessageFilter"
+msgstr "MessageFilter"
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:279
+msgid "renommage du champ _reactions_filter_ en _reaction_filters_ pour suivre la convention utilisée ailleurs _(à partir de la version 2.0.1)_"
+msgstr "renamed of the field _reactions_filter_ to _reaction_filters_ to follow the convention used elsewhere (_from version 2.0.1_)"
+
+# translated using ollama
+#: ../../source/migrations/migration_1_2.md:281
 msgid "N8n"
 msgstr "N8n"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:265
+#: ../../source/migrations/migration_1_2.md:283
 msgid "Les nœuds Olvid pour n8n ont été remaniés en profondeur et pourraient donc en pas être rétrocompatibles. Nous vous recommandons de faire des sauvegardes de vos flows existants avant de mettre à jour le paquet."
 msgstr "The n8n Olvid nodes have been deeply reworked and may therefore not be backward compatible. We recommend you to backup your existing flows before updating the package."
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:268
+#: ../../source/migrations/migration_1_2.md:286
 msgid "Credentials"
 msgstr "Credentials"
 
 # translated using ollama
-#: ../../source/migrations/migration_1_2.md:269
+#: ../../source/migrations/migration_1_2.md:287
 msgid "Les credentials Olvid ont été mis à jour. Si vos nœuds ne trouvent plus leur credentials, il faut en ajouter de nouveau et mettre à jour les credentials utilisés par chaque noeud Olvid. Pour créer vos nouveaux credential rendez-vous dans la section [](/n8n/n8n.md#configurer-le-noeud-olvid)."
 msgstr "The Olvid credentials have been updated. If your nodes can no longer find their credentials, you will need to add new ones and update the credentials used by each Olvid node. To create your new credentials, go to the section [](/n8n/n8n.md#configurer-le-noeud-olvid)."
 

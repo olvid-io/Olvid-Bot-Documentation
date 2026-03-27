@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 22:41+0100\n"
+"POT-Creation-Date: 2026-03-27 17:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -38,8 +38,8 @@ msgstr ""
 #: ../../source/reference/notifications.md:407
 #: ../../source/reference/notifications.md:508
 #: ../../source/reference/notifications.md:604
-#: ../../source/reference/notifications.md:887
-#: ../../source/reference/notifications.md:980
+#: ../../source/reference/notifications.md:886
+#: ../../source/reference/notifications.md:979
 msgid "Info"
 msgstr ""
 
@@ -96,16 +96,16 @@ msgstr ""
 #: ../../source/reference/notifications.md:818
 #: ../../source/reference/notifications.md:840
 #: ../../source/reference/notifications.md:864
-#: ../../source/reference/notifications.md:899
-#: ../../source/reference/notifications.md:918
-#: ../../source/reference/notifications.md:940
-#: ../../source/reference/notifications.md:961
-#: ../../source/reference/notifications.md:993
-#: ../../source/reference/notifications.md:1015
-#: ../../source/reference/notifications.md:1034
-#: ../../source/reference/notifications.md:1052
-#: ../../source/reference/notifications.md:1071
-#: ../../source/reference/notifications.md:1090
+#: ../../source/reference/notifications.md:898
+#: ../../source/reference/notifications.md:917
+#: ../../source/reference/notifications.md:939
+#: ../../source/reference/notifications.md:960
+#: ../../source/reference/notifications.md:992
+#: ../../source/reference/notifications.md:1014
+#: ../../source/reference/notifications.md:1033
+#: ../../source/reference/notifications.md:1051
+#: ../../source/reference/notifications.md:1070
+#: ../../source/reference/notifications.md:1089
 msgid "`count` (**optional** uint64 - *limit the number of notifications you will receive , set to 0 to disable*)"
 msgstr ""
 
@@ -182,17 +182,17 @@ msgstr ""
 #: ../../source/reference/notifications.md:802
 #: ../../source/reference/notifications.md:828
 #: ../../source/reference/notifications.md:852
-#: ../../source/reference/notifications.md:877
-#: ../../source/reference/notifications.md:906
-#: ../../source/reference/notifications.md:925
-#: ../../source/reference/notifications.md:948
-#: ../../source/reference/notifications.md:970
-#: ../../source/reference/notifications.md:1003
-#: ../../source/reference/notifications.md:1022
-#: ../../source/reference/notifications.md:1041
-#: ../../source/reference/notifications.md:1059
-#: ../../source/reference/notifications.md:1078
-#: ../../source/reference/notifications.md:1096
+#: ../../source/reference/notifications.md:876
+#: ../../source/reference/notifications.md:905
+#: ../../source/reference/notifications.md:924
+#: ../../source/reference/notifications.md:947
+#: ../../source/reference/notifications.md:969
+#: ../../source/reference/notifications.md:1002
+#: ../../source/reference/notifications.md:1021
+#: ../../source/reference/notifications.md:1040
+#: ../../source/reference/notifications.md:1058
+#: ../../source/reference/notifications.md:1077
+#: ../../source/reference/notifications.md:1095
 msgid "**Error Codes**:"
 msgstr ""
 
@@ -227,16 +227,16 @@ msgstr ""
 #: ../../source/reference/notifications.md:804
 #: ../../source/reference/notifications.md:830
 #: ../../source/reference/notifications.md:854
-#: ../../source/reference/notifications.md:879
-#: ../../source/reference/notifications.md:926
-#: ../../source/reference/notifications.md:950
-#: ../../source/reference/notifications.md:972
-#: ../../source/reference/notifications.md:1004
-#: ../../source/reference/notifications.md:1023
-#: ../../source/reference/notifications.md:1042
-#: ../../source/reference/notifications.md:1060
-#: ../../source/reference/notifications.md:1079
-#: ../../source/reference/notifications.md:1097
+#: ../../source/reference/notifications.md:878
+#: ../../source/reference/notifications.md:925
+#: ../../source/reference/notifications.md:949
+#: ../../source/reference/notifications.md:971
+#: ../../source/reference/notifications.md:1003
+#: ../../source/reference/notifications.md:1022
+#: ../../source/reference/notifications.md:1041
+#: ../../source/reference/notifications.md:1059
+#: ../../source/reference/notifications.md:1078
+#: ../../source/reference/notifications.md:1096
 msgid "`UNAUTHENTICATED`: client key is invalid."
 msgstr ""
 
@@ -676,7 +676,7 @@ msgid "`discussion` ({ref}`message-discussion`)"
 msgstr ""
 
 #: ../../source/reference/notifications.md:429
-#: ../../source/reference/notifications.md:907
+#: ../../source/reference/notifications.md:906
 msgid "`UNAUTHENTICATED`: Client key is invalid."
 msgstr ""
 
@@ -958,7 +958,7 @@ msgstr ""
 #: ../../source/reference/notifications.md:799
 #: ../../source/reference/notifications.md:825
 #: ../../source/reference/notifications.md:848
-#: ../../source/reference/notifications.md:873
+#: ../../source/reference/notifications.md:872
 #, python-brace-format
 msgid "`group` ({ref}`message-group`)"
 msgstr ""
@@ -1060,7 +1060,7 @@ msgstr ""
 #: ../../source/reference/notifications.md:803
 #: ../../source/reference/notifications.md:829
 #: ../../source/reference/notifications.md:853
-#: ../../source/reference/notifications.md:878
+#: ../../source/reference/notifications.md:877
 msgid "`NOT_FOUND`: at least one of the _group_ids_ does not exists."
 msgstr ""
 
@@ -1271,7 +1271,7 @@ msgstr ""
 
 #: ../../source/reference/notifications.md:844
 #, python-brace-format
-msgid "`previous_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications about groups where your permissions match this filter, before update.*)"
+msgid "`previous_permissions_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications when your previous permissions match this filter.*)"
 msgstr ""
 
 #: ../../source/reference/notifications.md:847
@@ -1307,275 +1307,275 @@ msgstr ""
 
 #: ../../source/reference/notifications.md:868
 #, python-brace-format
-msgid "`previous_permission_filter` (**optional** {ref}`message-groupmemberfilter` - *you will only receive notifications about group members that match this filter. TODO update to GroupPermissionsFilter !*)"
+msgid "`previous_permission_filter` (**optional** {ref}`message-grouppermissionfilter` - *you will only receive notifications when previous permissions match this filter.*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:872
+#: ../../source/reference/notifications.md:871
 msgid "**Notification *(Stream)***: *GroupMemberPermissionsUpdatedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:874
+#: ../../source/reference/notifications.md:873
 #, python-brace-format
 msgid "`member` ({ref}`message-groupmember` - *the group member permissions have been updated for*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:875
+#: ../../source/reference/notifications.md:874
 #, python-brace-format
 msgid "`previous_permissions` ({ref}`message-groupmemberpermissions` - *the member permissions before update*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:885
+#: ../../source/reference/notifications.md:884
 msgid "Invitation Notification Service"
 msgstr ""
 
-#: ../../source/reference/notifications.md:889
+#: ../../source/reference/notifications.md:888
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-invitation`"
 msgstr ""
 
-#: ../../source/reference/notifications.md:892
+#: ../../source/reference/notifications.md:891
 msgid "InvitationReceived"
 msgstr ""
 
-#: ../../source/reference/notifications.md:894
+#: ../../source/reference/notifications.md:893
 msgid "Receive a notification each time you receive a new invitation.   A new invitation marks the first step of an invitation protocol."
 msgstr ""
 
-#: ../../source/reference/notifications.md:898
+#: ../../source/reference/notifications.md:897
 msgid "**Subscription**: *SubscribeToInvitationReceivedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:900
-#: ../../source/reference/notifications.md:919
-#: ../../source/reference/notifications.md:941
-#: ../../source/reference/notifications.md:962
+#: ../../source/reference/notifications.md:899
+#: ../../source/reference/notifications.md:918
+#: ../../source/reference/notifications.md:940
+#: ../../source/reference/notifications.md:961
 #, python-brace-format
 msgid "`filter` (**optional** {ref}`message-invitationfilter` - *you will only receive notifications about invitations that match this filter.*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:903
+#: ../../source/reference/notifications.md:902
 msgid "**Notification *(Stream)***: *InvitationReceivedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:904
-#: ../../source/reference/notifications.md:923
-#: ../../source/reference/notifications.md:946
-#: ../../source/reference/notifications.md:967
+#: ../../source/reference/notifications.md:903
+#: ../../source/reference/notifications.md:922
+#: ../../source/reference/notifications.md:945
+#: ../../source/reference/notifications.md:966
 #, python-brace-format
 msgid "`invitation` ({ref}`message-invitation`)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:911
+#: ../../source/reference/notifications.md:910
 msgid "InvitationSent"
 msgstr ""
 
-#: ../../source/reference/notifications.md:913
+#: ../../source/reference/notifications.md:912
 msgid "Receive a notification each time you send a new invitation.   A new invitation is the first step of an invitation protocol."
 msgstr ""
 
-#: ../../source/reference/notifications.md:917
+#: ../../source/reference/notifications.md:916
 msgid "**Subscription**: *SubscribeToInvitationSentNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:922
+#: ../../source/reference/notifications.md:921
 msgid "**Notification *(Stream)***: *InvitationSentNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:930
+#: ../../source/reference/notifications.md:929
 msgid "InvitationDeleted"
 msgstr ""
 
-#: ../../source/reference/notifications.md:932
+#: ../../source/reference/notifications.md:931
 msgid "Receive a notification each time an invitation is deleted.   This can happen under different circumstances:"
 msgstr ""
 
-#: ../../source/reference/notifications.md:934
+#: ../../source/reference/notifications.md:933
 msgid "an invitation protocol ended and invitation was automatically removed"
 msgstr ""
 
-#: ../../source/reference/notifications.md:935
+#: ../../source/reference/notifications.md:934
 msgid "you aborted a protocol"
 msgstr ""
 
-#: ../../source/reference/notifications.md:936
+#: ../../source/reference/notifications.md:935
 msgid "you deleted an invitation"
 msgstr ""
 
-#: ../../source/reference/notifications.md:939
+#: ../../source/reference/notifications.md:938
 msgid "**Subscription**: *SubscribeToInvitationDeletedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:942
-#: ../../source/reference/notifications.md:963
+#: ../../source/reference/notifications.md:941
+#: ../../source/reference/notifications.md:962
 msgid "`invitation_ids` (**repeated** uint64 - *you will only receive notifications about invitations specified in this list.*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:945
+#: ../../source/reference/notifications.md:944
 msgid "**Notification *(Stream)***: *InvitationDeletedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:949
-#: ../../source/reference/notifications.md:971
+#: ../../source/reference/notifications.md:948
+#: ../../source/reference/notifications.md:970
 msgid "`NOT_FOUND`: at least one of the _invitation_ids_ does not exists."
 msgstr ""
 
-#: ../../source/reference/notifications.md:954
+#: ../../source/reference/notifications.md:953
 msgid "InvitationUpdated"
 msgstr ""
 
-#: ../../source/reference/notifications.md:956
+#: ../../source/reference/notifications.md:955
 msgid "Receive a notification each time an invitation status have been updated.   Invitation status are updated when a new protocol step is passed."
 msgstr ""
 
-#: ../../source/reference/notifications.md:960
+#: ../../source/reference/notifications.md:959
 msgid "**Subscription**: *SubscribeToInvitationUpdatedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:966
+#: ../../source/reference/notifications.md:965
 msgid "**Notification *(Stream)***: *InvitationUpdatedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:968
+#: ../../source/reference/notifications.md:967
 #, python-brace-format
 msgid "`previous_invitation_status` ({ref}`enum-invitation.status` - *_invitation.status_ before update*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:978
+#: ../../source/reference/notifications.md:977
 msgid "Call Notification Service"
 msgstr ""
 
-#: ../../source/reference/notifications.md:982
+#: ../../source/reference/notifications.md:981
 #, python-brace-format
 msgid "**Associated Datatype:** {ref}`file-call`"
 msgstr ""
 
-#: ../../source/reference/notifications.md:985
+#: ../../source/reference/notifications.md:984
 msgid "CallIncomingCall"
 msgstr ""
 
-#: ../../source/reference/notifications.md:987
+#: ../../source/reference/notifications.md:986
 msgid "Receive a notification when someone tries to call you.   Daemon will automatically answer with a busy message to notify that you won't be able to answer.   Call details are available in notification content."
 msgstr ""
 
-#: ../../source/reference/notifications.md:992
+#: ../../source/reference/notifications.md:991
 msgid "**Subscription**: *SubscribeToCallIncomingCallNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:996
+#: ../../source/reference/notifications.md:995
 msgid "**Notification *(Stream)***: *CallIncomingCallNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:997
-#: ../../source/reference/notifications.md:1019
-#: ../../source/reference/notifications.md:1038
-#: ../../source/reference/notifications.md:1056
-#: ../../source/reference/notifications.md:1075
-#: ../../source/reference/notifications.md:1094
+#: ../../source/reference/notifications.md:996
+#: ../../source/reference/notifications.md:1018
+#: ../../source/reference/notifications.md:1037
+#: ../../source/reference/notifications.md:1055
+#: ../../source/reference/notifications.md:1074
+#: ../../source/reference/notifications.md:1093
 msgid "`call_identifier` (string)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:998
+#: ../../source/reference/notifications.md:997
 msgid "`discussion_id` (uint64 - *set to group discussion if calling a group, else to contact's discussion, even if there are multiple participants*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:999
+#: ../../source/reference/notifications.md:998
 #, python-brace-format
 msgid "`participant_id` ({ref}`message-callparticipantid` - *obviously contains a contact id*)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1000
+#: ../../source/reference/notifications.md:999
 msgid "`caller_display_name` (string)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1001
+#: ../../source/reference/notifications.md:1000
 msgid "`participant_count` (uint32)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1008
+#: ../../source/reference/notifications.md:1007
 msgid "CallRinging"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1010
+#: ../../source/reference/notifications.md:1009
 msgid "When you initiated a call, receive a notification when a participant phone starts to ring.   Under some network circumstances a participant phone might never start ringing."
 msgstr ""
 
-#: ../../source/reference/notifications.md:1014
+#: ../../source/reference/notifications.md:1013
 msgid "**Subscription**: *SubscribeToCallRingingNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1018
+#: ../../source/reference/notifications.md:1017
 msgid "**Notification *(Stream)***: *CallRingingNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1020
-#: ../../source/reference/notifications.md:1039
-#: ../../source/reference/notifications.md:1057
-#: ../../source/reference/notifications.md:1076
+#: ../../source/reference/notifications.md:1019
+#: ../../source/reference/notifications.md:1038
+#: ../../source/reference/notifications.md:1056
+#: ../../source/reference/notifications.md:1075
 #, python-brace-format
 msgid "`participant_id` ({ref}`message-callparticipantid`)"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1027
+#: ../../source/reference/notifications.md:1026
 msgid "CallAccepted"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1029
+#: ../../source/reference/notifications.md:1028
 msgid "When you initiated a call, receive a notification if a participant accepted the call.   Daemon will automatically hang up when a participant accept the call because we currently cannot manage the call."
 msgstr ""
 
-#: ../../source/reference/notifications.md:1033
+#: ../../source/reference/notifications.md:1032
 msgid "**Subscription**: *SubscribeToCallAcceptedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1037
+#: ../../source/reference/notifications.md:1036
 msgid "**Notification *(Stream)***: *CallAcceptedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1046
+#: ../../source/reference/notifications.md:1045
 msgid "CallDeclined"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1048
+#: ../../source/reference/notifications.md:1047
 msgid "When you initiated a call, receive a notification if a participant declined the call."
 msgstr ""
 
-#: ../../source/reference/notifications.md:1051
+#: ../../source/reference/notifications.md:1050
 msgid "**Subscription**: *SubscribeToCallDeclinedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1055
+#: ../../source/reference/notifications.md:1054
 msgid "**Notification *(Stream)***: *CallDeclinedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1064
+#: ../../source/reference/notifications.md:1063
 msgid "CallBusy"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1066
+#: ../../source/reference/notifications.md:1065
 msgid "(Outbound call)   When you initiated a call, receive a notification if a participant accepted the call."
 msgstr ""
 
-#: ../../source/reference/notifications.md:1070
+#: ../../source/reference/notifications.md:1069
 msgid "**Subscription**: *SubscribeToCallBusyNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1074
+#: ../../source/reference/notifications.md:1073
 msgid "**Notification *(Stream)***: *CallBusyNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1083
+#: ../../source/reference/notifications.md:1082
 msgid "CallEnded"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1085
+#: ../../source/reference/notifications.md:1084
 msgid ":   For inbound or outbound call, receive a notification when every call participant left a call or declined it."
 msgstr ""
 
-#: ../../source/reference/notifications.md:1089
+#: ../../source/reference/notifications.md:1088
 msgid "**Subscription**: *SubscribeToCallEndedNotification*"
 msgstr ""
 
-#: ../../source/reference/notifications.md:1093
+#: ../../source/reference/notifications.md:1092
 msgid "**Notification *(Stream)***: *CallEndedNotification*"
 msgstr ""
 

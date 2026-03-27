@@ -132,7 +132,7 @@ sharing: the last location update timestamp*)
 * `min_timestamp` (**optional** uint64 - *is timestamp less or equal than *min_timestamp**)
 * `max_timestamp` (**optional** uint64 - *is timestamp more or equal than *max_timestamp**)
 * `has_reaction` (**optional** {ref}`enum-messagefilter.reaction` - *does message have reactions or not*)
-* `reactions_filter` (**repeated** {ref}`message-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)
+* `reaction_filters` (**repeated** {ref}`message-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)
 * **Oneof `reply`**:
   * `reply_to_a_message` (bool - *is message a reply to another message*)
   * `do_not_reply_to_a_message` (bool - *is message not a reply to a message*)
@@ -670,7 +670,6 @@ sharing: the last location update timestamp*)
 * `id` (uint64)
 * `display_name` (string - *computed from *details**)
 * `details` ({ref}`message-identitydetails`)
-* `invitation_url` (***deprecated*** string - *TODO TODEL !!!!*)
 * `keycloak_managed` (bool - *identity is linked to a keycloak directory*)
 * `has_a_photo` (bool)
 * `api_key` ({ref}`message-identity.apikey` - *Olvid api key to grant permissions*)
@@ -823,7 +822,7 @@ sharing: the last location update timestamp*)
 * `timestamp` (uint64 - *latest status update timestamp*)
 * `sas` (**optional** string - *only set for STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE and STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE
 four digit code to give to the other in an invitation protocol*)
-* `mediatorId` (**optional** uint64 - *introductions protocol only
+* `mediator_id` (**optional** uint64 - *introductions protocol only
 the contact id of the person who initiated introduction protocol*)
 
 ::::::{card}

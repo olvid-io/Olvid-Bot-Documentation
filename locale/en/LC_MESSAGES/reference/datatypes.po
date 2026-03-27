@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 22:30+0100\n"
+"POT-Creation-Date: 2026-03-27 17:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -39,13 +39,13 @@ msgstr ""
 #: ../../source/reference/datatypes.md:327
 #: ../../source/reference/datatypes.md:401
 #: ../../source/reference/datatypes.md:657
-#: ../../source/reference/datatypes.md:763
-#: ../../source/reference/datatypes.md:801
-#: ../../source/reference/datatypes.md:891
-#: ../../source/reference/datatypes.md:963
-#: ../../source/reference/datatypes.md:998
-#: ../../source/reference/datatypes.md:1044
-#: ../../source/reference/datatypes.md:1067
+#: ../../source/reference/datatypes.md:762
+#: ../../source/reference/datatypes.md:800
+#: ../../source/reference/datatypes.md:890
+#: ../../source/reference/datatypes.md:962
+#: ../../source/reference/datatypes.md:997
+#: ../../source/reference/datatypes.md:1043
+#: ../../source/reference/datatypes.md:1066
 msgid "**Related Endpoints:**"
 msgstr ""
 
@@ -87,28 +87,28 @@ msgstr ""
 #: ../../source/reference/datatypes.md:561
 #: ../../source/reference/datatypes.md:593
 #: ../../source/reference/datatypes.md:669
-#: ../../source/reference/datatypes.md:682
-#: ../../source/reference/datatypes.md:691
-#: ../../source/reference/datatypes.md:705
-#: ../../source/reference/datatypes.md:719
-#: ../../source/reference/datatypes.md:775
-#: ../../source/reference/datatypes.md:787
-#: ../../source/reference/datatypes.md:819
-#: ../../source/reference/datatypes.md:855
-#: ../../source/reference/datatypes.md:904
-#: ../../source/reference/datatypes.md:913
-#: ../../source/reference/datatypes.md:924
-#: ../../source/reference/datatypes.md:939
-#: ../../source/reference/datatypes.md:950
-#: ../../source/reference/datatypes.md:975
-#: ../../source/reference/datatypes.md:987
-#: ../../source/reference/datatypes.md:1008
-#: ../../source/reference/datatypes.md:1022
-#: ../../source/reference/datatypes.md:1055
-#: ../../source/reference/datatypes.md:1083
-#: ../../source/reference/datatypes.md:1091
-#: ../../source/reference/datatypes.md:1100
-#: ../../source/reference/datatypes.md:1111
+#: ../../source/reference/datatypes.md:681
+#: ../../source/reference/datatypes.md:690
+#: ../../source/reference/datatypes.md:704
+#: ../../source/reference/datatypes.md:718
+#: ../../source/reference/datatypes.md:774
+#: ../../source/reference/datatypes.md:786
+#: ../../source/reference/datatypes.md:818
+#: ../../source/reference/datatypes.md:854
+#: ../../source/reference/datatypes.md:903
+#: ../../source/reference/datatypes.md:912
+#: ../../source/reference/datatypes.md:923
+#: ../../source/reference/datatypes.md:938
+#: ../../source/reference/datatypes.md:949
+#: ../../source/reference/datatypes.md:974
+#: ../../source/reference/datatypes.md:986
+#: ../../source/reference/datatypes.md:1007
+#: ../../source/reference/datatypes.md:1021
+#: ../../source/reference/datatypes.md:1054
+#: ../../source/reference/datatypes.md:1082
+#: ../../source/reference/datatypes.md:1090
+#: ../../source/reference/datatypes.md:1099
+#: ../../source/reference/datatypes.md:1110
 msgid "**Fields:**"
 msgstr ""
 
@@ -213,12 +213,12 @@ msgstr ""
 #: ../../source/reference/datatypes.md:624
 #: ../../source/reference/datatypes.md:634
 #: ../../source/reference/datatypes.md:644
-#: ../../source/reference/datatypes.md:730
-#: ../../source/reference/datatypes.md:740
-#: ../../source/reference/datatypes.md:750
-#: ../../source/reference/datatypes.md:833
-#: ../../source/reference/datatypes.md:866
-#: ../../source/reference/datatypes.md:1031
+#: ../../source/reference/datatypes.md:729
+#: ../../source/reference/datatypes.md:739
+#: ../../source/reference/datatypes.md:749
+#: ../../source/reference/datatypes.md:832
+#: ../../source/reference/datatypes.md:865
+#: ../../source/reference/datatypes.md:1030
 msgid "**Enum Values:**"
 msgstr ""
 
@@ -226,7 +226,7 @@ msgstr ""
 #: ../../source/reference/datatypes.md:230
 #: ../../source/reference/datatypes.md:315
 #: ../../source/reference/datatypes.md:432
-#: ../../source/reference/datatypes.md:867
+#: ../../source/reference/datatypes.md:866
 msgid "`TYPE_UNSPECIFIED`: 0"
 msgstr ""
 
@@ -383,12 +383,12 @@ msgid "`location` (**optional** {ref}`enum-messagefilter.location` - *is message
 msgstr ""
 
 #: ../../source/reference/datatypes.md:132
-#: ../../source/reference/datatypes.md:859
+#: ../../source/reference/datatypes.md:858
 msgid "`min_timestamp` (**optional** uint64 - *is timestamp less or equal than *min_timestamp**)"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:133
-#: ../../source/reference/datatypes.md:860
+#: ../../source/reference/datatypes.md:859
 msgid "`max_timestamp` (**optional** uint64 - *is timestamp more or equal than *max_timestamp**)"
 msgstr ""
 
@@ -399,7 +399,7 @@ msgstr ""
 
 #: ../../source/reference/datatypes.md:135
 #, python-brace-format
-msgid "`reactions_filter` (**repeated** {ref}`message-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)"
+msgid "`reaction_filters` (**repeated** {ref}`message-reactionfilter` - *message must have at least one matching reaction for each *reactions_filter**)"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:136
@@ -528,7 +528,7 @@ msgid "`id` ({ref}`message-attachmentid`)"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:208
-#: ../../source/reference/datatypes.md:951
+#: ../../source/reference/datatypes.md:950
 msgid "`discussion_id` (uint64)"
 msgstr ""
 
@@ -684,7 +684,7 @@ msgstr ""
 #: ../../source/reference/datatypes.md:292
 #: ../../source/reference/datatypes.md:306
 #: ../../source/reference/datatypes.md:467
-#: ../../source/reference/datatypes.md:1057
+#: ../../source/reference/datatypes.md:1056
 msgid "`contact_id` (uint64)"
 msgstr ""
 
@@ -766,7 +766,7 @@ msgstr ""
 
 #: ../../source/reference/datatypes.md:346
 #: ../../source/reference/datatypes.md:425
-#: ../../source/reference/datatypes.md:675
+#: ../../source/reference/datatypes.md:674
 msgid "`has_a_photo` (bool)"
 msgstr ""
 
@@ -798,13 +798,13 @@ msgid "`keycloak` (**optional** {ref}`enum-contactfilter.keycloak` - *select onl
 msgstr ""
 
 #: ../../source/reference/datatypes.md:361
-#: ../../source/reference/datatypes.md:723
+#: ../../source/reference/datatypes.md:722
 msgid "`display_name_search` (**optional** string - *regexp filter on *display_name**)"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:362
-#: ../../source/reference/datatypes.md:724
-#: ../../source/reference/datatypes.md:1025
+#: ../../source/reference/datatypes.md:723
+#: ../../source/reference/datatypes.md:1024
 #, python-brace-format
 msgid "`details_search` (**optional** {ref}`message-identitydetails` - *a set of regexp filters, one for each field of *details**)"
 msgstr ""
@@ -831,7 +831,7 @@ msgstr ""
 
 #: ../../source/reference/datatypes.md:379
 #: ../../source/reference/datatypes.md:542
-#: ../../source/reference/datatypes.md:741
+#: ../../source/reference/datatypes.md:740
 msgid "`PHOTO_UNSPECIFIED`: 0"
 msgstr ""
 
@@ -849,7 +849,7 @@ msgstr ""
 
 #: ../../source/reference/datatypes.md:389
 #: ../../source/reference/datatypes.md:532
-#: ../../source/reference/datatypes.md:731
+#: ../../source/reference/datatypes.md:730
 msgid "`KEYCLOAK_UNSPECIFIED`: 0"
 msgstr ""
 
@@ -1116,12 +1116,12 @@ msgid "GroupFilter.Keycloak"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:533
-#: ../../source/reference/datatypes.md:732
+#: ../../source/reference/datatypes.md:731
 msgid "`KEYCLOAK_IS_NOT`: 1"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:534
-#: ../../source/reference/datatypes.md:733
+#: ../../source/reference/datatypes.md:732
 msgid "`KEYCLOAK_IS`: 2"
 msgstr ""
 
@@ -1130,12 +1130,12 @@ msgid "GroupFilter.Photo"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:543
-#: ../../source/reference/datatypes.md:742
+#: ../../source/reference/datatypes.md:741
 msgid "`PHOTO_HAS_NOT`: 1"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:544
-#: ../../source/reference/datatypes.md:743
+#: ../../source/reference/datatypes.md:742
 msgid "`PHOTO_HAS`: 2"
 msgstr ""
 
@@ -1184,17 +1184,17 @@ msgid "PendingGroupMemberFilter.Contact"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:573
-#: ../../source/reference/datatypes.md:1032
+#: ../../source/reference/datatypes.md:1031
 msgid "`CONTACT_UNSPECIFIED`: 0"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:574
-#: ../../source/reference/datatypes.md:1033
+#: ../../source/reference/datatypes.md:1032
 msgid "`CONTACT_IS`: 1"
 msgstr ""
 
 #: ../../source/reference/datatypes.md:575
-#: ../../source/reference/datatypes.md:1034
+#: ../../source/reference/datatypes.md:1033
 msgid "`CONTACT_IS_NOT`: 2"
 msgstr ""
 
@@ -1343,692 +1343,688 @@ msgid "Your own Olvid identity, stored on this daemon instance.   A daemon can m
 msgstr ""
 
 #: ../../source/reference/datatypes.md:673
-msgid "`invitation_url` (***deprecated*** string - *TODO TODEL !!!!*)"
-msgstr ""
-
-#: ../../source/reference/datatypes.md:674
 msgid "`keycloak_managed` (bool - *identity is linked to a keycloak directory*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:676
+#: ../../source/reference/datatypes.md:675
 #, python-brace-format
 msgid "`api_key` ({ref}`message-identity.apikey` - *Olvid api key to grant permissions*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:680
+#: ../../source/reference/datatypes.md:679
 msgid "Identity.ApiKey"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:683
+#: ../../source/reference/datatypes.md:682
 #, python-brace-format
 msgid "`permission` ({ref}`message-identity.apikey.permission`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:684
+#: ../../source/reference/datatypes.md:683
 msgid "`expiration_timestamp` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:689
+#: ../../source/reference/datatypes.md:688
 msgid "Identity.ApiKey.Permission"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:692
+#: ../../source/reference/datatypes.md:691
 msgid "`call` (bool)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:693
+#: ../../source/reference/datatypes.md:692
 msgid "`multi_device` (bool)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:698
+#: ../../source/reference/datatypes.md:697
 msgid "IdentityDetails"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:701
+#: ../../source/reference/datatypes.md:700
 msgid "Represents an Olvid identity details.   Used for any Olvid identity (owned identity or other contact).   Details are valid only if at least one field is not blank."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:706
+#: ../../source/reference/datatypes.md:705
 msgid "`first_name` (**optional** string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:707
+#: ../../source/reference/datatypes.md:706
 msgid "`last_name` (**optional** string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:708
+#: ../../source/reference/datatypes.md:707
 msgid "`company` (**optional** string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:709
+#: ../../source/reference/datatypes.md:708
 msgid "`position` (**optional** string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:713
+#: ../../source/reference/datatypes.md:712
 msgid "IdentityFilter"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:716
+#: ../../source/reference/datatypes.md:715
 msgid "Filter identities by attributes.   To pass a filter an element must match all specified conditions."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:720
+#: ../../source/reference/datatypes.md:719
 #, python-brace-format
 msgid "`keycloak` (**optional** {ref}`enum-identityfilter.keycloak` - *is identity keycloak managed or not*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:721
+#: ../../source/reference/datatypes.md:720
 #, python-brace-format
 msgid "`photo` (**optional** {ref}`enum-identityfilter.photo` - *does identity have a profile photo or not*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:722
+#: ../../source/reference/datatypes.md:721
 #, python-brace-format
 msgid "`api_key` (**optional** {ref}`enum-identityfilter.apikey` - *does identity have an Olvid api key or not*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:728
+#: ../../source/reference/datatypes.md:727
 msgid "IdentityFilter.Keycloak"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:738
+#: ../../source/reference/datatypes.md:737
 msgid "IdentityFilter.Photo"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:748
+#: ../../source/reference/datatypes.md:747
 msgid "IdentityFilter.ApiKey"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:751
+#: ../../source/reference/datatypes.md:750
 msgid "`API_KEY_UNSPECIFIED`: 0"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:752
+#: ../../source/reference/datatypes.md:751
 msgid "`API_KEY_HAS_NOT`: 1"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:753
+#: ../../source/reference/datatypes.md:752
 msgid "`API_KEY_HAS`: 2"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:761
+#: ../../source/reference/datatypes.md:760
 msgid "Client_Key"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:764
+#: ../../source/reference/datatypes.md:763
 #, python-brace-format
 msgid "**Admin:** {ref}`service-clientkeyadminservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:768
+#: ../../source/reference/datatypes.md:767
 msgid "ClientKey"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:771
+#: ../../source/reference/datatypes.md:770
 msgid "A client key can be used to authenticate on the daemon.   It can be associated to a daemon identity if identity_id is specified, if not (identity_id is equal to zero) it is an admin client.   An admin client key can use admin command services and impersonate any daemon identity."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:776
+#: ../../source/reference/datatypes.md:775
 msgid "`name` (string - *user defined name*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:777
-#: ../../source/reference/datatypes.md:976
+#: ../../source/reference/datatypes.md:776
+#: ../../source/reference/datatypes.md:975
 msgid "`key` (string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:778
+#: ../../source/reference/datatypes.md:777
 msgid "`identity_id` (uint64 - *0 if an admin client key*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:782
+#: ../../source/reference/datatypes.md:781
 msgid "ClientKeyFilter"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:785
+#: ../../source/reference/datatypes.md:784
 msgid "Filter client keys by attributes."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:788
+#: ../../source/reference/datatypes.md:787
 msgid "**Oneof `identity`**:"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:789
+#: ../../source/reference/datatypes.md:788
 msgid "`admin_key` (bool - *filter admin client keys*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:790
+#: ../../source/reference/datatypes.md:789
 msgid "`identity_id` (uint64 - *filter keys associated to an identity id*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:791
+#: ../../source/reference/datatypes.md:790
 msgid "`name_search` (**optional** string - *regexp filter on *name**)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:792
+#: ../../source/reference/datatypes.md:791
 msgid "`key` (**optional** string - *key value*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:799
-#: ../../source/reference/datatypes.md:807
+#: ../../source/reference/datatypes.md:798
+#: ../../source/reference/datatypes.md:806
 msgid "Invitation"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:802
+#: ../../source/reference/datatypes.md:801
 #, python-brace-format
 msgid "**Command:** {ref}`service-invitationcommandservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:803
+#: ../../source/reference/datatypes.md:802
 #, python-brace-format
 msgid "**Notification:** {ref}`service-invitationnotificationservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:810
+#: ../../source/reference/datatypes.md:809
 msgid "An invitation represents an instance of a protocol among several possibilities.   Protocols can be:"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:812
+#: ../../source/reference/datatypes.md:811
 msgid "Invitation: the classic Olvid invitation protocol to add someone else to your contact book. Protocol implies multiple manual steps, with invitation acceptation and four digit code exchange."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:813
+#: ../../source/reference/datatypes.md:812
 msgid "Introduction: a third party identity presents two of its contacts to each other."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:814
+#: ../../source/reference/datatypes.md:813
 msgid "One to one invitation: One of your contact asked you to create a one to one discussion."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:815
+#: ../../source/reference/datatypes.md:814
 msgid "Group invitation: Someone invited you to join a group."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:817
+#: ../../source/reference/datatypes.md:816
 msgid "Each invitation have a status representing the protocol, and it's current step."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:820
+#: ../../source/reference/datatypes.md:819
 msgid "`id` (uint64 - *invitation unique identifier*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:821
+#: ../../source/reference/datatypes.md:820
 #, python-brace-format
 msgid "`status` ({ref}`enum-invitation.status` - *current protocol step*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:822
+#: ../../source/reference/datatypes.md:821
 msgid "`display_name` (string - *display name of the other identity or the group name*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:823
+#: ../../source/reference/datatypes.md:822
 msgid "`timestamp` (uint64 - *latest status update timestamp*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:824
+#: ../../source/reference/datatypes.md:823
 msgid "`sas` (**optional** string - *only set for STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE and STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE four digit code to give to the other in an invitation protocol*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:826
-msgid "`mediatorId` (**optional** uint64 - *introductions protocol only the contact id of the person who initiated introduction protocol*)"
+#: ../../source/reference/datatypes.md:825
+msgid "`mediator_id` (**optional** uint64 - *introductions protocol only the contact id of the person who initiated introduction protocol*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:831
+#: ../../source/reference/datatypes.md:830
 msgid "Invitation.Status"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:834
+#: ../../source/reference/datatypes.md:833
 msgid "`STATUS_UNSPECIFIED`: 0"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:835
+#: ../../source/reference/datatypes.md:834
 msgid "`STATUS_INVITATION_WAIT_YOU_TO_ACCEPT`: 1 - *you received an invitation, accept or decline it*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:836
+#: ../../source/reference/datatypes.md:835
 msgid "`STATUS_INVITATION_WAIT_IT_TO_ACCEPT`: 2 - *you sent an invitation, recipient must accept it to continue*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:837
+#: ../../source/reference/datatypes.md:836
 msgid "`STATUS_INVITATION_STATUS_IN_PROGRESS`: 3 - *invitation process is in progress and will continue after automatic protocol message exchange between protagonist*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:838
+#: ../../source/reference/datatypes.md:837
 msgid "`STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE`: 4 - *you must set other sas code*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:839
+#: ../../source/reference/datatypes.md:838
 msgid "`STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE`: 5 - *you set other sas code, give your sas code to other*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:840
+#: ../../source/reference/datatypes.md:839
 msgid "`STATUS_INTRODUCTION_WAIT_IT_TO_ACCEPT`: 7 - *you accepted an introduction, wait for the other to accept too*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:841
+#: ../../source/reference/datatypes.md:840
 msgid "`STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT`: 8 - *you received an introduction*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:842
+#: ../../source/reference/datatypes.md:841
 msgid "`STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT`: 9 - *you sent a one to one invitation, wait for the other to accept*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:843
+#: ../../source/reference/datatypes.md:842
 msgid "`STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT`: 10 - *you received a one to one invitation, accept or decline it*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:844
+#: ../../source/reference/datatypes.md:843
 msgid "`STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT`: 11 - *you received a group invitation, accept or decline it*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:849
+#: ../../source/reference/datatypes.md:848
 msgid "InvitationFilter"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:852
+#: ../../source/reference/datatypes.md:851
 msgid "Filter invitation by attributes.   To pass a filter an element must match all specified conditions."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:856
+#: ../../source/reference/datatypes.md:855
 #, python-brace-format
 msgid "`status` (**optional** {ref}`enum-invitation.status` - *does invitation have a specific status*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:857
+#: ../../source/reference/datatypes.md:856
 #, python-brace-format
 msgid "`type` (**optional** {ref}`enum-invitationfilter.type` - *does invitation belongs to a specific protocol*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:858
-#: ../../source/reference/datatypes.md:1024
+#: ../../source/reference/datatypes.md:857
+#: ../../source/reference/datatypes.md:1023
 msgid "`display_name_search` (**optional** string - *regexp filter on *display_name* field*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:864
+#: ../../source/reference/datatypes.md:863
 msgid "InvitationFilter.Type"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:868
+#: ../../source/reference/datatypes.md:867
 msgid "`TYPE_INVITATION`: 1 - *is status one of :"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:869
+#: ../../source/reference/datatypes.md:868
 msgid "STATUS_INVITATION_WAIT_YOU_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:870
+#: ../../source/reference/datatypes.md:869
 msgid "STATUS_INVITATION_WAIT_IT_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:871
+#: ../../source/reference/datatypes.md:870
 msgid "STATUS_INVITATION_STATUS_IN_PROGRESS"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:872
+#: ../../source/reference/datatypes.md:871
 msgid "STATUS_INVITATION_WAIT_YOU_FOR_SAS_EXCHANGE"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:873
+#: ../../source/reference/datatypes.md:872
 msgid "STATUS_INVITATION_WAIT_IT_FOR_SAS_EXCHANGE*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:874
+#: ../../source/reference/datatypes.md:873
 msgid "`TYPE_INTRODUCTION`: 2 - *is status one of :"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:875
+#: ../../source/reference/datatypes.md:874
 msgid "STATUS_INTRODUCTION_WAIT_IT_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:876
+#: ../../source/reference/datatypes.md:875
 msgid "STATUS_INTRODUCTION_WAIT_YOU_TO_ACCEPT*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:877
+#: ../../source/reference/datatypes.md:876
 msgid "`TYPE_GROUP`: 3 - *is status equals to:"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:878
+#: ../../source/reference/datatypes.md:877
 msgid "STATUS_GROUP_INVITATION_WAIT_YOU_TO_ACCEPT*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:879
+#: ../../source/reference/datatypes.md:878
 msgid "`TYPE_ONE_TO_ONE`: 4 - *is status one of :"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:880
+#: ../../source/reference/datatypes.md:879
 msgid "STATUS_ONE_TO_ONE_INVITATION_WAIT_IT_TO_ACCEPT"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:881
+#: ../../source/reference/datatypes.md:880
 msgid "STATUS_ONE_TO_ONE_INVITATION_WAIT_YOU_TO_ACCEPT*"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:889
+#: ../../source/reference/datatypes.md:888
 msgid "Settings"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:892
+#: ../../source/reference/datatypes.md:891
 #, python-brace-format
 msgid "**Command:** {ref}`service-settingscommandservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:896
+#: ../../source/reference/datatypes.md:895
 msgid "IdentitySettings"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:899
+#: ../../source/reference/datatypes.md:898
 msgid "Settings for an Identity managed by a daemon."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:900
+#: ../../source/reference/datatypes.md:899
 msgid "AutoAcceptInvitation: when enabled the daemon will automatically accept incoming and existing invitations from specified protocol."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:901
+#: ../../source/reference/datatypes.md:900
 msgid "MessageRetention: when at least one element is set daemon will regularly check if some message can be deleted, matching filled criteria. This allows to save space and save performances by keeping database as small as possible."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:902
+#: ../../source/reference/datatypes.md:901
 msgid "Keycloak: directory related settings"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:905
+#: ../../source/reference/datatypes.md:904
 #, python-brace-format
 msgid "`invitation` ({ref}`message-identitysettings.autoacceptinvitation`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:906
+#: ../../source/reference/datatypes.md:905
 #, python-brace-format
 msgid "`message_retention` ({ref}`message-identitysettings.messageretention`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:907
+#: ../../source/reference/datatypes.md:906
 #, python-brace-format
 msgid "`keycloak` ({ref}`message-identitysettings.keycloak`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:911
+#: ../../source/reference/datatypes.md:910
 msgid "IdentitySettings.AutoAcceptInvitation"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:914
+#: ../../source/reference/datatypes.md:913
 msgid "`auto_accept_introduction` (bool - *auto accept introductions (a trusted contact pushed a new contact)*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:915
+#: ../../source/reference/datatypes.md:914
 msgid "`auto_accept_group` (bool - *auto accept invitations to a group*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:916
+#: ../../source/reference/datatypes.md:915
 msgid "`auto_accept_one_to_one` (bool - *auto accept contact invitations to one to one discussions*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:917
+#: ../../source/reference/datatypes.md:916
 msgid "`auto_accept_invitation` (bool - *auto accept olvid invitations (mind this will only accept invitation and not exchange sas code for you)*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:922
+#: ../../source/reference/datatypes.md:921
 msgid "IdentitySettings.MessageRetention"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:925
+#: ../../source/reference/datatypes.md:924
 msgid "`existence_duration` (uint64 - *if set, message older than *existence_duration* seconds will be deleted set to 0 to disable*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:927
+#: ../../source/reference/datatypes.md:926
 msgid "`discussion_count` (uint64 - *if set, if a discussion has more than *discussion_count* messages, older messages will be deleted. set to 0 to disable*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:929
+#: ../../source/reference/datatypes.md:928
 msgid "`global_count` (uint64 - *if set, if identity has more than *global_count* messages, older messages will be deleted. set to 0 to disable*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:931
+#: ../../source/reference/datatypes.md:930
 msgid "`clean_locked_discussions` (bool - *if true, messages in locked discussions will be deleted.*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:932
+#: ../../source/reference/datatypes.md:931
 msgid "`preserve_is_sharing_location_messages` (bool - *if true, live sharing location messages will never be deleted.*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:937
+#: ../../source/reference/datatypes.md:936
 msgid "IdentitySettings.Keycloak"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:940
+#: ../../source/reference/datatypes.md:939
 msgid "`auto_invite_new_members` (bool - *if true, directory will regularly be scanned to add new members as contacts.*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:945
+#: ../../source/reference/datatypes.md:944
 msgid "DiscussionSettings"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:948
+#: ../../source/reference/datatypes.md:947
 msgid "Settings for a discussion. Those settings are shared with other contacts in this discussion."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:952
+#: ../../source/reference/datatypes.md:951
 msgid "`read_once` (bool - *are message read once*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:953
+#: ../../source/reference/datatypes.md:952
 msgid "`existence_duration` (uint64 - *if set, messages are destroyed after *existence_duration* seconds, 0 to disable*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:954
+#: ../../source/reference/datatypes.md:953
 msgid "`visibility_duration` (uint64 - *if set, messages are only visible for *visibility_duration* seconds, 0 to disable*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:961
+#: ../../source/reference/datatypes.md:960
 msgid "Storage"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:964
+#: ../../source/reference/datatypes.md:963
 #, python-brace-format
 msgid "**Command:** {ref}`service-storagecommandservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:968
+#: ../../source/reference/datatypes.md:967
 msgid "StorageElement"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:971
+#: ../../source/reference/datatypes.md:970
 msgid "Daemon embed a key-value storage, accessible for clients.   Each client-key have it's own global storage space, and a dedicated storage space for each discussion (see DiscussionStorageCommandService).   StorageElement is used for global and discussion storage."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:977
+#: ../../source/reference/datatypes.md:976
 msgid "`value` (string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:981
+#: ../../source/reference/datatypes.md:980
 msgid "StorageElementFilter"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:984
+#: ../../source/reference/datatypes.md:983
 msgid "Filter storage elements by attributes.   To pass a filter an element must match all specified conditions."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:988
+#: ../../source/reference/datatypes.md:987
 msgid "`key_search` (**optional** string - *regexp filter applied on *key_search* field*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:989
+#: ../../source/reference/datatypes.md:988
 msgid "`value_search` (**optional** string - *regexp filter applied on *value_search* field*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:996
+#: ../../source/reference/datatypes.md:995
 msgid "Keycloak"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:999
+#: ../../source/reference/datatypes.md:998
 #, python-brace-format
 msgid "**Command:** {ref}`service-keycloakcommandservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1003
+#: ../../source/reference/datatypes.md:1002
 msgid "KeycloakUser"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1006
+#: ../../source/reference/datatypes.md:1005
 msgid "One of your directory user."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1009
+#: ../../source/reference/datatypes.md:1008
 msgid "`keycloak_id` (string - *unique identifier for directory, to use to add this user as a contact*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1010
+#: ../../source/reference/datatypes.md:1009
 msgid "`display_name` (string - *name computed from details*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1011
+#: ../../source/reference/datatypes.md:1010
 #, python-brace-format
 msgid "`details` ({ref}`message-identitydetails` - *full identity details*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1012
+#: ../../source/reference/datatypes.md:1011
 msgid "`contact_id` (**optional** uint64 - *filled if this user is already a contact, else set to 0*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1016
+#: ../../source/reference/datatypes.md:1015
 msgid "KeycloakUserFilter"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1019
+#: ../../source/reference/datatypes.md:1018
 msgid "Filter keycloak users by attributes.   To pass a filter an element must match all specified conditions."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1023
+#: ../../source/reference/datatypes.md:1022
 #, python-brace-format
 msgid "`contact` (**optional** {ref}`enum-keycloakuserfilter.contact` - *is user a contact or not*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1029
+#: ../../source/reference/datatypes.md:1028
 msgid "KeycloakUserFilter.Contact"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1042
+#: ../../source/reference/datatypes.md:1041
 msgid "Call"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1045
+#: ../../source/reference/datatypes.md:1044
 #, python-brace-format
 msgid "**Command:** {ref}`service-callcommandservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1046
+#: ../../source/reference/datatypes.md:1045
 #, python-brace-format
 msgid "**Notification:** {ref}`service-callnotificationservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1050
+#: ../../source/reference/datatypes.md:1049
 msgid "CallParticipantId"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1053
+#: ../../source/reference/datatypes.md:1052
 msgid "Identify a call participant by its contact id, or a random identifier if it is not a contact."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1056
+#: ../../source/reference/datatypes.md:1055
 msgid "**Oneof `id`**:"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1058
+#: ../../source/reference/datatypes.md:1057
 msgid "`participant_id` (string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1065
-#: ../../source/reference/datatypes.md:1072
+#: ../../source/reference/datatypes.md:1064
+#: ../../source/reference/datatypes.md:1071
 msgid "Backup"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1068
+#: ../../source/reference/datatypes.md:1067
 #, python-brace-format
 msgid "**Admin:** {ref}`service-backupadminservice`"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1075
+#: ../../source/reference/datatypes.md:1074
 msgid "Describe a full backup obtained with a backup key.   A backup contains multiple parts.   The AdminBackup contains the admin client keys and the elements contained in the global daemon storage.   A backup may contain multiple profile backups (one per identity), and each may contain one or more snapshots.   A profile snapshot contains an identity, its discussions, contacts, groups, client keys, and discussion storage."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1081
+#: ../../source/reference/datatypes.md:1080
 msgid "Note: a backup does not contain any messages or attachments."
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1084
+#: ../../source/reference/datatypes.md:1083
 #, python-brace-format
 msgid "`admin_backup` ({ref}`message-backup.adminbackup`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1085
+#: ../../source/reference/datatypes.md:1084
 #, python-brace-format
 msgid "`profile_backups` (**repeated** {ref}`message-backup.profilebackup`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1089
+#: ../../source/reference/datatypes.md:1088
 msgid "Backup.AdminBackup"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1092
+#: ../../source/reference/datatypes.md:1091
 msgid "`admin_client_key_count` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1093
-#: ../../source/reference/datatypes.md:1118
+#: ../../source/reference/datatypes.md:1092
+#: ../../source/reference/datatypes.md:1117
 msgid "`storage_elements_count` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1098
+#: ../../source/reference/datatypes.md:1097
 msgid "Backup.ProfileBackup"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1101
+#: ../../source/reference/datatypes.md:1100
 msgid "`profile_display_name` (string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1102
+#: ../../source/reference/datatypes.md:1101
 msgid "`already_exists_locally` (bool)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1103
+#: ../../source/reference/datatypes.md:1102
 msgid "`keycloak_managed` (bool)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1104
+#: ../../source/reference/datatypes.md:1103
 #, python-brace-format
 msgid "`snapshots` (**repeated** {ref}`message-backup.profilebackup.snapshot`)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1109
+#: ../../source/reference/datatypes.md:1108
 msgid "Backup.ProfileBackup.Snapshot"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1112
+#: ../../source/reference/datatypes.md:1111
 msgid "`id` (string - *id to specify to restore an identity backup*)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1113
+#: ../../source/reference/datatypes.md:1112
 msgid "`timestamp` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1114
+#: ../../source/reference/datatypes.md:1113
 msgid "`from_device_name` (string)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1115
+#: ../../source/reference/datatypes.md:1114
 msgid "`contact_count` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1116
+#: ../../source/reference/datatypes.md:1115
 msgid "`group_count` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1117
+#: ../../source/reference/datatypes.md:1116
 msgid "`client_key_count` (uint64)"
 msgstr ""
 
-#: ../../source/reference/datatypes.md:1119
+#: ../../source/reference/datatypes.md:1118
 #, python-brace-format
 msgid "`identity_settings` ({ref}`message-identitysettings`)"
 msgstr ""

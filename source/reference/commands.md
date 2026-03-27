@@ -179,7 +179,14 @@ List all the actions you can perform with your Olvid identity, using daemon APi.
 ### MessageDelete
 ::::::{card}
 > Delete a message giving its id.  
-> TODO delete everywhere ?
+> If *delete_everywhere* is specified, the message (and associated attachments) will be deleted on every other participant devices.  
+> *delete_everywhere* is only allowed in certain circumstances.  
+> For one to one discussions:  
+> - inbound message: you cannot remote delete your contact messages  
+> - outbound message: you can always remote delete your own messages  
+> For group discussions:  
+> - inbound message: you must have *remote_delete_anything* permission  
+> - outbound message: you must have *remote_delete_anything* or *edit_or_remote_delete_own_messages* permission.
 
 (message-messagedeleterequest)=
 **Request**: *MessageDeleteRequest*
@@ -193,6 +200,7 @@ List all the actions you can perform with your Olvid identity, using daemon APi.
 **Error Codes**:
 - `UNAUTHENTICATED`: client key is invalid.
  - `NOT_FOUND`: message not found.
+ - `INVALID_ARGUMENT`: cannot delete everywhere this message
  - `INTERNAL`
 ::::::
 
@@ -357,12 +365,13 @@ List all the actions you can perform with your Olvid identity, using daemon APi.
 (rpc-attachmentdelete)=
 ### AttachmentDelete
 ::::::{card}
-> Delete an attachment by id.
+> Delete an attachment by id.  
+> Use this to delete attachment and associated file locally to save space.  
+> Else message deletion implies associated attachments deletion.
 
 (message-attachmentdeleterequest)=
 **Request**: *AttachmentDeleteRequest*
 * `attachment_id` ({ref}`message-attachmentid`)
-* `delete_everywhere` (**optional** bool)
 
 (message-attachmentdeleteresponse)=
 **Response**: *AttachmentDeleteResponse*

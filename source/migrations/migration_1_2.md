@@ -210,6 +210,18 @@ async def call(discussion_id: int):
     client.call_start_discussion_call(discussion_id=discussion_id)
 ```
 
+##### AttachmentCommandeService
+_(à partir de la version 2.0.1)_
+- **attachmentDelete**: suppression du paramètre delete_everywhere qui ne fonctionnait pas.
+```python
+from olvid import OlvidClient
+
+client = OlvidClient()
+async def delete_attachment(attachment_id: int):
+  # replace: client.attachment_delete(attachment_id=attachment_id, delete_everywhere=True)
+  client.attachment_delete(attachment_id=attachment_id)
+```
+
 ##### IdentityCommandeService
 - **keycloakBind** et **keycloakUnbind**: déplacement dans le service **keycloakCommandService**
 ```python
@@ -254,11 +266,17 @@ async def get_discussion_settings(discussion_id: int):
 
 #### Datatypes
 
+##### Identity
+- suppression du champ *invitation_url*, à la place utilisez **IdentityGetInvitationLink** ou **IdentityAdminGetInvitationLink**.
+
 ##### Invitation
 - suppression du status *STATUS_GROUP_INVITATION_FROZEN* devenu inutile.
 
 ##### Discussion
 - déplacement du message protobuf **DiscussionSettings** du fichier *discussion.proto* vers *settings.proto*, mais il reste dans le module `datatypes`, cela ne devrait donc pas affecter le code.
+
+ ##### MessageFilter
+- renommage du champ _reactions_filter_ en _reaction_filters_ pour suivre la convention utilisée ailleurs _(à partir de la version 2.0.1)_ 
 
 ### N8n
 :::{warning}
