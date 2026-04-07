@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.1.post1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-07 11:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:1
+msgid "📋 Exemples"
+msgstr "📋 Examples"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:3
+msgid "Cette section décrit des exemples de workflows ou d'intégration utilisant nos noeuds communautaires pour n8n. La documentation pour chacun de ces noeuds est disponible dans les pages associeés: [Olvid](/n8n/olvid) et [Olvid Keycloak](/n8n/keycloak)."
+msgstr "This section describes examples of workflows or integration using our community nodes for n8n. The documentation for each of these nodes is available on their respective pages: [Olvid](/n8n/olvid) and [Olvid Keycloak](/n8n/keycloak)."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:6
+msgid "Cette section ne propose pas d'implémentation pour des raisons techniques, mais présente des concepts qui sont facilement réalisables. Elle a pour but de vous donner une idée de ce qui est réalisable et de stimuler la créativité."
+msgstr "This section does not provide an implementation for technical reasons, but presents concepts that are easily achievable. Its purpose is to give you an idea of what is possible and to inspire creativity."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:9
+msgid "Olvid"
+msgstr "Olvid"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:11
+msgid "Chat Bot"
+msgstr "Chat Bot"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:13
+msgid "Voici un workflow basique pour montrer à quoi peut ressembler une intégration avec Olvid."
+msgstr "Here is a basic workflow to show what an integration with Olvid might look like."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:15
+msgid "Dans ce cas on transfère simplement le contenu du message utilisateur à un modèle Ollama, avant de renvoyer la réponse. Mais on peut imaginer remplacer le module central par n'importe quel autre service ou flow plus complexe qui traitera une donnée utilisateur, avant de renvoyer le résultat."
+msgstr "In this case, we simply transfer the content of the user message to an Ollama model before returning the response. But we can imagine replacing the central module with any other service or more complex flow that will process a user data, before returning the result."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:18 ../../source/n8n/examples.md:36
+#: ../../source/n8n/examples.md:47 ../../source/n8n/examples.md:64
+msgid "Access Control menu tab"
+msgstr "Access Control menu tab"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:24
+msgid "Validation"
+msgstr "Validation"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:26
+msgid "Le noeud *Olvid* inclut une action de type *Send and Wait for response* pour ajouter facilement une confirmation humaine dans vos workflows."
+msgstr "The node *Olvid* includes an action of type *Send and Wait for response* to easily add a human confirmation in your workflows."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:28
+msgid "Le workflow suivant est une implémentation très basique du traitement d'une requête par un modèle d'AI locale (utilisant ollama).  Une fois la requête traitée le résultat est envoyé dans Olvid et le flow attend un validation avant de continuer."
+msgstr "The following workflow is a very basic implementation of processing a request by a local AI model (using ollama). Once the request has been processed, the result is sent to Olvid and the flow waits for validation before continuing."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:31
+msgid "Le message de validation peut être envoyé dans la discussion d'origine ou dans une autre discussion. Cela signifie que l'utilisateur peut valider lui-même l'action, ou un/des utilisateurs autres peuvent valider l'action avant que le flow ne continue."
+msgstr "The validation message can be sent in the original conversation or in another conversation. This means that the user can validate the action themselves, or one or more other users can validate the action before the flow continues."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:34
+msgid "Valider ou invalider une opération peut se faire de plusieurs manières, mais se résume souvent par le simple ajout d'une réaction 👍 ou 👎 au message de validation."
+msgstr "Validating or invalidating an operation can be done in several ways, but often boils down to simply adding a reaction 👍 or 👎 to the validation message."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:41
+msgid "Sauvegarde de fichiers"
+msgstr "Backup of files"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:43
+msgid "La puissance de n8n réside dans son intégration avec de nombreux services. Il est très simple d'ajouter des noeuds vers d'autre des services que vous utilisez."
+msgstr "The power of n8n lies in its integration with many services. It is very simple to add nodes towards other services that you use."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:45
+msgid "Le workflow suivant sauvegarde les photos envoyées à votre bot dans un dossier Nextcloud, en respectant une convention de nommage."
+msgstr "The following workflow saves the photos sent to your bot in a Nextcloud folder, while adhering to a naming convention."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:52
+msgid "Keycloak"
+msgstr "Keycloak"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:53
+msgid "Création d'utilisateur"
+msgstr "User Creation"
+
+# translated using ollama
+#: ../../source/n8n/examples.md:55
+msgid "Voici un exemple de flow pour faciliter l'intégration de nouveaux utilisateurs à votre annuaire."
+msgstr "Here is an example of a flow to facilitate the integration of new users into your directory."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:57
+msgid "Dans cet exemple, on utilise une commande envoyée à un bot dans Olvid, mais le flow pourrait être lancé par n'importe quel autre déclencheur n8n."
+msgstr "In this example, a command sent to a bot in Olvid is used, but the workflow could be triggered by any other n8n trigger."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:59
+msgid "On crée un utilisateur dans Keycloak à partir des paramètres de la commande et on peut générer un *magic lien* dans la foulée, pour le renvoyer en réponse. Pour rejoindre votre annuaire le nouvel utilisateur a juste à ouvrir ce lien dans Olvid ou scaner le QR code affiché dans un navigateur."
+msgstr "We create a user in Keycloak from the parameters of the command and we can generate a *magic link* right away, to return it in response. To join your directory, the new user just needs to open this link in Olvid or scan the QR code displayed in a browser."
+
+# translated using ollama
+#: ../../source/n8n/examples.md:62
+msgid "On peut aussi ajouter cet utilisateur à un ou des groupes lors de sa création pour qu'il les rejoigne automatiquement dès son arrivée dans l'annuaire."
+msgstr "One can also add this user to one or more groups upon creation so that they automatically join them upon arrival in the directory."
+

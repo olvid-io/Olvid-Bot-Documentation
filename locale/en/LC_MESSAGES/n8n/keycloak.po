@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.1.post1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-07 10:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:1
+msgid "🔑 Keycloak"
+msgstr "🔑 Keycloak"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:4
+msgid "Ce noeud est encore en phase de test et pourrait évoluer dans de futures mises à jour."
+msgstr "This node is still in a testing phase and could change in future updates."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:6
+msgid "Nous sommes toujours preneurs de vos retours ou vos idées, vous pouvez nous contacter par mail: [bot@olvid.io](mailto:bot@olvid.io) ou ouvrir une issue sur [GitHub](https://github.com/olvid-io/n8n-nodes-olvid-keycloak/issues/new)."
+msgstr "We are always open to your feedback or ideas, please contact us by email: [bot@olvid.io](mailto:bot@olvid.io) or open an issue on [GitHub](https://github.com/olvid-io/n8n-nodes-olvid-keycloak/issues/new)."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:9
+msgid "Installation"
+msgstr "Installation"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:11
+msgid "Contrairement au noeud [](/n8n/olvid), ce noeud ne nécessite pas l'installation d'un daemon, facilitant grandement sa mise en place."
+msgstr "Unlike the [Olvid](/n8n/olvid) node, this node does not require the installation of a daemon, which greatly simplifies its setup."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:13
+msgid "Cependant il requiert l'utilisation d'un annuaire Olvid dont la mise en place dépasse largement le cadre de ce document. Rendez-vous 👉️ [ici](https://www.olvid.io/faq/olvid-management-console) 👈️ pour en apprendre plus sur cette fonctionnalité, ou contactez-nous pour en savoir plus: [contact@olvid.io](mailto:contact@olvid.io)."
+msgstr "However, it requires the use of an Olvid directory whose deployment far exceeds the scope of this document. Visit 👉️ [here](https://www.olvid.io/faq/olvid-management-console) 👈️ to learn more about this feature, or contact us for further information: [contact@olvid.io](mailto:contact@olvid.io)."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:16
+msgid "Installation de N8N"
+msgstr "Install N8N"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:18
+msgid "Si vous souhaitez que vos flows envoient des messages Olvid nous vous conseillons de suivre [cette procédure](/n8n/olvid) d'installation et de revenir ensuite pour configurer le noeud Keycloak. Sinon, vous pouvez suivre la [documentation officielle](https://docs.n8n.io/hosting/)"
+msgstr "If you wish for your flows to send Olvid messages, we recommend following [this installation procedure](/n8n/olvid) and then returning to configure the Keycloak node. Otherwise, you can follow the [official documentation](https://docs.n8n.io/hosting/)"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:21
+msgid "Installation du noeud N8N"
+msgstr "Install community node"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:23
+msgid "Une fois votre instance n8n installée et configurée, installez notre noeud communautaire [n8n-nodes-olvid-keycloak](https://www.npmjs.com/package/n8n-nodes-olvid-keycloak).  La procédure est disponible dans la documentation n8n: [installer un noeud communautaire](https://docs.n8n.io/integrations/community-nodes/installation/gui-install/)"
+msgstr "Once your n8n instance is installed and configured, install our community node [n8n-nodes-olvid-keycloak](https://www.npmjs.com/package/n8n-nodes-olvid-keycloak). The procedure is available in the n8n documentation: [installing a community node](https://docs.n8n.io/integrations/community-nodes/installation/gui-install/)"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:26
+msgid "Configuration des identifiants"
+msgstr "Configure credentials"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:28
+msgid "Pour se connecter à votre annuaire votre noeud aura besoin d'un compte gestionnaire. Pour le créer rendez-vous dans votre console de gestion, dans l'onglet *Gestion du contrôle d'accès*."
+msgstr "To connect to your directory, your node will need a manager account. To create it, go to your management console, in the *Access Control Management* tab."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:30
+msgid "Access Control menu tab"
+msgstr "Access Control Menu Tab"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:36
+msgid "Si l'option *Gestion du contrôle d'accès* n'est pas visible, vous n'avez pas configuré de royaume administrateur, la procédure de configuration est disponible [ici](https://olvid.io/keycloak/olvid-admin-realm/)."
+msgstr "If the option *Access control management* is not visible, you have not configured an admin realm, the setup procedure is available [here](https://olvid.io/keycloak/olvid-admin-realm/)."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:39
+msgid "**Cliquer** sur créer un nouveau gestionnaire."
+msgstr "**Click** on create a new manager."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:41
+msgid "Create new manager button"
+msgstr "Create new manager button"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:47
+msgid "**Remplir** le formulaire selon vos préférences. Les champs importants sont les champs `username` et `role`. Le role détermine les permissions accordées votre bot."
+msgstr "**Fill** out the form according to your preferences. The important fields are the `username` and `role` fields. The role determines the permissions granted to your bot."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:48
+msgid "Create new manager form"
+msgstr "Create new manager form"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:53
+msgid "**Noter** le nom d'utilisateur utilisé et le mot de passe affiché."
+msgstr "**Note** the username used and the displayed password."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:55
+msgid "Dans l'interface n8n, **créer** un nouveau workflow, et **ajoutez** n'importe un noeud *OlvidKeycloak*."
+msgstr "In the n8n interface, **create** a new workflow and add any OlvidKeycloak node."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:56
+msgid "Olvid Keycloak node in n8n workflow"
+msgstr "Olvid Keycloak node in n8n workflow"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:61
+msgid "**Choisir** l'action qui vous intéresse."
+msgstr "**Select** any action."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:62
+msgid "select action for Olvid Keycloak node"
+msgstr "select action for Olvid Keycloak node"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:67
+msgid "**Configurer** de nouveaux credentials pour ce noeud."
+msgstr "**Create** new credentials for this node."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:68
+msgid "create new credentials for Olvid Keycloak node"
+msgstr "create new credentials for the Olvid Keycloak node"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:73
+msgid "**Remplir** le formulaire."
+msgstr "**Fill out** the form."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:75
+msgid "*Keycloak URL*: l'URL d'accès à votre instance keycloak.   ⚠️ Pensez au suffixe `/auth/` si votre instance keycloak l'utilise"
+msgstr "*Keycloak URL*: The access URL to your Keycloak instance. (⚠️ Mind the `/auth/` suffix if your Keycloak instance uses it)"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:77
+msgid "*Admin Realm name*: le nom de votre royaume administrateur (le royaume rouge dans l'onglet *Configuration des domaines* de la console)."
+msgstr "*Admin Realm name*: the name of your admin realm (the Red Realm in the *Domain Configuration* tab of the console)."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:78
+msgid "*Client ID*: vous pouvez utiliser le client *admin-cli* présent par défaut, ou créer un nouveau client qui gère les *offline tokens* dans keycloak.qui gère les *offline tokens*."
+msgstr "*Client ID*: you can use the default *admin-cli* client, or create a new client that manages *offline tokens* in Keycloak.which manages *offline tokens*."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:79
+msgid "*Client Secret*: (optionnel) laissez vide par défaut, à remplir si vous avez créé votre propre client et que celui-ci le nécessite."
+msgstr "*Client Secret*: (optional) leave blank by default, to be filled if you have created your own client and it requires it."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:80
+msgid "*Username* et *Password*: les identifiants du compte créé un peu plus tôt."
+msgstr "*Username* and *Password*: the credentials of the account created earlier."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:82
+msgid "new credential form for Olvid Keycloak node"
+msgstr "new credentials form for Olvid Keycloak node"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:87
+msgid "Vous pouvez maintenant exécuter votre noeud *Keycloak Olvid* et l'intégrer dans vos workflows !"
+msgstr "You can now run your *Keycloak Olvid* node and integrate it into your workflows!"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:89
+msgid "Utilisation"
+msgstr "Usage"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:91
+msgid "Exemples"
+msgstr "Examples"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:92
+msgid "Des idées de workflows sont disponibles dans notre section [](/n8n/examples)."
+msgstr "Ideas for workflows are available in our [section](/n8n/examples)."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:94
+msgid "Actions personnalisées"
+msgstr "Custom actions"
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:96
+msgid "Le noeud *OlvidKeycloak* n'implémente pas toutes les possibilités de la console Olvid, mais techniquement il peut faire n'importe quelle action réalisable dans la console *(si le rôle du compte associé le permet)*."
+msgstr "The *OlvidKeycloak* node does not implement all the possibilities of the Olvid console, but technically it can perform any action that can be done in the console *(if the role of the associated account allows it)*."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:98
+msgid "Pour étendre les capacités actuelles du noeud vous pouvez utiliser l'action **Custom Request** du noeud *Olvid Keyclak*."
+msgstr "To extend the current capabilities of the node, you can use the **Custom Request** action of the *Olvid Keyclak* node."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:100
+msgid "Lorsque vous êtes dans votre console d'administration Olvid, ouvrez la console développeur de votre navigateur, à l'onglet Réseau. Réalisez l'action que vous souhaitez reproduire, et copier le contenu de la requête json au point d'entrée `configuration`."
+msgstr "When you are in your Olvid administration console, open the developer console of your browser, on the Network tab. Perform the action you want to reproduce, and copy the content of the JSON request at the entry point `configuration`."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:102
+msgid "Il vous suffit ensuite de coller cette requête dans le champ *payload* de l'action **Custom Request**. Vous pouvez ensuite l'exécuter, l'éditer et l'intégrer dans vos workflow à volonté."
+msgstr "You just need to paste this request in the *payload* field of the **Custom Request** action. You can then run it, edit it and integrate it into your workflows as desired."
+
+# translated using ollama
+#: ../../source/n8n/keycloak.md:104
+msgid "custom request for Olvid Keycloak node"
+msgstr "custom request for Olvid Keycloak node"
+

@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Olvid
+# This file is distributed under the same license as the Olvid Bots package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Olvid Bots 2.0.1.post1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-07 08:50+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:1
+msgid "💬 Olvid"
+msgstr "💬 Olvid"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:3
+msgid "Installation"
+msgstr "Installation"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:6
+msgid "Dans la section suivante vous allez déployer un daemon Olvid et une instance N8N à l'aide de docker et docker-compose."
+msgstr "In the following section, you will deploy an Olvid daemon and an N8N instance using Docker and Docker Compose."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:8
+msgid "Si vous souhaitez utiliser une instance de daemon et/ou de N8N déjà déployée, vous pouvez ne déployer qu'une partie des services suivants. Il vous faudra seulement remplir correctement les champs `Client Key` et `Daemon Url` au moment de la création des credentials dans N8N."
+msgstr "If you wish to use an existing daemon and/or N8N instance, you can deploy only a subset of the following services. You will just need to correctly fill in the `Client Key` and `Daemon Url` fields when creating credentials in N8N."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:12
+msgid "Installation d'un daemon et d'une instance N8N"
+msgstr "Installation of a Daemon and an Instance of N8N"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:14
+msgid "Pour commencer, **créer** un nouveau dossier pour votre projet. Ce sera votre répertoire courant pour la suite."
+msgstr "To get started, **create** a new folder for your project. This will be your current directory going forward."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:21
+msgid "Il vous faudra ensuite **générer** une clé client administrateur. Vous pouvez utiliser les commandes `uuidgen` ou `openssl` en fonction de votre configuration. Il faudra stocker le résultat dans un fichier `.env`."
+msgstr "You will then need to **generate** an administrator client key. You can use the `uuidgen` or `openssl` commands depending on your configuration. The result should be stored in a `.env` file."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:26
+msgid "**OU**"
+msgstr "OR"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:31
+msgid "Vous pouvez maintenant créer un fichier `docker-compose.yaml` avec le contenu suivant."
+msgstr "You can now create a `docker-compose.yaml` file with the following content."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:94
+msgid "**Créer** les conteneurs avec la commande suivante."
+msgstr "**Create** the containers with the following command."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:100
+msgid "Installer le noeud Olvid dans N8N"
+msgstr "Install the Olvid node in N8N"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:102
+msgid "Vous avez lancé un daemon Olvid et une instance N8N qui tournent en fond, il faut maintenant configurer N8N et installer les noeuds Olvid communautaires."
+msgstr "You have launched an Olvid daemon and a N8N instance that are running in the background, now it's time to configure N8N and install the community Olvid nodes."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:104
+msgid "**Ouvrir** la page `http://localhost:5678` dans votre navigateur pour accéder à votre instance N8N."
+msgstr "Open the page `http://localhost:5678` in your browser to access your N8N instance."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:105
+msgid "**Créer** un compte N8N (il s'agit d'un compte local)."
+msgstr "**Create** an N8N account (this is a local account)."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:107
+msgid "**Rendez-vous** sur la page de paramètres"
+msgstr "Go to the settings page"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:108
+msgid "Settings button in N8N homepage"
+msgstr "Bouton de réglages sur la page d'accueil de N8N"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:113
+msgid "**Cliquer** sur `Community Nodes` puis **cliquer** sur `Install a community node`."
+msgstr "Click on `Community Nodes`, then click on `Install a community node`."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:115
+msgid "Community Nodes page in N8N"
+msgstr "Community Nodes page in N8N"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:120
+msgid "**Entrer** `n8n-nodes-olvid` à la place de _npm Package Name_, prendre le temps de considérer les risques d'installer un noeud communautaire avant de **cocher** la case et **cliquer** sur `Install`."
+msgstr "Enter `n8n-nodes-olvid` instead of _npm Package Name_, take the time to consider the risks of installing a community node before **checking** the box and **clicking** on `Install`."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:122
+msgid "Installing Olvid node in N8N"
+msgstr "Installer un noeud Olvid dans N8N"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:128
+msgid "**Retourner** sur la page principale pour **créer** votre premier workflow."
+msgstr "Return to the main page to **create** your first workflow."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:130
+msgid "Le noeud Olvid devrait maintenant être disponible dans vos workflows."
+msgstr "The Olvid node should now be available in your workflows."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:132
+msgid "Olvid node available in a N8N workflow"
+msgstr "Node \"Olvid\" available in an N8N workflow"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:138
+msgid "Configurer le noeud Olvid"
+msgstr "Configure the Olvid node"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:140
+msgid "Maintenant que vous avez installé le noeud Olvid, avant de l'utiliser, il vous faut créer des **credentials** pour qu'il puisse communiquer avec votre daemon."
+msgstr "Now that you have installed the Olvid node, before using it, you need to create some **credentials** so that it can communicate with your daemon."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:142
+msgid "Ouvrez ou créez un workflow, et ajoutez-y un un noeud Olvid."
+msgstr "Open or create a workflow and add an Olvid node to it."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:144
+msgid "Vous pouvez **choisir** indépendamment une action ou un trigger."
+msgstr "You can independently choose an action or a trigger."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:146
+msgid "Trigger selection of Olvid node in N8N"
+msgstr "Trigger selection of Olvid node in N8N"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:152
+msgid "**Ouvrez** votre noeud et créez les credentials en **cliquant** sur `Select Credential`."
+msgstr "Open your node and create the credentials by clicking on `Select Credential`."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:154
+msgid "Olvid credentials setup in N8N"
+msgstr "Setup of N8N Olvid credentials"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:160
+msgid "Il vous faut maintenant créer une clé client Olvid pour autoriser votre noeud à communiquer avec le daemon Olvid. Pour cela vous pouvez utiliser les commandes suivantes dans un terminal, dans le dossier contenant votre fichier `docker-compose.yaml`."
+msgstr "You now need to create an Olvid client key to allow your node to communicate with the Olvid daemon. To do this, you can use the following commands in a terminal, in the folder containing your `docker-compose.yaml` file."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:162
+msgid "*Prototype: identity new FirstName LastName Position Company*"
+msgstr "Prototype: identity new FirstName LastName Position Company"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:167
+msgid "Cette commande retournera un entier qui est l'identifiant de l'identité que vous venez de créer. Pour les prochaines commandes on considérera que cet identifiant est 1."
+msgstr "This command will return an integer which is the identifier of the identity you just created. For the next commands, we will consider this identifier to be 1."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:169
+msgid "Il faut maintenant créer une clé d'API pour cette nouvelle identité à l'aide de la commande suivante."
+msgstr "You now need to create an API key for this new identity using the following command."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:171
+msgid "*Prototype: key new KeyName IdentityId*"
+msgstr "Prototype: key new KeyName IdentityId"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:176
+msgid "Cette commande renvoi une clé de la forme: `AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE`."
+msgstr "This command returns a key in the following form: `AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE`."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:178
+msgid "**Copiez** cette clé et **collez** là dans le champ `Client Key` de votre modal de création de Credential dans N8N."
+msgstr "Copy this key and paste it in the `Client Key` field of your Credentials creation modal in N8N."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:180
+msgid "**Saisissez** ensuite la valeur du champ `Daemon Url` pour mettre `http://daemon:50051` (si n8n a été créé dans le même fichier docker-compose.yaml, sinon saisir l'URL qui permet d'atteindre votre daemon)."
+msgstr "Enter the value for the `Daemon Url` field to set it as `http://daemon:50051` (if n8n was created in the same docker-compose.yaml file, otherwise enter the URL that allows you to reach your daemon)."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:182
+msgid "Vous pouvez maintenant sauvegarder vos credentials avec le bouton **Save**."
+msgstr "You can now save your credentials with the **Save** button."
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:184
+msgid "**Félicitation 🎉!**"
+msgstr "Congratulations 🎉!"
+
+# translated using ollama
+#: ../../source/n8n/olvid.md:186
+msgid "Vous pouvez maintenant utiliser les noeuds Olvid dans vos workflows !"
+msgstr "You can now use Olvid nodes in your workflows!"
+
