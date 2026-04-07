@@ -63,10 +63,6 @@ html_theme_options = {
 	"use_issues_button": True,
 	"path_to_docs": "/source",
 	"repository_branch": "main",
-	###########
-	# templates
-	# workaround: remove simple quote char added by readthedocs in env variables.
-	"announcement": os.getenv("BANNER_MESSAGE", "🚧 Documentation Under Construction! 🚧").removeprefix("'").removesuffix("'")
 }
 
 # -- Extensions -----------------------------------------------------
