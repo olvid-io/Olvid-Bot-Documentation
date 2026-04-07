@@ -33,7 +33,7 @@ La procédure est disponible dans la documentation n8n: [installer un noeud comm
 ```
 
 :::{hint}
-Si l'option *Gestion du contrôle d'accès* n'est pas visible, vous n'avez pas configuré de royaume administrateur, la procédure de configuration est disponible [ici](https://olvid.io/keycloak/olvid-admin-realm/). 
+Si l'option *Gestion du contrôle d'accès* n'est pas visible, soit vous n'avez pas la permission de le voir (votre role n'est pas *administrateur*), soit vous n'avez pas configuré de royaume administrateur. Dans ce cas la procédure de configuration est disponible [ici](https://olvid.io/keycloak/olvid-admin-realm/). 
 :::
 
 2.  **Cliquer** sur créer un nouveau gestionnaire.
