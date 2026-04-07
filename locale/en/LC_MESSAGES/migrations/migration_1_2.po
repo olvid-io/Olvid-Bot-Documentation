@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 2.0.0a0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-27 17:55+0100\n"
+"POT-Creation-Date: 2026-04-07 14:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -356,6 +356,6 @@ msgstr "Credentials"
 
 # translated using ollama
 #: ../../source/migrations/migration_1_2.md:287
-msgid "Les credentials Olvid ont été mis à jour. Si vos nœuds ne trouvent plus leur credentials, il faut en ajouter de nouveau et mettre à jour les credentials utilisés par chaque noeud Olvid. Pour créer vos nouveaux credential rendez-vous dans la section [](/n8n/n8n.md#configurer-le-noeud-olvid)."
-msgstr "The Olvid credentials have been updated. If your nodes can no longer find their credentials, you will need to add new ones and update the credentials used by each Olvid node. To create your new credentials, go to the section [](/n8n/n8n.md#configurer-le-noeud-olvid)."
+msgid "Les credentials Olvid ont été mis à jour. Si vos nœuds ne trouvent plus leur credentials, il faut en ajouter de nouveau et mettre à jour les credentials utilisés par chaque noeud Olvid. Pour créer vos nouveaux credential rendez-vous dans la section [](/n8n/olvid.md#configurer-le-noeud-olvid)."
+msgstr "The Olvid credentials have been updated. If your nodes can no longer find their credentials, you will need to add new ones and update the credentials used by each Olvid node. To create your new credentials, go to the section [Configurer le nœud Olvid](/n8n/olvid.md#configurer-le-noeud-olvid)."
 

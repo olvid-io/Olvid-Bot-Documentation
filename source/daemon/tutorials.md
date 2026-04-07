@@ -19,9 +19,8 @@ Il vous appartient de faire le nécessaire pour que ces données soient correcte
 
 ## Creer un bot keycloak
 :::{note}
-Cette section ne s'adresse qu'aux clients qui ont un plugin Keycloak deployé 😬. 
-
-Si vous ne savez pas ce que c'est vous pouvez cliquer 👉️ [ici](https://www.olvid.io/faq/olvid-management-console) 👈️ pour en apprendre plus sur cette fonctionalité premium.
+Cette section s'adresse aux personnes qui ont déployé le plugin d'annuaire Olvid pour Keycloak 😬.  
+Si vous ne savez pas ce que c'est cliquez 👉️ [ici](https://www.olvid.io/faq/olvid-management-console) 👈️ pour en apprendre plus sur cette fonctionnalité.
 :::
 
 ### Configurer un Bot Keycloak

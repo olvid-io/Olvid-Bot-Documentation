@@ -285,4 +285,4 @@ Les nœuds Olvid pour n8n ont été remaniés en profondeur et pourraient donc e
 
 #### Credentials
 Les credentials Olvid ont été mis à jour. Si vos nœuds ne trouvent plus leur credentials, il faut en ajouter de nouveau et mettre à jour les credentials utilisés par chaque noeud Olvid.
-Pour créer vos nouveaux credential rendez-vous dans la section [](/n8n/n8n.md#configurer-le-noeud-olvid).
+Pour créer vos nouveaux credential rendez-vous dans la section [](/n8n/olvid.md#configurer-le-noeud-olvid).

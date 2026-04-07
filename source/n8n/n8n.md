@@ -18,7 +18,7 @@ Nous avons développé deux noeuds communautaires distincts pour interagir avec 
 :link-type: doc
 **💬 Olvid**
 ^^^
-Découvrez notre noeud *Olvid*  pour piloter un {term}`daemon` dans n8n. 
+Découvrez notre noeud *Olvid*  pour piloter un daemon dans n8n. 
 Il vous permet à la fois de réaliser rapidement des flows d'alertes ou des Chat Bots, et de créer des intégrations bien plus complexes.
 :::
 

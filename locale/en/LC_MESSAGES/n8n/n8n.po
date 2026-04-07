@@ -35,11 +35,9 @@ msgid "**💬 Olvid**"
 msgstr "**💬 Olvid**"
 
 # translated using ollama
-# translated using ollama
 #: ../../source/n8n/n8n.md:21
-#, fuzzy, python-brace-format
-msgid "Découvrez notre noeud *Olvid*  pour piloter un {term}`daemon` dans n8n.  Il vous permet à la fois de réaliser rapidement des flows d'alertes ou des Chat Bots, et de créer des intégrations bien plus complexes."
-msgstr "Discover our *Olvid* node for controlling a {term}`daemon` in n8n. It allows you to quickly create alert flows or chatbots and build much more complex integrations at the same time."
+msgid "Découvrez notre noeud *Olvid*  pour piloter un daemon dans n8n.  Il vous permet à la fois de réaliser rapidement des flows d'alertes ou des Chat Bots, et de créer des intégrations bien plus complexes."
+msgstr "Discover our *Olvid* node for controlling a daemon in n8n. It allows you to quickly create alert flows or chatbots and build much more complex integrations at the same time."
 
 # translated using ollama
 #: ../../source/n8n/n8n.md:29
