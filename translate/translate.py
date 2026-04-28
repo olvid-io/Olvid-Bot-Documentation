@@ -5,7 +5,7 @@ import os
 from ollama import GenerateResponse, Client
 
 # MODEL = "llama3"
-MODEL = "mixtral:8x22b"
+MODEL = "translategemma:27b"
 LANGUAGES = ["en"]
 
 OLLAMA_URL = "http://10.1.0.2:11434"

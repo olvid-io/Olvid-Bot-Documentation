@@ -245,18 +245,15 @@ main().then();
 ```
 
 ## Conseils et astuces
-### AutoInvitationBot
-Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues.
-
-Il suffit de créer un bot *AutoInvitationBot* du module `tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter.
+### Invitations
+Pour rendre plus facile la mise en relation avec un bot, il est possible d'activer l'acceptation automatique des invitations. Il suffit de modifier la configuration du daemon à l'aide la méthode *enableAutoInvitation* d'un client Olvid.
 
 :::{note}
-Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe. 
-Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code. 
+L'acceptation automatique des invitations ne peut accepter que les présentations, les invitations de groupe et les invitations à une discussion personnelle.
+Il ne peut pas aller au bout des invitations directes avec échange de SAS code.
 :::
 
-Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond.
-Il est tout à fait possible de lancer plusieurs instances de bots en parallèle.
+Voici un programme qui lance un bot après avoir configuré l'acceptation automatique des invitations.
 
 ```typescript
 import { OlvidClient, datatypes, tools } from "@olvid/bot-node";
@@ -269,9 +266,33 @@ async function main() {
         }
     })
 
-    const invitationBot = new tools.AutoInvitationBot();
+    await client.enableAutoInvitation({acceptAll: true});
 
     await client.runForever();
+}
+
+main().then();
+```
+
+### Nettoyage des messages
+Pour des raisons de performances et de confidentialité nous vous conseillons d'activer le nettoyage automatique des messages.
+
+Il est possible de limiter le nombre de messages conservés globalement ou par discussion (*global_count* et *discussion_count*) et/ou de définir l'âge maximal d'un message (*existence_duration*).
+
+Nous vous conseillons aussi d'activer la suppression des messages dans les discussions fermées.
+
+```typescript
+import { OlvidClient, datatypes, tools } from "@olvid/bot-node";
+
+async function main() {
+    const client = new OlvidClient();
+    // keep messages up to 7 days,
+    // with a maximum of 100 messages and 20 messages per discussions,
+    // and deletes messages when a discussion is locked
+    await client.setMessageRetentionPolicy({
+        globalCount: 100n, discussionCount: 20n,
+        existenceDuration: 60n*60n*24n*7n, cleanLockedDiscussions: true
+    });
 }
 
 main().then();

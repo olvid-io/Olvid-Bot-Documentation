@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Olvid Bots 1.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-08 16:54+0200\n"
+"POT-Creation-Date: 2026-04-28 11:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 # translated using ollama
 #: ../../source/js/advanced.md:1
@@ -222,46 +222,61 @@ msgstr "Tips and Tricks"
 
 # translated using ollama
 #: ../../source/js/advanced.md:248
-msgid "AutoInvitationBot"
-msgstr "AutoInvitationBot"
+msgid "Invitations"
+msgstr "Invitations"
 
 # translated using ollama
 #: ../../source/js/advanced.md:249
-msgid "Pour rendre plus facile la mise en relation avec un bot, il est possible de mettre en place un autre bot, déjà écrit, qui acceptera toutes les invitations reçues."
-msgstr "To make it easier to connect with a bot, it's possible to set up another bot that has already been written and will accept all received invitations."
+msgid "Pour rendre plus facile la mise en relation avec un bot, il est possible d'activer l'acceptation automatique des invitations. Il suffit de modifier la configuration du daemon à l'aide la méthode *enableAutoInvitation* d'un client Olvid."
+msgstr "To make it easier to connect with a bot, you can enable automatic acceptance of invitations. Simply modify the daemon's configuration using the *enableAutoInvitation* method of an Olvid client."
 
 # translated using ollama
-#: ../../source/js/advanced.md:251
-msgid "Il suffit de créer un bot *AutoInvitationBot* du module `tools`. Il va automatiquement s'enregistrer pour recevoir les notifications de nouvelles invitations et les accepter."
-msgstr "Just create an *AutoInvitationBot* from the `tools` module. It will automatically register to receive new invitation notifications and accept them."
+#: ../../source/js/advanced.md:252
+msgid "L'acceptation automatique des invitations ne peut accepter que les présentations, les invitations de groupe et les invitations à une discussion personnelle. Il ne peut pas aller au bout des invitations directes avec échange de SAS code."
+msgstr "Automatic acceptance of invitations can only accept presentations, group invitations, and invitations to a personal discussion. It cannot complete direct invitations that involve the exchange of SAS code."
 
 # translated using ollama
-#: ../../source/js/advanced.md:254
-msgid "Un *AutoInvitationBot* ne peut accepter que les présentations et les invitations de groupe.  Il ne peut pas accepter automatiquement les invitations directes avec échange de SAS code."
-msgstr "An *AutoInvitationBot* can only accept introductions and group invitations. It cannot automatically accept direct invitations with SAS code exchange."
+#: ../../source/js/advanced.md:256
+msgid "Voici un programme qui lance un bot après avoir configuré l'acceptation automatique des invitations."
+msgstr "Here is a program that launches a bot after configuring the automatic acceptance of invitations."
 
 # translated using ollama
-#: ../../source/js/advanced.md:258
-msgid "Voici un programme qui lance une instance de l'AutoInvitationBot en tâche de fond. Il est tout à fait possible de lancer plusieurs instances de bots en parallèle."
-msgstr "Here is a program that launches an instance of AutoInvitationBot in the background. It is perfectly possible to run multiple bot instances in parallel."
+#: ../../source/js/advanced.md:277
+msgid "Nettoyage des messages"
+msgstr "Cleaning messages"
+
+# translated using ollama
+#: ../../source/js/advanced.md:278
+msgid "Pour des raisons de performances et de confidentialité nous vous conseillons d'activer le nettoyage automatique des messages."
+msgstr "For performance and privacy reasons, we recommend that you enable automatic message cleanup."
 
 # translated using ollama
 #: ../../source/js/advanced.md:280
+msgid "Il est possible de limiter le nombre de messages conservés globalement ou par discussion (*global_count* et *discussion_count*) et/ou de définir l'âge maximal d'un message (*existence_duration*)."
+msgstr "It is possible to limit the number of messages stored globally or per conversation (*global_count* and *discussion_count*) and/or define the maximum age of a message (*existence_duration*)."
+
+# translated using ollama
+#: ../../source/js/advanced.md:282
+msgid "Nous vous conseillons aussi d'activer la suppression des messages dans les discussions fermées."
+msgstr "We also recommend that you enable the deletion of messages in closed discussions."
+
+# translated using ollama
+#: ../../source/js/advanced.md:301
 msgid "Divers"
 msgstr "Various"
 
 # translated using ollama
-#: ../../source/js/advanced.md:281
+#: ../../source/js/advanced.md:302
 msgid "Envoyer un message éphémère"
 msgstr "Send an ephemeral message"
 
 # translated using ollama
-#: ../../source/js/advanced.md:282
+#: ../../source/js/advanced.md:303
 msgid "Les points d'entrée API `messageSend` et `messageSendWithAttachments` permettent de spécifier l'éphéméralité du message à envoyer. On utilisera pour cela l'objet *datatypes.MessageEphemerality*."
 msgstr "The API endpoints `messageSend` and `messageSendWithAttachments` allow you to specify the ephemerality of the message to be sent. To do this, use the `datatypes.MessageEphemerality` object."
 
 # translated using ollama
-#: ../../source/js/advanced.md:285
+#: ../../source/js/advanced.md:306
 msgid "Voici un exemple en typescript. Il est possible de spécifier les paramètres `read_once`, `visibility_duration` et `existence_duration` de manière indépendante. Les durées d'existence et de visibilité sont en secondes."
 msgstr "Here is an example in typescript. It is possible to specify the parameters `read_once`, `visibility_duration` and `existence_duration` independently. The existence duration and visibility duration are in seconds."
 
